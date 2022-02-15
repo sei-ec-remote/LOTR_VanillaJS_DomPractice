@@ -1,3 +1,8 @@
+
+
+
+
+
 console.log('Linked.')
 
 // Dramatis Personae
@@ -189,6 +194,13 @@ function leaveTheShire() {
 	console.log('6: leaveTheShire')
 
 	// assemble the `hobbits` and move them to `rivendell`
+	moveHobbits = document.getElementById('hobbits') //plural for ul, singular for li
+	//onsole.log(moveHobbits)
+	Rivendell.appendChild(moveHobbits)
+
+
+
+
 }
 
 // COMMIT YOUR WORK
