@@ -182,8 +182,38 @@ function makeBuddies() {
 
 function leaveTheShire() {
 	console.log('6: leaveTheShire')
-
 	// assemble the `hobbits` and move them to `rivendell`
+		//grab rivendell id 
+		//grab hobbits id 
+		//remove the hobbits
+		const theShire = document.getElementById('The-Shire')
+		const ulHobbits = document.createElement('ul')
+		ulHobbits.id = 'hobbits'
+		const removeFromShrine = document.getElementById('hobbits')
+		removeFromShrine.remove()
+			// give each hobbit a class of `hobbit
+			for (let i = 0; i< hobbits.length;i++) {
+				//create a list item for each hobbit
+				const liHobbit = document.createElement('li')
+				//give each li a class 'hobbit'
+				liHobbit.className = 'hobbit'
+			//give each li some text
+				liHobbit.textContent  = hobbits[i]
+					//append each hobbit to hobbits
+				ulHobbits.appendChild(liHobbit)
+			}
+		//grab the ring and append it to frodo
+		const oneRingDiv = document.createElement('div')
+		oneRingDiv.id = 'the-ring'
+		oneRingDiv.className = 'magic-imbued-jewelry'
+		const frodosRing = document.querySelector('#hobbits')
+		const arrayOfHobits = ulHobbits.children
+
+	const frodoLi = arrayOfHobits[0]
+	frodoLi.appendChild(oneRingDiv)
+	theShire.appendChild(ulHobbits)
+	const riverdell = document.getElementById('Rivendell') 
+	riverdell.appendChild(ulHobbits)
 }
 
 // COMMIT YOUR WORK
