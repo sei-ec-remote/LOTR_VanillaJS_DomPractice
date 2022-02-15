@@ -150,12 +150,26 @@ function makeBaddies() {
 
 function makeBuddies() {
 	console.log('5: makeBuddies')
-
+	
+	const rivendell = document.getElementById("Rivendell");
+	console.log('this should be rivendell', rivendell)
 	// create an `aside` tag
-
+	const asideBuddies = document.createElement("aside");
+	asideBuddies.id = "buddies";
 	// put an `unordered list` of the `'buddies'` in the aside
-
+	const ulBuddies= document.createElement("ul");
+	ulBuddies.className = "buddies";
+	asideBuddies.appendChild(ulBuddies)
+	
+	for(let i = 0; i < buddies.length; i++) {
+	  const liBuddies = document.createElement("li");
+	  liBuddies.textContent = buddies[i];
+	  liBuddies.className = "buddy";
+	  ulBuddies.appendChild(liBuddies);
+	}
 	// insert your aside as a child element of `rivendell`
+  
+	rivendell.appendChild(asideBuddies);
 }
 
 // COMMIT YOUR WORK
