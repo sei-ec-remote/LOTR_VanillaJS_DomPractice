@@ -219,11 +219,11 @@ function forgeTheFellowShip() {
 
 
 	for (i = 0; i < hobbitArray.length; i) {
-		console.log(hobbitArray[i].textContent + " joined the party")
+		window.alert(hobbitArray[i].textContent + " joined the party")
 		theFellowShip.appendChild(hobbitArray[i])
 	}
 	for (i = 0; i < buddyArray.length; i) {
-		console.log(buddyArray[i].textContent + ' joined the party')
+		window.alert(buddyArray[i].textContent + ' joined the party')
 		theFellowShip.appendChild(buddyArray[i])
 	}
 
@@ -263,6 +263,12 @@ function theBalrog() {
 
 function hornOfGondor() {
 	console.log('10: hornOfGondor')
+
+window.alert("The horn of gondor has been blown")
+const theFellowship = document.querySelector('#the-fellowship')
+	fellowshipArray = theFellowship.children
+	fellowshipArray[8].remove()
+
 	// pop up an alert that the horn of gondor has been blown
 	// Boromir's been killed by the Uruk-hai!
 	// Remove `Boromir` from the Fellowship
