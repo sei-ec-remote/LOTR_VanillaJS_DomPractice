@@ -197,7 +197,10 @@ function makeBuddies() {
 
 function leaveTheShire() {
 	console.log('6: leaveTheShire')
-
+	const rivendall = document.getElementById('Rivendell')
+	const moveHobbits = document.getElementById('hobbits');
+		moveHobbits.remove();
+		rivendall.appendChild(moveHobbits)
 	// assemble the `hobbits` and move them to `rivendell`
 }
 
