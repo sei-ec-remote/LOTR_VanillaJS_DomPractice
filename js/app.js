@@ -214,8 +214,42 @@ function beautifulStranger() {
 function forgeTheFellowShip() {
 	console.log('8: forgeTheFellowShip')
 	// create a new div called `'the-fellowship'` within `rivendell`
+	const fsDiv = document.createElement("div")
+	let riv = document.getElementById("Rivendell")
+	fsDiv.textContent="the-fellowship"
+	fsDiv.id='the-fellowship'
+
+	riv.appendChild(fsDiv)
+
+
 	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
-	// after each character is added make an alert that they // have joined your party
+	const ulBuddies = document.querySelector("#buddies")
+	const buddiesArr = ulBuddies.children
+	console.log(buddiesArr)
+	const ulFS = document.createElement("ul")
+	ulFS.id="ulFS"
+	console.log("checking buddies Arr",buddiesArr[0].textContent)
+	let childrenLeft = buddiesArr.length
+	while (childrenLeft>0) {
+		const buddyLi = document.createElement("li")
+		buddyLi.textContent=buddiesArr[0].textContent
+		ulFS.appendChild(buddyLi)
+		// after each character is added make an alert that they // have joined your party
+		alert(`${buddyLi.textContent} has joined your party`)
+		ulBuddies.removeChild(ulBuddies.childNodes[0]);
+		childrenLeft--
+	}
+
+	fsDiv.appendChild(ulFS)
+
+
+
+	const ringDiv = document.createElement("div")
+	ringDiv.id="the-ring"
+	ringDiv.classList.add("magic-imbued-jewelry") 
+	ulFS.children[5].appendChild(ringDiv)
+
+
 
 	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
 }
