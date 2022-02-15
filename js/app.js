@@ -201,6 +201,7 @@ function leaveTheShire() {
 	const moveHobbits = document.getElementById('hobbits');
 		moveHobbits.remove();
 		rivendall.appendChild(moveHobbits)
+
 	// assemble the `hobbits` and move them to `rivendell`
 }
 
@@ -213,6 +214,14 @@ function leaveTheShire() {
 
 function beautifulStranger() {
 	console.log('7: beautifulStranger')
+
+	const ulHobbits = document.getElementById('buddies')
+	console.log(`These hobbits?`,ulHobbits)
+	const hobbitsArray = ulHobbits.children 
+	console.log(hobbitsArray[3])
+	const strider = hobbitsArray[3]
+	strider.textContent = 'Aragorn'
+	
 
 	// change the `'Strider'` text to `'Aragorn'`
 }
