@@ -173,8 +173,23 @@ function leaveTheShire() {
 	console.log('6: leaveTheShire')
 
 	// assemble the `hobbits` and move them to `rivendell`
-}
+	const rivendell = document.getElementById('Rivendell')
+	const ulHobbits = document.createElement('ul')
+	ulHobbits.id = 'hobbits'
+	// give each hobbit a class of `hobbit`
+	for (let i = 0; i < hobbits.length; i++) {
+		// create a list item for each hobbit
+		const liHobbit = document.createElement('li')
+		// give each li a class 'hobbit'
+		liHobbit.className = 'hobbit'
+		// give each li some text
+		liHobbit.textContent = hobbits[i]
+		// append each hobbit to hobbits 
+		ulHobbits.appendChild(liHobbit)
 
+}
+rivendell.appendChild(ulHobbits)
+}
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 6 complete - Left the Shire"
 
