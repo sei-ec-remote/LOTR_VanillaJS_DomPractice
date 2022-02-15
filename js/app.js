@@ -146,10 +146,31 @@ function makeBuddies() {
 	console.log('5: makeBuddies')
 
 	// create an `aside` tag
-
+		//use createelement - 
+		const aside = document.createElement('aside')
+		aside.id = 'aside'
 	// put an `unordered list` of the `'buddies'` in the aside
-
+			//create element of ul
+			//give id for this ul item 
+			const ulBuddies = document.createElement('ul')
+			//loop the buddies array
+			//create li for the buddies array
+			//append them to the tag 
+		for (let i =0; i < buddies.length;i++) {
+			const liBuddies = document.createElement('li')
+				//give each buddy a class of buddy 
+			liBuddies.className = "buddy"
+			// console.log('this is the list of buddies', liBuddies)
+			liBuddies.textContent = buddies[i]
+			ulBuddies.appendChild(liBuddies)
+		}
 	// insert your aside as a child element of `rivendell`
+		//grab rivendell
+		const riverdell = document.getElementById('Rivendell')
+		//append riverdell with buddies
+		// console.log('list of buddies', ulBuddies)
+		riverdell.appendChild(ulBuddies)
+		ulBuddies.appendChild(aside)
 }
 
 // COMMIT YOUR WORK
