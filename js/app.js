@@ -198,6 +198,9 @@ function beautifulStranger() {
 	console.log('7: beautifulStranger')
 
 	// change the `'Strider'` text to `'Aragorn'`
+	const ulBuddies = document.querySelector("#buddies")
+	const buddiesArr = ulBuddies.children
+	buddiesArr[3].textContent="Aragorn"
 
 }
 
