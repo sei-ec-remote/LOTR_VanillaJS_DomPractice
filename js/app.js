@@ -93,10 +93,24 @@ function keepItSecretKeepItSafe() {
 	console.log('3: keepItSecretKeepItSafe')
 
 	// create a div with an id of `'the-ring'`
-
+	const oneRingDiv = document.createElement('div')
+	oneRingDiv.id = 'the-ring'
 	// give the div a class of `'magic-imbued-jewelry'`
-
+	oneRingDiv.className = 'magic-imbued-jewelry'
 	// add the ring as a child of `Frodo`
+	//first, we will need to find the ul where frodo lives
+	//next we will need to figure out which li is frodo
+	//then we can attach the ring to our frodo li
+	//console.log(document.querySelector('ul')) -> finds ul in console!
+	//console.log(document.querySelector('#hobbits')) -> ul of hobbits
+	const ulHobbits = document.querySelector('#hobbits')
+	//console.log('these hobbits', ulHobbits) defined ulHobbits within a local scope of second function
+	//console.log('these are the hobs', ulHobbits.children)
+	const hobbitsArray = ulHobbits.children
+	//console.log('is this frodo?', hobbitsArray[0]) found frodo
+	const frodoLi = hobbitsArray[0]
+	frodoLi.appendChild(oneRingDiv)
+
 }
 
 // COMMIT YOUR WORK
@@ -110,10 +124,19 @@ function makeBaddies() {
 	console.log('4: makeBaddies')
 
 	// display an unordered list of baddies in Mordor
-
+	const mordor = document.getElementById('Mordor')
 	// give each of the baddies a class of "baddy"
-
+	const ulBaddies = document.createElement('ul')
+	ulBaddies.id = 'baddies'
+	
+	for (let i = 0; i < baddies.length; i++) {
+		const liBaddy = document.createElement('li')
+	liBaddy.className = 'baddy'
+	liBaddy.textContent = baddies[i]
+	ulBaddies.appendChild(liBaddy)
+}
 	// remember to append them to Mordor
+	mordor.appendChild(ulBaddies)
 }
 
 // COMMIT YOUR WORK
