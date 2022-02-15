@@ -178,13 +178,11 @@ function makeBuddies() {
 // ============
 
 function leaveTheShire() {
-	
-// assemble the `hobbits` and move them to `rivendell`
-
+	// assemble the `hobbits` and move them to `rivendell`
 	console.log('6: leaveTheShire')
 	const hobbits = document.getElementById("hobbits")
 	const buddies = document.getElementById("buddies")
-	hobbits.appendTo(buddies) // buddies.append(...hobbits.childNodes) also works
+	 buddies.append(...hobbits.childNodes)
 
 
 }
@@ -200,6 +198,7 @@ function beautifulStranger() {
 	console.log('7: beautifulStranger')
 
 	// change the `'Strider'` text to `'Aragorn'`
+
 }
 
 // COMMIT YOUR WORK
