@@ -174,13 +174,9 @@ function leaveTheShire() {
 	console.log('6: leaveTheShire')
 
 const rivendell = document.querySelector('#Rivendell')
-	// assemble the `hobbits` and move them to `rivendell`
-	// const liHobbits = document.querySelector('.hobbits')
-	// console.log(liHobbits)
+	
 	const ulHobbits = document.querySelector('#hobbits')
-	// const hobbitsArray = ulHobbits.children
-	// console.log(hobbitsArray)
-	// console.log(hobbitsArray.length)
+	
 	rivendell.appendChild(ulHobbits)
 }
 
@@ -195,6 +191,9 @@ function beautifulStranger() {
 	console.log('7: beautifulStranger')
 
 	// change the `'Strider'` text to `'Aragorn'`
+	const ulBuddies = document.querySelector('#buddy')
+	const buddyArray = ulBuddies.children	
+	buddyArray[3].textContent = 'Aragorn'
 }
 
 // COMMIT YOUR WORK
