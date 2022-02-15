@@ -57,7 +57,24 @@ document.body.appendChild(section)	//   2a. creates an article tag (there should
 function makeHobbits() {
 	console.log('2: makeHobbits')
 
+
+ 
+
 	// display an `unordered list` of hobbits in the shire
+
+	const theShire = document.querySelector('#The-Shire')
+
+	const listHobbits = document.createElement('ul')
+	listHobbits.id='hobbits'
+
+	for (i = 0; i < hobbits.length; i++) {
+		const hobbitItem = document.createElement('li')
+		hobbitItem.className = 'hobbit'
+		hobbitItem.textContent = hobbits[i]
+		listHobbits.appendChild(hobbitItem)
+	}
+	
+	theShire.appendChild(listHobbits)
 
 	// give each hobbit a class of `hobbit`
 
