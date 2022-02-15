@@ -78,6 +78,8 @@ function makeHobbits() {
 		ulHobbits.appendChild(liHobbit)
 	}
 	theShire.appendChild(ulHobbits)
+
+	// i think this is called method chaining
 	// hint: create a 'ul' outside the loop into which to append the 'li's
 
 	// hint: get 'The-Shire' by using its id
@@ -94,10 +96,25 @@ function keepItSecretKeepItSafe() {
 	console.log('3: keepItSecretKeepItSafe')
 
 	// create a div with an id of `'the-ring'`
-
+	const oneRingDiv = document.createElement('div')
+	oneRingDiv.id = 'the-ring'
 	// give the div a class of `'magic-imbued-jewelry'`
-
+	oneRingDiv.className = 'magic-imbued-jewelry'
 	// add the ring as a child of `Frodo`
+	//first we'lln need to find the ul where frodo live
+	// next well nneed to figure out which li is frodo
+	
+	// console.log(document.querySelector('#hobbits'))
+	const ulHobbits = document.querySelector('#hobbits')
+	console.log('these hobbits?', ulHobbits)
+
+	// next well nneed to figure out which li is frodo
+	console.log(`The hobs`, ulHobbits.children)
+	const hobbitsArray = ulHobbits.children 
+	console.log(`is this frodo`, hobbitsArray[0])
+	const frodoLi = hobbitsArray[0]
+	// then we can attach the ring to our frodo list 
+	frodoLi.appendChild(oneRingDiv)
 }
 
 // COMMIT YOUR WORK
@@ -110,11 +127,27 @@ function keepItSecretKeepItSafe() {
 function makeBaddies() {
 	console.log('4: makeBaddies')
 
+	const mordor = document.getElementById('Mordor')
+
+	const ulBaddies = document.createElement('ul')
+	ulBaddies.id = 'baddies'
+
 	// display an unordered list of baddies in Mordor
 
 	// give each of the baddies a class of "baddy"
 
 	// remember to append them to Mordor
+
+
+	for(let i = 0; i < baddies.length; i ++) { 
+		const liBaddy = document.createElement('li')
+		liBaddy.className = 'baddy'
+		
+		liBaddy.textContent = baddies[i]
+		
+		ulBaddies.appendChild(liBaddy)
+	}
+	mordor.appendChild(ulBaddies)
 }
 
 // COMMIT YOUR WORK
