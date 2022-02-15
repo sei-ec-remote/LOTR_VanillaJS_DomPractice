@@ -109,12 +109,13 @@ function keepItSecretKeepItSafe() {
 	//1.first we'll need to find the ul where Frodo lives
 	//console.log(document.querySelector('#hobbits'))
 	const ulHobbits = document.querySelector('#hobbits')
-	//console.log('these hobbits?', ulHobbits)
+	console.log('these hobbits?', ulHobbits)
 
 	//2.figure out which li is frodo
 	//console.log('these are probs the hobs', ulHobbits.children)
 	const hobbitsArray = ulHobbits.children
-	//console.log('is this frodo?', hobbitsArray[0])
+	console.log('is this frodo?', hobbitsArray[0])
+	console.log(ulHobbits.children[0])
 	//3. we can append the ring to our frodo li
 	const frodoLi = hobbitsArray[0]
 	frodoLi.appendChild(oneRingDiv)
@@ -159,10 +160,22 @@ function makeBuddies() {
 	console.log('5: makeBuddies')
 
 	// create an `aside` tag
-
+	const AsideTag = document.createElement('aside')
+	
 	// put an `unordered list` of the `'buddies'` in the aside
+	const ulBuddies = document.createElement('ul')
+	for (let i = 0; i < buddies.length; i++){
+	const liBuddy = document.createElement('li')
+	liBuddy.textContent = buddies[i]
+	liBuddy.className = 'buddy'
+	ulBuddies.appendChild(liBuddy)
 
+
+
+	}
 	// insert your aside as a child element of `rivendell`
+	const Rivendell = document.getElementById("Rivendell")
+	Rivendell.appendChild(ulBuddies)
 }
 
 // COMMIT YOUR WORK
