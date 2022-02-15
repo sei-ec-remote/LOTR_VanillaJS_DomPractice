@@ -64,12 +64,26 @@ function makeHobbits() {
 	console.log('2: makeHobbits')
 
 	// display an `unordered list` of hobbits in the shire
+	// how can I get, "the shire"? How can I append a ul to it?
+	// I can use queryselector
+	const theShire = document.querySelector('#The-Shire')
 
-	// give each hobbit a class of `hobbit`
+	const hobbitList = document.createElement("ul")
+	 theShire.appendChild(hobbitList)
 
+	 for (let i=0; i<hobbits.length;i++) {
+	// give each hobbit a class of `hobbit'
+	const hobbitName = document.createElement("li")
+	hobbitName.textContent=hobbits[i]
+	hobbitName.classList.add("hobbit")
+	hobbitList.appendChild(hobbitName)
 	// hint: create a 'ul' outside the loop into which to append the 'li's
 
 	// hint: get 'The-Shire' by using its id
+
+
+	 }
+
 }
 
 // COMMIT YOUR WORK
