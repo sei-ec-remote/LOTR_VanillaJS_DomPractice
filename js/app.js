@@ -64,9 +64,13 @@ function makeHobbits() {
 	ulHobbits.id = 'hobbits'
 		// give each hobbit a class of `hobbit
 		for (let i = 0; i< hobbits.length;i++) {
+			//create a list item for each hobbit
 			const liHobbit = document.createElement('li')
+			//give each li a class 'hobbit'
 			liHobbit.className = 'hobbit'
+		//give each li some text
 			liHobbit.textContent  = hobbits[i]
+				//append each hobbit to hobbits
 			ulHobbits.appendChild(liHobbit)
 		}
 
@@ -87,10 +91,22 @@ function keepItSecretKeepItSafe() {
 	console.log('3: keepItSecretKeepItSafe')
 
 	// create a div with an id of `'the-ring'`
-
+	const oneRingDiv = document.createElement('div')
+	oneRingDiv.id = 'the-ring'
 	// give the div a class of `'magic-imbued-jewelry'`
-
+	oneRingDiv.className = 'magic-imbued-jewelry'
 	// add the ring as a child of `Frodo`
+		//first we'll need to find the ul where Frodo lives
+		// console.log(document.querySelector('#hobbits'))
+		const ulHobbits = document.querySelector('#hobbits')
+		// console.log('them hobbits', ulHobbits)
+		//we'll need to figure out which li is frodo
+		// console.log('these are prob the hobs', ulHobbits.children)
+		const hobbitsArray = ulHobbits.children
+		// console.log('is this frodo?', hobbitsArray[0])
+		//then we can attach the ring to our forodo li
+const frodoLi = hobbitsArray[0]
+frodoLi.appendChild(oneRingDiv)
 }
 
 // COMMIT YOUR WORK
@@ -104,10 +120,19 @@ function makeBaddies() {
 	console.log('4: makeBaddies')
 
 	// display an unordered list of baddies in Mordor
+	const mordor = document.getElementById('Mordor')
+	const ulBaddies = document.createElement('ul')
+	ulBaddies.id = 'baddies'
 
-	// give each of the baddies a class of "baddy"
-
+	for (let i = 0; i < baddies.length; i++) {
+		const liBaddy = document.createElement('li')
+		// give each of the baddies a class of "baddy"
+		liBaddy.className = 'baddy'
+		liBaddy.textContent = baddies[i]
+		ulBaddies.appendChild(liBaddy)
+	}
 	// remember to append them to Mordor
+	mordor.appendChild(ulBaddies)
 }
 
 // COMMIT YOUR WORK
