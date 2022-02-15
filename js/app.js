@@ -22,18 +22,24 @@ function makeMiddleEarth() {
 	console.log('1: makeMiddleEarth')
 
 	// 1. create a section tag with an id of middle-earth
+	const section = document.createElement("section")
+	section.id = "middle-earth"
 
 	// 2. use a for loop to iterate over the lands array that does the following:
-
-	//   2a. creates an article tag (there should be one for each land when the loop is done)
-
-	//   2b. gives each land article an `id` tag of the corresponding land name
-
-	//   2c. includes an h1 with the name of the land inside each land article
-
-	//   2d. appends each land to the middle-earth section
-
+	for (let i = 0; i < lands.length; i++) {
+		//   2a. creates an article tag (there should be one for each land when the loop is done)
+		const landArticle = document.createElement("article")
+		//   2b. gives each land article an `id` tag of the corresponding land name
+		landArticle.id = lands[i]
+		//   2c. includes an h1 with the name of the land inside each land article
+		const landName = document.createElement("h1")
+		landName.textContent = lands[i]
+		//   2d. appends each land to the middle-earth section
+		landArticle.appendChild(landName)
+		section.appendChild(landArticle)
+	}
 	// 3. append the section to the body of the DOM.
+	document.body.appendChild(section)
 }
 
 // COMMIT YOUR WORK
@@ -47,12 +53,24 @@ function makeHobbits() {
 	console.log('2: makeHobbits')
 
 	// display an `unordered list` of hobbits in the shire
-
+	// how can I get "the shire"? how can I append a ul to it?
+	// I can use querySelector, like this:
+	// const theShire = document.querySelector("#The-Shire")
+	// We can also use the more specific getElementById
+	const theShire = document.getElementById("The-Shire")
 	// give each hobbit a class of `hobbit`
-
 	// hint: create a 'ul' outside the loop into which to append the 'li's
+	const ulHobbits = document.createElement("ul")
+	ulHobbits.id = "hobbits"
+	for (let i= 0; i < hobbits.length; i++) {
+		const liHobbits = document.createElement("li")
+		liHobbits.classdName = "hobbit"
+		liHobbits.textContent = hobbits[i]
+		ulHobbits.appendChild(liHobbits)
+	}
 
 	// hint: get 'The-Shire' by using its id
+	theShire.appendChild(ulHobbits)	
 }
 
 // COMMIT YOUR WORK
@@ -66,10 +84,22 @@ function keepItSecretKeepItSafe() {
 	console.log('3: keepItSecretKeepItSafe')
 
 	// create a div with an id of `'the-ring'`
-
+	const oneRingDiv = document.createElement("div")
+	oneRingDiv.id = "the-ring"
 	// give the div a class of `'magic-imbued-jewelry'`
+	oneRingDiv.className = "magic-imbued-jewelry"
 
 	// add the ring as a child of `Frodo`
+	// first we'll need to find the ul where Frodo lives
+	// ** we need to make the variable again because we previously made it within a function
+	const ulHobbits = document.querySelector("#hobbits")
+	// next we'll need to figure out which li is Frodo
+	// console.log ("are these the hobbits?", ulHobbits.children)"
+	const hobbitsArray = ulHobbits.children
+	// console.log("Is this Frodo?", hobbitsArray[0])
+	const frodoLi = hobbitsArray[0]
+	// then we can attach the ring to our frodo li
+	frodoLi.appendChild(oneRingDiv)
 }
 
 // COMMIT YOUR WORK
@@ -83,10 +113,18 @@ function makeBaddies() {
 	console.log('4: makeBaddies')
 
 	// display an unordered list of baddies in Mordor
-
-	// give each of the baddies a class of "baddy"
-
+	const mordor = document.getElementById("Mordor")
+	const ulBaddies = document.createElement("ul")
+	ulBaddies.id = "baddies"
+	for (let i = 0; i < baddies.length; i++) {
+		liBaddy = document.createElement("li")
+		// give each of the baddies a class of "baddy"
+		liBaddy.className = "baddy"
+		liBaddy.textContent = baddies[i]
+		ulBaddies.appendChild(liBaddy)
+	}
 	// remember to append them to Mordor
+	mordor.appendChild(ulBaddies)
 }
 
 // COMMIT YOUR WORK
