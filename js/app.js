@@ -54,7 +54,7 @@ function makeHobbits() {
 
 	// display an `unordered list` of hobbits in the shire
 	const theShire = document.querySelector('#The-Shire')
-	console.log('this is the shire ', theShire)
+	//console.log('this is the shire ', theShire)
 	//create an unorder list
 	const ulHobbits = document.createElement('ul')
 	ulHobbits.id = 'hobbits'
@@ -83,10 +83,22 @@ function keepItSecretKeepItSafe() {
 	console.log('3: keepItSecretKeepItSafe')
 
 	// create a div with an id of `'the-ring'`
-
-	// give the div a class of `'magic-imbued-jewelry'`
-
+	const oneRingDiv = document.createElement('div')
+	oneRingDiv.id = 'the-ring'
+	// give the div a class of `'magic-imbued-jewelry'
+	oneRingDiv.className = 'magic-imbued-jewelry'
 	// add the ring as a child of `Frodo`
+	// first, we will need to the ul where frodo lives
+	
+	const ulHobbits = document.querySelector('#hobbits')
+	//console.log('these are probs the hobs ', ulHobbits)
+	const hobitsArray = ulHobbits.children
+	//console.log('is this frodo?', hobitsArray[0])
+	frodoLi = hobitsArray[0]
+
+	frodoLi.append(oneRingDiv)
+	// next we will need to figure out whi li is frodo
+	// then we can attach the ring to our frodo li
 }
 
 // COMMIT YOUR WORK
@@ -100,8 +112,17 @@ function makeBaddies() {
 	console.log('4: makeBaddies')
 
 	// display an unordered list of baddies in Mordor
-
+	const mordor = document.getElementById('Mordor')
+	const baddiesUl = document.createElement('ul')
+	baddiesUl.id = 'baddies'
+	for(let i=0; i<baddies.length; i++){
+		const baddyLi = document.createElement('li')
+		baddyLi.className = 'baddy'
+		baddyLi.textContent = baddies[i]
+		baddiesUl.appendChild(baddyLi)
+	}
 	// give each of the baddies a class of "baddy"
+	mordor.appendChild(baddiesUl)
 
 	// remember to append them to Mordor
 }
