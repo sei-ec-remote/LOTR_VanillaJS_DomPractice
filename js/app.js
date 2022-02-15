@@ -141,14 +141,27 @@ mordor.appendChild(ulBaddies)
 // ============
 
 function makeBuddies() {
+	const rivendell = document.querySelector('#Rivendell')
 	console.log('5: makeBuddies')
 
+	const asideBuddies = document.createElement('aside')
+
+	const ulBuddies = document.createElement('ul')
+	ulBuddies.id = 'buddy'
+
+	for (i = 0; i < buddies.length; i++) {
+	const liBuddies = document.createElement('li')
+	liBuddies.className = 'buddy'
+	liBuddies.textContent = buddies[i]
+	ulBuddies.appendChild(liBuddies) 
+	}
 	// create an `aside` tag
 
 	// put an `unordered list` of the `'buddies'` in the aside
-
+	rivendell.appendChild(ulBuddies)
 	// insert your aside as a child element of `rivendell`
 }
+
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 5 complete - Made the Buddies".
