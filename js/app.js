@@ -252,6 +252,8 @@ function theBalrog() {
 	theFellowshipArray[0].textContent = "Gandalf the White"
 
 	// apply the following style to the element, make the // background 'white', add a grey border
+	theFellowshipArray[0].style.backgroundColor = "white";
+	theFellowshipArray[0].style.border = "2px solid grey";
 }
 
 // COMMIT YOUR WORK
