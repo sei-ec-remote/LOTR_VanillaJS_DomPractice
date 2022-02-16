@@ -252,7 +252,17 @@ function forgeTheFellowShip() {
 function theBalrog() {
 	console.log('9: theBalrog')
 	// change the `'Gandalf'` text to `'Gandalf the White'`
-	// apply the following style to the element, make the // background 'white', add a grey border
+	const theWhite = document.getElementsByClassName('buddy')
+	console.log(theWhite)
+	const gandalf = Object.values(theWhite)
+	gandalf.forEach(element => {
+		if (element.textContent === "Gandalf the Grey") {
+			element.textContent = 
+			'Gandalf the White'
+		}
+	})
+	// apply the following style to the element, make the 
+	// background 'white', add a grey border
 }
 
 // COMMIT YOUR WORK
