@@ -416,7 +416,7 @@ mountDoom.removeChild(gollum)
 	// Move all the `hobbits` back to `the shire`
 	//two hobbits in Mordor and two in the fellowship
 	//Mordor hobbits
-	console.log(Mordor.children)
+	
 	const Frodo = Mordor.children[2]
 	console.log(Frodo)
 	console.log(Mordor.children)
