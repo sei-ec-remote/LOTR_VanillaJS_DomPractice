@@ -179,20 +179,16 @@ function leaveTheShire() {
 	console.log('6: leaveTheShire')
 	
 	// assemble the `hobbits` and move them to `rivendell`
-	// get the rivendell
+	// get the rivendell by id
 	const rivendell = document.getElementById('Rivendell')
-	//get the shire
+	// get the shire by id
 	const theShire = document.getElementById('The-Shire')
+	// get the hobbits by id
 	const ulHobbits = document.getElementById('hobbits')
 
-	// for (let i = 0; i < hobbits.length; i++){
-	// 	const liHobbit = document.createElement('li')
-	// 	liHobbit.className = 'hobbit'
-	// 	liHobbit.textContent = hobbits[i]
-	// 	ulHobbits.appendChild(liHobbit)
-	// }
-
+	// attach hobbits to rivendell
 	rivendell.appendChild(ulHobbits)
+	// remove hobbits from the shire
 	theShire.removeChild(ulHobbits)
 }
 
