@@ -164,6 +164,7 @@ function makeBuddies() {
 		liBuddy.textContent = buddies[i]
 		buddiesInUl.appendChild(liBuddy)
 		buddiesAside.appendChild(buddiesInUl)
+
 	}
 	//console.log(buddiesInUl)
 	// insert your aside as a child element of `rivendell`
@@ -196,8 +197,15 @@ function leaveTheShire() {
 
 function beautifulStranger() {
 	console.log('7: beautifulStranger')
-
 	// change the `'Strider'` text to `'Aragorn'`
+	const beautifulStrangers = document.getElementsByClassName('buddy')
+	console.log(beautifulStrangers)
+	buddyList = Object.values(beautifulStrangers)
+	buddyList.forEach((element) => {
+		if(element.textContent === 'Strider'){
+			element.textContent = 'Aragorn'
+		}
+	})
 }
 
 // COMMIT YOUR WORK
@@ -206,13 +214,27 @@ function beautifulStranger() {
 // ============
 // Chapter 8
 // ============
-
+//could not get Chapter 8 to work :(
 function forgeTheFellowShip() {
 	console.log('8: forgeTheFellowShip')
 	// create a new div called `'the-fellowship'` within `rivendell`
+	const rivendell = document.getElementById('Rivendell')
+	const theFellowship = rivendell.createElement('div')
+	theFellowship.id = 'the-fellowship'
 	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
-	// after each character is added make an alert that they // have joined your party
+	const liBuddy = document.getElementsByClassName('buddy')
+	const ulHobbits = document.getElementsById('#hobbits')
+	for(let i = 0; i < theFellowship.length; i++) {
+		const liBuddy = document.createElement('li')
+		liBuddy.className = 'buddy'
+		liBuddy.textContent = buddies[i]
+		ulHobbits.textContent = hobbits[i]
+		theFellowship.appendChild(liBuddy)
+		theFellowship.appendChild(ulHobbits)
 
+	}
+	// after each character is added make an alert that they // have joined your party
+	alert(liBuddy, ulHobbits, 'have joined your party')
 	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
 }
 
@@ -226,6 +248,9 @@ function forgeTheFellowShip() {
 function theBalrog() {
 	console.log('9: theBalrog')
 	// change the `'Gandalf'` text to `'Gandalf the White'`
+	//Gandalf is now in the fellowship... we need to access it first
+	const fellowship = document.getElementById('the-fellowship')
+	fellowship[0].textContent = 'Gandalf the White'
 	// apply the following style to the element, make the // background 'white', add a grey border
 }
 
