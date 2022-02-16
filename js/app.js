@@ -87,7 +87,7 @@ function keepItSecretKeepItSafe() {
 	const oneRingDiv = document.createElement('div')
 	oneRingDiv.id = 'the-ring'
 	// give the div a class of `'magic-imbued-jewelry'`
-	oneRingDiv.classNamme = 'magic-imbued-jewelry'
+	oneRingDiv.className = 'magic-imbued-jewelry'
 
 	// add the ring as a child of `Frodo`
 	// first, we'll need to find the ul where frodo lives
@@ -116,12 +116,13 @@ function makeBaddies() {
 
 	// display an unordered list of baddies in Mordor
 	const mordor = document.getElementById('Mordor')
-	const ulBaddies = document.createAttribute('ul')
+	const ulBaddies = document.createElement('ul')
 	ulBaddies.id = 'baddies'
 
 	for (let i = 0; i < baddies.length; i++) {
 		const liBaddy = document.createElement('li')
 		// give each of the baddies a class of "baddy"
+		liBaddy.className = 'baddy'
 		liBaddy.textContent = baddies[i]
 		ulBaddies.appendChild(liBaddy)
 	}
@@ -142,10 +143,24 @@ function makeBuddies() {
 	console.log('5: makeBuddies')
 
 	// create an `aside` tag
-
+	const makeBuddiesAside = document.createElement('aside')
+	const rivendell = document.querySelector('#Rivendell')
+	makeBuddiesAside.id = 'buddies-aside'
+	const buddiesUl = document.createElement('ul')
+	// console.log('this make the element {aside}', makeBuddiesAside)
 	// put an `unordered list` of the `'buddies'` in the aside
+	for (let i = 0; i < buddies.length; i++) {
+		const buddiesLi = document.createElement('li')
+		// give each buddies a class of buddy
+		buddiesLi.className = 'buddy'
+		buddiesLi.textContent = buddies[i]
+		// console.log('an ul of buddies', buddiesUl)
+		buddiesUl.appendChild(buddiesLi)
+		makeBuddiesAside.appendChild(buddiesUl)
+	}
 
 	// insert your aside as a child element of `rivendell`
+	rivendell.appendChild(makeBuddiesAside)
 }
 
 // COMMIT YOUR WORK
@@ -159,6 +174,7 @@ function leaveTheShire() {
 	console.log('6: leaveTheShire')
 
 	// assemble the `hobbits` and move them to `rivendell`
+	
 }
 
 // COMMIT YOUR WORK
