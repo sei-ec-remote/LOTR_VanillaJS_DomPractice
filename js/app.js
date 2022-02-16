@@ -295,7 +295,15 @@ function forgeTheFellowShip() {
 function theBalrog() {
 	console.log('9: theBalrog')
 	// change the `'Gandalf'` text to `'Gandalf the White'`
+	// first, lets create a reference to the Gandalf element
+	const Gandalf = document.getElementById('Gandalf the Grey')
+	// change the text
+	Gandalf.textContent = 'Gandalf the White'
+	//check to see if it changed
+	console.log("this should read Gandalf the white: ", Gandalf.textContent)
 	// apply the following style to the element, make the // background 'white', add a grey border
+	Gandalf.style.backgroundColor = 'white';
+	Gandalf.style.border = "thick solid grey"
 }
 
 // COMMIT YOUR WORK
