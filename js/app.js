@@ -98,10 +98,17 @@ function keepItSecretKeepItSafe() {
 	console.log('3: keepItSecretKeepItSafe')
 
 	// create a div with an id of `'the-ring'`
+	const ringDiv = document.createElement("div")
+	ringDiv.id="the-ring"
 
 	// give the div a class of `'magic-imbued-jewelry'`
 
+	ringDiv.classList.add("magic-imbued-jewelry") // ringDiv.className = "magic-imbued-jewelry" would also work
+
 	// add the ring as a child of `Frodo`
+	const ulHobbits = document.querySelector("#hobbits")
+	const hobbitsArr = ulHobbits.children
+	hobbitsArr[0].appendChild(ringDiv)
 }
 
 // COMMIT YOUR WORK
