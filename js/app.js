@@ -35,7 +35,7 @@ function makeMiddleEarth() {
 		const landName = document.createElement('h1')
 		landName.textContent = lands[i]
 		// we could conceivably use innerHTML like this
-		// const landNameHtml = landArticle.innerHTML(`<h1>${lands[i]}</h1>`)
+		// 
 		//   2d. appends each land to the middle-earth section
 		// we need to append the landName to landArticle and append those to middle earth section
 		landArticle.appendChild(landName)
@@ -57,10 +57,30 @@ function makeHobbits() {
 	console.log('2: makeHobbits')
 
 	// display an `unordered list` of hobbits in the shire
-	
 
+// display an `unordered list` of hobbits in the shire
+	// how can I get, 'the shire'? how can I append a ul to it?
+	// I can use querySelector, like this
+	// const theShire = document.querySelector('#The-Shire')
+	// we can also use the more specific, getElementById
+	const theShire = document.getElementById('The-Shire')
+	// test using console logs!
+	// console.log('this is the shire', theShire)
+	const ulHobbits = document.createElement('ul')
+	ulHobbits.id = 'hobbits'
 	// give each hobbit a class of `hobbit`
-	
+	for (let i = 0; i < hobbits.length; i++) {
+		// create a list item for each hobbit
+		const liHobbit = document.createElement('li')
+		// give each li a class 'hobbit'
+		liHobbit.className = 'hobbit'
+		// give each li some text
+		liHobbit.textContent = hobbits[i]
+		// append each hobbit to hobbits 
+		ulHobbits.appendChild(liHobbit)
+	}
+
+	theShire.appendChild(ulHobbits)
 
 	// hint: create a 'ul' outside the loop into which to append the 'li's
 
