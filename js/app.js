@@ -129,7 +129,7 @@ function makeBaddies() {
 	const mordor = document.getElementById('Mordor')
 	const ulBaddies = document.createElement('ul')
 	ulBaddies.id = 'baddies'
-
+	// console.log('This is the ul baddies:', ulBaddies)
 	for (let i = 0; i < baddies.length; i++) {
 		const liBaddy = document.createElement('li')
 		// give each of the baddies a class of "baddy"
@@ -152,10 +152,20 @@ function makeBuddies() {
 	console.log('5: makeBuddies')
 
 	// create an `aside` tag
-
+	const rivendell = document.getElementById('Rivendell')
+	const ulBuddies = document.createElement('aside')
+	ulBuddies.id = 'buddies'
+	// console.log('This is the ul baddies:', ulBuddies)
 	// put an `unordered list` of the `'buddies'` in the aside
-
+	for (let i = 0; i < buddies.length; i++) {
+		const liBuddy = document.createElement('li')
+		// give each of the baddies a class of "baddy"
+		liBuddy.className = 'buddy'
+		liBuddy.textContent = buddies[i]
+		ulBuddies.appendChild(liBuddy)
+		}
 	// insert your aside as a child element of `rivendell`
+	rivendell.appendChild(ulBuddies)
 }
 
 // COMMIT YOUR WORK
