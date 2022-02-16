@@ -195,13 +195,17 @@ function forgeTheFellowShip() {
 	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
 	const hobbits = document.getElementById('hobbits').childNodes
 	const buddies = document.getElementById('buddies').childNodes
-	const theFellowShip = [...hobbits, ...buddies]
-	for(let i = 0; i < theFellowShip.length; i++)
+	const theFellowship = [...buddies, ...hobbits]
+	const ulTheFellowship = document.createElement('ul')
+	ulTheFellowship.id = 'theFellowshipMembers'
+	for(let i = 0; i < theFellowship.length; i++)
 	{
 	// after each character is added make an alert that they // have joined your party
-		divTheFellowship.appendChild(theFellowShip[i])
-		alert(`${theFellowShip[i].textContent} has joined the Fellowship`)
+	
+		ulTheFellowship.appendChild(theFellowship[i])
+		alert(`${theFellowship[i].textContent} has joined the Fellowship`)
 	}
+	divTheFellowship.appendChild(ulTheFellowship)
 	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
 }
 
@@ -215,7 +219,11 @@ function forgeTheFellowShip() {
 function theBalrog() {
 	console.log('9: theBalrog')
 	// change the `'Gandalf'` text to `'Gandalf the White'`
+	const gandalf = document.querySelector('#theFellowshipMembers').firstElementChild
+	gandalf.textContent = 'Gandalf the White'
 	// apply the following style to the element, make the // background 'white', add a grey border
+	gandalf.style.backgroundColor = 'white'
+	gandalf.style.border = '1px solid grey'
 }
 
 // COMMIT YOUR WORK
