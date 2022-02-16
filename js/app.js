@@ -165,17 +165,18 @@ function makeBuddies() {
 	const rivendell =document.getElementById('Rivendell')
 	const ulBuddies = document.createElement('ul')
 	ulBuddies.id ="buddies"
-	console.log(ulBuddies)
+	//console.log(ulBuddies)
 
 	// put an `unordered list` of the `'buddies'` in the aside
 	for(let i= 0; i <buddies.length ; i++){
 	//console.log(buddies)
 		const liBuddy = document.createElement('li')
 		liBuddy.className = 'Buddy'
-		console.log(liBuddy)
+		//console.log(liBuddy)
 		liBuddy.textContent = buddies[i]
-		console.log(liBuddy)
+		//console.log(liBuddy)
 		ulBuddies.appendChild(liBuddy)
+		asideBuddies.appendChild(ulBuddies)
 	}
 
 	// insert your aside as a child element of `rivendell`
@@ -184,7 +185,7 @@ function makeBuddies() {
 }
 
 // COMMIT YOUR WORK
-// The commit message should read: "Chapter 5 complete - Made the Buddies".
+// The commit message should read: rivendel.
 
 // ============
 // Chapter 6
