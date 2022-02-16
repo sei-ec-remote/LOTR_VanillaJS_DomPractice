@@ -260,6 +260,27 @@ function theBalrog() {
 	console.log('9: theBalrog')
 	// change the `'Gandalf'` text to `'Gandalf the White'`
 	// apply the following style to the element, make the // background 'white', add a grey border
+	// const buddies = ['Gandalf the Grey', 'Legolas', 'Gimli', 'Strider', 'Boromir']
+	const removeBuddies = document.getElementById('buddies')
+	removeBuddies.remove()
+
+	const rivendell = document.getElementById('Rivendell')
+
+	const ulBuddies = document.createElement('ul')
+	ulBuddies.id = 'buddies'
+	buddies[0] = 'Gandolf the White'
+	for (let i = 0; i < buddies.length; i++) {
+		const liBuddy = document.createElement('li')
+		liBuddy.className = 'buddy'
+		liBuddy.textContent = buddies[i]
+		if (i === 0) {
+			liBuddy.style.background = 'white'
+			liBuddy.style.border = "3px solid grey"
+		}
+		ulBuddies.appendChild(liBuddy)
+	}
+	rivendell.appendChild(ulBuddies)
+
 }
 
 // COMMIT YOUR WORK
