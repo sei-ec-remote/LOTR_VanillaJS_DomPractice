@@ -141,11 +141,28 @@ function makeBuddies() {
 	console.log('5: makeBuddies')
 
 	// create an `aside` tag
-
+	const asideTag = document.createElement ('aside')
+	// i consoled logged this and it worked. literally cried
+	// console.log('this is the aside tag', asideTag)
 	// put an `unordered list` of the `'buddies'` in the aside
+	const ulBuddies = document.createElement('ul')
+	ulBuddies.id = 'buddies'
+	const rivendell = document.getElementById('Rivendell')
 
+	for (let i = 0; i < buddies.length; i++) {
+		const liBuddy = document.createElement('li')
+		liBuddy.className = 'buddy'
+		liBuddy.textContent = buddies[i]
+		ulBuddies.appendChild(liBuddy)
+		asideTag.appendChild(ulBuddies)
+	}
+	// console.log('this should show the buddies in aside', asideTag)
+	// console.log('this should be something', ulBuddies)
 	// insert your aside as a child element of `rivendell`
-}
+	// after checking I have decided to just copy the code from the
+	// previous chapter as it has not worked
+	rivendell.appendChild(asideTag)
+}  
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 5 complete - Made the Buddies".
