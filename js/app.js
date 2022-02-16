@@ -345,6 +345,23 @@ function weWantsIt() {
   // Create a div with an id of `'gollum'` and add it to Mordor
   // Remove `the ring` from `Frodo` and give it to `Gollum`
   // Move Gollum into Mount Doom
+
+  // set up Gollum
+  const gollumIsHere = document.createElement("div")
+  gollumIsHere.id = "gollum"
+  // recreate variables needed for the objectives
+  const walkIntoMordor = document.getElementById("Mordor")
+  const mtDoom = document.getElementById("mount-doom")
+  const theOneRing = document.getElementById("the-ring") 
+  // add Gollum to Mordor
+  walkIntoMordor.appendChild(gollumIsHere)
+  // take The Ring from Frodo so we can reassign it
+  theOneRing.remove()
+  // give The Ring to Gollumn
+  gollumIsHere.appendChild(theOneRing)
+  // move Gollum and The Ring to Mt Doom
+  gollumIsHere.remove()
+  mtDoom.appendChild(gollumIsHere)
 }
 
 // COMMIT YOUR WORK
