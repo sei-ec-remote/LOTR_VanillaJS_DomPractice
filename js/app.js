@@ -64,7 +64,7 @@ function makeHobbits() {
   ulHobbits.id = "hobbits";
   for (let i = 0; i < hobbits.length; i++) {
     const liHobbits = document.createElement("li");
-    liHobbits.classdName = "hobbit";
+    liHobbits.className = "hobbit";
     liHobbits.textContent = hobbits[i];
     ulHobbits.appendChild(liHobbits);
   }
@@ -220,6 +220,9 @@ function forgeTheFellowShip() {
 
   // This is inelegant and I feel there must be a better solution
   // but I couldn't seem to get the two uls to combine into one.
+  // **much later: did I have a typo?? Was this all because of a typo??
+  // initial testing looks promising, but I've already spent too long on
+  // this part. It's working, so I'll call it good enough for now.
   const fellowshipArr1 = ulHobbits.children
   const fellowshipArr2 = ulBuddies.children
 
@@ -265,8 +268,20 @@ function forgeTheFellowShip() {
 function theBalrog() {
   console.log("9: theBalrog");
   // change the `'Gandalf'` text to `'Gandalf the White'`
-  // apply the following style to the element, make the // background 'white', add a grey border
+  // apply the following style to the element, make the
+  // background 'white', add a grey border
+
+  const theFellowship = document.getElementById("the-fellowship")
+  fellowshipArray = theFellowship.children
+  // console.log("only Gandalf shall pass", fellowshipArray[4])
+  // variable to refer to Gandalf, add class in case we need to find him
+  // later and the color formatting
+  const liGandalf = fellowshipArray[4]
+  liGandalf.textContent = "Gandalf the White"
+  liGandalf.className = "wizard"
+  liGandalf.style.cssText = "background-color: white;border: 4px solid grey"
 }
+
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 9 complete - Updated Gandalf"
