@@ -128,7 +128,7 @@ function makeBaddies() {
 }
 
 // COMMIT YOUR WORK
-// The commit message should read: "Chapter 4 complete - Made the Baddies"..
+// The commit message should read: "Chapter 4 complete - Made the Baddies".
 
 // ============
 // Chapter 5
@@ -136,12 +136,25 @@ function makeBaddies() {
 
 function makeBuddies() {
 	console.log('5: makeBuddies')
-
+	
+	
 	// create an `aside` tag
-
+	const asideBuddies = document.createElement("aside")
+	// create an unordered list 
+	const ulBuddies = document.createElement("ul")
+	ulBuddies.id = "buddies"
 	// put an `unordered list` of the `'buddies'` in the aside
-
+	for (let i = 0; i < buddies.length; i++) {
+		const liBuddies  = document.createElement("li")
+		// give each buddies a class of buddy
+		liBuddies.className = "buddy"
+		liBuddies.textContent = buddies[i]
+		ulBuddies.appendChild(liBuddies)
+	}
+	// get rivendell by id
+	const rivendell = document.getElementById("Rivendell")
 	// insert your aside as a child element of `rivendell`
+	rivendell.appendChild(ulBuddies)
 }
 
 // COMMIT YOUR WORK
