@@ -282,7 +282,6 @@ function theBalrog() {
   liGandalf.style.cssText = "background-color: white;border: 4px solid grey"
 }
 
-
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 9 complete - Updated Gandalf"
 
@@ -293,8 +292,13 @@ function theBalrog() {
 function hornOfGondor() {
   console.log("10: hornOfGondor");
   // pop up an alert that the horn of gondor has been blown
+  alert("The Horn of Gondor has been blown! It's probably fine though.")
   // Boromir's been killed by the Uruk-hai!
   // Remove `Boromir` from the Fellowship
+  const theFellowship = document.getElementById("the-fellowship")
+  fellowshipArray = theFellowship.children
+  // console.log("sorry for your everything Boromir", fellowshipArray[8])
+  fellowshipArray[8].remove()
 }
 
 // COMMIT YOUR WORK
