@@ -227,6 +227,11 @@ function beautifulStranger() {
 	console.log('7: beautifulStranger')
 
 	// change the `'Strider'` text to `'Aragorn'`
+	//grab the buddy strider
+	//change text to aragorn
+	const strider = document.getElementById('Rivendell').getElementsByTagName('li')[3]
+	// console.log('this should grab strider via aside', strider)
+	strider.innerText = 'Aragorn'
 }
 
 // COMMIT YOUR WORK
