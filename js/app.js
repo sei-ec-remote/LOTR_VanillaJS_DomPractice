@@ -188,8 +188,7 @@ function leaveTheShire() {
 
 	// attach hobbits to rivendell
 	rivendell.appendChild(ulHobbits)
-	// remove hobbits from the shire
-	theShire.removeChild(ulHobbits)
+	
 }
 
 // COMMIT YOUR WORK
@@ -200,9 +199,11 @@ function leaveTheShire() {
 // ============
 
 function beautifulStranger() {
-	console.log('7: beautifulStranger')
+	// console.log('7: beautifulStranger')
 
 	// change the `'Strider'` text to `'Aragorn'`
+	
+	
 }
 
 // COMMIT YOUR WORK
