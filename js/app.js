@@ -127,6 +127,23 @@ function makeBaddies() {
 	console.log('4: makeBaddies')
 
 	// display an unordered list of baddies in Mordor
+	const mordor = document.getElementById('Mordor')
+	const ulBaddies = document.createElement('ul')
+	ulBaddies.id = 'Baddies'
+	console.log(ulBaddies)
+
+	for (let i = 0 ; i <baddies.length ;i++ ){
+		const liBaddy = document.createElement('li')
+		liBaddy.className ='Baddy'
+		//console.log(liBaddy)
+		liBaddy.textContent =baddies[i]
+		ulBaddies.appendChild(liBaddy)
+		//console.log(liBaddy)
+
+	}
+	mordor.appendChild(ulBaddies)
+
+
 
 	// give each of the baddies a class of "baddy"
 
@@ -144,6 +161,7 @@ function makeBuddies() {
 	console.log('5: makeBuddies')
 
 	// create an `aside` tag
+	
 
 	// put an `unordered list` of the `'buddies'` in the aside
 
