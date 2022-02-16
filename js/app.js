@@ -153,19 +153,19 @@ function makeBuddies() {
 
 	// create an `aside` tag
 	const rivendell = document.getElementById('Rivendell')
-	const ulBuddies = document.createElement('aside')
-	ulBuddies.id = 'buddies'
-	// console.log('This is the ul baddies:', ulBuddies)
+	const asideBuddies = document.createElement('aside')
+	const ulBuddies = document.createElement('ul')
+	asideBuddies.id = 'buddies'
 	// put an `unordered list` of the `'buddies'` in the aside
 	for (let i = 0; i < buddies.length; i++) {
 		const liBuddy = document.createElement('li')
 		// give each of the baddies a class of "baddy"
 		liBuddy.className = 'buddy'
 		liBuddy.textContent = buddies[i]
-		ulBuddies.appendChild(liBuddy)
+		asideBuddies.appendChild(liBuddy)
 		}
 	// insert your aside as a child element of `rivendell`
-	rivendell.appendChild(ulBuddies)
+	rivendell.appendChild(asideBuddies)
 }
 
 // COMMIT YOUR WORK
@@ -199,9 +199,14 @@ function leaveTheShire() {
 // ============
 
 function beautifulStranger() {
-	// console.log('7: beautifulStranger')
+	console.log('7: beautifulStranger')
 
 	// change the `'Strider'` text to `'Aragorn'`
+	const ulBuddies = document.getElementById('buddies')
+	console.log(ulBuddies)
+    const buddiesArray = ulBuddies.children
+   	buddiesArray[3].textContent = 'Aragon'
+	console.log(buddiesArray[3])
 	
 	
 }
