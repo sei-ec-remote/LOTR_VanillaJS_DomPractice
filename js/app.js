@@ -179,10 +179,37 @@ function makeBuddies() {
 // ============
 
 function leaveTheShire() {
-	console.log('6: leaveTheShire')
 
 	// assemble the `hobbits` and move them to `rivendell`
+
+	// Get the Original hobbits from The Shire.
+	const ulHobbits = document.querySelector('#hobbits');
+	const hobbitsArray = ulHobbits.children;
+
+	// Gets the buddies in Rivendell
+	const ulBuddies = document.getElementById('buddies');
+
+	// Clone the height challenged hobbit
+	for (let i = 0; i < hobbitsArray.length; i++) {
+		const hobbit = hobbitsArray[i].cloneNode(true);
+
+		ulBuddies.appendChild(hobbit);
+
+    }
+
+	// The length of the array is changing as we remove the elements.
+	// for (let i = 0; i < hobbitsArray.length; i++) {
+	// 	// console.log("hobbitsArray: i : ", hobbitsArray[i]);
+	// 	hobbitsArray[i].remove();	
+	// 	i--;
+	// }
+
+	// Remove the li hobbits.
+	while (hobbitsArray.length > 0) {
+		hobbitsArray[0].remove();
+	}
 }
+
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 6 complete - Left the Shire"
