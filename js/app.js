@@ -201,11 +201,11 @@ function forgeTheFellowShip() {
 
 	for(let i=0; i<5; i++){
 		theFellowshipDiv.appendChild(buddyArray[i])
-		console.log(`${buddyArray[i].textContent} has joined your party`)
+		alert(`${buddyArray[i].textContent} has joined your party`)
 	}
 	for(let i=0; i<4; i++){
 		theFellowshipDiv.appendChild(hobbitsArray[i])
-		console.log(`${hobbitsArray[i].textContent} has joined your party`)
+		alert(`${hobbitsArray[i].textContent} has joined your party`)
 	}
 
 
@@ -246,8 +246,14 @@ function theBalrog() {
 function hornOfGondor() {
 	console.log('10: hornOfGondor')
 	// pop up an alert that the horn of gondor has been blown
+	alert("The horn of Gondor has been blown!")
 	// Boromir's been killed by the Uruk-hai!
 	// Remove `Boromir` from the Fellowship
+	const fellowship = document.getElementById("The-Fellowship")
+	console.log(fellowship)
+	const fellowshipArray = fellowship.children
+	fellowship.removeChild(fellowshipArray[4])
+
 }
 
 // COMMIT YOUR WORK
