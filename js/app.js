@@ -209,8 +209,18 @@ function beautifulStranger() {
 	console.log('7: beautifulStranger')
 
 	// change the `'Strider'` text to `'Aragorn'`
-	//lets use console.log to check a reference to the element for 'Strider'
+	// let's create a variable that reference 'Strider'
 	const Strider = document.getElementById('Strider')
+	//lets use console.log to check a reference to the element for 'Strider'
+	//console.log(Strider)
+	//let's change the name that is displayed from Strider to Aragon
+	Strider.textContent = 'Aragon'
+	// to avoid confusion we should change the id too!
+	Strider.id = 'Aragon'
+	//now that the id changed we need to create a new variable to reference Aragon
+	const Aragon = document.getElementById('Aragon')
+	// console.log('Strider should now be Aragon (both name and id)', Aragon)
+	// awesome Strider has succesfully been renamed Aragon and is no longer a stranger!
 }
 
 // COMMIT YOUR WORK
