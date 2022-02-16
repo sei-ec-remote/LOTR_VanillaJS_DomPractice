@@ -192,8 +192,13 @@ moveToRivendell.appendChild(moveHobbits)
 
 function beautifulStranger() {
 	console.log('7: beautifulStranger')
-
+	
 	// change the `'Strider'` text to `'Aragorn'`
+ const liBuddies = document.getElementById('buddies')
+const arrayOfBuddies = liBuddies.children 
+arrayOfBuddies[3].textContent = 'Aragorn'
+ 
+
 }
 
 // COMMIT YOUR WORK
