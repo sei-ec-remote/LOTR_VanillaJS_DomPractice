@@ -221,15 +221,16 @@ function forgeTheFellowShip() {
 	const buddyArray = Object.values(buddyList)
 	const hobbitsArray = Object.values(hobbitList)
 
+	
+	// after each character is added make an alert that they // have joined your party
 	for(let i=0; i<5; i++){
 		theFellowship.appendChild(buddyArray[i])
-		console.log(`${buddyArray[i].textContent} has joined your party`)
+		alert(`${buddyArray[i].textContent} has joined your party`)
 	}
 	for(let i=0; i<4; i++){
 		theFellowship.appendChild(hobbitsArray[i])
-		console.log(`${hobbitsArray[i].textContent} has joined your party`)
+		alert(`${hobbitsArray[i].textContent} has joined your party`)
 	}
-	// after each character is added make an alert that they // have joined your party
 	
 	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
 }
@@ -244,6 +245,12 @@ function forgeTheFellowShip() {
 function theBalrog() {
 	console.log('9: theBalrog')
 	// change the `'Gandalf'` text to `'Gandalf the White'`
+	const theFellowship = document.getElementById("the-fellowship")
+	console.log(theFellowship)
+	const theFellowshipArray = theFellowship.children
+	console.log(theFellowshipArray)
+	theFellowshipArray[0].textContent = "Gandalf the White"
+
 	// apply the following style to the element, make the // background 'white', add a grey border
 }
 
