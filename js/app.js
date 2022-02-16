@@ -182,6 +182,8 @@ function leaveTheShire() {
 	}
 	// get rivendell by id
 	const rivendell = document.getElementById("Rivendell")
+	// remove hobbits from the shire 
+	// ?????
 	// insert hobbits into rivendell 
 	rivendell.appendChild(ulHobbits)
 }
@@ -197,16 +199,14 @@ function beautifulStranger() {
 	console.log('7: beautifulStranger')
 
 	// change the `'Strider'` text to `'Aragorn'`
-	// change text from Aragorn to 
 	// find out the ul strider is in
 	const ulBuddies = document.querySelector("#buddies")
 	// figure out which li is strider 
 	const buddiesArray = ulBuddies.children
 	const striderLi = buddiesArray[3]
-	// then we can attach the ring to our frodo li
+	// change text from strider to aragorn
 	striderLi.textContent = "Aragorn"
 }
-
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 7 complete - Strider is changed to Aragorn"
@@ -217,11 +217,15 @@ function beautifulStranger() {
 
 function forgeTheFellowShip() {
 	console.log('8: forgeTheFellowShip')
-	// create a new div called `'the-fellowship'` within `rivendell`
+
+// create a new div called `'the-fellowship'` within `rivendell`
+    // const fellowshipDiv = document.createElement("div")
+	// fellowshipDiv.id = "the-fellowship"
 	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
 	// after each character is added make an alert that they // have joined your party
 
 	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
+//
 }
 
 // COMMIT YOUR WORK
@@ -233,8 +237,17 @@ function forgeTheFellowShip() {
 
 function theBalrog() {
 	console.log('9: theBalrog')
-	// change the `'Gandalf'` text to `'Gandalf the White'`
+
+	// find out the ul gandalf is in
+	const ulBuddies = document.querySelector("#buddies")
+	// figure out which li is strider 
+	const buddiesArray = ulBuddies.children
+	const gandalfLi = buddiesArray[0]
+	// change text from `gandalf` to `gandalf the white`
+	gandalfLi.textContent = "Gandalf the White"
 	// apply the following style to the element, make the // background 'white', add a grey border
+	gandalfLi.style.backgroundColor = "white"
+	gandalfLi.style.borderColor = "grey"
 }
 
 // COMMIT YOUR WORK
@@ -247,8 +260,10 @@ function theBalrog() {
 function hornOfGondor() {
 	console.log('10: hornOfGondor')
 	// pop up an alert that the horn of gondor has been blown
+	alert("The Horn of Gondor has been blown")
 	// Boromir's been killed by the Uruk-hai!
 	// Remove `Boromir` from the Fellowship
+	forgeTheFellowShip.removeChild
 }
 
 // COMMIT YOUR WORK
