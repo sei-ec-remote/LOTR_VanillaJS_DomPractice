@@ -160,10 +160,10 @@ function makeBuddies() {
 		ulBuddies.appendChild(liBuddy)
 	}
 	aside.appendChild(ulBuddies)
+	// insert your aside as a child element of `rivendell`
 	const rivendell = document.getElementById('Rivendell')
 	rivendell.appendChild(ulBuddies)
-	console.log("this is the list of buddies: ", ulBuddies)
-	// insert your aside as a child element of `rivendell`
+	// console.log("this is the list of buddies: ", ulBuddies)
 }
 
 // COMMIT YOUR WORK
@@ -175,8 +175,19 @@ function makeBuddies() {
 
 function leaveTheShire() {
 	console.log('6: leaveTheShire')
-
+	const rivendell = document.getElementById('Rivendell')
+	const ulHobbits = document.createElement('ul')
+	ulHobbits.id = "hobbits"
+	for (let i = 0; i < hobbits.length; i++) {
+		const liHobbit = document.createElement('li')
+		liHobbit.className = 'hobbit'
+		liHobbit.textContent = hobbits[i]
+		ulHobbits.appendChild(liHobbit)
+	}
 	// assemble the `hobbits` and move them to `rivendell`
+	const removeShire = document.getElementById('hobbits')
+	removeShire.remove()
+	rivendell.appendChild(ulHobbits)
 }
 
 // COMMIT YOUR WORK
