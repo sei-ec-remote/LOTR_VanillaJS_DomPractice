@@ -147,6 +147,7 @@ function makeBuddies() {
 	const rivendell = document.querySelector('#Rivendell')
 	makeBuddiesAside.id = 'buddies-aside'
 	const buddiesUl = document.createElement('ul')
+	buddiesUl.id = 'buddiesUl'
 	// console.log('this make the element {aside}', makeBuddiesAside)
 	// put an `unordered list` of the `'buddies'` in the aside
 	for (let i = 0; i < buddies.length; i++) {
@@ -224,17 +225,19 @@ function forgeTheFellowShip() {
 
 	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
 	const hobbit = document.querySelector('#hobbits')
-	const buddy = document.querySelector('#buddies-aside')
+	const buddy = document.querySelector('#buddiesUl')
 
 	// after each character is added make an alert that they 
 	// have joined your party
-	for	(let i = 0; i < hobbit.length; i++) {
-		theFellowship.appendChild(hobbit.children[i])		
-		console.log()
+	for	(let i = 0; i < hobbit.children.length; i++) {
+		console.log(hobbit.children[i].innerHTML + ' has joined the party')
 	}
-	
-
+	for (let i = 0; i < buddy.children.length; i++) {
+		console.log(buddy.children[i].innerHTML + 'has joined the party')
+	}
+	theFellowship.appendChild(hobbit)	
 	theFellowship.appendChild(buddy)
+
 	rivendell.appendChild(theFellowship)
 	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
 }
