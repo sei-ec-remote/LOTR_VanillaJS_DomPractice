@@ -229,7 +229,7 @@ function beautifulStranger() {
 	// Next we'll need to figure out which li is Strider.
 	// ulHobbits.children.
 	const buddyArray = ulBuddies.children;
-	stryder = buddyArray[3];
+	const stryder = buddyArray[3];
 	stryder.textContent = 'Aragorn';
 }
 
@@ -290,7 +290,18 @@ function forgeTheFellowShip() {
 function theBalrog() {
 	console.log('9: theBalrog')
 	// change the `'Gandalf'` text to `'Gandalf the White'`
-	// apply the following style to the element, make the // background 'white', add a grey border
+	// apply the following style to the element, make the 
+	// background 'white', add a grey border
+	const ulBuddiesOrHobbits = document.querySelector('#buddies');
+
+	// Next we'll need to figure out which li is Gandalf.
+	// ulHobbits.children.
+	const hobbitOrBuddyArray = ulBuddiesOrHobbits.children;
+	const gandalf = hobbitOrBuddyArray[0];
+	gandalf.textContent = 'Gandalf the White';
+	gandalf.style.backgroundColor = 'white';
+	gandalf.style.border = 'thin solid grey';
+
 }
 
 // COMMIT YOUR WORK
