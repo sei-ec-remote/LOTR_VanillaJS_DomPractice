@@ -138,10 +138,33 @@ function makeBuddies() {
 	console.log('5: makeBuddies')
 
 	// create an `aside` tag
+	const asideBuddies = document.createElement('aside')
 
 	// put an `unordered list` of the `'buddies'` in the aside
+	//create the unordered list
+	const ulBuddies = document.createElement('ul')
+	//append the unordered list to the aside
+	asideBuddies.appendChild(ulBuddies)
+	//add list items to the unordered list 'ulBuddies'
+	for(let i = 0; i<buddies.length; i++){
+		//create list item variable
+		const liBuddy = document.createElement('li')
+		//add the name of each buddy to new item variable created above^
+		liBuddy.textContent = buddies[i]
+		// append the new list item to the unordered list 'ulBuddies'
+		ulBuddies.appendChild(liBuddy)
+	}
+	// now that the unordered list ulBuddies is created and has list items
+	// it is time to add it to the 'asideBuddies' element
+	asideBuddies.appendChild(ulBuddies)
 
 	// insert your aside as a child element of `rivendell`
+	// to insert aside within the element 'rivendell' we first need to create
+	// an element reference to the element
+	const rivendell = document.getElementById('Rivendell')
+	//let's test to make sure that 'rivendell is an id
+	//console.log(' this should be rivendell', rivendell) --> awesome worked 'I was missing capital 'R'
+	rivendell.appendChild(asideBuddies)
 }
 
 // COMMIT YOUR WORK
