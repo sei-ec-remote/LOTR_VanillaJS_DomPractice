@@ -156,7 +156,7 @@ function makeBuddies() {
 		// next section. Went back and changed this, so I can later reference it.
 		liBuddy.id = buddies[i]
 		liBuddy.className = 'buddy'
-		console.log(liBuddy.id)
+		//console.log(liBuddy.id)
 		// append the new list item to the unordered list 'ulBuddies'
 		ulBuddies.appendChild(liBuddy)
 	}
@@ -248,26 +248,36 @@ function forgeTheFellowShip() {
 	// now that we have an unordered list, lets append it to the div element of the the Fellowship
 	theFellowship.appendChild(ulTheFellowship)
 	// let's add theFellowship to rivendell
-	console.log('this is theFellowship element: ', theFellowship)
+	//console.log('this is theFellowship element: ', theFellowship)
 	rivendell.appendChild(theFellowship)
 	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
 	// all of the hobbits and buddies are in the unordered list of rivendell
 	// tough part is that they are in two different unordered lists
-	//lets create reference to each of the unordered lists
+	//lets create reference to hobbits unordered lists
 	const ulHobbits = document.querySelector('#hobbits').getElementsByClassName('hobbit')
 	// make sure the reference is correct with a console.log
 
-	console.log(ulHobbits.length)
-	// let's loop through the buddies and one by one and move them to the fellowship
+	//console.log(ulHobbits.length)
+	// let's loop through the hobbits and one by one and move them to the fellowship
 	while(ulHobbits.length>0) {
-		console.log(`${ulHobbits[0].textContent}`)
+		//console.log(`${ulHobbits[0].textContent}`)
 		// after each character is added make an alert that they // have joined your party
 		alert(`${ulHobbits[0].textContent} has joined your party!`)
 		ulTheFellowship.appendChild(ulHobbits[0])
 	//	console.log('this is the buddy that should be added', ulBuddies[i].id)
-	
-		
 	}
+	
+	//now it is time to add the buddies
+	//create reference to buddies unorderd lists
+	const ulBuddies = document.querySelector('#buddies').getElementsByClassName('buddy')
+	// let's loop through the buddies and one by one and move them to the fellowship
+	while(ulBuddies.length > 0){
+		//console.log(`${ulBuddies[0].textContent}`)
+		// after each character is added make an alert that they // have joined your party
+		alert(`${ulBuddies[0].textContent} has joined your party!`)
+		ulTheFellowship.appendChild(ulBuddies[0])
+	}
+
 	// check to see/confirm everyone in the fellowship 
 	console.log('this is the fellowship', theFellowship)
 
