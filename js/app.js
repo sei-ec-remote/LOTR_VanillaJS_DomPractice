@@ -258,6 +258,7 @@ function forgeTheFellowShip() {
 			fellowship.appendChild(buddiesArray[i])
 	
 }
+//
 	
 
 	liHobbits = document.getElementsByClassName('hobbit')
