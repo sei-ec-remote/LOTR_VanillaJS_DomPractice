@@ -258,21 +258,18 @@ function forgeTheFellowShip() {
 	const buddyArray = Object.values(buddyList)
 	const hobbitsArray = Object.values(hobbitsList)
 
-	for(let i=0; i<hobbits.length ; i++){
+	for(let i=0 ; i<hobbits.length ; i++){
 		theFellowship.appendChild(hobbitsArray[i])
 		console.log(`${hobbitsArray[i].textContent} has joined your party`)
 	}
 	
 
-	for(let i=0; i<buddies.length; i++){
+	for(let i=0 ; i<buddies.length ; i++){
 		theFellowship.appendChild(buddyArray[i])
 		console.log(`${buddyArray[i].textContent} has joined your party`)
 	}
 
 	
-
-
-
 
 	// after each character is added make an alert that they // have joined your party
 
@@ -289,6 +286,19 @@ function forgeTheFellowShip() {
 function theBalrog() {
 	console.log('9: theBalrog')
 	// change the `'Gandalf'` text to `'Gandalf the White'`
+	const theFellowship = document.getElementById('the-fellowship')
+
+	const theFellowshipArray = theFellowship.children
+
+	// console.log(theFellowshipArray)
+
+	//gandalf is the 4th element
+	theFellowshipArray[4].textContent = 'Gandalf The White'
+	// console.log(theFellowshipArray)
+
+	theFellowshipArray[4].style.backgroundColor = "white" ;
+	theFellowshipArray[4].style.border = "3px solid grey" ;
+
 	// apply the following style to the element, make the // background 'white', add a grey border
 }
 
@@ -302,8 +312,16 @@ function theBalrog() {
 function hornOfGondor() {
 	console.log('10: hornOfGondor')
 	// pop up an alert that the horn of gondor has been blown
+
+	console.log("The Horn of Gonder has been blown!")
 	// Boromir's been killed by the Uruk-hai!
+	console.log('Boromir has fallen to the Uruk-hai')
 	// Remove `Boromir` from the Fellowship
+	const theFellowship = document.getElementById('the-fellowship')
+	const theFellowshipArray = theFellowship.children
+	theFellowshipArray[8].remove();
+	console.log('who is left in the fellowship', theFellowshipArray)
+
 }
 
 // COMMIT YOUR WORK
