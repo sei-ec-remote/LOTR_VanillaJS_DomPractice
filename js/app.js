@@ -151,6 +151,11 @@ function makeBuddies() {
 		const liBuddy = document.createElement('li')
 		//add the name of each buddy to new item variable created above^
 		liBuddy.textContent = buddies[i]
+		// I forgot to add the id for each buddy which did not allow me to reference in the
+		// next section. Went back and changed this, so I can later reference it.
+		liBuddy.id = buddies[i]
+		liBuddy.className = 'buddy'
+		console.log(liBuddy.id)
 		// append the new list item to the unordered list 'ulBuddies'
 		ulBuddies.appendChild(liBuddy)
 	}
@@ -176,8 +181,21 @@ function makeBuddies() {
 
 function leaveTheShire() {
 	console.log('6: leaveTheShire')
-
 	// assemble the `hobbits` and move them to `rivendell`
+	// let's create a reference to all the hobbits
+	// the unordered list 'ulHobbits' has all the habits within it as list items
+	const ulHobbits = document.querySelector('#hobbits')
+	// meow that the hobbits are assembled into a variable, let move them
+	// before, we move them we need to create a variable for where they will move to!
+	const rivendell = document.getElementById('Rivendell')
+	// alright now that we have the hobits assembled and the destination made
+	// let's move out
+	rivendell.appendChild(ulHobbits)
+	// let's check if this worked and see if it moved the hobbits or coppied them or what
+	//console.log('list of people in rivendell: ', rivendell.children)
+	//const theShire = document.getElementById('The-Shire')
+	//console.log('list of people in the shire ', theShire)
+	// awesome, the hobbits have moved to rivendell!
 }
 
 // COMMIT YOUR WORK
@@ -191,6 +209,8 @@ function beautifulStranger() {
 	console.log('7: beautifulStranger')
 
 	// change the `'Strider'` text to `'Aragorn'`
+	//lets use console.log to check a reference to the element for 'Strider'
+	const Strider = document.getElementById('Strider')
 }
 
 // COMMIT YOUR WORK
