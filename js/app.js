@@ -215,6 +215,13 @@ function beautifulStranger() {
 	console.log('7: beautifulStranger')
 
 	// change the `'Strider'` text to `'Aragorn'`
+	const liBuddies = document.getElementById('buddies')
+	//console.log(strideArray)
+	const buddiesArray = liBuddies.children
+	console.log(buddiesArray)
+	buddiesArray[3].textContent = 'Aragorn'
+	//console.log(buddiesArray[3])
+
 }
 
 // COMMIT YOUR WORK
@@ -227,6 +234,7 @@ function beautifulStranger() {
 function forgeTheFellowShip() {
 	console.log('8: forgeTheFellowShip')
 	// create a new div called `'the-fellowship'` within `rivendell`
+	
 	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
 	// after each character is added make an alert that they // have joined your party
 
