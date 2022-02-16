@@ -195,6 +195,18 @@ function beautifulStranger() {
 	console.log('7: beautifulStranger')
 
 	// change the `'Strider'` text to `'Aragorn'`
+	const changeName = document.getElementsByClassName('buddy')
+	listOfBuds = Object.values(changeName)
+	console.log(listOfBuds)
+	listOfBuds.forEach(element => {
+		if (element.textContent === 'Strider') {
+			element.textContent = 'Aragorn'
+		}
+		
+	});
+		
+// 	buddies[3] = 'Aragorn'
+// 	console.log(buddies)
 }
 
 // COMMIT YOUR WORK
