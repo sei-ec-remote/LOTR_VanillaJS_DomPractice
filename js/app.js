@@ -231,8 +231,20 @@ function beautifulStranger() {
 function forgeTheFellowShip() {
 	console.log('8: forgeTheFellowShip')
 	// create a new div called `'the-fellowship'` within `rivendell`
+	const theFellowship = document.createElement('div')
+	document.getElementById("Rivendell").appendChild(theFellowship)
 	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
-	// after each character is added make an alert that they // have joined your party
+	const allThem = [...hobbits, ...buddies]
+	// console.log(allThem)
+
+	for (let i = 0; i < allThem.length; i++) {
+		const liBuddy = document.createElement('p')
+		theFellowship.appendChild(liBuddy)
+		// after each character is added make an alert that they // have joined your party
+		// alert(`${allThem[i]} joined the party`)
+	}
+
+
 
 	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
 }
