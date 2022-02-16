@@ -306,7 +306,7 @@ function theBalrog() {
     const gandalfDiv = document.getElementById('Gandalf the Grey');
 	const gandalfArray = gandalfDiv.children;
     const gandalf = gandalfArray[0];
-	
+
 	gandalf.textContent = 'Gandalf the White';
 	gandalf.style.backgroundColor = 'white';
 	gandalf.style.border = 'thin solid grey';
@@ -329,6 +329,7 @@ function hornOfGondor() {
 
     // Remove Boromir from the Fellowship.  Had this as a class before
 	//  but retrieving it did not work.  Switched to id and Tada!
+	//  This will remove the div Boromir and the li element.
 	const boromir = document.getElementById('Boromir');
 	boromir.remove();
 }
