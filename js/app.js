@@ -174,8 +174,13 @@ const rivendell = document.getElementById('Rivendell')
 
 function leaveTheShire() {
 	console.log('6: leaveTheShire')
+const moveHobbits = document.getElementById('hobbits')
+const moveToRivendell = document.getElementById('Rivendell')
+moveToRivendell.appendChild(moveHobbits)
 
-	// assemble the `hobbits` and move them to `rivendell`
+
+	
+// assemble the `hobbits` and move them to `rivendell`
 }
 
 // COMMIT YOUR WORK
