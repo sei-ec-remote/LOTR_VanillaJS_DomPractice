@@ -150,10 +150,25 @@ function makeBuddies() {
 	console.log('5: makeBuddies')
 
 	// create an `aside` tag
-
+	const buddiesAside = document.createElement('aside')
+	const rivendell = document.getElementById('Rivendell')
+	//console.log(buddiesAside)
 	// put an `unordered list` of the `'buddies'` in the aside
 
+	const buddiesInUl = document.createElement('ul')
+	buddiesInUl.id = 'buddies'
+	
+	for(let i = 0; i < buddies.length; i++) {
+		const liBuddy = document.createElement('li')
+		liBuddy.className = 'buddy'
+		liBuddy.textContent = buddies[i]
+		buddiesInUl.appendChild(liBuddy)
+		buddiesAside.appendChild(buddiesInUl)
+	}
+	//console.log(buddiesInUl)
 	// insert your aside as a child element of `rivendell`
+	
+	rivendell.appendChild(buddiesAside)
 }
 
 // COMMIT YOUR WORK
@@ -165,8 +180,11 @@ function makeBuddies() {
 
 function leaveTheShire() {
 	console.log('6: leaveTheShire')
-
+	const rivendell = document.getElementById('Rivendell')
+	const ulHobbits = document.querySelector('#hobbits')
 	// assemble the `hobbits` and move them to `rivendell`
+	rivendell.appendChild(ulHobbits)
+
 }
 
 // COMMIT YOUR WORK
