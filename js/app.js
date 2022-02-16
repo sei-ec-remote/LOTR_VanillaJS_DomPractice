@@ -322,6 +322,8 @@ function hornOfGondor() {
 	theFellowshipArray[8].remove();
 	console.log('who is left in the fellowship', theFellowshipArray)
 
+	//forgot to commit gandalf, making change to code to allow commit 10
+
 }
 
 // COMMIT YOUR WORK
