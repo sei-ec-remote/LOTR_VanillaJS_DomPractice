@@ -293,7 +293,7 @@ function theBalrog() {
 function hornOfGondor() {
 	console.log('10: hornOfGondor')
 	// pop up an alert that the horn of gondor has been blown
-	alert("the horn of gondor has been blown")
+	// alert("the horn of gondor has been blown")
 	// Boromir's been killed by the Uruk-hai!
 	// Remove `Boromir` from the Fellowship
 
@@ -369,8 +369,24 @@ function itsDangerousToGoAlone() {
 function weWantsIt() {
 	console.log('12: weWantsIt')
 	// Create a div with an id of `'gollum'` and add it to Mordor
+
+	const gollumDiv = document.createElement('div')
+	gollumDiv.id = "gollum"
+	document.getElementById("Mordor").appendChild(gollumDiv)
+
 	// Remove `the ring` from `Frodo` and give it to `Gollum`
+
+	const oneRingDiv = document.createElement('div')
+	oneRingDiv.id = "the-ring"
+	oneRingDiv.className = 'magic-imbued-jewelry'
+	gollumDiv.appendChild(oneRingDiv)
+
 	// Move Gollum into Mount Doom
+	const mountDoom = document.createElement('div')
+	document.getElementById("Mordor").appendChild(mountDoom)
+
+	mountDoom.appendChild(gollumDiv)
+
 }
 
 // COMMIT YOUR WORK
