@@ -268,6 +268,7 @@ function forgeTheFellowShip() {
 
 	fellowship.appendChild(buddiesList)
 	fellowship.appendChild(hobbitsList)
+	console.log(fellowship)
 
 	// after each character is added make an alert that they // have joined your party
 	
@@ -353,8 +354,22 @@ function itsDangerousToGoAlone() {
 function weWantsIt() {
 	console.log('12: weWantsIt')
 	// Create a div with an id of `'gollum'` and add it to Mordor
+	const mordor  = document.querySelector('#Mordor')
+	const gollum = document.createElement('div')
+	gollum.id = 'gollum'
+
+	mordor.appendChild(gollum)
+	console.log(mordor)
+
 	// Remove `the ring` from `Frodo` and give it to `Gollum`
+	const frodoRing = document.getElementById('the-ring')
+	const gol = document.getElementById('gollum')
+	gol.appendChild(frodoRing)
+
 	// Move Gollum into Mount Doom
+	const mountDoom = document.getElementById('mount-doom')
+	mountDoom.appendChild(gol)
+
 }
 
 // COMMIT YOUR WORK
