@@ -151,6 +151,7 @@ function makeBuddies() {
 
 	// create an `aside` tag
 	const aside = document.createElement('aside');
+	aside.id = 'everyone';
 
 	// put an `unordered list` of the `'buddies'` in the aside
 	const ulBuddy = document.createElement('ul');
@@ -250,31 +251,39 @@ function forgeTheFellowShip() {
 	// NOTE: This won't change what you see in the browser.  
 	// Use your Elements tab of your Inspector tools to make sure that it worked.
 
-	const rivendell = document.getElementById('Rivendell');
+	// 1. const rivendell = document.getElementById('Rivendell');
+	const ulBuddies = document.querySelector('#buddies');
+	const aside = document.getElementById('everyone');
+
 
 	const theFellowship = document.createElement('div');
 	theFellowship.className = 'the-fellowship';
 
 	// Add the div to the Rivendell
-	rivendell.appendChild(theFellowship);
+	// 2. rivendell.appendChild(theFellowship);
+	// Lets try to put the new div fore the ulBuddies
+	aside.insertBefore(theFellowship, ulBuddies);
 
 	// Add each hobbit and buddy which are in li's one at a time to 
 	//  the the-fellowship.
-	const ulBuddies = document.querySelector('#buddies');
+	// const ulBuddies = document.querySelector('#buddies');
 	const hobbitOrBuddyArray = ulBuddies.children;
 
 	// How are we adding this to the div that doesn't change the browser.
 	//  Lets add divs below the-fellowship with classnames of the
 	//  hobbits or buddies
-	for (let i = 0; i < hobbitOrBuddyArray.length; i++) {
+	while(hobbitOrBuddyArray.length > 0) {
 		const buddyOrHobbit = document.createElement('div');
-		buddyOrHobbit.id = hobbitOrBuddyArray[i].textContent;
+		buddyOrHobbit.id = hobbitOrBuddyArray[0].textContent;
 
-		// Attach the buddy or hobbit
+		// Attach the buddy or hobbit div to the-fellowship div
 		theFellowship.appendChild(buddyOrHobbit);
 
+		// Attach the li to the new div.
+		buddyOrHobbit.appendChild(hobbitOrBuddyArray[0]);
+
 		// Send out an alert
-		alert(`${hobbitOrBuddyArray[i].textContent} has joined The Fellowship`);
+		alert(`${buddyOrHobbit.id} has joined The Fellowship`);
     }
 
 
@@ -292,12 +301,12 @@ function theBalrog() {
 	// change the `'Gandalf'` text to `'Gandalf the White'`
 	// apply the following style to the element, make the 
 	// background 'white', add a grey border
-	const ulBuddiesOrHobbits = document.querySelector('#buddies');
 
-	// Next we'll need to figure out which li is Gandalf.
-	// ulHobbits.children.
-	const hobbitOrBuddyArray = ulBuddiesOrHobbits.children;
-	const gandalf = hobbitOrBuddyArray[0];
+	// Div Gandalf contains the li which has Gandalf styling.
+    const gandalfDiv = document.getElementById('Gandalf the Grey');
+	const gandalfArray = gandalfDiv.children;
+    const gandalf = gandalfArray[0];
+	
 	gandalf.textContent = 'Gandalf the White';
 	gandalf.style.backgroundColor = 'white';
 	gandalf.style.border = 'thin solid grey';
