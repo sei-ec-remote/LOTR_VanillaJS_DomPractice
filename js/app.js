@@ -266,12 +266,12 @@ function theBalrog() {
 	
 	const theFellowship = document.getElementById('the-fellowship')
 	// console.log(gandalf)
-    const buddiesArray = theFellowship.children
-   	buddiesArray[0].textContent = 'Gandalf the White'
+    const theFellowshipArray = theFellowship.children
+   	theFellowshipArray[0].textContent = 'Gandalf the White'
 
 	// apply the following style to the element, make the // background 'white', add a grey border
-	buddiesArray[0].style.backgroundColor="white";
-	buddiesArray[0].style.border="2px solid grey";
+	theFellowshipArray[0].style.backgroundColor="white";
+	theFellowshipArray[0].style.border="2px solid grey";
 }
 
 // COMMIT YOUR WORK
@@ -288,10 +288,10 @@ function hornOfGondor() {
 
 	// Boromir's been killed by the Uruk-hai!
 	const theFellowship = document.getElementById('the-fellowship')
-	const buddiesArray = theFellowship.children
-	console.log('Are you Boromoir?', buddiesArray[4])
+	const theFellowshipArray = theFellowship.children
+	// console.log('Are you Boromoir?', theFellowshipArray[4])
 	// Remove `Boromir` from the Fellowship
-	theFellowship.removeChild(buddiesArray[4])
+	theFellowship.removeChild(theFellowshipArray[4])
 }
 
 // COMMIT YOUR WORK
@@ -304,7 +304,20 @@ function hornOfGondor() {
 function itsDangerousToGoAlone() {
 	console.log('11: itsDangerousToGoAlone')
 	// take `Frodo` and `Sam` out of the fellowship and move // them to `Mordor`
+	const mordor = document.getElementById('Mordor')
+	const theFellowship = document.getElementById('the-fellowship')
+	const theFellowshipArray = theFellowship.children
+	// console.log('this is Frodo',theFellowshipArray[4])
+	mordor.appendChild(theFellowshipArray[4])
+	mordor.appendChild(theFellowshipArray[5])
 	// add a div with an id of `'mount-doom'` to `Mordor`
+	const mountDoom = document.createElement('div')
+	// assign div an id
+	mountDoom.id = 'mount-doom'
+	//attach to Mordor
+	mordor.appendChild(mountDoom)
+	// console.log('this is mordor', mordor)
+	
 }
 
 // COMMIT YOUR WORK
@@ -317,8 +330,19 @@ function itsDangerousToGoAlone() {
 function weWantsIt() {
 	console.log('12: weWantsIt')
 	// Create a div with an id of `'gollum'` and add it to Mordor
+	const mordor = document.getElementById('Mordor')
+	const gollum = document.createElement('div')
+	gollum.id = 'gollum'
+	// console.log('this is the gollum', gollum)
 	// Remove `the ring` from `Frodo` and give it to `Gollum`
+	const ring = document.getElementById('the-ring')
+	// console.log('this is the ring', ring)
+	gollum.appendChild(ring)
+	console.log('this is gollum', gollum)
 	// Move Gollum into Mount Doom
+	const mountDoom = document.getElementById('mount-doom')
+	console.log('this is mount doom', mountDoom)
+	mountDoom.appendChild(gollum)
 }
 
 // COMMIT YOUR WORK
