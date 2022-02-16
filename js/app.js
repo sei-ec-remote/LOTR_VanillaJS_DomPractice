@@ -224,19 +224,20 @@ function forgeTheFellowShip() {
 	// create a new div called `'the-fellowship'` within `rivendell`
 	const theFellowship = document.createElement('div')
 	theFellowship.classList = 'the-fellowship'
-	const hobbitsBuddies = hobbits.concat(buddies)
+	const rivendell = document.getElementById('Rivendell')
+	
+	// const hobbitsBuddies = hobbits.concat(buddies)
 	// console.log('this will give new array: ', hobbitsBuddies)
 	
 	// const ulHobbits = document.createElement('ul')
 	// theFellowship.appendChild(ulHobbits)
-	const rivendell = document.getElementById('Rivendell')
 	// rivendell.appendChild(theFellowship)
 	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
 	
-	for (let i = 0; i < hobbitsBuddies.length; i++){
-		console.log(hobbitsBuddies[i] + ' has joined the Fellowship')
+	// for (let i = 0; i < hobbitsBuddies.length; i++){
+	// 	console.log(hobbitsBuddies[i] + ' has joined the Fellowship')
 
-		theFellowship.append(hobbitsBuddies[i])
+	// 	theFellowship.append(hobbitsBuddies[i])
 		// console.log(moveHobbits)
 		// document.createElement
 		// const liHobbit = document.createElement('li')
@@ -246,7 +247,7 @@ function forgeTheFellowShip() {
 		
 		// alert(liBuddies + ' has joined the Fellowship')
 
-	}
+	// }
 	rivendell.appendChild(theFellowship)
 }
 	// after each character is added make an alert that they // have joined your party
@@ -285,8 +286,13 @@ function theBalrog() {
 function hornOfGondor() {
 	console.log('10: hornOfGondor')
 	// pop up an alert that the horn of gondor has been blown
+	alert("The horn of gondor has been blown!")
 	// Boromir's been killed by the Uruk-hai!
 	// Remove `Boromir` from the Fellowship
+	const removeBoromir = document.querySelector('the-fellowship')
+	// const boromir = removeBoromir.lastChild
+	// boromir.remove()
+
 }
 
 // COMMIT YOUR WORK
