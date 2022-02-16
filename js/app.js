@@ -348,7 +348,6 @@ function itsDangerousToGoAlone() {
 	// add a div with an id of `'mount-doom'` to `Mordor`
 
 	const frodoDiv = document.getElementById('Frodo Baggins');
-	console.log('FrodoDiv', frodoDiv);
 
 	const frodoArray = frodoDiv.children;
     const frodo = frodoArray[0];
@@ -419,6 +418,25 @@ function thereAndBackAgain() {
 	console.log('13: thereAndBackAgain')
 	// remove `Gollum` and `the Ring` from the document
 	// Move all the `hobbits` back to `the shire`
+
+	// Get rid of the div gollum containing the ul and li and ring
+	const gollum = document.getElementById('gollum');
+	gollum.remove();
+
+	// Move all the hobbits back to the shire.
+	// Search for all hobbits
+
+	// list of li elements on the page which are of class hobbit
+	const hobbits = document.getElementsByClassName('hobbit');
+	// get the ul element in the shire for the hobbits
+	const ulHobbitShire = document.getElementById('hobbits');
+
+	// For each hobbit
+	//   moving the li to the shires ul for hobbits.
+	//   this requries appending the node to a different parent.
+	for (let i = 0; i < hobbits.length; i++) {
+		ulHobbitShire.appendChild(hobbits[i]);
+	}
 }
 
 // COMMIT YOUR WORK
