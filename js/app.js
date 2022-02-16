@@ -167,6 +167,14 @@ function leaveTheShire() {
   console.log("6: leaveTheShire");
 
   // assemble the `hobbits` and move them to `rivendell`
+  // new function, so recreate variables previously used
+  const theShire = document.getElementById("The-Shire")
+  const ulHobbits = document.getElementById("hobbits")
+  const rivendell = document.getElementById("Rivendell")
+  // remove the hobbits from the shire
+  theShire.removeChild(ulHobbits)
+  // and put them in rivendell
+  rivendell.appendChild(ulHobbits)
 }
 
 // COMMIT YOUR WORK
