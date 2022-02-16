@@ -268,7 +268,7 @@ function forgeTheFellowShip() {
 	//  hobbits or buddies
 	for (let i = 0; i < hobbitOrBuddyArray.length; i++) {
 		const buddyOrHobbit = document.createElement('div');
-		buddyOrHobbit.className = hobbitOrBuddyArray[i].textContent;
+		buddyOrHobbit.id = hobbitOrBuddyArray[i].textContent;
 
 		// Attach the buddy or hobbit
 		theFellowship.appendChild(buddyOrHobbit);
@@ -316,6 +316,12 @@ function hornOfGondor() {
 	// pop up an alert that the horn of gondor has been blown
 	// Boromir's been killed by the Uruk-hai!
 	// Remove `Boromir` from the Fellowship
+	alert("The horn of Gondor has been blown. Boromir's been killed by the Uruk-hai!");
+
+    // Remove Boromir from the Fellowship.  Had this as a class before
+	//  but retrieving it did not work.  Switched to id and Tada!
+	const boromir = document.getElementById('Boromir');
+	boromir.remove();
 }
 
 // COMMIT YOUR WORK
