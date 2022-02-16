@@ -225,6 +225,8 @@ function beautifulStranger() {
 	const theHeir = buddiesArray[3]
 	console.log('Is this Strider?' , theHeir)
 
+
+	//change the text of Strider to Aragorn
 	theHeir.textContent = 'Aragorn'
 
 
@@ -241,7 +243,37 @@ function beautifulStranger() {
 function forgeTheFellowShip() {
 	console.log('8: forgeTheFellowShip')
 	// create a new div called `'the-fellowship'` within `rivendell`
+	const theFellowship = document.createElement('div')
+	theFellowship.id = 'the-fellowship'
+	const theElves = document.getElementById('Rivendell')
+	theElves.appendChild(theFellowship)
+
+	console.log('is the fellowship in rivendell?' , theElves)
+
+
 	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
+	const buddyList = document.getElementsByClassName("buddy")
+	
+	const hobbitsList = document.getElementsByClassName("hobbit")
+	const buddyArray = Object.values(buddyList)
+	const hobbitsArray = Object.values(hobbitsList)
+
+	for(let i=0; i<hobbits.length ; i++){
+		theFellowship.appendChild(hobbitsArray[i])
+		console.log(`${hobbitsArray[i].textContent} has joined your party`)
+	}
+	
+
+	for(let i=0; i<buddies.length; i++){
+		theFellowship.appendChild(buddyArray[i])
+		console.log(`${buddyArray[i].textContent} has joined your party`)
+	}
+
+	
+
+
+
+
 	// after each character is added make an alert that they // have joined your party
 
 	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
