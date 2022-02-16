@@ -254,7 +254,7 @@ function forgeTheFellowShip() {
 	// after each character is added make an alert that they // have joined your party
 		//loop the listed items and use alert to notify member joined
 	for ( let i = 0; i < hobbitsAndBuddy.length;i++) {
-		console.log((hobbitsAndBuddy[i].innerText + ' joined your party'))
+		alert(hobbitsAndBuddy[i].innerText + ' joined your party')
 		newDiv.appendChild(hobbitsAndBuddy[i])
 	}
 	//need to append fellowship into rivendell
