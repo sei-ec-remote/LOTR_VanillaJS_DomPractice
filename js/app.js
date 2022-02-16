@@ -313,7 +313,7 @@ function theBalrog() {
 	// add a grey border
 	changeGandalf.style.border = "2px solid grey"
 }
-
+//
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 9 complete - Updated Gandalf"
 
