@@ -371,8 +371,20 @@ function itsDangerousToGoAlone() {
 function weWantsIt() {
 	console.log('12: weWantsIt')
 	// Create a div with an id of `'gollum'` and add it to Mordor
-	// Remove `the ring` from `Frodo` and give it to `Gollum`
+	const gollum  = document.createElement('div')
+	gollum.id = 'gollum'
+	gollum.textContent = 'gollum'
 	// Move Gollum into Mount Doom
+	// since it is a div element I am not going to add it to the unordered list
+	// directions did not specify where to add gollum, but he is in a cave/crevice
+	// so I am going to keep him separate
+	const mountDoom = document.getElementById('mount-doom')
+	mountDoom.appendChild(gollum)
+	// Remove `the ring` from `Frodo` and give it to `Gollum`
+	// create a reference to the ring
+	ring = document.getElementById('the-ring')
+	//move the ring
+	gollum.appendChild(ring)
 }
 
 // COMMIT YOUR WORK
