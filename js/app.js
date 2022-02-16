@@ -201,7 +201,7 @@ function leaveTheShire() {
 
 	//append the hobbits ul to rivendell
 	hobbitDestination.append(grabHobbits)
-	
+
 	//console log to ensure they arrived. 
 	console.log("Who is in Rivendell now?" , hobbitDestination)
 
@@ -219,6 +219,16 @@ function beautifulStranger() {
 	console.log('7: beautifulStranger')
 
 	// change the `'Strider'` text to `'Aragorn'`
+
+	const buddiesList = document.getElementById('buddies')
+	const buddiesArray = buddiesList.children
+	const theHeir = buddiesArray[3]
+	console.log('Is this Strider?' , theHeir)
+
+	theHeir.textContent = 'Aragorn'
+
+
+
 }
 
 // COMMIT YOUR WORK
