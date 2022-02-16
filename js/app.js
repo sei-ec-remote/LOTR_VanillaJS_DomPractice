@@ -138,8 +138,8 @@ function makeBuddies() {
   console.log("5: makeBuddies");
   
   // create an `aside` tag
-  const asideBuddies = document.createElement("aside")
-  asideBuddies.id = "aside-buddies"
+  const asideRivendell = document.createElement("aside")
+  asideRivendell.id = "aside-rivendell"
   
   // put an `unordered list` of the `'buddies'` in the aside
   const rivendell = document.getElementById("Rivendell")
@@ -150,10 +150,10 @@ function makeBuddies() {
     liBuddies.class = "liBuddies"
     liBuddies.textContent = buddies[i]
     ulBuddies.appendChild(liBuddies)
-    asideBuddies.appendChild(ulBuddies)
+    asideRivendell.appendChild(ulBuddies)
   }
   // insert your aside as a child element of `rivendell`
-  rivendell.appendChild(asideBuddies)
+  rivendell.appendChild(asideRivendell)
 }
 
 // COMMIT YOUR WORK
@@ -207,8 +207,50 @@ function beautifulStranger() {
 function forgeTheFellowShip() {
   console.log("8: forgeTheFellowShip");
   // create a new div called `'the-fellowship'` within `rivendell`
+  // recreating variables
+  const rivendell = document.getElementById("Rivendell")
+  const ulBuddies = document.getElementById("buddies")
+  const ulHobbits = document.getElementById("hobbits")
+  // all new variables!
+  const asideRivendell = document.getElementById("aside-rivendell")
+  const theFellowship = document.createElement("div")
+  theFellowship.id = "the-fellowship"
+
   // add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
-  // after each character is added make an alert that they // have joined your party
+
+  // This is inelegant and I feel there must be a better solution
+  // but I couldn't seem to get the two uls to combine into one.
+  const fellowshipArr1 = ulHobbits.children
+  const fellowshipArr2 = ulBuddies.children
+
+  for (let i = 0; i < fellowshipArr1.length; i++) {
+    const liFellowship = document.createElement("li")
+    liFellowship.class = "liFellowship"
+    liFellowship.textContent = fellowshipArr1[i].textContent
+    // after each character is added make an alert that they
+    // have joined your party
+    alert(`${fellowshipArr1[i].textContent} joined the Fellowship!`)
+    theFellowship.appendChild(liFellowship)
+}
+  for (let i = 0; i < fellowshipArr2.length; i++) {
+    const liFellowship = document.createElement("li")
+    liFellowship.class = "liFellowship"
+    liFellowship.textContent = fellowshipArr2[i].textContent
+    // repeating the alert for the buddies
+    alert(`${fellowshipArr2[i].textContent} joined the Fellowship!`)
+    theFellowship.appendChild(liFellowship)
+  }
+  // add The Fellowship to Rivendell
+  rivendell.appendChild(theFellowship)
+  // move The Ring to Frodo in The Fellowship
+  theOneRing = document.getElementById("the-ring")
+  const fellowshipArray = theFellowship.children
+  // console.log("mr frodo?", fellowshipArray[0])
+  const frodoLi = fellowshipArray[0];
+  frodoLi.appendChild(theOneRing)
+  // Clear elements now that everyone's in The Fellowship
+  asideRivendell.remove()
+  ulHobbits.remove()
 
   // NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
 }
