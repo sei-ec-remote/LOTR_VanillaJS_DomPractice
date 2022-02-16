@@ -249,7 +249,7 @@ function forgeTheFellowShip() {
 	}
 	
 	// after each character is added make an alert that they // have joined your party
-	alert("The Fellowship is complete!")
+	alert("The buddies and hobbits have joined the Fellowship!")
 	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
 }
 
@@ -264,14 +264,14 @@ function theBalrog() {
 	console.log('9: theBalrog')
 	// change the `'Gandalf'` text to `'Gandalf the White'`
 	
-	const gandalf = document.getElementById('the-fellowship')
+	const theFellowship = document.getElementById('the-fellowship')
 	// console.log(gandalf)
-    const buddiesArray = gandalf.children
+    const buddiesArray = theFellowship.children
    	buddiesArray[0].textContent = 'Gandalf the White'
 
 	// apply the following style to the element, make the // background 'white', add a grey border
 	buddiesArray[0].style.backgroundColor="white";
-	buddiesArray[0].style.order="2px solid grey";
+	buddiesArray[0].style.border="2px solid grey";
 }
 
 // COMMIT YOUR WORK
@@ -284,8 +284,14 @@ function theBalrog() {
 function hornOfGondor() {
 	console.log('10: hornOfGondor')
 	// pop up an alert that the horn of gondor has been blown
+	alert("The horn of gondor has been blown!")
+
 	// Boromir's been killed by the Uruk-hai!
+	const theFellowship = document.getElementById('the-fellowship')
+	const buddiesArray = theFellowship.children
+	console.log('Are you Boromoir?', buddiesArray[4])
 	// Remove `Boromir` from the Fellowship
+	theFellowship.removeChild(buddiesArray[4])
 }
 
 // COMMIT YOUR WORK
