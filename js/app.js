@@ -323,7 +323,40 @@ function hornOfGondor() {
 function itsDangerousToGoAlone() {
 	console.log('11: itsDangerousToGoAlone')
 	// take `Frodo` and `Sam` out of the fellowship and move // them to `Mordor`
+	const removeHobbits = document.getElementById('hobbits')
+	removeHobbits.remove()
+
+	const rivendell = document.getElementById('Rivendell')
+	const ulHobbits = document.createElement('ul')
+	ulHobbits.id = 'hobbits'
+	let hobbits = [`Meriadoc "Merry" Brandybuck`,
+		`Peregrin "Pippin" Took`]
+	for (let i = 0; i < hobbits.length; i++) {
+		const liHobbits = document.createElement('li')
+		liHobbits.className = 'Hobbits'
+		liHobbits.textContent = hobbits[i]
+		ulHobbits.appendChild(liHobbits)
+	}
+	rivendell.appendChild(ulHobbits)
+
+	const mordor = document.getElementById('Mordor')
+	const moveBoys = document.createElement('ul')
+	moveBoys.id = "FrodoSam"
+	const liFrodo = document.createElement('li')
+	liFrodo.className = 'Frodo'
+	liFrodo.textContent = 'Frodo Baggins'
+	moveBoys.appendChild(liFrodo)
+	const liSam = document.createElement('li')
+	liSam.className = 'Sam'
+	liSam.textContent = 'Samwise "Sam" Gamgee'
+	moveBoys.appendChild(liSam)
+	mordor.appendChild(moveBoys)
+
 	// add a div with an id of `'mount-doom'` to `Mordor`
+
+	const mountDoom = document.createElement('div')
+	document.getElementById("Mordor").appendChild(mountDoom)
+
 }
 
 // COMMIT YOUR WORK
