@@ -179,6 +179,7 @@ function makeBuddies() {
 // ============
 
 function leaveTheShire() {
+	console.log('6: leaveTheShire');
 
 	// assemble the `hobbits` and move them to `rivendell`
 
@@ -222,6 +223,14 @@ function beautifulStranger() {
 	console.log('7: beautifulStranger')
 
 	// change the `'Strider'` text to `'Aragorn'`
+	
+	const ulBuddies = document.querySelector('#buddies');
+
+	// Next we'll need to figure out which li is Strider.
+	// ulHobbits.children.
+	const buddyArray = ulBuddies.children;
+	stryder = buddyArray[3];
+	stryder.textContent = 'Aragorn';
 }
 
 // COMMIT YOUR WORK
