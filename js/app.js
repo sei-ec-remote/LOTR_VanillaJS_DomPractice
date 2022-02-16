@@ -188,6 +188,13 @@ function beautifulStranger() {
   console.log("7: beautifulStranger");
 
   // change the `'Strider'` text to `'Aragorn'`
+  // new function, recreate variables
+  const ulBuddies = document.getElementById("buddies")
+  // console.log("should be the buddies:", ulBuddies)
+  const buddiesArray = ulBuddies.children
+  // console.log("the buddies now in array form:", buddiesArray)
+  // console.log ("Aragon perhaps?", buddiesArray[3])
+  buddiesArray[3].textContent = "Aragorn"
 }
 
 // COMMIT YOUR WORK
