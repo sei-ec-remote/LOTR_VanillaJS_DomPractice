@@ -363,7 +363,7 @@ function itsDangerousToGoAlone() {
 
 
 }
-//asdasd
+//
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 11 complete - Sam and Frodo are in Mordor and Mount Doom has been created"
 
@@ -393,10 +393,9 @@ function weWantsIt() {
 	Frodo.removeChild(ring)
 	console.log(ring)
 	gollum.appendChild(ring)
-	
-
 	// Move Gollum into Mount Doom
 	console.log(Mordor.children)
+	console.log(mountDoom)
 	const mountDoom = document.getElementById('mount-doom')
 	mountDoom.appendChild(gollum)
 }
