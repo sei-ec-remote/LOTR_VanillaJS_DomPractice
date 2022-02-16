@@ -203,10 +203,10 @@ function beautifulStranger() {
 
 	// change the `'Strider'` text to `'Aragorn'`
 	const ulBuddies = document.getElementById('buddies')
-	console.log(ulBuddies)
+	// console.log(ulBuddies)
     const buddiesArray = ulBuddies.children
    	buddiesArray[3].textContent = 'Aragon'
-	console.log(buddiesArray[3])
+	// console.log(buddiesArray[3])
 	
 	
 }
