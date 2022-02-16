@@ -200,6 +200,24 @@ function leaveTheShire() {
 function beautifulStranger() {
 	console.log('7: beautifulStranger')
 
+	// const buddies = ['Gandalf the Grey', 'Legolas', 'Gimli', 'Strider', 'Boromir']
+	const removeBuddies = document.getElementById('buddies')
+	removeBuddies.remove()
+
+	const rivendell = document.getElementById('Rivendell')
+	const ulBuddies = document.createElement('ul')
+	ulBuddies.id = 'buddies'
+	buddies[3] = 'Aragorn'
+	for (let i = 0; i < buddies.length; i++) {
+		const liBuddy = document.createElement('li')
+		liBuddy.className = 'buddy'
+		liBuddy.textContent = buddies[i]
+		ulBuddies.appendChild(liBuddy)
+	}
+	rivendell.appendChild(ulBuddies)
+
+
+
 	// change the `'Strider'` text to `'Aragorn'`
 }
 
