@@ -254,26 +254,20 @@ function forgeTheFellowShip() {
 	console.log(buddyArray)
 
 	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
-	for (let i = 0; i < buddyArray.length; i ++) {
-		const buddy = buddyArray[i].textContent
-		console.log(hobbitArray)
-		alert(` ${buddy} has joined`)
+	// for (let i = 0; i < buddyArray.length; i ++) {
+	// 	const buddy = buddyArray[i].textContent
+	// 	console.log(hobbitArray)
+	// 	alert(` ${buddy} has joined`)
 		
-	}
-	for (let i = 0; i < hobbitArray.length; i ++) {
-		console.log(hobbitArray)
-		const hobbit = hobbitArray[i].textContent
-		alert(` ${hobbit} has joined`)
-	}
+	// }
+	// for (let i = 0; i < hobbitArray.length; i ++) {
+	// 	console.log(hobbitArray)
+	// 	const hobbit = hobbitArray[i].textContent
+	// 	alert(` ${hobbit} has joined`)
+	// }
 
-	
 	fellowship.appendChild(buddiesList)
 	fellowship.appendChild(hobbitsList)
-
-
-
-
-
 
 	// after each character is added make an alert that they // have joined your party
 	
@@ -290,7 +284,15 @@ function forgeTheFellowShip() {
 function theBalrog() {
 	console.log('9: theBalrog')
 	// change the `'Gandalf'` text to `'Gandalf the White'`
+
+	const gandalfArray = document.getElementById('buddies')
+	const gandalf = gandalfArray.children
+	
+	gandalf[0].textContent = 'Gandalf the White'
+	const gandalfLetters = gandalf[0]
 	// apply the following style to the element, make the // background 'white', add a grey border
+	gandalfLetters.style.backgroundColor = "white";
+	gandalfLetters.style.border = "solid grey";
 }
 
 // COMMIT YOUR WORK
