@@ -310,15 +310,15 @@ function itsDangerousToGoAlone() {
 function weWantsIt() {
 	console.log('12: weWantsIt')
 	// Create a div with an id of `'gollum'` and add it to Mordor
-	const Mordor = document.getElementById("Mordor")
-	const gollum = document.createElement("div")
-	gollum.id = "gollum"
+	const Mordor = document.getElementById('Mordor')
+	const gollum = document.createElement('div')
+	gollum.id = 'gollum'
 	Mordor.appendChild(gollum)
 	// Remove `the ring` from `Frodo` and give it to `Gollum`
-	const theRing = document.getElementById("the-ring")
+	const theRing = document.getElementById('the-ring')
 	gollum.appendChild(theRing)
 	// Move Gollum into Mount Doom
-	const mountDoom = document.getElementById("mount-doom")
+	const mountDoom = document.getElementById('mount-doom')
 	mountDoom.appendChild(gollum)
 	
 }
@@ -333,7 +333,21 @@ function weWantsIt() {
 function thereAndBackAgain() {
 	console.log('13: thereAndBackAgain')
 	// remove `Gollum` and `the Ring` from the document
+	const mountDoom = document.getElementById('mount-doom')
+	const mountDoomArray = mountDoom.children
+	console.log(mountDoomArray)
+	const gollum = document.getElementById('gollum')
+	mountDoom.removeChild(gollum)
 	// Move all the `hobbits` back to `the shire`
+	const theShire = document.getElementById('The-Shire')
+	const ulHobbits = document.getElementById('hobbits')
+	const liHobbits = document.getElementsByClassName('hobbit')
+	const hobbitArray = Object.values(liHobbits)
+	console.log(hobbitArray)
+	for(i = 0; i < 4; i++){
+		ulHobbits.appendChild(hobbitArray[i])
+	}
+	theShire.appendChild(ulHobbits)
 }
 
 // COMMIT YOUR WORK
