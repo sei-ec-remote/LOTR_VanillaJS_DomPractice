@@ -385,6 +385,27 @@ function weWantsIt() {
 	// Create a div with an id of `'gollum'` and add it to Mordor
 	// Remove `the ring` from `Frodo` and give it to `Gollum`
 	// Move Gollum into Mount Doom
+
+	const mordor = document.getElementById('Mordor');
+	const gollumDiv = document.createElement('div');
+	gollumDiv.id = "gollum";
+
+	// Create a div with id gollum and add it to Mordor.
+	mordor.appendChild(gollumDiv);
+
+	// Move Gollum into Mount Doom
+	const ulGollum = document.createElement('ul');
+	ulGollum.id = 'id-gollum';
+	const liGollum = document.createElement('li');
+	liGollum.className = 'class-gollum';
+
+	gollumDiv.appendChild(ulGollum);
+	ulGollum.appendChild(liGollum);
+
+	// Retrieve the ring from Frodo and give to Gollum
+	const theRing = document.getElementById ('the-ring');
+	liGollum.appendChild(theRing);
+
 }
 
 // COMMIT YOUR WORK
