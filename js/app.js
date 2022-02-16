@@ -334,7 +334,7 @@ function hornOfGondor() {
 	document.getElementById("Boromir").remove()
 	
 }
-
+//
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 10 complete - horn of gandor blew and Boromir is dead"
 
