@@ -65,6 +65,7 @@ function makeHobbits() {
 		// add class name to each hobbit
 		liHobbit.className = 'hobbit'
 		liHobbit.textContent = hobbits[i]
+		liHobbit.id = hobbits[i]
 		ulHobbits.appendChild(liHobbit)
 	}
 	// hint: create a 'ul' outside the loop into which to append the 'li's
@@ -338,7 +339,26 @@ function hornOfGondor() {
 function itsDangerousToGoAlone() {
 	console.log('11: itsDangerousToGoAlone')
 	// take `Frodo` and `Sam` out of the fellowship and move // them to `Mordor`
+	// create variable references to Frodo and Sam
+	const Frodo = document.getElementById(`Frodo Baggins`)
+	//console.log('frodo node: ', Frodo)
+	const Sam = document.getElementById(`Samwise "Sam" Gamgee`)
+	//console.log('sam node: ', Sam)
 	// add a div with an id of `'mount-doom'` to `Mordor`
+	const Mordor = document.getElementById('Mordor')
+	const MountDoom = document.createElement('div')
+	MountDoom.id = 'mount-doom'
+	MountDoom.textContent = 'Mount Doom'
+	Mordor.appendChild(MountDoom)
+	//now, let's create a unordered list to hold Frodo & Sam
+	const ulMountDoom = document.createElement('ul')
+	ulMountDoom.id = 'ulMountDoom'
+	MountDoom.appendChild(ulMountDoom)
+	// for somer reason ulMountDoom is not letting me append let's make sure it is setup correct
+	console.log(ulMountDoom)
+	//now that we have our variable references lets move Frodo & Sam to Mount Doom
+	ulMountDoom.appendChild(Frodo)
+	ulMountDoom.appendChild(Sam)
 }
 
 // COMMIT YOUR WORK
