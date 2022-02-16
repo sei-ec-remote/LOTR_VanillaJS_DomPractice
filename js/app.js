@@ -175,6 +175,13 @@ function leaveTheShire() {
 	console.log('6: leaveTheShire')
 
 	// assemble the `hobbits` and move them to `rivendell`
+	// I need to grab all the hobbits, which I would think would
+	// be query selector
+	const rivendell = document.getElementById('Rivendell')
+	const ulHobbits = document.querySelector('#hobbits')
+	console.log('this should be my hobbits', hobbits)
+	rivendell.appendChild(ulHobbits)
+	
 }
 
 // COMMIT YOUR WORK
