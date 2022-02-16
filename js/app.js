@@ -153,6 +153,7 @@ const rivendell = document.getElementById('Rivendell')
 	const liBuddy = document.createElement('li')
 	liBuddy.className = 'buddy'
 	liBuddy.textContent = buddies[i]	
+	liBuddy.id = buddies[i].toString('')
 	ulBuddies.appendChild(liBuddy)
 	asideBuddies.appendChild(ulBuddies)
 	
@@ -194,9 +195,7 @@ function beautifulStranger() {
 	console.log('7: beautifulStranger')
 	
 	// change the `'Strider'` text to `'Aragorn'`
- const liBuddies = document.getElementById('buddies')
-const arrayOfBuddies = liBuddies.children 
-arrayOfBuddies[3].textContent = 'Aragorn'
+document.getElementById('Strider').innerHTML = ('Aragorn')
  
 
 }
@@ -211,7 +210,22 @@ arrayOfBuddies[3].textContent = 'Aragorn'
 function forgeTheFellowShip() {
 	console.log('8: forgeTheFellowShip')
 	// create a new div called `'the-fellowship'` within `rivendell`
+	const fellowship = document.createElement('the-fellowship')
+	const moveFToRivendell = document.getElementById('Rivendell')
+	moveFToRivendell.appendChild(fellowship)
+	fellowship.id = 'fellowship'
 	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
+	const getHobbits = document.getElementById('hobbits')
+	const getBuddies = document.getElementById('buddies')
+    hobbitsArray = getHobbits.children
+	buddiesArray = getBuddies.children
+	for (let i = 0; i < hobbitsArray.length; i++) {
+		fellowship.appendChild(hobbitsArray[i])
+	}
+	for (let i =0; i < buddiesArray.length; i++) {
+		fellowship.appendChild(buddiesArray[i])
+	}
+
 	// after each character is added make an alert that they // have joined your party
 
 	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
@@ -228,6 +242,7 @@ function theBalrog() {
 	console.log('9: theBalrog')
 	// change the `'Gandalf'` text to `'Gandalf the White'`
 	// apply the following style to the element, make the // background 'white', add a grey border
+document.getElementById('Gandalf the Grey').innerHTML = ('Gandalf the White')
 }
 
 // COMMIT YOUR WORK
