@@ -305,8 +305,14 @@ function theBalrog() {
 function hornOfGondor() {
 	console.log('10: hornOfGondor')
 	// pop up an alert that the horn of gondor has been blown
+
+	alert('The horn of Gondor has been blown! Boromirs been killed by the Uruk-hai!')
 	// Boromir's been killed by the Uruk-hai!
 	// Remove `Boromir` from the Fellowship
+	const boromir = document.getElementById('buddies')
+	const boromirArray = boromir.children
+	const bormirText = boromirArray[4]
+	bormirText.remove()
 }
 
 // COMMIT YOUR WORK
@@ -319,8 +325,23 @@ function hornOfGondor() {
 function itsDangerousToGoAlone() {
 	console.log('11: itsDangerousToGoAlone')
 	// take `Frodo` and `Sam` out of the fellowship and move // them to `Mordor`
+	const baddies = document.getElementById('baddies')
+	const findFrodo = document.getElementById('hobbits')
+	const frodo = findFrodo.children
+	const frodoText = frodo[0]
+	const samText = frodo[1]
+	baddies.appendChild(frodoText)
+	baddies.appendChild(samText)
+
 	// add a div with an id of `'mount-doom'` to `Mordor`
-}
+	
+	const mordor  = document.querySelector('#Mordor')
+	const mountDoom = document.createElement('div')
+	mountDoom.id = 'mount-doom'
+
+	mordor.appendChild(mountDoom)
+	console.log(mordor)
+}	
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 11 complete - Sam and Frodo are in Mordor and Mount Doom has been created"
