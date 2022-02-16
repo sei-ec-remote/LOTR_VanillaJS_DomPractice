@@ -310,7 +310,21 @@ function weWantsIt() {
 function thereAndBackAgain() {
 	console.log('13: thereAndBackAgain')
 	// remove `Gollum` and `the Ring` from the document
+	const mountDoom = document.getElementById("mount-doom")
+	const mountDoomArray = mountDoom.children
+	console.log(mountDoomArray)
+	const gollum = document.getElementById("gollum")
+	mountDoom.removeChild(gollum)
 	// Move all the `hobbits` back to `the shire`
+	const theShire = document.getElementById("The-Shire")
+	const ulHobbits = document.getElementById("hobbits")
+	const liHobbits = document.getElementsByClassName("hobbit")
+	const hobbitArray = Object.values(liHobbits)
+	console.log(hobbitArray)
+	for(i=0; i<4; i++){
+		ulHobbits.appendChild(hobbitArray[i])
+	}
+	theShire.appendChild(ulHobbits)
 }
 
 // COMMIT YOUR WORK
