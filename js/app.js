@@ -320,8 +320,9 @@ function itsDangerousToGoAlone() {
   // console.log("and here's sam", fellowshipArray[1])
   const liSam = fellowshipArray[1]
   // remove them from The Fellowship
-  fellowshipArray[0].remove()
+  // remove 1 first because when 0 is removed, 1 becomes 0
   fellowshipArray[1].remove()
+  fellowshipArray[0].remove()
   // put them in Mordor
   const walkIntoMordor = document.getElementById("Mordor")
   walkIntoMordor.appendChild(liFrodo)
@@ -375,6 +376,35 @@ function thereAndBackAgain() {
   console.log("13: thereAndBackAgain");
   // remove `Gollum` and `the Ring` from the document
   // Move all the `hobbits` back to `the shire`
+  
+  // selecting Gollum and The Ring and deleting them
+  const gollumIsHere = document.getElementById("gollum")
+  const theOneRing = document.getElementById("the-ring")
+  gollumIsHere.remove()
+  theOneRing.remove()
+  // selecting Frodo and Sam and removing them from Mordor
+  const walkIntoMordor = document.getElementById("Mordor")
+  const mordorArray = walkIntoMordor.children
+  // console.log("who's in mordor", mordorArray[3])
+  liFrodo = mordorArray[2]
+  liSam = mordorArray[3]
+  mordorArray[3].remove()
+  mordorArray[2].remove()
+  console.log("frodo", liFrodo)
+  // finding Merry and Pippin in Rivendell
+  const theFellowship = document.getElementById("the-fellowship")
+  const fellowshipArray = theFellowship.children
+  // console.log("find the hobbits:", fellowshipArray[0])
+  liMerry = fellowshipArray[0]
+  liPippin = fellowshipArray[1]
+  fellowshipArray[1].remove()
+  fellowshipArray[0].remove()
+  // reuniting all the Hobbits in The Shire
+  const theShire = document.getElementById("The-Shire")
+  theShire.appendChild(liFrodo)
+  theShire.appendChild(liSam)
+  theShire.appendChild(liMerry)
+  theShire.appendChild(liPippin)
 }
 
 // COMMIT YOUR WORK
