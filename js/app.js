@@ -153,6 +153,7 @@ function makeBuddies() {
 		const buddiesLi = document.createElement('li')
 		// give each buddies a class of buddy
 		buddiesLi.className = 'buddy'
+		buddiesLi.id = buddies[i]
 		buddiesLi.textContent = buddies[i]
 		// console.log('an ul of buddies', buddiesUl)
 		buddiesUl.appendChild(buddiesLi)
@@ -174,7 +175,10 @@ function leaveTheShire() {
 	console.log('6: leaveTheShire')
 
 	// assemble the `hobbits` and move them to `rivendell`
-	
+	const rivendell = document.querySelector('#Rivendell')
+	// console.log(rivendell)
+	const ulHobbits = document.querySelector('#hobbits')
+	rivendell.appendChild(ulHobbits)
 }
 
 // COMMIT YOUR WORK
@@ -186,8 +190,22 @@ function leaveTheShire() {
 
 function beautifulStranger() {
 	console.log('7: beautifulStranger')
-
+	
 	// change the `'Strider'` text to `'Aragorn'`
+	const strider = buddies[3]
+	// const buddiesAside = document.querySelector('.buddy')
+	// console.log(buddiesAside.id)
+	const beautStranger = document.getElementsByClassName('buddy')
+	console.log(beautStranger)
+
+	const buddyList = Object.values(beautStranger)
+	buddyList.forEach(element => { 
+		if (element.textContent === "Strider") {
+			element.textContent = 'Aragorn'
+		} else {
+			console.log('wow')
+		}
+	});
 }
 
 // COMMIT YOUR WORK
@@ -200,9 +218,24 @@ function beautifulStranger() {
 function forgeTheFellowShip() {
 	console.log('8: forgeTheFellowShip')
 	// create a new div called `'the-fellowship'` within `rivendell`
-	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
-	// after each character is added make an alert that they // have joined your party
+	const theFellowship = document.createElement('div')
+	const rivendell = document.querySelector('#Rivendell')
+	theFellowship.id = 'the-fellowship'
 
+	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
+	const hobbit = document.querySelector('#hobbits')
+	const buddy = document.querySelector('#buddies-aside')
+
+	// after each character is added make an alert that they 
+	// have joined your party
+	for	(let i = 0; i < hobbit.length; i++) {
+		theFellowship.appendChild(hobbit.children[i])		
+		console.log()
+	}
+	
+
+	theFellowship.appendChild(buddy)
+	rivendell.appendChild(theFellowship)
 	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
 }
 
