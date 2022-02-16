@@ -219,11 +219,11 @@ function forgeTheFellowShip() {
 
 
 	for (i = 0; i < hobbitArray.length; i) {
-		window.alert(hobbitArray[i].textContent + " joined the party")
+		// window.alert(hobbitArray[i].textContent + " joined the party")
 		theFellowShip.appendChild(hobbitArray[i])
 	}
 	for (i = 0; i < buddyArray.length; i) {
-		window.alert(buddyArray[i].textContent + ' joined the party')
+		// window.alert(buddyArray[i].textContent + ' joined the party')
 		theFellowShip.appendChild(buddyArray[i])
 	}
 
@@ -284,6 +284,14 @@ const theFellowship = document.querySelector('#the-fellowship')
 function itsDangerousToGoAlone() {
 	console.log('11: itsDangerousToGoAlone')
 	// take `Frodo` and `Sam` out of the fellowship and move // them to `Mordor`
+	const theFellowship = document.querySelector('#the-fellowship')
+	fellowshipArray = theFellowship.children
+	const mordor = document.querySelector('#Mordor')
+	mordor.appendChild(fellowshipArray[0])
+	mordor.appendChild(fellowshipArray[0])
+	const mountDoom = document.createElement('div')
+	mountDoom.id = 'mount-doom'
+	mordor.appendChild(mountDoom)
 	// add a div with an id of `'mount-doom'` to `Mordor`
 }
 
@@ -296,6 +304,13 @@ function itsDangerousToGoAlone() {
 
 function weWantsIt() {
 	console.log('12: weWantsIt')
+
+	const gollum = document.createElement('div')
+	gollum.id = 'gollum'
+	const mordor = document.querySelector('#Mordor')
+	const theRing = document.querySelector('#the-ring')
+	gollum.appendChild(theRing)
+	mordor.appendChild(gollum)
 	// Create a div with an id of `'gollum'` and add it to Mordor
 	// Remove `the ring` from `Frodo` and give it to `Gollum`
 	// Move Gollum into Mount Doom
@@ -310,6 +325,18 @@ function weWantsIt() {
 
 function thereAndBackAgain() {
 	console.log('13: thereAndBackAgain')
+	const theRing = document.querySelector('#the-ring')
+	const gollum = document.querySelector('#gollum')
+	gollum.remove()
+	theRing.remove()
+	const hobbits = document.querySelector('.hobbits')
+	const theShire = document.querySelector('#The-Shire') 
+	console.log('who are the hobbits' + hobbits)
+	
+	theShire.appendChild(hobbits)
+
+	
+	
 	// remove `Gollum` and `the Ring` from the document
 	// Move all the `hobbits` back to `the shire`
 }
