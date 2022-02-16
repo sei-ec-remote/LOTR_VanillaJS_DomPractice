@@ -178,9 +178,13 @@ function makeBuddies() {
 // ============
 
 function leaveTheShire() {
-	console.log('6: leaveTheShire')
-
 	// assemble the `hobbits` and move them to `rivendell`
+	console.log('6: leaveTheShire')
+	const hobbits = document.getElementById("hobbits")
+	const buddies = document.getElementById("buddies")
+	 buddies.append(...hobbits.childNodes)
+
+
 }
 
 // COMMIT YOUR WORK
