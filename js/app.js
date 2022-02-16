@@ -128,7 +128,8 @@ function makeBuddies() {
 	console.log('5: makeBuddies')
 
 	// create an `aside` tag
-	const aside = document.createElement('aside')
+	const asideBuddies = document.createElement('aside')
+	asideBuddies.id = 'asideBuddies'
 	// put an `unordered list` of the `'buddies'` in the aside
 	const ulBuddies = document.createElement('ul')
 	ulBuddies.id = 'buddies'
@@ -141,8 +142,8 @@ function makeBuddies() {
 	}
 	// insert your aside as a child element of `rivendell`
 	const rivendell = document.getElementById('Rivendell')
-	aside.append(ulBuddies)
-	rivendell.appendChild(aside)
+	asideBuddies.append(ulBuddies)
+	rivendell.appendChild(asideBuddies)
 }
 
 // COMMIT YOUR WORK
@@ -206,6 +207,11 @@ function forgeTheFellowShip() {
 		alert(`${theFellowship[i].textContent} has joined the Fellowship`)
 	}
 	divTheFellowship.appendChild(ulTheFellowship)
+	// Remove aside tag and hobbits ul
+	const asideBuddies = document.getElementById('asideBuddies')
+	const ulBuddies = document.getElementById('hobbits')
+	rivendell.removeChild(asideBuddies)
+	rivendell.removeChild(ulBuddies)
 	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
 }
 
@@ -237,7 +243,11 @@ function hornOfGondor() {
 	console.log('10: hornOfGondor')
 	// pop up an alert that the horn of gondor has been blown
 	// Boromir's been killed by the Uruk-hai!
+	alert('The horn of Gondor has been blown! Boromir\'s been killed by the Uruk-hai')
 	// Remove `Boromir` from the Fellowship
+	const boromir = document.querySelector('#theFellowshipMembers').children[4]
+	const theFellowship = document.getElementById('theFellowshipMembers')
+	theFellowship.removeChild(boromir)
 }
 
 // COMMIT YOUR WORK
