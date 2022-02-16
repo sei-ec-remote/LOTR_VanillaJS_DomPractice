@@ -316,8 +316,16 @@ function theBalrog() {
 function hornOfGondor() {
 	console.log('10: hornOfGondor')
 	// pop up an alert that the horn of gondor has been blown
-	// Boromir's been killed by the Uruk-hai!
+	alert("the horn of gondor has been blown")
+	// 
+	alert("Boromir's been killed by the Uruk-hai!")
 	// Remove `Boromir` from the Fellowship
+	// lets create a variable to reference Boromir
+	const Boromir  = document.getElementById(`Boromir` )
+	//remove Boromir aka kill...
+	Boromir.remove();
+	//console.log("this should be null, now that Boromir is dead.. :(", Boromir) 
+	// ^ this still returened the Boromir object which is weird, but looking at Elements it has been removed?
 }
 
 // COMMIT YOUR WORK
