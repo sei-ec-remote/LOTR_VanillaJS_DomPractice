@@ -331,9 +331,10 @@ function thereAndBackAgain() {
 	theRing.remove()
 	const hobbits = document.querySelector('.hobbits')
 	const theShire = document.querySelector('#The-Shire') 
+	
 	console.log('who are the hobbits' + hobbits)
 	
-	theShire.appendChild(hobbits)
+	// theShire.appendChild(hobbits)
 
 	
 	
