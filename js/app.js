@@ -12,7 +12,7 @@ const buddies = ['Gandalf the Grey', 'Legolas', 'Gimli', 'Strider', 'Boromir']
 
 const baddies = ['Sauron', 'Saruman', 'The Uruk-hai', 'Orcs']
 
-const lands = ['The-Shire', 'Rivendell', 'Mordor'] 
+const lands = ['The-Shire', 'Rivendell', 'Mordor']
 
 // ============
 // Chapter 1
@@ -64,27 +64,12 @@ function makeHobbits() {
 	console.log('2: makeHobbits')
 
 	// display an `unordered list` of hobbits in the shire
-	// how can I get, "the shire"? How can I append a ul to it?
-	// I can use queryselector
-	const theShire = document.querySelector('#The-Shire')
 
-	const hobbitList = document.createElement("ul")
-	 theShire.appendChild(hobbitList)
-	 hobbitList.id="hobbits"
+	// give each hobbit a class of `hobbit`
 
-	 for (let i=0; i<hobbits.length;i++) {
-	// give each hobbit a class of `hobbit'
-	const hobbitName = document.createElement("li")
-	hobbitName.textContent=hobbits[i]
-	hobbitName.classList.add("hobbit")
-	hobbitList.appendChild(hobbitName)
 	// hint: create a 'ul' outside the loop into which to append the 'li's
 
 	// hint: get 'The-Shire' by using its id
-
-
-	 }
-
 }
 
 // COMMIT YOUR WORK
@@ -98,17 +83,10 @@ function keepItSecretKeepItSafe() {
 	console.log('3: keepItSecretKeepItSafe')
 
 	// create a div with an id of `'the-ring'`
-	const ringDiv = document.createElement("div")
-	ringDiv.id="the-ring"
 
 	// give the div a class of `'magic-imbued-jewelry'`
 
-	ringDiv.classList.add("magic-imbued-jewelry") // ringDiv.className = "magic-imbued-jewelry" would also work
-
 	// add the ring as a child of `Frodo`
-	const ulHobbits = document.querySelector("#hobbits")
-	const hobbitsArr = ulHobbits.children
-	hobbitsArr[0].appendChild(ringDiv)
 }
 
 // COMMIT YOUR WORK
@@ -122,20 +100,10 @@ function makeBaddies() {
 	console.log('4: makeBaddies')
 
 	// display an unordered list of baddies in Mordor
-	const mordor = document.getElementById("Mordor")
-	const baddiesList = document.createElement("ul")
-	baddiesList.id="baddies"
-	mordor.appendChild(baddiesList)
 
-	for (let i=0; i<baddies.length;i++) {
 	// give each of the baddies a class of "baddy"
-	const baddieLi = document.createElement("li")
-	baddieLi.classList.add("baddy")
-	baddieLi.textContent=baddies[i]
-	// remember to append them to Mordor
-	baddiesList.appendChild(baddieLi)
-	}
 
+	// remember to append them to Mordor
 }
 
 // COMMIT YOUR WORK
@@ -149,25 +117,10 @@ function makeBuddies() {
 	console.log('5: makeBuddies')
 
 	// create an `aside` tag
-	const aside = document.createElement("aside")
 
 	// put an `unordered list` of the `'buddies'` in the aside
-	const ulBuddies = document.createElement("ul")
-	ulBuddies.id="buddies"
-
-
-	for (let i=0; i<buddies.length;i++) {
-	const buddyLi = document.createElement("li")
-	buddyLi.classList.add("buddy")
-	buddyLi.textContent=buddies[i]
-	ulBuddies.appendChild(buddyLi)
-
-	}
-	aside.appendChild(ulBuddies)
-	console.log(aside)
 
 	// insert your aside as a child element of `rivendell`
-	document.getElementById("Rivendell").appendChild(aside)
 }
 
 // COMMIT YOUR WORK
@@ -178,13 +131,9 @@ function makeBuddies() {
 // ============
 
 function leaveTheShire() {
-	// assemble the `hobbits` and move them to `rivendell`
 	console.log('6: leaveTheShire')
-	const hobbits = document.getElementById("hobbits")
-	const buddies = document.getElementById("buddies")
-	 buddies.append(...hobbits.childNodes)
 
-
+	// assemble the `hobbits` and move them to `rivendell`
 }
 
 // COMMIT YOUR WORK
@@ -198,10 +147,6 @@ function beautifulStranger() {
 	console.log('7: beautifulStranger')
 
 	// change the `'Strider'` text to `'Aragorn'`
-	const ulBuddies = document.querySelector("#buddies")
-	const buddiesArr = ulBuddies.children
-	buddiesArr[3].textContent="Aragorn"
-
 }
 
 // COMMIT YOUR WORK
@@ -214,42 +159,8 @@ function beautifulStranger() {
 function forgeTheFellowShip() {
 	console.log('8: forgeTheFellowShip')
 	// create a new div called `'the-fellowship'` within `rivendell`
-	const fsDiv = document.createElement("div")
-	let riv = document.getElementById("Rivendell")
-	fsDiv.textContent="the-fellowship"
-	fsDiv.id='the-fellowship'
-
-	riv.appendChild(fsDiv)
-
-
 	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
-	const ulBuddies = document.querySelector("#buddies")
-	const buddiesArr = ulBuddies.children
-	console.log(buddiesArr)
-	const ulFS = document.createElement("ul")
-	ulFS.id="ulFS"
-	console.log("checking buddies Arr",buddiesArr[0].textContent)
-	let childrenLeft = buddiesArr.length
-	while (childrenLeft>0) {
-		const buddyLi = document.createElement("li")
-		buddyLi.textContent=buddiesArr[0].textContent
-		ulFS.appendChild(buddyLi)
-		// after each character is added make an alert that they // have joined your party
-		alert(`${buddyLi.textContent} has joined your party`)
-		ulBuddies.removeChild(ulBuddies.childNodes[0]);
-		childrenLeft--
-	}
-
-	fsDiv.appendChild(ulFS)
-
-
-
-	const ringDiv = document.createElement("div")
-	ringDiv.id="the-ring"
-	ringDiv.classList.add("magic-imbued-jewelry") 
-	ulFS.children[5].appendChild(ringDiv)
-
-
+	// after each character is added make an alert that they // have joined your party
 
 	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
 }
@@ -264,11 +175,7 @@ function forgeTheFellowShip() {
 function theBalrog() {
 	console.log('9: theBalrog')
 	// change the `'Gandalf'` text to `'Gandalf the White'`
-	const ulFS = document.querySelector("#ulFS")
-	ulFS.children[3].textContent="Gandalf the White"
 	// apply the following style to the element, make the // background 'white', add a grey border
-	ulFS.children[3].style.background="white"
-	ulFS.children[3].style.border="1px solid grey"
 }
 
 // COMMIT YOUR WORK
@@ -281,13 +188,8 @@ function theBalrog() {
 function hornOfGondor() {
 	console.log('10: hornOfGondor')
 	// pop up an alert that the horn of gondor has been blown
-	alert("The horn of gondor has been blown...")
 	// Boromir's been killed by the Uruk-hai!
-	alert("Boromir's been killed by the Uruk-hai!")
 	// Remove `Boromir` from the Fellowship
-	const ulFS=document.getElementById("ulFS")
-	ulFS.removeChild(ulFS.children[4])
-
 }
 
 // COMMIT YOUR WORK
@@ -300,25 +202,7 @@ function hornOfGondor() {
 function itsDangerousToGoAlone() {
 	console.log('11: itsDangerousToGoAlone')
 	// take `Frodo` and `Sam` out of the fellowship and move // them to `Mordor`
-	const ulFS = document.getElementById("ulFS")
-	const frodo = ulFS.children[4]
-	const sam = ulFS.children[5]
-
-	console.log("frodo sam test",)
 	// add a div with an id of `'mount-doom'` to `Mordor`
-	const mtDoom = document.createElement("div")
-	mtDoom.id='mount-doom'
-	mtDoom.textContent="Mount Doom"
-	const mtDoomul = document.createElement("ul")
-	const mordor = document.getElementById("Mordor")
-
-	mtDoomul.appendChild(frodo)
-	mtDoomul.appendChild(sam)
-
-	mordor.appendChild(mtDoom)
-	mtDoom.appendChild(mtDoomul)
-
-	
 }
 
 // COMMIT YOUR WORK
@@ -331,16 +215,8 @@ function itsDangerousToGoAlone() {
 function weWantsIt() {
 	console.log('12: weWantsIt')
 	// Create a div with an id of `'gollum'` and add it to Mordor
-	const gollum = document.createElement("div")
-	gollum.id='gollum'
-	const mordor = document.getElementById("Mordor")
-	mordor.appendChild(gollum)
 	// Remove `the ring` from `Frodo` and give it to `Gollum`
-	const ring = document.getElementById("the-ring")
-	gollum.appendChild(ring)
 	// Move Gollum into Mount Doom
-	const mtDoom = document.getElementById("mount-doom")
-	mtDoom.appendChild(gollum)
 }
 
 // COMMIT YOUR WORK
@@ -351,29 +227,9 @@ function weWantsIt() {
 // ============
 
 function thereAndBackAgain() {
-
-
 	console.log('13: thereAndBackAgain')
 	// remove `Gollum` and `the Ring` from the document
-	const mtDoom = document.getElementById("mount-doom")
-	const gollum = document.getElementById("gollum")
-	mtDoom.removeChild(gollum)
 	// Move all the `hobbits` back to `the shire`
-	const shire = document.getElementById("The-Shire")
-	const ulFS = document.getElementById("ulFS")
-	const merry = ulFS.children[4]
-	const pippin = ulFS.children[5]
-
-
-	shire.appendChild(mtDoom.children[0])
-	shire.children[1].appendChild(merry)
-	shire.children[1].appendChild(pippin)
-
-
-
-
-
-
 }
 
 // COMMIT YOUR WORK
