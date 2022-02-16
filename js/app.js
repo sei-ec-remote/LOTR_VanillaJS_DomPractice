@@ -177,8 +177,23 @@ function makeBuddies() {
 
 function leaveTheShire() {
 	console.log('6: leaveTheShire')
-
+	
 	// assemble the `hobbits` and move them to `rivendell`
+	// get the rivendell
+	const rivendell = document.getElementById('Rivendell')
+	//get the shire
+	const theShire = document.getElementById('The-Shire')
+	const ulHobbits = document.getElementById('hobbits')
+
+	// for (let i = 0; i < hobbits.length; i++){
+	// 	const liHobbit = document.createElement('li')
+	// 	liHobbit.className = 'hobbit'
+	// 	liHobbit.textContent = hobbits[i]
+	// 	ulHobbits.appendChild(liHobbit)
+	// }
+
+	rivendell.appendChild(ulHobbits)
+	theShire.removeChild(ulHobbits)
 }
 
 // COMMIT YOUR WORK
