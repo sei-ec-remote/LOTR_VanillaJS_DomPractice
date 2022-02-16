@@ -146,15 +146,18 @@ function makeBuddies() {
 
 	// create an `aside` tag
 	const aside = document.createElement('aside')
+	aside.id= "aside"
 	const rivendell = document.getElementById('Rivendell')
 	// put an `unordered list` of the `'buddies'` in the aside
 	const ulBuddies = document.createElement('ul')
+	ulBuddies.id = 'buddies'
 	aside.appendChild(ulBuddies)
 	
 
 	for (let i=0; i<baddies.length; i++){
 		const liBuddy = document.createElement('li')
 		liBuddy.textContent = buddies[i]
+		liBuddy.classList = 'buddies'
 		// console.log(liBuddy)
 		ulBuddies.appendChild(liBuddy)
 	}
@@ -176,6 +179,8 @@ function leaveTheShire() {
 	const rivendell = document.getElementById('Rivendell')
 	const ulHobbits = document.createElement('ul')
 	ulHobbits.id = 'hobbits'
+	const removeHobbits = document.getElementById('hobbits')
+	removeHobbits.remove()
 	// give each hobbit a class of `hobbit`
 	for (let i = 0; i < hobbits.length; i++) {
 		// create a list item for each hobbit
@@ -201,6 +206,10 @@ function beautifulStranger() {
 	console.log('7: beautifulStranger')
 
 	// change the `'Strider'` text to `'Aragorn'`
+	//console.log(buddies)
+	
+	buddies.splice(3, 1, "Aragorn")
+	// console.log('new array', buddies)
 }
 
 // COMMIT YOUR WORK
@@ -213,11 +222,37 @@ function beautifulStranger() {
 function forgeTheFellowShip() {
 	console.log('8: forgeTheFellowShip')
 	// create a new div called `'the-fellowship'` within `rivendell`
+	const theFellowship = document.createElement('div')
+	theFellowship.classList = 'the-fellowship'
+	const hobbitsBuddies = hobbits.concat(buddies)
+	// console.log('this will give new array: ', hobbitsBuddies)
+	
+	// const ulHobbits = document.createElement('ul')
+	// theFellowship.appendChild(ulHobbits)
+	const rivendell = document.getElementById('Rivendell')
+	// rivendell.appendChild(theFellowship)
 	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
+	
+	for (let i = 0; i < hobbitsBuddies.length; i++){
+		console.log(hobbitsBuddies[i] + ' has joined the Fellowship')
+
+		theFellowship.append(hobbitsBuddies[i])
+		// console.log(moveHobbits)
+		// document.createElement
+		// const liHobbit = document.createElement('li')
+		// liHobbit.textContent = hobbits[i] 
+		// console.log(liHobbit)
+		// liHobbit = hobbits[i]
+		
+		// alert(liBuddies + ' has joined the Fellowship')
+
+	}
+	rivendell.appendChild(theFellowship)
+}
 	// after each character is added make an alert that they // have joined your party
 
 	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
-}
+
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 8 complete - The Fellowship is created"
@@ -229,7 +264,15 @@ function forgeTheFellowShip() {
 function theBalrog() {
 	console.log('9: theBalrog')
 	// change the `'Gandalf'` text to `'Gandalf the White'`
+	const ul = document.querySelector(".buddies")
+	gandalf = ul.firstChild
+	gandalf.textContent = "Gandalf the White"
+	// console.log(buddies)
 	// apply the following style to the element, make the // background 'white', add a grey border
+
+	ul.style.backgroundColor = 'white';
+	ul.style.border = "6px solid grey";
+
 }
 
 // COMMIT YOUR WORK
