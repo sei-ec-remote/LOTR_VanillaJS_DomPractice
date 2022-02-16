@@ -197,8 +197,16 @@ function beautifulStranger() {
 	console.log('7: beautifulStranger')
 
 	// change the `'Strider'` text to `'Aragorn'`
-	buddies.splice(3, "Aragorn")
+	// change text from Aragorn to 
+	// find out the ul strider is in
+	const ulBuddies = document.querySelector("#buddies")
+	// figure out which li is strider 
+	const buddiesArray = ulBuddies.children
+	const striderLi = buddiesArray[3]
+	// then we can attach the ring to our frodo li
+	striderLi.textContent = "Aragorn"
 }
+
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 7 complete - Strider is changed to Aragorn"
