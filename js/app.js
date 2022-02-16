@@ -151,25 +151,20 @@ function makeBaddies() {
 function makeBuddies() {
 	console.log('5: makeBuddies')
 	
-	const rivendell = document.getElementById("Rivendell");
-	console.log('this should be rivendell', rivendell)
-	// create an `aside` tag
-	const asideBuddies = document.createElement("aside");
-	asideBuddies.id = "buddies";
-	// put an `unordered list` of the `'buddies'` in the aside
-	const ulBuddies= document.createElement("ul");
-	ulBuddies.className = "buddies";
-	asideBuddies.appendChild(ulBuddies)
+	const rivendell = document.getElementById("Rivendell")
+	const buddiesAside = document.createElement("aside")
 	
-	for(let i = 0; i < buddies.length; i++) {
-	  const liBuddies = document.createElement("li");
-	  liBuddies.textContent = buddies[i];
-	  liBuddies.className = "buddy";
-	  ulBuddies.appendChild(liBuddies);
+	// put an `unordered list` of the `'buddies'` in the aside
+	const ulBuddies = document.createElement("ul")
+	ulBuddies.id = "buddies"
+	for(let i = 0; i < buddies.length; i++){
+		const liBuddy = document.createElement("li")
+		liBuddy.className = "buddy"
+		liBuddy.textContent = buddies[i]
+		ulBuddies.appendChild(liBuddy)
 	}
 	// insert your aside as a child element of `rivendell`
-  
-	rivendell.appendChild(asideBuddies);
+	rivendell.appendChild(ulBuddies)
 }
 
 // COMMIT YOUR WORK
@@ -183,6 +178,9 @@ function leaveTheShire() {
 	console.log('6: leaveTheShire')
 
 	// assemble the `hobbits` and move them to `rivendell`
+	document.getElementById("Rivendell").appendChild(document.getElementById("The-Shire").removeChild(document.getElementById("hobbits")))
+
+	
 }
 
 // COMMIT YOUR WORK
@@ -196,6 +194,9 @@ function beautifulStranger() {
 	console.log('7: beautifulStranger')
 
 	// change the `'Strider'` text to `'Aragorn'`
+	const ulBuddies = document.getElementById('buddies')
+	const buddiesArray = ulBuddies.children
+	buddiesArray[3].textContent = 'Aragorn'
 }
 
 // COMMIT YOUR WORK
@@ -208,9 +209,28 @@ function beautifulStranger() {
 function forgeTheFellowShip() {
 	console.log('8: forgeTheFellowShip')
 	// create a new div called `'the-fellowship'` within `rivendell`
+	const theFellowship = document.createElement('div')
+	theFellowship.id = 'the-fellowship'
+	document.getElementById('Rivendell').appendChild(theFellowship)
 	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
-	// after each character is added make an alert that they // have joined your party
+	const hobbitList = document.getElementsByClassName('hobbit')
+	console.log(hobbitList)
+	const buddyList = document.getElementsByClassName('buddy')
+	console.log(buddyList)
+	
+	const buddyArray = Object.values(buddyList)
+	const hobbitsArray = Object.values(hobbitList)
 
+	for(let i=0; i<5; i++){
+		theFellowship.appendChild(buddyArray[i])
+		console.log(`${buddyArray[i].textContent} has joined your party`)
+	}
+	for(let i=0; i<4; i++){
+		theFellowship.appendChild(hobbitsArray[i])
+		console.log(`${hobbitsArray[i].textContent} has joined your party`)
+	}
+	// after each character is added make an alert that they // have joined your party
+	
 	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
 }
 
