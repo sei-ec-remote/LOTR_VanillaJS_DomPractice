@@ -1,45 +1,45 @@
-console.log('Linked.')
+console.log("Linked.");
 
 // Dramatis Personae
 const hobbits = [
-	`Frodo Baggins`,
-	`Samwise "Sam" Gamgee`,
-	`Meriadoc "Merry" Brandybuck`,
-	`Peregrin "Pippin" Took`,
-]
+  `Frodo Baggins`,
+  `Samwise "Sam" Gamgee`,
+  `Meriadoc "Merry" Brandybuck`,
+  `Peregrin "Pippin" Took`,
+];
 
-const buddies = ['Gandalf the Grey', 'Legolas', 'Gimli', 'Strider', 'Boromir']
+const buddies = ["Gandalf the Grey", "Legolas", "Gimli", "Strider", "Boromir"];
 
-const baddies = ['Sauron', 'Saruman', 'The Uruk-hai', 'Orcs']
+const baddies = ["Sauron", "Saruman", "The Uruk-hai", "Orcs"];
 
-const lands = ['The-Shire', 'Rivendell', 'Mordor']
+const lands = ["The-Shire", "Rivendell", "Mordor"];
 
 // ============
 // Chapter 1
 // ============
 
 function makeMiddleEarth() {
-	console.log('1: makeMiddleEarth')
+  console.log("1: makeMiddleEarth");
 
-	// 1. create a section tag with an id of middle-earth
-	const section = document.createElement("section")
-	section.id = "middle-earth"
+  // 1. create a section tag with an id of middle-earth
+  const section = document.createElement("section");
+  section.id = "middle-earth";
 
-	// 2. use a for loop to iterate over the lands array that does the following:
-	for (let i = 0; i < lands.length; i++) {
-		//   2a. creates an article tag (there should be one for each land when the loop is done)
-		const landArticle = document.createElement("article")
-		//   2b. gives each land article an `id` tag of the corresponding land name
-		landArticle.id = lands[i]
-		//   2c. includes an h1 with the name of the land inside each land article
-		const landName = document.createElement("h1")
-		landName.textContent = lands[i]
-		//   2d. appends each land to the middle-earth section
-		landArticle.appendChild(landName)
-		section.appendChild(landArticle)
-	}
-	// 3. append the section to the body of the DOM.
-	document.body.appendChild(section)
+  // 2. use a for loop to iterate over the lands array that does the following:
+  for (let i = 0; i < lands.length; i++) {
+    //   2a. creates an article tag (there should be one for each land when the loop is done)
+    const landArticle = document.createElement("article");
+    //   2b. gives each land article an `id` tag of the corresponding land name
+    landArticle.id = lands[i];
+    //   2c. includes an h1 with the name of the land inside each land article
+    const landName = document.createElement("h1");
+    landName.textContent = lands[i];
+    //   2d. appends each land to the middle-earth section
+    landArticle.appendChild(landName);
+    section.appendChild(landArticle);
+  }
+  // 3. append the section to the body of the DOM.
+  document.body.appendChild(section);
 }
 
 // COMMIT YOUR WORK
@@ -50,27 +50,27 @@ function makeMiddleEarth() {
 // ============
 
 function makeHobbits() {
-	console.log('2: makeHobbits')
+  console.log("2: makeHobbits");
 
-	// display an `unordered list` of hobbits in the shire
-	// how can I get "the shire"? how can I append a ul to it?
-	// I can use querySelector, like this:
-	// const theShire = document.querySelector("#The-Shire")
-	// We can also use the more specific getElementById
-	const theShire = document.getElementById("The-Shire")
-	// give each hobbit a class of `hobbit`
-	// hint: create a 'ul' outside the loop into which to append the 'li's
-	const ulHobbits = document.createElement("ul")
-	ulHobbits.id = "hobbits"
-	for (let i= 0; i < hobbits.length; i++) {
-		const liHobbits = document.createElement("li")
-		liHobbits.classdName = "hobbit"
-		liHobbits.textContent = hobbits[i]
-		ulHobbits.appendChild(liHobbits)
-	}
+  // display an `unordered list` of hobbits in the shire
+  // how can I get "the shire"? how can I append a ul to it?
+  // I can use querySelector, like this:
+  // const theShire = document.querySelector("#The-Shire")
+  // We can also use the more specific getElementById
+  const theShire = document.getElementById("The-Shire");
+  // give each hobbit a class of `hobbit`
+  // hint: create a 'ul' outside the loop into which to append the 'li's
+  const ulHobbits = document.createElement("ul");
+  ulHobbits.id = "hobbits";
+  for (let i = 0; i < hobbits.length; i++) {
+    const liHobbits = document.createElement("li");
+    liHobbits.classdName = "hobbit";
+    liHobbits.textContent = hobbits[i];
+    ulHobbits.appendChild(liHobbits);
+  }
 
-	// hint: get 'The-Shire' by using its id
-	theShire.appendChild(ulHobbits)	
+  // hint: get 'The-Shire' by using its id
+  theShire.appendChild(ulHobbits);
 }
 
 // COMMIT YOUR WORK
@@ -81,25 +81,25 @@ function makeHobbits() {
 // ============
 
 function keepItSecretKeepItSafe() {
-	console.log('3: keepItSecretKeepItSafe')
+  console.log("3: keepItSecretKeepItSafe");
 
-	// create a div with an id of `'the-ring'`
-	const oneRingDiv = document.createElement("div")
-	oneRingDiv.id = "the-ring"
-	// give the div a class of `'magic-imbued-jewelry'`
-	oneRingDiv.className = "magic-imbued-jewelry"
+  // create a div with an id of `'the-ring'`
+  const oneRingDiv = document.createElement("div");
+  oneRingDiv.id = "the-ring";
+  // give the div a class of `'magic-imbued-jewelry'`
+  oneRingDiv.className = "magic-imbued-jewelry";
 
-	// add the ring as a child of `Frodo`
-	// first we'll need to find the ul where Frodo lives
-	// ** we need to make the variable again because we previously made it within a function
-	const ulHobbits = document.querySelector("#hobbits")
-	// next we'll need to figure out which li is Frodo
-	// console.log ("are these the hobbits?", ulHobbits.children)"
-	const hobbitsArray = ulHobbits.children
-	// console.log("Is this Frodo?", hobbitsArray[0])
-	const frodoLi = hobbitsArray[0]
-	// then we can attach the ring to our frodo li
-	frodoLi.appendChild(oneRingDiv)
+  // add the ring as a child of `Frodo`
+  // first we'll need to find the ul where Frodo lives
+  // ** we need to make the variable again because we previously made it within a function
+  const ulHobbits = document.querySelector("#hobbits");
+  // next we'll need to figure out which li is Frodo
+  // console.log ("are these the hobbits?", ulHobbits.children)"
+  const hobbitsArray = ulHobbits.children;
+  // console.log("Is this Frodo?", hobbitsArray[0])
+  const frodoLi = hobbitsArray[0];
+  // then we can attach the ring to our frodo li
+  frodoLi.appendChild(oneRingDiv);
 }
 
 // COMMIT YOUR WORK
@@ -110,21 +110,21 @@ function keepItSecretKeepItSafe() {
 // ============
 
 function makeBaddies() {
-	console.log('4: makeBaddies')
+  console.log("4: makeBaddies");
 
-	// display an unordered list of baddies in Mordor
-	const mordor = document.getElementById("Mordor")
-	const ulBaddies = document.createElement("ul")
-	ulBaddies.id = "baddies"
-	for (let i = 0; i < baddies.length; i++) {
-		liBaddy = document.createElement("li")
-		// give each of the baddies a class of "baddy"
-		liBaddy.className = "baddy"
-		liBaddy.textContent = baddies[i]
-		ulBaddies.appendChild(liBaddy)
-	}
-	// remember to append them to Mordor
-	mordor.appendChild(ulBaddies)
+  // display an unordered list of baddies in Mordor
+  const mordor = document.getElementById("Mordor");
+  const ulBaddies = document.createElement("ul");
+  ulBaddies.id = "baddies";
+  for (let i = 0; i < baddies.length; i++) {
+    liBaddy = document.createElement("li");
+    // give each of the baddies a class of "baddy"
+    liBaddy.className = "baddy";
+    liBaddy.textContent = baddies[i];
+    ulBaddies.appendChild(liBaddy);
+  }
+  // remember to append them to Mordor
+  mordor.appendChild(ulBaddies);
 }
 
 // COMMIT YOUR WORK
@@ -135,13 +135,25 @@ function makeBaddies() {
 // ============
 
 function makeBuddies() {
-	console.log('5: makeBuddies')
-
-	// create an `aside` tag
-
-	// put an `unordered list` of the `'buddies'` in the aside
-
-	// insert your aside as a child element of `rivendell`
+  console.log("5: makeBuddies");
+  
+  // create an `aside` tag
+  const asideBuddies = document.createElement("aside")
+  asideBuddies.id = "aside-buddies"
+  
+  // put an `unordered list` of the `'buddies'` in the aside
+  const rivendell = document.getElementById("Rivendell")
+  const ulBuddies = document.createElement("ul")
+  ulBuddies.id = "buddies"
+  for (let i = 0; i < buddies.length; i++) {
+    const liBuddies = document.createElement("li")
+    liBuddies.class = "liBuddies"
+    liBuddies.textContent = buddies[i]
+    ulBuddies.appendChild(liBuddies)
+    asideBuddies.appendChild(ulBuddies)
+  }
+  // insert your aside as a child element of `rivendell`
+  rivendell.appendChild(asideBuddies)
 }
 
 // COMMIT YOUR WORK
@@ -152,9 +164,9 @@ function makeBuddies() {
 // ============
 
 function leaveTheShire() {
-	console.log('6: leaveTheShire')
+  console.log("6: leaveTheShire");
 
-	// assemble the `hobbits` and move them to `rivendell`
+  // assemble the `hobbits` and move them to `rivendell`
 }
 
 // COMMIT YOUR WORK
@@ -165,9 +177,9 @@ function leaveTheShire() {
 // ============
 
 function beautifulStranger() {
-	console.log('7: beautifulStranger')
+  console.log("7: beautifulStranger");
 
-	// change the `'Strider'` text to `'Aragorn'`
+  // change the `'Strider'` text to `'Aragorn'`
 }
 
 // COMMIT YOUR WORK
@@ -178,12 +190,12 @@ function beautifulStranger() {
 // ============
 
 function forgeTheFellowShip() {
-	console.log('8: forgeTheFellowShip')
-	// create a new div called `'the-fellowship'` within `rivendell`
-	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
-	// after each character is added make an alert that they // have joined your party
+  console.log("8: forgeTheFellowShip");
+  // create a new div called `'the-fellowship'` within `rivendell`
+  // add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
+  // after each character is added make an alert that they // have joined your party
 
-	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
+  // NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
 }
 
 // COMMIT YOUR WORK
@@ -194,9 +206,9 @@ function forgeTheFellowShip() {
 // ============
 
 function theBalrog() {
-	console.log('9: theBalrog')
-	// change the `'Gandalf'` text to `'Gandalf the White'`
-	// apply the following style to the element, make the // background 'white', add a grey border
+  console.log("9: theBalrog");
+  // change the `'Gandalf'` text to `'Gandalf the White'`
+  // apply the following style to the element, make the // background 'white', add a grey border
 }
 
 // COMMIT YOUR WORK
@@ -207,10 +219,10 @@ function theBalrog() {
 // ============
 
 function hornOfGondor() {
-	console.log('10: hornOfGondor')
-	// pop up an alert that the horn of gondor has been blown
-	// Boromir's been killed by the Uruk-hai!
-	// Remove `Boromir` from the Fellowship
+  console.log("10: hornOfGondor");
+  // pop up an alert that the horn of gondor has been blown
+  // Boromir's been killed by the Uruk-hai!
+  // Remove `Boromir` from the Fellowship
 }
 
 // COMMIT YOUR WORK
@@ -221,9 +233,9 @@ function hornOfGondor() {
 // ============
 
 function itsDangerousToGoAlone() {
-	console.log('11: itsDangerousToGoAlone')
-	// take `Frodo` and `Sam` out of the fellowship and move // them to `Mordor`
-	// add a div with an id of `'mount-doom'` to `Mordor`
+  console.log("11: itsDangerousToGoAlone");
+  // take `Frodo` and `Sam` out of the fellowship and move // them to `Mordor`
+  // add a div with an id of `'mount-doom'` to `Mordor`
 }
 
 // COMMIT YOUR WORK
@@ -234,10 +246,10 @@ function itsDangerousToGoAlone() {
 // ============
 
 function weWantsIt() {
-	console.log('12: weWantsIt')
-	// Create a div with an id of `'gollum'` and add it to Mordor
-	// Remove `the ring` from `Frodo` and give it to `Gollum`
-	// Move Gollum into Mount Doom
+  console.log("12: weWantsIt");
+  // Create a div with an id of `'gollum'` and add it to Mordor
+  // Remove `the ring` from `Frodo` and give it to `Gollum`
+  // Move Gollum into Mount Doom
 }
 
 // COMMIT YOUR WORK
@@ -248,9 +260,9 @@ function weWantsIt() {
 // ============
 
 function thereAndBackAgain() {
-	console.log('13: thereAndBackAgain')
-	// remove `Gollum` and `the Ring` from the document
-	// Move all the `hobbits` back to `the shire`
+  console.log("13: thereAndBackAgain");
+  // remove `Gollum` and `the Ring` from the document
+  // Move all the `hobbits` back to `the shire`
 }
 
 // COMMIT YOUR WORK
@@ -264,41 +276,41 @@ function thereAndBackAgain() {
 // This code is loading all of the event listeners for the buttons in your application.
 // =====================================
 
-document.getElementById('chapter-1').addEventListener('click', makeMiddleEarth)
-document.getElementById('chapter-2').addEventListener('click', makeHobbits)
+document.getElementById("chapter-1").addEventListener("click", makeMiddleEarth);
+document.getElementById("chapter-2").addEventListener("click", makeHobbits);
 document
-	.getElementById('chapter-3')
-	.addEventListener('click', keepItSecretKeepItSafe)
-document.getElementById('chapter-4').addEventListener('click', makeBaddies)
-document.getElementById('chapter-5').addEventListener('click', makeBuddies)
-document.getElementById('chapter-6').addEventListener('click', leaveTheShire)
+  .getElementById("chapter-3")
+  .addEventListener("click", keepItSecretKeepItSafe);
+document.getElementById("chapter-4").addEventListener("click", makeBaddies);
+document.getElementById("chapter-5").addEventListener("click", makeBuddies);
+document.getElementById("chapter-6").addEventListener("click", leaveTheShire);
 document
-	.getElementById('chapter-7')
-	.addEventListener('click', beautifulStranger)
+  .getElementById("chapter-7")
+  .addEventListener("click", beautifulStranger);
 document
-	.getElementById('chapter-8')
-	.addEventListener('click', forgeTheFellowShip)
-document.getElementById('chapter-9').addEventListener('click', theBalrog)
-document.getElementById('chapter-10').addEventListener('click', hornOfGondor)
+  .getElementById("chapter-8")
+  .addEventListener("click", forgeTheFellowShip);
+document.getElementById("chapter-9").addEventListener("click", theBalrog);
+document.getElementById("chapter-10").addEventListener("click", hornOfGondor);
 document
-	.getElementById('chapter-11')
-	.addEventListener('click', itsDangerousToGoAlone)
-document.getElementById('chapter-12').addEventListener('click', weWantsIt)
+  .getElementById("chapter-11")
+  .addEventListener("click", itsDangerousToGoAlone);
+document.getElementById("chapter-12").addEventListener("click", weWantsIt);
 document
-	.getElementById('chapter-13')
-	.addEventListener('click', thereAndBackAgain)
-document.getElementById('all-chapters').addEventListener('click', () => {
-	makeMiddleEarth()
-	makeHobbits()
-	keepItSecretKeepItSafe()
-	makeBaddies()
-	makeBuddies()
-	leaveTheShire()
-	beautifulStranger()
-	forgeTheFellowShip()
-	theBalrog()
-	hornOfGondor()
-	itsDangerousToGoAlone()
-	weWantsIt()
-	thereAndBackAgain()
-})
+  .getElementById("chapter-13")
+  .addEventListener("click", thereAndBackAgain);
+document.getElementById("all-chapters").addEventListener("click", () => {
+  makeMiddleEarth();
+  makeHobbits();
+  keepItSecretKeepItSafe();
+  makeBaddies();
+  makeBuddies();
+  leaveTheShire();
+  beautifulStranger();
+  forgeTheFellowShip();
+  theBalrog();
+  hornOfGondor();
+  itsDangerousToGoAlone();
+  weWantsIt();
+  thereAndBackAgain();
+});
