@@ -168,6 +168,22 @@ function leaveTheShire() {
 	console.log('6: leaveTheShire')
 
 	// assemble the `hobbits` and move them to `rivendell`
+	// create an `aside` tag
+	const asideHobbits = document.createElement("aside")
+	// create an unorder list
+	const ulHobbits = document.createElement("ul")
+	ulHobbits.id = "hobbits"
+	// put an `unordered list` of the hobbits in the aside
+	for (let i = 0; i < hobbits.length; i++) {
+		const liHobbits = document.createElement("li")
+		liHobbits.className = "hobbits"
+		liHobbits.textContent = hobbits[i]
+		ulHobbits.appendChild(liHobbits)
+	}
+	// get rivendell by id
+	const rivendell = document.getElementById("Rivendell")
+	// insert hobbits into rivendell 
+	rivendell.appendChild(ulHobbits)
 }
 
 // COMMIT YOUR WORK
@@ -181,6 +197,7 @@ function beautifulStranger() {
 	console.log('7: beautifulStranger')
 
 	// change the `'Strider'` text to `'Aragorn'`
+	buddies.splice(3, "Aragorn")
 }
 
 // COMMIT YOUR WORK
