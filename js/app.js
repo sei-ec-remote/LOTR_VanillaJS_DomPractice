@@ -143,6 +143,7 @@ function makeBuddies() {
 	// put an `unordered list` of the `'buddies'` in the aside
 	//create the unordered list
 	const ulBuddies = document.createElement('ul')
+	ulBuddies.id = 'buddies'
 	//append the unordered list to the aside
 	asideBuddies.appendChild(ulBuddies)
 	//add list items to the unordered list 'ulBuddies'
@@ -233,8 +234,43 @@ function beautifulStranger() {
 function forgeTheFellowShip() {
 	console.log('8: forgeTheFellowShip')
 	// create a new div called `'the-fellowship'` within `rivendell`
+	// let's create a new variable to reference the element 'rivendell'
+	const rivendell = document.getElementById('Rivendell')
+	// let's create a new div element
+	//console.log('this is rivendell element: ', rivendell)
+	const theFellowship = document.createElement('div')
+	// let's give this new div element an id
+	theFellowship.id = 'the-fellowship'
+	// the fellowship is going to hold some people, so we need another list
+	const ulTheFellowship = document.createElement('ul')
+	//let's name this new unordered list
+	ulTheFellowship.id  = 'ulTheFellowship'
+	// now that we have an unordered list, lets append it to the div element of the the Fellowship
+	theFellowship.appendChild(ulTheFellowship)
+	// let's add theFellowship to rivendell
+	console.log('this is theFellowship element: ', theFellowship)
+	rivendell.appendChild(theFellowship)
 	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
-	// after each character is added make an alert that they // have joined your party
+	// all of the hobbits and buddies are in the unordered list of rivendell
+	// tough part is that they are in two different unordered lists
+	//lets create reference to each of the unordered lists
+	const ulHobbits = document.querySelector('#hobbits').getElementsByClassName('hobbit')
+	// make sure the reference is correct with a console.log
+
+	console.log(ulHobbits.length)
+	// let's loop through the buddies and one by one and move them to the fellowship
+	while(ulHobbits.length>0) {
+		console.log(`${ulHobbits[0].textContent}`)
+		// after each character is added make an alert that they // have joined your party
+		alert(`${ulHobbits[0].textContent} has joined your party!`)
+		ulTheFellowship.appendChild(ulHobbits[0])
+	//	console.log('this is the buddy that should be added', ulBuddies[i].id)
+	
+		
+	}
+	// check to see/confirm everyone in the fellowship 
+	console.log('this is the fellowship', theFellowship)
+
 
 	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
 }
