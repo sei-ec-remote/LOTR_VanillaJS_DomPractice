@@ -244,9 +244,40 @@ function forgeTheFellowShip() {
 	console.log('8: forgeTheFellowShip')
 	// create a new div called `'the-fellowship'` within `rivendell`
 	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
-	// after each character is added make an alert that they // have joined your party
+	// after each character is added make an alert that they 
+	// have joined your party
 
-	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
+	// NOTE: This won't change what you see in the browser.  
+	// Use your Elements tab of your Inspector tools to make sure that it worked.
+
+	const rivendell = document.getElementById('Rivendell');
+
+	const theFellowship = document.createElement('div');
+	theFellowship.className = 'the-fellowship';
+
+	// Add the div to the Rivendell
+	rivendell.appendChild(theFellowship);
+
+	// Add each hobbit and buddy which are in li's one at a time to 
+	//  the the-fellowship.
+	const ulBuddies = document.querySelector('#buddies');
+	const hobbitOrBuddyArray = ulBuddies.children;
+
+	// How are we adding this to the div that doesn't change the browser.
+	//  Lets add divs below the-fellowship with classnames of the
+	//  hobbits or buddies
+	for (let i = 0; i < hobbitOrBuddyArray.length; i++) {
+		const buddyOrHobbit = document.createElement('div');
+		buddyOrHobbit.className = hobbitOrBuddyArray[i].textContent;
+
+		// Attach the buddy or hobbit
+		theFellowship.appendChild(buddyOrHobbit);
+
+		// Send out an alert
+		alert(`${hobbitOrBuddyArray[i].textContent} has joined The Fellowship`);
+    }
+
+
 }
 
 // COMMIT YOUR WORK
