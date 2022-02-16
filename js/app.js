@@ -241,7 +241,7 @@ function forgeTheFellowShip() {
 		const liBuddy = document.createElement('p')
 		theFellowship.appendChild(liBuddy)
 		// after each character is added make an alert that they // have joined your party
-		// alert(`${allThem[i]} joined the party`)
+		alert(`${allThem[i]} joined the party`)
 	}
 
 
@@ -293,7 +293,7 @@ function theBalrog() {
 function hornOfGondor() {
 	console.log('10: hornOfGondor')
 	// pop up an alert that the horn of gondor has been blown
-	// alert("the horn of gondor has been blown")
+	alert("the horn of gondor has been blown")
 	// Boromir's been killed by the Uruk-hai!
 	// Remove `Boromir` from the Fellowship
 
@@ -328,7 +328,7 @@ function itsDangerousToGoAlone() {
 
 	const rivendell = document.getElementById('Rivendell')
 	const ulHobbits = document.createElement('ul')
-	ulHobbits.id = 'hobbits'
+	ulHobbits.id = 'hobbits2'
 	let hobbits = [`Meriadoc "Merry" Brandybuck`,
 		`Peregrin "Pippin" Took`]
 	for (let i = 0; i < hobbits.length; i++) {
@@ -399,7 +399,34 @@ function weWantsIt() {
 function thereAndBackAgain() {
 	console.log('13: thereAndBackAgain')
 	// remove `Gollum` and `the Ring` from the document
+	const removeGollum = document.getElementById('gollum')
+	removeGollum.remove()
+
+
 	// Move all the `hobbits` back to `the shire`
+	const theShire = document.getElementById('The-Shire')
+	const ulHobbits = document.createElement('ul')
+	ulHobbits.id = "hobbits"
+	for (let i = 0; i < hobbits.length; i++) {
+		const liHobbit = document.createElement('li')
+		liHobbit.className = 'hobbit'
+		liHobbit.textContent = hobbits[i]
+		ulHobbits.appendChild(liHobbit)
+	}
+	theShire.appendChild(ulHobbits)
+
+	document.getElementById("FrodoSam").remove()
+	document.getElementById("hobbits2").remove()
+
+
+	// const ulBaddies = document.querySelector('#baddies')
+	// const baddiesArray = ulBaddies.children
+	// console.log(baddiesArray)
+	// const frodoLi = baddiesArray[4]
+	// frodoLi.removeChild()
+	// const samLi = baddiesArray[5]
+	// samLi.removeChild()
+
 }
 
 // COMMIT YOUR WORK
