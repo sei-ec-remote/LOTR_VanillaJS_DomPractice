@@ -80,6 +80,7 @@ function makeHobbits() {
 
 	theShire.appendChild(ulHobbits)
 
+	console.log('theShire contents' , theShire)
 	// hint: create a 'ul' outside the loop into which to append the 'li's
 
 	// hint: get 'The-Shire' by using its id
@@ -195,6 +196,16 @@ function leaveTheShire() {
 	console.log('6: leaveTheShire')
 
 	// assemble the `hobbits` and move them to `rivendell`
+	const grabHobbits = document.getElementById('hobbits')
+	const hobbitDestination = document.getElementById('Rivendell')
+
+	//append the hobbits ul to rivendell
+	hobbitDestination.append(grabHobbits)
+	
+	//console log to ensure they arrived. 
+	console.log("Who is in Rivendell now?" , hobbitDestination)
+
+
 }
 
 // COMMIT YOUR WORK
