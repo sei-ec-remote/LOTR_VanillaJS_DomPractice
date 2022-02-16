@@ -310,8 +310,27 @@ function hornOfGondor() {
 
 function itsDangerousToGoAlone() {
   console.log("11: itsDangerousToGoAlone");
-  // take `Frodo` and `Sam` out of the fellowship and move // them to `Mordor`
+  // take `Frodo` and `Sam` out of the fellowship and move
+  // them to `Mordor`
+
+  const theFellowship = document.getElementById("the-fellowship")
+  fellowshipArray = theFellowship.children
+  // console.log("here's frodo", fellowshipArray[0])
+  const liFrodo = fellowshipArray[0]
+  // console.log("and here's sam", fellowshipArray[1])
+  const liSam = fellowshipArray[1]
+  // remove them from The Fellowship
+  fellowshipArray[0].remove()
+  fellowshipArray[1].remove()
+  // put them in Mordor
+  const walkIntoMordor = document.getElementById("Mordor")
+  walkIntoMordor.appendChild(liFrodo)
+  walkIntoMordor.appendChild(liSam)
+
   // add a div with an id of `'mount-doom'` to `Mordor`
+  const mtDoom = document.createElement("div")
+  mtDoom.id = "mount-doom"
+  walkIntoMordor.appendChild(mtDoom)
 }
 
 // COMMIT YOUR WORK
