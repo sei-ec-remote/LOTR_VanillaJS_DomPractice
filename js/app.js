@@ -56,9 +56,8 @@ function makeMiddleEarth() {
 function makeHobbits() {
 	console.log('2: makeHobbits')
 
-	// display an `unordered list` of hobbits in the shire
 
-// display an `unordered list` of hobbits in the shire
+	// display an `unordered list` of hobbits in the shire
 	// how can I get, 'the shire'? how can I append a ul to it?
 	// I can use querySelector, like this
 	// const theShire = document.querySelector('#The-Shire')
@@ -79,9 +78,8 @@ function makeHobbits() {
 		// append each hobbit to hobbits 
 		ulHobbits.appendChild(liHobbit)
 	}
-
+    
 	theShire.appendChild(ulHobbits)
-
 	// hint: create a 'ul' outside the loop into which to append the 'li's
 
 	// hint: get 'The-Shire' by using its id
@@ -96,12 +94,26 @@ function makeHobbits() {
 
 function keepItSecretKeepItSafe() {
 	console.log('3: keepItSecretKeepItSafe')
-
 	// create a div with an id of `'the-ring'`
-   
+	const oneRingDiv = document.createElement('div')
+	oneRingDiv.id = 'the-ring'
 	// give the div a class of `'magic-imbued-jewelry'`
+	oneRingDiv.className = 'magic-imbued-jewelry'
 
 	// add the ring as a child of `Frodo`
+	// first, we'll need to find the ul where frodo lives
+	// console.log(document.querySelector('#hobbits'))
+	const ulHobbits = document.querySelector('#hobbits')
+	
+	// next we'll need to figure out which li is frodo
+	// console.log('these are probs the hobs', ulHobbits.children)
+	const hobbitsArray = ulHobbits.children
+	// console.log('is this frodo?', hobbitsArray[0])
+	const frodoLi = hobbitsArray[0]
+	// then we can attach the ring to our frodo li
+	frodoLi.appendChild(oneRingDiv)
+
+
 }
 
 // COMMIT YOUR WORK
