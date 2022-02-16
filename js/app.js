@@ -131,6 +131,7 @@ function makeBuddies() {
 	const aside = document.createElement('aside')
 	// put an `unordered list` of the `'buddies'` in the aside
 	const ulBuddies = document.createElement('ul')
+	ulBuddies.id = 'buddies'
 	for(let i = 0; i < buddies.length; i++)
 	{
 		const liBuddy = document.createElement('li')
@@ -139,7 +140,7 @@ function makeBuddies() {
 		ulBuddies.appendChild(liBuddy)
 	}
 	// insert your aside as a child element of `rivendell`
-	const rivendell = document.getElementById('Rivendell').firstElementChild
+	const rivendell = document.getElementById('Rivendell')
 	aside.append(ulBuddies)
 	rivendell.appendChild(aside)
 }
@@ -158,7 +159,6 @@ function leaveTheShire() {
 	const rivendell = document.getElementById('Rivendell')
 	const theShire = document.getElementById('The-Shire')
 	const ulHobbits = theShire.lastElementChild
-	console.log(ulHobbits)
 	theShire.removeChild(ulHobbits)
 	rivendell.appendChild(ulHobbits)
 }
@@ -174,6 +174,8 @@ function beautifulStranger() {
 	console.log('7: beautifulStranger')
 
 	// change the `'Strider'` text to `'Aragorn'`
+	const strider = document.querySelector('#buddies').lastElementChild.previousElementSibling
+	strider.textContent = 'Aragorn'
 }
 
 // COMMIT YOUR WORK
