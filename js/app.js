@@ -195,6 +195,13 @@ function leaveTheShire() {
 	console.log('6: leaveTheShire')
 
 	// assemble the `hobbits` and move them to `rivendell`
+	const moveHobbit = document.getElementById('hobbits')
+	console.log (moveHobbit)
+	const moveToRivendell = document.getElementById('Rivendell')
+	console.log(moveToRivendell)
+	moveToRivendell.appendChild(moveHobbit)
+
+
 }
 
 // COMMIT YOUR WORK
