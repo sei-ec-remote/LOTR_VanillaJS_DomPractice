@@ -74,6 +74,7 @@ function makeHobbits() {
 		liHobbit.textContent = hobbits[i]
 		// append each hobbit to hobbits 
 		ulHobbits.appendChild(liHobbit)
+		liHobbit.id = hobbits[i].toString('')
 	}
 
 	theShire.appendChild(ulHobbits)
@@ -274,7 +275,18 @@ document.getElementById('Boromir').remove()
 function itsDangerousToGoAlone() {
 	console.log('11: itsDangerousToGoAlone')
 	// take `Frodo` and `Sam` out of the fellowship and move // them to `Mordor`
+ const frodo = document.getElementById('Frodo Baggins')
+ const sam = document.getElementById('Samwise "Sam" Gamgee')
+ const mordor = document.getElementById('Mordor')
+ 
+ mordor.appendChild(frodo)
+ mordor.appendChild(sam)
+
 	// add a div with an id of `'mount-doom'` to `Mordor`
+	const mountdoom = document.createElement('div')
+    mountdoom.id = 'Mount Doom'
+	
+	mordor.appendChild(mountdoom)
 }
 
 // COMMIT YOUR WORK
