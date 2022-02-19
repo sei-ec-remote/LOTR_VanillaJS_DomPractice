@@ -207,7 +207,8 @@ function beautifulStranger() {
 
 	// change the `'Strider'` text to `'Aragorn'`
 	//console.log(buddies)
-	const strider = document.getElementById("buddies").lastChild
+	const buddies = document.getElementById('buddies')
+	const strider = buddies.children[3]
 	strider.textContent = "Aragorn"
 	// console.log('new array', buddies)
 }
@@ -289,10 +290,10 @@ function hornOfGondor() {
 	alert("The horn of gondor has been blown!")
 	// Boromir's been killed by the Uruk-hai!
 	// Remove `Boromir` from the Fellowship
-	const removeBoromir = document.querySelector('the-fellowship')
-	// const boromir = removeBoromir.lastChild
-	// boromir.remove()
-
+	const fellowshipArr = document.querySelector('.the-fellowship').children
+	const boromir = fellowshipArr[4]
+	console.log(boromir)
+	boromir.remove()	
 }
 
 // COMMIT YOUR WORK
@@ -305,7 +306,17 @@ function hornOfGondor() {
 function itsDangerousToGoAlone() {
 	console.log('11: itsDangerousToGoAlone')
 	// take `Frodo` and `Sam` out of the fellowship and move // them to `Mordor`
+	const theFellowship = document.querySelector('.the-fellowship')
+	const frodo = theFellowship.children[4]
+	const samwise = theFellowship.children[5]
+	const mordor = document.getElementById("Mordor")
+	mordor.appendChild(frodo)
+	mordor.appendChild(samwise)
+
 	// add a div with an id of `'mount-doom'` to `Mordor`
+	const mountDoom = document.createElement('div')
+	mountDoom.id = "mount-doom"
+	mordor.appendChild(mountDoom)
 }
 
 // COMMIT YOUR WORK
