@@ -175,26 +175,13 @@ function makeBuddies() {
 function leaveTheShire() {
 	console.log('6: leaveTheShire')
 
-	// assemble the `hobbits` and move them to `rivendell`
 	const rivendell = document.getElementById('Rivendell')
-	const ulHobbits = document.createElement('ul')
-	ulHobbits.id = 'hobbits'
-	const removeHobbits = document.getElementById('hobbits')
-	removeHobbits.remove()
-	// give each hobbit a class of `hobbit`
-	for (let i = 0; i < hobbits.length; i++) {
-		// create a list item for each hobbit
-		const liHobbit = document.createElement('li')
-		// give each li a class 'hobbit'
-		liHobbit.className = 'hobbit'
-		// give each li some text
-		liHobbit.textContent = hobbits[i]
-		// append each hobbit to hobbits 
-		ulHobbits.appendChild(liHobbit)
+	const ulHobbits = document.getElementById('hobbits')
 
+	
+	rivendell.appendChild(ulHobbits)
 }
-rivendell.appendChild(ulHobbits)
-}
+// }
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 6 complete - Left the Shire"
 
@@ -312,7 +299,7 @@ function itsDangerousToGoAlone() {
 	const mordor = document.getElementById("Mordor")
 	mordor.appendChild(frodo)
 	mordor.appendChild(samwise)
-
+	
 	// add a div with an id of `'mount-doom'` to `Mordor`
 	const mountDoom = document.createElement('div')
 	mountDoom.id = "mount-doom"
@@ -329,9 +316,20 @@ function itsDangerousToGoAlone() {
 function weWantsIt() {
 	console.log('12: weWantsIt')
 	// Create a div with an id of `'gollum'` and add it to Mordor
+	const mordor = document.getElementById("Mordor")
+	const gollum = document.createElement('div')
+	gollum.id = "gollum"
+	mordor.appendChild(gollum)
 	// Remove `the ring` from `Frodo` and give it to `Gollum`
+const theRing = document.getElementById("the-ring")
+theRing.remove()
+gollum.appendChild(theRing)
 	// Move Gollum into Mount Doom
+	const mountDoom = document.getElementById("mount-doom")
+	// console.log("this is: ", mountDoom)
+	mountDoom.appendChild(gollum)
 }
+
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 12 complete - Gollum is trying to get the ring".
@@ -343,7 +341,23 @@ function weWantsIt() {
 function thereAndBackAgain() {
 	console.log('13: thereAndBackAgain')
 	// remove `Gollum` and `the Ring` from the document
+	const mountDoom = document.getElementById("mount-doom")
+	const gollum = document.getElementById('gollum')
+	// console.log(gollum)
+	mountDoom.remove(gollum)
 	// Move all the `hobbits` back to `the shire`
+	const pip = document.querySelector(".the-fellowship").lastChild
+	console.log(pip)
+	const theShire = document.getElementById('The-Shire')
+	theShire.appendChild(pip)
+	const meri = document.querySelector(".the-fellowship").lastChild
+	theShire.appendChild(meri)
+	const samwise = document.querySelector("#Mordor").lastChild
+	theShire.appendChild(samwise)
+	const frodo = document.querySelector("#Mordor").lastChild
+	theShire.appendChild(frodo)
+
+	
 }
 
 // COMMIT YOUR WORK
