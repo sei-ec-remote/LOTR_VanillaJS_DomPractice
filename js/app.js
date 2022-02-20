@@ -350,6 +350,10 @@ function thereAndBackAgain() {
 	oneRingDiv.id = "the-ring"
 	GollumDiv.appendChild(oneRingDiv)
 	// Move all the `hobbits` back to `the shire`
+	const ulHobbits = document.createElement("ul")
+	ulHobbits.id = "hobbits"
+	const theShire = getElementById("The-Shire")
+	theShire.appendChild(ulHobbits)
 }
 
 // COMMIT YOUR WORK
