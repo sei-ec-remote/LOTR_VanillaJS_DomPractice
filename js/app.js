@@ -178,9 +178,12 @@ function leaveTheShire() {
 		liHobbits.textContent = hobbits[i]
 		ulHobbits.appendChild(liHobbits)
 	}
+	// get the shire by id 
+	// const theShire = document.getElementById("The-Shire")
+	// remove hobbits from the shire (couldn't get to work)
+	// theShire.removeChild(ulHobbits)
 	// get rivendell by id
 	const rivendell = document.getElementById("Rivendell")
-	// remove hobbits from the shire 
 	// insert hobbits into rivendell 
 	rivendell.appendChild(ulHobbits)
 }
@@ -238,9 +241,11 @@ function forgeTheFellowShip() {
 	while (buddiesArray.length > 0) {
 		fellowshipDiv.appendChild(ulBuddies[0])
 		alert(`${buddiesArray[0]} has joined the party`)
+}
+
 // 	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
 // //
-}
+
 
 // // COMMIT YOUR WORK
 // // The commit message should read: "Chapter 8 complete - The Fellowship is created"
@@ -275,8 +280,13 @@ function hornOfGondor() {
 	console.log('10: hornOfGondor')
 	// pop up an alert that the horn of gondor has been blown
 	alert("The Horn of Gondor has been blown")
+	// find the fellowship 
+	const theFellowship = document.getElementById("The-Fellowship")
 	// Boromir's been killed by the Uruk-hai!
+	// find boromir 
+	const theFellowshipArrray = theFellowship.children
 	// Remove `Boromir` from the Fellowship
+	theFellowship.removeChild(fellowshipArray[4])
 	forgeTheFellowShip.removeChild
 }
 
