@@ -284,9 +284,9 @@ function hornOfGondor() {
 	const theFellowship = document.getElementById("The-Fellowship")
 	// Boromir's been killed by the Uruk-hai!
 	// find boromir 
-	const theFellowshipArrray = theFellowship.children
+	const theFellowshipArray = theFellowship.children
 	// Remove `Boromir` from the Fellowship
-	theFellowship.removeChild(fellowshipArray[4])
+	theFellowship.removeChild(theFellowshipArray[4])
 	forgeTheFellowShip.removeChild
 }
 
@@ -299,8 +299,17 @@ function hornOfGondor() {
 
 function itsDangerousToGoAlone() {
 	console.log('11: itsDangerousToGoAlone')
+	// get the fellowship 
+	const theFellowship = document.getElementbyId("The-Fellowship")
 	// take `Frodo` and `Sam` out of the fellowship and move // them to `Mordor`
+	const Mordor = document.getElementbyId("Mordor")
+	const theFellowshipArray = theFellowship.children 
+	theFellowship.removeChild(theFellowshipArray[7])
+	theFellowship.removeChild(theFellowshipArray[8])
 	// add a div with an id of `'mount-doom'` to `Mordor`
+	const mountDoomDiv = document.createElement("div")
+	mountDoomDiv.id = "Mount-Doom"
+	Mordor.appendChild("Mount-Doom")
 }
 
 // COMMIT YOUR WORK
@@ -313,9 +322,18 @@ function itsDangerousToGoAlone() {
 function weWantsIt() {
 	console.log('12: weWantsIt')
 	// Create a div with an id of `'gollum'` and add it to Mordor
+	const GollumDiv = createElement("div")
+	GollumDiv.id = "gollum"
 	// Remove `the ring` from `Frodo` and give it to `Gollum`
+	const oneRingDiv = document.createElement("div")
+	oneRingDiv.id = "the-ring"
+	GollumDiv.appendChild(oneRingDiv)
 	// Move Gollum into Mount Doom
-}
+	const Mordor = document.getElementbyId("Mordor")
+	const mountDoomDiv = document.createElement("div")
+	mountDoomDiv.id = "Mount-Doom"
+	Mordor.appendChild("Mount-Doom")
+	mountDoomDiv.appendChild(GollumDiv)
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 12 complete - Gollum is trying to get the ring".
@@ -327,6 +345,10 @@ function weWantsIt() {
 function thereAndBackAgain() {
 	console.log('13: thereAndBackAgain')
 	// remove `Gollum` and `the Ring` from the document
+	const GollumDiv = createElement("div")
+	GollumDiv.id = "gollum"
+	oneRingDiv.id = "the-ring"
+	GollumDiv.appendChild(oneRingDiv)
 	// Move all the `hobbits` back to `the shire`
 }
 
