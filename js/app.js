@@ -168,8 +168,6 @@ function leaveTheShire() {
 	console.log('6: leaveTheShire')
 
 	// assemble the `hobbits` and move them to `rivendell`
-	// create an `aside` tag
-	const asideHobbits = document.createElement("aside")
 	// create an unorder list
 	const ulHobbits = document.createElement("ul")
 	ulHobbits.id = "hobbits"
@@ -183,7 +181,6 @@ function leaveTheShire() {
 	// get rivendell by id
 	const rivendell = document.getElementById("Rivendell")
 	// remove hobbits from the shire 
-	// ?????
 	// insert hobbits into rivendell 
 	rivendell.appendChild(ulHobbits)
 }
@@ -218,18 +215,35 @@ function beautifulStranger() {
 function forgeTheFellowShip() {
 	console.log('8: forgeTheFellowShip')
 
-// create a new div called `'the-fellowship'` within `rivendell`
-    // const fellowshipDiv = document.createElement("div")
-	// fellowshipDiv.id = "the-fellowship"
+	// create a new div called `'the-fellowship'` within `rivendell`
+	// find rivendell by id 
+	// create fellowship div 
+    const fellowshipDiv = document.createElement("div")
+	// assign fellowship div and id
+	fellowshipDiv.id = "the-fellowship"
+	const rivendell = document.getElementById("Rivendell")
+	rivendell.appendchild(fellowshipDiv)
+	// get list of hobbits and buddies 
+	const ulHobbits = document.querySelector("#hobbits")
+	const hobbitsArray = ulHobbits.children
+	const ulBuddies = document.querySelector("#buddies")
+	const hobbitsArray = ulBuddies.children
+	// remove elements of while loop with hobbits and buddies length greater than zero
 	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
 	// after each character is added make an alert that they // have joined your party
-
-	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
-//
+	while (hobbitsArray.length > 0) {
+		fellowshipDiv.appendChild(ulHobbits[0])
+		alert(`${hobbitsArray[0]} has joined the party`)
+	}
+	while (buddiesArray.length > 0) {
+		fellowshipDiv.appendChild(ulBuddies[0])
+		alert(`${buddiesArray[0]} has joined the party`)
+// 	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
+// //
 }
 
-// COMMIT YOUR WORK
-// The commit message should read: "Chapter 8 complete - The Fellowship is created"
+// // COMMIT YOUR WORK
+// // The commit message should read: "Chapter 8 complete - The Fellowship is created"
 
 // ============
 // Chapter 9
