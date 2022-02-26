@@ -342,10 +342,10 @@ function weWantsIt() {
 	const ring = document.getElementById('the-ring')
 	// console.log('this is the ring', ring)
 	gollum.appendChild(ring)
-	console.log('this is gollum', gollum)
+	// console.log('this is gollum', gollum)
 	// Move Gollum into Mount Doom
 	const mountDoom = document.getElementById('mount-doom')
-	console.log('this is mount doom', mountDoom)
+	// console.log('this is mount doom', mountDoom)
 	mountDoom.appendChild(gollum)
 }
 
@@ -367,17 +367,12 @@ function thereAndBackAgain() {
 	// Move all the `hobbits` back to `the shire`
 	const theShire = document.getElementById('The-Shire')
 	
-	const hobbits = document.getElementById('hobbits')
-	// console.log('this is hobbit', hobbits)
-	theShire.appendChild(hobbits)
-
-	// const mordor = document.getElementById('Mordor')
-	// // console.log("this is mordor", mordor)
-
-	// const leftOverHobbits = querySelectorAll('hobbit')
-	// for(var i=0; hobbit = leftOverHoobbits[i]; i++) {
-	// 	li.mordor.removeChild("hobbit");
-	// }
+	const liHobbits = document.getElementsByClassName('hobbit')
+	const hobbitArray = Object.values(liHobbits)
+	console.log(hobbitArray)
+	for (let i = 0; i < hobbitArray.length; i++){
+		theShire.appendChild(hobbitArray[i])
+	}	
 	
 }
 
