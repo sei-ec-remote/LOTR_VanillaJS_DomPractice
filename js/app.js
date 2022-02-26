@@ -234,22 +234,24 @@ function forgeTheFellowShip() {
 	const liBuddies = document.getElementsByClassName('buddy')
 
 	const buddiesArray = Object.values(liBuddies)
-	console.log(buddiesArray)
+	// console.log(buddies)
 	for (let i = 0; i < buddiesArray.length; i++){
 		theFellowship.appendChild(buddiesArray[i])
+		// after each character is added make an alert that they // have joined your party
+		alert(`${buddies[i]}` + ' has joined the Fellowship!')
 	}
    
 	const liHobbits = document.getElementsByClassName('hobbit')
 
 	const hobbitArray = Object.values(liHobbits)
-	console.log(hobbitArray)
+	// console.log(hobbitArray)
 	for (let i = 0; i < hobbitArray.length; i++){
 		theFellowship.appendChild(hobbitArray[i])
+		// after each character is added make an alert that they // have joined your party
+		alert(`${hobbits[i]}` + ' has joined the Fellowship!')
 		
 	}
 	
-	// after each character is added make an alert that they // have joined your party
-	alert("The buddies and hobbits have joined the Fellowship!")
 	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
 }
 
