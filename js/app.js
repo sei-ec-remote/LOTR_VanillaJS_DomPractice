@@ -307,11 +307,13 @@ function itsDangerousToGoAlone() {
 	console.log('11: itsDangerousToGoAlone')
 	// take `Frodo` and `Sam` out of the fellowship and move // them to `Mordor`
 	const mordor = document.getElementById('Mordor')
-	const theFellowship = document.getElementById('the-fellowship')
-	const theFellowshipArray = theFellowship.children
-	// console.log('this is Frodo',theFellowshipArray[4])
-	mordor.appendChild(theFellowshipArray[4])
-	mordor.appendChild(theFellowshipArray[5])
+	const liHobbits = document.getElementsByClassName('hobbit')
+	const hobbitArray = Object.values(liHobbits)
+	console.log(hobbitArray)
+	for (let i = 0; i < hobbitArray.length; i++){
+		mordor.appendChild(hobbitArray[0])
+		mordor.appendChild(hobbitArray[1])
+	}	
 	// add a div with an id of `'mount-doom'` to `Mordor`
 	const mountDoom = document.createElement('div')
 	// assign div an id
