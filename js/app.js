@@ -369,7 +369,7 @@ function thereAndBackAgain() {
 	
 	const liHobbits = document.getElementsByClassName('hobbit')
 	const hobbitArray = Object.values(liHobbits)
-	console.log(hobbitArray)
+	// console.log(hobbitArray)
 	for (let i = 0; i < hobbitArray.length; i++){
 		theShire.appendChild(hobbitArray[i])
 	}	
