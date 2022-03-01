@@ -253,18 +253,18 @@ function forgeTheFellowShip() {
 
 	console.log(buddyArray)
 
-	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
-	// for (let i = 0; i < buddyArray.length; i ++) {
-	// 	const buddy = buddyArray[i].textContent
-	// 	console.log(hobbitArray)
-	// 	alert(` ${buddy} has joined`)
+	//add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
+	for (let i = 0; i < buddyArray.length; i ++) {
+		const buddy = buddyArray[i].textContent
+		console.log(hobbitArray)
+		alert(` ${buddy} has joined`)
 		
-	// }
-	// for (let i = 0; i < hobbitArray.length; i ++) {
-	// 	console.log(hobbitArray)
-	// 	const hobbit = hobbitArray[i].textContent
-	// 	alert(` ${hobbit} has joined`)
-	// }
+	}
+	for (let i = 0; i < hobbitArray.length; i ++) {
+		console.log(hobbitArray)
+		const hobbit = hobbitArray[i].textContent
+		alert(` ${hobbit} has joined`)
+	}
 
 	fellowship.appendChild(buddiesList)
 	fellowship.appendChild(hobbitsList)
