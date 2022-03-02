@@ -228,7 +228,7 @@ function forgeTheFellowShip() {
 	}
 
 	// after each character is added make an alert that they // have joined your party
-
+alert ('Buddies and Hobbits have joined');
 	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
 }
 
