@@ -68,6 +68,7 @@ function makeHobbits() {
 		liHobbit.className = 'hobbit'
 		liHobbit.textContent = hobbits[i]
 		ulHobbits.appendChild(liHobbit)
+		liHobbit.id = hobbits[i].toString('')
 	}
 	theShire.appendChild(ulHobbits)
 	// hint: get 'The-Shire' by using its id
@@ -223,6 +224,8 @@ function forgeTheFellowShip() {
 	const rivendell = document.querySelector('#Rivendell')
 	theFellowship.id = 'the-fellowship'
 
+	rivendell.appendChild(theFellowship)
+
 	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
 	const hobbit = document.querySelector('#hobbits')
 	const buddy = document.querySelector('#buddiesUl')
@@ -230,15 +233,17 @@ function forgeTheFellowShip() {
 	// after each character is added make an alert that they 
 	// have joined your party
 	for	(let i = 0; i < hobbit.children.length; i++) {
-		console.log(hobbit.children[i].innerHTML + ' has joined the party')
+		theFellowship.appendChild(hobbit)
+		console.log(hobbit.children[i].innerText + ' has joined the party')
 	}
 	for (let i = 0; i < buddy.children.length; i++) {
-		console.log(buddy.children[i].innerHTML + 'has joined the party')
+		theFellowship.appendChild(buddy)
+		console.log(buddy.children[i].innerText + 'has joined the party')
 	}
-	theFellowship.appendChild(hobbit)	
-	theFellowship.appendChild(buddy)
+		
+	
 
-	rivendell.appendChild(theFellowship)
+	
 	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
 }
 
@@ -257,10 +262,11 @@ function theBalrog() {
 	const gandalf = Object.values(theWhite)
 	gandalf.forEach(element => {
 		if (element.textContent === "Gandalf the Grey") {
-			element.textContent = 
-			'Gandalf the White'
+			element.textContent = 'Gandalf the White'
+			element.setAttribute("style", "background-color: white; border: 1px solid grey")
 		}
 	})
+	
 	// apply the following style to the element, make the 
 	// background 'white', add a grey border
 }
@@ -279,15 +285,12 @@ function hornOfGondor() {
 	// Boromir's been killed by the Uruk-hai!
 	console.log('Boromirs been killed by the Uruk-hai!')
 	// Remove `Boromir` from the Fellowship
-	const buddy = document.querySelector('#buddiesUl')
+	const buddy = document.querySelectorAll('.buddy')
 	console.log(buddy)
 	const fam = Object.values(buddy)
-	fam.forEach(element => {
-		if (element.textContent === "Boromir")
-			buddy.removeChild('#Boromir')
-	})
-}
+	document.getElementById('Boromir').remove()
 
+}
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 10 complete - horn of gandor blew and Boromir is dead"
 
@@ -298,7 +301,19 @@ function hornOfGondor() {
 function itsDangerousToGoAlone() {
 	console.log('11: itsDangerousToGoAlone')
 	// take `Frodo` and `Sam` out of the fellowship and move // them to `Mordor`
+	const frodo = document.getElementById('Frodo Baggins')
+	const sam = document.getElementById(`Samwise "Sam" Gamgee`)
+	const mountDoom = document.createElement('div')
+	mountDoom.id = 'mount-doom'
+	const morder = document.getElementById('Mordor')
+	
+	morder.appendChild(frodo)
+	morder.appendChild(sam)
+	// console.log(hobbits)
+	
+
 	// add a div with an id of `'mount-doom'` to `Mordor`
+	morder.appendChild(mountDoom)
 }
 
 // COMMIT YOUR WORK
@@ -311,8 +326,18 @@ function itsDangerousToGoAlone() {
 function weWantsIt() {
 	console.log('12: weWantsIt')
 	// Create a div with an id of `'gollum'` and add it to Mordor
+	const gollum = document.createElement('div')
+	const mordor = document.getElementById('Mordor')
+	const frodo = document.getElementById('Frodo Baggins')
+	gollum.id = 'gollum'
+	mordor.appendChild(gollum)
 	// Remove `the ring` from `Frodo` and give it to `Gollum`
+	const ring = document.getElementById('the-ring')
+	ring.remove()
+	gollum.appendChild(ring)
 	// Move Gollum into Mount Doom
+	const mount = document.getElementById('mount-doom')
+	mount.appendChild(gollum)
 }
 
 // COMMIT YOUR WORK
@@ -325,7 +350,12 @@ function weWantsIt() {
 function thereAndBackAgain() {
 	console.log('13: thereAndBackAgain')
 	// remove `Gollum` and `the Ring` from the document
+	const gollum = document.getElementById('gollum')
+	gollum.remove()
 	// Move all the `hobbits` back to `the shire`
+	const hobbits = document.getElementById('hobbits')
+	const shire = document.getElementById('The-Shire')
+	shire.appendChild(hobbits)
 }
 
 // COMMIT YOUR WORK
@@ -370,7 +400,7 @@ document.getElementById('all-chapters').addEventListener('click', () => {
 	makeBuddies()
 	leaveTheShire()
 	beautifulStranger()
-	forgeTheFellowShip()
+	forgeTheFellowShip() 
 	theBalrog()
 	hornOfGondor()
 	itsDangerousToGoAlone()
