@@ -256,7 +256,7 @@ function forgeTheFellowShip() {
 	for (let i = 0; i < buddiesArray.length; i++){
 		
 			fellowship.appendChild(buddiesArray[i])
-	
+			alert(`${buddiesArray[i].innerText} has been added to the fellowship!`)
 }
 //
 	
@@ -271,7 +271,7 @@ function forgeTheFellowShip() {
 	for (let i = 0 ; i < hobbitArray.length; i++){
 	
 			fellowship.appendChild(hobbitArray[i])	
-		
+			alert(`${hobbitArray[i].innerText} has been added to the fellowship!`)
 		
 		
 	}
@@ -395,7 +395,7 @@ function weWantsIt() {
 	gollum.appendChild(ring)
 	// Move Gollum into Mount Doom
 	console.log(Mordor.children)
-	console.log(mountDoom)
+	
 	const mountDoom = document.getElementById('mount-doom')
 	mountDoom.appendChild(gollum)
 }
