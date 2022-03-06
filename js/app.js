@@ -348,16 +348,25 @@ function thereAndBackAgain() {
 	console.log('13: thereAndBackAgain')
 	// remove `Gollum` and `the Ring` from the document
 	const mountDoom = document.querySelector("#mount-doom")
+	// find gollum
 	const gollum = document.querySelector("#gollum")
+	// remove gollum from mount doom
 	mountDoom.removeChild(gollum)
 	// Move all the `hobbits` back to `the shire`
+	// find the shire 
 	const theShire = document.querySelector("#The-Shire")
+	// find the fellowship which merry and pippin are in 
 	const theFellowship = document.querySelector("#the-fellowship")
+	// find merry and pippin
 	const theFellowshipArray = theFellowship.children
+	// find mordor
 	const mordor = document.querySelector("#Mordor")
+	// find frodo and sam in mordor 
 	const mordorArray = mordor.children
+	// remove merry and pippin from the fellowship, when one is removed, the other becomes 0 in the array 
 	theShire.appendChild(theFellowshipArray[0])
 	theShire.appendChild(theFellowshipArray[0])
+	// remove frodo and sam from mordor, when one is removed, the other becomes 2 in the array 
 	theShire.appendChild(mordorArray[2])
 	theShire.appendChild(mordorArray[2])
 }
