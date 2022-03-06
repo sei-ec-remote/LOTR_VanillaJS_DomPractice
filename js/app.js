@@ -270,16 +270,16 @@ function theBalrog() {
 // // Chapter 10
 // // ============
 
-// function hornOfGondor() {
-// 	console.log('10: hornOfGondor')
-// 	// pop up an alert that the horn of gondor has been blown
-// 	window.alert("The Horn of Gondor has been blown")
-// 	const theFellowship = document.getElementById("The-Fellowship")
-// 	// Boromir's been killed by the Uruk-hai!
-// 	const theFellowshipArray = theFellowship.children
-// 	// Remove `Boromir` from the Fellowship
-// 	theFellowship.removeChild(theFellowshipArray[8])
-// }
+function hornOfGondor() {
+	console.log('10: hornOfGondor')
+	// pop up an alert that the horn of gondor has been blown
+	window.alert("The Horn of Gondor has been blown")
+	const theFellowship = document.querySelector("#the-fellowship")
+	// Boromir's been killed by the Uruk-hai!
+	const theFellowshipArray = theFellowship.children
+	// Remove `Boromir` from the Fellowship
+	theFellowshipArray[8].remove()
+}
 
 // // COMMIT YOUR WORK
 // // The commit message should read: "Chapter 10 complete - horn of gandor blew and Boromir is dead"
