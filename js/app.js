@@ -305,9 +305,10 @@ function itsDangerousToGoAlone() {
 	Mordor.appendChild(theFellowshipArray[0])
 	// add a div with an id of `'mount-doom'` to `Mordor`
 	const mountDoomDiv = document.createElement("div")
-	mountDoomDiv.id = "mount-moom"
+	mountDoomDiv.id = "mount-doom"
 	// add mount doom to mordor
-	Mordor.appendChild("mount-doom")
+	Mordor.appendChild(mountDoomDiv)
+
 }
 
 // // COMMIT YOUR WORK
@@ -317,21 +318,22 @@ function itsDangerousToGoAlone() {
 // // Chapter 12
 // // ============
 
-// function weWantsIt() {
-// 	console.log('12: weWantsIt')
-// 	// Create a div with an id of `'gollum'` and add it to Mordor
-// 	const GollumDiv = createElement("div")
-// 	GollumDiv.id = "gollum"
-// 	// Remove `the ring` from `Frodo` and give it to `Gollum`
-// 	const oneRingDiv = document.createElement("div")
-// 	oneRingDiv.id = "the-ring"
-// 	GollumDiv.appendChild(oneRingDiv)
-// 	// Move Gollum into Mount Doom
-// 	const Mordor = document.getElementbyId("Mordor")
-// 	const mountDoomDiv = document.createElement("div")
-// 	mountDoomDiv.id = "Mount-Doom"
-// 	Mordor.appendChild("Mount-Doom")
-// 	mountDoomDiv.appendChild(GollumDiv)
+function weWantsIt() {
+
+	console.log('12: weWantsIt')
+	// Create a div with an id of `'gollum'` and add it to Mordor
+	const gollumDiv = document.createElement("div")
+	gollumDiv.id = "gollum"
+	const Mordor = document.querySelector("#Mordor")
+	Mordor.appendChild(gollumDiv)
+	// Remove `the ring` from `Frodo` and give it to `Gollum`
+	const oneRing = document.querySelector("the-ring")
+	gollumDiv.appendChild(oneRing)
+	// Move Gollum into Mount Doom
+	const mountDoom = document.querySelector("#mount-doom")
+	mountDoom.appendChild(gollumDiv)
+
+}
 
 // // COMMIT YOUR WORK
 // // The commit message should read: "Chapter 12 complete - Gollum is trying to get the ring".
