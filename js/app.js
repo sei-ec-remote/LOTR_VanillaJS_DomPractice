@@ -253,7 +253,9 @@ function forgeTheFellowShip() {
 function theBalrog() {
 	console.log('9: theBalrog')
 
+	// get the fellowship 
 	const theFellowship = document.querySelector("#the-fellowship")
+	// find out where gandalf is 
 	const theFellowshipArray = theFellowship.children
 	const gandalfTheWhite = theFellowshipArray[4]
 	// change text from `gandalf` to `gandalf the white`
@@ -288,20 +290,25 @@ function hornOfGondor() {
 // // Chapter 11
 // // ============
 
-// function itsDangerousToGoAlone() {
-// 	console.log('11: itsDangerousToGoAlone')
-// 	// get the fellowship 
-// 	const theFellowship = document.getElementbyId("The-Fellowship")
-// 	// take `Frodo` and `Sam` out of the fellowship and move // them to `Mordor`
-// 	const Mordor = document.getElementbyId("Mordor")
-// 	const theFellowshipArray = theFellowship.children 
-// 	theFellowship.removeChild(theFellowshipArray[7])
-// 	theFellowship.removeChild(theFellowshipArray[8])
-// 	// add a div with an id of `'mount-doom'` to `Mordor`
-// 	const mountDoomDiv = document.createElement("div")
-// 	mountDoomDiv.id = "Mount-Doom"
-// 	Mordor.appendChild("Mount-Doom")
-// }
+function itsDangerousToGoAlone() {
+	console.log('11: itsDangerousToGoAlone')
+
+	// take `Frodo` and `Sam` out of the fellowship and move // them to `Mordor`
+	// find the fellowship 
+	const theFellowship = document.querySelector("#the-fellowship")
+	// find where sam and frodo are 
+	const theFellowshipArray = theFellowship.children 
+	// find mordor 
+	const Mordor = document.querySelector("#Mordor")
+	// append frodo and sam to mordor, once frodo is removed, sam becomes 0 in the fellowship array
+	Mordor.appendChild(theFellowshipArray[0])
+	Mordor.appendChild(theFellowshipArray[0])
+	// add a div with an id of `'mount-doom'` to `Mordor`
+	const mountDoomDiv = document.createElement("div")
+	mountDoomDiv.id = "mount-moom"
+	// add mount doom to mordor
+	Mordor.appendChild("mount-doom")
+}
 
 // // COMMIT YOUR WORK
 // // The commit message should read: "Chapter 11 complete - Sam and Frodo are in Mordor and Mount Doom has been created"
