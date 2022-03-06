@@ -170,23 +170,25 @@ function leaveTheShire() {
 	// assemble the `hobbits` and move them to `rivendell`
 	const rivendell = document.getElementById("Rivendell")
 	// create an unorder list
-	const ulHobbits = document.createElement("ul")
-	ulHobbits.id = "hobbits"
-	// put an `unordered list` of the hobbits in the aside
-	for (let i = 0; i < hobbits.length; i++) {
-		const liHobbits = document.createElement("li")
-		liHobbits.className = "hobbits"
-		liHobbits.textContent = hobbits[i]
-		ulHobbits.appendChild(liHobbits)
-	}
-	// get the shire by id 
-	const theShire = document.getElementById("The-Shire")
-	ulHobbitsRemove = document.getElementById("hobbits")
-	// remove hobbits from the shire (couldn't get to work)
-	theShire.removeChild(ulHobbitsRemove)
-	// get rivendell by id
-	// insert hobbits into rivendell 
-	rivendell.appendChild(ulHobbits)
+	const theHobbits = document.querySelector("#hobbits")
+	rivendell.appendChild(theHobbits)
+	// const ulHobbits = document.createElement("ul")
+	// ulHobbits.id = "hobbits"
+	// // put an `unordered list` of the hobbits in the aside
+	// for (let i = 0; i < hobbits.length; i++) {
+	// 	const liHobbits = document.createElement("li")
+	// 	liHobbits.className = "hobbits"
+	// 	liHobbits.textContent = hobbits[i]
+	// 	ulHobbits.appendChild(liHobbits)
+	// }
+	// // get the shire by id 
+	// const theShire = document.getElementById("The-Shire")
+	// ulHobbitsRemove = document.getElementById("hobbits")
+	// // remove hobbits from the shire (couldn't get to work)
+	// theShire.removeChild(ulHobbitsRemove)
+	// // get rivendell by id
+	// // insert hobbits into rivendell 
+	// rivendell.appendChild(ulHobbits)
 }
 
 // COMMIT YOUR WORK
@@ -225,7 +227,7 @@ function forgeTheFellowShip() {
 	const rivendell = document.getElementById("Rivendell")
 	rivendell.appendChild(theFellowship)
 	// get list of hobbits and buddies 
-	const hobbitsArray = document.querySelectorAll(".hobbits")
+	const hobbitsArray = document.querySelectorAll(".hobbit")
 	const buddiesArray = document.querySelectorAll(".buddy")
 	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
 	// after each character is added make an alert that they // have joined your party
@@ -297,17 +299,17 @@ function itsDangerousToGoAlone() {
 	// find the fellowship 
 	const theFellowship = document.querySelector("#the-fellowship")
 	// find where sam and frodo are 
-	const theFellowshipArray = theFellowship.children 
 	// find mordor 
-	const Mordor = document.querySelector("#Mordor")
+	const mordor = document.querySelector("#Mordor")
 	// append frodo and sam to mordor, once frodo is removed, sam becomes 0 in the fellowship array
-	Mordor.appendChild(theFellowshipArray[0])
-	Mordor.appendChild(theFellowshipArray[0])
+	const theFellowshipArray = theFellowship.children 
+	mordor.appendChild(theFellowshipArray[0])
+	mordor.appendChild(theFellowshipArray[0])
 	// add a div with an id of `'mount-doom'` to `Mordor`
-	const mountDoomDiv = document.createElement("div")
-	mountDoomDiv.id = "mount-doom"
+	const mountDoom = document.createElement("div")
+	mountDoom.id = "mount-doom"
 	// add mount doom to mordor
-	Mordor.appendChild(mountDoomDiv)
+	mordor.appendChild(mountDoom)
 
 }
 
@@ -322,12 +324,12 @@ function weWantsIt() {
 
 	console.log('12: weWantsIt')
 	// Create a div with an id of `'gollum'` and add it to Mordor
+	const Mordor = document.querySelector("#Mordor")
 	const gollumDiv = document.createElement("div")
 	gollumDiv.id = "gollum"
-	const Mordor = document.querySelector("#Mordor")
 	Mordor.appendChild(gollumDiv)
 	// Remove `the ring` from `Frodo` and give it to `Gollum`
-	const oneRing = document.querySelector("the-ring")
+	const oneRing = document.querySelector("#the-ring")
 	gollumDiv.appendChild(oneRing)
 	// Move Gollum into Mount Doom
 	const mountDoom = document.querySelector("#mount-doom")
@@ -342,19 +344,23 @@ function weWantsIt() {
 // // Chapter 13
 // // ============
 
-// function thereAndBackAgain() {
-// 	console.log('13: thereAndBackAgain')
-// 	// remove `Gollum` and `the Ring` from the document
-// 	const GollumDiv = createElement("div")
-// 	GollumDiv.id = "gollum"
-// 	oneRingDiv.id = "the-ring"
-// 	GollumDiv.appendChild(oneRingDiv)
-// 	// Move all the `hobbits` back to `the shire`
-// 	const theShire = getElementById("The-Shire")
-// 	const ulHobbits = document.createElement("ul")
-// 	ulHobbits.id = "hobbits"
-// 	theShire.appendChild(ulHobbits)
-// }
+function thereAndBackAgain() {
+	console.log('13: thereAndBackAgain')
+	// remove `Gollum` and `the Ring` from the document
+	const mountDoom = document.querySelector("#mount-doom")
+	const gollum = document.querySelector("#gollum")
+	mountDoom.removeChild(gollum)
+	// Move all the `hobbits` back to `the shire`
+	const theShire = document.querySelector("#The-Shire")
+	const theFellowship = document.querySelector("#the-fellowship")
+	const theFellowshipArray = theFellowship.children
+	const mordor = document.querySelector("#Mordor")
+	const mordorArray = mordor.children
+	theShire.appendChild(theFellowshipArray[0])
+	theShire.appendChild(theFellowshipArray[0])
+	theShire.appendChild(mordorArray[2])
+	theShire.appendChild(mordorArray[2])
+}
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 13 complete -Gollum and the ring are gone, the baddies are done, and the hobbits are back in the shire".
