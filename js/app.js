@@ -294,7 +294,16 @@ function hornOfGondor() {
 function itsDangerousToGoAlone() {
 	console.log('11: itsDangerousToGoAlone')
 	// take `Frodo` and `Sam` out of the fellowship and move // them to `Mordor`
+	const getFrodo = document.getElementById('Frodo Baggins')
+	const getSam = document.getElementById('Samwise "Sam" Gamgee')
+	const getMordor = document.getElementById('Mordor')
+	getMordor.appendChild(getFrodo)
+	getMordor.appendChild(getSam)
 	// add a div with an id of `'mount-doom'` to `Mordor`
+	const mountDoom = document.createElement('div')
+	mountDoom.id = 'mount-doom'
+	getMordor.appendChild(mountDoom)
+
 }
 
 // COMMIT YOUR WORK
@@ -307,8 +316,17 @@ function itsDangerousToGoAlone() {
 function weWantsIt() {
 	console.log('12: weWantsIt')
 	// Create a div with an id of `'gollum'` and add it to Mordor
+	const getMordor = document.getElementById('Mordor')
+	const gollum = document.createElement('div')
+	gollum.id = 'gollum'
+	getMordor.appendChild(gollum)
 	// Remove `the ring` from `Frodo` and give it to `Gollum`
+	const theRing = document.getElementById('the-ring')
+	gollum.appendChild(theRing)
 	// Move Gollum into Mount Doom
+	const mountDoom = document.getElementById('mount-doom')
+	mountDoom.appendChild(gollum)
+
 }
 
 // COMMIT YOUR WORK
@@ -321,7 +339,11 @@ function weWantsIt() {
 function thereAndBackAgain() {
 	console.log('13: thereAndBackAgain')
 	// remove `Gollum` and `the Ring` from the document
+	removeGollum = document.getElementById('gollum').remove()
 	// Move all the `hobbits` back to `the shire`
+	const hobbits = document.getElementById('hobbits')
+	const theShire = document.getElementById('The-Shire')
+	theShire.appendChild(hobbits)
 }
 
 // COMMIT YOUR WORK
