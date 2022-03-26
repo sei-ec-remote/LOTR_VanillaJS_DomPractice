@@ -234,22 +234,22 @@ function forgeTheFellowShip() {
 	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
 	// const buddies = document.querySelectorAll('.buddies')
 	// I have to grab the hobbits and grab buddies
-	// const grabBuddies = document.getElementById('buddies')
-	const grabHobbits = document.getElementById('hobbit')
-	// grabBuddies.children = buddiesArray
-	// = hobbitsArray
+	const grabBuddies = document.getElementById('buddies')
+	const grabHobbits = document.getElementById('hobbits')
+
 	hobbitsArray = grabHobbits.children 
+	buddiesArray = grabBuddies.children 
 	// to add to the fellowship i would need to do a loop to add them
-	for (let i = 0; i < hobbits.length; i++) {
+	for (let i = 0; i < hobbitsArray.length; i++) {
 		theFellowship.appendChild(hobbitsArray[i])
 	}
-	// for (let i = 0; i < buddies.length; i++){
-	// 		theFellowship.appendChild(buddies[i])
-	// 	}
+	for (let i = 0; i < buddiesArray.length; i++){
+			theFellowship.appendChild(buddiesArray[i])
+		}
 		console.log('what will this log? idk', theFellowship)
 	
 	// after each character is added make an alert that they // have joined your party
-
+		alert('Buddies and Hobbits have joined your party')
 	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
 }
 
