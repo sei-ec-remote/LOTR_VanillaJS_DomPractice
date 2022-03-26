@@ -68,8 +68,10 @@ function makeHobbits() {
 for (let i = 0; i< hobbits.length; i++)	{
 	const liHobbit = document.createElement('li')
 	liHobbit.className = 'hobbit'
+	liHobbit.id = hobbits[i]
 	liHobbit.textContent = hobbits[i]
 	ulHobbits.appendChild(liHobbit)
+	liHobbit.id = hobbits[i].toString('')
 	}
 	// hint: create a 'ul' outside the loop into which to append the 'li's
 	theShire.appendChild(ulHobbits)
@@ -152,10 +154,19 @@ function makeBuddies() {
 	for (let i = 0; i < buddies.length; i++) {
 		const liBuddy = document.createElement('li')
 		liBuddy.className = 'buddy'
+		liBuddy.id = buddies[i].toString('')
 		liBuddy.textContent = buddies[i]
 		ulBuddies.appendChild(liBuddy)
 		asideTag.appendChild(ulBuddies)
 	}
+	// for (let i = 0; i< hobbits.length; i++)	{
+	// 	const liHobbit = document.createElement('li')
+	// 	liHobbit.className = 'hobbit'
+	// 	liHobbit.id = hobbits[i]
+	// 	liHobbit.textContent = hobbits[i]
+	// 	ulHobbits.appendChild(liHobbit)
+	// 	}
+		// hint: create a 'ul' outside the loop into which to append the 'li's
 	// console.log('this should show the buddies in aside', asideTag)
 	// console.log('this should be something', ulBuddies)
 	// insert your aside as a child element of `rivendell`
@@ -195,15 +206,7 @@ function beautifulStranger() {
 	console.log('7: beautifulStranger')
 
 	// change the `'Strider'` text to `'Aragorn'`
-	const changeName = document.getElementsByClassName('buddy')
-	listOfBuds = Object.values(changeName)
-	console.log(listOfBuds)
-	listOfBuds.forEach(element => {
-		if (element.textContent === 'Strider') {
-			element.textContent = 'Aragorn'
-		}
-		
-	});
+	document.getElementById('Strider').innerHTML = ('Aragorn')
 		
 // 	buddies[3] = 'Aragorn'
 // 	console.log(buddies)
@@ -220,27 +223,30 @@ function forgeTheFellowShip() {
 	console.log('8: forgeTheFellowShip')
 	// create a new div called `'the-fellowship'` within `rivendell`
 	const theFellowship = document.createElement('div')
-	theFellowship.id = document.getElementById('the-fellowship')
-	// console.log('this should create a new div', newDiv)
-	const rivendell = document.createElement('div')
-	rivendell = document.getElementById('Rivendell')
+	// console.log('this should create a new div', theFellowship)
+	theFellowship.id = 'the-fellowship'
+	// theFellowship.textContent = 'The Fellowship'
+	// console.log('this is after the properties', theFellowship)
+	const rivendell = document.getElementById('Rivendell')
 	rivendell.appendChild(theFellowship)
+	// console.log('this is rivendell', rivendell)
 	
 	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
+	// const buddies = document.querySelectorAll('.buddies')
 	// I have to grab the hobbits and grab buddies
-	grabBuddies = document.getElementsById('buddies')
-	grabHobbits = document.getElementById('hobbits')
-	grabBuddies.children = buddiesArray
-	grabHobbits.children = hobbitsArray
+	// const grabBuddies = document.getElementById('buddies')
+	const grabHobbits = document.getElementById('hobbit')
+	// grabBuddies.children = buddiesArray
+	// = hobbitsArray
+	hobbitsArray = grabHobbits.children 
 	// to add to the fellowship i would need to do a loop to add them
 	for (let i = 0; i < hobbits.length; i++) {
-		theFellowship.appendChild(hobbits)
+		theFellowship.appendChild(hobbitsArray[i])
 	}
-		console.log('what will this log? idk', theFellowship)
-
 	// for (let i = 0; i < buddies.length; i++){
-	// 	theFellowship.appendChild(grabBuddies)
-	// }
+	// 		theFellowship.appendChild(buddies[i])
+	// 	}
+		console.log('what will this log? idk', theFellowship)
 	
 	// after each character is added make an alert that they // have joined your party
 
