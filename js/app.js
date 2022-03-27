@@ -60,21 +60,21 @@ function makeHobbits() {
 	const theShire = document.getElementById('The-Shire')
 	// console.log('this is the shire, theSire')
 	// test using console.logs
-	const ulHobbits = document.createElement('ul')
-	ulHobbits.id = 'hobbits'
+	const ulHobbit = document.createElement('ul')
+	ulHobbit.className = 'hobbits'
 	// give each hobbit a class of `hobbit`
 	for(let i=0; i< hobbits.length; i++) {
 		// create a list item for each hobbit
-		const liHobbit = document.createElement('li')
+		const liHobbits = document.createElement('li')
 		// give each li a class 'hobit'
-		liHobbit.className = 'hobbit'
+		liHobbits.className = 'hobbit'
 		// give each li some text 
-		liHobbit.textContent = hobbits[i]
+		liHobbits.textContent = hobbits[i]
 		// append each hobbit to hobbits
-		ulHobbits.appendChild(liHobbit)
+		ulHobbit.appendChild(liHobbits)
 
 	}
-	theShire.appendChild(ulHobbits)
+	theShire.appendChild(ulHobbit)
 	// hint: create a 'ul' outside the loop into which to append the 'li's
 
 	// hint: get 'The-Shire' by using its id
@@ -99,13 +99,12 @@ function keepItSecretKeepItSafe() {
 
 	// add the ring as a child of `Frodo`
 	// first, well need ti find the ul where frodo lives
-	const ulHobbits = document.querySelector('#hobbits')
+	const ulHobbit = document.querySelector('ul')
 
 	// next, we'll need to figure out which li is frodo
-	const hobbitsArray = ulHobbits.children
-	const frodoLi = hobbitsArray[0]
+	const liFrodo = ulHobbit.children[0]
 	//then we can attach the ring to frodo 
-	frodoLi.appendChild(oneRingDiv)
+	liFrodo.appendChild(oneRingDiv)
 }
 
 // COMMIT YOUR WORK
@@ -173,9 +172,9 @@ function leaveTheShire() {
 	console.log('6: leaveTheShire')
 	
 	// assemble the `hobbits` and move them to `rivendell`
-	const ulHobbit = document.getElementsByClassName('hobbits')
+	const ulHobbits = document.getElementsByClassName('hobbits')
 	const rivendell = document.getElementById('Rivendell')
-	rivendell.appendChild(ulHobbit[0])
+	rivendell.appendChild(ulHobbits[0])
 }
 
 // COMMIT YOUR WORK
