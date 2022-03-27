@@ -189,6 +189,7 @@ function beautifulStranger() {
 	console.log('7: beautifulStranger')
 
 	// change the `'Strider'` text to `'Aragorn'`
+	const aragornReveal = document.getElementsByTagName('li')[3].textContent = 'Aragorn'
 }
 
 // COMMIT YOUR WORK
