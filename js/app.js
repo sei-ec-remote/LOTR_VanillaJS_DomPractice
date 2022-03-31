@@ -189,23 +189,13 @@ function makeBuddies() {
 // ============
 
 function leaveTheShire() {
-    console.log('6: leaveTheShire')
-    // get the element for the shire 
-    const shire = document.getElementById('The-Shire')
-    // add the shire to a div in the function
-    const shireDiv = document.createElement('div')
-    shire.appendChild(shireDiv)
-    console.log(shire)
+	console.log('6: leaveTheShire')
 
-    // remove the shire from the makeHobbits function
+	// assemble the `hobbits` and move them to `rivendell`
+	document.getElementById("Rivendell").appendChild(document.getElementById("The-Shire").removeChild(document.getElementById("hobbits")))
 
-    console.log('making sure the list is in the function:', leaveShire)
-
-    // assemble the `hobbits` and move them to `rivendell`
-
-    // reference the hobbits
+	
 }
-// ulHobbits.remove()
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 6 complete - Left the Shire"
@@ -215,11 +205,12 @@ function leaveTheShire() {
 // ============
 
 function beautifulStranger() {
-    console.log('7: beautifulStranger')
+	console.log('7: beautifulStranger')
 
-
-
-    // change the `'Strider'` text to `'Aragorn'`
+	// change the `'Strider'` text to `'Aragorn'`
+	const ulBuddies = document.getElementById('buddies')
+	const buddiesArray = ulBuddies.children
+	buddiesArray[3].textContent = 'Aragorn'
 }
 
 // COMMIT YOUR WORK
@@ -230,12 +221,32 @@ function beautifulStranger() {
 // ============
 
 function forgeTheFellowShip() {
-    console.log('8: forgeTheFellowShip')
-    // create a new div called `'the-fellowship'` within `rivendell`
-    // add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
-    // after each character is added make an alert that they // have joined your party
+	console.log('8: forgeTheFellowShip')
+	// create a new div called `'the-fellowship'` within `rivendell`
+	const theFellowship = document.createElement('div')
+	theFellowship.id = 'the-fellowship'
+	document.getElementById('Rivendell').appendChild(theFellowship)
+	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
+	const hobbitList = document.getElementsByClassName('hobbit')
+	console.log(hobbitList)
+	const buddyList = document.getElementsByClassName('buddy')
+	console.log(buddyList)
+	
+	const buddyArray = Object.values(buddyList)
+	const hobbitsArray = Object.values(hobbitList)
 
-    // NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
+	
+	// after each character is added make an alert that they // have joined your party
+	for(let i=0; i<5; i++){
+		theFellowship.appendChild(buddyArray[i])
+		alert(`${buddyArray[i].textContent} has joined your party`)
+	}
+	for(let i=0; i<4; i++){
+		theFellowship.appendChild(hobbitsArray[i])
+		alert(`${hobbitsArray[i].textContent} has joined your party`)
+	}
+	
+	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
 }
 
 // COMMIT YOUR WORK
@@ -246,9 +257,17 @@ function forgeTheFellowShip() {
 // ============
 
 function theBalrog() {
-    console.log('9: theBalrog')
-    // change the `'Gandalf'` text to `'Gandalf the White'`
-    // apply the following style to the element, make the // background 'white', add a grey border
+	console.log('9: theBalrog')
+	// change the `'Gandalf'` text to `'Gandalf the White'`
+	const theFellowship = document.getElementById("the-fellowship")
+	console.log(theFellowship)
+	const theFellowshipArray = theFellowship.children
+	console.log(theFellowshipArray)
+	theFellowshipArray[0].textContent = "Gandalf the White"
+
+	// apply the following style to the element, make the // background 'white', add a grey border
+	theFellowshipArray[0].style.backgroundColor = "white";
+	theFellowshipArray[0].style.border = "2px solid grey";
 }
 
 // COMMIT YOUR WORK
@@ -259,10 +278,16 @@ function theBalrog() {
 // ============
 
 function hornOfGondor() {
-    console.log('10: hornOfGondor')
-    // pop up an alert that the horn of gondor has been blown
-    // Boromir's been killed by the Uruk-hai!
-    // Remove `Boromir` from the Fellowship
+	console.log('10: hornOfGondor')
+	// pop up an alert that the horn of gondor has been blown
+	alert("The horn of Gondor has been blown!")
+	// Boromir's been killed by the Uruk-hai!
+	// Remove `Boromir` from the Fellowship
+	const theFellowship = document.getElementById('the-fellowship')
+	const theFellowshipArray = theFellowship.children
+	theFellowship.removeChild(theFellowshipArray[4])
+
+
 }
 
 // COMMIT YOUR WORK
@@ -273,9 +298,20 @@ function hornOfGondor() {
 // ============
 
 function itsDangerousToGoAlone() {
-    console.log('11: itsDangerousToGoAlone')
-    // take `Frodo` and `Sam` out of the fellowship and move // them to `Mordor`
-    // add a div with an id of `'mount-doom'` to `Mordor`
+	console.log('11: itsDangerousToGoAlone')
+
+	// take `Frodo` and `Sam` out of the fellowship and move // them to `Mordor`
+	const Mordor = document.getElementById("Mordor")
+	const theFellowship = document.getElementById('the-fellowship')
+	console.log(theFellowship)
+	const theFellowshipArray = theFellowship.children
+	Mordor.appendChild(theFellowshipArray[4])
+	Mordor.appendChild(theFellowshipArray[4])
+
+	// add a div with an id of `'mount-doom'` to `Mordor`
+	const mountDoom = document.createElement("div")
+	mountDoom.id = "mount-doom"
+	Mordor.appendChild(mountDoom)
 }
 
 // COMMIT YOUR WORK
@@ -286,10 +322,19 @@ function itsDangerousToGoAlone() {
 // ============
 
 function weWantsIt() {
-    console.log('12: weWantsIt')
-    // Create a div with an id of `'gollum'` and add it to Mordor
-    // Remove `the ring` from `Frodo` and give it to `Gollum`
-    // Move Gollum into Mount Doom
+	console.log('12: weWantsIt')
+	// Create a div with an id of `'gollum'` and add it to Mordor
+	const Mordor = document.getElementById('Mordor')
+	const gollum = document.createElement('div')
+	gollum.id = 'gollum'
+	Mordor.appendChild(gollum)
+	// Remove `the ring` from `Frodo` and give it to `Gollum`
+	const theRing = document.getElementById('the-ring')
+	gollum.appendChild(theRing)
+	// Move Gollum into Mount Doom
+	const mountDoom = document.getElementById('mount-doom')
+	mountDoom.appendChild(gollum)
+	
 }
 
 // COMMIT YOUR WORK
@@ -300,9 +345,23 @@ function weWantsIt() {
 // ============
 
 function thereAndBackAgain() {
-    console.log('13: thereAndBackAgain')
-    // remove `Gollum` and `the Ring` from the document
-    // Move all the `hobbits` back to `the shire`
+	console.log('13: thereAndBackAgain')
+	// remove `Gollum` and `the Ring` from the document
+	const mountDoom = document.getElementById('mount-doom')
+	const mountDoomArray = mountDoom.children
+	console.log(mountDoomArray)
+	const gollum = document.getElementById('gollum')
+	mountDoom.removeChild(gollum)
+	// Move all the `hobbits` back to `the shire`
+	const theShire = document.getElementById('The-Shire')
+	const ulHobbits = document.getElementById('hobbits')
+	const liHobbits = document.getElementsByClassName('hobbit')
+	const hobbitArray = Object.values(liHobbits)
+	console.log(hobbitArray)
+	for(i = 0; i < 4; i++){
+		ulHobbits.appendChild(hobbitArray[i])
+	}
+	theShire.appendChild(ulHobbits)
 }
 
 // COMMIT YOUR WORK
@@ -319,38 +378,38 @@ function thereAndBackAgain() {
 document.getElementById('chapter-1').addEventListener('click', makeMiddleEarth)
 document.getElementById('chapter-2').addEventListener('click', makeHobbits)
 document
-    .getElementById('chapter-3')
-    .addEventListener('click', keepItSecretKeepItSafe)
+	.getElementById('chapter-3')
+	.addEventListener('click', keepItSecretKeepItSafe)
 document.getElementById('chapter-4').addEventListener('click', makeBaddies)
 document.getElementById('chapter-5').addEventListener('click', makeBuddies)
 document.getElementById('chapter-6').addEventListener('click', leaveTheShire)
 document
-    .getElementById('chapter-7')
-    .addEventListener('click', beautifulStranger)
+	.getElementById('chapter-7')
+	.addEventListener('click', beautifulStranger)
 document
-    .getElementById('chapter-8')
-    .addEventListener('click', forgeTheFellowShip)
+	.getElementById('chapter-8')
+	.addEventListener('click', forgeTheFellowShip)
 document.getElementById('chapter-9').addEventListener('click', theBalrog)
 document.getElementById('chapter-10').addEventListener('click', hornOfGondor)
 document
-    .getElementById('chapter-11')
-    .addEventListener('click', itsDangerousToGoAlone)
+	.getElementById('chapter-11')
+	.addEventListener('click', itsDangerousToGoAlone)
 document.getElementById('chapter-12').addEventListener('click', weWantsIt)
 document
-    .getElementById('chapter-13')
-    .addEventListener('click', thereAndBackAgain)
+	.getElementById('chapter-13')
+	.addEventListener('click', thereAndBackAgain)
 document.getElementById('all-chapters').addEventListener('click', () => {
-    makeMiddleEarth()
-    makeHobbits()
-    keepItSecretKeepItSafe()
-    makeBaddies()
-    makeBuddies()
-    leaveTheShire()
-    beautifulStranger()
-    forgeTheFellowShip()
-    theBalrog()
-    hornOfGondor()
-    itsDangerousToGoAlone()
-    weWantsIt()
-    thereAndBackAgain()
+	makeMiddleEarth()
+	makeHobbits()
+	keepItSecretKeepItSafe()
+	makeBaddies()
+	makeBuddies()
+	leaveTheShire()
+	beautifulStranger()
+	forgeTheFellowShip()
+	theBalrog()
+	hornOfGondor()
+	itsDangerousToGoAlone()
+	weWantsIt()
+	thereAndBackAgain()
 })
