@@ -243,10 +243,10 @@ function theBalrog() {
 	console.log(theFellowship)
 	const theFellowshipArray = theFellowship.children
 	console.log(theFellowshipArray)
-	theFellowshipArray[0].textContent = "Gandalf the White"
+	theFellowshipArray[4].textContent = "Gandalf the White"
 	// apply the following style to the element, make the // background 'white', add a grey border
-	theFellowshipArray[0].style.backgroundColor = "white"
-	theFellowshipArray[0].style.border = "grey"
+	theFellowshipArray[4].style.backgroundColor = "white"
+	theFellowshipArray[4].style.border = "grey"
 }
 
 // COMMIT YOUR WORK
@@ -277,7 +277,15 @@ function hornOfGondor() {
 function itsDangerousToGoAlone() {
 	console.log('11: itsDangerousToGoAlone')
 	// take `Frodo` and `Sam` out of the fellowship and move // them to `Mordor`
+	const Mordor = document.getElementById("Mordor")
+	const theFellowship = document.getElementById('the-fellowship')
+	const theFellowshipArray = theFellowship.children
+	Mordor.appendChild(theFellowshipArray[0])
+	Mordor.appendChild(theFellowshipArray[0])
 	// add a div with an id of `'mount-doom'` to `Mordor`
+	const mountDoom = document.createElement("div")
+	mountDoom.id = "mount-doom"
+	Mordor.appendChild(mountDoom)
 }
 
 // COMMIT YOUR WORK
