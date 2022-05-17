@@ -186,6 +186,7 @@ function forgeTheFellowShip() {
 	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
 	document.getElementById('Rivendell').querySelectorAll('ul')[0].remove()
 	document.getElementById('Rivendell').querySelectorAll('ul')[0].remove()
+	document.getElementById('Rivendell').querySelectorAll('aside')[0].remove()
 }
 
 // COMMIT YOUR WORK
