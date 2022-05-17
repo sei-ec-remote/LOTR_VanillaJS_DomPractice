@@ -245,6 +245,10 @@ function hornOfGondor() {
 	// pop up an alert that the horn of gondor has been blown
 	// Boromir's been killed by the Uruk-hai!
 	// Remove `Boromir` from the Fellowship
+	window.alert("THE HORN OF GONDOR HAS BEEN BLOWN!")
+	document.getElementById('Boromir').remove()
+	window.alert("BOROMIR HAS BEEN SLAIN BY THE URUK-HAI!")
+	
 }
 
 // COMMIT YOUR WORK
