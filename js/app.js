@@ -109,8 +109,9 @@ function makeBaddies() {
     let li = document.createElement("li");
     li.className = baddy;
     li.innerText = baddy;
-    document.querySelector("#Mordor").appendChild(li);
+    list.appendChild(li);
   });
+  document.querySelector("#Mordor").appendChild(list);
 }
 
 // COMMIT YOUR WORK
@@ -124,10 +125,16 @@ function makeBuddies() {
   console.log("5: makeBuddies");
 
   // create an `aside` tag
-
   // put an `unordered list` of the `'buddies'` in the aside
-
   // insert your aside as a child element of `rivendell`
+  let aside = document.createElement("aside");
+  let list = document.createElement("ul");
+  buddies.forEach((buddy) => {
+    let li = document.createElement("li");
+    li.innerText = buddy;
+    list.appendChild(li);
+  });
+  document.querySelector("#Rivendell").appendChild(list);
 }
 
 // COMMIT YOUR WORK
