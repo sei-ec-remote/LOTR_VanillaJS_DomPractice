@@ -61,7 +61,7 @@ function makeHobbits() {
   // give each hobbit a class of `hobbit`
   for (let hob of hobbits) {
     let liTab = document.createElement("li");
-    liTab.setAttribute("class", hob);
+    liTab.setAttribute("class", "hobbit");
     liTab.innerText = hob;
     ulTag.appendChild(liTab);
   }
@@ -82,10 +82,15 @@ function keepItSecretKeepItSafe() {
   console.log("3: keepItSecretKeepItSafe");
 
   // create a div with an id of `'the-ring'`
-
+  const ringDiv = document.createElement("div");
+  ringDiv.setAttribute("id", "the-ring");
   // give the div a class of `'magic-imbued-jewelry'`
-
+  ringDiv.setAttribute("class", "magic-imbued-jewelry");
   // add the ring as a child of `Frodo`
+  // do I have to type the whole name?
+  const frodo = document.getElementsByClassName("Frodo");
+  console.log(frodo);
+  frodo.appendChild(ringDiv);
 }
 
 // COMMIT YOUR WORK
