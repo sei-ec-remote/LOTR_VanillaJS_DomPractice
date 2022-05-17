@@ -63,9 +63,10 @@ function makeHobbits() {
   // hint: create a 'ul' outside the loop into which to append the 'li's
   // hint: get 'The-Shire' by using its id
   let list = document.createElement("ul");
+  list.className = "hobbitList";
   hobbits.forEach((hobbit) => {
     let li = document.createElement("li");
-    li.className = hobbit;
+    li.className = "hobbit " + hobbit;
     li.innerText = hobbit;
     list.appendChild(li);
   });
@@ -107,7 +108,7 @@ function makeBaddies() {
   let list = document.createElement("ul");
   baddies.forEach((baddy) => {
     let li = document.createElement("li");
-    li.className = baddy;
+    li.className = "baddy";
     li.innerText = baddy;
     list.appendChild(li);
   });
@@ -134,7 +135,8 @@ function makeBuddies() {
     li.innerText = buddy;
     list.appendChild(li);
   });
-  document.querySelector("#Rivendell").appendChild(list);
+  aside.appendChild(list);
+  document.querySelector("#Rivendell").appendChild(aside);
 }
 
 // COMMIT YOUR WORK
@@ -146,8 +148,9 @@ function makeBuddies() {
 
 function leaveTheShire() {
   console.log("6: leaveTheShire");
-
   // assemble the `hobbits` and move them to `rivendell`
+  let hobbits = document.querySelector(".hobbitList");
+  document.querySelector("#Rivendell").appendChild(hobbits);
 }
 
 // COMMIT YOUR WORK
