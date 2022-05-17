@@ -17,12 +17,12 @@ const lands = ['The-Shire', 'Rivendell', 'Mordor']
 // ============
 // Chapter 1
 // ============
-const middleEarth = document.createElement('section')
-middleEarth.setAttribute('id','middle-earth')
+
 
 function makeMiddleEarth() {
 	console.log('1: makeMiddleEarth')
-
+	const middleEarth = document.createElement('section')
+	middleEarth.setAttribute('id','middle-earth')
 	// 1. create a section tag with an id of middle-earth
 	
 	// 2. use a for loop to iterate over the lands array that does the following:
@@ -34,7 +34,7 @@ function makeMiddleEarth() {
 		const h1 = document.createElement('h1')
 		h1.innerText = `${lands[i]}`
 		article.appendChild(h1)
-		console.log(article)
+		//console.log(article)
 		middleEarth.appendChild(article)
 	}
 	//document.getElementById('body')
@@ -47,17 +47,31 @@ function makeMiddleEarth() {
 
 	// 3. append the section to the body of the DOM.
 }
-makeMiddleEarth()
+
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 1 complete - Made Middle Earth".
 
 // ============
 // Chapter 2
 // ============
-
+/* const hobbitList = document.createElement('ul')
+hobitList.setAttribute('id', 'hobit-list')
+ */
 function makeHobbits() {
 	console.log('2: makeHobbits')
 
+	class Hobbit {
+		constructor(name){
+			this.name = name
+			this.location = ''
+		}
+	}
+	for (let hobbit of hobbits){
+		let myHobbit = new Hobbit(hobbit)
+		let hobbitLI = document.createElement('li')
+		hobbitLI.appendChild(myHobbit)
+		hobbitList.appendChild(hobbitLI)
+	}
 	// display an `unordered list` of hobbits in the shire
 
 	// give each hobbit a class of `hobbit`
@@ -66,6 +80,7 @@ function makeHobbits() {
 
 	// hint: get 'The-Shire' by using its id
 }
+/* makeHobbits(hobbits) */
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 2 complete - Made the Hobbits".
