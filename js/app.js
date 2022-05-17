@@ -43,7 +43,7 @@ function makeMiddleEarth() {
   }
   document.body.append(middleEarth);
 }
-makeMiddleEarth();
+
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 1 complete - Made Middle Earth".
@@ -60,13 +60,13 @@ function makeHobbits() {
     console.log(hobbits[i]);
   }
   // give each hobbit a class of `hobbit`
-  hobbits.createElement("class", "hobbit");
+  document.createElement("class", "hobbit");
 
   // hint: create a 'ul' outside the loop into which to append the 'li's
 
   // hint: get 'The-Shire' by using its id
 }
-makeHobbits();
+
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 2 complete - Made the Hobbits".
@@ -81,11 +81,11 @@ function keepItSecretKeepItSafe() {
   // create a div with an id of `'the-ring'`
   let theRing = document.createElement("id", "the-ring");
   // give the div a class of `'magic-imbued-jewelry'`
-  theRing.createElement("class", "magic-imbued-jewlry");
+  theRing.classList.add("magic-imbued-jewlry");
   // add the ring as a child of `Frodo`
-  frodo.appendChild(theRing);
+  hobbits[0].appendChild(theRing)
 }
-keepItSecretKeepItSafe();
+
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 3 complete - Made the ring and gave it to Frodo".
@@ -106,7 +106,7 @@ function makeBaddies() {
   // remember to append them to Mordor
   baddies.appendChild(mordor);
 }
-makeBaddies();
+
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 4 complete - Made the Baddies"..
@@ -126,7 +126,7 @@ function makeBuddies() {
   // insert your aside as a child element of `rivendell`
   rivendell.appendChild(aside);
 }
-makeBuddies();
+
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 5 complete - Made the Buddies".
@@ -155,7 +155,7 @@ function beautifulStranger() {
   // change the `'Strider'` text to `'Aragorn'`
     buddies[3] = "Aragorn"
 }
-beautifulStranger()
+
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 7 complete - Strider is changed to Aragorn"
@@ -169,7 +169,15 @@ function forgeTheFellowShip() {
   // create a new div called `'the-fellowship'` within `rivendell`
   // add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
   // after each character is added make an alert that they // have joined your party
-
+  let theFellowship = rivendell.createElement("the-fellowship")
+  for (let i = 0; i < hobbits; i++){
+    theFellowship.appendChild(hobbits[i])
+    alert(`${hobbits} has joined your party`)
+  }
+}
+  for (let i = 0; i < buddies; i++){
+    theFellowship.appendChild(buddies[i])
+    alert(`${buddies} has joined your party`)
   // NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
 }
 
