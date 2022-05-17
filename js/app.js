@@ -272,17 +272,22 @@ theBalrog()
 // ============
 
 function hornOfGondor() {
-	// console.log('10: hornOfGondor')
-	// // pop up an alert that the horn of gondor has been blown
-	// alert('The horn!... Of Gondor!... Has... Been... BLOWN!!!!')
-	// // Boromir's been killed by the Uruk-hai!
-	// alert('Boromir\'s been killed by the Uruk-hai!')
-	// // Remove `Boromir` from the Fellowship
-	// const fellowship = document.getElementById('the-fellowship')
-	// for (let i=0; i<fellowship.length; i++){
-	// 	if (fellowship[i].innerText.toLowerCase() === 'boromir')
-	// 	fellowship.remove(fellowship[i])
-	// }
+	console.log('10: hornOfGondor')
+	// pop up an alert that the horn of gondor has been blown
+	alert('The horn!... Of Gondor!... Has... Been... BLOWN!!!!')
+	// Boromir's been killed by the Uruk-hai!
+	alert('Boromir\'s been killed by the Uruk-hai!')
+	// Remove `Boromir` from the Fellowship
+	const fellowship = document.getElementById('the-fellowship')
+	console.log(fellowship)
+	let fellowshipMembers = fellowship.children
+	console.log(fellowshipMembers)
+	for (let i=0; i<fellowshipMembers.length; i++){
+		if (fellowshipMembers[i].innerText.toLowerCase() === 'boromir'){
+			console.log('made it to boromir')
+			fellowship.removeChild(fellowshipMembers[i])
+		}
+	}
 }
 hornOfGondor()
 // COMMIT YOUR WORK
