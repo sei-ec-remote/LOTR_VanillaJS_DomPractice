@@ -201,10 +201,12 @@ function leaveTheShire() {
 // ============
 
 function beautifulStranger() {
-  console.log('7: beautifulStranger');
-
-  // change the `'Strider'` text to `'Aragorn'`
-}
+	console.log('7: beautifulStranger');
+	// change the `'Strider'` text to `'Aragorn'`
+	document.getElementById(
+	  'Rivendell'
+	).children[1].children[0].children[3].innerText = 'Aragorn';
+  }
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 7 complete - Strider is changed to Aragorn"
