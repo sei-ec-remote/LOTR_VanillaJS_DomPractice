@@ -109,7 +109,7 @@ function makeBaddies() {
 
 	// display an unordered list of baddies in Mordor
 	let baddieList = document.createElement('ul')
-
+	baddieList.setAttribute('id','mordor-list')
 	for( let bad of baddies){
 		let thisBaddie = document.createElement('li')
 		thisBaddie.setAttribute('class' , 'baddy')
@@ -262,6 +262,13 @@ function itsDangerousToGoAlone() {
 	console.log('11: itsDangerousToGoAlone')
 	// take `Frodo` and `Sam` out of the fellowship and move // them to `Mordor`
 	// add a div with an id of `'mount-doom'` to `Mordor`
+	let frodo = document.getElementById(hobbits[0])
+	let sam = document.getElementById(hobbits[1])
+
+	document.getElementById('mordor-list').appendChild(frodo)
+	document.getElementById('mordor-list').appendChild(sam)
+
+
 }
 
 // COMMIT YOUR WORK
