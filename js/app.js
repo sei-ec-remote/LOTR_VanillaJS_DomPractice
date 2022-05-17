@@ -32,17 +32,17 @@ function makeMiddleEarth() {
     let article = document.createElement(`article`);
 
     //   2b. gives each land article an `id` tag of the corresponding land name
-	// Sets the id of each of the article to be the elements of the array lands based on the index using i
+    // Sets the id of each of the article to be the elements of the array lands based on the index using i
     article.setAttribute('id', lands[i]);
 
     //   2c. includes an h1 with the name of the land inside each land article
     let h1 = document.createElement(`h1`);
-	// Sets the inner text of each h1 inside the article to be the elements of the array lands based on the index using i
+    // Sets the inner text of each h1 inside the article to be the elements of the array lands based on the index using i
     h1.innerText = lands[i];
-	// Appends each of the h1 tags inside the article tag.
+    // Appends each of the h1 tags inside the article tag.
     article.appendChild(h1);
     //   2d. appends each land to the middle-earth section
-	// Appends the article tags inside the section 'middle-earth'
+    // Appends the article tags inside the section 'middle-earth'
     middleEarth.appendChild(article);
     // 3. append the section to the body of the DOM.
   }
@@ -66,19 +66,20 @@ function makeHobbits() {
 
   // hint: get 'The-Shire' by using its id
   let hobbitsList = document.createElement('ul');
+  hobbitsList.id = 'hobbits';
   // Looping through each elements of the array hobbits using forEach iterator.
   hobbits.forEach((hobbit) => {
-	// Creates an li tag and stores it to the variable called listItem for each iteration of the elements of the hobbits array.
+    // Creates an li tag and stores it to the variable called listItem for each iteration of the elements of the hobbits array.
     let listItem = document.createElement('li');
-	// Adds an name attribute if the hobbit element is equals to 'Frodo Baggins'.
+    // Adds an name attribute if the hobbit element is equals to 'Frodo Baggins'.
     if (hobbit === 'Frodo Baggins') {
       listItem.setAttribute('name', 'Frodo');
     }
-	// Adds each hobbit a class of `hobbit`
+    // Adds each hobbit a class of `hobbit`
     listItem.setAttribute('class', 'hobbit');
-	// Sets the inner text of each hobbit list item the value of the elements in the hobbits array.
+    // Sets the inner text of each hobbit list item the value of the elements in the hobbits array.
     listItem.innerText = hobbit;
-	// Appends all the list item inside the ul tag called hobbitsList.
+    // Appends all the list item inside the ul tag called hobbitsList.
     hobbitsList.appendChild(listItem);
   });
   let theShire = document.getElementById('The-Shire');
@@ -117,30 +118,31 @@ function keepItSecretKeepItSafe() {
 // ============
 
 function makeBaddies() {
-	console.log('4: makeBaddies');
-  
-	// display an unordered list of baddies in Mordor
-	// give each of the baddies a class of "baddy"
-  
-	// remember to append them to Mordor
-	// Creates an unorderedList element tag  and storing it inside the variable mordorUList
-	let mordorUList = document.createElement('ul');
-  
-	// Looping through the array of baddies using forEach iterator
-	baddies.forEach((baddy) => {
-	// Create an li tag for each iteration and storing it in the baddyItem variable.
-	  let baddyItem = document.createElement('li');
-	  // Add a class baddy to each of the li item.
-	  baddyItem.setAttribute('class', 'baddy');
-	//   Sets the inner text of each baddy li element into the value of each element of the array baddies.
-	  baddyItem.innerText = baddy;
-	  // Appends each of the li item into the unordered list tag called mordorUList
-	  mordorUList.appendChild(baddyItem);
-	});
-	let Mordor = document.getElementById('Mordor');
-	Mordor.appendChild(mordorUList);
-	// document.body.append(mordorUList)
-  }
+  console.log('4: makeBaddies');
+
+  // display an unordered list of baddies in Mordor
+  // give each of the baddies a class of "baddy"
+
+  // remember to append them to Mordor
+  // Creates an unorderedList element tag  and storing it inside the variable baddiesList
+  let baddiesList = document.createElement('ul');
+  baddiesList.id = 'baddies';
+
+  // Looping through the array of baddies using forEach iterator
+  baddies.forEach((baddy) => {
+    // Create an li tag for each iteration and storing it in the baddyItem variable.
+    let baddyItem = document.createElement('li');
+    // Add a class baddy to each of the li item.
+    baddyItem.setAttribute('class', 'baddy');
+    //   Sets the inner text of each baddy li element into the value of each element of the array baddies.
+    baddyItem.innerText = baddy;
+    // Appends each of the li item into the unordered list tag called baddiesList
+    baddiesList.appendChild(baddyItem);
+  });
+  let Mordor = document.getElementById('Mordor');
+  Mordor.appendChild(baddiesList);
+  // document.body.append(baddiesList)
+}
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 4 complete - Made the Baddies"..
@@ -150,27 +152,28 @@ function makeBaddies() {
 // ============
 
 function makeBuddies() {
-	console.log('5: makeBuddies');
-	// create an `aside` tag
-	let buddiesAside = document.createElement('aside');
-	
-	// put an `unordered list` of the `'buddies'` in the aside
-	// Creates an unordered list element.
-	let buddiesUList = document.createElement('ul');
-	
-	// insert your aside as a child element of `rivendell`
-	// Loops through the array of buddies using forEach iterator.
-	buddies.forEach((buddy) => {
-	  // Creates a li tag element every iteration.
-	  let buddiesItem = document.createElement('li');
-	  // Sets the element value as the inner text of the li item.
-	  buddiesItem.innerText = buddy;
-	  buddiesUList.appendChild(buddiesItem);
-	});
-	buddiesAside.appendChild(buddiesUList);
-	let rivendell = document.getElementById('Rivendell');
-	rivendell.appendChild(buddiesAside);
-  }
+  console.log('5: makeBuddies');
+  // create an `aside` tag
+  let buddiesAside = document.createElement('aside');
+
+  // put an `unordered list` of the `'buddies'` in the aside
+  // Creates an unordered list element.
+  let buddiesList = document.createElement('ul');
+  buddiesList.id = 'buddies';
+
+  // insert your aside as a child element of `rivendell`
+  // Loops through the array of buddies using forEach iterator.
+  buddies.forEach((buddy) => {
+    // Creates a li tag element every iteration.
+    let buddiesItem = document.createElement('li');
+    // Sets the element value as the inner text of the li item.
+    buddiesItem.innerText = buddy;
+    buddiesList.appendChild(buddiesItem);
+  });
+  buddiesAside.appendChild(buddiesList);
+  let rivendell = document.getElementById('Rivendell');
+  rivendell.appendChild(buddiesAside);
+}
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 5 complete - Made the Buddies".
@@ -180,18 +183,18 @@ function makeBuddies() {
 // ============
 
 function leaveTheShire() {
-	console.log('6: leaveTheShire');
-  
-	// assemble the `hobbits` and move them to `rivendell`
-	let theShire = document.getElementById('The-Shire');
-	let theShireUListChild = document.getElementById('The-Shire').children[1];
-	theShire.removeChild(theShireUListChild);
-  
-	// Adding the 'hobbits' to rivendell <aside />
-	document
-	  .getElementById('Rivendell')
-	  .children[1].appendChild(theShireUListChild);
-  }
+  console.log('6: leaveTheShire');
+
+  // assemble the `hobbits` and move them to `rivendell`
+  let theShire = document.getElementById('The-Shire');
+  let theShireUListChild = document.getElementById('The-Shire').children[1];
+  theShire.removeChild(theShireUListChild);
+
+  // Adding the 'hobbits' to rivendell <aside />
+  document
+    .getElementById('Rivendell')
+    .children[1].appendChild(theShireUListChild);
+}
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 6 complete - Left the Shire"
@@ -201,12 +204,12 @@ function leaveTheShire() {
 // ============
 
 function beautifulStranger() {
-	console.log('7: beautifulStranger');
-	// change the `'Strider'` text to `'Aragorn'`
-	document.getElementById(
-	  'Rivendell'
-	).children[1].children[0].children[3].innerText = 'Aragorn';
-  }
+  console.log('7: beautifulStranger');
+  // change the `'Strider'` text to `'Aragorn'`
+  document.getElementById(
+    'Rivendell'
+  ).children[1].children[0].children[3].innerText = 'Aragorn';
+}
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 7 complete - Strider is changed to Aragorn"
@@ -215,14 +218,11 @@ function beautifulStranger() {
 // Chapter 8
 // ============
 
-function forgeTheFellowShip() {
-  console.log('8: forgeTheFellowShip');
-  // create a new div called `'the-fellowship'` within `rivendell`
-  // add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
-  // after each character is added make an alert that they // have joined your party
+// create a new div called `'the-fellowship'` within `rivendell`
+// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
+// after each character is added make an alert that they // have joined your party
 
-  // NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
-}
+// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 8 complete - The Fellowship is created"
