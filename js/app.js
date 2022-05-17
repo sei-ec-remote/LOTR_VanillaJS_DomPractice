@@ -38,7 +38,7 @@ function makeMiddleEarth() {
 		// console.log(h1)
 		article.appendChild(h1)
 		middleEarth.appendChild(article)
-		// console.log(article)
+		console.log(article)
 }
 document.body.appendChild(middleEarth)
 	//   2b. gives each land article an `id` tag of the corresponding land name
@@ -49,7 +49,7 @@ document.body.appendChild(middleEarth)
 
 	// 3. append the section to the body of the DOM.
 }
-makeMiddleEarth()
+// makeMiddleEarth()
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 1 complete - Made Middle Earth".
@@ -62,14 +62,32 @@ function makeHobbits() {
 	console.log('2: makeHobbits')
 
 	// display an `unordered list` of hobbits in the shire
-
+	let hobbitUL = document.createElement("ul")
 	// give each hobbit a class of `hobbit`
+	for (let i = 0; i < hobbits.length; i++) {
+		const hobbitList = document.createElement("li")
+		hobbitList.setAttribute('class', 'hobbit')
+		hobbitList.innerText = `${hobbits[i]}`
+		hobbitUL.appendChild(hobbitList)
+		// console.log(hobbitUL)
+	}
+	const theShire = document.getElementById('The-Shire')
+	theShire.appendChild(hobbitUL)
+	// console.log(theShire)
+
+	// const rivendell = document.getElementById('Rivendell')
+	// rivendell.appendChild(hobbitUL)
+	// // console.log(rivendell)
+
+	// const mordor = document.getElementById('Mordor')
+	// mordor.appendChild(hobbitUL)
+	// console.log(mordor)
 
 	// hint: create a 'ul' outside the loop into which to append the 'li's
 
 	// hint: get 'The-Shire' by using its id
 }
-
+// makeHobbits()
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 2 complete - Made the Hobbits".
 
