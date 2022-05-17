@@ -40,18 +40,14 @@ function makeMiddleEarth() {
 		landH1.innerHTML = lands[i];
 		land.append(landH1);
 
-		//article.append(landName);
-
-
 	//   2d. appends each land to the middle-earth section
-		newSection.append(land);
-		
+		newSection.append(land);	
 	}
 	// 3. append the section to the body of the DOM.
 	
 	document.body.appendChild(newSection);
 }
-makeMiddleEarth();
+
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 1 complete - Made Middle Earth".
 
@@ -63,13 +59,25 @@ function makeHobbits() {
 	console.log('2: makeHobbits')
 
 	// display an `unordered list` of hobbits in the shire
-
+	let ul = document.createElement("ul")
 	// give each hobbit a class of `hobbit`
+	ul.setAttribute('class', 'hobbit' )
+	const the_shire = document.getElementById('The-Shire') 
+	for(i = 0; i < hobbits.length; i++){
 
+		const li = document.createElement('li');
+
+		li.innerHTML = hobbits[i];
+		ul.appendChild(li)
+	}
+	
+	the_shire.appendChild(ul);
 	// hint: create a 'ul' outside the loop into which to append the 'li's
 
 	// hint: get 'The-Shire' by using its id
+	
 }
+
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 2 complete - Made the Hobbits".
