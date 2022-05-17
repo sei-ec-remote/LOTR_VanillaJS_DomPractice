@@ -146,7 +146,7 @@ function makeBaddies() {
 	console.log(mordor)
 	baddies.forEach( baddie => {
 		const baddieLi = document.createElement("li")
-		baddieLi.classList.add("hobbit")
+		baddieLi.classList.add("baddies")
 		baddieLi.innerHTML = baddie
 		baddiesList.appendChild(baddieLi)
 	})
@@ -213,7 +213,7 @@ function beautifulStranger() {
 
 	//buddiesList = document.querySelector("buddies")
 	
-	rivendell = document.getElementById("Rivendell")
+	const rivendell = document.getElementById("Rivendell")
 	console.log(rivendell)
 	buddiesss = document.getElementsByClassName("buddie")
 	buddiesss[3].innerHTML = "Aragorn"
@@ -240,7 +240,25 @@ function beautifulStranger() {
 function forgeTheFellowShip() {
 	console.log('8: forgeTheFellowShip')
 	// create a new div called `'the-fellowship'` within `rivendell`
+	const rivendell = document.getElementById("Rivendell")
+	const fellowshipEl = document.createElement("div")
+	rivendell.appendChild(fellowshipEl)
+	fellowshipEl.setAttribute("id", "fellowship")
+	console.log(fellowshipEl)
 	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
+	buddiesss = document.getElementsByClassName("buddie")
+	hobitsss = document.getElementsByClassName("hobbit")
+	//console.log(buddiesss)
+	//console.log(hobitsss)
+
+	//grabs all the li in Rivendell
+	const rivendellLi = document.getElementById("Rivendell").querySelectorAll("li")
+	rivendellLi.forEach(li =>{
+		fellowshipEl.appendChild(li)
+		alert(`${li.innerText} joined your party`)
+	})
+	
+
 	// after each character is added make an alert that they // have joined your party
 
 	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
