@@ -86,11 +86,17 @@ function keepItSecretKeepItSafe() {
 	console.log('3: keepItSecretKeepItSafe')
 
 	// create a div with an id of `'the-ring'`
-
+	const chapter3Div = document.createElement('div')
+	chapter3Div.setAttribute('id', 'the-ring')
 	// give the div a class of `'magic-imbued-jewelry'`
-
+	chapter3Div.className = 'magic-imbued-jewelry'
 	// add the ring as a child of `Frodo`
+	const hobbitsLi = document.getElementsByClassName('hobbit')
+	// hobbits[0].appendChild(chapter3Div)
+	console.log(hobbitsLi[0])
+	hobbitsLi[0].appendChild(chapter3Div)
 }
+keepItSecretKeepItSafe()
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 3 complete - Made the ring and gave it to Frodo".
