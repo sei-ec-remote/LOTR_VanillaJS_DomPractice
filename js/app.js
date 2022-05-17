@@ -224,6 +224,13 @@ function theBalrog() {
 	console.log('9: theBalrog')
 	// change the `'Gandalf'` text to `'Gandalf the White'`
 	// apply the following style to the element, make the // background 'white', add a grey border
+	
+	let gand = document.getElementById('Gandalf the Grey')
+	gand.textContent= 'Gandalf the White'
+
+	//this looks kind of weird, but I'm not sure exactly what you want for this part
+	gand.style.background = 'white'
+	gand.style.border = '3px solid grey'
 }
 
 // COMMIT YOUR WORK
