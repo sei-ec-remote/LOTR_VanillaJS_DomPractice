@@ -158,6 +158,7 @@ function beautifulStranger() {
 	console.log('7: beautifulStranger')
 
 	// change the `'Strider'` text to `'Aragorn'`
+	document.getElementById('Rivendell').childNodes[1].childNodes[3].innerText = "Aragorn"
 }
 
 // COMMIT YOUR WORK
