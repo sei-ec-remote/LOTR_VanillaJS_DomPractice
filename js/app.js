@@ -268,7 +268,9 @@ function itsDangerousToGoAlone() {
 	document.getElementById('mordor-list').appendChild(frodo)
 	document.getElementById('mordor-list').appendChild(sam)
 
-
+	let mDoom = document.createElement('div')
+	mDoom.setAttribute('id','mount-doom')
+	document.getElementById('Mordor').appendChild(mDoom)
 }
 
 // COMMIT YOUR WORK
