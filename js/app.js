@@ -56,11 +56,10 @@ function makeMiddleEarth() {
 
 function makeHobbits() {
 	console.log('2: makeHobbits')
-
-
-
+	
 	// display an `unordered list` of hobbits in the shire
-
+	// hint: create a 'ul' outside the loop into which to append the 'li's
+	// hint: get 'The-Shire' by using its id
 	const shireId = document.getElementById('The-Shire');
 	const hobbitUl = document.createElement('ul');
 	hobbitUl.id = "hobbits-name";
@@ -74,8 +73,6 @@ function makeHobbits() {
 		hobbitsLi.innerHTML = hobbits[i];
 		hobbitUl.appendChild(hobbitsLi);
 	}
-	// hint: create a 'ul' outside the loop into which to append the 'li's
-	// hint: get 'The-Shire' by using its id
 	shireId.appendChild(hobbitUl);
 }
 
@@ -90,11 +87,19 @@ function keepItSecretKeepItSafe() {
 	console.log('3: keepItSecretKeepItSafe')
 
 	// create a div with an id of `'the-ring'`
-
+	const ringDiv = document.createElement("div");
+	ringDiv.id = "the-ring";
 	// give the div a class of `'magic-imbued-jewelry'`
+	ringDiv.className = 'magic-imbued-jewelry';
 
 	// add the ring as a child of `Frodo`
+	//console.log(document.getElementsByClassName('hobbit')[0]);
+	const childFrodo = document.getElementsByClassName('hobbit')[0];
+	childFrodo.appendChild(ringDiv);
+	
 }
+
+
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 3 complete - Made the ring and gave it to Frodo".
