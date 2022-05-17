@@ -180,10 +180,18 @@ function makeBuddies() {
 // ============
 
 function leaveTheShire() {
-  console.log('6: leaveTheShire');
-
-  // assemble the `hobbits` and move them to `rivendell`
-}
+	console.log('6: leaveTheShire');
+  
+	// assemble the `hobbits` and move them to `rivendell`
+	let theShire = document.getElementById('The-Shire');
+	let theShireUListChild = document.getElementById('The-Shire').children[1];
+	theShire.removeChild(theShireUListChild);
+  
+	// Adding the 'hobbits' to rivendell <aside />
+	document
+	  .getElementById('Rivendell')
+	  .children[1].appendChild(theShireUListChild);
+  }
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 6 complete - Left the Shire"
