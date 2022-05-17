@@ -198,7 +198,7 @@ function beautifulStranger() {
 	
 	for (let i=0; i<buds.length; i++){
 		console.log(buds[i])
-		if (buds[i].innerText === 'strider'){
+		if (buds[i].innerText.toLowerCase() === 'strider'){
 			buds[i].innerText = 'Aragorn'
 		}
 	}	
@@ -214,11 +214,36 @@ beautifulStranger()
 function forgeTheFellowShip() {
 	console.log('8: forgeTheFellowShip')
 	// create a new div called `'the-fellowship'` within `rivendell`
+	const rivendellDiv = document.createElement('div')
+	rivendellDiv.setAttribute('id', 'the-fellowship')
+	const Rivendell = document.getElementById('Rivendell')
+	let RivendellAside = document.querySelector('aside')
+	Rivendell.append(rivendellDiv)
+	console.log(Rivendell)
 	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
+	let heroList = RivendellAside.firstElementChild
+	console.log(heroList)
+	let buds = heroList.children
+	console.log(buds.length)
+
+	while (buds.length > 0){
+		console.log(`${buds[0].innerText} has joined the Fellowship!`)
+		rivendellDiv.append(buds[0])
+	}
+
+	const hobbitsInRivendell = document.getElementsByClassName('hobbit')
+
+	for (let i=0; i<hobbitsInRivendell.length; i++){
+		console.log(`${hobbitsInRivendell[i].innerText} has joined the Fellowship!`)
+		rivendellDiv.append(hobbitsInRivendell)
+	}
+
+	
 	// after each character is added make an alert that they // have joined your party
 
 	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
 }
+forgeTheFellowShip()
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 8 complete - The Fellowship is created"
