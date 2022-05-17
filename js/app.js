@@ -14,6 +14,11 @@ const baddies = ['Sauron', 'Saruman', 'The Uruk-hai', 'Orcs']
 
 const lands = ['The-Shire', 'Rivendell', 'Mordor']
 
+// Added global variables
+let hobbitsList = document.createElement('ul');
+let baddiesList = document.createElement('ul');
+let buddiesList = document.createElement('ul');
+
 // ============
 // Chapter 1
 // ============
@@ -58,7 +63,6 @@ function makeHobbits() {
 	console.log('2: makeHobbits')
 
 	// display an `unordered list` of hobbits in the shire
-	let hobbitsList = document.createElement('ul');
 	for (let i = 0; i < hobbits.length; i++) {
 		let currentHobbit = document.createElement('li', `${hobbits[i]}`);
 		currentHobbit.setAttribute('id', `${hobbits[i]}`);
@@ -109,7 +113,6 @@ function makeBaddies() {
 	console.log('4: makeBaddies')
 
 	// display an unordered list of baddies in Mordor
-	let baddiesList = document.createElement('ul');
 	for (let i = 0; i < baddies.length; i++) {
 		let currentBaddy = document.createElement('li', `${baddies[i]}`);
 		currentBaddy.setAttribute('id', `${baddies[i]}`);
@@ -139,7 +142,6 @@ function makeBuddies() {
 	let buddiesAside = document.createElement('aside');
 
 	// put an `unordered list` of the `'buddies'` in the aside
-	let buddiesList = document.createElement('ul');
 	for (let i = 0; i < buddies.length; i++) {
 		let currentBuddy = document.createElement('li', `${buddies[i]}`);
 		currentBuddy.setAttribute('id', `${buddies[i]}`);
@@ -165,6 +167,11 @@ function leaveTheShire() {
 	console.log('6: leaveTheShire')
 
 	// assemble the `hobbits` and move them to `rivendell`
+	let rivendell = document.getElementById('Rivendell');
+	let theShire = document.getElementById('The-Shire');
+	let temp = theShire.removeChild(hobbitsList);
+	rivendell.appendChild(temp);
+	console.log(rivendell);
 }
 
 // COMMIT YOUR WORK
