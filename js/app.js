@@ -36,7 +36,21 @@ function makeMiddleEarth() {
 
 	// 1. create a section tag with an id of middle-earth
 
+	const middleEarthEl = document.createElement("section");
+	//set attribute can be used to set any html attribute. Replaces .classlist.add() in this case
+	middleEarthEl.setAttribute("id", "middle-earth")
+	//console.log(middleEarthEl)
+
 	// 2. use a for loop to iterate over the lands array that does the following:
+	lands.forEach( land => {
+		//console.log(land)
+		const landEL = document.createElement("article")
+		landEL.setAttribute("id", `${land}`)
+		const landTitleTag = document.createElement("h1")
+		landTitleTag.innerHTML = `${land}`
+		landEL.appendChild(landTitleTag)
+		console.log(landEL)
+	})
 
 	//   2a. creates an article tag (there should be one for each land when the loop is done)
 
