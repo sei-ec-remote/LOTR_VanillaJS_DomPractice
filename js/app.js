@@ -183,11 +183,27 @@ leaveTheShire()
 // ============
 
 function beautifulStranger() {
-	console.log('7: beautifulStranger')
-
+	console.log('7: beautifulStranger') 
 	// change the `'Strider'` text to `'Aragorn'`
+	//vvvv  This way feels like cheating, I will try to do it w/o ID vvvv
+	// const Strider = document.getElementById('Strider')
+	// Strider.setAttribute('id', 'Aragorn')
+	// Strider.innerText = 'Aragorn'
+	let RivendellAside = document.querySelector('aside')
+	let heroList = RivendellAside.firstElementChild
+	console.log(heroList)
+	let buds = heroList.children
+	console.log(buds)
+	console.log(buds[3].innerText)
+	
+	for (let i=0; i<buds.length; i++){
+		console.log(buds[i])
+		if (buds[i].innerText === 'strider'){
+			buds[i].innerText = 'Aragorn'
+		}
+	}	
 }
-
+beautifulStranger()
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 7 complete - Strider is changed to Aragorn"
 
