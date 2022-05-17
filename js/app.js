@@ -92,11 +92,15 @@ function keepItSecretKeepItSafe() {
 	console.log('3: keepItSecretKeepItSafe')
 
 	// create a div with an id of `'the-ring'`
-
+     let divTheRing = document.createElement('div');
+	 divTheRing.setAttribute('id','the-ring');
 
 	// give the div a class of `'magic-imbued-jewelry'`
-
+	divTheRing.setAttribute('class','magic-imbued-jewelry');
 	// add the ring as a child of `Frodo`
+	let characters = document.getElementsByClassName('hobbit')
+	characters[0].appendChild(divTheRing);
+	// console.log(characters);
 }
 
 // COMMIT YOUR WORK
