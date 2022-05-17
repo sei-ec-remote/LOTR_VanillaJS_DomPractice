@@ -26,15 +26,20 @@ function makeMiddleEarth() {
 	sectionTag.setAttribute = ('id', 'middle-earth')
 	// 2. use a for loop to iterate over the lands array that does the following:                                                            
 
+	// For each land in the array
 	lands.forEach((land) => {
+
+		// Create an article element and set the ID to the current land
 		let article = document.createElement('article')
 		article.setAttribute('id', land)
+		// Create a header with the text of the current land
 		let headerOne = document.createElement('h1')
 		headerOne.innerText = land
+		// Add the header to the article, and the article to the section
 		article.append(headerOne)
 		sectionTag.append(article)
 	})
-
+	//Add the section to the document
 	document.body.append(sectionTag)
 	
 	//   2a. creates an article tag (there should be one for each land when the loop is done)
@@ -59,13 +64,19 @@ makeMiddleEarth()
 
 function makeHobbits() {
 	console.log('2: makeHobbits')
+	// Get the element of The Shire
 	const theShire = document.getElementById('The-Shire')
+	// ...and create an unordered list 
 	const hobbitList = document.createElement('ul')
+	// ...add it undernearth the Shire
 	theShire.append(hobbitList)
+	// for every element in the hobbits array
 	hobbits.forEach((hobbit) => {
+		// create a list and add each hobbit to each list
 		let list = document.createElement('li')
 		hobbitList.append(list)
 		list.innerText = hobbit
+		// give it the class of each hobbit
 		list.setAttribute('class', hobbit)
 		
 	})
@@ -84,16 +95,23 @@ makeHobbits()
 // ============
 // Chapter 3
 // ============
+// Store the element of the Hobbit, Frodo Baggins, from the previous chapter
 
 function keepItSecretKeepItSafe() {
 	console.log('3: keepItSecretKeepItSafe')
 
-	// create a div with an id of `'the-ring'`
-
+	const frodoBaggins = document.getElementsByClassName('Frodo-Baggins')
+	// create a div with an id of 'the-ring'
+	let theRing = document.createElement('div')
+	theRing.setAttribute('id', 'the-ring')
 	// give the div a class of `'magic-imbued-jewelry'`
-
+	theRing.setAttribute('class', 'magic-imbued-jewelry')
 	// add the ring as a child of `Frodo`
+	console.log(theRing)
+	frodoBaggins.append(theRing)
 }
+keepItSecretKeepItSafe()
+
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 3 complete - Made the ring and gave it to Frodo".
