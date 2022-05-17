@@ -178,7 +178,7 @@ function forgeTheFellowShip() {
 	const rivendell = document.getElementById('Rivendell').querySelectorAll('li')
 	for (let i = 0; i < rivendell.length; i++){
 		// after each character is added make an alert that they // have joined your party
-		alert(`${rivendell[i].innerText} has joined the fellowship`)
+		// alert(`${rivendell[i].innerText} has joined the fellowship`)
 		fellowshipList.append(rivendell[i])
 	}
 	fellowshipDiv.append(fellowshipList)
@@ -198,7 +198,9 @@ function forgeTheFellowShip() {
 function theBalrog() {
 	console.log('9: theBalrog')
 	// change the `'Gandalf'` text to `'Gandalf the White'`
+	const fellowshipList = document.getElementById('the-fellowship').querySelectorAll('li')
 	// apply the following style to the element, make the // background 'white', add a grey border
+	fellowshipList[0].innerText = "Gandalf the White"
 }
 
 // COMMIT YOUR WORK
