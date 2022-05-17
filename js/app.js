@@ -58,19 +58,13 @@ function makeMiddleEarth() {
 function makeHobbits() {
 	console.log('2: makeHobbits')
 
-	class Hobbit {
-		constructor(name){
-			this.name = name
-			this.location = ''
-		}
-	}
 	const hobbitList = document.createElement('ul')
 
 	for (let hobb of hobbits){
-		let myHobbit = new Hobbit(hobb)
 		let hobbitLI = document.createElement('li')
-		hobbitLI.setAttribute('id' , `${myHobbit.name}`)
-		hobbitLI.appendChild(document.createTextNode(myHobbit.name))
+		hobbitLI.setAttribute('id' , `${hobb}`)
+		hobbitLI.setAttribute('class' , 'hobbit')
+		hobbitLI.appendChild(document.createTextNode(hobb))
 		hobbitList.appendChild(hobbitLI)
 	}
 	document.getElementById('The-Shire').appendChild(hobbitList)
@@ -112,6 +106,8 @@ function makeBaddies() {
 	console.log('4: makeBaddies')
 
 	// display an unordered list of baddies in Mordor
+	let baddieList = document.createElement('ul')
+	
 
 	// give each of the baddies a class of "baddy"
 
