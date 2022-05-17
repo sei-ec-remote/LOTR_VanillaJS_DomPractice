@@ -87,10 +87,7 @@ function keepItSecretKeepItSafe() {
   // give the div a class of `'magic-imbued-jewelry'`
   ringDiv.setAttribute("class", "magic-imbued-jewelry");
   // add the ring as a child of `Frodo`
-  // do I have to type the whole name?
-  const frodo = document.getElementsByClassName("Frodo");
-  console.log(frodo);
-  frodo.appendChild(ringDiv);
+  document.querySelector("#The-Shire li").appendChild(ringDiv);
 }
 
 // COMMIT YOUR WORK
@@ -104,10 +101,16 @@ function makeBaddies() {
   console.log("4: makeBaddies");
 
   // display an unordered list of baddies in Mordor
-
+  const ulTag = document.createElement("ul");
   // give each of the baddies a class of "baddy"
-
+  for (let baddy of baddies) {
+    const liTag = document.createElement("li");
+    liTag.setAttribute("class", "baddy");
+    liTag.innerText = baddy;
+    ulTag.appendChild(liTag);
+  }
   // remember to append them to Mordor
+  document.getElementById("Mordor").appendChild(ulTag);
 }
 
 // COMMIT YOUR WORK
