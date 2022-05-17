@@ -178,7 +178,7 @@ function forgeTheFellowShip() {
 	const rivendell = document.getElementById('Rivendell').querySelectorAll('li')
 	for (let i = 0; i < rivendell.length; i++){
 		// after each character is added make an alert that they // have joined your party
-		// alert(`${rivendell[i].innerText} has joined the fellowship`)
+		alert(`${rivendell[i].innerText} has joined the fellowship`)
 		fellowshipList.append(rivendell[i])
 	}
 	fellowshipDiv.append(fellowshipList)
