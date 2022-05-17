@@ -23,8 +23,8 @@ function makeMiddleEarth() {
 
   // 1. create a section tag with an id of middle-earth
   let middleEarth = document.createElement("section");
-  
-  middleEarth.id = "middle-earth"
+
+  middleEarth.id = "middle-earth";
 
   // 2. use a for loop to iterate over the lands array that does the following:
   for (let i = 0; i < lands.length; i++) {
@@ -35,16 +35,14 @@ function makeMiddleEarth() {
     //   2c. includes an h1 with the name of the land inside each land article
     let h1 = document.createElement("h1");
     h1.innerText = lands[i];
-	newArt.appendChild(h1);
+    newArt.appendChild(h1);
 
     //   2d. appends each land to the middle-earth section
     middleEarth.appendChild(newArt);
     // 3. append the section to the body of the DOM.
-  
-};
-	document.body.append(middleEarth)
+  }
+  document.body.append(middleEarth);
 }
-
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 1 complete - Made Middle Earth".
@@ -57,14 +55,14 @@ function makeHobbits() {
   console.log("2: makeHobbits");
 
   // display an `unordered list` of hobbits in the shire
-    for(let i = 0; i < hobbits.length; i++){
-      console.log(hobbits[i])
-    }
+  for (let i = 0; i < hobbits.length; i++) {
+    console.log(hobbits[i]);
+  }
   // give each hobbit a class of `hobbit`
-    hobbits.createElement("class", "hobbit" )
-    
+  hobbits.createElement("class", "hobbit");
+
   // hint: create a 'ul' outside the loop into which to append the 'li's
-  
+
   // hint: get 'The-Shire' by using its id
 }
 
@@ -79,10 +77,11 @@ function keepItSecretKeepItSafe() {
   console.log("3: keepItSecretKeepItSafe");
 
   // create a div with an id of `'the-ring'`
-
+  let theRing = document.createElement("id", "the-ring");
   // give the div a class of `'magic-imbued-jewelry'`
-
+  theRing.createElement("class", "magic-imbued-jewlry");
   // add the ring as a child of `Frodo`
+  frodo.appendChild(theRing);
 }
 
 // COMMIT YOUR WORK
