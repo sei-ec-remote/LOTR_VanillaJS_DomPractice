@@ -117,14 +117,30 @@ function keepItSecretKeepItSafe() {
 // ============
 
 function makeBaddies() {
-  console.log('4: makeBaddies');
-
-  // display an unordered list of baddies in Mordor
-
-  // give each of the baddies a class of "baddy"
-
-  // remember to append them to Mordor
-}
+	console.log('4: makeBaddies');
+  
+	// display an unordered list of baddies in Mordor
+	// give each of the baddies a class of "baddy"
+  
+	// remember to append them to Mordor
+	// Creates an unorderedList element tag  and storing it inside the variable mordorUList
+	let mordorUList = document.createElement('ul');
+  
+	// Looping through the array of baddies using forEach iterator
+	baddies.forEach((baddy) => {
+	// Create an li tag for each iteration and storing it in the baddyItem variable.
+	  let baddyItem = document.createElement('li');
+	  // Add a class baddy to each of the li item.
+	  baddyItem.setAttribute('class', 'baddy');
+	//   Sets the inner text of each baddy li element into the value of each element of the array baddies.
+	  baddyItem.innerText = baddy;
+	  // Appends each of the li item into the unordered list tag called mordorUList
+	  mordorUList.appendChild(baddyItem);
+	});
+	let Mordor = document.getElementById('Mordor');
+	Mordor.appendChild(mordorUList);
+	// document.body.append(mordorUList)
+  }
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 4 complete - Made the Baddies"..
@@ -134,14 +150,13 @@ function makeBaddies() {
 // ============
 
 function makeBuddies() {
-  console.log('5: makeBuddies');
-
-  // create an `aside` tag
-
-  // put an `unordered list` of the `'buddies'` in the aside
-
-  // insert your aside as a child element of `rivendell`
-}
+	console.log('5: makeBuddies');
+	// create an `aside` tag
+  
+	// put an `unordered list` of the `'buddies'` in the aside
+  
+	// insert your aside as a child element of `rivendell`
+  }
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 5 complete - Made the Buddies".
