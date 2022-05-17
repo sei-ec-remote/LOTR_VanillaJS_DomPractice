@@ -54,9 +54,7 @@ function makeMiddleEarth() {
 // ============
 // Chapter 2
 // ============
-/* const hobbitList = document.createElement('ul')
-hobitList.setAttribute('id', 'hobit-list')
- */
+
 function makeHobbits() {
 	console.log('2: makeHobbits')
 
@@ -66,12 +64,16 @@ function makeHobbits() {
 			this.location = ''
 		}
 	}
-	for (let hobbit of hobbits){
-		let myHobbit = new Hobbit(hobbit)
+	const hobbitList = document.createElement('ul')
+
+	for (let hobb of hobbits){
+		let myHobbit = new Hobbit(hobb)
 		let hobbitLI = document.createElement('li')
-		hobbitLI.appendChild(myHobbit)
+		hobbitLI.appendChild(document.createTextNode(myHobbit.name))
 		hobbitList.appendChild(hobbitLI)
 	}
+
+	document.getElementById('The-Shire').appendChild(hobbitList)
 	// display an `unordered list` of hobbits in the shire
 
 	// give each hobbit a class of `hobbit`
@@ -80,8 +82,6 @@ function makeHobbits() {
 
 	// hint: get 'The-Shire' by using its id
 }
-/* makeHobbits(hobbits) */
-
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 2 complete - Made the Hobbits".
 
