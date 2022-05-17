@@ -121,11 +121,12 @@ function keepItSecretKeepItSafe() {
 	// give the div a class of `'magic-imbued-jewelry'`
 	theRingEl.classList.add("magic-imbued-jewelry")
 	// add the ring as a child of `Frodo`
-	//console.log(hobbits[0])
 	 frodo = document.getElementsByClassName("hobbit")[0]
+	//  frodos = document.getElementsByClassName("hobbit")
+	// console.log(frodos)
 	 frodo.appendChild(theRingEl)
 	 const shire = document.getElementById("The-Shire")
-	 console.log(shire)
+	 //console.log(shire)
 }
 
 // COMMIT YOUR WORK
@@ -166,10 +167,11 @@ function makeBuddies() {
 
 	// create an `aside` tag
 	buddiesEl = document.createElement("aside")
+	buddiesEl.setAttribute("id", "buddiesEL")
 
 	// put an `unordered list` of the `'buddies'` in the aside
 	const buddiesList = document.createElement("ul")
-	buddiesList.classList.add("baddies")
+	buddiesList.classList.add("buddies")
 	buddies.forEach( buddie => {
 		const buddieLi = document.createElement("li")
 		buddieLi.classList.add("buddie")
@@ -194,6 +196,9 @@ function leaveTheShire() {
 	console.log('6: leaveTheShire')
 
 	// assemble the `hobbits` and move them to `rivendell`
+	hobbitList = document.getElementById("Hobbits")
+	rivendell = document.getElementById("Rivendell")
+	rivendell.appendChild(hobbitList)
 }
 
 // COMMIT YOUR WORK
@@ -206,6 +211,22 @@ function leaveTheShire() {
 function beautifulStranger() {
 	console.log('7: beautifulStranger')
 
+	//buddiesList = document.querySelector("buddies")
+	
+	rivendell = document.getElementById("Rivendell")
+	console.log(rivendell)
+	buddiesss = document.getElementsByClassName("buddie")
+	buddiesss[3].innerHTML = "Aragorn"
+	
+	// buddies.forEach( buddie => {
+	// 	const buddieLi = document.createElement("li")
+	// 	buddieLi.classList.add("buddie")
+	// 	buddieLi.innerHTML = buddie
+	// 	buddieList.appendChild(buddieLi)
+	// })
+
+	// buddiesEl.appendChild(buddieList)
+	
 	// change the `'Strider'` text to `'Aragorn'`
 }
 
