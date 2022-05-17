@@ -31,7 +31,6 @@ function makeMiddleEarth() {
 		// lands[i];
 		let articles = document.createElement('article');
 		articles.setAttribute('id',lands[i]);
-		
 		let h1 = document.createElement('h1');
 		articles.appendChild(h1);
 		h1.innerText = lands[i];
@@ -65,13 +64,22 @@ function makeHobbits() {
 	console.log('2: makeHobbits')
 
 	// display an `unordered list` of hobbits in the shire
-
+	let hobbitCharacters = document.createElement('UL');
 	// give each hobbit a class of `hobbit`
-
+	for (i=0; i<hobbits.length;i++){
+	let hobbitsList = document.createElement('LI');
+	hobbitsList.setAttribute('class','hobbit');
+	hobbitsList.innerHTML = hobbits[i];
+    hobbitCharacters.appendChild(hobbitsList);
+	}
+	// console.log(hobbitCharaters);
+	let theShire = document.getElementById('The-Shire');
+	theShire.appendChild(hobbitCharacters);
 	// hint: create a 'ul' outside the loop into which to append the 'li's
 
 	// hint: get 'The-Shire' by using its id
 }
+
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 2 complete - Made the Hobbits".
@@ -84,6 +92,7 @@ function keepItSecretKeepItSafe() {
 	console.log('3: keepItSecretKeepItSafe')
 
 	// create a div with an id of `'the-ring'`
+
 
 	// give the div a class of `'magic-imbued-jewelry'`
 
