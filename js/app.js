@@ -65,6 +65,7 @@ function makeHobbits() {
 
 	// display an `unordered list` of hobbits in the shire
 	let hobbitCharacters = document.createElement('UL');
+	hobbitCharacters.setAttribute('id','hobbitHouse');
 	// give each hobbit a class of `hobbit`
 	for (i=0; i<hobbits.length;i++){
 	let hobbitsList = document.createElement('LI');
@@ -164,6 +165,15 @@ function leaveTheShire() {
 	console.log('6: leaveTheShire')
 
 	// assemble the `hobbits` and move them to `rivendell`
+	
+	let hobbitGang = document.getElementsByClassName('hobbit');
+	let hobbitHouse = document.getElementById('hobbitHouse')
+	let rivendell = document.getElementById('Rivendell')
+	let theShire = document.getElementById('The-Shire')
+	
+	theShire.removeChild(hobbitHouse);
+	rivendell.appendChild(hobbitHouse);
+	
 }
 
 // COMMIT YOUR WORK
