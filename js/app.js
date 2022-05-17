@@ -233,10 +233,11 @@ function forgeTheFellowShip() {
 
 	const hobbitsInRivendell = document.getElementsByClassName('hobbit')
 
-	for (let i=0; i<hobbitsInRivendell.length; i++){
+	for (let i=hobbitsInRivendell.length-1; i>=0; i--){
 		console.log(`${hobbitsInRivendell[i].innerText} has joined the Fellowship!`)
-		rivendellDiv.append(hobbitsInRivendell)
+		rivendellDiv.append(hobbitsInRivendell[i])
 	}
+
 
 	
 	// after each character is added make an alert that they // have joined your party
@@ -271,12 +272,19 @@ theBalrog()
 // ============
 
 function hornOfGondor() {
-	console.log('10: hornOfGondor')
-	// pop up an alert that the horn of gondor has been blown
-	// Boromir's been killed by the Uruk-hai!
-	// Remove `Boromir` from the Fellowship
+	// console.log('10: hornOfGondor')
+	// // pop up an alert that the horn of gondor has been blown
+	// alert('The horn!... Of Gondor!... Has... Been... BLOWN!!!!')
+	// // Boromir's been killed by the Uruk-hai!
+	// alert('Boromir\'s been killed by the Uruk-hai!')
+	// // Remove `Boromir` from the Fellowship
+	// const fellowship = document.getElementById('the-fellowship')
+	// for (let i=0; i<fellowship.length; i++){
+	// 	if (fellowship[i].innerText.toLowerCase() === 'boromir')
+	// 	fellowship.remove(fellowship[i])
+	// }
 }
-
+hornOfGondor()
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 10 complete - horn of gandor blew and Boromir is dead"
 
