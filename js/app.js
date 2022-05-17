@@ -1,4 +1,17 @@
-console.log('Linked.')
+//console.log('Linked.')
+const makeMiddleEarthBtn = document.getElementById("chapter-1")
+const keepSctSafeBtn = document.getElementById("chapter-2")
+const makeBaddiesBtn = document.getElementById("chapter-3")
+const makeBuddiesBtn = document.getElementById("chapter-4")
+const leaveShireBtn = document.getElementById("chapter-5")
+const beautStrangerBtn = document.getElementById("chapter-6")
+const forgeFellowshipBtn = document.getElementById("chapter-7")
+const theBalrogBtn = document.getElementById("chapter-8")
+const hornGondorBtn = document.getElementById("chapter-9")
+const dangerGoAloneBtn = document.getElementById("chapter-10")
+const weWantsItBtn = document.getElementById("chapter-11")
+const backAgainBtn = document.getElementById("chapter-12")
+const callAllBtn = document.getElementById("chapter-13")
 
 // Dramatis Personae
 const hobbits = [
@@ -36,6 +49,7 @@ function makeMiddleEarth() {
 	// 3. append the section to the body of the DOM.
 }
 
+// makeMiddleEarthBtn.addEventListener("click", makeMiddleEarth())
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 1 complete - Made Middle Earth".
 
