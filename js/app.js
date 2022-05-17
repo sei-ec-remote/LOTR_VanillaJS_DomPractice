@@ -255,7 +255,7 @@ function forgeTheFellowShip() {
 	const rivendellLi = document.getElementById("Rivendell").querySelectorAll("li")
 	rivendellLi.forEach(li =>{
 		fellowshipEl.appendChild(li)
-		alert(`${li.innerText} joined your party`)
+		// alert(`${li.innerText} joined your party`)
 	})
 	
 
@@ -274,7 +274,13 @@ function forgeTheFellowShip() {
 function theBalrog() {
 	console.log('9: theBalrog')
 	// change the `'Gandalf'` text to `'Gandalf the White'`
+	const fellowshipEl = document.getElementById("fellowship")
+	fellowshipMembers = document.getElementsByClassName("buddie")
+	fellowshipMembers[0].innerText = "Gandalf the White"
 	// apply the following style to the element, make the // background 'white', add a grey border
+	fellowshipMembers[0].style.background = 'white'
+	fellowshipMembers[0].style.border = '2px grey solid'
+	fellowshipMembers[0].style.color = 'black'
 }
 
 // COMMIT YOUR WORK
