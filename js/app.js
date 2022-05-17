@@ -255,9 +255,14 @@ forgeTheFellowShip()
 function theBalrog() {
 	console.log('9: theBalrog')
 	// change the `'Gandalf'` text to `'Gandalf the White'`
+	let fellowship = document.getElementById('the-fellowship')
+	let Gandalf = fellowship.firstChild
+	Gandalf.innerText = 'Gandalf the White'
+	Gandalf.style.backgroundColor = 'white'
+	Gandalf.style.border = '3px solid grey'
 	// apply the following style to the element, make the // background 'white', add a grey border
 }
-
+theBalrog()
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 9 complete - Updated Gandalf"
 
