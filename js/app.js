@@ -65,7 +65,8 @@ function makeHobbits() {
 		let hobbitLI = document.createElement('li')
 		hobbitLI.setAttribute('id' , `${hobb}`)
 		hobbitLI.setAttribute('class' , 'hobbit')
-		hobbitLI.appendChild(document.createTextNode(hobb))
+		let inner = document.createTextNode (`${hobb}`)
+		hobbitLI.appendChild(inner)
 		hobbitList.appendChild(hobbitLI)
 	}
 	document.getElementById('The-Shire').appendChild(hobbitList)
@@ -136,6 +137,7 @@ function makeBuddies() {
 	let myAside = document.createElement('aside')
 	// put an `unordered list` of the `'buddies'` in the aside
 	let myAsideList = document.createElement('ul')
+	myAsideList.setAttribute('id' , 'rivendell-aside')
 	for( let budd of buddies){
 		let myBudd = document.createElement('li')
 		myBudd.setAttribute('id' , budd)
@@ -187,6 +189,26 @@ function forgeTheFellowShip() {
 	// create a new div called `'the-fellowship'` within `rivendell`
 	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
 	// after each character is added make an alert that they // have joined your party
+
+	//make the div
+	const newDiv = document.createElement('div')
+	newDiv.setAttribute('id' , 'the-fellowship')
+	document.getElementById('Rivendell').appendChild(newDiv)
+	
+	//create new fellowship list
+	const newList = document.createElement('ul')
+	newDiv.appendChild(newList)
+
+	//create arrays for each party from HTML elements
+	let rrAside = Array.from(document.getElementById('rivendell-aside').children)
+	let hobbList = Array.from(document.getElementById('hobbit-list').children)
+
+	//iterate through both arrays 
+	for( let hobb of hobbList.concat(rrAside)){
+		//console.log(hobb)
+		newList.appendChild(hobb)
+		console.log(`${hobb.id} has joined the fellowship of the ring!`)
+	}
 
 	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
 }
