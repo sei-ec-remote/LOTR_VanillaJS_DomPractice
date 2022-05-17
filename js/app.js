@@ -37,9 +37,10 @@ function makeMiddleEarth() {
 	//   2c. includes an h1 with the name of the land inside each land article
 		let h1s = document.createElement('h1')
 		h1s.innerText = lands[i]
+		articles.append(h1s)
 
 	//   2d. appends each land to the middle-earth section
-		section.append(h1s)
+		section.append(articles)
 	}
 	// 3. append the section to the body of the DOM.
 	document.body.append(section)
@@ -57,13 +58,22 @@ function makeHobbits() {
 	console.log('2: makeHobbits')
 
 	// display an `unordered list` of hobbits in the shire
-
+	const hobbitsList = document.createElement('ul')
+	const shire = document.getElementById('The-Shire')
+	shire.append(hobbitsList)
 	// give each hobbit a class of `hobbit`
+	for (let i=0; i<hobbits.length; i++){
+		let currentHobbit = document.createElement('li')
+		currentHobbit.innerText = hobbits[i]
+		currentHobbit.classList.add('hobbit')
+		hobbitsList.append(currentHobbit)
+	}
 
 	// hint: create a 'ul' outside the loop into which to append the 'li's
 
 	// hint: get 'The-Shire' by using its id
 }
+makeHobbits()
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 2 complete - Made the Hobbits".
