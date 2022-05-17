@@ -130,9 +130,10 @@ function makeBuddies() {
   // insert your aside as a child element of `rivendell`
   let aside = document.createElement("aside");
   let list = document.createElement("ul");
+  list.className = "buddyList";
   buddies.forEach((buddy) => {
     let li = document.createElement("li");
-    li.className = buddy;
+    li.className = "buddy " + buddy;
     li.innerText = buddy;
     list.appendChild(li);
   });
@@ -181,8 +182,21 @@ function forgeTheFellowShip() {
   // create a new div called `'the-fellowship'` within `rivendell`
   // add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
   // after each character is added make an alert that they // have joined your party
-
   // NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
+  let div = document.createElement("div");
+  div.className = "the-fellowship";
+  document.querySelector("#Rivendell").appendChild(div);
+  let buddy = document.querySelectorAll(".buddy");
+  let hobbit = document.querySelectorAll(".hobbit");
+
+  buddy.forEach((li) => {
+    document.querySelector(".the-fellowship").appendChild(li);
+    alert(`${li.innerText} has joined your party`);
+  });
+  hobbit.forEach((li) => {
+    document.querySelector(".the-fellowship").appendChild(li);
+    alert(`${li.innerText} has joined your party`);
+  });
 }
 
 // COMMIT YOUR WORK
