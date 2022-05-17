@@ -164,8 +164,16 @@ makeBuddies()
 function leaveTheShire() {
 	console.log('6: leaveTheShire')
 
+	const shire = document.getElementById('The-Shire')
+	const shireList = document.querySelector('ul')
+	shireList.parentElement.removeChild(shireList)
+	console.log(shireList)
+
 	// assemble the `hobbits` and move them to `rivendell`
+	const Rivendell = document.getElementById('Rivendell')
+	Rivendell.append(shireList)
 }
+leaveTheShire()
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 6 complete - Left the Shire"
