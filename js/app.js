@@ -108,14 +108,26 @@ function keepItSecretKeepItSafe() {
 	// create a div with an id of `'the-ring'`
 	const ringContainer = document.createElement('div');
 	//adding the id to the div I just created
-	ringContainer.setAttribute('id', 'the-ring');
+	ringContainer.id ='the-ring';
 	// console.log(ringContainer);
 
 	// give the div a class of `'magic-imbued-jewelry'`
-	ringContainer.setAttribute('class', 'magic-imbued-jewelry');
+	//.className (in DOM className = class) replaces setAttribute - a more conscise way to create the variable to name it
+	ringContainer.className = 'magic-imbued-jewelry';
 	// console.log(ringContainer);
 
 	// add the ring as a child of `Frodo`
+	// let ring = document.getElementById('the-ring');
+
+	//have to pull the list (don't need to create it again)
+	let hobbitList = document.querySelector('ul');
+	// console.log(hobbitList)
+	//.children is a DOM manipulation thing
+	let frodo = hobbitList.children[0];
+	//need to pull from the hobbits array and the class/list
+	
+	frodo.appendChild(ringContainer);
+	console.log(frodo);
 }
 keepItSecretKeepItSafe();
 
