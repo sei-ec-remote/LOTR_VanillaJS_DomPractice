@@ -32,16 +32,21 @@ function makeMiddleEarth() {
     let article = document.createElement(`article`);
 
     //   2b. gives each land article an `id` tag of the corresponding land name
+	// Sets the id of each of the article to be the elements of the array lands based on the index using i
     article.setAttribute('id', lands[i]);
 
     //   2c. includes an h1 with the name of the land inside each land article
     let h1 = document.createElement(`h1`);
+	// Sets the inner text of each h1 inside the article to be the elements of the array lands based on the index using i
     h1.innerText = lands[i];
+	// Appends each of the h1 tags inside the article tag.
     article.appendChild(h1);
     //   2d. appends each land to the middle-earth section
+	// Appends the article tags inside the section 'middle-earth'
     middleEarth.appendChild(article);
     // 3. append the section to the body of the DOM.
   }
+  // Adds the section with the id middle-earth inside the body tag.
   document.body.append(middleEarth);
 }
 
@@ -61,14 +66,19 @@ function makeHobbits() {
 
   // hint: get 'The-Shire' by using its id
   let hobbitsList = document.createElement('ul');
+  // Looping through each elements of the array hobbits using forEach iterator.
   hobbits.forEach((hobbit) => {
+	// Creates an li tag and stores it to the variable called listItem for each iteration of the elements of the hobbits array.
     let listItem = document.createElement('li');
+	// Adds an name attribute if the hobbit element is equals to 'Frodo Baggins'.
     if (hobbit === 'Frodo Baggins') {
       listItem.setAttribute('name', 'Frodo');
     }
-	// give each hobbit a class of `hobbit`
+	// Adds each hobbit a class of `hobbit`
     listItem.setAttribute('class', 'hobbit');
+	// Sets the inner text of each hobbit list item the value of the elements in the hobbits array.
     listItem.innerText = hobbit;
+	// Appends all the list item inside the ul tag called hobbitsList.
     hobbitsList.appendChild(listItem);
   });
   let theShire = document.getElementById('The-Shire');
