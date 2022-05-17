@@ -62,16 +62,10 @@ function makeMiddleEarth() {
 		//attach article as child of section
 		middleEarthEl.appendChild(landEL)
 	})
-
-
 	//   2a. creates an article tag (there should be one for each land when the loop is done)
-
 	//   2b. gives each land article an `id` tag of the corresponding land name
-
 	//   2c. includes an h1 with the name of the land inside each land article
-
 	//   2d. appends each land to the middle-earth section
-	
 	// 3. append the section to the body of the DOM.
 	//console.log(body[0])
 	//grab the first element in the body array and set it as the parent of the section
@@ -145,7 +139,16 @@ function makeBaddies() {
 	console.log('4: makeBaddies')
 	const mordor = document.getElementById("Mordor")
 	// display an unordered list of baddies in Mordor
-	
+	const baddiesList = document.createElement("ul")
+	baddiesList.classList.add("baddies")
+	mordor.appendChild(baddiesList)
+	console.log(mordor)
+	baddies.forEach( baddie => {
+		const baddieLi = document.createElement("li")
+		baddieLi.classList.add("hobbit")
+		baddieLi.innerHTML = baddie
+		baddiesList.appendChild(baddieLi)
+	})
 	// give each of the baddies a class of "baddy"
 
 	// remember to append them to Mordor
@@ -162,10 +165,22 @@ function makeBuddies() {
 	console.log('5: makeBuddies')
 
 	// create an `aside` tag
+	buddiesEl = document.createElement("aside")
 
 	// put an `unordered list` of the `'buddies'` in the aside
-
+	const buddiesList = document.createElement("ul")
+	buddiesList.classList.add("baddies")
+	buddies.forEach( buddie => {
+		const buddieLi = document.createElement("li")
+		buddieLi.classList.add("buddie")
+		buddieLi.innerHTML = buddie
+		buddiesList.appendChild(buddieLi)
+	})
+	buddiesEl.appendChild(buddiesList)
 	// insert your aside as a child element of `rivendell`
+	const rivendell = document.getElementById("Rivendell")
+	console.log(rivendell)
+	rivendell.appendChild(buddiesEl)
 }
 
 // COMMIT YOUR WORK
