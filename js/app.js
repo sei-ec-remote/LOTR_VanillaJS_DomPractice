@@ -44,7 +44,6 @@ function makeMiddleEarth() {
   document.body.append(middleEarth);
 }
 
-
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 1 complete - Made Middle Earth".
 
@@ -67,7 +66,6 @@ function makeHobbits() {
   // hint: get 'The-Shire' by using its id
 }
 
-
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 2 complete - Made the Hobbits".
 
@@ -83,9 +81,8 @@ function keepItSecretKeepItSafe() {
   // give the div a class of `'magic-imbued-jewelry'`
   theRing.classList.add("magic-imbued-jewlry");
   // add the ring as a child of `Frodo`
-  hobbits[0].appendChild(theRing)
+  hobbits[0].appendChild(theRing);
 }
-
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 3 complete - Made the ring and gave it to Frodo".
@@ -107,7 +104,6 @@ function makeBaddies() {
   baddies.appendChild(mordor);
 }
 
-
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 4 complete - Made the Baddies"..
 
@@ -126,7 +122,6 @@ function makeBuddies() {
   // insert your aside as a child element of `rivendell`
   rivendell.appendChild(aside);
 }
-
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 5 complete - Made the Buddies".
@@ -153,9 +148,8 @@ function beautifulStranger() {
   console.log("7: beautifulStranger");
 
   // change the `'Strider'` text to `'Aragorn'`
-    buddies[3] = "Aragorn"
+  buddies.splice(4, 1, "Aragorn");
 }
-
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 7 complete - Strider is changed to Aragorn"
@@ -169,15 +163,15 @@ function forgeTheFellowShip() {
   // create a new div called `'the-fellowship'` within `rivendell`
   // add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
   // after each character is added make an alert that they // have joined your party
-  let theFellowship = rivendell.createElement("the-fellowship")
-  for (let i = 0; i < hobbits; i++){
-    theFellowship.appendChild(hobbits[i])
-    alert(`${hobbits} has joined your party`)
+  let theFellowship = rivendell.createElement("the-fellowship");
+  for (let i = 0; i < hobbits; i++) {
+    theFellowship.appendChild(hobbits[i]);
+    alert(`${hobbits} has joined your party`);
   }
 }
-  for (let i = 0; i < buddies; i++){
-    theFellowship.appendChild(buddies[i])
-    alert(`${buddies} has joined your party`)
+for (let i = 0; i < buddies; i++) {
+  theFellowship.appendChild(buddies[i]);
+  alert(`${buddies} has joined your party`);
   // NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
 }
 
@@ -192,6 +186,7 @@ function theBalrog() {
   console.log("9: theBalrog");
   // change the `'Gandalf'` text to `'Gandalf the White'`
   // apply the following style to the element, make the // background 'white', add a grey border
+  buddies.splice(0, 1, "Gandalf the White");
 }
 
 // COMMIT YOUR WORK
