@@ -248,6 +248,9 @@ function itsDangerousToGoAlone() {
   let mordor = document.querySelector("#Mordor");
   mordor.appendChild(frodo);
   mordor.appendChild(sam);
+  let doom = document.createElement(div);
+  doom.id = "mount-doom";
+  mordor.appendChild(doom);
 }
 
 // COMMIT YOUR WORK
@@ -262,6 +265,9 @@ function weWantsIt() {
   // Create a div with an id of `'gollum'` and add it to Mordor
   // Remove `the ring` from `Frodo` and give it to `Gollum`
   // Move Gollum into Mount Doom
+  let div = document.createElement(div);
+  div.id = "gollum";
+  document.querySelector("#Mordor").appendChild(div);
 }
 
 // COMMIT YOUR WORK
