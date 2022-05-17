@@ -71,7 +71,7 @@ function makeHobbits() {
 		const hobbitClass = document.createElement('li');
 		// give each hobbit a class of `hobbit`
 		hobbitClass.setAttribute('class', `${names}`);
-		console.log(names);
+		// console.log(names);
 		//make a linst - then attach the class to the list - the append it to the hobbit
 		// hint: create a 'ul' outside the loop into which to append the 'li's
 		//creating the ordered list which I'll have to attach to the unordered list
@@ -90,7 +90,7 @@ function makeHobbits() {
 	})
 	//this is how you connect the list of the hobbits to the shire, don't need to connect it to the whole body
 	document.getElementById('The-Shire').appendChild(hobbitsList);
-	console.log(body);
+	// console.log(body);
 }
 makeHobbits();
 
@@ -106,11 +106,16 @@ function keepItSecretKeepItSafe() {
 	console.log('3: keepItSecretKeepItSafe')
 
 	// create a div with an id of `'the-ring'`
+	const ringContainer = document.createElement('div');
+	//adding the id to the div I just created
+	ringContainer.setAttribute('id', 'the-ring');
+	console.log(ringContainer);
 
 	// give the div a class of `'magic-imbued-jewelry'`
 
 	// add the ring as a child of `Frodo`
 }
+keepItSecretKeepItSafe();
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 3 complete - Made the ring and gave it to Frodo".
