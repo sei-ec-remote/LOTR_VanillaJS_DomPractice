@@ -43,7 +43,7 @@ function makeMiddleEarth() {
   }
   document.body.append(middleEarth);
 }
-makeMiddleEarth()
+makeMiddleEarth();
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 1 complete - Made Middle Earth".
@@ -66,7 +66,7 @@ function makeHobbits() {
 
   // hint: get 'The-Shire' by using its id
 }
-makeHobbits()
+makeHobbits();
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 2 complete - Made the Hobbits".
@@ -85,7 +85,7 @@ function keepItSecretKeepItSafe() {
   // add the ring as a child of `Frodo`
   frodo.appendChild(theRing);
 }
-keepItSecretKeepItSafe()
+keepItSecretKeepItSafe();
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 3 complete - Made the ring and gave it to Frodo".
@@ -106,7 +106,7 @@ function makeBaddies() {
   // remember to append them to Mordor
   baddies.appendChild(mordor);
 }
-makeBaddies()
+makeBaddies();
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 4 complete - Made the Baddies"..
@@ -121,12 +121,12 @@ function makeBuddies() {
   // create an `aside` tag
   let aside = document.createElement("aside");
   // put an `unordered list` of the `'buddies'` in the aside
-  aside.createElement("ul")
-  aside.appendChild(buddies)
+  aside.createElement("ul");
+  aside.appendChild(buddies);
   // insert your aside as a child element of `rivendell`
-  rivendell.appendChild(aside)
+  rivendell.appendChild(aside);
 }
-makeBuddies()
+makeBuddies();
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 5 complete - Made the Buddies".
@@ -139,6 +139,7 @@ function leaveTheShire() {
   console.log("6: leaveTheShire");
 
   // assemble the `hobbits` and move them to `rivendell`
+  rivendell.appendChild(hobbits);
 }
 
 // COMMIT YOUR WORK
@@ -152,7 +153,9 @@ function beautifulStranger() {
   console.log("7: beautifulStranger");
 
   // change the `'Strider'` text to `'Aragorn'`
+    buddies[3] = "Aragorn"
 }
+beautifulStranger()
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 7 complete - Strider is changed to Aragorn"
