@@ -185,8 +185,10 @@ function beautifulStranger() {
 	console.log('7: beautifulStranger')
 
 	// change the `'Strider'` text to `'Aragorn'`
-	let temp = document.getElementById('Strider');
-	temp.innerHTML = 'Aragorn';
+	buddies[3] = 'Aragorn';
+	let aragorn = document.getElementById('Strider');
+	aragorn.setAttribute('id', `${buddies[3]}`);
+	aragorn.innerHTML = buddies[3];
 }
 
 // COMMIT YOUR WORK
@@ -199,7 +201,22 @@ function beautifulStranger() {
 function forgeTheFellowShip() {
 	console.log('8: forgeTheFellowShip')
 	// create a new div called `'the-fellowship'` within `rivendell`
+	let theFellowship = document.createElement('div');
+
 	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
+	for (let i = 0; i < hobbits.length; i++) {
+		let newMember = document.getElementById(`${hobbits[i]}`);
+		theFellowship.appendChild(newMember);
+		alert(`${hobbits[i]} has joined your party`);
+	}
+	for (let j = 0; j < buddies.length; j++) {
+		let newMember2 = document.getElementById(`${buddies[j]}`);
+		theFellowship.appendChild(newMember2);
+		alert(`${buddies[j]} has joined your party`);
+	}
+	let rivendell = document.getElementById('Rivendell');
+	rivendell.appendChild(theFellowship);
+
 	// after each character is added make an alert that they // have joined your party
 
 	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
