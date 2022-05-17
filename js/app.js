@@ -128,9 +128,9 @@ function makeBuddies() {
 		buddy.innerText = buddies[i]
 		buddiesList.appendChild(buddy)
 	}
-
+	a.appendChild(buddiesList)
 	// insert your aside as a child element of `rivendell`
-	document.getElementById('Rivendell').appendChild(buddiesList)
+	document.getElementById('Rivendell').appendChild(a)
 }
 
 // COMMIT YOUR WORK
