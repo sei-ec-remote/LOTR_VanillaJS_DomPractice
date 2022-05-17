@@ -109,9 +109,11 @@ function keepItSecretKeepItSafe() {
 	const ringContainer = document.createElement('div');
 	//adding the id to the div I just created
 	ringContainer.setAttribute('id', 'the-ring');
-	console.log(ringContainer);
+	// console.log(ringContainer);
 
 	// give the div a class of `'magic-imbued-jewelry'`
+	ringContainer.setAttribute('class', 'magic-imbued-jewelry');
+	// console.log(ringContainer);
 
 	// add the ring as a child of `Frodo`
 }
