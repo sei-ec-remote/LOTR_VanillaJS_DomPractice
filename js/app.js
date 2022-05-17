@@ -1,4 +1,8 @@
 //console.log('Linked.')
+//this gets the body. Returns an HTMl Collection. It is an array like object Read here: https://www.javascripttutorial.net/javascript-dom/javascript-getelementsbytagname/
+const body = document.getElementsByTagName('body')
+
+//these grab the buttons in html
 const makeMiddleEarthBtn = document.getElementById("chapter-1")
 const keepSctSafeBtn = document.getElementById("chapter-2")
 const makeBaddiesBtn = document.getElementById("chapter-3")
@@ -44,13 +48,21 @@ function makeMiddleEarth() {
 	// 2. use a for loop to iterate over the lands array that does the following:
 	lands.forEach( land => {
 		//console.log(land)
+		//create article
 		const landEL = document.createElement("article")
+		//set article id to land
 		landEL.setAttribute("id", `${land}`)
+		//create h1
 		const landTitleTag = document.createElement("h1")
+		//set h1 innerhtml to land
 		landTitleTag.innerHTML = `${land}`
+		//attach landTitleTag as the child of article
 		landEL.appendChild(landTitleTag)
-		console.log(landEL)
+		//console.log(landEL)
+		//attach article as child of section
+		middleEarthEl.appendChild(landEL)
 	})
+
 
 	//   2a. creates an article tag (there should be one for each land when the loop is done)
 
@@ -59,8 +71,12 @@ function makeMiddleEarth() {
 	//   2c. includes an h1 with the name of the land inside each land article
 
 	//   2d. appends each land to the middle-earth section
-
+	
 	// 3. append the section to the body of the DOM.
+	//console.log(body[0])
+	//grab the first element in the body array and set it as the parent of the section
+	body[0].appendChild(middleEarthEl)
+	//console.log(body[0])
 }
 
 // makeMiddleEarthBtn.addEventListener("click", makeMiddleEarth())
