@@ -43,6 +43,7 @@ function makeMiddleEarth() {
   }
   document.body.append(middleEarth);
 }
+makeMiddleEarth()
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 1 complete - Made Middle Earth".
@@ -65,6 +66,7 @@ function makeHobbits() {
 
   // hint: get 'The-Shire' by using its id
 }
+makeHobbits()
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 2 complete - Made the Hobbits".
@@ -83,6 +85,7 @@ function keepItSecretKeepItSafe() {
   // add the ring as a child of `Frodo`
   frodo.appendChild(theRing);
 }
+keepItSecretKeepItSafe()
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 3 complete - Made the ring and gave it to Frodo".
@@ -101,8 +104,9 @@ function makeBaddies() {
   // give each of the baddies a class of "baddy"
   baddies.createElement("class", "baddy");
   // remember to append them to Mordor
-  baddies.appendChild(mordor)
+  baddies.appendChild(mordor);
 }
+makeBaddies()
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 4 complete - Made the Baddies"..
@@ -115,11 +119,14 @@ function makeBuddies() {
   console.log("5: makeBuddies");
 
   // create an `aside` tag
-
+  let aside = document.createElement("aside");
   // put an `unordered list` of the `'buddies'` in the aside
-
+  aside.createElement("ul")
+  aside.appendChild(buddies)
   // insert your aside as a child element of `rivendell`
+  rivendell.appendChild(aside)
 }
+makeBuddies()
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 5 complete - Made the Buddies".
