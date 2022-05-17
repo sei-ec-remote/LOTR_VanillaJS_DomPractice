@@ -35,14 +35,17 @@ middleEarth.id = "middle-earth";
 
 	//   2b. gives each land article an `id` tag of the corresponding land name
        newArt.setAttribute("id", lands[i]);
+	   
 	//   2c. includes an h1 with the name of the land inside each land article
-         let landArticle = document.createElement("h1");
-		 landArticle.innerText(lands[i]);
+         let h1 = document.createElement("h1");
+		 h1.innerText = lands[i];
+		 newArt.appendChild(h1);
 	//   2d. appends each land to the middle-earth section
-         lands.appendChild(middleEarth)
+         middleEarth.appendChild(newArt);
 	// 3. append the section to the body of the DOM.
-       document.body.append(middleEarth);
-}
+	 };
+	 document.body.append(middleEarth)
+
 }
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 1 complete - Made Middle Earth".
