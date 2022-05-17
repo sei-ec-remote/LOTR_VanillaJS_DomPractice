@@ -60,16 +60,66 @@ function makeMiddleEarth() {
 // ============
 
 function makeHobbits() {
-	console.log('2: makeHobbits')
+	// console.log('2: makeHobbits')
 
 	// display an `unordered list` of hobbits in the shire
+	const hobbitsList = document.createElement('ul');
+	//I created the element, now I have to connect it to the button/function
+	// console.log(hobbitsList);
+	
+	hobbits.forEach( names => {
+			// give each hobbit a class of `hobbit`
+		const hobbitClass = document.createElement('class');
+		//now attach the class attribute to the array
+		hobbitClass.setAttribute('class', `${names}`);
+		console.log(names);
+			// hint: create a 'ul' outside the loop into which to append the 'li's
 
-	// give each hobbit a class of `hobbit`
+		// hint: get 'The-Shire' by using its id
 
-	// hint: create a 'ul' outside the loop into which to append the 'li's
+	})
 
-	// hint: get 'The-Shire' by using its id
+
+
+	
 }
+
+
+	// //now have to attach the element id to the section we just created
+	// middleEarthElement.setAttribute('id', 'middle-earth');
+	// // console.log(middleEarthElement);
+	// // 2. use a for loop to iterate over the lands array that does the following:
+	// 	lands.forEach( land => {
+	// 		// console.log(land);
+	// //   2a. creates an article tag (there should be one for each land when the loop is done)
+	// 		const landElement = document.createElement('article');
+	// 		// console.log(middleEarthElement);
+	// //   2b. gives each land article an `id` tag of the corresponding land name (${will pull the land names})
+	// 		landElement.setAttribute('id', `${land}`);
+	// //   2b. gives each land article an `id` tag of the corresponding land name
+	// 		const h1Tag = document.createElement('h1');
+	// //   2c. includes an h1 with the name of the land inside each land article
+	// 		h1Tag.innerHTML = `${land}`;
+	// //   2d. appends each land to the middle-earth section
+	// 		landElement.append(h1Tag);
+	// 		// console.log(h1Tag);
+	
+	// 		middleEarthElement.appendChild(landElement);
+	// 	})
+	// // 3. append the section to the body of the DOM.
+	// body[0].appendChild(middleEarthElement);
+
+
+
+
+
+
+
+
+
+
+
+
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 2 complete - Made the Hobbits".
