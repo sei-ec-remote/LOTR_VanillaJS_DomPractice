@@ -59,19 +59,19 @@ function makeHobbits() {
 	console.log('2: makeHobbits')
 
 	// display an `unordered list` of hobbits in the shire
-	let ul = document.createElement("ul")
+	let ulHobbit = document.createElement("ul")
 	// give each hobbit a class of `hobbit`
-	ul.setAttribute('class', 'hobbit' )
+	ulHobbit.setAttribute('class', 'hobbit' )
 	const the_shire = document.getElementById('The-Shire') 
 	for(i = 0; i < hobbits.length; i++){
 
 		const li = document.createElement('li');
 
 		li.innerHTML = hobbits[i];
-		ul.appendChild(li)
+		ulHobbit.appendChild(li)
 	}
 	
-	the_shire.appendChild(ul);
+	the_shire.appendChild(ulHobbit);
 	// hint: create a 'ul' outside the loop into which to append the 'li's
 
 	// hint: get 'The-Shire' by using its id
@@ -97,6 +97,8 @@ function keepItSecretKeepItSafe() {
 	newDiv.setAttribute('id', 'the-ring');
 	newDiv.setAttribute('class', 'magic-imbued-jewelry')
 	
+
+
 	newDiv.append(hobbits[0]);
 	 
 
@@ -178,8 +180,25 @@ function makeBuddies() {
 // ============
 
 function leaveTheShire() {
-	console.log('6: leaveTheShire')
+	console.log('6: leaveTheShire');
+	
+	let ulHobbit = document.createElement("ul")
+	
+	ulHobbit.setAttribute('class', 'hobbit' )
+	const rivendell = document.getElementById('Rivendell') 
+	for(i = 0; i < hobbits.length; i++){
 
+		const li = document.createElement('li');
+
+		li.innerHTML = hobbits[i];
+		ulHobbit.appendChild(li)
+	}
+	
+	rivendell.appendChild(ulHobbit);
+	let mylist = document.querySelector('ul, hobbit')
+	mylist.innerHTML = "";
+	
+		
 	// assemble the `hobbits` and move them to `rivendell`
 }
 
@@ -193,7 +212,9 @@ function leaveTheShire() {
 function beautifulStranger() {
 	console.log('7: beautifulStranger')
 
-	// change the `'Strider'` text to `'Aragorn'`
+	const myNewBuds = document.getElementById('Strider');
+	console.log(myNewBuds);
+	// change the `'Strider'` text to `'Aragzorn'`
 }
 
 // COMMIT YOUR WORK
