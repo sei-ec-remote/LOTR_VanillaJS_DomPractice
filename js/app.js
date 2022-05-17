@@ -59,7 +59,16 @@ makeMiddleEarth()
 
 function makeHobbits() {
 	console.log('2: makeHobbits')
-
+	const theShire = document.getElementById('The-Shire')
+	const hobbitList = document.createElement('ul')
+	theShire.append(hobbitList)
+	hobbits.forEach((hobbit) => {
+		let list = document.createElement('li')
+		hobbitList.append(list)
+		list.innerText = hobbit
+		list.setAttribute('class', hobbit)
+		
+	})
 	// display an `unordered list` of hobbits in the shire
 
 	// give each hobbit a class of `hobbit`
@@ -68,7 +77,7 @@ function makeHobbits() {
 
 	// hint: get 'The-Shire' by using its id
 }
-
+makeHobbits()
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 2 complete - Made the Hobbits".
 
