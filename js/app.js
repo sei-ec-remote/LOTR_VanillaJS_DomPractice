@@ -59,6 +59,7 @@ function makeHobbits() {
 	console.log('2: makeHobbits')
 
 	const hobbitList = document.createElement('ul')
+	hobbitList.setAttribute('id','hobbit-list')
 
 	for (let hobb of hobbits){
 		let hobbitLI = document.createElement('li')
@@ -111,6 +112,7 @@ function makeBaddies() {
 	for( let bad of baddies){
 		let thisBaddie = document.createElement('li')
 		thisBaddie.setAttribute('class' , 'baddy')
+		thisBaddie.setAttribute('id',bad)
 		thisBaddie.appendChild(document.createTextNode(bad))
 		baddieList.appendChild(thisBaddie)
 	}
@@ -131,9 +133,17 @@ function makeBuddies() {
 	console.log('5: makeBuddies')
 
 	// create an `aside` tag
-
+	let myAside = document.createElement('aside')
 	// put an `unordered list` of the `'buddies'` in the aside
-
+	let myAsideList = document.createElement('ul')
+	for( let budd of buddies){
+		let myBudd = document.createElement('li')
+		myBudd.setAttribute('id' , budd)
+		myBudd.appendChild(document.createTextNode(budd))
+		myAsideList.appendChild(myBudd)
+	}
+	myAside.appendChild(myAsideList)
+	document.getElementById('Rivendell').appendChild(myAside)
 	// insert your aside as a child element of `rivendell`
 }
 
@@ -146,7 +156,8 @@ function makeBuddies() {
 
 function leaveTheShire() {
 	console.log('6: leaveTheShire')
-
+	let hobbList = document.getElementById('hobbit-list')
+	document.getElementById('Rivendell').appendChild(hobbList)
 	// assemble the `hobbits` and move them to `rivendell`
 }
 
