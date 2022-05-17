@@ -132,6 +132,7 @@ function makeBuddies() {
   let list = document.createElement("ul");
   buddies.forEach((buddy) => {
     let li = document.createElement("li");
+    li.className = buddy;
     li.innerText = buddy;
     list.appendChild(li);
   });
@@ -164,6 +165,8 @@ function beautifulStranger() {
   console.log("7: beautifulStranger");
 
   // change the `'Strider'` text to `'Aragorn'`
+  let strider = document.querySelector(".Strider");
+  strider.innerText = "Aragorn";
 }
 
 // COMMIT YOUR WORK
