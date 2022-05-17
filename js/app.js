@@ -35,6 +35,7 @@ function makeMiddleEarth() {
 		h1.innerText = `${lands[i]}`
 		article.appendChild(h1)
 		console.log(article)
+		middleEarth.appendChild(article)
 	}
 	//document.getElementById('body')
 	document.body.appendChild(middleEarth)
