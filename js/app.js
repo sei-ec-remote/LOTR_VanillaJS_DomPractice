@@ -233,6 +233,8 @@ function weWantsIt() {
   // Create a div with an id of `'gollum'` and add it to Mordor
   // Remove `the ring` from `Frodo` and give it to `Gollum`
   // Move Gollum into Mount Doom
+  document.createElement("id", "gollum")
+  // didn't know how to do this part
 }
 
 // COMMIT YOUR WORK
@@ -246,6 +248,7 @@ function thereAndBackAgain() {
   console.log("13: thereAndBackAgain");
   // remove `Gollum` and `the Ring` from the document
   // Move all the `hobbits` back to `the shire`
+  // can't do this part
 }
 
 // COMMIT YOUR WORK
