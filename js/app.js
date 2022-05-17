@@ -69,10 +69,10 @@ function makeHobbits() {
 	for (let hobb of hobbits){
 		let myHobbit = new Hobbit(hobb)
 		let hobbitLI = document.createElement('li')
+		hobbitLI.setAttribute('id' , `${myHobbit.name}`)
 		hobbitLI.appendChild(document.createTextNode(myHobbit.name))
 		hobbitList.appendChild(hobbitLI)
 	}
-
 	document.getElementById('The-Shire').appendChild(hobbitList)
 	// display an `unordered list` of hobbits in the shire
 
@@ -93,10 +93,12 @@ function keepItSecretKeepItSafe() {
 	console.log('3: keepItSecretKeepItSafe')
 
 	// create a div with an id of `'the-ring'`
-
+	const myDiv = document.createElement('div')
+	myDiv.setAttribute('id','the-ring')
 	// give the div a class of `'magic-imbued-jewelry'`
-
+	myDiv.setAttribute('class','magic-imbued-jewelry')
 	// add the ring as a child of `Frodo`
+	document.getElementById(hobbits[0]).appendChild(myDiv)
 }
 
 // COMMIT YOUR WORK
