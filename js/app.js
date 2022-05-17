@@ -187,6 +187,8 @@ function theBalrog() {
   // change the `'Gandalf'` text to `'Gandalf the White'`
   // apply the following style to the element, make the // background 'white', add a grey border
   buddies.splice(0, 1, "Gandalf the White");
+  buddies.style.backgroundColor = 'white'
+  buddies.style.border = 'solid', 'grey'
 }
 
 // COMMIT YOUR WORK
@@ -201,6 +203,9 @@ function hornOfGondor() {
   // pop up an alert that the horn of gondor has been blown
   // Boromir's been killed by the Uruk-hai!
   // Remove `Boromir` from the Fellowship
+  alert("the horn of gondor has been blown")
+  alert("Boromir's been killed by the Uruk-hai")
+  // didn't know how to remove from fellowship
 }
 
 // COMMIT YOUR WORK
