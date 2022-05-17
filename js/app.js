@@ -201,6 +201,8 @@ function theBalrog() {
 	// change the `'Gandalf'` text to `'Gandalf the White'`
 	const fellowshipList = document.getElementById('the-fellowship').querySelectorAll('li')
 	// apply the following style to the element, make the // background 'white', add a grey border
+	fellowshipList[0].style.background = "white"
+	fellowshipList[0].style.border = "1px solid grey"
 	fellowshipList[0].innerText = "Gandalf the White"
 }
 
