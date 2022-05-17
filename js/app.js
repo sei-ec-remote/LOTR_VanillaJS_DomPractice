@@ -38,14 +38,13 @@ function makeMiddleEarth() {
 			//   2d. appends each land to the middle-earth section
 			articleLand.appendChild(landsH);
 			middleEarthSection.appendChild(articleLand);
-			
 	}
 
 	// 3. append the section to the body of the DOM.
 	document.body.appendChild(middleEarthSection);
 }
 
-console.log(makeMiddleEarth);
+// console.log(makeMiddleEarth);
 
 
 // COMMIT YOUR WORK
@@ -58,13 +57,26 @@ console.log(makeMiddleEarth);
 function makeHobbits() {
 	console.log('2: makeHobbits')
 
+
+
 	// display an `unordered list` of hobbits in the shire
 
-	// give each hobbit a class of `hobbit`
+	const shireId = document.getElementById('The-Shire');
+	const hobbitUl = document.createElement('ul');
+	hobbitUl.id = "hobbits-name";
 
+	for(let i = 0; i < hobbits.length; i++) {
+		const hobbitsLi = document.createElement("li");
+		hobbitsLi.li = hobbits[i];
+		// give each hobbit a class of `hobbit`
+		hobbitsLi.className = 'hobbit';
+		//add the names of each hobbit into the list element
+		hobbitsLi.innerHTML = hobbits[i];
+		hobbitUl.appendChild(hobbitsLi);
+	}
 	// hint: create a 'ul' outside the loop into which to append the 'li's
-
 	// hint: get 'The-Shire' by using its id
+	shireId.appendChild(hobbitUl);
 }
 
 // COMMIT YOUR WORK
