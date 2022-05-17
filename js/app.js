@@ -191,11 +191,11 @@ function forgeTheFellowShip() {
 
   buddy.forEach((li) => {
     document.querySelector(".the-fellowship").appendChild(li);
-    alert(`${li.innerText} has joined your party`);
+    // alert(`${li.innerText} has joined your party`);
   });
   hobbit.forEach((li) => {
     document.querySelector(".the-fellowship").appendChild(li);
-    alert(`${li.innerText} has joined your party`);
+    // alert(`${li.innerText} has joined your party`);
   });
 }
 
@@ -210,6 +210,10 @@ function theBalrog() {
   console.log("9: theBalrog");
   // change the `'Gandalf'` text to `'Gandalf the White'`
   // apply the following style to the element, make the // background 'white', add a grey border
+  let gandalf = document.querySelector(".Gandalf");
+  gandalf.innerText = "Gandalf the White";
+  gandalf.style.backgroundColor = "white";
+  gandalf.style.border = "2px solid grey";
 }
 
 // COMMIT YOUR WORK
