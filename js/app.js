@@ -271,7 +271,7 @@ gandalf.style.backgroundColor = "white"
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 10 complete - horn of gandor blew and Boromir is dead"
-/*
+
 // ============
 // Chapter 11
 // ============
@@ -298,7 +298,6 @@ let mountDoom = document.createElement("div");
 mountDoom.setAttribute("id", "mount-doom");
 mordor.appendChild(mountDoom);
 }
-	
 
 
 // COMMIT YOUR WORK
