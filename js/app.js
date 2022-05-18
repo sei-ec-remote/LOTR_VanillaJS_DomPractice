@@ -70,9 +70,9 @@ function keepItSecretKeepItSafe() {
 	console.log('3: keepItSecretKeepItSafe')
 	// create a div with an id of `'the-ring'`
 	const theRing = document.createElement('div')
-	theRing.setAttribute('id', 'the-ring')
+	theRing.setAttribute('id', `the-ring`)
 	// give the div a class of `'magic-imbued-jewelry'`
-	theRing.setAttribute('class', 'magic-imbued-jewelry')
+	theRing.setAttribute('class', `magic-imbued-jewelry`)
 	// add the ring as a child of `Frodo`
 	const frodo = document.getElementsByClassName('hobbit')[0]
 	frodo.appendChild(theRing)
@@ -158,13 +158,6 @@ function beautifulStranger() {
 	StriderToAragorn.innerText = `Aragorn`
 	console.log(rivendell)
 }
-// makeMiddleEarth()
-// makeHobbits()
-// keepItSecretKeepItSafe()
-// makeBaddies()
-// makeBuddies()
-// leaveTheShire()
-// beautifulStranger()
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 7 complete - Strider is changed to Aragorn"
 
@@ -176,11 +169,37 @@ function forgeTheFellowShip() {
 	console.log('8: forgeTheFellowShip')
 	// create a new div called `'the-fellowship'` within `rivendell`
 	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
-	// after each character is added make an alert that they // have joined your party
+	// after each character is added make an alert that they have joined your party
+	const fellowship = document.createElement('div')
+	fellowship.setAttribute('id', 'fellowship')
+	const fellowshipUL = document.createElement('ul')
+	// get all list item inside rivendell, no matter they are in div, section, ul, etc.
+	const rivendell = document.getElementById('Rivendell')
+	const rivendellList  = rivendell.querySelectorAll('li')
 
+	for (let i = 0; i < rivendellList.length; i++) {
+		// alert(`${rivendellList[i].innerText} has joined the fellowship`)
+		fellowshipUL.append(rivendellList[i])
+	}
+	fellowship.append(fellowshipUL)
+	rivendell.querySelectorAll('ul')
+	rivendell.appendChild(fellowship)
+	// rivendell.querySelector('aside').remove()
+	
+	rivendell.childNodes[1].remove()
+	rivendell.childNodes[1].remove()
+	// rivendell.removeChild('section')
 	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
+	console.log(rivendell)
 }
-
+makeMiddleEarth()
+makeHobbits()
+keepItSecretKeepItSafe()
+makeBaddies()
+makeBuddies()
+leaveTheShire()
+beautifulStranger()
+forgeTheFellowShip()
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 8 complete - The Fellowship is created"
 
