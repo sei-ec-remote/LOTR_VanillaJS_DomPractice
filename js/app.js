@@ -264,7 +264,7 @@ gandalf.style.backgroundColor = "white"
 	// pop up an alert that the horn of gondor has been blown
 	// Boromir's been killed by the Uruk-hai!
 	// Remove `Boromir` from the Fellowship
-	
+	alert("the horn of gondor has been blown");
 	let theFellowship = document.getElementById("the-fellowship");
     theFellowship.removeChild(theFellowship.lastChild);
 }
@@ -276,6 +276,7 @@ gandalf.style.backgroundColor = "white"
 // Chapter 11
 // ============
 //let sam = fellowshipMembers[5]
+/*
 function itsDangerousToGoAlone() {
 	console.log('11: itsDangerousToGoAlone')
 	// take `Frodo` and `Sam` out of the fellowship and move // them to `Mordor`
@@ -307,24 +308,25 @@ mordor.appendChild(mountDoom);
 // Chapter 12
 // ============
 
+
 function weWantsIt() {
 	console.log('12: weWantsIt')
 	// Create a div with an id of `'gollum'` and add it to Mordor
 	let mordor = document.getElementById("Mordor");
-let gollum = document.createElement("div");
-gollum.setAttribute("id", "gollum");
-mordor.appendChild(gollum);
+	let gollum = document.createElement("div");
+	gollum.setAttribute("id", "gollum");
+	mordor.appendChild(gollum);
 	// Remove `the ring` from `Frodo` and give it to `Gollum`
 	let riv = document.getElementById("Rivendell");
-let frodo = riv.querySelector(".hobbits li");
-let ring = frodo.querySelector("#the-ring");
-frodo.removeChild(ring);
-gollum.appendChild(ring);
+	let frodo = riv.querySelector(".hobbits li");
+	let ring = frodo.querySelector("#the-ring");
+	frodo.removeChild(ring);
+	gollum.appendChild(ring);
 	// Move Gollum into Mount Doom
 	let mountDoom = document.getElementById("mount-doom");
-mordor.removeChild(gollum);
-mountDoom.appendChild(gollum);
-}
+	mordor.removeChild(gollum);
+	mountDoom.appendChild(gollum);
+	}
 	
 
 
@@ -335,20 +337,20 @@ mountDoom.appendChild(gollum);
 // Chapter 13
 // ============
 
-function thereAndBackAgain() {
+   function thereAndBackAgain() {
 	console.log('13: thereAndBackAgain')
 	// remove `Gollum` and `the Ring` from the document
-	// Move all the `hobbits` back to `the shire`
 	let mountDoom = document.getElementById("mount-doom");
-mountDoom.removeChild(mountDoom.firstChild);
-let riv = document.getElementById("Rivendell");
-let hobbits = riv.querySelector(".hobbits");
-riv.removeChild(hobbits);
-
-let theShire = document.getElementById("The-Shire");
-theShire.appendChild(hobbits);
-
-}
+	mountDoom.removeChild(mountDoom.firstChild);
+	// Move all the `hobbits` back to `the shire`
+	let riv = document.getElementById("Rivendell");
+	let hobbits = riv.querySelector(".hobbits");
+	riv.removeChild(hobbits);
+	
+	let theShire = document.getElementById("The-Shire");
+	theShire.appendChild(hobbits);
+	
+	}
 
 
 
