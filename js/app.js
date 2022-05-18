@@ -64,7 +64,7 @@ function makeHobbits() {
 	shireHobbits.setAttribute('id',lands[0])
 	hobbits.forEach((hobbit) =>{
 		const hobbitList = document.createElement('li')
-		hobbitList.setAttribute('class', 'hobbits')
+		hobbitList.setAttribute('class', 'hobbit')
 		hobbitList.innerText = hobbit
 		shireHobbits.append(hobbitList)
 	})
@@ -83,12 +83,14 @@ function makeHobbits() {
 
 function keepItSecretKeepItSafe() {
 	console.log('3: keepItSecretKeepItSafe')
-
+	
 	// create a div with an id of `'the-ring'`
-
+	theRing = document.createElement('div')
+	theRing.setAttribute('id', 'the-ring')
+	theRing.setAttribute('class','magic-imbued-jewelry')
 	// give the div a class of `'magic-imbued-jewelry'`
-
 	// add the ring as a child of `Frodo`
+	document.getElementsByClassName('hobbit')[0].append(theRing)
 }
 
 // COMMIT YOUR WORK
