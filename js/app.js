@@ -171,10 +171,11 @@ function makeBaddies() {
 // ============
 
 function makeBuddies() {
-	console.log('5: makeBuddies')
+	// console.log('5: makeBuddies')
 
 	// create an `aside` tag
 	const buddieCrew = document.createElement('aside');
+	buddieCrew.id = "buddieAsside"
 	// console.log(buddieCrew);
 	// put an `unordered list` of the `'buddies'` in the aside
 	const buddieUnorderedList = document.createElement('ul');
@@ -190,7 +191,7 @@ function makeBuddies() {
 		const buddieOrderedList = document.createElement('li');
 		// give each of the baddies a class of "buddies"
 		buddieOrderedList.classList.add('buddies');
-		console.log(buddieOrderedList);
+		// console.log(buddieOrderedList);
 
 		//connect the class to the unordered list
 		buddieUnorderedList.appendChild(buddieOrderedList);
@@ -241,7 +242,6 @@ function beautifulStranger() {
 	let buddieCrew = document.getElementById('buddieUnorderedList');
 	// console.log(buddieCrew);
 	// console.log(hobbitList)
-	//.children is a DOM manipulation thing - TA told me to do this
 	let strider = document.getElementsByClassName('buddies')[3];
 	// console.log(strider)
 
@@ -255,6 +255,8 @@ function beautifulStranger() {
 // ============
 // Chapter 8
 // ============
+	//need to grab all fellowship members - trying outside of function
+
 
 function forgeTheFellowShip() {
 	console.log('8: forgeTheFellowShip')
@@ -266,8 +268,15 @@ function forgeTheFellowShip() {
 	// console.log(theFellowship)
 	//connect the new div with Rivendell
 	Rivendell.appendChild(theFellowship)
-	console.log(Rivendell)
+	// console.log(Rivendell)
+	let fellowshipMembers = document.getElementById('hobbitsUnorderedList')
+	console.log(fellowshipMembers)
 
+
+	for (let i = 0; i < fellowshipMembers.length; i++){
+		theFellowship.appendChild(fellowshipMembers[i]);
+		console.log(theFellowship)
+	}
 
 	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
 
