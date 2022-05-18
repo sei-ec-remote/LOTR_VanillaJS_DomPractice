@@ -204,7 +204,20 @@ function leaveTheShire() {
 
 function beautifulStranger() {
 	console.log('7: beautifulStranger')
+	let AsideRivendell = document.querySelector('aside')
+	let saviors = AsideRivendell.firstElementChild
+	console.log(saviors)
 
+	let friends = saviors.children
+	console.log(friends)
+	console.log(friends[3].innerText)
+
+	for (let i = 0; i < friends.length; i++) {
+		console.log(friends[i])
+		if (friends[i].innerText.toLowerCase() === 'strider') {
+			friends[i].innerText = 'Aragorn'
+		}
+	}
 	// change the `'Strider'` text to `'Aragorn'`
 }
 
