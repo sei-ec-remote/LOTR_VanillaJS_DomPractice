@@ -25,6 +25,12 @@ const hobbits3 = [
 	`Meriadoc "Merry" Brandybuck`,
 	`Peregrin "Pippin" Took`,
 ]
+const hobbits4 = [
+	`Frodo Baggins`,
+	`Samwise "Sam" Gamgee`,
+	`Meriadoc "Merry" Brandybuck`,
+	`Peregrin "Pippin" Took`,
+]
 const buddies = ['Gandalf the Grey', 'Legolas', 'Gimli', 'Strider', 'Boromir']
 const buddies1 = ['Gandalf the Grey', 'Legolas', 'Gimli', 'Strider', 'Boromir']
 const buddies2 = ['Gandalf the Grey', 'Legolas', 'Gimli', 'Strider', 'Boromir']
@@ -334,7 +340,30 @@ function weWantsIt() {
 function thereAndBackAgain() {
 	console.log('13: thereAndBackAgain')
 	// remove `Gollum` and `the Ring` from the document
+	let gollum = document.getElementById('gollum')
+	// gollum.remove()
+	let ring = document.getElementsByClassName("magic-imbued-jewelry")
+	// ring.remove()
 	// Move all the `hobbits` back to `the shire`
+	let list = document.createElement("ul")
+	list.setAttribute("id", "list")
+	let shire = document.getElementById("The-Shire")
+	shire.append(list)
+	for (let i = 0; i < hobbits.length; i++){
+		
+		hobbits[i] = document.createElement("li")
+		hobbits[i].textContent = hobbits4[i]
+		list.append(hobbits[i])
+	}
+	let remove = document.getElementById("5")
+	let remove1 = document.getElementById("6")
+	let remove2 = document.getElementById("7")
+	let remove3 = document.getElementById("8")
+
+	remove.innerHTML = " "
+	remove1.innerHTML = " "
+	remove2.innerHTML = " "
+	remove3.innerHTML = " "
 }
 
 // COMMIT YOUR WORK
