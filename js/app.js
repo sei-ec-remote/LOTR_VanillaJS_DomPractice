@@ -77,6 +77,7 @@ function makeHobbits() {
     }
     // Adds each hobbit a class of `hobbit`
     listItem.setAttribute('class', 'hobbit');
+	listItem.id = hobbit;
     // Sets the inner text of each hobbit list item the value of the elements in the hobbits array.
     listItem.innerText = hobbit;
     // Appends all the list item inside the ul tag called hobbitsList.
@@ -166,7 +167,8 @@ function makeBuddies() {
   buddies.forEach((buddy) => {
     // Creates a li tag element every iteration.
     let buddiesItem = document.createElement('li');
-	buddiesItem.classList.add('buddy')
+	buddiesItem.classList.add('buddy');
+	buddiesItem.id = buddy;
     // Sets the element value as the inner text of the li item.
     buddiesItem.innerText = buddy;
     buddiesList.appendChild(buddiesItem);
@@ -257,6 +259,10 @@ function theBalrog() {
   console.log('9: theBalrog');
   // change the `'Gandalf'` text to `'Gandalf the White'`
   // apply the following style to the element, make the // background 'white', add a grey border
+  let gandalf = document.getElementById('Gandalf the Grey');
+  gandalf.innerText = "Gandalf the White";
+  gandalf.style.background = "white";
+  gandalf.style.border = "2px solid grey";
 }
 
 // COMMIT YOUR WORK
