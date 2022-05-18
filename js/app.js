@@ -258,22 +258,20 @@ gandalf.style.backgroundColor = "white"
 // ============
 // Chapter 10
 // ============
-/*
+
    function hornOfGondor() {
 	console.log('10: hornOfGondor')
 	// pop up an alert that the horn of gondor has been blown
 	// Boromir's been killed by the Uruk-hai!
 	// Remove `Boromir` from the Fellowship
 	
-	
 	let theFellowship = document.getElementById("the-fellowship");
     theFellowship.removeChild(theFellowship.lastChild);
-
 }
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 10 complete - horn of gandor blew and Boromir is dead"
-
+/*
 // ============
 // Chapter 11
 // ============
