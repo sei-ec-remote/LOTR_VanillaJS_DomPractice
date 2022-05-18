@@ -87,7 +87,7 @@ function keepItSecretKeepItSafe() {
 
 	// create a div with an id of `'the-ring'`
 	const ringDiv = document.createElement("div");
-	ringDiv.setAttribute("id", "the-ring");
+	ringDiv.setAttribute("id", "the-ring"); //had to change to set attribute because other way was not working so tried this way
 	// give the div a class of `'magic-imbued-jewelry'`
 	ringDiv.classList.add('magic-imbued-jewelry');
 
@@ -142,9 +142,11 @@ function makeBuddies() {
 	// put an `unordered list` of the `'buddies'` in the aside
 		const rivendellId = document.getElementById('Rivendell');
 		const buddiesUl = document.createElement('ul');
+
 	
 		for(let i = 0; i < buddies.length; i++) {
 			const buddiesLi = document.createElement("li");
+			buddiesLi.classList.add('buddy');
 			buddiesLi.innerHTML = buddies[i];
 			buddiesUl.appendChild(buddiesLi);
 		}
@@ -166,11 +168,10 @@ function leaveTheShire() {
 
 	// assemble the `hobbits` and move them to `rivendell`
 
-	let hobbitUl = document.getElementById('hobbit-id');
-	let rivendellId = document.getElementById('Rivendell');
+	const hobbitUl = document.getElementById('hobbit-id');
+	const rivendellId = document.getElementById('Rivendell');
 
 	rivendellId.appendChild(hobbitUl);
-
 }
 
 // COMMIT YOUR WORK
@@ -184,6 +185,9 @@ function beautifulStranger() {
 	console.log('7: beautifulStranger')
 
 	// change the `'Strider'` text to `'Aragorn'`
+	const getBuddy = document.getElementsByClassName('buddy');
+	getBuddy[3].innerHTML = 'Aragorn';
+
 }
 
 // COMMIT YOUR WORK
@@ -196,7 +200,13 @@ function beautifulStranger() {
 function forgeTheFellowShip() {
 	console.log('8: forgeTheFellowShip')
 	// create a new div called `'the-fellowship'` within `rivendell`
+	const fellowshipDiv = createElement('div');
+	fellowshipDiv.setAttribute('div', 'the-fellowship');
+	const rivendellId = document.getElementById('Rivendell');
+	rivendellId.appendChild(fellowshipDiv);
+	
 	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
+	
 	// after each character is added make an alert that they // have joined your party
 
 	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
