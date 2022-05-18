@@ -153,15 +153,15 @@ function makeBuddies() {
   let aside = document.createElement("aside");
 
   // put an `unordered list` of the `'buddies'` in the aside
-  let theFellowship = document.createElement("ul");
+  let nonHobbits = document.createElement("ul");
 
   for (i = 0; i < buddies.length; i++) {
     let addBuddies = document.createElement("li");
     addBuddies.innerHTML = buddies[i];
-    theFellowship.appendChild(addBuddies);
+    nonHobbits.appendChild(addBuddies);
   }
 
-  aside.appendChild(theFellowship);
+  aside.appendChild(nonHobbits);
   let rivendell = document.getElementById("Rivendell");
   rivendell.appendChild(aside);
 
@@ -234,7 +234,20 @@ function beautifulStranger() {
 function forgeTheFellowShip() {
   console.log("8: forgeTheFellowShip");
   // create a new div called `'the-fellowship'` within `rivendell`
+  let theFellowship = document.createElement("div");
+  theFellowship.setAttribute("class", "the-fellowship");
+  console.log(theFellowship);
+  let rivendell = document.getElementById("Rivendell");
+  rivendell.appendChild(theFellowship);
+
   // add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
+  let = fellowshipMembers = rivendell.querySelectorAll("li");
+  for (i = 0; i < fellowshipMembers.lenght; i++) {
+    theFellowship.appendChild(fellowshipMembers[i]);
+    alert(fellowshipMembers[i].textContent + " has joined the fellowship.");
+  }
+  console.log(fellowshipMembers);
+
   // after each character is added make an alert that they // have joined your party
 
   // NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
