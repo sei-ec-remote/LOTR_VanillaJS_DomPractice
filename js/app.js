@@ -149,7 +149,9 @@ function makeBuddies() {
 	for (let i = 0; i < buddies.length; i++){
 		buddies[i] = document.createElement("li")
 		buddies[i].textContent = buddies1[i]
+		buddies[i].setAttribute("id", i) 
 		aside.append(buddies[i])
+
 	}
 	// insert your aside as a child element of `rivendell`
 	let rivendell = document.getElementById("Rivendell")
@@ -188,6 +190,8 @@ function beautifulStranger() {
 	console.log('7: beautifulStranger')
 
 	// change the `'Strider'` text to `'Aragorn'`
+	let strider = document.getElementById("3")
+	strider.textContent = "Aragorn"
 }
 
 // COMMIT YOUR WORK
