@@ -136,7 +136,7 @@ function makeBaddies() {
 		list.setAttribute('class', baddy)
 	})
 	// give each of the baddies a class of "baddy"
-	baddiesList.setAttribute('class', 'baddie')
+	baddiesList.setAttribute('class', 'baddy')
 	// remember to append them to Mordor
 	mordor.append(baddiesList)
 }
@@ -153,11 +153,27 @@ function makeBuddies() {
 	console.log('5: makeBuddies')
 
 	// create an `aside` tag
+	let Aside = document.createElement('aside')
 
 	// put an `unordered list` of the `'buddies'` in the aside
-
+	const buddiesList = document.createElement('ul')
+	Aside.append(buddiesList)
+	
+	buddies.forEach((buddy)=>{
+		let list = document.createElement('li')
+		buddiesList.append(list)
+		list.innerText = buddy
+		// give it the class of each buddy
+		list.setAttribute('class', buddy)
+	})
+	// give each of the buddies a class of "buddy"
+	buddiesList.setAttribute('class', 'buddy')
+	// remember to append them to Rivendell
+	let rivendell = document.getElementById("Rivendell")
 	// insert your aside as a child element of `rivendell`
+	rivendell.append(Aside)
 }
+makeBuddies()
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 5 complete - Made the Buddies".
