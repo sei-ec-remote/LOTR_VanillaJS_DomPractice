@@ -183,14 +183,20 @@ function forgeTheFellowShip() {
   let fellowship = document.createElement("div");
   fellowship.setAttribute("id", "the-fellowship");
   let fellowshipUl = document.createElement("ul");
-  document.querySelector("#Rivendell").appendChild(fellowship);
+  fellowship.appendChild(fellowshipUl);
+
+  let rivendell = document.querySelector("#Rivendell");
+  rivendell.appendChild(fellowship);
+
+  let rivendellLi = document.querySelectorAll("#Rivendell li");
+  console.log(rivendellLi);
+
   // add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
-  let hobbitsBuddiesArr = [...hobbits, ...buddies];
-  for (let ele of hobbitsBuddiesArr) {
-    let fellowshipLi = document.createElement("li");
-    fellowshipLi.innerText = ele;
-    fellowshipUl.appendChild(fellowshipLi);
-    alert(`${ele} joined your party`);
+
+  for (let ele of rivendellLi) {
+    fellowshipUl.appendChild(ele);
+    console.log(ele);
+    alert(`${ele.innerText} joined your party`);
   }
   // after each character is added make an alert that they // have joined your party
 
@@ -228,6 +234,8 @@ function hornOfGondor() {
   alert("the horn of gondor has been blown");
   // Boromir's been killed by the Uruk-hai!
   // Remove `Boromir` from the Fellowship
+  console.log(document.querySelector("#Boromir"));
+  document.querySelector("#Boromir").remove();
 }
 
 // COMMIT YOUR WORK
@@ -240,7 +248,21 @@ function hornOfGondor() {
 function itsDangerousToGoAlone() {
   console.log("11: itsDangerousToGoAlone");
   // take `Frodo` and `Sam` out of the fellowship and move // them to `Mordor`
+  let frodo = document.querySelectorAll("#the-fellowship li")[0];
+  let sam = document.querySelectorAll("#the-fellowship li")[1];
+  console.log(frodo);
+  console.log(sam);
+  console.log(document.querySelector("#Mordor ul").innerHTML);
+  document.querySelector("#Mordor ul").innerHTML += frodo;
+  document.querySelector("#Mordor ul").innerHTML += sam;
+
+  frodo.remove();
+  sam.remove();
+
   // add a div with an id of `'mount-doom'` to `Mordor`
+  const mountDoom = document.createElement("div");
+  mountDoom.setAttribute("id", "mount-doom");
+  document.querySelector("#Mordor").appendChild(mountDoom);
 }
 
 // COMMIT YOUR WORK
