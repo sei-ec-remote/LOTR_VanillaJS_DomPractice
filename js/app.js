@@ -182,11 +182,14 @@ function forgeTheFellowShip() {
   // create a new div called `'the-fellowship'` within `rivendell`
   let fellowship = document.createElement("div");
   fellowship.setAttribute("id", "the-fellowship");
+  let fellowshipUl = document.createElement("ul");
   document.querySelector("#Rivendell").appendChild(fellowship);
   // add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
   let hobbitsBuddiesArr = [...hobbits, ...buddies];
   for (let ele of hobbitsBuddiesArr) {
-    fellowship.innerText += ele;
+    let fellowshipLi = document.createElement("li");
+    fellowshipLi.innerText = ele;
+    fellowshipUl.appendChild(fellowshipLi);
     alert(`${ele} joined your party`);
   }
   // after each character is added make an alert that they // have joined your party
@@ -222,6 +225,7 @@ function theBalrog() {
 function hornOfGondor() {
   console.log("10: hornOfGondor");
   // pop up an alert that the horn of gondor has been blown
+  alert("the horn of gondor has been blown");
   // Boromir's been killed by the Uruk-hai!
   // Remove `Boromir` from the Fellowship
 }
