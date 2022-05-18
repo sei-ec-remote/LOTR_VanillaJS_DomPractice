@@ -25,35 +25,35 @@ function makeMiddleEarth() {
 const midEarth = document.createElement('section')
 midEarth.setAttribute('id', 'middle-earth');
 // midEarth.innerText = "hello world"
-document.body.appendChild(midEarth)
-console.log(midEarth)
+
+
 	// 2. use a for loop to iterate over the lands array that does the following:
 for(let i = 0; i < lands.length; i++){
 	if (i === 0){
 		let shire = document.createElement('article');
 		shire.setAttribute('id', 'the-shire');
-		document.getElementById('middle-earth').appendChild(shire);
+		midEarth.appendChild(shire);
 		shire.innerHTML = "<h1>The Shire</h1>"
 		console.log(shire)
 	} else if(i === 1) {
 		let rivendell = document.createElement('article');
 		rivendell.setAttribute('id', 'rivendell');
-		document.getElementById('middle-earth').appendChild(rivendell);
+		midEarth.appendChild(rivendell);
 		rivendell.innerHTML = "<h1>Rivendell</h1>"
 		console.log(rivendell)
 	} else if(i === 2) {
 		let mordor = document.createElement('article');
 		mordor.setAttribute('id', 'mordor');
-		document.getElementById('middle-earth').appendChild(mordor);
+		midEarth.appendChild(mordor);
 		mordor.innerHTML = "<h1>Mordor</h1>"
 		console.log(mordor)
 	}
 	
 }
-
+document.body.appendChild(midEarth)
 	
 }
-	console.log(makeMiddleEarth())
+	makeMiddleEarth()
 	
 
 	//   2a. creates an article tag (there should be one for each land when the loop is done)
@@ -76,6 +76,45 @@ for(let i = 0; i < lands.length; i++){
 
 function makeHobbits() {
 	console.log('2: makeHobbits')
+	let allHobbits = document.createElement('ul');
+	
+	
+	
+	for(let i = 0; i < hobbits.length; i++) {
+		if( i === 0) {
+			frodo = document.createElement('li');
+			frodo.setAttribute('class', 'hobbit');
+			frodo.innerText = 'Frodo Baggins'
+			console.log(frodo)
+			// allHobbits.appendChild(hobbitsLI)
+			// hobbits.textContent = `Frodo Baggins`
+			// document.getElementById('the-shire').appendChild(hobbitsLI)
+		} else if (i === 1) {
+			sam = document.createElement('li');
+			sam.setAttribute('class', 'hobbit');
+			sam.innerText = `Samwise "Sam" Gamgee`
+			console.log(sam)
+		} else if (i === 2) {
+			merry = document.createElement('li');
+			merry.setAttribute('class', 'hobbit');
+			merry.innerText = `Meriadoc "Merry" Brandybuck`
+			console.log(merry)
+		} else if (i === 3) {
+			
+			pere = document.createElement('li');
+			pere.setAttribute('class', 'hobbit');
+			pere.innerText = `Peregrin "Pippin" Took`
+			console.log(pere)
+		}
+		
+		
+	}
+	
+	document.getElementById('the-shire').append(allHobbits)
+		allHobbits.append(frodo);
+		allHobbits.append(sam);
+		allHobbits.append(merry);
+		allHobbits.append(pere);
 
 	// display an `unordered list` of hobbits in the shire
 
@@ -85,6 +124,8 @@ function makeHobbits() {
 
 	// hint: get 'The-Shire' by using its id
 }
+
+makeHobbits()
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 2 complete - Made the Hobbits".
