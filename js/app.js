@@ -92,7 +92,7 @@ function makeHobbits() {
 	document.getElementById('The-Shire').appendChild(hobbitsList);
 	// console.log(body);
 }
-makeHobbits();
+// makeHobbits();
 
 
 // COMMIT YOUR WORK
@@ -122,14 +122,14 @@ function keepItSecretKeepItSafe() {
 	//have to pull the list (don't need to create it again)
 	let hobbitList = document.querySelector('ul');
 	// console.log(hobbitList)
-	//.children is a DOM manipulation thing
+	//.children is a DOM manipulation thing - TA told me to do this
 	let frodo = hobbitList.children[0];
 	//need to pull from the hobbits array and the class/list
 	
 	frodo.appendChild(ringContainer);
 	// console.log(frodo);
 }
-keepItSecretKeepItSafe();
+// keepItSecretKeepItSafe();
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 3 complete - Made the ring and gave it to Frodo".
@@ -177,6 +177,10 @@ function makeBuddies() {
 	// console.log(buddieCrew);
 	// put an `unordered list` of the `'buddies'` in the aside
 	const buddieUnorderedList = document.createElement('ul');
+
+	//need to connect the unordered list to he aside
+	buddieCrew.appendChild(buddieUnorderedList)
+
 	// insert your aside as a child element of `rivendell`
 
 	buddies.forEach( friends => {
