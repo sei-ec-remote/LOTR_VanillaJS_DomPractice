@@ -257,6 +257,7 @@ function beautifulStranger() {
 // ============
 	//need to grab all fellowship members - trying outside of function
 
+// FIXME
 
 function forgeTheFellowShip() {
 	console.log('8: forgeTheFellowShip')
@@ -324,6 +325,8 @@ function hornOfGondor() {
 	// pop up an alert that the horn of gondor has been blown
 	// Boromir's been killed by the Uruk-hai!
 	// Remove `Boromir` from the Fellowship
+	alert("The horn of Gondor has been blown")
+
 }
 
 // COMMIT YOUR WORK
