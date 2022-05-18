@@ -300,8 +300,46 @@ hornOfGondor()
 function itsDangerousToGoAlone() {
 	console.log('11: itsDangerousToGoAlone')
 	// take `Frodo` and `Sam` out of the fellowship and move // them to `Mordor`
+	const mordor = document.getElementById('Mordor')
+	console.log(mordor)
+	const MordorList = document.createElement('ul')
+	const hobbitsInRivendell = document.getElementsByClassName('hobbit')
+	console.log(hobbitsInRivendell)
+	// console.log(hobbitsInRivendell.length)
+	// console.log(hobbitsInRivendell[0].innerText)
+	// console.log(hobbitsInRivendell[1].innerText)
+	// console.log(hobbitsInRivendell[2].innerText)
+	// console.log(hobbitsInRivendell[3].innerText)
+	// const Frodo = hobbitsInRivendell.lastChild
+	// console.log(Frodo)
+	// MordorList.append(Frodo)
+	// console.log(MordorList)
+	//since appending hobbits to Mordor changes hobbitsInRivendell's size, I will use 
+	//a for loop inside of a while loop. So each iteration of the for loop, i<hobbitsInRivendell.length changes each time a hobbit is removed
+	//new approach: give classes to the two hobbits. move them, then remove classes
+	
+	for (let i=0; i<hobbitsInRivendell.length; i++){	
+		if (hobbitsInRivendell[i].innerText.toLowerCase() === 'frodo baggins' || hobbitsInRivendell[i].innerText.toLowerCase() === 'samwise "sam" gamgee'){
+			console.log(`${hobbitsInRivendell[i].innerText} is going to move`)
+			hobbitsInRivendell[i].classList.add('mover')
+		}
+	}
+	const movers = document.getElementsByClassName('mover')
+	
+
+	while (movers.length > 0) {
+		console.log(`${movers[0]} is headed to Mordor`)
+		MordorList.append(movers[0])	
+	}
+
+	console.log(MordorList)
+	mordor.append(MordorList)
 	// add a div with an id of `'mount-doom'` to `Mordor`
+	const mountDoom = document.createElement('div')
+	mountDoom.setAttribute('id', 'mount-doom')
+	mordor.append(mountDoom)
 }
+itsDangerousToGoAlone()
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 11 complete - Sam and Frodo are in Mordor and Mount Doom has been created"
