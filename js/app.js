@@ -113,6 +113,7 @@ function makeBaddies() {
 	// display an unordered list of baddies in Mordor
 	const mordorId = document.getElementById('Mordor');
 	const baddiesUl = document.createElement('ul');
+	baddiesUl.setAttribute('id', 'baddies-id')
 
 	for(let i = 0; i < baddies.length; i++) {
 		const baddiesLi = document.createElement("li");
@@ -142,7 +143,7 @@ function makeBuddies() {
 	// put an `unordered list` of the `'buddies'` in the aside
 		const rivendellId = document.getElementById('Rivendell');
 		const buddiesUl = document.createElement('ul');
-
+		buddiesUl.setAttribute('id', 'buddies-id');
 	
 		for(let i = 0; i < buddies.length; i++) {
 			const buddiesLi = document.createElement("li");
@@ -200,14 +201,23 @@ function beautifulStranger() {
 function forgeTheFellowShip() {
 	console.log('8: forgeTheFellowShip')
 	// create a new div called `'the-fellowship'` within `rivendell`
-	const fellowshipDiv = createElement('div');
-	fellowshipDiv.setAttribute('div', 'the-fellowship');
+	const fellowshipDiv = document.createElement('div');
+	fellowshipDiv.setAttribute('id', 'the-fellowship');
+	const fellowUl = document.createElement('ul');
+	fellowUl.setAttribute('id', 'the-fellowship');
 	const rivendellId = document.getElementById('Rivendell');
 	rivendellId.appendChild(fellowshipDiv);
-	
+
 	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
-	
-	// after each character is added make an alert that they // have joined your party
+	const buddiesAndHobb = rivendellId.querySelectorAll('li');
+
+	for(let i = 0; i < buddiesAndHobb.length; i++) {
+		// after each character is added make an alert that they // have joined your party
+		alert(`${buddiesAndHobb[i].innerText} have joined your party`)
+		fellowUl.appendChild(buddiesAndHobb[i]);
+	}
+
+	fellowshipDiv.append(fellowUl);
 
 	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
 }
