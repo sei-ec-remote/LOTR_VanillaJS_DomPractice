@@ -325,7 +325,7 @@ function hornOfGondor() {
 	// pop up an alert that the horn of gondor has been blown
 	// Boromir's been killed by the Uruk-hai!
 	// Remove `Boromir` from the Fellowship
-	alert("The horn of Gondor has been blown")
+	alert("The horn of Gondor has been blown. Boromir's been killed by the Uruk-hai!")
 
 }
 
@@ -340,6 +340,13 @@ function itsDangerousToGoAlone() {
 	console.log('11: itsDangerousToGoAlone')
 	// take `Frodo` and `Sam` out of the fellowship and move // them to `Mordor`
 	// add a div with an id of `'mount-doom'` to `Mordor`
+	const mountDoom = document.createElement('div');
+	//adding the id to the div I just created
+	mountDoom.id ='mount-doom';
+	// console.log(mountDoom);
+	//this is how you connect the list of the hobbits to the shire, don't need to connect it to the whole body
+	document.getElementById('Mordor').appendChild(mountDoom);
+	
 }
 
 // COMMIT YOUR WORK
