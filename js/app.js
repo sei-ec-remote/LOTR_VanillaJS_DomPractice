@@ -149,7 +149,8 @@ function makeBuddies() {
 
 function leaveTheShire() {
 	console.log('6: leaveTheShire')
-
+	const newListHobits = document.getElementById('The-Shire').childNodes[1];
+	document.getElementById('Rivendell').appendChild(newListHobits);
 	// assemble the `hobbits` and move them to `rivendell`
 }
 
