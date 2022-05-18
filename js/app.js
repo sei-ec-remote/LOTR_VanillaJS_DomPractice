@@ -102,25 +102,25 @@
 // Chapter 4
 // ============
 
-    function makeBaddies() {
-    console.log('4: makeBaddies')
+    //function makeBaddies() {
+    //console.log('4: makeBaddies')
 
 	// display an unordered list of baddies in Mordor
 
-	const mordor = document.getElementById("Mordor")
-	const ulBaddiesList = document.createElement("ui");
-    liBaddiesList.className = "baddies";
+	//const mordor = document.getElementById("Mordor")
+	//const ulBaddiesList = document.createElement("ui");
+    //liBaddiesList.className = "baddies";
 	
 	// give each of the baddies a class of "baddy"
-	for(let i = 0; i <baddies.length; i++) {
-		const liliBaddies = document.createId("li");
-		liBaddies.textContent = baddies[i];
-		liBaddies.className = "baddy";
-		ulBaddiesList.appendChild(ulBaddiesList);
+	//for(let i = 0; i <baddies.length; i++) {
+	//	const liliBaddies = document.createId("li");
+	//	liBaddies.textContent = baddies[i];
+	//	liBaddies.className = "baddy";
+	//	ulBaddiesList.appendChild(ulBaddiesList);
 
 		// remember to append them to Mordor
-    mordor.appendChild(ulBaddiesList);
-  }
+    //mordor.appendChild(ulBaddiesList);
+  //}
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 4 complete - Made the Baddies"..
@@ -129,15 +129,25 @@
 // Chapter 5
 // ============
 
-//function makeBuddies() {
-//	console.log('5: makeBuddies')
+function makeBuddies() {
+console.log('5: makeBuddies')
 
-	// create an `aside` tag
+// create an `aside` tag
+const asideBuddies = document.createElement("aside");
+ // put an `unordered list` of the `'buddies'` in the aside
+    asideBuddies.id = "buddies";
+    const ulBuddiesList = document.createElement("ul");
+    ulBuddiesList.className = "buddies";
+    for (let i = 0; i < buddies.length; i++) {
+	const liBuddies = document.createElement("li");
+	liBuddies.textContent = buddies[i];
+	liBuddies.className = "buddy";
+	ulBuddiesList.appendChild(liBuddies);
+}
+// insert your aside as a child element of `rivendell`
+document.querySelector(#Rivendell").appendChild(asideTag);
 
-	// put an `unordered list` of the `'buddies'` in the aside
 
-	// insert your aside as a child element of `rivendell`
-//}
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 5 complete - Made the Buddies".
