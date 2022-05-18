@@ -212,8 +212,14 @@ function leaveTheShire() {
 function beautifulStranger() {
 	console.log('7: beautifulStranger')
 
-	const myNewBuds = document.getElementById('Strider');
-	console.log(myNewBuds);
+	// const myNewBud = document.querySelector('li, buddies');
+	const liS = document.querySelectorAll('li, .buddies')
+	const arr = Array.from(liS)
+	for (const [index,liS] of arr.entries()){
+  	//console.log(liS);
+	}
+	liS[4].innerHTML = "Aragzorn"
+	
 	// change the `'Strider'` text to `'Aragzorn'`
 }
 
