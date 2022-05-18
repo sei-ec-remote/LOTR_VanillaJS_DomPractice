@@ -166,6 +166,7 @@ function makeBuddies() {
   buddies.forEach((buddy) => {
     // Creates a li tag element every iteration.
     let buddiesItem = document.createElement('li');
+	buddiesItem.classList.add('buddy')
     // Sets the element value as the inner text of the li item.
     buddiesItem.innerText = buddy;
     buddiesList.appendChild(buddiesItem);
@@ -218,11 +219,32 @@ function beautifulStranger() {
 // Chapter 8
 // ============
 
-// create a new div called `'the-fellowship'` within `rivendell`
-// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
-// after each character is added make an alert that they // have joined your party
+function forgeTheFellowShip() {
+	console.log('8: forgeTheFellowShip');
+	// create a new div called `'the-fellowship'` within `rivendell`
+	let theFellowship = document.createElement('div');
+	theFellowship.id = "the-fellowship";
+	let theFellowshipList = document.createElement('ul');
+	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
+	// Get the elements with the class name "hobbit" and store it as an array.
+	let hobbitsList = [...document.getElementsByClassName('hobbit')]
+	// Get the elements with the class name "buddy" and store it as an array.
+	let buddiesList = [...document.getElementsByClassName('buddy')]
+	
+	for(let i = 0; i < hobbitsList.length; i++) {
+		theFellowshipList.appendChild(hobbitsList[i]);
+		alert(`${hobbitsList[i].innerText} joined your party`)
+	}
 
-// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
+	for(let i = 0; i < buddiesList.length; i++) {
+		theFellowshipList.appendChild(buddiesList[i]);
+		alert(`${buddiesList[i].innerText} joined your party`)
+	}
+	theFellowship.appendChild(theFellowshipList);
+	// after each character is added make an alert that they // have joined your party
+	document.getElementById('Rivendell').appendChild(theFellowship);
+	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
+  }
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 8 complete - The Fellowship is created"
