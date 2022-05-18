@@ -182,6 +182,7 @@ function beautifulStranger() {
 	let riv = document.getElementById("Rivendell")
 	let Strider = riv.querySelectorAll("li")[3]
 	Strider.textContent = "Aragorn";
+	const shire = document.getElementById(The-Shire)
 	let hobbitList = shire.querySelector("ul")
 }
 
@@ -197,17 +198,27 @@ function beautifulStranger() {
 function forgeTheFellowShip() {
 	console.log('8: forgeTheFellowShip')
 	// create a new div called `'the-fellowship'` within `rivendell`
-	let theFellowShip = document.createElement("div")
-	theFellowShip.setAttribute("id", "the-fellowship")
-	for (let i = 0; i < fellowshipMembers.length; i++) {
-		theFellowShip.appendChild(fellowshipMembers[i])		
-	}
+	const shire = document.getElementById("The-Shire")
+let riv = document.getElementById("Rivendell")
 
+let theFellowship = document.createElement("div")
+theFellowship.setAttribute("id", "the-fellowship")
+riv.appendChild(theFellowship);
+
+
+for(let i = 0; i < hobbits.length; i++) {
+    theFellowship.appendChild(document.createTextNode(hobbits[i]));
+    }
+    for (let i = 0; i < buddies.length; i++) {
+    theFellowship.appendChild(document.createTextNode(buddies[i]));
+    }
+    alert("hobbits and buddies have joined your party!");
+    //let hobbitList = shire.querySelector("ul")
 	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
 
-	let fellowshipMembers = rivendell.querySelectorAll(li)
+
 	// after each character is added make an alert that they // have joined your party
-   rivendell.appendChild(forgeTheFellowShip)
+
 	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
 }
 
@@ -222,6 +233,10 @@ function theBalrog() {
 	console.log('9: theBalrog')
 	// change the `'Gandalf'` text to `'Gandalf the White'`
 	// apply the following style to the element, make the // background 'white', add a grey border
+	let Gandalf = fellowshipMembers
+	Gandalf.textContent = "Gandalf the White";
+	Gandalf.style.border = "3px solid grey"
+	Gandalf.style.backgroundColor = "white"
 }
 
 // COMMIT YOUR WORK
@@ -236,6 +251,9 @@ function hornOfGondor() {
 	// pop up an alert that the horn of gondor has been blown
 	// Boromir's been killed by the Uruk-hai!
 	// Remove `Boromir` from the Fellowship
+	alert("the horn of gondor has been blown")
+	let Boromir = fellowshipMembers[4]
+	Boromir.removeChild(Boromir)
 }
 
 // COMMIT YOUR WORK
@@ -249,6 +267,8 @@ function itsDangerousToGoAlone() {
 	console.log('11: itsDangerousToGoAlone')
 	// take `Frodo` and `Sam` out of the fellowship and move // them to `Mordor`
 	// add a div with an id of `'mount-doom'` to `Mordor`
+	Mordor.appendChild(Frodo)
+	Mordor.appendChild(Sam)
 }
 
 // COMMIT YOUR WORK
