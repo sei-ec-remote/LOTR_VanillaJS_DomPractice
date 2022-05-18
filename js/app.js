@@ -126,12 +126,19 @@ function makeBaddies() {
   console.log("4: makeBaddies");
 
   // display an unordered list of baddies in Mordor
-
+  let orcsNmore = document.createElement("ul");
   // give each of the baddies a class of "baddy"
 
+  for (i = 0; i < baddies.length; i++) {
+    let addTheBaddies = document.createElement("li");
+    addTheBaddies.innerHTML = baddies[i];
+    addTheBaddies.setAttribute("class", "baddy");
+    orcsNmore.appendChild(addTheBaddies);
+  }
   // remember to append them to Mordor
+  let mordor = document.getElementById("Mordor");
+  mordor.appendChild(orcsNmore);
 }
-
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 4 complete - Made the Baddies"..
 
