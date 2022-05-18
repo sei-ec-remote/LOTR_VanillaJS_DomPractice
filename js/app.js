@@ -285,7 +285,7 @@ function itsDangerousToGoAlone() {
 	moveMordor.appendChild(sam);
 
 	// add a div with an id of `'mount-doom'` to `Mordor`
-	const mountDoomDiv = createElement('div');
+	const mountDoomDiv = document.createElement('div');
 	mountDoomDiv.setAttribute('id', 'mount-doom');
 	const mordorId = document.getElementById('Mordor');
 	mordorId.appendChild(mountDoomDiv);
@@ -302,8 +302,17 @@ function itsDangerousToGoAlone() {
 function weWantsIt() {
 	console.log('12: weWantsIt')
 	// Create a div with an id of `'gollum'` and add it to Mordor
+	const gollumDiv = document.createElement('div');
+	gollumDiv.setAttribute('id', 'gollum');
+	const mordorId = document.getElementById('Mordor');
+	mordorId.appendChild(gollumDiv);
+
 	// Remove `the ring` from `Frodo` and give it to `Gollum`
+	const ring = document.getElementById('the-ring');
+	gollumDiv.appendChild(ring);
 	// Move Gollum into Mount Doom
+	const mountDoom = document.getElementById('mount-doom');
+	mountDoom.appendChild(gollumDiv);
 }
 
 // COMMIT YOUR WORK
