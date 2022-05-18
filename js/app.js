@@ -149,8 +149,8 @@ function leaveTheShire() {
 
   // assemble the `hobbits` and move them to `rivendell`
   //console.log(document.querySelector("#The-Shire").innerHTML);
-  document.querySelector("#Rivendell").innerHTML =
-    document.querySelector("#The-Shire").innerHTML;
+  document.querySelector("#Rivendell ul").innerHTML +=
+    document.querySelector("#The-Shire ul").innerHTML;
   document
     .querySelector("#The-Shire")
     .removeChild(document.querySelector("ul"));
