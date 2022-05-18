@@ -235,7 +235,31 @@ function forgeTheFellowShip() {
 	// after each character is added make an alert that they // have joined your party
 
 	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
+	const rivendellPlace = document.createElement('div')
+	rivendellPlace.setAttribute('id', 'the-fellowship')
+	const Rivendell = document.getElementById('Rivendell')
+	let AsideRivendell = document.querySelector('aside')
+	Rivendell.append(rivendellPlace)
+	console.log(Rivendell)
+	
+	let saviors = AsideRivendell.firstElementChild
+	console.log(saviors)
+	let pals = saviors.children
+	console.log(pals.length)
+	
+	while (pals.length > 0) {
+		console.log(`${pals[0].innerText} has joined the Fellowship!`)
+		rivendellPlace.append(pals[0])
+	}
+	
+	const rivendellHobbits = document.getElementsByClassName('hobbit')
+
+	for (let i = rivendellHobbits.length -1; i >= 0; i--) {
+		console.log(`${rivendellHobbits[i].innerText} has joined the Fellowship!`)
+		rivendellPlace.append(rivendellHobbits[i])
+	}
 }
+
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 8 complete - The Fellowship is created"
@@ -248,6 +272,11 @@ function theBalrog() {
 	console.log('9: theBalrog')
 	// change the `'Gandalf'` text to `'Gandalf the White'`
 	// apply the following style to the element, make the // background 'white', add a grey border
+let fellowship = document.getElementById('the-fellowship')
+let Gandalf = fellowship.firstChild
+Gandalf.innerText = 'Gandalf the white'
+Gandalf.style.backgroundColor = 'white'
+Gandalf.style.border = '3px solid grey'
 }
 
 // COMMIT YOUR WORK
