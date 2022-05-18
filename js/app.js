@@ -284,6 +284,13 @@ function thereAndBackAgain() {
   console.log("13: thereAndBackAgain");
   // remove `Gollum` and `the Ring` from the document
   // Move all the `hobbits` back to `the shire`
+  document.querySelector("#the-ring").remove();
+  document.querySelector("#gollum").remove();
+
+  let hobbits = document.querySelectorAll(".hobbit");
+  hobbits.forEach((hobbit) => {
+    document.querySelector("#The-Shire").appendChild(hobbit);
+  });
 }
 
 // COMMIT YOUR WORK
