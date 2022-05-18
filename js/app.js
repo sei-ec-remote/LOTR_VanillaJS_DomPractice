@@ -291,6 +291,19 @@ function hornOfGondor() {
 	// pop up an alert that the horn of gondor has been blown
 	// Boromir's been killed by the Uruk-hai!
 	// Remove `Boromir` from the Fellowship
+	alert('The Horn! Of Gondor! Has Been BLOWN!!!!')
+	alert('Boromir\'s been killed by the Uruk-hai!')
+	const fellowship = document.getElementById('the-fellowship')
+	console.log(fellowship)
+	let fellowshippers = fellowship.children
+	console.log(fellowshippers)
+	
+	for (let i = 0; i < fellowshippers.length; i++) {
+		if (fellowshippers[i].innerText.toLowerCase() === 'boromir') {
+			console.log('made it to boromir')
+			fellowship.removeChild(fellowshippers[i])
+		}
+	}
 }
 
 // COMMIT YOUR WORK
