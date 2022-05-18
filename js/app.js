@@ -351,9 +351,17 @@ itsDangerousToGoAlone()
 function weWantsIt() {
 	console.log('12: weWantsIt')
 	// Create a div with an id of `'gollum'` and add it to Mordor
+	const mordor = document.getElementById('Mordor')
+	const gollum = document.createElement('div')
+	gollum.setAttribute('id', 'gollum')
 	// Remove `the ring` from `Frodo` and give it to `Gollum`
+	const theRing = document.querySelector('.magic-imbued-jewelry')
+	gollum.append(theRing)
 	// Move Gollum into Mount Doom
+	const mountDoom = document.getElementById('mount-doom')
+	mountDoom.append(gollum)
 }
+weWantsIt()
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 12 complete - Gollum is trying to get the ring".
