@@ -24,14 +24,14 @@ function makeMiddleEarth() {
 	// 1. create a section tag with an id of middle-earth
 
 	const middleEarthSection = document.createElement("section");
-	middleEarthSection.id = "middle-earth";
+	middleEarthSection.setAttribute("id", "middle-earth");
 	
 	// 2. use a for loop to iterate over the lands array that does the following:
 	for(let i = 0; i < lands.length; i++) {
 		//   2a. creates an article tag (there should be one for each land when the loop is done)
 			const articleLand = document.createElement("article");
 			//   2b. gives each land article an `id` tag of the corresponding land name
-			articleLand.id = lands[i];
+			articleLand.setAttribute('id', lands[i]);
 			//   2c. includes an h1 with the name of the land inside each land article
 			const landsH = document.createElement("h1");
 			landsH.innerHTML = lands[i];
@@ -62,13 +62,12 @@ function makeHobbits() {
 	// hint: get 'The-Shire' by using its id
 	const shireId = document.getElementById('The-Shire');
 	const hobbitUl = document.createElement('ul');
-	hobbitUl.id = "hobbits-name";
+	hobbitUl.setAttribute('id','hobbit-id');
 
 	for(let i = 0; i < hobbits.length; i++) {
 		const hobbitsLi = document.createElement("li");
-		hobbitsLi.li = hobbits[i];
 		// give each hobbit a class of `hobbit`
-		hobbitsLi.className = 'hobbit';
+		hobbitsLi.classList.add('hobbit');
 		//add the names of each hobbit into the list element
 		hobbitsLi.innerHTML = hobbits[i];
 		hobbitUl.appendChild(hobbitsLi);
@@ -88,9 +87,9 @@ function keepItSecretKeepItSafe() {
 
 	// create a div with an id of `'the-ring'`
 	const ringDiv = document.createElement("div");
-	ringDiv.id = "the-ring";
+	ringDiv.setAttribute("id", "the-ring");
 	// give the div a class of `'magic-imbued-jewelry'`
-	ringDiv.className = 'magic-imbued-jewelry';
+	ringDiv.classList.add('magic-imbued-jewelry');
 
 	// add the ring as a child of `Frodo`
 	//console.log(document.getElementsByClassName('hobbit')[0]);
@@ -114,13 +113,11 @@ function makeBaddies() {
 	// display an unordered list of baddies in Mordor
 	const mordorId = document.getElementById('Mordor');
 	const baddiesUl = document.createElement('ul');
-	baddiesUl.id = 'baddies';
 
 	for(let i = 0; i < baddies.length; i++) {
 		const baddiesLi = document.createElement("li");
-		baddiesLi.li = baddies[i];
 		// give each of the baddies a class of "baddy"
-		baddiesLi.className = 'baddy';
+		baddiesLi.classList.add('baddy');
 		baddiesLi.innerHTML = baddies[i];
 		baddiesUl.appendChild(baddiesLi);
 	}
@@ -142,21 +139,17 @@ function makeBuddies() {
 	// create an `aside` tag
 	const buddiesAside = document.createElement("aside");
 
-
-
 	// put an `unordered list` of the `'buddies'` in the aside
 		const rivendellId = document.getElementById('Rivendell');
 		const buddiesUl = document.createElement('ul');
-		buddiesUl.id = 'buddies';
 	
 		for(let i = 0; i < buddies.length; i++) {
 			const buddiesLi = document.createElement("li");
-			buddiesLi.li = buddies[i];
-			buddiesLi.className = 'buddy';
 			buddiesLi.innerHTML = buddies[i];
 			buddiesUl.appendChild(buddiesLi);
-			buddiesAside.appendChild(buddiesUl)
 		}
+		
+		buddiesAside.appendChild(buddiesUl);
 		// insert your aside as a child element of `rivendell`
 		rivendellId.appendChild(buddiesAside);
 }
@@ -172,6 +165,12 @@ function leaveTheShire() {
 	console.log('6: leaveTheShire')
 
 	// assemble the `hobbits` and move them to `rivendell`
+
+	let hobbitUl = document.getElementById('hobbit-id');
+	let rivendellId = document.getElementById('Rivendell');
+
+	rivendellId.appendChild(hobbitUl);
+
 }
 
 // COMMIT YOUR WORK
