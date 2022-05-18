@@ -205,7 +205,10 @@ function beautifulStranger() {
 	console.log('7: beautifulStranger')
 
 	// change the `'Strider'` text to `'Aragorn'`
+	let strider = document.getElementsByClassName('Strider')[0]
+	strider.innerText = 'Aragorn'
 }
+beautifulStranger()
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 7 complete - Strider is changed to Aragorn"
