@@ -231,8 +231,17 @@ function forgeTheFellowShip() {
 
 function theBalrog() {
 	console.log('9: theBalrog')
+
+	const fellowsId = document.getElementById('the-fellowship');
+	const fellowsArr = fellowsId.querySelectorAll('li');
+	//console.log(fellowsArr[0]); -> index of Gandalf!
+	
 	// change the `'Gandalf'` text to `'Gandalf the White'`
+	fellowsArr[0].innerText = 'Gandalf the White';
+
 	// apply the following style to the element, make the // background 'white', add a grey border
+	fellowsArr[0].style.background = 'white';
+	fellowsArr[0].style.border = '2px solid grey';
 }
 
 // COMMIT YOUR WORK
