@@ -127,7 +127,7 @@ function keepItSecretKeepItSafe() {
 	//need to pull from the hobbits array and the class/list
 	
 	frodo.appendChild(ringContainer);
-	console.log(frodo);
+	// console.log(frodo);
 }
 keepItSecretKeepItSafe();
 
@@ -142,8 +142,34 @@ function makeBaddies() {
 	console.log('4: makeBaddies')
 
 	// display an unordered list of baddies in Mordor
+	const baddieUnorderedList = document.createElement('ul');
+	// console.log(baddieUnorderedList);
+	
+	baddies.forEach( villians => {
+		//have to create a list so that you can attach the class to it.		
+		const baddieOrderedList = document.createElement('li');
+		// give each of the baddies a class of "baddy"
+		baddieOrderedList.class = 'baddy';
+		console.log(baddieOrderedList);
 
-	// give each of the baddies a class of "baddy"
+		
+		//connect the class to the unordered list
+		// hobbitsList.appendChild(hobbitClass)
+		//I need the hobbits names to appear, so I need to add text
+		// hobbitClass.innerHTML = `${names}`;
+		// console.log(friends);
+
+
+
+	})
+	// this is how you connect the list of the hobbits to the shire, don't need to connect it to the whole body
+	// document.getElementById('The-Shire').appendChild(hobbitsList);
+
+
+	// const ringContainer = document.createElement('div');
+	// //adding the id to the div I just created
+	// ringContainer.id ='the-ring';
+
 
 	// remember to append them to Mordor
 }
