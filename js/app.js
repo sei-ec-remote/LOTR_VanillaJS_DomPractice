@@ -26,20 +26,20 @@ function makeMiddleEarth() {
 	section.setAttribute('id', 'middle-earth')
 	console.log(section)
 	// 2. use a for loop to iterate over the lands array that does the following:
-	for (let i=0; i<lands.length; i++){
-	
-	//   2a. creates an article tag (there should be one for each land when the loop is done)
+	for (let i = 0; i < lands.length; i++) {
+
+		//   2a. creates an article tag (there should be one for each land when the loop is done)
 		let articles = document.createElement('article')
-	//   2b. gives each land article an `id` tag of the corresponding land name
+		//   2b. gives each land article an `id` tag of the corresponding land name
 		articles.setAttribute('id', lands[i])
 		console.log(articles)
 
-	//   2c. includes an h1 with the name of the land inside each land article
+		//   2c. includes an h1 with the name of the land inside each land article
 		let h1s = document.createElement('h1')
 		h1s.innerText = lands[i]
 		articles.append(h1s)
 
-	//   2d. appends each land to the middle-earth section
+		//   2d. appends each land to the middle-earth section
 		section.append(articles)
 	}
 	// 3. append the section to the body of the DOM.
@@ -62,7 +62,7 @@ function makeHobbits() {
 	const shire = document.getElementById('The-Shire')
 	shire.append(hobbitsList)
 	// give each hobbit a class of `hobbit`
-	for (let i=0; i<hobbits.length; i++){
+	for (let i = 0; i < hobbits.length; i++) {
 		let currentHobbit = document.createElement('li')
 		currentHobbit.innerText = hobbits[i]
 		currentHobbit.classList.add('hobbit')
@@ -114,15 +114,15 @@ function makeBaddies() {
 	console.log(Mordor)
 	let baddiesList = document.createElement('ul')
 	Mordor.appendChild(baddiesList)
-	for (let i=0; i<baddies.length; i++){
+	for (let i = 0; i < baddies.length; i++) {
 		let badBoy = document.createElement('li')
 		badBoy.classList.add('baddy')
 		badBoy.innerText = baddies[i]
 		Mordor.appendChild(badBoy)
 	}
-	
+
 	// give each of the baddies a class of "baddy"
-	
+
 	// remember to append them to Mordor
 }
 makeBaddies()
@@ -141,7 +141,7 @@ function makeBuddies() {
 	const aside = document.createElement('aside')
 	// put an `unordered list` of the `'buddies'` in the aside
 	const buddiesList = document.createElement('ul')
-	for (let i=0; i<buddies.length; i++){
+	for (let i = 0; i < buddies.length; i++) {
 		let listItem = document.createElement('li')
 		listItem.innerText = buddies[i]
 		buddiesList.append(listItem)
@@ -183,7 +183,7 @@ leaveTheShire()
 // ============
 
 function beautifulStranger() {
-	console.log('7: beautifulStranger') 
+	console.log('7: beautifulStranger')
 	// change the `'Strider'` text to `'Aragorn'`
 	//vvvv  This way feels like cheating, I will try to do it w/o ID vvvv
 	// const Strider = document.getElementById('Strider')
@@ -195,13 +195,13 @@ function beautifulStranger() {
 	let buds = heroList.children
 	console.log(buds)
 	console.log(buds[3].innerText)
-	
-	for (let i=0; i<buds.length; i++){
+
+	for (let i = 0; i < buds.length; i++) {
 		console.log(buds[i])
-		if (buds[i].innerText.toLowerCase() === 'strider'){
+		if (buds[i].innerText.toLowerCase() === 'strider') {
 			buds[i].innerText = 'Aragorn'
 		}
-	}	
+	}
 }
 beautifulStranger()
 // COMMIT YOUR WORK
@@ -226,20 +226,20 @@ function forgeTheFellowShip() {
 	let buds = heroList.children
 	console.log(buds.length)
 
-	while (buds.length > 0){
+	while (buds.length > 0) {
 		console.log(`${buds[0].innerText} has joined the Fellowship!`)
 		rivendellDiv.append(buds[0])
 	}
 
 	const hobbitsInRivendell = document.getElementsByClassName('hobbit')
 
-	for (let i=hobbitsInRivendell.length-1; i>=0; i--){
+	for (let i = hobbitsInRivendell.length - 1; i >= 0; i--) {
 		console.log(`${hobbitsInRivendell[i].innerText} has joined the Fellowship!`)
 		rivendellDiv.append(hobbitsInRivendell[i])
 	}
 
 
-	
+
 	// after each character is added make an alert that they // have joined your party
 
 	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
@@ -282,8 +282,8 @@ function hornOfGondor() {
 	console.log(fellowship)
 	let fellowshipMembers = fellowship.children
 	console.log(fellowshipMembers)
-	for (let i=0; i<fellowshipMembers.length; i++){
-		if (fellowshipMembers[i].innerText.toLowerCase() === 'boromir'){
+	for (let i = 0; i < fellowshipMembers.length; i++) {
+		if (fellowshipMembers[i].innerText.toLowerCase() === 'boromir') {
 			console.log('made it to boromir')
 			fellowship.removeChild(fellowshipMembers[i])
 		}
@@ -317,19 +317,19 @@ function itsDangerousToGoAlone() {
 	//since appending hobbits to Mordor changes hobbitsInRivendell's size, I will use 
 	//a for loop inside of a while loop. So each iteration of the for loop, i<hobbitsInRivendell.length changes each time a hobbit is removed
 	//new approach: give classes to the two hobbits. move them, then remove classes
-	
-	for (let i=0; i<hobbitsInRivendell.length; i++){	
-		if (hobbitsInRivendell[i].innerText.toLowerCase() === 'frodo baggins' || hobbitsInRivendell[i].innerText.toLowerCase() === 'samwise "sam" gamgee'){
+
+	for (let i = 0; i < hobbitsInRivendell.length; i++) {
+		if (hobbitsInRivendell[i].innerText.toLowerCase() === 'frodo baggins' || hobbitsInRivendell[i].innerText.toLowerCase() === 'samwise "sam" gamgee') {
 			console.log(`${hobbitsInRivendell[i].innerText} is going to move`)
 			hobbitsInRivendell[i].classList.add('mover')
 		}
 	}
 	const movers = document.getElementsByClassName('mover')
-	
+
 
 	while (movers.length > 0) {
 		console.log(`${movers[0]} is headed to Mordor`)
-		MordorList.append(movers[0])	
+		MordorList.append(movers[0])
 	}
 
 	console.log(MordorList)
@@ -373,8 +373,29 @@ weWantsIt()
 function thereAndBackAgain() {
 	console.log('13: thereAndBackAgain')
 	// remove `Gollum` and `the Ring` from the document
+	const gollum = document.getElementById('gollum')
+	const mountDoom = document.getElementById('mount-doom')
+	mountDoom.removeChild(gollum)
 	// Move all the `hobbits` back to `the shire`
+	const hobbits = document.getElementsByClassName('hobbit')
+	console.log(hobbits)
+	const hobbitsList = document.createElement('ul')
+	const shire = document.getElementById('The-Shire')
+
+	//I chose this variable here so that the for loop iterator doesn't subtract when a hobbit is removed
+	let numberOfHobbits = hobbits.length
+	console.log(numberOfHobbits)
+
+	for (let i = 0; i < numberOfHobbits; i++) {
+		console.log(hobbits[0])
+		hobbitsList.append(hobbits[0])
+	}
+	console.log(shire)
+	console.log(hobbitsList)
+
+	shire.append(hobbitsList)
 }
+thereAndBackAgain()
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 13 complete -Gollum and the ring are gone, the baddies are done, and the hobbits are back in the shire".
