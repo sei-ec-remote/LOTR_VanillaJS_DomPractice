@@ -7,7 +7,12 @@ const hobbits = [
 	`Meriadoc "Merry" Brandybuck`,
 	`Peregrin "Pippin" Took`,
 ]
-
+const hobbits1 = [
+	`Frodo Baggins`,
+	`Samwise "Sam" Gamgee`,
+	`Meriadoc "Merry" Brandybuck`,
+	`Peregrin "Pippin" Took`,
+]
 const buddies = ['Gandalf the Grey', 'Legolas', 'Gimli', 'Strider', 'Boromir']
 
 const baddies = ['Sauron', 'Saruman', 'The Uruk-hai', 'Orcs']
@@ -36,10 +41,10 @@ function makeMiddleEarth() {
 	//   2c. includes an h1 with the name of the land inside each land article
 		let h1 = document.createElement("h1")
 		h1.innerText = lands[i]
-		article.appendChild(h1)
+		article.append(h1)
 
 	//   2d. appends each land to the middle-earth section
-		middleEarth.appendChild(article)
+		middleEarth.append(article)
 	}
 	// 3. append the section to the body of the DOM.
 	document.body.append(middleEarth)
@@ -56,9 +61,19 @@ function makeHobbits() {
 	console.log('2: makeHobbits')
 
 	// display an `unordered list` of hobbits in the shire
+	let list = document.createElement("ul")
+	let shire = document.getElementById("The-Shire")
+	shire.append(list)
+	for (let i = 0; i < hobbits.length; i++){
+		
+		hobbits[i] = document.createElement("li")
+		hobbits[i].textContent = hobbits1[i]
+		list.append(hobbits[i])
+		hobbits[i].setAttribute('class', 'hobbit')
 
+	}
 	// give each hobbit a class of `hobbit`
-
+	
 	// hint: create a 'ul' outside the loop into which to append the 'li's
 
 	// hint: get 'The-Shire' by using its id
