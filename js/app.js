@@ -127,7 +127,6 @@ function makeBuddies() {
 	rivendell.appendChild(aside)
 	console.log(rivendell)
 }
-
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 5 complete - Made the Buddies".
 
@@ -137,8 +136,10 @@ function makeBuddies() {
 
 function leaveTheShire() {
 	console.log('6: leaveTheShire')
-
 	// assemble the `hobbits` and move them to `rivendell`
+	//get hobbit list by id The-Shire, child node [1]
+	const hobbitUL = theShire.childNodes[1]
+	const rivendell = document.getElementById('Rivendell').appendChild(hobbitUL)
 }
 
 // COMMIT YOUR WORK
