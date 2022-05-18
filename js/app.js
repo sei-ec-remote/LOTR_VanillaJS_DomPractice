@@ -95,8 +95,8 @@ function makeHobbits() {
 	//TEST: precious.innerHTML = "This is my div";
 	
 	const Frodo = document.getElementById('Frodo Baggins')
-	//document.body.appendChild(precious)
-	document.hobbit[].appendChild(precious);
+	document.body.appendChild(precious)
+	//document.hobbit[].appendChild(precious);
 
 	//Frodo.appendChild(precious);
 	
@@ -119,10 +119,15 @@ function keepItSecretKeepItSafe() {
 // Chapter 4
 // ============
 
+const mordorBaddies = document.createElement('ul'); // display an unordered list of baddies in Mordor
+
 function makeBaddies() {
 	console.log('4: makeBaddies')
 
-	// display an unordered list of baddies in Mordor
+	
+	
+	
+	
 
 	// give each of the baddies a class of "baddy"
 
