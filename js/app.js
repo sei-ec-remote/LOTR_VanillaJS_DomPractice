@@ -269,15 +269,19 @@ function forgeTheFellowShip() {
 	//connect the new div with Rivendell
 	Rivendell.appendChild(theFellowship)
 	// console.log(Rivendell)
-	let fellowshipMembers = document.getElementById('hobbitsUnorderedList')
-	console.log(fellowshipMembers)
+	// let fellowshipMembers = document.getElementById('hobbitsUnorderedList')
+	// console.log(fellowshipMembers)
 
+	//we need to add team in the function somehow
+	//  theFellowshipMembers.map( team =>{
+	// 	//adding the hobbit and buddie id's into the new div
+	// 	return team.hobbits + team.buddies
+	// })
 
-	for (let i = 0; i < fellowshipMembers.length; i++){
-		theFellowship.appendChild(fellowshipMembers[i]);
-		console.log(theFellowship)
-	}
-
+	// for (let i = 0; i < fellowshipMembers.length; i++){
+	// 	theFellowship.appendChild(fellowshipMembers[i]);
+	// 	console.log(theFellowship)
+	// }
 	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
 
 
@@ -297,6 +301,12 @@ function theBalrog() {
 	console.log('9: theBalrog')
 	// change the `'Gandalf'` text to `'Gandalf the White'`
 	// apply the following style to the element, make the // background 'white', add a grey border
+	let gandalf = document.getElementsByClassName('buddies')[0];
+	// console.log(strider)
+
+	gandalf.innerText = 'Gandalf the White';
+	console.log(gandalf)
+
 }
 
 // COMMIT YOUR WORK
