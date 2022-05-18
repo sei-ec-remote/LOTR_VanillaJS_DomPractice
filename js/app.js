@@ -169,10 +169,10 @@ function makeBuddies() {
 // ============
 // Chapter 6
 // ============
+let riv = document.getElementById("Rivendell")
 
 function leaveTheShire() {
 	console.log('6: leaveTheShire')
-	let riv = document.getElementById("Rivendell")
 	let hobbits = document.getElementById(`hobbitsid`)
 	riv.appendChild(hobbits);
 	// assemble the `hobbits` and move them to `rivendell`
@@ -187,8 +187,7 @@ function leaveTheShire() {
 
 function beautifulStranger() {
 	console.log('7: beautifulStranger')
-  //buddyList = document.getElementById('buddyListId')
-	let strider = document.getElementsByClassName("buddyListClass")[3]
+	let strider = riv.querySelectorAll('li')[3];
 	strider.textContent = 'Aragorn';
 	// change the `'Strider'` text to `'Aragorn'`
 }
@@ -204,7 +203,15 @@ function beautifulStranger() {
 function forgeTheFellowShip() {
 	console.log('8: forgeTheFellowShip')
 	// create a new div called `'the-fellowship'` within `rivendell`
+	let theFellowShip = document.createElement('div');
+	theFellowShip.setAttribute('id', 'the-fellowship');
+	riv.appendChild('the-fellowship')
 	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
+	let hobs = hobbits
+	let b = buddies
+	for(let i=0; i<hobbits.length;i++){
+		for(let j=0; j<buddies.length; j++){}
+	}
 	// after each character is added make an alert that they // have joined your party
 
 	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
