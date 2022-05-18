@@ -149,29 +149,17 @@ function makeBaddies() {
 		//have to create a list so that you can attach the class to it.		
 		const baddieOrderedList = document.createElement('li');
 		// give each of the baddies a class of "baddy"
-		baddieOrderedList.class = 'baddy';
+		baddieOrderedList.class = `${villians}`;
 		console.log(baddieOrderedList);
 
-		
 		//connect the class to the unordered list
-		// hobbitsList.appendChild(hobbitClass)
-		//I need the hobbits names to appear, so I need to add text
-		// hobbitClass.innerHTML = `${names}`;
-		// console.log(friends);
+		baddieUnorderedList.appendChild(baddieOrderedList);
 
-
-
+		//to add in their names
+		baddieOrderedList.innerHTML = `${villians}`;
 	})
-	// this is how you connect the list of the hobbits to the shire, don't need to connect it to the whole body
-	// document.getElementById('The-Shire').appendChild(hobbitsList);
-
-
-	// const ringContainer = document.createElement('div');
-	// //adding the id to the div I just created
-	// ringContainer.id ='the-ring';
-
-
-	// remember to append them to Mordor
+	// this is how you connect the list of the villians to mordor.
+	document.getElementById('Mordor').appendChild(baddieUnorderedList);
 }
 
 // COMMIT YOUR WORK
