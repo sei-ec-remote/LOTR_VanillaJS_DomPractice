@@ -138,10 +138,11 @@ function leaveTheShire() {
 	console.log('6: leaveTheShire')
 	// assemble the `hobbits` and move them to `rivendell`
 	//get hobbit list by id The-Shire, child node [1]
-	const hobbitUL = theShire.childNodes[1]
-	const rivendell = document.getElementById('Rivendell').appendChild(hobbitUL)
+	const hobbitUL = document.getElementById('The-Shire').childNodes[1]
+	const rivendell = document.getElementById('Rivendell')
+	rivendell.appendChild(hobbitUL)
+	console.log(rivendell)
 }
-
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 6 complete - Left the Shire"
 
@@ -151,10 +152,19 @@ function leaveTheShire() {
 
 function beautifulStranger() {
 	console.log('7: beautifulStranger')
-
 	// change the `'Strider'` text to `'Aragorn'`
+	const rivendell = document.getElementById('Rivendell')
+	const StriderToAragorn = rivendell.childNodes[1].childNodes[0].childNodes[3]
+	StriderToAragorn.innerText = `Aragorn`
+	console.log(rivendell)
 }
-
+// makeMiddleEarth()
+// makeHobbits()
+// keepItSecretKeepItSafe()
+// makeBaddies()
+// makeBuddies()
+// leaveTheShire()
+// beautifulStranger()
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 7 complete - Strider is changed to Aragorn"
 
