@@ -45,7 +45,7 @@ function makeMiddleEarth() {
 	// 3. append the section to the body of the DOM.
 	document.body.append(section)
 }
-makeMiddleEarth()
+// makeMiddleEarth()
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 1 complete - Made Middle Earth".
@@ -73,7 +73,7 @@ function makeHobbits() {
 
 	// hint: get 'The-Shire' by using its id
 }
-makeHobbits()
+// makeHobbits()
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 2 complete - Made the Hobbits".
@@ -96,7 +96,7 @@ function keepItSecretKeepItSafe() {
 	console.log(hobbitsLi[0])
 	hobbitsLi[0].appendChild(chapter3Div)
 }
-keepItSecretKeepItSafe()
+// keepItSecretKeepItSafe()
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 3 complete - Made the ring and gave it to Frodo".
@@ -125,7 +125,7 @@ function makeBaddies() {
 
 	// remember to append them to Mordor
 }
-makeBaddies()
+// makeBaddies()
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 4 complete - Made the Baddies"..
@@ -152,7 +152,7 @@ function makeBuddies() {
 	const Rivendell = document.getElementById('Rivendell')
 	Rivendell.appendChild(aside)
 }
-makeBuddies()
+// makeBuddies()
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 5 complete - Made the Buddies".
@@ -173,7 +173,7 @@ function leaveTheShire() {
 	const Rivendell = document.getElementById('Rivendell')
 	Rivendell.append(shireList)
 }
-leaveTheShire()
+// leaveTheShire()
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 6 complete - Left the Shire"
@@ -203,7 +203,7 @@ function beautifulStranger() {
 		}
 	}
 }
-beautifulStranger()
+// beautifulStranger()
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 7 complete - Strider is changed to Aragorn"
 
@@ -244,7 +244,7 @@ function forgeTheFellowShip() {
 
 	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
 }
-forgeTheFellowShip()
+// forgeTheFellowShip()
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 8 complete - The Fellowship is created"
@@ -263,7 +263,7 @@ function theBalrog() {
 	Gandalf.style.border = '3px solid grey'
 	// apply the following style to the element, make the // background 'white', add a grey border
 }
-theBalrog()
+// theBalrog()
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 9 complete - Updated Gandalf"
 
@@ -289,7 +289,7 @@ function hornOfGondor() {
 		}
 	}
 }
-hornOfGondor()
+// hornOfGondor()
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 10 complete - horn of gandor blew and Boromir is dead"
 
@@ -339,7 +339,7 @@ function itsDangerousToGoAlone() {
 	mountDoom.setAttribute('id', 'mount-doom')
 	mordor.append(mountDoom)
 }
-itsDangerousToGoAlone()
+// itsDangerousToGoAlone()
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 11 complete - Sam and Frodo are in Mordor and Mount Doom has been created"
@@ -361,7 +361,7 @@ function weWantsIt() {
 	const mountDoom = document.getElementById('mount-doom')
 	mountDoom.append(gollum)
 }
-weWantsIt()
+// weWantsIt()
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 12 complete - Gollum is trying to get the ring".
@@ -395,7 +395,7 @@ function thereAndBackAgain() {
 
 	shire.append(hobbitsList)
 }
-thereAndBackAgain()
+// thereAndBackAgain()
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 13 complete -Gollum and the ring are gone, the baddies are done, and the hobbits are back in the shire".
