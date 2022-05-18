@@ -218,7 +218,7 @@ function beautifulStranger() {
 	for (const [index,liS] of arr.entries()){
   	//console.log(liS);
 	}
-	liS[4].innerHTML = "Aragzorn"
+	liS[4].innerHTML = "Aragorn"
 	
 	// change the `'Strider'` text to `'Aragzorn'`
 }
@@ -235,8 +235,22 @@ function forgeTheFellowShip() {
 	// create a new div called `'the-fellowship'` within `rivendell`
 	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
 	// after each character is added make an alert that they // have joined your party
-
 	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
+	const fellowshipMembers = hobbits.concat(buddies);
+	
+	const the_FellowShip = document.createElement('div');
+	the_FellowShip.setAttribute('id', 'the-fellowship');
+
+	 fellowshipMembers.forEach(function(taco){
+		 alert(taco + " has joined the fellowship!")
+	 })
+		 
+	//  alert(fellowshipMembers + " ")
+	// 	 setInterval(() => {
+	// 		   console.log("hi")  
+	// 		 }, 1000)
+	//  }
+	
 }
 
 // COMMIT YOUR WORK
