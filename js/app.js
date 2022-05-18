@@ -208,12 +208,12 @@ function forgeTheFellowShip() {
 	for (let i = 0; i < hobbits.length; i++) {
 		let newMember = document.getElementById(`${hobbits[i]}`);
 		theFellowship.appendChild(newMember);
-		// alert(`${hobbits[i]} has joined your party`);
+		alert(`${hobbits[i]} has joined your party`);
 	}
 	for (let j = 0; j < buddies.length; j++) {
 		let newMember2 = document.getElementById(`${buddies[j]}`);
 		theFellowship.appendChild(newMember2);
-		// alert(`${buddies[j]} has joined your party`);
+		alert(`${buddies[j]} has joined your party`);
 	}
 	let rivendell = document.getElementById('Rivendell');
 	rivendell.appendChild(theFellowship);
@@ -232,6 +232,7 @@ function forgeTheFellowShip() {
 
 function theBalrog() {
 	console.log('9: theBalrog')
+	
 	// change the `'Gandalf'` text to `'Gandalf the White'`
 	buddies[0] = 'Gandalf the White';
 	let gandalf = document.getElementById('Gandalf the Grey');
@@ -252,6 +253,7 @@ function theBalrog() {
 
 function hornOfGondor() {
 	console.log('10: hornOfGondor')
+
 	// pop up an alert that the horn of gondor has been blown
 	alert(`the horn of gondor has been blown!`);
 
@@ -270,6 +272,7 @@ function hornOfGondor() {
 
 function itsDangerousToGoAlone() {
 	console.log('11: itsDangerousToGoAlone')
+
 	// take `Frodo` and `Sam` out of the fellowship and move // them to `Mordor`
 	let tF = document.getElementById('theFellowship');
 	let mordor = document.getElementById('Mordor');
@@ -296,6 +299,7 @@ function itsDangerousToGoAlone() {
 
 function weWantsIt() {
 	console.log('12: weWantsIt')
+
 	// Create a div with an id of `'gollum'` and add it to Mordor
 	let mordor = document.getElementById('Mordor');
 	let gollum = document.createElement('div');
@@ -309,6 +313,9 @@ function weWantsIt() {
 	gollum.appendChild(temp);
 
 	// Move Gollum into Mount Doom
+	let mountDoom = document.getElementById('mount-doom');
+	let temp2 = mordor.removeChild(gollum);
+	mountDoom.appendChild(temp2);
 }
 
 // COMMIT YOUR WORK
@@ -320,8 +327,29 @@ function weWantsIt() {
 
 function thereAndBackAgain() {
 	console.log('13: thereAndBackAgain')
+
 	// remove `Gollum` and `the Ring` from the document
-	// Move all the `hobbits` back to `the shire`
+	let gollum = document.getElementById('gollum');
+	let theRing = document.getElementById('the-ring');
+	let mountDoom = document.getElementById('mount-doom');
+	mountDoom.removeChild(gollum);
+
+	// Move all the `hobbits` back to `the shire
+	let frodo = document.getElementById('Frodo Baggins');
+	let sam = document.getElementById('Samwise "Sam" Gamgee');
+	let merry = document.getElementById('Meriadoc "Merry" Brandybuck');
+	let pippin = document.getElementById('Peregrin "Pippin" Took');
+	let mordor = document.getElementById('Mordor');
+	let theFellowship = document.getElementById('theFellowship');
+	let theShire = document.getElementById('The-Shire');
+	let temp = mordor.removeChild(frodo);
+	theShire.appendChild(temp);
+	temp = mordor.removeChild(sam);
+	theShire.appendChild(temp);
+	temp = theFellowship.removeChild(merry);
+	theShire.appendChild(temp);
+	temp = theFellowship.removeChild(pippin);
+	theShire.appendChild(temp);
 }
 
 // COMMIT YOUR WORK
