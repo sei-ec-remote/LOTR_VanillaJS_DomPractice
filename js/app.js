@@ -317,6 +317,30 @@ function itsDangerousToGoAlone() {
 	console.log('11: itsDangerousToGoAlone')
 	// take `Frodo` and `Sam` out of the fellowship and move // them to `Mordor`
 	// add a div with an id of `'mount-doom'` to `Mordor`
+	const mordor = document.getElementById('Mordor')
+	console.log(mordor)
+	const listMordor = document.createElement('ul')
+	const rivendellHobbits = document.getElementsByClassName('hobbit')
+	console.log(rivendellHobbits)
+
+	for (let i = 0; i < rivendellHobbits.length; i++) {
+		if (rivendellHobbits[i].innerText.toLowerCase() === 'frodo baggins' || rivendellHobbits[i].innerText.toLowerCase() === 'samwise "sam" gamgee') {
+			console.log(`${rivendellHobbits[i].innerText} is going to move`)
+			rivendellHobbits[i].classList.add('mover')
+		}
+	}
+	const movers = document.getElementsByClassName('mover')
+
+	while (movers.length > 0) {
+		console.log(`${movers[0]} is headed to Mordor`)
+		listMordor.append(movers[0])
+	}
+
+	console.log(listMordor)
+	mordor.append(listMordor)
+	const mountDoom = document.createElement('div')
+	mountDoom.setAttribute('id', 'mount-doom')
+	mordor.append(mountDoom)
 }
 
 // COMMIT YOUR WORK
