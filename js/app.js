@@ -129,23 +129,23 @@
 // Chapter 5
 // ============
 
-function makeBuddies() {
-console.log('5: makeBuddies')
+//function makeBuddies() {
+//console.log('5: makeBuddies')
 
 // create an `aside` tag
-const asideBuddies = document.createElement("aside");
+//const asideBuddies = document.createElement("aside");
  // put an `unordered list` of the `'buddies'` in the aside
-    asideBuddies.id = "buddies";
-    const ulBuddiesList = document.createElement("ul");
-    ulBuddiesList.className = "buddies";
-    for (let i = 0; i < buddies.length; i++) {
-	const liBuddies = document.createElement("li");
-	liBuddies.textContent = buddies[i];
-	liBuddies.className = "buddy";
-	ulBuddiesList.appendChild(liBuddies);
-}
+    //asideBuddies.id = "buddies";
+    //const ulBuddiesList = document.createElement("ul");
+    //ulBuddiesList.className = "buddies";
+    //for (let i = 0; i < buddies.length; i++) {
+	//const liBuddies = document.createElement("li");
+	//liBuddies.textContent = buddies[i];
+	//liBuddies.className = "buddy";
+	//ulBuddiesList.appendChild(liBuddies);
+//}
 // insert your aside as a child element of `rivendell`
-document.querySelector(#Rivendell").appendChild(asideTag);
+//document.querySelector(#Rivendell").appendChild(asideTag);
 
 
 
@@ -156,11 +156,13 @@ document.querySelector(#Rivendell").appendChild(asideTag);
 // Chapter 6
 // ============
 
-//function leaveTheShire() {
-//	console.log('6: leaveTheShire')
+   function leaveTheShire() {
+   console.log('6: leaveTheShire')
 
 	// assemble the `hobbits` and move them to `rivendell`
-//}
+	const ulHobbits = document.getElementsByClassName("hobbits");
+	const rivendell = document.getElementById()
+  }
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 6 complete - Left the Shire"
