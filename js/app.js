@@ -1,4 +1,4 @@
-console.log('Linked.')
+console.log('we are here')
 
 // Dramatis Personae
 const hobbits = [
@@ -20,10 +20,41 @@ const lands = ['The-Shire', 'Rivendell', 'Mordor']
 
 function makeMiddleEarth() {
 	console.log('1: makeMiddleEarth')
-
-	// 1. create a section tag with an id of middle-earth
-
+	
+	// 1. create a section tag with an id of middle-earth	
+const midEarth = document.createElement('section')
+midEarth.setAttribute('id', 'middle-earth');
+// midEarth.innerText = "hello world"
+document.body.appendChild(midEarth)
+console.log(midEarth)
 	// 2. use a for loop to iterate over the lands array that does the following:
+for(let i = 0; i < lands.length; i++){
+	if (i === 0){
+		let shire = document.createElement('article');
+		shire.setAttribute('id', 'the-shire');
+		document.getElementById('middle-earth').appendChild(shire);
+		shire.innerHTML = "<h1>The Shire</h1>"
+		console.log(shire)
+	} else if(i === 1) {
+		let rivendell = document.createElement('article');
+		rivendell.setAttribute('id', 'rivendell');
+		document.getElementById('middle-earth').appendChild(rivendell);
+		rivendell.innerHTML = "<h1>Rivendell</h1>"
+		console.log(rivendell)
+	} else if(i === 2) {
+		let mordor = document.createElement('article');
+		mordor.setAttribute('id', 'mordor');
+		document.getElementById('middle-earth').appendChild(mordor);
+		mordor.innerHTML = "<h1>Mordor</h1>"
+		console.log(mordor)
+	}
+	
+}
+
+	
+}
+	console.log(makeMiddleEarth())
+	
 
 	//   2a. creates an article tag (there should be one for each land when the loop is done)
 
@@ -34,7 +65,7 @@ function makeMiddleEarth() {
 	//   2d. appends each land to the middle-earth section
 
 	// 3. append the section to the body of the DOM.
-}
+
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 1 complete - Made Middle Earth".
