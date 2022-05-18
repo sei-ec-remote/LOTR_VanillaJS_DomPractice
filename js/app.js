@@ -74,6 +74,8 @@ function makeHobbits() {
     // Adds an name attribute if the hobbit element is equals to 'Frodo Baggins'.
     if (hobbit === 'Frodo Baggins') {
       listItem.setAttribute('name', 'Frodo');
+    } else if (hobbit === 'Samwise "Sam" Gamgee') {
+      listItem.setAttribute('name', 'Sam');
     }
     // Adds each hobbit a class of `hobbit`
     listItem.setAttribute('class', 'hobbit');
@@ -293,8 +295,23 @@ function hornOfGondor() {
 
 function itsDangerousToGoAlone() {
   console.log('11: itsDangerousToGoAlone');
+  let frodo = [...document.getElementsByName('Frodo')];
+  let sam = [...document.getElementsByName('Sam')];
+  // console.log(mordor.children[0].innerHTML);
+
   // take `Frodo` and `Sam` out of the fellowship and move // them to `Mordor`
+  let modor = document.getElementById("Mordor");
+  let mordorList = document.getElementById("baddies");
+  console.log('prodo',frodo[0]);
+  console.log('sam',sam[0]);
+  mordorList.appendChild(frodo[0]);
+  mordorList.appendChild(sam[0]);
+  modor.appendChild(mordorList);
+
   // add a div with an id of `'mount-doom'` to `Mordor`
+  let mountDoom = document.createElement('div');
+  mountDoom.setAttribute('id', 'mount-doom');
+  modor.appendChild(mountDoom);
 }
 
 // COMMIT YOUR WORK
