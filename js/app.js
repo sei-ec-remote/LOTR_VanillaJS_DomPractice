@@ -63,10 +63,7 @@ function makeHobbits() {
 
 
 	// give each hobbit a class of `hobbit`
-	
-	
-	
-	for (i = 0; i < hobbits.length; i++) {
+	 for (i = 0; i < hobbits.length; i++) {
 		let hobbitLi = document.createElement("li");
 		hobbitLi.classList.add("hobbit");
 	    hobbitLi.innerText = hobbits[i];
@@ -101,7 +98,7 @@ let Froddo = hobbitList.children[0];
 }
 
 // COMMIT YOUR WORK
-// The commit message should read: "Chapter 3 complete - Made the ring and gave it to Frodo".
+// The commit message should read: "Chapter 3 complete - Made the ring and gave it to Frodo"."Chapter 3 complete - Made the ring and gave it to Frodo".
 
 // ============
 // Chapter 4
@@ -111,11 +108,22 @@ function makeBaddies() {
 	console.log('4: makeBaddies')
 
 	// display an unordered list of baddies in Mordor
+	const mordor = document.getElementById("Mordor")
+	let ulBaddis=document.createElement("ul")
+	for(let i=0; i<baddies.length;i++){
+		let liBaddie = document.createElement('li')
+		//liBaddie.classList.add("baddy")
+		liBaddie.textContent=baddies[i];
+		ulBaddis.appendChild(liBaddie)
+	}
+mordor.appendChild(ulBaddis)
+	
 
 	// give each of the baddies a class of "baddy"
-
+	
 	// remember to append them to Mordor
 }
+
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 4 complete - Made the Baddies"..
