@@ -56,20 +56,20 @@
 // ============
 
 //function makeHobbits() {
-   console.log('2: makeHobbits')
+   //console.log('2: makeHobbits')
 
 	// display an `unordered list` of hobbits in the shire
-	const theShire = document.getElementByID("The-Shire");
-	const ulHobbit  = document.createElement("ul");
+	//const theShire = document.getElementByID("The-Shire");
+	//const ulHobbit  = document.createElement("ul");
 
 	
-	ulHobbit.className = "hobbits";
-	for (let i = 0; i < hobbits.length; i++) {
-        const liHobbits = document.createElement("li");
-        liHobbits.textContent = hobbits[i];
+	//ulHobbit.className = "hobbits";
+	//for (let i = 0; i < hobbits.length; i++) {
+        //const liHobbits = document.createElement("li");
+        //liHobbits.textContent = hobbits[i];
 		// give each hobbit a class of `hobbit`
-		liHobbits.className = "hobbit";
-        ulHobbit.appendChild(liHobbits);
+		//liHobbits.className = "hobbit";
+        //ulHobbit.appendChild(liHobbits);
 	// hint: create a 'ul' outside the loop into which to append the 'li's
 
 	// hint: get 'The-Shire' by using its id
@@ -82,18 +82,18 @@
 // Chapter 3
 // ============
 
-//function keepItSecretKeepItSafe() {
-//	console.log('3: keepItSecretKeepItSafe')
+  function keepItSecretKeepItSafe() {
+  console.log('3: keepItSecretKeepItSafe')
 
 	// create a div with an id of `'the-ring'`
-    //const theRing = document.createElement("div");
+    const theRing = document.createElement("div");
 	// give the div a class of `'magic-imbued-jewelry'`
-       //theRingDiv.className = "magic-imbued-jewelry";
+       theRingDiv.className = "magic-imbued-jewelry";
 	// add the ring as a child of `Frodo`
-	//const ulHobbit = document.querySelector('ul')
-	//const liFrodo = ulHobbit.children[0]
-	//liFrodo.appendChild(theRingDiv);
-//}
+	const ulHobbit = document.querySelector('ul')
+	const liFrodo = ulHobbit.children[0]
+	liFrodo.appendChild(theRingDiv);
+  }
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 3 complete - Made the ring and gave it to Frodo".
