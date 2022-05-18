@@ -146,6 +146,7 @@ function makeBuddies() {
 	// create an `aside` tag
 	const aside = document.createElement('aside');
 	let buddyList = document.createElement('ul');
+	//buddyList.id = 'buddyListId'
 	for(let i=0;i<buddies.length; i++){
 		//bud = buddies[i]
 		buddy = document.createElement('li');
@@ -186,9 +187,12 @@ function leaveTheShire() {
 
 function beautifulStranger() {
 	console.log('7: beautifulStranger')
-
+  //buddyList = document.getElementById('buddyListId')
+	let strider = document.getElementsByClassName("buddyListClass")[3]
+	strider.textContent = 'Aragorn';
 	// change the `'Strider'` text to `'Aragorn'`
 }
+
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 7 complete - Strider is changed to Aragorn"
