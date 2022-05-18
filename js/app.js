@@ -149,6 +149,7 @@ function makeBuddies() {
 	for (i = 0; i < buddies.length; i++) {
 		let buddie = document.createElement('li');
 		buddie.setAttribute('id', buddies[i])
+		buddie.setAttribute('class', 'buddies')
 		buddie.innerHTML = buddies[i];
 		buddieList.appendChild(buddie);
 	}
@@ -191,9 +192,12 @@ function beautifulStranger() {
 	let buddieList = document.getElementById('buddieList')
 	let strider = document.getElementById('Strider')
 	let aragorn = document.createElement('li');
+	aragorn.setAttribute('id', 'aragorn')
+	aragorn.setAttribute('class', 'buddies')
 	aragorn.innerHTML = 'Aragorn'
 
-	buddieList.replaceChild(aragorn, strider)
+	buddieList.replaceChild(aragorn, strider);
+	console.log(buddieList);
 
 }
 
@@ -203,12 +207,47 @@ function beautifulStranger() {
 // ============
 // Chapter 8
 // ============
-
+// 8.1 create a new div called `'the-fellowship'` within `rivendell`
 function forgeTheFellowShip() {
 	console.log('8: forgeTheFellowShip')
-	// create a new div called `'the-fellowship'` within `rivendell`
-	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
-	// after each character is added make an alert that they // have joined your party
+
+	let theFellowship = document.createElement('div');
+
+	let rivendell = document.getElementById('Rivendell');
+	rivendell.appendChild(theFellowship);
+
+	// 8.2 add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
+	let hobbitHouse = document.getElementById('hobbitHouse')
+	let buddieList = document.getElementById('buddieList')
+	let hobbitCollection = document.querySelectorAll('.hobbit')
+	let buddieCollection = document.querySelectorAll('.buddies')
+	let aside = document.querySelector('aside')
+	// rivendell.removeChild(hobbitHouse);
+	// aside.removeChild(buddieList);
+	for (i = 0; i < buddieCollection.length; i++) {
+		if (i === (buddieCollection.length - 1)) {
+			theFellowship.append(buddieCollection[i]);
+		} else {
+			theFellowship.append(buddieCollection[i]);
+			theFellowship.append(hobbitCollection[i]);
+		}
+      
+	}
+	
+	let callingNames = theFellowship.innerText
+	
+    alert(callingNames +" have joined your party.")  
+
+	// )
+
+
+	// console.log(theFellowship)
+	// console.log( hobbitCollection)
+	// console.log(buddieCollection);
+	// console.log(hobbitCollection.length);
+	console.log(buddieCollection[1]);
+
+	// 8.3 after each character is added make an alert that they // have joined your party
 
 	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
 }
