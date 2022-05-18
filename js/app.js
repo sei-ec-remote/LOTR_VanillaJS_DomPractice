@@ -68,6 +68,7 @@ function makeHobbits() {
 	const theShire = document.getElementById('The-Shire')
 	// ...and create an unordered list 
 	const hobbitList = document.createElement('ul')
+	hobbitList.setAttribute('id', 'shire-list')
 	// ...add it undernearth the Shire
 	theShire.append(hobbitList)
 	// for every element in the hobbits array
@@ -186,7 +187,12 @@ function leaveTheShire() {
 	console.log('6: leaveTheShire')
 
 	// assemble the `hobbits` and move them to `rivendell`
+	let rivendell = document.getElementById("Rivendell")
+	let theShire = document.getElementById("shire-list")
+
+	rivendell.append(...theShire.childNodes)
 }
+leaveTheShire()
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 6 complete - Left the Shire"
