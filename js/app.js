@@ -156,13 +156,14 @@
 // Chapter 6
 // ============
 
-   function leaveTheShire() {
-   console.log('6: leaveTheShire')
+   //function leaveTheShire() {
+   //console.log('6: leaveTheShire')
 
 	// assemble the `hobbits` and move them to `rivendell`
-	const ulHobbits = document.getElementsByClassName("hobbits");
-	const rivendell = document.getElementById()
-  }
+	//const ulHobbits = document.getElementsByClassName("hobbits");
+	//const rivendell = document.getElementById("Rivendell");
+	//rivendell.appendChild(ulHobbits[0]);
+  //}
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 6 complete - Left the Shire"
@@ -171,11 +172,12 @@
 // Chapter 7
 // ============
 
-//function beautifulStranger() {
-//	console.log('7: beautifulStranger')
+    function beautifulStranger() {
+	console.log('7: beautifulStranger')
 
 	// change the `'Strider'` text to `'Aragorn'`
-//}
+	document.getElementsByTagName("li")[3].textContent = 'Aragorn';
+ }
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 7 complete - Strider is changed to Aragorn"
