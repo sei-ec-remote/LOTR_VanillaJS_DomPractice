@@ -16,6 +16,7 @@ const hobbits1 = [
 const buddies = ['Gandalf the Grey', 'Legolas', 'Gimli', 'Strider', 'Boromir']
 
 const baddies = ['Sauron', 'Saruman', 'The Uruk-hai', 'Orcs']
+const baddies1 = ['Sauron', 'Saruman', 'The Uruk-hai', 'Orcs']
 
 const lands = ['The-Shire', 'Rivendell', 'Mordor']
 
@@ -109,7 +110,15 @@ function makeBaddies() {
 	console.log('4: makeBaddies')
 
 	// display an unordered list of baddies in Mordor
-
+	let badList = document.createElement("ul")
+	let mordor = document.getElementById("Mordor")
+	mordor.append(badList)
+	for (let i = 0; i < baddies.length; i++){
+		baddies[i] = document.createElement("li")
+		baddies[i].textContent = baddies1[i]
+		baddies[i].setAttribute('class', 'baddy')
+		badList.append(baddies[i])
+	}
 	// give each of the baddies a class of "baddy"
 
 	// remember to append them to Mordor
