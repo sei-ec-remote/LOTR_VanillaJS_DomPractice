@@ -209,14 +209,7 @@ function theBalrog() {
 	console.log(gandalfTheWhite)
 	// apply the following style to the element, make the // background 'white', add a grey border
 }
-makeHobbits()
-keepItSecretKeepItSafe()
-makeBaddies()
-makeBuddies()
-leaveTheShire()
-beautifulStranger()
-forgeTheFellowShip()
-theBalrog()
+
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 9 complete - Updated Gandalf"
 
@@ -227,11 +220,24 @@ theBalrog()
 function hornOfGondor() {
 	console.log('10: hornOfGondor')
 	// pop up an alert that the horn of gondor has been blown
-	alert(`Horn of Gondor has been blown`)
+	// alert(`Horn of Gondor has been blown`)
 	// Boromir's been killed by the Uruk-hai!
 	// Remove `Boromir` from the Fellowship
+	theFellowShip = document.getElementById('fellowship')
+	theFellowShip.childNodes[4].remove()
+	// theFellowShip.removeChild(theFellowShip.lastChild)
+	console.log(theFellowShip)
 }
-
+makeMiddleEarth()
+makeHobbits()
+keepItSecretKeepItSafe()
+makeBaddies()
+makeBuddies()
+leaveTheShire()
+beautifulStranger()
+forgeTheFellowShip()
+theBalrog()
+hornOfGondor()
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 10 complete - horn of gandor blew and Boromir is dead"
 
@@ -243,6 +249,8 @@ function itsDangerousToGoAlone() {
 	console.log('11: itsDangerousToGoAlone')
 	// take `Frodo` and `Sam` out of the fellowship and move // them to `Mordor`
 	// add a div with an id of `'mount-doom'` to `Mordor`
+	const mountDoom = document.createElement('div')
+	mountDoom.id = `mount-doom`
 }
 
 // COMMIT YOUR WORK
