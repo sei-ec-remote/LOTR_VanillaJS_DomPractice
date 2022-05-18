@@ -228,16 +228,7 @@ function hornOfGondor() {
 	// theFellowShip.removeChild(theFellowShip.lastChild)
 	console.log(theFellowShip)
 }
-makeMiddleEarth()
-makeHobbits()
-keepItSecretKeepItSafe()
-makeBaddies()
-makeBuddies()
-leaveTheShire()
-beautifulStranger()
-forgeTheFellowShip()
-theBalrog()
-hornOfGondor()
+
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 10 complete - horn of gandor blew and Boromir is dead"
 
@@ -249,10 +240,30 @@ function itsDangerousToGoAlone() {
 	console.log('11: itsDangerousToGoAlone')
 	// take `Frodo` and `Sam` out of the fellowship and move // them to `Mordor`
 	// add a div with an id of `'mount-doom'` to `Mordor`
+	const mordor = document.getElementById('Mordor')
+	const fellowship = document.getElementById('fellowship')
 	const mountDoom = document.createElement('div')
 	mountDoom.id = `mount-doom`
+	//get frodo and sam name
+	const frodo = fellowship.childNodes[4]
+	const sam = fellowship.childNodes[5]
+	mountDoom.appendChild(frodo)
+	mountDoom.appendChild(sam)
+	mordor.appendChild(mountDoom)
+	console.log(mordor)
+	console.log(fellowship)
 }
-
+makeMiddleEarth()
+makeHobbits()
+keepItSecretKeepItSafe()
+makeBaddies()
+makeBuddies()
+leaveTheShire()
+beautifulStranger()
+forgeTheFellowShip()
+theBalrog()
+hornOfGondor()
+itsDangerousToGoAlone()
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 11 complete - Sam and Frodo are in Mordor and Mount Doom has been created"
 
