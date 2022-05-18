@@ -293,9 +293,9 @@ function theBalrog() {
 function hornOfGondor() {
 	console.log('10: hornOfGondor')
 	// pop up an alert that the horn of gondor has been blown
-	alert((`THE HORN OF GONDOR HAS BEEN BLOWN!`))
+	//alert((`THE HORN OF GONDOR HAS BEEN BLOWN!`))
 	// Boromir's been killed by the Uruk-hai!
-	alert(`Boromir's been killed by the Uruk-hai. RIP BORIMIR`)
+	//alert(`Boromir's been killed by the Uruk-hai. RIP BORIMIR`)
 	// Remove `Boromir` from the Fellowship
 	const fellowshipEl = document.getElementById("fellowship")
 	fellowship.removeChild(document.getElementsByClassName("buddie")[4])
@@ -321,8 +321,8 @@ function itsDangerousToGoAlone() {
 	mordorList.appendChild(sam)
 	// add a div with an id of `'mount-doom'` to `Mordor`
 	mntDoom = document.createElement("div")
-	mntDoom.setAttribute("id", "mount-doom ")
-	mordor.prepend(mntDoom)
+	mntDoom.setAttribute("id", "mount-doom")
+	mordor.appendChild(mntDoom)
 }
 
 // COMMIT YOUR WORK
@@ -335,8 +335,17 @@ function itsDangerousToGoAlone() {
 function weWantsIt() {
 	console.log('12: weWantsIt')
 	// Create a div with an id of `'gollum'` and add it to Mordor
+	gollumEl = document.createElement("div")
+	gollumEl.setAttribute("id","gollum")
+	const mordor = document.getElementById("Mordor")
+	mordor.appendChild(gollumEl)
 	// Remove `the ring` from `Frodo` and give it to `Gollum`
+	frodo = document.getElementsByClassName("hobbit")[2]
+	console.log(frodo)
+	gollumEl.appendChild(document.getElementById("the-ring"))
 	// Move Gollum into Mount Doom
+	const mountDoom = document.getElementById("mount-doom")
+	mountDoom.appendChild(gollumEl)
 }
 
 // COMMIT YOUR WORK
@@ -351,7 +360,7 @@ function thereAndBackAgain() {
 	// remove `Gollum` and `the Ring` from the document
 	// Move all the `hobbits` back to `the shire`
 }
-
+//testing
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 13 complete -Gollum and the ring are gone, the baddies are done, and the hobbits are back in the shire".
 
