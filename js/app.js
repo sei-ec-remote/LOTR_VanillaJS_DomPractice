@@ -208,21 +208,39 @@ theFellowship.setAttribute("id", "the-fellowship")
 riv.appendChild(theFellowship);
 
 
+let hobbitList = document.createElement("ul")
+console.log(hobbitList)
 for(let i = 0; i < hobbits.length; i++) {
-    theFellowship.appendChild(document.createTextNode(hobbits[i]));
+    let hobbitLi = document.createElement("li");
+		
+	    hobbitLi.innerText = hobbits[i];
+		hobbitList.appendChild(hobbitLi);
     }
     for (let i = 0; i < buddies.length; i++) {
-    theFellowship.appendChild(document.createTextNode(buddies[i]));
+		let hobbitLi = document.createElement("li");
+		
+	    hobbitLi.innerText = buddies[i];
+		hobbitList.appendChild(hobbitLi);
     }
     alert("hobbits and buddies have joined your party!");
-    //let hobbitList = shire.querySelector("ul")
+	console.log(theFellowship)
+	console.log(hobbitList)
+	theFellowship.appendChild(hobbitList);
+    console.log(riv)
+
+    }
+
+	
+
+
+    
 	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
 
 
 	// after each character is added make an alert that they // have joined your party
 
 	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
-}
+
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 8 complete - The Fellowship is created"
@@ -239,11 +257,11 @@ function theBalrog() {
 
     let gandalf = riv.querySelectorAll("li")[0]
     //const hobbits = shire.querySelector("ul")
-    gandalf.textContent = "Gandalf the white";
+    gandalf.textContent = "Gandalf the White";
     const shire = document.getElementById("The-Shire")
     let hobbitList = shire.querySelector("ul")
 	gandalf.textContent = "Gandalf the white";
-gandalf.style.border = "3px solid gray"
+gandalf.style.border = "1px solid gray"
 gandalf.style.backgroundColor = "white"
 	
 	
@@ -262,6 +280,11 @@ function hornOfGondor() {
 	// Boromir's been killed by the Uruk-hai!
 	// Remove `Boromir` from the Fellowship
 	alert("the horn of gondor has been blown")
+	let theFellowship = document.createElement("div")
+theFellowship.setAttribute("id", "the-fellowship")
+let riv = document.getElementById("Rivendell")
+
+riv.appendChild(theFellowship);
 	let Boromir = fellowshipMembers[4]
 	Boromir.removeChild(Boromir)
 }
