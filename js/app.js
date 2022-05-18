@@ -140,10 +140,25 @@ function makeBuddies() {
 	console.log('5: makeBuddies')
 
 	// create an `aside` tag
+	const buddiesAside = document.createElement("aside");
+
+
 
 	// put an `unordered list` of the `'buddies'` in the aside
-
-	// insert your aside as a child element of `rivendell`
+		const rivendellId = document.getElementById('Rivendell');
+		const buddiesUl = document.createElement('ul');
+		buddiesUl.id = 'buddies';
+	
+		for(let i = 0; i < buddies.length; i++) {
+			const buddiesLi = document.createElement("li");
+			buddiesLi.li = buddies[i];
+			buddiesLi.className = 'buddy';
+			buddiesLi.innerHTML = buddies[i];
+			buddiesUl.appendChild(buddiesLi);
+			buddiesAside.appendChild(buddiesUl)
+		}
+		// insert your aside as a child element of `rivendell`
+		rivendellId.appendChild(buddiesAside);
 }
 
 // COMMIT YOUR WORK
