@@ -77,7 +77,7 @@ function makeHobbits() {
     }
     // Adds each hobbit a class of `hobbit`
     listItem.setAttribute('class', 'hobbit');
-	listItem.id = hobbit;
+    listItem.id = hobbit;
     // Sets the inner text of each hobbit list item the value of the elements in the hobbits array.
     listItem.innerText = hobbit;
     // Appends all the list item inside the ul tag called hobbitsList.
@@ -167,8 +167,8 @@ function makeBuddies() {
   buddies.forEach((buddy) => {
     // Creates a li tag element every iteration.
     let buddiesItem = document.createElement('li');
-	buddiesItem.classList.add('buddy');
-	buddiesItem.id = buddy;
+    buddiesItem.classList.add('buddy');
+    buddiesItem.id = buddy;
     // Sets the element value as the inner text of the li item.
     buddiesItem.innerText = buddy;
     buddiesList.appendChild(buddiesItem);
@@ -222,31 +222,31 @@ function beautifulStranger() {
 // ============
 
 function forgeTheFellowShip() {
-	console.log('8: forgeTheFellowShip');
-	// create a new div called `'the-fellowship'` within `rivendell`
-	let theFellowship = document.createElement('div');
-	theFellowship.id = "the-fellowship";
-	let theFellowshipList = document.createElement('ul');
-	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
-	// Get the elements with the class name "hobbit" and store it as an array.
-	let hobbitsList = [...document.getElementsByClassName('hobbit')]
-	// Get the elements with the class name "buddy" and store it as an array.
-	let buddiesList = [...document.getElementsByClassName('buddy')]
-	
-	for(let i = 0; i < hobbitsList.length; i++) {
-		theFellowshipList.appendChild(hobbitsList[i]);
-		alert(`${hobbitsList[i].innerText} joined your party`)
-	}
+  console.log('8: forgeTheFellowShip');
+  // create a new div called `'the-fellowship'` within `rivendell`
+  let theFellowship = document.createElement('div');
+  theFellowship.id = 'the-fellowship';
+  let theFellowshipList = document.createElement('ul');
+  // add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
+  // Get the elements with the class name "hobbit" and store it as an array.
+  let hobbitsList = [...document.getElementsByClassName('hobbit')];
+  // Get the elements with the class name "buddy" and store it as an array.
+  let buddiesList = [...document.getElementsByClassName('buddy')];
 
-	for(let i = 0; i < buddiesList.length; i++) {
-		theFellowshipList.appendChild(buddiesList[i]);
-		alert(`${buddiesList[i].innerText} joined your party`)
-	}
-	theFellowship.appendChild(theFellowshipList);
-	// after each character is added make an alert that they // have joined your party
-	document.getElementById('Rivendell').appendChild(theFellowship);
-	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
+  for (let i = 0; i < hobbitsList.length; i++) {
+    theFellowshipList.appendChild(hobbitsList[i]);
+    alert(`${hobbitsList[i].innerText} joined your party`);
   }
+
+  for (let i = 0; i < buddiesList.length; i++) {
+    theFellowshipList.appendChild(buddiesList[i]);
+    alert(`${buddiesList[i].innerText} joined your party`);
+  }
+  theFellowship.appendChild(theFellowshipList);
+  // after each character is added make an alert that they // have joined your party
+  document.getElementById('Rivendell').appendChild(theFellowship);
+  // NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
+}
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 8 complete - The Fellowship is created"
@@ -260,9 +260,9 @@ function theBalrog() {
   // change the `'Gandalf'` text to `'Gandalf the White'`
   // apply the following style to the element, make the // background 'white', add a grey border
   let gandalf = document.getElementById('Gandalf the Grey');
-  gandalf.innerText = "Gandalf the White";
-  gandalf.style.background = "white";
-  gandalf.style.border = "2px solid grey";
+  gandalf.innerText = 'Gandalf the White';
+  gandalf.style.background = 'white';
+  gandalf.style.border = '2px solid grey';
 }
 
 // COMMIT YOUR WORK
@@ -275,8 +275,13 @@ function theBalrog() {
 function hornOfGondor() {
   console.log('10: hornOfGondor');
   // pop up an alert that the horn of gondor has been blown
+  alert('The horn of gondor has been blown');
+  let boromir = document.getElementById('Boromir');
+
   // Boromir's been killed by the Uruk-hai!
+  alert(`Boromir's been killed by the Uruk-hai!`);
   // Remove `Boromir` from the Fellowship
+  boromir.remove();
 }
 
 // COMMIT YOUR WORK
