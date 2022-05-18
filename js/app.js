@@ -275,30 +275,29 @@ gandalf.style.backgroundColor = "white"
 // ============
 // Chapter 11
 // ============
-//let sam = fellowshipMembers[5]
-/*
+
+
 function itsDangerousToGoAlone() {
 	console.log('11: itsDangerousToGoAlone')
 	// take `Frodo` and `Sam` out of the fellowship and move // them to `Mordor`
-	// add a div with an id of `'mount-doom'` to `Mordor`
 	let theFellowship = document.getElementById("the-fellowship");
-theFellowship.removeChild(theFellowship.firstChild);
-theFellowship.removeChild(theFellowship.firstChild);
-let mordor = document.getElementById("Mordor");
-let mordorList = mordor.querySelector("ul");
-
-let frodo = document.createElement("li")
-frodo.textContent = "Frodo Baggins";
-mordorList.appendChild(frodo);
-
-let sam = document.createElement("li")
-sam.textContent = `Samwise "Sam" Gamgee`;
-mordorList.appendChild(sam);
-// add a div with an id of `'mount-doom'` to `Mordor`
-let mountDoom = document.createElement("div");
-mountDoom.setAttribute("id", "mount-doom");
-mordor.appendChild(mountDoom);
-}
+	theFellowship.removeChild(theFellowship.firstChild);
+	theFellowship.removeChild(theFellowship.firstChild);
+	let mordor = document.getElementById("Mordor");
+	let mordorList = mordor.querySelector("ul");
+	
+	let frodo = document.createElement("li")
+	frodo.textContent = "Frodo Baggins";
+	mordorList.appendChild(frodo);
+	
+	let sam = document.createElement("li")
+	sam.textContent = `Samwise "Sam" Gamgee`;
+	mordorList.appendChild(sam);
+	// add a div with an id of `'mount-doom'` to `Mordor`
+	let mountDoom = document.createElement("div");
+	mountDoom.setAttribute("id", "mount-doom");
+	mordor.appendChild(mountDoom);
+	}
 
 
 // COMMIT YOUR WORK
@@ -336,6 +335,7 @@ function weWantsIt() {
 // ============
 // Chapter 13
 // ============
+/*
 
    function thereAndBackAgain() {
 	console.log('13: thereAndBackAgain')
