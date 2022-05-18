@@ -13,6 +13,12 @@ const hobbits1 = [
 	`Meriadoc "Merry" Brandybuck`,
 	`Peregrin "Pippin" Took`,
 ]
+const hobbits2 = [
+	`Frodo Baggins`,
+	`Samwise "Sam" Gamgee`,
+	`Meriadoc "Merry" Brandybuck`,
+	`Peregrin "Pippin" Took`,
+]
 const buddies = ['Gandalf the Grey', 'Legolas', 'Gimli', 'Strider', 'Boromir']
 const buddies1 = ['Gandalf the Grey', 'Legolas', 'Gimli', 'Strider', 'Boromir']
 
@@ -64,6 +70,7 @@ function makeHobbits() {
 
 	// display an `unordered list` of hobbits in the shire
 	let list = document.createElement("ul")
+	list.setAttribute("id", "list")
 	let shire = document.getElementById("The-Shire")
 	shire.append(list)
 	for (let i = 0; i < hobbits.length; i++){
@@ -158,7 +165,15 @@ function makeBuddies() {
 
 function leaveTheShire() {
 	console.log('6: leaveTheShire')
-
+	let shire = document.getElementById("The-Shire")
+	let rivendell = document.getElementById("Rivendell")
+	shire.removeChild(document.getElementById("list"))
+	// rivendell.appendChild(document.getElementById("list"))
+	for (let i = 0; i < hobbits1.length; i++){
+		hobbits1[i] = document.createElement("li")
+		aside.append(hobbits1[i])
+		hobbits1[i].textContent = hobbits2[i]
+	}
 	// assemble the `hobbits` and move them to `rivendell`
 }
 
