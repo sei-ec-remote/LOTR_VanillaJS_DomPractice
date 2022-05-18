@@ -67,7 +67,6 @@ const lands = ['The-Shire', 'Rivendell', 'Mordor']
     let hobbitList = document.createElement("ul");
      hobbitList.className = "hobbits";
    
-
 //hobbits.setAttribute.class = "hobbit";
 	// give each hobbit a class of `hobbit`
 	for(let i = 0; i < hobbits.length; i++) {
@@ -95,7 +94,7 @@ const lands = ['The-Shire', 'Rivendell', 'Mordor']
 // Chapter 3
 // ============
 
-  /*function keepItSecretKeepItSafe() {
+    function keepItSecretKeepItSafe() {
 	console.log('3: keepItSecretKeepItSafe')
     
     let hobbitList = document.querySelector("ul");
