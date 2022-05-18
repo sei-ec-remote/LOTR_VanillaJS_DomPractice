@@ -285,6 +285,19 @@ function weWantsIt() {
 	// Create a div with an id of `'gollum'` and add it to Mordor
 	// Remove `the ring` from `Frodo` and give it to `Gollum`
 	// Move Gollum into Mount Doom
+let yomm=document.createElement("div")
+yomm.id="gollum"
+let mordor=document.getElementById("Mordor")
+mordor.appendChild(yomm)
+
+
+let yoyo=document.getElementById("the-ring")
+let yomo=document.getElementById("gollum")
+let yoco=document.getElementById("mount-doom")
+ yomo.appendChild(yoyo)
+yoco.appendChild(yomo)
+
+
 }
 
 // COMMIT YOUR WORK
