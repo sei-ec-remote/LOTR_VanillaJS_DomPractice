@@ -280,15 +280,14 @@ function hornOfGondor() {
 	// Boromir's been killed by the Uruk-hai!
 	// Remove `Boromir` from the Fellowship
 	alert("the horn of gondor has been blown")
-	let theFellowship = document.createElement("div")
-theFellowship.setAttribute("id", "the-fellowship")
-let riv = document.getElementById("Rivendell")
-
-riv.appendChild(theFellowship);
-	let Boromir = fellowshipMembers[4]
-	Boromir.removeChild(Boromir)
+	
+	let theFellowship = document.getElementById("the-fellowship")
+	let theFellowshipList =  theFellowship.children[0]
+console.log(theFellowshipList)
+	let boromir = ""
+	theFellowshipList.removeChild(theFellowshipList.lastElementChild)
+	console.log(theFellowshipList)
 }
-
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 10 complete - horn of gandor blew and Boromir is dead"
 
