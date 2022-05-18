@@ -62,6 +62,7 @@ function makeHobbits() {
 
 		let yoni=document.createElement("li")
 		yoni.classList.add("hobbit")
+		yoni.id=`${hobbits[i]}`
 		yoni.textContent=hobbits[i];
 		console.log(hobbits[i])
 		hobbitList.appendChild(yoni)
@@ -106,6 +107,7 @@ function makeBaddies() {
 	// display an unordered list of baddies in Mordor
 	const mordor = document.getElementById("Mordor")
 	let newlist=document.createElement("ul")
+	newlist.id="ulmordor"
 	for(let i=0;i<baddies.length;i++){
 
 		let yoy =document.createElement("li")
@@ -135,6 +137,7 @@ function makeBuddies() {
 let asid = document.createElement("aside")
  asid.id="rivendell-aside"
 let  buddyList = document.createElement('ul')
+buddyList.id="buddylist"
 for(let i=0;i<buddies.length;i++){
 let budd =document.createElement("li")
 budd.id=`${buddies[i]}`
@@ -189,6 +192,23 @@ function forgeTheFellowShip() {
 	// create a new div called `'the-fellowship'` within `rivendell`
 	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
 	// after each character is added make an alert that they // have joined your party
+   let mms =document.createElement("div")
+   mms.id="the-fellowship"
+   document.getElementById("Rivendell").appendChild(mms)
+  let newhobbies= document.getElementById("hobbitsList")
+  let newbuddies= document.getElementById("buddylist")
+  let newul= document.createElement("ul")
+  newul.id="newfeloshiplist"
+  mms.appendChild(newul)
+  console.log(newbuddies,newhobbies)
+ //making a for loop creating the new fellowship
+for(let hob of Array.from(newbuddies.children)){
+	console.log(hob)
+	newul.appendChild(hob)
+}
+Array.from(newhobbies.children).forEach(x=>newul.appendChild(x))
+
+
 
 	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
 }
@@ -203,6 +223,11 @@ function forgeTheFellowShip() {
 function theBalrog() {
 	console.log('9: theBalrog')
 	// change the `'Gandalf'` text to `'Gandalf the White'`
+
+	let ganda= document.getElementById("Gandalf the Grey")
+	ganda.innerText="Gandalf the White"
+	ganda.style.backgroundColor="white"
+	ganda.style.border="5px solid grey"
 	// apply the following style to the element, make the // background 'white', add a grey border
 }
 
@@ -215,6 +240,9 @@ function theBalrog() {
 
 function hornOfGondor() {
 	console.log('10: hornOfGondor')
+	window.alert("the horn of gondor has been blown")
+	window.alert("Boromir's been killed by the Uruk-hai!")
+	document.getElementById("Boromir").remove()
 	// pop up an alert that the horn of gondor has been blown
 	// Boromir's been killed by the Uruk-hai!
 	// Remove `Boromir` from the Fellowship
@@ -231,6 +259,18 @@ function itsDangerousToGoAlone() {
 	console.log('11: itsDangerousToGoAlone')
 	// take `Frodo` and `Sam` out of the fellowship and move // them to `Mordor`
 	// add a div with an id of `'mount-doom'` to `Mordor`
+let newsam =document.getElementById(hobbits[1])
+let newfrodo=document.getElementById(hobbits[0])
+let mordor=document.getElementById("Mordor")
+let uls = document.getElementById("ulmordor")
+uls.appendChild(newsam)
+uls.appendChild(newfrodo)
+console.log(newsam,newfrodo)
+// mordor.appendChild(uls)
+let div12 = document.createElement("div")
+div12.id="mount-doom"
+mordor.appendChild(div12)
+
 }
 
 // COMMIT YOUR WORK
