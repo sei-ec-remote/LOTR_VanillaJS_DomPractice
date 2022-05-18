@@ -81,13 +81,15 @@ function makeHobbits() {
 
 function keepItSecretKeepItSafe() {
 	console.log('3: keepItSecretKeepItSafe')
-
+	let hobbitList=document.querySelector("ul")
+	let frodo =hobbitList.children[0]
 	// create a div with an id of `'the-ring'`
   let div1 =document.createElement("div")
   div1.id="the-ring"
 	// give the div a class of `'magic-imbued-jewelry'`
-
+div1.className="magic-imbued-jewelry"
 	// add the ring as a child of `Frodo`
+	frodo.appendChild(div1)
 }
 
 // COMMIT YOUR WORK
@@ -101,7 +103,17 @@ function makeBaddies() {
 	console.log('4: makeBaddies')
 
 	// display an unordered list of baddies in Mordor
+	const mordor = document.getElementById("Mordor")
+	let newlist=document.createElement("ul")
+	for(let i=0;i<baddies.length;i++){
 
+		let yoy =document.createElement("li")
+		yoy.classList.add("baddy")
+		yoy.textContent=baddies[i];
+		//console.log(baddies[i])
+		newlist.appendChild(yoy)
+	}
+	mordor.appendChild(newlist)
 	// give each of the baddies a class of "baddy"
 
 	// remember to append them to Mordor
