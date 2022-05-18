@@ -128,7 +128,6 @@ function makeBaddies() {
     let newList = document.createElement("ul");
      //baddiesMo.className = "baddy";
    
-
 	// give each of the baddies a class of "baddy"
 
 	   for(let i = 0; i < baddies.length; i++) {
@@ -148,7 +147,7 @@ function makeBaddies() {
 // ============
 // Chapter 5
 // ============
-
+/*
 function makeBuddies() {
 	console.log('5: makeBuddies')
 
