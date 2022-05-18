@@ -227,14 +227,14 @@ function forgeTheFellowShip() {
 	console.log(buds.length)
 
 	while (buds.length > 0) {
-		console.log(`${buds[0].innerText} has joined the Fellowship!`)
+		alert(`${buds[0].innerText} has joined the Fellowship!`)
 		rivendellDiv.append(buds[0])
 	}
 
 	const hobbitsInRivendell = document.getElementsByClassName('hobbit')
 
 	for (let i = hobbitsInRivendell.length - 1; i >= 0; i--) {
-		console.log(`${hobbitsInRivendell[i].innerText} has joined the Fellowship!`)
+		alert(`${hobbitsInRivendell[i].innerText} has joined the Fellowship!`)
 		rivendellDiv.append(hobbitsInRivendell[i])
 	}
 
