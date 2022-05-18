@@ -196,7 +196,7 @@ function forgeTheFellowShip() {
   for (let ele of rivendellLi) {
     fellowshipUl.appendChild(ele);
     console.log(ele);
-    alert(`${ele.innerText} joined your party`);
+    //alert(`${ele.innerText} joined your party`);
   }
   // after each character is added make an alert that they // have joined your party
 
@@ -213,8 +213,8 @@ function forgeTheFellowShip() {
 function theBalrog() {
   console.log("9: theBalrog");
   // change the `'Gandalf'` text to `'Gandalf the White'`
-  // return the first element
-  let gandalfWhite = document.querySelector("#Rivendell aside ul li");
+  // return the first element is Gandalf
+  let gandalfWhite = document.querySelector("#the-fellowship ul li");
   gandalfWhite.innerText = "Gandalf the White";
   // apply the following style to the element, make the // background 'white', add a grey border
   gandalfWhite.style.background = "white";
@@ -234,8 +234,8 @@ function hornOfGondor() {
   alert("the horn of gondor has been blown");
   // Boromir's been killed by the Uruk-hai!
   // Remove `Boromir` from the Fellowship
-  console.log(document.querySelector("#Boromir"));
-  document.querySelector("#Boromir").remove();
+  console.log(document.querySelectorAll("#the-fellowship ul li"));
+  document.querySelectorAll("#the-fellowship ul li")[4].remove();
 }
 
 // COMMIT YOUR WORK
@@ -248,16 +248,18 @@ function hornOfGondor() {
 function itsDangerousToGoAlone() {
   console.log("11: itsDangerousToGoAlone");
   // take `Frodo` and `Sam` out of the fellowship and move // them to `Mordor`
-  let frodo = document.querySelectorAll("#the-fellowship li")[0];
-  let sam = document.querySelectorAll("#the-fellowship li")[1];
-  console.log(frodo);
-  console.log(sam);
+  let frodo = document.querySelectorAll("#the-fellowship li")[4];
+  let sam = document.querySelectorAll("#the-fellowship li")[5];
+  console.log(typeof frodo);
+  console.log(typeof sam);
   console.log(document.querySelector("#Mordor ul").innerHTML);
-  document.querySelector("#Mordor ul").innerHTML += frodo;
-  document.querySelector("#Mordor ul").innerHTML += sam;
-
-  frodo.remove();
-  sam.remove();
+  //   document.querySelector("#Mordor ul").innerHTML += frodo;
+  //   document.querySelector("#Mordor ul").innerHTML += sam;
+  console.log(document.querySelector("#Mordor ul"));
+  document.querySelector("#Mordor ul").appendChild(frodo);
+  document.querySelector("#Mordor ul").appendChild(sam);
+  //   frodo.remove();
+  //   sam.remove();
 
   // add a div with an id of `'mount-doom'` to `Mordor`
   const mountDoom = document.createElement("div");
@@ -338,6 +340,6 @@ document.getElementById("all-chapters").addEventListener("click", () => {
   theBalrog();
   hornOfGondor();
   itsDangerousToGoAlone();
-  weWantsIt();
-  thereAndBackAgain();
+  //   weWantsIt();
+  //   thereAndBackAgain();
 });
