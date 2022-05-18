@@ -147,7 +147,7 @@ function makeBaddies() {
 // ============
 // Chapter 5
 // ============
-/*
+
 function makeBuddies() {
 	console.log('5: makeBuddies')
 
@@ -165,14 +165,13 @@ for(let i = 0; i <buddies.length; i++) {
 riv.appendChild(asid)
 	// insert your aside as a child element of `rivendell`
 }
-
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 5 complete - Made the Buddies".
 
 // ============
 // Chapter 6
 // ============
-
+/*
 function leaveTheShire() {
 	console.log('6: leaveTheShire')
 
