@@ -178,6 +178,7 @@ function makeBuddies() {
 	// console.log(buddieCrew);
 	// put an `unordered list` of the `'buddies'` in the aside
 	const buddieUnorderedList = document.createElement('ul');
+	buddieUnorderedList.id = "buddieUnorderedList"
 
 	//need to connect the unordered list to he aside
 	buddieCrew.appendChild(buddieUnorderedList)
@@ -188,7 +189,7 @@ function makeBuddies() {
 		//have to create a list so that you can attach the class to it.		
 		const buddieOrderedList = document.createElement('li');
 		// give each of the baddies a class of "buddies"
-		buddieOrderedList.class = `buddies`;
+		buddieOrderedList.classList.add('buddies');
 		console.log(buddieOrderedList);
 
 		//connect the class to the unordered list
@@ -235,6 +236,17 @@ function beautifulStranger() {
 	console.log('7: beautifulStranger')
 
 	// change the `'Strider'` text to `'Aragorn'`
+
+	//thing about how I gave the ring to frodo / just change the element
+	let buddieCrew = document.getElementById('buddieUnorderedList');
+	// console.log(buddieCrew);
+	// console.log(hobbitList)
+	//.children is a DOM manipulation thing - TA told me to do this
+	let strider = document.getElementsByClassName('buddies')[3];
+	console.log(strider)
+
+	strider.innerText = 'Aragorn';
+
 }
 
 // COMMIT YOUR WORK
