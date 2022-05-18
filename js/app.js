@@ -50,7 +50,7 @@ function makeMiddleEarth() {
 	// 3. append the section to the body of the DOM.
 	body[0].appendChild(middleEarthElement);
 }
-makeMiddleEarth();
+// makeMiddleEarth();
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 1 complete - Made Middle Earth".
@@ -64,13 +64,14 @@ function makeHobbits() {
 
 	// display an `unordered list` of hobbits in the shire
 	const hobbitsList = document.createElement('ul');
+	hobbitsList.id = "hobbitsUnorderedList"
 	// console.log(hobbitsList);
 	
 	hobbits.forEach( names => {
 		//have to create a list so that you can attach the class to it.		
 		const hobbitClass = document.createElement('li');
 		// give each hobbit a class of `hobbit`
-		hobbitClass.setAttribute('class', `${names}`);
+		hobbitClass.setAttribute('class', `hobbit`);
 		// console.log(names);
 		//make a linst - then attach the class to the list - the append it to the hobbit
 		// hint: create a 'ul' outside the loop into which to append the 'li's
@@ -149,7 +150,7 @@ function makeBaddies() {
 		//have to create a list so that you can attach the class to it.		
 		const baddieOrderedList = document.createElement('li');
 		// give each of the baddies a class of "baddy"
-		baddieOrderedList.class = `${villians}`;
+		baddieOrderedList.class = `baddy`;
 		console.log(baddieOrderedList);
 
 		//connect the class to the unordered list
@@ -186,8 +187,8 @@ function makeBuddies() {
 	buddies.forEach( friends => {
 		//have to create a list so that you can attach the class to it.		
 		const buddieOrderedList = document.createElement('li');
-		// give each of the baddies a class of "baddy"
-		buddieOrderedList.class = `${friends}`;
+		// give each of the baddies a class of "buddies"
+		buddieOrderedList.class = `buddies`;
 		console.log(buddieOrderedList);
 
 		//connect the class to the unordered list
@@ -211,8 +212,16 @@ document.getElementById('Rivendell').appendChild(buddieCrew);
 
 function leaveTheShire() {
 	console.log('6: leaveTheShire')
-
+	
+	//have to pull the list (don't need to create it again)
+	let hobbitList = document.getElementById('hobbitsUnorderedList');
+	console.log(hobbitList);
 	// assemble the `hobbits` and move them to `rivendell`
+	//I need to call hobbits and append them to rivendell
+	const Rivendell = document.getElementById('Rivendell');
+	console.log(Rivendell)
+	Rivendell.appendChild(hobbitList);
+
 }
 
 // COMMIT YOUR WORK
