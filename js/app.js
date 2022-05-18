@@ -59,7 +59,7 @@ const lands = ['The-Shire', 'Rivendell', 'Mordor']
 // Chapter 2
 // ============
 
-/*function makeHobbits() {
+    function makeHobbits() {
 	console.log('2: makeHobbits')
 
 	// display an `unordered list` of hobbits in the shire
@@ -77,8 +77,6 @@ const lands = ['The-Shire', 'Rivendell', 'Mordor']
 		console.log(hobbits[i])
 		hobbitList.appendChild(hobbitLi)
 	}
-	
-
       
 	    //hobbitList.setAttribute.class = "hobbit";
 	//console.log(hobbits)
@@ -91,13 +89,13 @@ const lands = ['The-Shire', 'Rivendell', 'Mordor']
 }
 
 // COMMIT YOUR WORK
-// The commit message should read: "Chapter 2 complete - Made the Hobbits".
+// The commit message should read:  
 
 // ============
 // Chapter 3
 // ============
 
-function keepItSecretKeepItSafe() {
+  /*function keepItSecretKeepItSafe() {
 	console.log('3: keepItSecretKeepItSafe')
     
     let hobbitList = document.querySelector("ul");
