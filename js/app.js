@@ -178,12 +178,14 @@ function beautifulStranger() {
 	console.log('7: beautifulStranger')
 
 	// change the `'Strider'` text to `'Aragorn'`
-	const buddies = ['Gandalf the Grey', 'Legolas', 'Gimli', 'Strider', 'Boromir']
+	
 	let riv = document.getElementById("Rivendell")
-	let Strider = riv.querySelectorAll("li")[3]
-	Strider.textContent = "Aragorn";
-	const shire = document.getElementById(The-Shire)
-	let hobbitList = shire.querySelector("ul")
+
+    let strider = riv.querySelectorAll("li")[3]
+    //const hobbits = shire.querySelector("ul")
+    strider.textContent = "Aragon";
+    const shire = document.getElementById("The-Shire")
+    let hobbitList = shire.querySelector("ul")
 }
 
 
@@ -233,10 +235,18 @@ function theBalrog() {
 	console.log('9: theBalrog')
 	// change the `'Gandalf'` text to `'Gandalf the White'`
 	// apply the following style to the element, make the // background 'white', add a grey border
-	let Gandalf = fellowshipMembers
-	Gandalf.textContent = "Gandalf the White";
-	Gandalf.style.border = "3px solid grey"
-	Gandalf.style.backgroundColor = "white"
+	let riv = document.getElementById("Rivendell")
+
+    let gandalf = riv.querySelectorAll("li")[0]
+    //const hobbits = shire.querySelector("ul")
+    gandalf.textContent = "Gandalf the white";
+    const shire = document.getElementById("The-Shire")
+    let hobbitList = shire.querySelector("ul")
+	gandalf.textContent = "Gandalf the white";
+gandalf.style.border = "3px solid gray"
+gandalf.style.backgroundColor = "white"
+	
+	
 }
 
 // COMMIT YOUR WORK
