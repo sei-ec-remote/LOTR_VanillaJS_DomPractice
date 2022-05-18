@@ -19,8 +19,15 @@ const hobbits2 = [
 	`Meriadoc "Merry" Brandybuck`,
 	`Peregrin "Pippin" Took`,
 ]
+const hobbits3 = [
+	`Frodo Baggins`,
+	`Samwise "Sam" Gamgee`,
+	`Meriadoc "Merry" Brandybuck`,
+	`Peregrin "Pippin" Took`,
+]
 const buddies = ['Gandalf the Grey', 'Legolas', 'Gimli', 'Strider', 'Boromir']
 const buddies1 = ['Gandalf the Grey', 'Legolas', 'Gimli', 'Strider', 'Boromir']
+const buddies2 = ['Gandalf the Grey', 'Legolas', 'Gimli', 'Strider', 'Boromir']
 
 const baddies = ['Sauron', 'Saruman', 'The Uruk-hai', 'Orcs']
 const baddies1 = ['Sauron', 'Saruman', 'The Uruk-hai', 'Orcs']
@@ -204,6 +211,25 @@ function beautifulStranger() {
 function forgeTheFellowShip() {
 	console.log('8: forgeTheFellowShip')
 	// create a new div called `'the-fellowship'` within `rivendell`
+	let rivendell = document.getElementById("Rivendell")
+	let fellowship = document.createElement('div')
+	let members = document.createElement('ul')
+	members.id = "hide"
+	for (let i = 0; i < hobbits.length; i++){
+		hobbits[i] = document.createElement("li")
+		members.append(hobbits3[i])
+		alert(`${hobbits3[i]} have joined your party` )
+	}
+	for (let i = 0; i < buddies.length; i++){
+		buddies[i] = document.createElement("li")
+		members.append(buddies2[i])
+		alert(`${buddies2[i]} have joined your party`)
+	}
+	fellowship.append(members)
+	rivendell.append(fellowship)
+	let hide = document.getElementById("hide")
+	hide.innerText = " "
+
 	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
 	// after each character is added make an alert that they // have joined your party
 
