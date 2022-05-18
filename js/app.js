@@ -65,6 +65,7 @@ function makeHobbits() {
 	const theShire = document.getElementById('The-Shire')
 	const ulHobbit =document.createElement('ul')
 	ulHobbit.className = `hobbits`
+	ulHobbit.id = `hobbitsid`
 
 	for(let i=0; i<hobbits.length; i++){
 		const hobLi = document.createElement('li')
@@ -170,7 +171,9 @@ function makeBuddies() {
 
 function leaveTheShire() {
 	console.log('6: leaveTheShire')
-
+	let riv = document.getElementById("Rivendell")
+	let hobbits = document.getElementById(`hobbitsid`)
+	riv.appendChild(hobbits);
 	// assemble the `hobbits` and move them to `rivendell`
 }
 
