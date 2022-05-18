@@ -335,7 +335,6 @@ function weWantsIt() {
 // ============
 // Chapter 13
 // ============
-/*
 
    function thereAndBackAgain() {
 	console.log('13: thereAndBackAgain')
@@ -351,8 +350,6 @@ function weWantsIt() {
 	theShire.appendChild(hobbits);
 	
 	}
-
-
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 13 complete -Gollum and the ring are gone, the baddies are done, and the hobbits are back in the shire".
