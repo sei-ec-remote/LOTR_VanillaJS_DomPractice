@@ -184,7 +184,7 @@ function forgeTheFellowShip() {
 	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
 	// after each character is added make an alert that they // have joined your party
 	for(let i = 0; i < (theFLI.length); i++){
-		alert(theFLI[i].innerText + ' have joined your party');
+		//alert(theFLI[i].innerText + ' have joined your party');
 		theFUL.append(theFLI[i]);
 	}
 	theFD.append(theFUL);
@@ -235,7 +235,15 @@ function hornOfGondor() {
 function itsDangerousToGoAlone() {
 	console.log('11: itsDangerousToGoAlone')
 	// take `Frodo` and `Sam` out of the fellowship and move // them to `Mordor`
+	const movinOn = document.getElementById('the-fellowship').querySelectorAll('li');
+	const frodo = movinOn[4];
+	const sam = movinOn[5];
+	document.getElementById('Mordor').querySelector('ul').append(frodo);
+	document.getElementById('Mordor').querySelector('ul').append(sam);
 	// add a div with an id of `'mount-doom'` to `Mordor`
+	const mountDoom = document.createElement('div');
+	mountDoom.id = 'mount-doom';
+	document.getElementById('Mordor').appendChild(mountDoom);
 }
 
 // COMMIT YOUR WORK
