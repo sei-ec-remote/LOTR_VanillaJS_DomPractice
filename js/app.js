@@ -211,9 +211,8 @@ function leaveTheShire() {
 function beautifulStranger() {
   console.log('7: beautifulStranger');
   // change the `'Strider'` text to `'Aragorn'`
-  document.getElementById(
-    'Rivendell'
-  ).children[1].children[0].children[3].innerText = 'Aragorn';
+  document.getElementById("Strider").innerText = 'Aragorn';
+  
 }
 
 // COMMIT YOUR WORK
