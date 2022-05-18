@@ -179,6 +179,17 @@ function leaveTheShire() {
   console.log("6: leaveTheShire");
 
   // assemble the `hobbits` and move them to `rivendell`
+
+  for (i = 0; i < hobbits.length; i++) {
+    let addTheBoys = document.createElement("li");
+    let rivendell = document.getElementById("Rivendell");
+    addTheBoys.innerHTML = hobbits[i];
+    addTheBoys.setAttribute("class", "hobbits");
+    rivendell.appendChild(addTheBoys);
+  }
+  let shire = document.getElementById("The-Shire");
+  let shireTeam = document.getElementById("theBoys");
+  shire.removeChild(shireTeam);
 }
 
 // COMMIT YOUR WORK
