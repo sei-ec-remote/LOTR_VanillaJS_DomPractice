@@ -53,12 +53,12 @@ document.body.appendChild(middleEarth)
 function makeHobbits() {
 	console.log('2: makeHobbits')
 	// display an `unordered list` of hobbits in the shire
-	let hobbitUL = document.createElement("ul")
+	let hobbitUL = document.createElement('ul')
 	// hint: create a 'ul' outside the loop into which to append the 'li's
 	// hint: get 'The-Shire' by using its id
 	for (let i = 0; i < hobbits.length; i++) {
 		// give each hobbit a class of `hobbit`
-		const hobbitList = document.createElement("li")
+		const hobbitList = document.createElement('li')
 		hobbitList.setAttribute('class', 'hobbit')
 		hobbitList.innerText = `${hobbits[i]}`
 		hobbitUL.appendChild(hobbitList)
@@ -77,7 +77,6 @@ function makeHobbits() {
 
 function keepItSecretKeepItSafe() {
 	console.log('3: keepItSecretKeepItSafe')
-
 	// create a div with an id of `'the-ring'`
 	const theRing = document.createElement('div')
 	theRing.setAttribute('id', 'the-ring')
@@ -86,9 +85,7 @@ function keepItSecretKeepItSafe() {
 	// add the ring as a child of `Frodo`
 	const frodo = document.getElementsByClassName('hobbit')[0]
 	frodo.appendChild(theRing)
-	console.log(frodo)
-
-	
+	// console.log(frodo)
 }
 // keepItSecretKeepItSafe()
 // COMMIT YOUR WORK
@@ -100,12 +97,19 @@ function keepItSecretKeepItSafe() {
 
 function makeBaddies() {
 	console.log('4: makeBaddies')
-
 	// display an unordered list of baddies in Mordor
-
 	// give each of the baddies a class of "baddy"
-
 	// remember to append them to Mordor
+	let mordorUL = document.createElement('ul')
+	for (let i = 0; i < baddies.length; i++) {
+		const mordorList = document.createElement('li')
+		mordorList.setAttribute('class', 'baddies')
+		mordorList.innerText = `${baddies[i]}`
+		mordorUL.appendChild(mordorList)
+	}
+	const Mordor = document.getElementById('Mordor')
+	Mordor.appendChild(mordorUL)
+	console.log(Mordor)
 }
 
 // COMMIT YOUR WORK
