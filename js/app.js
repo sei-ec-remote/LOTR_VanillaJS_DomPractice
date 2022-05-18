@@ -218,12 +218,12 @@ function forgeTheFellowShip() {
 	for (let i = 0; i < hobbits.length; i++){
 		hobbits[i] = document.createElement("li")
 		members.append(hobbits3[i])
-		alert(`${hobbits3[i]} have joined your party` )
+		// alert(`${hobbits3[i]} have joined your party` )
 	}
 	for (let i = 0; i < buddies.length; i++){
 		buddies[i] = document.createElement("li")
 		members.append(buddies2[i])
-		alert(`${buddies2[i]} have joined your party`)
+		// alert(`${buddies2[i]} have joined your party`)
 	}
 	fellowship.append(members)
 	rivendell.append(fellowship)
@@ -246,6 +246,10 @@ function forgeTheFellowShip() {
 function theBalrog() {
 	console.log('9: theBalrog')
 	// change the `'Gandalf'` text to `'Gandalf the White'`
+	let gandalf = document.getElementById("0")
+	gandalf.textContent = "Gandalf the White"
+	gandalf.style.background = "white"
+	gandalf.style.border = "grey"
 	// apply the following style to the element, make the // background 'white', add a grey border
 }
 
