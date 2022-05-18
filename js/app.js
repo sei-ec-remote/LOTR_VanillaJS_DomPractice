@@ -53,7 +53,7 @@ function makeMiddleEarth() {
 	// 3. append the section to the body of the DOM.
 }
 
-makeMiddleEarth()
+
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 1 complete - Made Middle Earth".
@@ -89,7 +89,7 @@ function makeHobbits() {
 
 	// hint: get 'The-Shire' by using its id
 }
-makeHobbits()
+
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 2 complete - Made the Hobbits".
 
@@ -112,7 +112,7 @@ function keepItSecretKeepItSafe() {
 	console.log(frodoBaggins)
 }
 
-keepItSecretKeepItSafe()
+
 
 
 // COMMIT YOUR WORK
@@ -141,7 +141,7 @@ function makeBaddies() {
 	// remember to append them to Mordor
 	mordor.append(baddiesList)
 }
-makeBaddies()
+
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 4 complete - Made the Baddies"..
@@ -169,12 +169,13 @@ function makeBuddies() {
 	})
 	// give each of the buddies a class of "buddy"
 	buddiesList.setAttribute('class', 'buddy')
+	buddiesList.setAttribute('id','the-buds')
 	// remember to append them to Rivendell
 	let rivendell = document.getElementById("Rivendell")
 	// insert your aside as a child element of `rivendell`
 	rivendell.append(Aside)
 }
-makeBuddies()
+
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 5 complete - Made the Buddies".
@@ -187,12 +188,12 @@ function leaveTheShire() {
 	console.log('6: leaveTheShire')
 
 	// assemble the `hobbits` and move them to `rivendell`
-	let rivendell = document.getElementById("Rivendell")
+	let rivendell = document.getElementById("the-buds")
 	let theShire = document.getElementById("shire-list")
 
 	rivendell.append(...theShire.childNodes)
 }
-leaveTheShire()
+
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 6 complete - Left the Shire"
@@ -208,7 +209,7 @@ function beautifulStranger() {
 	let strider = document.getElementsByClassName('Strider')[0]
 	strider.innerText = 'Aragorn'
 }
-beautifulStranger()
+
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 7 complete - Strider is changed to Aragorn"
@@ -220,11 +221,23 @@ beautifulStranger()
 function forgeTheFellowShip() {
 	console.log('8: forgeTheFellowShip')
 	// create a new div called `'the-fellowship'` within `rivendell`
+	let div = document.createElement('div')
+	div.setAttribute('id','the-fellowship')
+	let rivendell = document.getElementById('Rivendell')
+	rivendell.append(div)
 	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
+	let buddies = document.getElementsByClassName('buddy')
+	let hobbits = document.getElementsByClassName('hobbit')
+	const rivendellList = document.getElementById('Rivendell').querySelectorAll('li')
+	rivendellList.forEach((li) => {
+		div.appendChild(li)
+		alert(`${li.innerText} joined your party`)
+	})
 	// after each character is added make an alert that they // have joined your party
 
 	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
 }
+
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 8 complete - The Fellowship is created"
