@@ -341,10 +341,22 @@ function weWantsIt() {
 // ============
 
 function thereAndBackAgain() {
-  console.log('13: thereAndBackAgain');
-  // remove `Gollum` and `the Ring` from the document
-  // Move all the `hobbits` back to `the shire`
-}
+	console.log('13: thereAndBackAgain');
+	// remove `Gollum` and `the Ring` from the document
+	let gollum = document.getElementById("gollum");
+	gollum.remove();
+	// Move all the `hobbits` back to `the shire`
+	let hobbits = document.querySelectorAll('.hobbit');
+	let theShire = document.getElementById('The-Shire');
+	let theShireList = document.createElement('ul');
+	// console.log();
+	hobbits.forEach((hobbit) => {
+		theShireList.appendChild(hobbit);
+	});
+
+	theShire.appendChild(theShireList);
+
+  }
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 13 complete -Gollum and the ring are gone, the baddies are done, and the hobbits are back in the shire".
