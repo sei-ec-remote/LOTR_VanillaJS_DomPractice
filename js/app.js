@@ -79,7 +79,7 @@ function makeHobbits() {
 		//connect the class to the unordered list
 		hobbitsList.appendChild(hobbitClass)
 		//I need the hobbits names to appear, so I need to add text
-		hobbitClass.innerHTML = `${names}`;
+		hobbitClass.innerText = `${names}`;
 		// console.log(friends);
 
 		// console.log(friends);
@@ -103,7 +103,7 @@ makeHobbits();
 // ============
 
 function keepItSecretKeepItSafe() {
-	console.log('3: keepItSecretKeepItSafe')
+	// console.log('3: keepItSecretKeepItSafe')
 
 	// create a div with an id of `'the-ring'`
 	const ringContainer = document.createElement('div');
@@ -156,7 +156,7 @@ function makeBaddies() {
 		baddieUnorderedList.appendChild(baddieOrderedList);
 
 		//to add in their names
-		baddieOrderedList.innerHTML = `${villians}`;
+		baddieOrderedList.innerText = `${villians}`;
 	})
 	// this is how you connect the list of the villians to mordor.
 	document.getElementById('Mordor').appendChild(baddieUnorderedList);
@@ -173,10 +173,29 @@ function makeBuddies() {
 	console.log('5: makeBuddies')
 
 	// create an `aside` tag
-
+	const buddieCrew = document.createElement('aside');
+	// console.log(buddieCrew);
 	// put an `unordered list` of the `'buddies'` in the aside
-
+	const buddieUnorderedList = document.createElement('ul');
 	// insert your aside as a child element of `rivendell`
+
+	buddies.forEach( friends => {
+		//have to create a list so that you can attach the class to it.		
+		const buddieOrderedList = document.createElement('li');
+		// give each of the baddies a class of "baddy"
+		buddieOrderedList.class = `${friends}`;
+		console.log(buddieOrderedList);
+
+		//connect the class to the unordered list
+		buddieUnorderedList.appendChild(buddieOrderedList);
+
+		//to add in their names
+		buddieOrderedList.innerText = `${friends}`;
+	})
+
+//this is how you connect the list of the hobbits to the shire, don't need to connect it to the whole body
+document.getElementById('Rivendell').appendChild(buddieCrew);
+
 }
 
 // COMMIT YOUR WORK
