@@ -311,6 +311,22 @@ function thereAndBackAgain() {
 	console.log('13: thereAndBackAgain')
 	// remove `Gollum` and `the Ring` from the document
 	// Move all the `hobbits` back to `the shire`
+	let yomo=document.getElementById("gollum")
+	let yoyo=document.getElementById("the-ring")
+	yoyo.remove()
+	yomo.remove()
+
+	let mmm = document.getElementById("Frodo Baggins")
+	let sss = document.getElementById(`Samwise "Sam" Gamgee`)
+	let ppp = document.getElementById(`Meriadoc "Merry" Brandybuck`)
+	let kkk = document.getElementById(`Peregrin "Pippin" Took`)
+	
+	let theshire = document.getElementById("The-Shire")
+	theshire.appendChild(mmm )
+	theshire.appendChild(sss)
+	theshire.appendChild(ppp)
+	theshire.appendChild(kkk)
+	
 }
 
 // COMMIT YOUR WORK
