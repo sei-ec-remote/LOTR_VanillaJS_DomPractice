@@ -245,11 +245,7 @@ function forgeTheFellowShip() {
 		 alert(taco + " has joined the fellowship!")
 	 })
 		 
-	//  alert(fellowshipMembers + " ")
-	// 	 setInterval(() => {
-	// 		   console.log("hi")  
-	// 		 }, 1000)
-	//  }
+
 	
 }
 
@@ -262,6 +258,13 @@ function forgeTheFellowShip() {
 
 function theBalrog() {
 	console.log('9: theBalrog')
+	const fellowshipMembers = hobbits.concat(buddies);
+	let gandalf = fellowshipMembers[4]
+	gandalf.innerHTML = "Gandalf The White";
+	// gandolf.style.backgroundColor = "white";
+	// gandolf.style.border = "3px solid grey";
+	gandalf.css('backgroundColor', 'white');
+	
 	// change the `'Gandalf'` text to `'Gandalf the White'`
 	// apply the following style to the element, make the // background 'white', add a grey border
 }
