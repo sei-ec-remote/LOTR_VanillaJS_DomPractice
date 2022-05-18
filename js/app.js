@@ -199,14 +199,12 @@ let riv = document.getElementById("Rivendell")
 	//const hobbits = shire.querySelector("ul")
 	strider.textContent = "Aragon";
 	const shire = document.getElementById("The-Shire")
-
 	let hobbitList = shire.querySelector("ul")
-
 }
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 7 complete - Strider is changed to Aragorn"
-/*
+
 // ============
 // Chapter 8
 // ============
@@ -235,12 +233,11 @@ function forgeTheFellowShip() {
 
 
 // COMMIT YOUR WORK
-// The commit message should read: "Chapter 8 complete - The Fellowship is created"
-
+// The commit message should read: 
 // ============
 // Chapter 9
 // ============
-
+/*
 function theBalrog() {
 	console.log('9: theBalrog')
 	
