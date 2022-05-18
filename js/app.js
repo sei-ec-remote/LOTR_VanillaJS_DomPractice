@@ -68,7 +68,7 @@ function makeHobbits() {
 		hobbitList.innerText = hobbit
 		shireHobbits.append(hobbitList)
 	})
-	theShire.append(shireHobbits)
+	theShire.appendChild(shireHobbits)
 	// hint: create a 'ul' outside the loop into which to append the 'li's
 
 	// hint: get 'The-Shire' by using its id
@@ -105,13 +105,14 @@ function makeBaddies() {
 	let mordor = document.getElementById('Mordor')
 	let mordorBaddies = document.createElement('ul')
 	mordorBaddies.setAttribute('id', lands[2])
+
 	baddies.forEach((bad) =>{
 		const badList = document.createElement('li')
 		badList.innerText = bad
 		badList.setAttribute('class', 'baddy')
 		mordorBaddies.append(badList)
 	})
-	mordor.append(mordorBaddies)
+	mordor.appendChild(mordorBaddies)
 	// display an unordered list of baddies in Mordor
 
 	// give each of the baddies a class of "baddy"
@@ -127,15 +128,23 @@ function makeBaddies() {
 // ============
 
 function makeBuddies() {
+	let asideTag = document.createElement("aside")
 	console.log('5: makeBuddies')
 	let rivenDell = document.getElementById('Rivendell')
-	asideTag = document.createElement("aside")
+	let friendsList = document.createElement('ul')
+	
+	buddies.forEach((friend) =>{
+		let myBuddy = document.createElement('li')
+		friendsList.append(myBuddy)
+		myBuddy.innerText = friend
 	// create an `aside` tag
 
 	// put an `unordered list` of the `'buddies'` in the aside
-	asideTag.append(buddies)
+	// asideTag.append(friend)
 	// insert your aside as a child element of `rivendell`
-	rivenDell.append(asideTag)
+	})
+	asideTag.append(friendsList)
+	rivenDell.appendChild(asideTag)
 }
 
 
@@ -146,10 +155,21 @@ function makeBuddies() {
 // Chapter 6
 // ============
 
-function leaveTheShire() {
-	console.log('6: leaveTheShire')
 
+function leaveTheShire() {
+	// let hobbit = document.getElementsByClassName('hobbit')
+	let rivenDell = document.getElementById('Rivendale')
+	console.log('6: leaveTheShire')
+	let moveToRivendell = document.createElement('ul')
 	// assemble the `hobbits` and move them to `rivendell`
+	hobbits.forEach((i) => {
+		list = document.createElement('li')
+		moveToRivendell.append(list)
+		list = i
+		
+	})
+	
+	rivenDell.append(moveToRivendell)
 }
 
 // COMMIT YOUR WORK
