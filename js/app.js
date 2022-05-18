@@ -301,7 +301,7 @@ function itsDangerousToGoAlone() {
   // take `Frodo` and `Sam` out of the fellowship and move // them to `Mordor`
   // add a div with an id of `'mount-doom'` to `Mordor`
   let sam = fellowshipMembers[6];
-  let frodo = document.getElementsByTagName("li")[0];
+  let frodo = fellowshipMembers[5];
   let mordor = document.getElementById("Mordor");
   mordor.appendChild(sam);
 
