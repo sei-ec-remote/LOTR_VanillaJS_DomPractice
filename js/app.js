@@ -186,32 +186,32 @@
 // Chapter 8
 // ============
 
-    function forgeTheFellowShip() {
-	console.log('8: forgeTheFellowShip')
+    //function forgeTheFellowShip() {
+	//console.log('8: forgeTheFellowShip')
 	// create a new div called `'the-fellowship'` within `rivendell`
-	const rivendell = document.getElementById("Rivendell")
-	const secondDiv = document.createElement("div");
-	secondDiv.id = "the-fellowship";
-	rivendell.appendChild(secondDiv);
+	//const rivendell = document.getElementById("Rivendell")
+	//const secondDiv = document.createElement("div");
+	//secondDiv.id = "the-fellowship";
+	//rivendell.appendChild(secondDiv);
 
 	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
 	// after each character is added make an alert that they // have joined your party
-	const addHobbits = document.querySelectorAll("li.hobbit");
-    const addBuddies = document.querySelectorAll("li.buddy");
-    const ulFellowship = document.createElement("ul");
-    ulFellowship.id = "fellowshipList";
-    anotherDiv.appendChild(ulFellowship);
-    const fellowshipOfTheRings = document.getElementById("fellowshipList");
+	//const addHobbits = document.querySelectorAll("li.hobbit");
+    //const addBuddies = document.querySelectorAll("li.buddy");
+    //const ulFellowship = document.createElement("ul");
+    //ulFellowship.id = "fellowshipList";
+    //anotherDiv.appendChild(ulFellowship);
+    //const fellowshipOfTheRings = document.getElementById("fellowshipList");
 
 	//alerts
-	for(let i=0; i <addHobbits.length; i++);
-	fellowshipOfTheRings.appendChild(addHobbits[i]);
-        alert((addHobbits[i].textContent) + " has joined your party");
-    };
-    for (let i = 0; i < addBuddies.length; i++) {
-        fellowshipOfTheRings.appendChild(addBuddies[i]);
-        alert((addBuddies[i].textContent) + " has joined your party");
-	}
+	//for(let i=0; i <addHobbits.length; i++);
+	//fellowshipOfTheRings.appendChild(addHobbits[i]);
+      //  alert((addHobbits[i].textContent) + " has joined your party");
+    //};
+    //for (let i = 0; i < addBuddies.length; i++) {
+        //fellowshipOfTheRings.appendChild(addBuddies[i]);
+      //  alert((addBuddies[i].textContent) + " has joined your party");
+	//}
 	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.}
 
 // COMMIT YOUR WORK
@@ -221,11 +221,14 @@
 // Chapter 9
 // ============
 
-//function theBalrog() {
-//	console.log('9: theBalrog')
+   function theBalrog() {
+	console.log('9: theBalrog')
 	// change the `'Gandalf'` text to `'Gandalf the White'`
+	const gandalfTheGrey = document.querySelectorAll("li.buddy")[0];
+    gandalfTheGrey.textContent = "Gandalf the White";
 	// apply the following style to the element, make the // background 'white', add a grey border
-//}
+    gandalfTheGrey.setAttribute("style", "background-color: white; border: 1px solid grey");
+   }
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 9 complete - Updated Gandalf"
