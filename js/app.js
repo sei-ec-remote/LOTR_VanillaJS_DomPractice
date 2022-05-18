@@ -300,10 +300,8 @@ function itsDangerousToGoAlone() {
   // console.log(mordor.children[0].innerHTML);
 
   // take `Frodo` and `Sam` out of the fellowship and move // them to `Mordor`
-  let modor = document.getElementById("Mordor");
-  let mordorList = document.getElementById("baddies");
-  console.log('prodo',frodo[0]);
-  console.log('sam',sam[0]);
+  let modor = document.getElementById('Mordor');
+  let mordorList = document.getElementById('baddies');
   mordorList.appendChild(frodo[0]);
   mordorList.appendChild(sam[0]);
   modor.appendChild(mordorList);
@@ -324,8 +322,15 @@ function itsDangerousToGoAlone() {
 function weWantsIt() {
   console.log('12: weWantsIt');
   // Create a div with an id of `'gollum'` and add it to Mordor
+  let gollum = document.createElement('div');
+  gollum.id = 'gollum';
   // Remove `the ring` from `Frodo` and give it to `Gollum`
+  let theRing = document.getElementById('the-ring');
+  gollum.appendChild(theRing);
+
   // Move Gollum into Mount Doom
+  let mountDoom = document.getElementById('mount-doom');
+  mountDoom.appendChild(gollum);
 }
 
 // COMMIT YOUR WORK
