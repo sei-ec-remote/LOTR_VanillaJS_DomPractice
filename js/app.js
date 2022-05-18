@@ -7,20 +7,14 @@ const hobbits = [
 	`Meriadoc "Merry" Brandybuck`,
 	`Peregrin "Pippin" Took`,
 ]
-
 const buddies = ['Gandalf the Grey', 'Legolas', 'Gimli', 'Strider', 'Boromir']
-
 const baddies = ['Sauron', 'Saruman', 'The Uruk-hai', 'Orcs']
-
 const lands = ['The-Shire', 'Rivendell', 'Mordor']
-
 // ============
 // Chapter 1
 // ============
-
 const middleEarth = document.createElement('section') // 1. create a section tag with an id of middle-earth
 middleEarth.setAttribute('id', 'middle-earth')
-
 function makeMiddleEarth() {
 	console.log('1: makeMiddleEarth')
 	// 2. use a for loop to iterate over the lands array that does the following:
@@ -41,8 +35,6 @@ function makeMiddleEarth() {
 // 3. append the section to the body of the DOM.
 document.body.appendChild(middleEarth)
 }
-// makeMiddleEarth()
-
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 1 complete - Made Middle Earth".
 
@@ -67,7 +59,6 @@ function makeHobbits() {
 	theShire.appendChild(hobbitUL)
 	console.log(theShire)
 }
-// makeHobbits()
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 2 complete - Made the Hobbits".
 
@@ -87,7 +78,6 @@ function keepItSecretKeepItSafe() {
 	frodo.appendChild(theRing)
 	// console.log(frodo)
 }
-// keepItSecretKeepItSafe()
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 3 complete - Made the ring and gave it to Frodo".
 
@@ -111,7 +101,6 @@ function makeBaddies() {
 	Mordor.appendChild(mordorUL)
 	console.log(Mordor)
 }
-
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 4 complete - Made the Baddies"..
 
@@ -121,12 +110,22 @@ function makeBaddies() {
 
 function makeBuddies() {
 	console.log('5: makeBuddies')
-
 	// create an `aside` tag
-
 	// put an `unordered list` of the `'buddies'` in the aside
-
+	const aside = document.createElement('aside')
+	const buddiesUL = document.createElement('ul')
+	// put list item class buddies into buddiesUL
+	for (let i = 0; i < buddies.length; i++) {
+		const buddiesList = document.createElement('li')
+		buddiesList.setAttribute('class', 'buddies')
+		buddiesList.innerText = `${buddies[i]}`
+		buddiesUL.appendChild(buddiesList)
+	}
+	aside.appendChild(buddiesUL)
 	// insert your aside as a child element of `rivendell`
+	const rivendell = document.getElementById('Rivendell')
+	rivendell.appendChild(aside)
+	console.log(rivendell)
 }
 
 // COMMIT YOUR WORK
