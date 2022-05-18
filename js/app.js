@@ -196,7 +196,7 @@ function forgeTheFellowShip() {
   for (let ele of rivendellLi) {
     fellowshipUl.appendChild(ele);
     console.log(ele);
-    //alert(`${ele.innerText} joined your party`);
+    alert(`${ele.innerText} joined your party`);
   }
   // after each character is added make an alert that they // have joined your party
 
@@ -298,6 +298,11 @@ function thereAndBackAgain() {
   console.log("13: thereAndBackAgain");
   // remove `Gollum` and `the Ring` from the document
   // Move all the `hobbits` back to `the shire`
+  document.querySelector("#gollum").remove();
+  const hobbits = document.querySelectorAll(".hobbit");
+  hobbits.forEach((hobbit) => {
+    document.querySelector("#The-Shire").appendChild(hobbit);
+  });
 }
 
 // COMMIT YOUR WORK
@@ -347,5 +352,5 @@ document.getElementById("all-chapters").addEventListener("click", () => {
   hornOfGondor();
   itsDangerousToGoAlone();
   weWantsIt();
-  //   thereAndBackAgain();
+  thereAndBackAgain();
 });
