@@ -59,6 +59,7 @@ function makeMiddleEarth() {
 // Chapter 2
 // ============
 
+// Got it to display on the page but doesn't add in the elements section when clicked
 function makeHobbits() {
   console.log("2: makeHobbits");
 
@@ -66,6 +67,7 @@ function makeHobbits() {
 
   let hobbitUl = document.createElement("ul");
   hobbitUl.id = "theBoys";
+
   // document.body.append(hobbitUl);
   // console.log(hobbitUl);
 
@@ -76,9 +78,11 @@ function makeHobbits() {
     addTheBoys.setAttribute("class", "hobbits");
     hobbitUl.appendChild(addTheBoys);
   }
+  console.log(hobbitUl);
 
   let shire = document.getElementById("The-Shire");
   shire.appendChild(hobbitUl);
+
   // let theBoys = document.getElementById("theBoys");
   // addTheBoys.className = "Hobbit";
 }
@@ -97,10 +101,18 @@ function keepItSecretKeepItSafe() {
   console.log("3: keepItSecretKeepItSafe");
 
   // create a div with an id of `'the-ring'`
+  let oneRing = document.createElement("div");
+  oneRing.id = "the-ring";
+  // console.log(oneRing);
 
   // give the div a class of `'magic-imbued-jewelry'`
+  oneRing.setAttribute("class", "magic-imbued-jewelry");
+  // console.log(oneRing);
 
   // add the ring as a child of `Frodo`
+  let elijahWood = document.querySelector(".hobbits");
+  elijahWood.appendChild(oneRing);
+  console.log(elijahWood);
 }
 
 // COMMIT YOUR WORK
