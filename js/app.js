@@ -258,6 +258,7 @@ function itsDangerousToGoAlone() {
   console.log(document.querySelector("#Mordor ul"));
   document.querySelector("#Mordor ul").appendChild(frodo);
   document.querySelector("#Mordor ul").appendChild(sam);
+  // appendChild then don't need to remove????
   //   frodo.remove();
   //   sam.remove();
 
@@ -279,6 +280,11 @@ function weWantsIt() {
   // Create a div with an id of `'gollum'` and add it to Mordor
   // Remove `the ring` from `Frodo` and give it to `Gollum`
   // Move Gollum into Mount Doom
+  let gollumDiv = document.createElement("div");
+  gollumDiv.setAttribute("id", "gollum");
+  let ring = document.querySelector("#the-ring");
+  gollumDiv.appendChild(ring);
+  document.querySelector("#mount-doom").appendChild(gollumDiv);
 }
 
 // COMMIT YOUR WORK
@@ -340,6 +346,6 @@ document.getElementById("all-chapters").addEventListener("click", () => {
   theBalrog();
   hornOfGondor();
   itsDangerousToGoAlone();
-  //   weWantsIt();
+  weWantsIt();
   //   thereAndBackAgain();
 });
