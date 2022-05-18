@@ -172,12 +172,12 @@
 // Chapter 7
 // ============
 
-    function beautifulStranger() {
-	console.log('7: beautifulStranger')
+    //function beautifulStranger() {
+	//console.log('7: beautifulStranger')
 
 	// change the `'Strider'` text to `'Aragorn'`
-	document.getElementsByTagName("li")[3].textContent = 'Aragorn';
- }
+	//document.getElementsByTagName("li")[3].textContent = 'Aragorn';
+ //}
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 7 complete - Strider is changed to Aragorn"
@@ -186,14 +186,33 @@
 // Chapter 8
 // ============
 
-//function forgeTheFellowShip() {
-//	console.log('8: forgeTheFellowShip')
+    function forgeTheFellowShip() {
+	console.log('8: forgeTheFellowShip')
 	// create a new div called `'the-fellowship'` within `rivendell`
+	const rivendell = document.getElementById("Rivendell")
+	const secondDiv = document.createElement("div");
+	secondDiv.id = "the-fellowship";
+	rivendell.appendChild(secondDiv);
+
 	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
 	// after each character is added make an alert that they // have joined your party
+	const addHobbits = document.querySelectorAll("li.hobbit");
+    const addBuddies = document.querySelectorAll("li.buddy");
+    const ulFellowship = document.createElement("ul");
+    ulFellowship.id = "fellowshipList";
+    anotherDiv.appendChild(ulFellowship);
+    const fellowshipOfTheRings = document.getElementById("fellowshipList");
 
-	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
-//}
+	//alerts
+	for(let i=0; i <addHobbits.length; i++);
+	fellowshipOfTheRings.appendChild(addHobbits[i]);
+        alert((addHobbits[i].textContent) + " has joined your party");
+    };
+    for (let i = 0; i < addBuddies.length; i++) {
+        fellowshipOfTheRings.appendChild(addBuddies[i]);
+        alert((addBuddies[i].textContent) + " has joined your party");
+	}
+	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.}
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 8 complete - The Fellowship is created"
