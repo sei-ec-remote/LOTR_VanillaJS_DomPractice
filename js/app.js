@@ -14,6 +14,7 @@ const hobbits1 = [
 	`Peregrin "Pippin" Took`,
 ]
 const buddies = ['Gandalf the Grey', 'Legolas', 'Gimli', 'Strider', 'Boromir']
+const buddies1 = ['Gandalf the Grey', 'Legolas', 'Gimli', 'Strider', 'Boromir']
 
 const baddies = ['Sauron', 'Saruman', 'The Uruk-hai', 'Orcs']
 const baddies1 = ['Sauron', 'Saruman', 'The Uruk-hai', 'Orcs']
@@ -135,10 +136,17 @@ function makeBuddies() {
 	console.log('5: makeBuddies')
 
 	// create an `aside` tag
-
+	aside = document.createElement("aside")
 	// put an `unordered list` of the `'buddies'` in the aside
-
+	let buddyList = document.createElement("ul")
+	for (let i = 0; i < buddies.length; i++){
+		buddies[i] = document.createElement("li")
+		buddies[i].textContent = buddies1[i]
+		aside.append(buddies[i])
+	}
 	// insert your aside as a child element of `rivendell`
+	let rivendell = document.getElementById("Rivendell")
+	rivendell.appendChild(aside)
 }
 
 // COMMIT YOUR WORK
