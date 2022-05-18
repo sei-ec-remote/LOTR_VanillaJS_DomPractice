@@ -23,20 +23,13 @@ const lands = ['The-Shire', 'Rivendell', 'Mordor']
 
 	// 1. create a section tag with an id of middle-earth
 	    
-		
 		let middleEarth = document.createElement("section");
 		//newSection.setAttribute("id", "middle-earth");
-		//console.log(newSection);
 		middleEarth.id ='middle-earth';
-
-		
-	
 
 	// 2. use a for loop to iterate over the lands array that does the following:
 	for(let i = 0; i < lands.length; i++) {
 		
-	
-
 	//   2a. creates an article tag (there should be one for each land when the loop is done)
 	let newArt = document.createElement("article");
 
@@ -49,13 +42,10 @@ const lands = ['The-Shire', 'Rivendell', 'Mordor']
 	//landArticle.innerText(lands[1])
 	newArt.appendChild(h1);
 
-	//newArt.appendChild(newH);
 
 	//   2d. appends each land to the middle-earth section
 	middleEarth.appendChild(newArt)
-	//newSection.append(newArt);
 	};
-
 	// 3. append the section to the body of the DOM.
 	document.body.append(middleEarth);
 	
@@ -69,7 +59,7 @@ const lands = ['The-Shire', 'Rivendell', 'Mordor']
 // Chapter 2
 // ============
 
-function makeHobbits() {
+/*function makeHobbits() {
 	console.log('2: makeHobbits')
 
 	// display an `unordered list` of hobbits in the shire
@@ -78,12 +68,8 @@ function makeHobbits() {
      hobbitList.className = "hobbits";
    
 
-
-
-
 //hobbits.setAttribute.class = "hobbit";
 	// give each hobbit a class of `hobbit`
-	
 	for(let i = 0; i < hobbits.length; i++) {
 		let hobbitLi = document.createElement("li")
 		hobbitLi.classList.add("hobbit")
@@ -91,6 +77,7 @@ function makeHobbits() {
 		console.log(hobbits[i])
 		hobbitList.appendChild(hobbitLi)
 	}
+	
 
       
 	    //hobbitList.setAttribute.class = "hobbit";
@@ -250,7 +237,6 @@ function forgeTheFellowShip() {
 
 	for(let i = 0; i < fellowshipMembers.length; i++) {
     let fellowshipMembers = riv.querySelectorAll("li")
-
 		theFellowship.appendChild(fellowshipMembers[i]);
 
 	}
@@ -285,12 +271,14 @@ function theBalrog() {
 // ============
 // Chapter 10
 // ============
-
+let boromir = fellowshipMembers[4]
 function hornOfGondor() {
 	console.log('10: hornOfGondor')
 	// pop up an alert that the horn of gondor has been blown
 	// Boromir's been killed by the Uruk-hai!
 	// Remove `Boromir` from the Fellowship
+	alert("the horn of gondor has been blown")
+	boromir.removeChild(boromir)
 }
 
 // COMMIT YOUR WORK
@@ -299,11 +287,19 @@ function hornOfGondor() {
 // ============
 // Chapter 11
 // ============
-
+let sam = fellowshipMembers[5]
 function itsDangerousToGoAlone() {
 	console.log('11: itsDangerousToGoAlone')
 	// take `Frodo` and `Sam` out of the fellowship and move // them to `Mordor`
 	// add a div with an id of `'mount-doom'` to `Mordor`
+	const mordor = document.getElementById("Mordor")
+
+	mordor.appendChild(frodo)
+
+	mordor.appendChild(Sam)
+	 let mountDoom = document.createElement("div")
+	 mountDoom.setAttribute("id", "mount-doom")
+	 mordor.appendChild(mountDoom);
 }
 
 // COMMIT YOUR WORK
@@ -318,6 +314,12 @@ function weWantsIt() {
 	// Create a div with an id of `'gollum'` and add it to Mordor
 	// Remove `the ring` from `Frodo` and give it to `Gollum`
 	// Move Gollum into Mount Doom
+	gollum = document.createElement("div");
+	gollum.setAttribute("id", "gollum")
+	ring = frodo.querySelector("the-ring");
+	gollum.appendChild(ring);
+	let mountDoom = mordor.querySelector("mount-doom");
+	mountDoom.appendChild(gollum);
 }
 
 // COMMIT YOUR WORK
@@ -331,6 +333,7 @@ function thereAndBackAgain() {
 	console.log('13: thereAndBackAgain')
 	// remove `Gollum` and `the Ring` from the document
 	// Move all the `hobbits` back to `the shire`
+	gollum.parentElement.removeChild(gollum)
 }
 
 // COMMIT YOUR WORK
