@@ -216,11 +216,11 @@ function leaveTheShire() {
 	
 	//have to pull the list (don't need to create it again)
 	let hobbitList = document.getElementById('hobbitsUnorderedList');
-	console.log(hobbitList);
+	// console.log(hobbitList);
 	// assemble the `hobbits` and move them to `rivendell`
 	//I need to call hobbits and append them to rivendell
 	const Rivendell = document.getElementById('Rivendell');
-	console.log(Rivendell)
+	// console.log(Rivendell)
 	Rivendell.appendChild(hobbitList);
 
 }
@@ -233,7 +233,7 @@ function leaveTheShire() {
 // ============
 
 function beautifulStranger() {
-	console.log('7: beautifulStranger')
+	// console.log('7: beautifulStranger')
 
 	// change the `'Strider'` text to `'Aragorn'`
 
@@ -243,7 +243,7 @@ function beautifulStranger() {
 	// console.log(hobbitList)
 	//.children is a DOM manipulation thing - TA told me to do this
 	let strider = document.getElementsByClassName('buddies')[3];
-	console.log(strider)
+	// console.log(strider)
 
 	strider.innerText = 'Aragorn';
 
@@ -259,7 +259,18 @@ function beautifulStranger() {
 function forgeTheFellowShip() {
 	console.log('8: forgeTheFellowShip')
 	// create a new div called `'the-fellowship'` within `rivendell`
+	//creating the new div
+	const theFellowship = document.createElement('div');
+	//naming the div we just created with the id of fellowship
+	theFellowship.setAttribute('id', 'the-fellowship');
+	console.log(theFellowship)
+	//naming the new div
+	// Rivendell.appendChild(theFellowship)
+
+
 	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
+
+	
 	// after each character is added make an alert that they // have joined your party
 
 	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
