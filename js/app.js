@@ -171,8 +171,8 @@ function forgeTheFellowShip() {
 	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
 	// after each character is added make an alert that they have joined your party
 	const fellowship = document.createElement('div')
-	fellowship.setAttribute('id', 'fellowship')
 	const fellowshipUL = document.createElement('ul')
+	fellowshipUL.setAttribute('id', 'fellowship')
 	// get all list item inside rivendell, no matter they are in div, section, ul, etc.
 	const rivendell = document.getElementById('Rivendell')
 	const rivendellList  = rivendell.querySelectorAll('li')
@@ -192,14 +192,6 @@ function forgeTheFellowShip() {
 	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
 	console.log(rivendell)
 }
-makeMiddleEarth()
-makeHobbits()
-keepItSecretKeepItSafe()
-makeBaddies()
-makeBuddies()
-leaveTheShire()
-beautifulStranger()
-forgeTheFellowShip()
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 8 complete - The Fellowship is created"
 
@@ -210,9 +202,21 @@ forgeTheFellowShip()
 function theBalrog() {
 	console.log('9: theBalrog')
 	// change the `'Gandalf'` text to `'Gandalf the White'`
+	const gandalfTheWhite = document.getElementById('fellowship').childNodes[0]
+	gandalfTheWhite.innerText = `Gandalf the White`
+	gandalfTheWhite.style.background = "white"
+	gandalfTheWhite.style.border = "2px solid grey"
+	console.log(gandalfTheWhite)
 	// apply the following style to the element, make the // background 'white', add a grey border
 }
-
+makeHobbits()
+keepItSecretKeepItSafe()
+makeBaddies()
+makeBuddies()
+leaveTheShire()
+beautifulStranger()
+forgeTheFellowShip()
+theBalrog()
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 9 complete - Updated Gandalf"
 
@@ -223,6 +227,7 @@ function theBalrog() {
 function hornOfGondor() {
 	console.log('10: hornOfGondor')
 	// pop up an alert that the horn of gondor has been blown
+	alert(`Horn of Gondor has been blown`)
 	// Boromir's been killed by the Uruk-hai!
 	// Remove `Boromir` from the Fellowship
 }
