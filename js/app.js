@@ -190,6 +190,17 @@ function leaveTheShire() {
   let shire = document.getElementById("The-Shire");
   let shireTeam = document.getElementById("theBoys");
   shire.removeChild(shireTeam);
+  let oneRing = document.createElement("div");
+  oneRing.id = "the-ring";
+  // console.log(oneRing);
+
+  // give the div a class of `'magic-imbued-jewelry'`
+  oneRing.setAttribute("class", "magic-imbued-jewelry");
+  // console.log(oneRing);
+
+  // add the ring as a child of `Frodo`
+  let elijahWood = document.querySelector(".hobbits");
+  elijahWood.appendChild(oneRing);
 }
 
 // COMMIT YOUR WORK
