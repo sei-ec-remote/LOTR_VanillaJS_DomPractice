@@ -178,7 +178,14 @@ function beautifulStranger() {
 	console.log('7: beautifulStranger')
 
 	// change the `'Strider'` text to `'Aragorn'`
+	const buddies = ['Gandalf the Grey', 'Legolas', 'Gimli', 'Strider', 'Boromir']
+	let riv = document.getElementById("Rivendell")
+	let Strider = riv.querySelectorAll("li")[3]
+	Strider.textContent = "Aragorn";
+	let hobbitList = shire.querySelector("ul")
 }
+
+
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 7 complete - Strider is changed to Aragorn"
@@ -190,9 +197,17 @@ function beautifulStranger() {
 function forgeTheFellowShip() {
 	console.log('8: forgeTheFellowShip')
 	// create a new div called `'the-fellowship'` within `rivendell`
-	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
-	// after each character is added make an alert that they // have joined your party
+	let theFellowShip = document.createElement("div")
+	theFellowShip.setAttribute("id", "the-fellowship")
+	for (let i = 0; i < fellowshipMembers.length; i++) {
+		theFellowShip.appendChild(fellowshipMembers[i])		
+	}
 
+	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
+
+	let fellowshipMembers = rivendell.querySelectorAll(li)
+	// after each character is added make an alert that they // have joined your party
+   rivendell.appendChild(forgeTheFellowShip)
 	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
 }
 
