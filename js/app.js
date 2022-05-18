@@ -163,7 +163,7 @@ function leaveTheShire() {
 
 function beautifulStranger() {
 	console.log('7: beautifulStranger')
-
+	document.getElementById('Rivendell').childNodes[1].childNodes[0].childNodes[3].innerText="Aragorn";
 	// change the `'Strider'` text to `'Aragorn'`
 }
 
