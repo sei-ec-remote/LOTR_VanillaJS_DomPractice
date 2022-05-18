@@ -20,6 +20,18 @@ const lands = ['The-Shire', 'Rivendell', 'Mordor']
 
 function makeMiddleEarth() {
 	console.log('1: makeMiddleEarth')
+	const middleEarth = document.createElement("section");
+	middleEarth.setAttribute("id", "middle-earth")
+	document.querySelector("body").appendChild(middleEarth);
+
+	for (i = 0; i < lands.length; i++) {
+		const landArt = document.createElement("article");
+		landArt.setAttribute("id", lands[i])
+		const landHead = document.createElement("h1");
+		landHead.innerText = lands[i];
+		middleEarth.appendChild(landHead);
+		middleEarth.appendChild(landArt);
+	}
 
 	// 1. create a section tag with an id of middle-earth
 
