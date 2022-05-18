@@ -171,7 +171,7 @@ riv.appendChild(asid)
 // ============
 // Chapter 6
 // ============
-/*
+
 function leaveTheShire() {
 	console.log('6: leaveTheShire')
 
@@ -188,7 +188,7 @@ riv.appendChild(hobbitList)
 // ============
 // Chapter 7
 // ============
-
+/*
 function beautifulStranger() {
 	console.log('7: beautifulStranger')
 
