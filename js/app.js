@@ -280,9 +280,12 @@ function theBalrog() {
 
 function hornOfGondor() {
 	console.log('10: hornOfGondor')
-	
-	
-	
+	alert("the horn of gondor has been blown");
+	const liS4 = document.querySelectorAll('aside, li')
+	const arr4 = Array.from(liS4)
+	for (const [index,liS3] of arr4.entries()){
+		arr4[5].remove()
+	}
 	
 	// pop up an alert that the horn of gondor has been blown
 	// Boromir's been killed by the Uruk-hai!
