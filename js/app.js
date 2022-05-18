@@ -202,6 +202,7 @@ function forgeTheFellowShip() {
 	console.log('8: forgeTheFellowShip')
 	// create a new div called `'the-fellowship'` within `rivendell`
 	let theFellowship = document.createElement('div');
+	theFellowship.setAttribute('id', 'theFellowship');
 
 	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
 	for (let i = 0; i < hobbits.length; i++) {
@@ -270,7 +271,20 @@ function hornOfGondor() {
 function itsDangerousToGoAlone() {
 	console.log('11: itsDangerousToGoAlone')
 	// take `Frodo` and `Sam` out of the fellowship and move // them to `Mordor`
+	let tF = document.getElementById('theFellowship');
+	let mordor = document.getElementById('Mordor');
+	let frodo = document.getElementById('Frodo Baggins');
+	let sam = document.getElementById('Samwise "Sam" Gamgee');
+	let temp = tF.removeChild(frodo);
+	console.log(temp);
+	let temp2 = tF.removeChild(sam);
+	mordor.appendChild(temp);
+	mordor.appendChild(temp2);
+
 	// add a div with an id of `'mount-doom'` to `Mordor`
+	let mountDoom = document.createElement('div');
+	mountDoom.setAttribute('id', 'mount-doom');
+	mordor.appendChild(mountDoom);
 }
 
 // COMMIT YOUR WORK
