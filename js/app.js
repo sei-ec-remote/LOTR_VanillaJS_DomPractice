@@ -55,6 +55,7 @@ function makeHobbits() {
 	const shire = document.getElementById("The-Shire")
 	let hobbitList=document.createElement("ul")
 	hobbitList.className="hobbits"
+	hobbitList.id="hobbitsList"
     
 	// give each hobbit a class of `hobbit`
     for(let i=0;i<hobbits.length;i++){
@@ -132,9 +133,11 @@ function makeBuddies() {
 	// create an `aside` tag
 	let rive =document.getElementById("Rivendell")
 let asid = document.createElement("aside")
+ asid.id="rivendell-aside"
 let  buddyList = document.createElement('ul')
 for(let i=0;i<buddies.length;i++){
 let budd =document.createElement("li")
+budd.id=`${buddies[i]}`
 budd.textContent=buddies[i]
 buddyList.appendChild(budd)
 asid.appendChild(buddyList)
@@ -154,6 +157,8 @@ rive.appendChild(asid)
 
 function leaveTheShire() {
 	console.log('6: leaveTheShire')
+let yoyoo=document.getElementById("hobbitsList")
+document.getElementById("rivendell-aside").appendChild(yoyoo)
 
 	// assemble the `hobbits` and move them to `rivendell`
 }
@@ -167,7 +172,8 @@ function leaveTheShire() {
 
 function beautifulStranger() {
 	console.log('7: beautifulStranger')
-
+  let abb=document.getElementById("Strider")
+abb.innerText="Aragorn";
 	// change the `'Strider'` text to `'Aragorn'`
 }
 
