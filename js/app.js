@@ -212,7 +212,7 @@ function forgeTheFellowShip() {
 	console.log('8: forgeTheFellowShip')
 
 	let theFellowship = document.createElement('div');
-
+     theFellowship.setAttribute('id','theFellowship')
 	let rivendell = document.getElementById('Rivendell');
 	rivendell.appendChild(theFellowship);
 
@@ -245,7 +245,7 @@ function forgeTheFellowShip() {
 	// console.log( hobbitCollection)
 	// console.log(buddieCollection);
 	// console.log(hobbitCollection.length);
-	console.log(buddieCollection[1]);
+	
 
 	// 8.3 after each character is added make an alert that they // have joined your party
 
@@ -261,7 +261,13 @@ function forgeTheFellowShip() {
 
 function theBalrog() {
 	console.log('9: theBalrog')
-	// change the `'Gandalf'` text to `'Gandalf the White'`
+	// 9.1 change the `'Gandalf'` text to `'Gandalf the White'`
+	// let theFellowship = document.getElementById('theFellowship')
+	let gandalf = document.getElementById('Gandalf the Grey')
+	gandalf.innerText = 'Gandalf the White'
+	gandalf.style.backgroundColor = "white";
+	gandalf.style.border = "solid grey "
+	// console.log(theFellowship)
 	// apply the following style to the element, make the // background 'white', add a grey border
 }
 
