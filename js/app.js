@@ -204,7 +204,12 @@ function forgeTheFellowShip() {
 function theBalrog() {
   console.log("9: theBalrog");
   // change the `'Gandalf'` text to `'Gandalf the White'`
+  // return the first element
+  let gandalfWhite = document.querySelector("#Rivendell aside ul li");
+  gandalfWhite.innerText = "Gandalf the White";
   // apply the following style to the element, make the // background 'white', add a grey border
+  gandalfWhite.style.background = "white";
+  gandalfWhite.style.borderColor = "grey";
 }
 
 // COMMIT YOUR WORK
