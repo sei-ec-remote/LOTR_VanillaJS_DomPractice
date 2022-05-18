@@ -184,7 +184,7 @@ function forgeTheFellowShip() {
 	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
 	// after each character is added make an alert that they // have joined your party
 	for(let i = 0; i < (theFLI.length); i++){
-		//alert(theFLI[i].innerText + ' have joined your party');
+		alert(theFLI[i].innerText + ' have joined your party');
 		theFUL.append(theFLI[i]);
 	}
 	theFD.append(theFUL);
@@ -278,7 +278,18 @@ function weWantsIt() {
 function thereAndBackAgain() {
 	console.log('13: thereAndBackAgain')
 	// remove `Gollum` and `the Ring` from the document
+	document.getElementById('the-ring').remove();
+	document.getElementById('gollum').remove();
 	// Move all the `hobbits` back to `the shire`
+	let anotherMove = document.querySelectorAll('hobbit');
+	const shireLocation = document.getElementById('The-Shire');
+	const newULShire = document.createElement('ul');
+	newULShire.id = "hobbits";
+	shireLocation.append(newULShire);
+	newULShire.appendChild(document.getElementsByClassName('hobbit')[2]);
+	newULShire.appendChild(document.getElementsByClassName('hobbit')[3]);
+	newULShire.appendChild(document.getElementsByClassName('hobbit')[2]);
+	newULShire.appendChild(document.getElementsByClassName('hobbit')[3]);
 }
 
 // COMMIT YOUR WORK
