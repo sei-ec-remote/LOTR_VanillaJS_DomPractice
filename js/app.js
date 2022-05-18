@@ -214,6 +214,14 @@ function beautifulStranger() {
   console.log("7: beautifulStranger");
 
   // change the `'Strider'` text to `'Aragorn'`
+  let searchStrider = document.getElementsByTagName("li");
+  console.log(searchStrider);
+  for (i = 0; i < searchStrider.length; i++) {
+    if (searchStrider[i].innerHTML === "Strider") {
+      searchStrider[i].innerHTML = "Aragorn";
+      break;
+    }
+  }
 }
 
 // COMMIT YOUR WORK
