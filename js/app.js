@@ -29,7 +29,7 @@ function makeMiddleEarth() {
 
 	// 2. use a for loop to iterate over the lands array that does the following:
 	for (let i = 0; i < lands.length; i++){
-		const landArticle = document.createElement("article");
+		const landArticle = document.createElement("article"); //** $YNTAX ** :how you create an article
 
     //   2a. creates an article tag (there should be one for each land when the loop is done)
 		landArticle.id = lands[i];
@@ -64,6 +64,23 @@ function makeHobbits() {
 	console.log('2: makeHobbits')
 
 	// display an `unordered list` of hobbits in the shire
+	const shireHobbits = document.createElement('ul')
+	const theShire = document.getElementById('The-Shire')
+
+	for (let i = 0; i < hobbits.length; i++) {
+		const hobbit = document.createElement('li')
+		hobbit.innerText = hobbits[i];
+		
+		hobbit.className = "hobbit";
+		console.log(hobbit);
+		shireHobbits.appendChild(hobbit);
+		console.log(shireHobbits)
+	}
+
+	theShire.appendChild(shireHobbits);
+	
+		
+	
 
 	// give each hobbit a class of `hobbit`
 
