@@ -185,7 +185,14 @@ function makeBuddies() {
 function leaveTheShire() {
 	console.log('6: leaveTheShire')
 
+	const theShire = document.getElementById('The-Shire')
+	const shireGroup = document.querySelector('ul')
+	shireGroup.parentElement.removeChild(shireGroup)
+	console.log(shireGroup)
+
 	// assemble the `hobbits` and move them to `rivendell`
+	const Rivendell = document.getElementById('Rivendell')
+	Rivendell.append(shireGroup)
 }
 
 // COMMIT YOUR WORK
