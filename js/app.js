@@ -180,6 +180,7 @@ function leaveTheShire() {
 	// rivendell.appendChild(document.getElementById("list"))
 	for (let i = 0; i < hobbits1.length; i++){
 		hobbits1[i] = document.createElement("li")
+		hobbits1[i].setAttribute("id", i + 5)
 		aside.append(hobbits1[i])
 		hobbits1[i].textContent = hobbits2[i]
 	}
@@ -263,12 +264,13 @@ function theBalrog() {
 function hornOfGondor() {
 	console.log('10: hornOfGondor')
 	// pop up an alert that the horn of gondor has been blown
-	alert('Horn of gondor has been blown!')
+	// alert('Horn of gondor has been blown!')
 	// Boromir's been killed by the Uruk-hai!
-	alert("Boromir's been killed by the Uruk-hai!")
+	// alert("Boromir's been killed by the Uruk-hai!")
 	// Remove `Boromir` from the Fellowship
 	let fellowship = document.getElementById("hide")
 	fellowship.remove("Boromir")
+	// alert("Boromir has left your party")
 
 }
 
@@ -282,7 +284,21 @@ function hornOfGondor() {
 function itsDangerousToGoAlone() {
 	console.log('11: itsDangerousToGoAlone')
 	// take `Frodo` and `Sam` out of the fellowship and move // them to `Mordor`
+	let frodo = document.getElementById('5')
+	let sam = document.getElementById('6')
+	let mordor = document.getElementById('Mordor')
+	frodo.innerHTML = " "
+	sam.innerHTML = " "
+	let frodoAndSam = document.createElement("ul")
+	frodoAndSam.append(frodo)
+	frodo.textContent = "frodo"
+	frodoAndSam.append(sam)
+	sam.textContent = "sam"
+	mordor.append(frodoAndSam)
 	// add a div with an id of `'mount-doom'` to `Mordor`
+	let mountDoom = document.createElement("div")
+	mountDoom.id = "mount-doom"
+	mordor.append(mountDoom)
 }
 
 // COMMIT YOUR WORK
