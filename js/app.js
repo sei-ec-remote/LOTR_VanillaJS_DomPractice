@@ -82,18 +82,18 @@
 // Chapter 3
 // ============
 
-  function keepItSecretKeepItSafe() {
-  console.log('3: keepItSecretKeepItSafe')
+  //function keepItSecretKeepItSafe() {
+  //console.log('3: keepItSecretKeepItSafe')
 
 	// create a div with an id of `'the-ring'`
-    const theRing = document.createElement("div");
+    //const theRing = document.createElement("div");
 	// give the div a class of `'magic-imbued-jewelry'`
-       theRingDiv.className = "magic-imbued-jewelry";
+      // theRingDiv.className = "magic-imbued-jewelry";
 	// add the ring as a child of `Frodo`
-	const ulHobbit = document.querySelector('ul')
-	const liFrodo = ulHobbit.children[0]
-	liFrodo.appendChild(theRingDiv);
-  }
+	//const ulHobbit = document.querySelector('ul')
+	//const liFrodo = ulHobbit.children[0]
+	//liFrodo.appendChild(theRingDiv);
+  //}
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 3 complete - Made the ring and gave it to Frodo".
@@ -102,15 +102,25 @@
 // Chapter 4
 // ============
 
-//function makeBaddies() {
-//	console.log('4: makeBaddies')
+    function makeBaddies() {
+    console.log('4: makeBaddies')
 
 	// display an unordered list of baddies in Mordor
 
+	const mordor = document.getElementById("Mordor")
+	const ulBaddiesList = document.createElement("ui");
+    liBaddiesList.className = "baddies";
+	
 	// give each of the baddies a class of "baddy"
+	for(let i = 0; i <baddies.length; i++) {
+		const liliBaddies = document.createId("li");
+		liBaddies.textContent = baddies[i];
+		liBaddies.className = "baddy";
+		ulBaddiesList.appendChild(ulBaddiesList);
 
-	// remember to append them to Mordor
-//}
+		// remember to append them to Mordor
+    mordor.appendChild(ulBaddiesList);
+  }
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 4 complete - Made the Baddies"..
