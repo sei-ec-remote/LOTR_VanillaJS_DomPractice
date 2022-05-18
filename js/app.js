@@ -205,15 +205,22 @@ function forgeTheFellowShip() {
 	// create a new div called `'the-fellowship'` within `rivendell`
 	let theFellowShip = document.createElement('div');
 	theFellowShip.setAttribute('id', 'the-fellowship');
-	riv.appendChild('the-fellowship')
+	riv.appendChild(theFellowShip)
 	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
-	let hobs = hobbits
-	let b = buddies
+	const allPeople = document.createElement('ul')
+	theFellowShip.appendChild(allPeople)
 	for(let i=0; i<hobbits.length;i++){
-		for(let j=0; j<buddies.length; j++){}
+		const hobbit = document.createElement('li')
+		hobbit.textContent = hobbits[i]
+		allPeople.appendChild(hobbit);
 	}
+	for(let j=0; j<buddies.length; j++){
+		const buddy = document.createElement('li')
+		buddy.textContent = buddies[j]
+		allPeople.appendChild(buddy);
+}
+alert('They have joined the party')
 	// after each character is added make an alert that they // have joined your party
-
 	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
 }
 
