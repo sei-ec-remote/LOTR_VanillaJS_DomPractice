@@ -237,7 +237,7 @@ function forgeTheFellowShip() {
 // ============
 // Chapter 9
 // ============
-/*
+
 function theBalrog() {
 	console.log('9: theBalrog')
 	
@@ -258,7 +258,7 @@ gandalf.style.backgroundColor = "white"
 // ============
 // Chapter 10
 // ============
-
+/*
    function hornOfGondor() {
 	console.log('10: hornOfGondor')
 	// pop up an alert that the horn of gondor has been blown
