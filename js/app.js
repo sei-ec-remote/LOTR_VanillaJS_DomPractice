@@ -58,7 +58,7 @@ function makeHobbits() {
 	console.log('2: makeHobbits')
 
 	// display an `unordered list` of hobbits in the shire
-	
+	let theShire = document.getElementById('The-Shire')
 	// give each hobbit a class of `hobbit`
 	let shireHobbits = document.createElement('ul')
 	shireHobbits.setAttribute('id',lands[0])
@@ -68,7 +68,7 @@ function makeHobbits() {
 		hobbitList.innerText = hobbit
 		shireHobbits.append(hobbitList)
 	})
-	document.body.append(shireHobbits)
+	theShire.append(shireHobbits)
 	// hint: create a 'ul' outside the loop into which to append the 'li's
 
 	// hint: get 'The-Shire' by using its id
@@ -102,7 +102,16 @@ function keepItSecretKeepItSafe() {
 
 function makeBaddies() {
 	console.log('4: makeBaddies')
-
+	let mordor = document.getElementById('Mordor')
+	let mordorBaddies = document.createElement('ul')
+	mordorBaddies.setAttribute('id', lands[2])
+	baddies.forEach((bad) =>{
+		const badList = document.createElement('li')
+		badList.innerText = bad
+		badList.setAttribute('class', 'baddy')
+		mordorBaddies.append(badList)
+	})
+	mordor.append(mordorBaddies)
 	// display an unordered list of baddies in Mordor
 
 	// give each of the baddies a class of "baddy"
