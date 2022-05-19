@@ -178,7 +178,7 @@ function forgeTheFellowShip() {
 	const rivendellList  = rivendell.querySelectorAll('li')
 
 	for (let i = 0; i < rivendellList.length; i++) {
-		// alert(`${rivendellList[i].innerText} has joined the fellowship`)
+		alert(`${rivendellList[i].innerText} has joined the fellowship`)
 		fellowshipUL.append(rivendellList[i])
 	}
 	fellowship.append(fellowshipUL)
@@ -220,7 +220,7 @@ function theBalrog() {
 function hornOfGondor() {
 	console.log('10: hornOfGondor')
 	// pop up an alert that the horn of gondor has been blown
-	// alert(`Horn of Gondor has been blown`)
+	alert(`Horn of Gondor has been blown`)
 	// Boromir's been killed by the Uruk-hai!
 	// Remove `Boromir` from the Fellowship
 	theFellowShip = document.getElementById('fellowship')
@@ -273,18 +273,7 @@ function weWantsIt() {
 	document.getElementById('mount-doom').appendChild(gollum)
 	console.log(document.getElementById('Mordor'))
 }
-makeMiddleEarth()
-makeHobbits()
-keepItSecretKeepItSafe()
-makeBaddies()
-makeBuddies()
-leaveTheShire()
-beautifulStranger()
-forgeTheFellowShip()
-theBalrog()
-hornOfGondor()
-itsDangerousToGoAlone()
-weWantsIt()
+
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 12 complete - Gollum is trying to get the ring".
 
@@ -295,9 +284,36 @@ weWantsIt()
 function thereAndBackAgain() {
 	console.log('13: thereAndBackAgain')
 	// remove `Gollum` and `the Ring` from the document
+	document.getElementById('gollum').remove()
 	// Move all the `hobbits` back to `the shire`
+	// prepare hobbit list
+	const hobbitList = document.createElement('ul')
+	const merry = document.getElementById('fellowship').childNodes[4]
+	const pippin = document.getElementById('fellowship').childNodes[5]
+	const frodo = document.getElementById('Mordor').childNodes[2].childNodes[0]
+	const sam = document.getElementById('Mordor').childNodes[2].childNodes[1]
+	//append child
+	hobbitList.append(merry, pippin, frodo, sam)
+	const theShire = document.getElementById('The-Shire')
+	theShire.append(hobbitList)
+	//remove mount-doom
+	document.getElementById('mount-doom').remove()
+	console.log(document.getElementById('The-Shire'))
+	console.log(document.getElementById('Mordor'))
 }
-
+// makeMiddleEarth()
+// makeHobbits()
+// keepItSecretKeepItSafe()
+// makeBaddies()
+// makeBuddies()
+// leaveTheShire()
+// beautifulStranger()
+// forgeTheFellowShip()
+// theBalrog()
+// hornOfGondor()
+// itsDangerousToGoAlone()
+// weWantsIt()
+// thereAndBackAgain()
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 13 complete -Gollum and the ring are gone, the baddies are done, and the hobbits are back in the shire".
 
