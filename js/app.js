@@ -228,6 +228,17 @@ theBuddies.setAttribute('id', 'buddyaside')
 		newBud.innerText = buddyString
 		theBuddies.appendChild(newBud)
 		console.log(newBud)
+		if (i === 3) {
+		let newBud = buddies[i]
+		let buddyString = buddies[i].toString()
+		console.log(newBud)
+		newBud = document.createElement('li')
+		newBud.setAttribute('class', 'buddy');
+		newBud.setAttribute('id', 'aragorn')	
+		newBud.innerText = buddyString
+		theBuddies.appendChild(newBud)
+		console.log(newBud)
+		}
 	}rivendell.appendChild(theBuddies)
 }
 makeBuddies()
@@ -286,13 +297,22 @@ leaveTheShire()
 // Chapter 7
 // ============
 
-// function beautifulStranger() {
-// 	console.log('7: beautifulStranger')
+function beautifulStranger() {
+	console.log('7: beautifulStranger')
+	// change the `'Strider'` text to `'Aragorn'`
+	// for (let i = 0; i < buddies.length; i++) {
+	// 	if(i === 3) {
+	// 		buddies.splice(3, 1, 'Aragorn')
 
-// 	// change the `'Strider'` text to `'Aragorn'`
-
-// }
-// beautifulStranger()
+	
+	// 	}
+	// }
+	buddies.splice(3, 1, "aragorn")
+	console.log(buddies)
+	let aragorn = document.getElementById('aragorn')
+	aragorn.innerHTML = 'Aragorn'
+}
+beautifulStranger()
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 7 complete - Strider is changed to Aragorn"
@@ -301,66 +321,75 @@ leaveTheShire()
 // Chapter 8
 // ============
 
-// function forgeTheFellowShip() {
-// 	console.log('8: forgeTheFellowShip')
+function forgeTheFellowShip() {
+	console.log('8: forgeTheFellowShip')
 // 	// create a new div called `'the-fellowship'` within `rivendell`
 // 	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
 // 	// after each character is added make an alert that they // have joined your party
-// 	let fellowship = document.createElement('div') 
-// 	fellowship.setAttribute('class', 'the-fellowship')
+	let fellowship = document.createElement('div') 
+	fellowship.setAttribute('class', 'the-fellowship')
 
-// 	for(let i = 0; i < hobbits.length; i++) {
-// 		if(i === 0) {  
-// 		let fellowFrod = document.createElement('li');
-// 		// fellowFrod.setAttribute('class', 'hobbits');
-// 		fellowFrod.setAttribute('id', 'fellowFrodo')
-// 		fellowship.appendChild(fellowFrod)
-// 		console.log(fellowship)
-// 	}else if(i === 1) {
-// 		let fellowSam = document.createElement('li');
-// 		// fellowSam.setAttribute('class', 'hobbits');
-// 		fellowSam.setAttribute('id', 'fellowSam')
-// 		fellowship.appendChild(fellowSam);
-// 		console.log(fellowSam)
-// 	} else if(i === 2) {
-// 		let fellowMerry = document.createElement('li')
-// 		fellowMerry.setAttribute('id', 'fellowMerry')
-// 		fellowship.appendChild(fellowMerry)
-// 	} else if(i === 3) {
-// 		let fellowPere = document.createElement('li')
-// 		fellowPere.setAttribute('id', 'fellowPere')
-// 		fellowship.appendChild(fellowPere)
+	for(let i = 0; i < hobbits.length; i++) {
+		if(i === 0) {  
+		let fellowFrod = document.createElement('li');
+		// fellowFrod.setAttribute('class', 'hobbits');
+		fellowFrod.setAttribute('id', 'fellowFrodo')
+		fellowship.appendChild(fellowFrod)
+		console.log(fellowship)
+		window.alert('Frodo added')
+	}else if(i === 1) {
+		let fellowSam = document.createElement('li');
+		// fellowSam.setAttribute('class', 'hobbits');
+		fellowSam.setAttribute('id', 'fellowSam')
+		fellowship.appendChild(fellowSam);
+		console.log(fellowSam)
+		window.alert('Sam Added')
+	} else if(i === 2) {
+		let fellowMerry = document.createElement('li')
+		fellowMerry.setAttribute('id', 'fellowMerry')
+		fellowship.appendChild(fellowMerry)
+		window.alert('Merry added')
+	} else if(i === 3) {
+		let fellowPere = document.createElement('li')
+		fellowPere.setAttribute('id', 'fellowPere')
+		fellowship.appendChild(fellowPere)
+		window.alert('Pere added')
 
-// 	}
-// 	console.log(fellowship)
-// 	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
-// }
-// for(let i = 0; i < buddies.length; i++){
-// 	if ( i === 0 ){
-// 		let budGan = document.createElement('li')
-// 		budGan.setAttribute('id', 'fellowGandalf')
-// 		fellowship.appendChild(budGan)
-// 	} else if( i === 1){
-// 		let budLego = document.createElement('li')
-// 		budLego.setAttribute('id', 'fellowLegolas')
-// 		fellowship.appendChild(budLego)
-// 	} else if( i === 2) {
-// 		let budGimli = document.createElement('li')
-// 		budGimli.setAttribute('id', 'fellowGimli')
-// 		fellowship.appendChild(budGimli)
-// 	} else if (i === 3) {
-// 		let budAragorn = document.createElement('li')
-// 		budAragorn.setAttribute('id', 'fellowAragorn')
-// 		fellowship.appendChild(budAragorn)
-// 	} else if (i === 4) {
-// 		let budBoro = document.createElement('li')
-// 		budBoro.setAttribute('id', 'fellowBoromir')
-// 		fellowship.appendChild(budBoro)
-// 	}
-// } rivendell.appendChild(fellowship)
-// console.log(fellowship)
-// }
-// forgeTheFellowShip()
+	}
+	console.log(fellowship)
+	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
+}
+for(let i = 0; i < buddies.length; i++){
+	if ( i === 0 ){
+		let budGan = document.createElement('li')
+		budGan.setAttribute('id', 'fellowGandalf')
+		fellowship.appendChild(budGan)
+		window.alert('Gandalf added')
+	} else if( i === 1){
+		let budLego = document.createElement('li')
+		budLego.setAttribute('id', 'fellowLegolas')
+		fellowship.appendChild(budLego)
+		window.alert('Legolas added')
+	} else if( i === 2) {
+		let budGimli = document.createElement('li')
+		budGimli.setAttribute('id', 'fellowGimli')
+		fellowship.appendChild(budGimli)
+		window.alert('Gimli added')
+	} else if (i === 3) {
+		let budAragorn = document.createElement('li')
+		budAragorn.setAttribute('id', 'fellowAragorn')
+		fellowship.appendChild(budAragorn)
+		window.alert('Aragorn added')
+	} else if (i === 4) {
+		let budBoro = document.createElement('li')
+		budBoro.setAttribute('id', 'fellowBoromir')
+		fellowship.appendChild(budBoro)
+		window.alert('Boromir added')
+	}
+} rivendell.appendChild(fellowship)
+console.log(fellowship)
+}
+forgeTheFellowShip()
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 8 complete - The Fellowship is created"
