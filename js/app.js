@@ -143,6 +143,7 @@ function makeBaddies() {
 function makeBuddies() {
 	console.log('5: makeBuddies')
 
+	
 	// create an `aside` tag
 
 	// put an `unordered list` of the `'buddies'` in the aside
