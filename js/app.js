@@ -279,20 +279,20 @@
 // Chapter 12
 // ============
 
-    function weWantsIt() {
-     console.log("12: weWantsIt");
-    // Create a div with an id of `'gollum'` and add it to Mordor
-    const gollumDiv = document.createElement("div");
-    gollumDiv.id = "gollum";
-    const mordor = document.getElementById("Mordor");
-    mordor.appendChild(gollumDiv);
-    // Remove `the ring` from `Frodo` and give it to `Gollum`
-    const theRing = document.querySelector("div.magic-imbued-jewelry");
-    gollumDiv.appendChild(theRing);
-    // Move Gollum into Mount Doom
-    const mountDoom = document.getElementById("mount-doom");
-    mountDoom.appendChild(gollumDiv);
-	}
+    // function weWantsIt() {
+    //  console.log("12: weWantsIt");
+    // // Create a div with an id of `'gollum'` and add it to Mordor
+    // const gollumDiv = document.createElement("div");
+    // gollumDiv.id = "gollum";
+    // const mordor = document.getElementById("Mordor");
+    // mordor.appendChild(gollumDiv);
+    // // Remove `the ring` from `Frodo` and give it to `Gollum`
+    // const theRing = document.querySelector("div.magic-imbued-jewelry");
+    // gollumDiv.appendChild(theRing);
+    // // Move Gollum into Mount Doom
+    // const mountDoom = document.getElementById("mount-doom");
+    // mountDoom.appendChild(gollumDiv);
+	// }
 
 	// Create a div with an id of `'gollum'` and add it to Mordor
 	// Remove `the ring` from `Frodo` and give it to `Gollum`
@@ -306,20 +306,20 @@
 // Chapter 13
 // ============
 
-    function thereAndBackAgain() {
-	console.log('13: thereAndBackAgain')
-	// remove `Gollum` and `the Ring` from the document
-	const gollum = document.getElementById("gollum");
-    gollum.remove();
-    // Move all the `hobbits` back to `the shire`
-    const theShire = document.getElementById("The-Shire");
-    const returnHobbits = document.querySelector("ul.hobbits");
-    const addHobbits = document.querySelectorAll("li.hobbit");
-    for (let i = 0; i < addHobbits.length; i++) {
-        returnHobbits.appendChild(addHobbits[i]);
-    };
-    theShire.appendChild(returnHobbits);
-}
+//     function thereAndBackAgain() {
+// 	console.log('13: thereAndBackAgain')
+// 	// remove `Gollum` and `the Ring` from the document
+// 	const gollum = document.getElementById("gollum");
+//     gollum.remove();
+//     // Move all the `hobbits` back to `the shire`
+//     const theShire = document.getElementById("The-Shire");
+//     const returnHobbits = document.querySelector("ul.hobbits");
+//     const addHobbits = document.querySelectorAll("li.hobbit");
+//     for (let i = 0; i < addHobbits.length; i++) {
+//         returnHobbits.appendChild(addHobbits[i]);
+//     };
+//     theShire.appendChild(returnHobbits);
+// }
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 13 complete -Gollum and the ring are gone, the baddies are done, and the hobbits are back in the shire".
