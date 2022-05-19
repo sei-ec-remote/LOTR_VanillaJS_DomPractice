@@ -130,10 +130,11 @@ function makeBuddies() {
 	let rivenDell = document.getElementById('Rivendell')
 	let friendsList = document.createElement('ul')
 	
-	buddies.forEach((friend) =>{
+	buddies.forEach((i) =>{
 		let myBuddy = document.createElement('li')
-		myBuddy.innerText = friend
+		myBuddy.innerText = i
 		friendsList.append(myBuddy)
+		myBuddy.setAttribute('id',i)
 	// create an `aside` tag
 
 	// put an `unordered list` of the `'buddies'` in the aside
@@ -187,6 +188,21 @@ function forgeTheFellowShip() {
 	// create a new div called `'the-fellowship'` within `rivendell`
 	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
 	// after each character is added make an alert that they // have joined your party
+	let rivenDell = document.getElementById('Rivendell')
+	let fellowShip = document.createElement('div')
+	fellowShip.setAttribute('id', 'the-fellowship')
+	rivenDell.append(fellowShip)
+	hobbits.forEach((i) =>{
+		alert(`${[i]} has joined your party`)
+		fellowShip.append(i)
+	})
+
+	buddies.forEach((i) =>{
+		alert(`${i} has joined your party`)
+		fellowShip.append(i)
+	})
+	
+
 
 	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
 }
@@ -201,6 +217,10 @@ function forgeTheFellowShip() {
 function theBalrog() {
 	console.log('9: theBalrog')
 	// change the `'Gandalf'` text to `'Gandalf the White'`
+	const gandalf = document.getElementById('Gandalf the Grey')
+	gandalf.innerHTML = 'Gandalf the White'
+	gandalf.style.border = 'grey'
+	gandalf.style.background = 'white'
 	// apply the following style to the element, make the // background 'white', add a grey border
 }
 
@@ -216,6 +236,10 @@ function hornOfGondor() {
 	// pop up an alert that the horn of gondor has been blown
 	// Boromir's been killed by the Uruk-hai!
 	// Remove `Boromir` from the Fellowship
+	alert('The Horn of Gondor has been blown')
+	let boromir = documemt.getElementById('Boromir')
+	
+	boromir.remove()
 }
 
 // COMMIT YOUR WORK
