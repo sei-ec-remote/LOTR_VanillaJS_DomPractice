@@ -60,13 +60,17 @@ function makeHobbits() {
 	
 	const hobbitsUL = document.createElement("ul");
 	document.querySelector("article#The-Shire").appendChild(hobbitsUL);
+	
+	let a = 0
 
-	for (let i = 0; i < hobbits.length; i++) {
+	hobbits.forEach((hobbit) => {
 		const hobbitsLI = document.createElement("li");
-		listHobbits = hobbits[i]
-		hobbitsLI.innerText = listHobbits;
+		hobbitsLI.className = "hobbit"	;
+		hobbitsLI.innerText = hobbits[a]
+		a += 1;
 		hobbitsUL.appendChild(hobbitsLI);
-	}
+		hobbitsUL.appendChild(hobbitsLI);
+	});
 	
 
 	// display an `unordered list` of hobbits in the shire
@@ -87,13 +91,19 @@ function makeHobbits() {
 
 function keepItSecretKeepItSafe() {
 	console.log('3: keepItSecretKeepItSafe')
+	const secondDiv = document.createElement("div");
+	secondDiv.id = "the-ring";
+	secondDiv.className = ("magic-imbued-jewelry");
+	const newFrodo = document.getElementsByClassName("hobbit")[0];
+	newFrodo.appendChild(secondDiv);
+}
 
 	// create a div with an id of `'the-ring'`
 
 	// give the div a class of `'magic-imbued-jewelry'`
 
 	// add the ring as a child of `Frodo`
-}
+
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 3 complete - Made the ring and gave it to Frodo".
@@ -105,6 +115,17 @@ function keepItSecretKeepItSafe() {
 function makeBaddies() {
 	console.log('4: makeBaddies')
 
+	const badList = document.createElement("ul");
+	let b = 0;
+
+	baddies.forEach(() => {
+		const baddyLI = document.createElement("li");
+		baddyLI.className = "baddy"
+		baddyLI.innerText = baddies[b];
+		b += 1;
+		badList.appendChild(baddyLI);
+	})
+	document.getElementById("Mordor").appendChild(badList)
 	// display an unordered list of baddies in Mordor
 
 	// give each of the baddies a class of "baddy"
@@ -138,7 +159,8 @@ function makeBuddies() {
 
 function leaveTheShire() {
 	console.log('6: leaveTheShire')
-
+	const newListHobbits = document.getElementById("The-Shire").childNodes[1];
+	document.getElementById("Rivendell").appendChild(newListHobbits);
 	// assemble the `hobbits` and move them to `rivendell`
 }
 
