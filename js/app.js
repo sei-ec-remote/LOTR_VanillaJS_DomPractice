@@ -70,7 +70,7 @@ function makeHobbits() {
 	for(let i=0; i<hobbits.length; i++){
 		const hobLi = document.createElement('li')
 		hobLi.textContent = hobbits[i]
-		hobLi.className = 'hobbit'
+		hobLi.id = `${hobbits[i]}`
 		ulHobbit.appendChild(hobLi)
 		//theShire.setAttribute('li', `${hobbits[i]}`)
 	}
@@ -119,6 +119,7 @@ function makeBaddies() {
 	// display an unordered list of baddies in Mordor
 	const mordor = document.getElementById("Mordor")
 	let ulBaddis=document.createElement("ul")
+	ulBaddis.id="ulmordor"
 	for(let i=0; i<baddies.length;i++){
 		let liBaddie = document.createElement('li')
 		//liBaddie.classList.add("baddy")
@@ -218,7 +219,7 @@ function forgeTheFellowShip() {
 	}
 	for(let j=0; j<buddies.length; j++){
 		const buddy = document.createElement('li')
-		buddy.id = `${buddies[i]}`
+		buddy.id = `${buddies[j]}`
 		buddy.textContent = buddies[j]
 		allPeople.appendChild(buddy);
 }
@@ -278,7 +279,19 @@ function hornOfGondor() {
 function itsDangerousToGoAlone() {
 	console.log('11: itsDangerousToGoAlone')
 	// take `Frodo` and `Sam` out of the fellowship and move // them to `Mordor`
+	let frod = document.getElementById('Frodo Baggins')
+	let sam = document.getElementById('Samwise "Sam" Gamgee')
+	//let more = document.createElement('ul')
+	//Mordor.appendChild(more)
+	let mor = document.getElementById('Mordor')
+	let m = document.getElementById("ulmordor")
+	m.appendChild(frod)
+	m.appendChild(sam)
+	mor.appendChild(m)
 	// add a div with an id of `'mount-doom'` to `Mordor`
+	let MountDoom = document.createElement("div");
+	MountDoom.setAttribute("id", "mount-doom")
+	mor.append(MountDoom)
 }
 
 // COMMIT YOUR WORK
@@ -291,8 +304,16 @@ function itsDangerousToGoAlone() {
 function weWantsIt() {
 	console.log('12: weWantsIt')
 	// Create a div with an id of `'gollum'` and add it to Mordor
+	let gollumDiv = document.createElement("div");
+	gollumDiv.setAttribute("id", "gollum");
+	let mordor = document.getElementById('Mordor')
+	mordor.append(gollumDiv);
 	// Remove `the ring` from `Frodo` and give it to `Gollum`
+	let theRing = document.getElementById('the-ring');
+	gollumDiv.append(theRing); 
 	// Move Gollum into Mount Doom
+	let MountDoom = document.getElementById('mount-doom');
+	MountDoom.append(gollumDiv)
 }
 
 // COMMIT YOUR WORK
