@@ -150,6 +150,7 @@ function makeBuddies() {
 	for(let i=0;i<buddies.length; i++){
 		//bud = buddies[i]
 		buddy = document.createElement('li');
+		buddy.id = `${buddies[i]}`
 		buddy.textContent = buddies[i];
 		buddyList.appendChild(buddy);
 		aside.appendChild(buddyList);
@@ -211,11 +212,13 @@ function forgeTheFellowShip() {
 	theFellowShip.appendChild(allPeople)
 	for(let i=0; i<hobbits.length;i++){
 		const hobbit = document.createElement('li')
+		hobbit.classList.add('fellowShipMember')
 		hobbit.textContent = hobbits[i]
 		allPeople.appendChild(hobbit);
 	}
 	for(let j=0; j<buddies.length; j++){
 		const buddy = document.createElement('li')
+		buddy.id = `${buddies[i]}`
 		buddy.textContent = buddies[j]
 		allPeople.appendChild(buddy);
 }
@@ -233,8 +236,18 @@ alert('They have joined the party')
 
 function theBalrog() {
 	console.log('9: theBalrog')
+	const theFellowShip = document.querySelector('.fellowShipMember')
+	let gandalf = theFellowShip[4];
+	console.log(theFellowShip);
+	let Gand = document.getElementById('Gandalf the Grey')
+	Gand.textContent= 'Gandalf the White'
+	
+	console.log(gandalf)
+	
 	// change the `'Gandalf'` text to `'Gandalf the White'`
 	// apply the following style to the element, make the // background 'white', add a grey border
+	Gand.style.border = '3px solid gray';
+	Gand.style.backgroundColor = 'white';
 }
 
 // COMMIT YOUR WORK
