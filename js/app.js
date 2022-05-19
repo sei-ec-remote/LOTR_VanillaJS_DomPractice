@@ -61,7 +61,6 @@ function makeHobbits() {
 	let theShire = document.getElementById('The-Shire')
 	// give each hobbit a class of `hobbit`
 	let shireHobbits = document.createElement('ul')
-	shireHobbits.setAttribute('id',lands[0])
 	hobbits.forEach((hobbit) =>{
 		const hobbitList = document.createElement('li')
 		hobbitList.setAttribute('class', 'hobbit')
@@ -104,8 +103,6 @@ function makeBaddies() {
 	console.log('4: makeBaddies')
 	let mordor = document.getElementById('Mordor')
 	let mordorBaddies = document.createElement('ul')
-	mordorBaddies.setAttribute('id', lands[2])
-
 	baddies.forEach((bad) =>{
 		const badList = document.createElement('li')
 		badList.innerText = bad
@@ -135,12 +132,11 @@ function makeBuddies() {
 	
 	buddies.forEach((friend) =>{
 		let myBuddy = document.createElement('li')
-		friendsList.append(myBuddy)
 		myBuddy.innerText = friend
+		friendsList.append(myBuddy)
 	// create an `aside` tag
 
 	// put an `unordered list` of the `'buddies'` in the aside
-	// asideTag.append(friend)
 	// insert your aside as a child element of `rivendell`
 	})
 	asideTag.append(friendsList)
@@ -155,21 +151,15 @@ function makeBuddies() {
 // Chapter 6
 // ============
 
-
 function leaveTheShire() {
 	// let hobbit = document.getElementsByClassName('hobbit')
-	let rivenDell = document.getElementById('Rivendale')
+	let hobbit = document.getElementById('The-Shire').childNodes[1]
 	console.log('6: leaveTheShire')
-	let moveToRivendell = document.createElement('ul')
+	document.getElementById('Rivendell').appendChild(hobbit)
 	// assemble the `hobbits` and move them to `rivendell`
-	hobbits.forEach((i) => {
-		list = document.createElement('li')
-		moveToRivendell.append(list)
-		list = i
-		
-	})
+
 	
-	rivenDell.append(moveToRivendell)
+
 }
 
 // COMMIT YOUR WORK
@@ -181,7 +171,7 @@ function leaveTheShire() {
 
 function beautifulStranger() {
 	console.log('7: beautifulStranger')
-
+	document.getElementById('Rivendell').children[1].children[0].children[3].innerHTML = 'Aragorn'
 	// change the `'Strider'` text to `'Aragorn'`
 }
 
