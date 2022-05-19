@@ -142,7 +142,7 @@ function keepItSecretKeepItSafe() {
 	// create a div with an id of `'the-ring'`
 	let theRing = document.createElement('div')
 	// give the div a class of `'magic-imbued-jewelry'`
-	theRing.setAttribute('class', 'the-ring')
+	theRing.setAttribute('id', 'the-ring')
 	// add the ring as a child of `Frodo`
 
 	frodo.append(theRing)
@@ -453,7 +453,20 @@ function itsDangerousToGoAlone() {
 	console.log('11: itsDangerousToGoAlone')
 	// take `Frodo` and `Sam` out of the fellowship and move // them to `Mordor`
 	// add a div with an id of `'mount-doom'` to `Mordor`
+	let mountdoom = document.createElement('div')
+	mountdoom.setAttribute('id', 'mount-doom')
+	let mordivul = document.createElement('ul')
+	let mordor1 = document.getElementById('mordor')
+	let youngFrodo = document.getElementById('id', 'fellowFrodo')
+	let youngSam = document.getElementById('id', 'fellowSam')
+	
+	mordor1.appendChild(mountdoom)
+	mountdoom.appendChild(document.getElementById('fellowFrodo'))
+	mountdoom.appendChild(document.getElementById('fellowSam'))
+	
 }
+
+itsDangerousToGoAlone()
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 11 complete - Sam and Frodo are in Mordor and Mount Doom has been created"
@@ -467,7 +480,13 @@ function weWantsIt() {
 	// Create a div with an id of `'gollum'` and add it to Mordor
 	// Remove `the ring` from `Frodo` and give it to `Gollum`
 	// Move Gollum into Mount Doom
+	let gollum = document.createElement('div')
+	gollum.setAttribute('id', 'gollum')
+	document.getElementById('mount-doom').appendChild(gollum)
+	gollum.appendChild(document.getElementById('the-ring'))
+
 }
+weWantsIt()
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 12 complete - Gollum is trying to get the ring".
