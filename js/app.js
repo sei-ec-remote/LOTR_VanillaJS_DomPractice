@@ -259,41 +259,54 @@ function beautifulStranger() {
 
 // FIXME
 
+
+
 function forgeTheFellowShip() {
-	console.log('8: forgeTheFellowShip')
-	// create a new div called `'the-fellowship'` within `rivendell`
-	//creating the new div
-	const theFellowship = document.createElement('div');
-	//naming the div we just created with the id of fellowship
-	theFellowship.setAttribute('id', 'the-fellowship');
-	// console.log(theFellowship)
-	//connect the new div with Rivendell
-	Rivendell.appendChild(theFellowship)
-	// console.log(Rivendell)
-	// let fellowshipMembers = document.getElementById('hobbitsUnorderedList')
-	// console.log(fellowshipMembers)
+  console.log("8: forgeTheFellowShip");
+  // create a new div called `'the-fellowship'` within `rivendell`
+  //creating the new div
+  const theFellowship = document.createElement("div");
+  //naming the div we just created with the id of fellowship
+  // console.log(theFellowship)
 
-	//we need to add team in the function somehow
-	//  theFellowshipMembers.map( team =>{
-	// 	//adding the hobbit and buddie id's into the new div
-	// 	return team.hobbits + team.buddies
-	// })
-
-	// for (let i = 0; i < fellowshipMembers.length; i++){
-	// 	theFellowship.appendChild(fellowshipMembers[i]);
-	// 	console.log(theFellowship)
-	// }
-	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
+  // console.log(Rivendell)
+let Rivendell = document.getElementById("Rivendell");
+let rivendellList = Rivendell.querySelectorAll("li");
+  //iterate over hobbits and buddies seperately and .map them into theFellowship array
 
 
-	// after each character is added make an alert that they // have joined your party
+  //create new ul
+  const theFellowshipUnorderedList = document.createElement("ul");
+  theFellowshipUnorderedList.setAttribute("id", "the-fellowship");
+  for (let i = 0; i < rivendellList.length; i++) {
+    //append them inside the loop
+	// alert(`${rivendellList[i].innerText} has joined the fellowship`)
+	theFellowshipUnorderedList.append(rivendellList[i])
+  }
+//   console.log(theFellowshipUnorderedList)
+  //connect the new div with Rivendell
+  theFellowship.append(theFellowshipUnorderedList);
+  Rivendell.appendChild(theFellowship);
 
-	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
+  //remove all elements inside this id
+  document.getElementById('buddieAsside').remove();
+  document.getElementById('hobbitsUnorderedList').remove();
+  // console.log(fellowshipMembers)
+  // after each character is added make an alert that they // have joined your party
+
+  // NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
 }
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 8 complete - The Fellowship is created"
-
+makeMiddleEarth()
+	makeHobbits()
+	keepItSecretKeepItSafe()
+	makeBaddies()
+	makeBuddies()
+	leaveTheShire()
+	beautifulStranger()
+	forgeTheFellowShip()
 // ============
 // Chapter 9
 // ============
