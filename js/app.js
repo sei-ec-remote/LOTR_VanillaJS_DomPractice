@@ -228,7 +228,9 @@ theBuddies.setAttribute('id', 'buddyaside')
 		newBud.innerText = buddyString
 		theBuddies.appendChild(newBud)
 		console.log(newBud)
-		if (i === 3) {
+		if(i === 0) {
+			newBud.setAttribute('id', 'gandalfwhite')
+		}else if (i === 3) {
 		let newBud = buddies[i]
 		let buddyString = buddies[i].toString()
 		console.log(newBud)
@@ -336,24 +338,24 @@ function forgeTheFellowShip() {
 		fellowFrod.setAttribute('id', 'fellowFrodo')
 		fellowship.appendChild(fellowFrod)
 		console.log(fellowship)
-		window.alert('Frodo added')
+		
 	}else if(i === 1) {
 		let fellowSam = document.createElement('li');
 		// fellowSam.setAttribute('class', 'hobbits');
 		fellowSam.setAttribute('id', 'fellowSam')
 		fellowship.appendChild(fellowSam);
 		console.log(fellowSam)
-		window.alert('Sam Added')
+		
 	} else if(i === 2) {
 		let fellowMerry = document.createElement('li')
 		fellowMerry.setAttribute('id', 'fellowMerry')
 		fellowship.appendChild(fellowMerry)
-		window.alert('Merry added')
+		
 	} else if(i === 3) {
 		let fellowPere = document.createElement('li')
 		fellowPere.setAttribute('id', 'fellowPere')
 		fellowship.appendChild(fellowPere)
-		window.alert('Pere added')
+		
 
 	}
 	console.log(fellowship)
@@ -364,29 +366,31 @@ for(let i = 0; i < buddies.length; i++){
 		let budGan = document.createElement('li')
 		budGan.setAttribute('id', 'fellowGandalf')
 		fellowship.appendChild(budGan)
-		window.alert('Gandalf added')
+		
 	} else if( i === 1){
 		let budLego = document.createElement('li')
 		budLego.setAttribute('id', 'fellowLegolas')
 		fellowship.appendChild(budLego)
-		window.alert('Legolas added')
+	
 	} else if( i === 2) {
 		let budGimli = document.createElement('li')
 		budGimli.setAttribute('id', 'fellowGimli')
 		fellowship.appendChild(budGimli)
-		window.alert('Gimli added')
+	
 	} else if (i === 3) {
 		let budAragorn = document.createElement('li')
 		budAragorn.setAttribute('id', 'fellowAragorn')
 		fellowship.appendChild(budAragorn)
-		window.alert('Aragorn added')
+		
 	} else if (i === 4) {
 		let budBoro = document.createElement('li')
 		budBoro.setAttribute('id', 'fellowBoromir')
 		fellowship.appendChild(budBoro)
-		window.alert('Boromir added')
+		
 	}
 } rivendell.appendChild(fellowship)
+window.alert('buddies added to the fellowship')
+window.alert('hobbits added to fellowship')
 console.log(fellowship)
 }
 forgeTheFellowShip()
@@ -411,10 +415,12 @@ forgeTheFellowShip()
 
 function theBalrog() {
 	console.log('9: theBalrog')
+ 	let ganWhite = document.getElementById('gandalfwhite')
+	 ganWhite.innerHTML = "Gandalf the White"
 	// change the `'Gandalf'` text to `'Gandalf the White'`
 	// apply the following style to the element, make the // background 'white', add a grey border
 }
-
+theBalrog()
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 9 complete - Updated Gandalf"
 
