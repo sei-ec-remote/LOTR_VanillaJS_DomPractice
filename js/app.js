@@ -328,18 +328,40 @@ function theBalrog() {
 function hornOfGondor() {
 	console.log('10: hornOfGondor')
 	// pop up an alert that the horn of gondor has been blown
-	alert("The horn of Gondor has been blown. Boromir's been killed by the Uruk-hai!")
+	// alert("The horn of Gondor has been blown. Boromir's been killed by the Uruk-hai!")
 	// Boromir's been killed by the Uruk-hai!
 	// Remove `Boromir` from the Fellowship
 	theFellowship = document.getElementById('the-fellowship');
 	//remove boromir
 	theFellowship.children[4].remove();
-	console.log(theFellowship[4]);	
+	// console.log(theFellowship[4]);	
 }
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 10 complete - horn of gandor blew and Boromir is dead"
 
+// ============
+// Chapter 11
+// ============
+
+function itsDangerousToGoAlone() {
+	console.log('11: itsDangerousToGoAlone')
+	// take `Frodo` and `Sam` out of the fellowship and move // them to `Mordor`
+	theFellowship = document.getElementById('the-fellowship');
+	//grabbing frodo
+	let frodo = theFellowship.children[4];
+	//grabbing sam
+	let sam = theFellowship.children[5];
+	// add a div with an id of `'mount-doom'` to `Mordor`
+	const mountDoom = document.createElement('div');
+	//adding the id to the div I just created
+	mountDoom.id ='mount-doom';
+	// console.log(mountDoom);
+
+	document.getElementById('Mordor').appendChild(mountDoom);
+	mountDoom.append(sam, frodo);
+	
+}
 makeMiddleEarth()
 	makeHobbits()
 	keepItSecretKeepItSafe()
@@ -350,22 +372,7 @@ makeMiddleEarth()
 	forgeTheFellowShip()
 	theBalrog()
 	hornOfGondor()
-// ============
-// Chapter 11
-// ============
-
-function itsDangerousToGoAlone() {
-	console.log('11: itsDangerousToGoAlone')
-	// take `Frodo` and `Sam` out of the fellowship and move // them to `Mordor`
-	// add a div with an id of `'mount-doom'` to `Mordor`
-	const mountDoom = document.createElement('div');
-	//adding the id to the div I just created
-	mountDoom.id ='mount-doom';
-	// console.log(mountDoom);
-	//this is how you connect the list of the hobbits to the shire, don't need to connect it to the whole body
-	document.getElementById('Mordor').appendChild(mountDoom);
-	
-}
+	itsDangerousToGoAlone()
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 11 complete - Sam and Frodo are in Mordor and Mount Doom has been created"
