@@ -299,14 +299,6 @@ let rivendellList = Rivendell.querySelectorAll("li");
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 8 complete - The Fellowship is created"
-makeMiddleEarth()
-	makeHobbits()
-	keepItSecretKeepItSafe()
-	makeBaddies()
-	makeBuddies()
-	leaveTheShire()
-	beautifulStranger()
-	forgeTheFellowShip()
 // ============
 // Chapter 9
 // ============
@@ -317,8 +309,8 @@ function theBalrog() {
 	
 	let gandalf = document.getElementsByClassName('buddies')[0];
 	gandalf.innerText = 'Gandalf the White';
-	console.log(gandalf)
-
+	// console.log(gandalf)
+	
 	// apply the following style to the element, make the 
 	// background 'white', 
 	gandalf.style.backgroundColor = 'white'
@@ -336,15 +328,28 @@ function theBalrog() {
 function hornOfGondor() {
 	console.log('10: hornOfGondor')
 	// pop up an alert that the horn of gondor has been blown
+	alert("The horn of Gondor has been blown. Boromir's been killed by the Uruk-hai!")
 	// Boromir's been killed by the Uruk-hai!
 	// Remove `Boromir` from the Fellowship
-	alert("The horn of Gondor has been blown. Boromir's been killed by the Uruk-hai!")
-
+	theFellowship = document.getElementById('the-fellowship');
+	//remove boromir
+	theFellowship.children[4].remove();
+	console.log(theFellowship[4]);	
 }
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 10 complete - horn of gandor blew and Boromir is dead"
 
+makeMiddleEarth()
+	makeHobbits()
+	keepItSecretKeepItSafe()
+	makeBaddies()
+	makeBuddies()
+	leaveTheShire()
+	beautifulStranger()
+	forgeTheFellowShip()
+	theBalrog()
+	hornOfGondor()
 // ============
 // Chapter 11
 // ============
