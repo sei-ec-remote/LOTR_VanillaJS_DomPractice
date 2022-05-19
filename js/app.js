@@ -172,6 +172,7 @@ function beautifulStranger() {
 	// change the `'Strider'` text to `'Aragorn'`
 	let strider = document.getElementById('Strider')
 	strider.textContent = 'Aragorn'
+	strider.id = 'Aragorn'
 }
 
 // COMMIT YOUR WORK
