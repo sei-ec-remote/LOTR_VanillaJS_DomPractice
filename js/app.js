@@ -253,6 +253,26 @@ function itsDangerousToGoAlone() {
 	console.log(mordor)
 	console.log(fellowship)
 }
+
+// COMMIT YOUR WORK
+// The commit message should read: "Chapter 11 complete - Sam and Frodo are in Mordor and Mount Doom has been created"
+
+// ============
+// Chapter 12
+// ============
+
+function weWantsIt() {
+	console.log('12: weWantsIt')
+	// Create a div with an id of `'gollum'` and add it to Mordor
+	const gollum = document.createElement('div')
+	gollum.id = `gollum`
+	// Remove `the ring` from `Frodo` and give it to `Gollum`
+	const mountDoom = document.getElementById('mount-doom')
+	gollum.appendChild(mountDoom.childNodes[0].childNodes[1])
+	// Move Gollum into Mount Doom
+	document.getElementById('mount-doom').appendChild(gollum)
+	console.log(document.getElementById('Mordor'))
+}
 makeMiddleEarth()
 makeHobbits()
 keepItSecretKeepItSafe()
@@ -264,20 +284,7 @@ forgeTheFellowShip()
 theBalrog()
 hornOfGondor()
 itsDangerousToGoAlone()
-// COMMIT YOUR WORK
-// The commit message should read: "Chapter 11 complete - Sam and Frodo are in Mordor and Mount Doom has been created"
-
-// ============
-// Chapter 12
-// ============
-
-function weWantsIt() {
-	console.log('12: weWantsIt')
-	// Create a div with an id of `'gollum'` and add it to Mordor
-	// Remove `the ring` from `Frodo` and give it to `Gollum`
-	// Move Gollum into Mount Doom
-}
-
+weWantsIt()
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 12 complete - Gollum is trying to get the ring".
 
