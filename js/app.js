@@ -258,19 +258,19 @@
 // Chapter 11
 // ============
 
-    function itsDangerousToGoAlone() {
-	console.log('11: itsDangerousToGoAlone')
-	// take `Frodo` and `Sam` out of the fellowship and move // them to `Mordor`
-	const frodo = document.querySelectorAll("li.hobbit")[0];
-	const sam = document.querySelectorAll("li.hobbit")[1];
-	const mordor = document.getElementById("Mordor");
-	mordor.appendChild(frodo);
-	mordor.appendChild(sam);
-	// add a div with an id of `'mount-doom'` to `Mordor`
-	const mountDoom = document.createElement("div");
-	mountDoom.id = "mount-doom"
-	mordor.appendChild(mountDoom);
-}
+    // function itsDangerousToGoAlone() {
+	// console.log('11: itsDangerousToGoAlone')
+	// // take `Frodo` and `Sam` out of the fellowship and move // them to `Mordor`
+	// const frodo = document.querySelectorAll("li.hobbit")[0];
+	// const sam = document.querySelectorAll("li.hobbit")[1];
+	// const mordor = document.getElementById("Mordor");
+	// mordor.appendChild(frodo);
+	// mordor.appendChild(sam);
+	// // add a div with an id of `'mount-doom'` to `Mordor`
+	// const mountDoom = document.createElement("div");
+	// mountDoom.id = "mount-doom"
+	// mordor.appendChild(mountDoom);
+// }
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 11 complete - Sam and Frodo are in Mordor and Mount Doom has been created"
@@ -279,20 +279,20 @@
 // Chapter 12
 // ============
 
-    // function weWantsIt() {
-    //  console.log("12: weWantsIt");
-    // // Create a div with an id of `'gollum'` and add it to Mordor
-    // const gollumDiv = document.createElement("div");
-    // gollumDiv.id = "gollum";
-    // const mordor = document.getElementById("Mordor");
-    // mordor.appendChild(gollumDiv);
-    // // Remove `the ring` from `Frodo` and give it to `Gollum`
-    // const theRing = document.querySelector("div.magic-imbued-jewelry");
-    // gollumDiv.appendChild(theRing);
-    // // Move Gollum into Mount Doom
-    // const mountDoom = document.getElementById("mount-doom");
-    // mountDoom.appendChild(gollumDiv);
-	// }
+    function weWantsIt() {
+     console.log("12: weWantsIt");
+    // Create a div with an id of `'gollum'` and add it to Mordor
+    const gollumDiv = document.createElement("div");
+    gollumDiv.id = "gollum";
+    const mordor = document.getElementById("Mordor");
+    mordor.appendChild(gollumDiv);
+    // Remove `the ring` from `Frodo` and give it to `Gollum`
+    const theRing = document.querySelector("div.magic-imbued-jewelry");
+    gollumDiv.appendChild(theRing);
+    // Move Gollum into Mount Doom
+    const mountDoom = document.getElementById("mount-doom");
+    mountDoom.appendChild(gollumDiv);
+	}
 
 	// Create a div with an id of `'gollum'` and add it to Mordor
 	// Remove `the ring` from `Frodo` and give it to `Gollum`
