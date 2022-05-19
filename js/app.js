@@ -280,7 +280,7 @@ let rivendellList = Rivendell.querySelectorAll("li");
   theFellowshipUnorderedList.setAttribute("id", "the-fellowship");
   for (let i = 0; i < rivendellList.length; i++) {
     //append them inside the loop
-	// alert(`${rivendellList[i].innerText} has joined the fellowship`)
+	alert(`${rivendellList[i].innerText} has joined the fellowship`)
 	theFellowshipUnorderedList.append(rivendellList[i])
   }
 //   console.log(theFellowshipUnorderedList)
@@ -293,8 +293,6 @@ let rivendellList = Rivendell.querySelectorAll("li");
   document.getElementById('hobbitsUnorderedList').remove();
   // console.log(fellowshipMembers)
   // after each character is added make an alert that they // have joined your party
-
-  // NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
 }
 
 // COMMIT YOUR WORK
@@ -328,7 +326,7 @@ function theBalrog() {
 function hornOfGondor() {
 	console.log('10: hornOfGondor')
 	// pop up an alert that the horn of gondor has been blown
-	// alert("The horn of Gondor has been blown. Boromir's been killed by the Uruk-hai!")
+	alert("The horn of Gondor has been blown. Boromir's been killed by the Uruk-hai!")
 	// Boromir's been killed by the Uruk-hai!
 	// Remove `Boromir` from the Fellowship
 	theFellowship = document.getElementById('the-fellowship');
@@ -388,18 +386,6 @@ function weWantsIt() {
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 12 complete - Gollum is trying to get the ring".
 
-makeMiddleEarth()
-	makeHobbits()
-	keepItSecretKeepItSafe()
-	makeBaddies()
-	makeBuddies()
-	leaveTheShire()
-	beautifulStranger()
-	forgeTheFellowShip()
-	theBalrog()
-	hornOfGondor()
-	itsDangerousToGoAlone()
-	weWantsIt()
 // ============
 // Chapter 13
 // ============
@@ -407,9 +393,31 @@ makeMiddleEarth()
 function thereAndBackAgain() {
 	console.log('13: thereAndBackAgain')
 	// remove `Gollum` and `the Ring` from the document
+	document.getElementById('gollum').remove();
 	// Move all the `hobbits` back to `the shire`
-}
+	allHobbits = document.querySelectorAll('.hobbit')
+	theShire = document.getElementById('The-Shire');
+	home = document.createElement('div')
+	theShire.append(home);
 
+	for (let i = 0; i < allHobbits.length; i++){
+		home.append(allHobbits[i])
+	}
+	
+}
+// makeMiddleEarth()
+// 	makeHobbits()
+// 	keepItSecretKeepItSafe()
+// 	makeBaddies()
+// 	makeBuddies()
+// 	leaveTheShire()
+// 	beautifulStranger()
+// 	forgeTheFellowShip()
+// 	theBalrog()
+// 	hornOfGondor()
+// 	itsDangerousToGoAlone()
+// 	weWantsIt()
+// 	thereAndBackAgain()
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 13 complete -Gollum and the ring are gone, the baddies are done, and the hobbits are back in the shire".
 
