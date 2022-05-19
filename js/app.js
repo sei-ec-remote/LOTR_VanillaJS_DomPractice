@@ -362,17 +362,6 @@ function itsDangerousToGoAlone() {
 	mountDoom.append(sam, frodo);
 	
 }
-makeMiddleEarth()
-	makeHobbits()
-	keepItSecretKeepItSafe()
-	makeBaddies()
-	makeBuddies()
-	leaveTheShire()
-	beautifulStranger()
-	forgeTheFellowShip()
-	theBalrog()
-	hornOfGondor()
-	itsDangerousToGoAlone()
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 11 complete - Sam and Frodo are in Mordor and Mount Doom has been created"
@@ -384,13 +373,33 @@ makeMiddleEarth()
 function weWantsIt() {
 	console.log('12: weWantsIt')
 	// Create a div with an id of `'gollum'` and add it to Mordor
+	const gollum = document.createElement('div');
+	//adding the id to the div I just created
+	gollum.id ='gollum';
+	document.getElementById('Mordor').appendChild(gollum);
 	// Remove `the ring` from `Frodo` and give it to `Gollum`
+	gollum.append(document.getElementById('the-ring'))
+	
+
 	// Move Gollum into Mount Doom
+	document.getElementById('mount-doom').appendChild(gollum);
 }
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 12 complete - Gollum is trying to get the ring".
 
+makeMiddleEarth()
+	makeHobbits()
+	keepItSecretKeepItSafe()
+	makeBaddies()
+	makeBuddies()
+	leaveTheShire()
+	beautifulStranger()
+	forgeTheFellowShip()
+	theBalrog()
+	hornOfGondor()
+	itsDangerousToGoAlone()
+	weWantsIt()
 // ============
 // Chapter 13
 // ============
