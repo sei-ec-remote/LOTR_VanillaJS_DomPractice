@@ -231,15 +231,19 @@ theBuddies.setAttribute('id', 'buddyaside')
 		if(i === 0) {
 			newBud.setAttribute('id', 'gandalfwhite')
 		}else if (i === 3) {
-		let newBud = buddies[i]
-		let buddyString = buddies[i].toString()
-		console.log(newBud)
-		newBud = document.createElement('li')
+		// let newBud = buddies[i]
+		// let buddyString = buddies[i].toString()
+		// console.log(newBud)
+		// newBud = document.createElement('li')
 		newBud.setAttribute('class', 'buddy');
 		newBud.setAttribute('id', 'aragorn')	
-		newBud.innerText = buddyString
-		theBuddies.appendChild(newBud)
-		console.log(newBud)
+		// newBud.innerText = buddyString
+		// theBuddies.appendChild(newBud)
+		// console.log(newBud)
+		} else if (i === 4) {
+			newBud.setAttribute('class', 'buddy');
+			newBud.setAttribute('id', 'boromir')
+
 		}
 	}rivendell.appendChild(theBuddies)
 }
@@ -430,11 +434,14 @@ theBalrog()
 
 function hornOfGondor() {
 	console.log('10: hornOfGondor')
+	window.alert('horn of gondor had been blown')
+buddies.pop()
+document.getElementById('boromir').remove()
 	// pop up an alert that the horn of gondor has been blown
 	// Boromir's been killed by the Uruk-hai!
 	// Remove `Boromir` from the Fellowship
 }
-
+hornOfGondor()
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 10 complete - horn of gandor blew and Boromir is dead"
 
