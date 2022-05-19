@@ -209,6 +209,7 @@ function makeBuddies() {
 	let bud2 = document.createElement('li')
 	let bud3 = document.createElement('li')
 	let bud4 = document.createElement('li')
+	bud4.setAttribute('id', 'Strider')
 	let bud5 = document.createElement('li')
 	bud1.setAttribute('class', 'buddies')
 	bud2.setAttribute('class', 'buddies') //'Gandalf the Grey', 'Legolas', 'Gimli', 'Strider', 'Boromir
@@ -218,7 +219,7 @@ function makeBuddies() {
 	bud1.innerText = 'Gandalf'
 	bud2.innerText = 'Legolas'
 	bud3.innerText = 'Gimli'
-	bud4.innerText = 'Strider'
+	bud4.innerText = 'Aragorn'
 	bud5.innerText = 'Boromir'
 	buddies.append(bud1)
 	buddies.append(bud2)
@@ -257,9 +258,11 @@ leaveTheShire()
 
 function beautifulStranger() {
 	console.log('7: beautifulStranger')
-
+	
 	// change the `'Strider'` text to `'Aragorn'`
+	
 }
+beautifulStranger()
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 7 complete - Strider is changed to Aragorn"
@@ -273,9 +276,15 @@ function forgeTheFellowShip() {
 	// create a new div called `'the-fellowship'` within `rivendell`
 	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
 	// after each character is added make an alert that they // have joined your party
-
+	document.createElement('div') = fellowship
+	fellowship.setAttribute('class', 'the-fellowship')
+	
+	for(let i = 0; i < hobbits.length && buddies.length; i++) {
+		document.createElement('li') = hobbits[i] || buddies[i]
+	}
 	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
 }
+forgeTheFellowShip()
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 8 complete - The Fellowship is created"
