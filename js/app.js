@@ -311,7 +311,6 @@
 	// remove `Gollum` and `the Ring` from the document
 	const gollum = document.getElementById("gollum");
     gollum.remove();
-    // Move all the `hobbits` back to `the shire`"Chapter 12 complete - Gollum is trying to get the ring".
     const theShire = document.getElementById("The-Shire");
     const returnHobbits = document.querySelector("ul.hobbits");
     const addHobbits = document.querySelectorAll("li.hobbit");
