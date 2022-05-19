@@ -220,7 +220,7 @@ function theBalrog() {
 	// change the `'Gandalf'` text to `'Gandalf the White'`
 	const gandalf = document.getElementById('Gandalf the Grey')
 	gandalf.innerHTML = 'Gandalf the White'
-	gandalf.style.border = 'grey'
+	gandalf.style.border = 'grey 4px solid'
 	gandalf.style.background = 'white'
 	// apply the following style to the element, make the // background 'white', add a grey border
 }
