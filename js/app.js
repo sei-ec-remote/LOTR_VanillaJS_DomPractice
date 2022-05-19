@@ -303,6 +303,21 @@ function itsDangerousToGoAlone() {
 	console.log('11: itsDangerousToGoAlone')
 	// take `Frodo` and `Sam` out of the fellowship and move // them to `Mordor`
 	// add a div with an id of `'mount-doom'` to `Mordor`
+	const liS = document.querySelectorAll('#Mordor')
+    const arr4 = Array.from(liS)
+    for (const [index,liS] of arr4.entries()){
+        
+const liS3 = document.querySelectorAll('aside,li')
+const arr3 = Array.from(liS3)
+for (const [index,liS3] of arr3.entries()){
+ 
+  arr4[0].append(arr3[5]);
+  arr4[0].append(arr3[6]);
+}
+  const mountD = document.createElement('div');
+  mountD.setAttribute('id','mount-doom');
+  liS.append(mountD);
+}
 }
 
 // COMMIT YOUR WORK
@@ -317,6 +332,8 @@ function weWantsIt() {
 	// Create a div with an id of `'gollum'` and add it to Mordor
 	// Remove `the ring` from `Frodo` and give it to `Gollum`
 	// Move Gollum into Mount Doom
+
+	
 }
 
 // COMMIT YOUR WORK
