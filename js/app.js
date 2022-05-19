@@ -77,6 +77,7 @@ document.body.appendChild(midEarth)
 function makeHobbits() {
 	console.log('2: makeHobbits')
 	let allHobbits = document.createElement('ul');
+	allHobbits.setAttribute('id', 'allHobbits')
 	
 	
 	
@@ -161,19 +162,26 @@ function makeBaddies() {
 
 	// display an unordered list of baddies in Mordor
 	let baddies = document.createElement('ul')
-	
+	//'Sauron', 'Saruman', 'The Uruk-hai', 'Orcs'
 	// give each of the baddies a class of "baddy"
 	let li1 = document.createElement('li')
 	li1.setAttribute('class', 'baddies')
+	li1.innerText = 'Sauron'
 	let li2 = document.createElement('li')
 	li2.setAttribute('class', 'baddies')
+	li2.innerText = 'Saruman'
 	let li3 = document.createElement('li')
 	li3.setAttribute('class', 'baddies')
+	li3.innerText = 'The Uruk-hai'
+	let li4 = document.createElement('li')
+	li4.setAttribute('class', 'baddies')
+	li4.innerText = 'Orcs'
 	// let li2 = document.createElement('li').setAttribute('class', 'baddies')
 	// let li3 = document.createElement('li').setAttribute('class', 'baddies')
 baddies.append(li1)
 baddies.append(li2)
 baddies.append(li3)
+baddies.append(li4)
 console.log(li1)
 	// remember to append them to Mordor
 	mordor.append(baddies)
@@ -200,12 +208,23 @@ function makeBuddies() {
 	let bud1 = document.createElement('li')
 	let bud2 = document.createElement('li')
 	let bud3 = document.createElement('li')
+	let bud4 = document.createElement('li')
+	let bud5 = document.createElement('li')
 	bud1.setAttribute('class', 'buddies')
-	bud2.setAttribute('class', 'buddies')
+	bud2.setAttribute('class', 'buddies') //'Gandalf the Grey', 'Legolas', 'Gimli', 'Strider', 'Boromir
 	bud3.setAttribute('class', 'buddies')
+	bud4.setAttribute('class', 'buddies')
+	bud5.setAttribute('class', 'buddies')
+	bud1.innerText = 'Gandalf'
+	bud2.innerText = 'Legolas'
+	bud3.innerText = 'Gimli'
+	bud4.innerText = 'Strider'
+	bud5.innerText = 'Boromir'
 	buddies.append(bud1)
 	buddies.append(bud2)
 	buddies.append(bud3)
+	buddies.append(bud4)
+	buddies.append(bud5)
 	rivendell.append(buddyContainer)
 	// put an `unordered list` of the `'buddies'` in the aside
 
@@ -221,9 +240,13 @@ makeBuddies()
 
 function leaveTheShire() {
 	console.log('6: leaveTheShire')
-
+	let goRiven = document.getElementById('allHobbits') 
+	let riven = document.getElementById('rivendell')
+	riven.appendChild(goRiven)
+	
 	// assemble the `hobbits` and move them to `rivendell`
 }
+leaveTheShire()
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 6 complete - Left the Shire"
