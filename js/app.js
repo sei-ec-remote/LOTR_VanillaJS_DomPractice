@@ -280,11 +280,10 @@ function hornOfGondor() {
 	// Boromir's been killed by the Uruk-hai!
 	// Remove `Boromir` from the Fellowship
 	alert("the horn of gondor has been blown")
+let theFellowship = document.getElementById("the-fellowship")
 	
-	let theFellowship = document.getElementById("the-fellowship")
 	let theFellowshipList =  theFellowship.children[0]
 console.log(theFellowshipList)
-	let boromir = ""
 	theFellowshipList.removeChild(theFellowshipList.lastElementChild)
 	console.log(theFellowshipList)
 }
@@ -299,8 +298,26 @@ function itsDangerousToGoAlone() {
 	console.log('11: itsDangerousToGoAlone')
 	// take `Frodo` and `Sam` out of the fellowship and move // them to `Mordor`
 	// add a div with an id of `'mount-doom'` to `Mordor`
-	Mordor.appendChild(Frodo)
-	Mordor.appendChild(Sam)
+	
+
+ let theFellowshipDiv = document.getElementById("the-fellowship")
+	 let theFellowshipList =  theFellowshipDiv.children[0]
+	for (let i = 0; i < theFellowshipList.length; i++){
+		if (theFellowshipList[i].innerText == "Frodo Baggins"  &&  theFellowshipList[i].innerText == `Samwise "Sam" Gamgee`){
+			theFellowshipList.removeChild(theFellowshipList[i])
+	}
+	
+	console.log(theFellowshipList.children[0].innerText)
+	
+	mordorList.appendChild(frodo)
+	mordorList.appendChild(sam)
+}
+
+	// add a div with an id of `'mount-doom'` to `Mordor`
+	
+	mntDoom = document.createElement("div")
+mntDoom.setAttribute("id", "mount-doom ")
+	mordor.prepend(mntDoom)
 }
 
 // COMMIT YOUR WORK
