@@ -237,11 +237,18 @@
 // Chapter 10
 // ============
 
-//function hornOfGondor() {
-//	console.log('10: hornOfGondor')
+  function hornOfGondor() {
+  console.log('10: hornOfGondor')
 	// pop up an alert that the horn of gondor has been blown
+	alert('Horn of gondor has been blown!')
 	// Boromir's been killed by the Uruk-hai!
+	alert("Boromir's been killed by the Uruk-hai")
 	// Remove `Boromir` from the Fellowship
+	let fellowship = document.getElementById("hide")
+	fellowship.remove("Boromir")
+  }
+	
+
 //}
 
 // COMMIT YOUR WORK
@@ -251,10 +258,20 @@
 // Chapter 11
 // ============
 
-//function itsDangerousToGoAlone() {
-	//console.log('11: itsDangerousToGoAlone')
+function itsDangerousToGoAlone() {
+	console.log('11: itsDangerousToGoAlone')
 	// take `Frodo` and `Sam` out of the fellowship and move // them to `Mordor`
+	const frodo = document.querySelectorAll("li.hobbit")[0];
+	const sam = document.querySelectorAll("li.hobbit")[1];
+	const mordor = document.getElementById("Mordor");
+	mordor.appendChild(frodo);
+	mordor.appendChild(sam);
 	// add a div with an id of `'mount-doom'` to `Mordor`
+	const mountDoom = document.createElement("div");
+	mountDoom.id = "mount-doom"
+	mordor.appendChild(mountDoom);
+
+
 //}
 
 // COMMIT YOUR WORK
