@@ -214,7 +214,7 @@ buddies.forEach((buddy) => {
 
 delayedMessage();
 function delayedMessage() {
-document.addEventListener("click", () => {
+document.addEventListener("onclick", () => {
 	alert("Your party memebers have joined!")
 	return;
 })
@@ -250,9 +250,14 @@ function theBalrog() {
 
 function hornOfGondor() {
 	console.log('10: hornOfGondor')
-	// pop up an alert that the horn of gondor has been blown
+document.addEventListener("click", () => {
+	alert("*horn of gondor has been blown.*");
+	alert("Boromir's been killed by the Uruk-hai!")
+})	// pop up an alert that the horn of gondor has been blown
 	// Boromir's been killed by the Uruk-hai!
 	// Remove `Boromir` from the Fellowship
+const fellowsip = document.getElementById("the-fellowship")
+fellowsip.removeChild(fellowsip.childNodes[8]);
 }
 
 // COMMIT YOUR WORK
