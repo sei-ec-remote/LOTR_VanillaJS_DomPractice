@@ -211,10 +211,12 @@ buddies.forEach((buddy) => {
 	buddiesTwo.innerText = buddy;
 	document.getElementById("the-fellowship").appendChild(buddiesTwo);
 })
+
 delayedMessage();
 function delayedMessage() {
 document.addEventListener("click", () => {
 	alert("Your party memebers have joined!")
+	return;
 })
 }
 	// after each character is added make an alert that they // have joined your party
@@ -232,6 +234,10 @@ document.addEventListener("click", () => {
 function theBalrog() {
 	console.log('9: theBalrog')
 	// change the `'Gandalf'` text to `'Gandalf the White'`
+	document.getElementById("Rivendell").childNodes[1].childNodes[0].childNodes[0].innerText = "Gandalf the White"
+	document.getElementById("Rivendell").childNodes[1].childNodes[0].childNodes[0].style.background = "white";
+	document.getElementById("Rivendell").childNodes[1].childNodes[0].childNodes[0].style.border = ("2px solid grey");
+
 	// apply the following style to the element, make the // background 'white', add a grey border
 }
 
