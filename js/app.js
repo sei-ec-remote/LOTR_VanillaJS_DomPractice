@@ -50,6 +50,7 @@ function makeMiddleEarth() {
 	document.body.append(middleEarth);
 
 
+
 }
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 1 complete - Made Middle Earth".
@@ -143,6 +144,18 @@ function makeBuddies() {
 	console.log('5: makeBuddies')
 
 	// create an `aside` tag
+	let theBuddies = document.createElement('asaide');
+	let ulforBuddis = document.createElement('ul')
+	for (let i = 0; i < buddies.length; i++) {
+		let buddiesList = document.createElement('li');
+		buddiesList.setAttribute('id', 'buddies');
+		buddiesList.append(buddies[i]);
+		theBuddies.append(buddiesList)
+	}
+	const connectRivendell = document.getElementById('Rivendell')
+	connectRivendell.appendChild(theBuddies);
+
+
 
 	// put an `unordered list` of the `'buddies'` in the aside
 
@@ -158,7 +171,9 @@ function makeBuddies() {
 
 function leaveTheShire() {
 	console.log('6: leaveTheShire')
-
+	let hobbitsMove = document.getElementById('The-Shire').childNodes[1]
+	let movetoRivendell = document.getElementById('Rivendell');
+	movetoRivendell.appendChild(hobbitsMove);
 	// assemble the `hobbits` and move them to `rivendell`
 }
 
@@ -171,7 +186,9 @@ function leaveTheShire() {
 
 function beautifulStranger() {
 	console.log('7: beautifulStranger')
+	document.getElementById('Rivendell').childNodes[1].childNodes[3].innerText = 'Aragorn'
 
+	
 	// change the `'Strider'` text to `'Aragorn'`
 }
 
@@ -184,8 +201,21 @@ function beautifulStranger() {
 
 function forgeTheFellowShip() {
 	console.log('8: forgeTheFellowShip')
+ 
 	// create a new div called `'the-fellowship'` within `rivendell`
+	let divfellowship = document.createElement('div')
+	divfellowship.setAttribute('id', 'the-fellowship')
+	let connectRivendell = document.getElementById('Rivendell')
+	connectRivendell.append(divfellowship)
 	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
+	for (let i = 0; i < hobbits.length; i++){
+		let addbuddies = document.createElement('li')
+		addbuddies.append(buddies[i]);
+		divfellowship.append(addbuddies);
+
+		
+
+	}
 	// after each character is added make an alert that they // have joined your party
 
 	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
@@ -201,6 +231,7 @@ function forgeTheFellowShip() {
 function theBalrog() {
 	console.log('9: theBalrog')
 	// change the `'Gandalf'` text to `'Gandalf the White'`
+	document.getElementById('Rivendell').childNodes[1].childNodes[0].innerText = 'Gandalf the White'
 	// apply the following style to the element, make the // background 'white', add a grey border
 }
 
