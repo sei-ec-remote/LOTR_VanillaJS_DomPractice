@@ -66,6 +66,7 @@ function makeHobbits() {
 	for (let i = 0; i < hobbits.length; i++) {
 		let hobbitList = document.createElement('li');
 		hobbitList.setAttribute('class', 'hobbit');
+		hobbitList.setAttribute('id', `${hobbits[i]}`);
 		hobbitList.append(hobbits[i]);
 		ulForHobbits.appendChild(hobbitList);
 	}
@@ -90,6 +91,13 @@ function makeHobbits() {
 
 function keepItSecretKeepItSafe() {
 	console.log('3: keepItSecretKeepItSafe')
+	let divForTheRing =  document.createElement('div');
+	divForTheRing.setAttribute('id', 'the-ring');
+	divForTheRing.setAttribute('class', 'magic-imbued-jewelry');
+	
+	const frodo = document.getElementById('Frodo Baggins');
+	frodo.append(divForTheRing);
+
 
 	// create a div with an id of `'the-ring'`
 
@@ -108,6 +116,15 @@ function keepItSecretKeepItSafe() {
 function makeBaddies() {
 	console.log('4: makeBaddies')
 
+	let theBaddies = document.createElement('ul');
+	for (let i = 0; i < baddies.length; i++) {
+		let baddiesList = document.createElement('li');
+		baddiesList.setAttribute('id', 'baddy');
+		baddiesList.append(baddies[i]);
+		theBaddies.append(baddiesList)
+	}
+	const connectMordor = document.getElementById('Mordor')
+	connectMordor.appendChild(theBaddies);
 	// display an unordered list of baddies in Mordor
 
 	// give each of the baddies a class of "baddy"
