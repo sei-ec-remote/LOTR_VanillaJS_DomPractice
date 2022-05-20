@@ -294,10 +294,13 @@ function weWantsIt() {
 	console.log('12: weWantsIt')
 	// Create a div with an id of `'gollum'` and add it to Mordor
 	const gollumDiv = document.createElement("div");
+	gollumDiv.id = "gollum"
 	document.getElementById("Mordor").appendChild(gollumDiv);
 	// Remove `the ring` from `Frodo` and give it to `Gollum`
-	
+const ringGrab = document.getElementById("the-ring")
+gollumDiv.appendChild(ringGrab);
 	// Move Gollum into Mount Doom
+	document.getElementById("mount-doom").appendChild(gollumDiv)
 }
 
 // COMMIT YOUR WORK
