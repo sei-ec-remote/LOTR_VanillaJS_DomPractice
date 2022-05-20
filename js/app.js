@@ -217,6 +217,9 @@ function forgeTheFellowShip() {
 
 	}
 	// after each character is added make an alert that they // have joined your party
+	document.addEventListener('click', function (){
+		 ('Gandaf has arrived')
+	})
 
 	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
 }
@@ -233,6 +236,11 @@ function theBalrog() {
 	// change the `'Gandalf'` text to `'Gandalf the White'`
 	document.getElementById('Rivendell').childNodes[1].childNodes[0].innerText = 'Gandalf the White'
 	// apply the following style to the element, make the // background 'white', add a grey border
+	document.getElementById('Rivendell').childNodes[1].childNodes[0].style.background = ('black')
+	document.getElementById('Rivendell').childNodes[1].childNodes[0].style.border = ('2px dotted red')
+
+
+
 }
 
 // COMMIT YOUR WORK
@@ -245,6 +253,7 @@ function theBalrog() {
 function hornOfGondor() {
 	console.log('10: hornOfGondor')
 	// pop up an alert that the horn of gondor has been blown
+
 	// Boromir's been killed by the Uruk-hai!
 	// Remove `Boromir` from the Fellowship
 }
