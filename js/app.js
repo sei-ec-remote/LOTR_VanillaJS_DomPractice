@@ -313,7 +313,14 @@ gollumDiv.appendChild(ringGrab);
 function thereAndBackAgain() {
 	console.log('13: thereAndBackAgain')
 	// remove `Gollum` and `the Ring` from the document
+	const remGollum = document.getElementById("mount-doom")
+	remGollum.removeChild(remGollum.childNodes[1])
 	// Move all the `hobbits` back to `the shire`
+	const hobbitMove = document.getElementById("Rivendell").childNodes[2]
+	document.getElementById("The-Shire").appendChild(hobbitMove);
+	const hobbitRem = document.getElementById("Mordor")
+	hobbitRem.removeChild(hobbitRem.childNodes[2]);
+	hobbitRem.removeChild(hobbitRem.childNodes[2]);
 }
 
 // COMMIT YOUR WORK
