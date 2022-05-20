@@ -344,10 +344,16 @@ function thereAndBackAgain() {
   let gollum = document.getElementById("gollum");
   gollum.parentElement.removeChild(gollum);
   // Move all the `hobbits` back to `the shire`
-  let allHobs = document.querySelector(".hobbits");
-
+  let allHobs = document.querySelectorAll(".hobbits");
+  let hobbitUl = document.createElement("ul");
+  for (i = 0; i < hobbits.length; i++) {
+    let addTheBoys = document.createElement("li");
+    addTheBoys.innerHTML = hobbits[i];
+    hobbitUl.appendChild(addTheBoys);
+  }
+  console.log(hobbitUl);
   shire = document.getElementById("The-Shire");
-  shire.appendChild(allHobs);
+  shire.appendChild(hobbitUl);
 }
 
 // COMMIT YOUR WORK
