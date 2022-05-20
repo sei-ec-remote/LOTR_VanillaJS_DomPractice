@@ -22,17 +22,17 @@ function makeMiddleEarth() {
 	console.log('1: makeMiddleEarth')
 	const middleEarth = document.createElement("section");
 	middleEarth.setAttribute("id", "middle-earth")
-	document.querySelector("body").appendChild(middleEarth);
+
 
 	for (i = 0; i < lands.length; i++) {
 		const landArt = document.createElement("article");
 		landArt.setAttribute("id", lands[i])
 		const landHead = document.createElement("h1");
 		landHead.innerText = lands[i];
-		middleEarth.appendChild(landHead);
+		landArt.appendChild(landHead);
 		middleEarth.appendChild(landArt);
 	}
-
+	document.querySelector("body").appendChild(middleEarth);
 	// 1. create a section tag with an id of middle-earth
 
 	// 2. use a for loop to iterate over the lands array that does the following:
@@ -61,14 +61,12 @@ function makeHobbits() {
 	const hobbitsUL = document.createElement("ul");
 	document.querySelector("article#The-Shire").appendChild(hobbitsUL);
 	
-	let a = 0
+
 
 	hobbits.forEach((hobbit) => {
 		const hobbitsLI = document.createElement("li");
 		hobbitsLI.className = "hobbit"	;
-		hobbitsLI.innerText = hobbits[a]
-		a += 1;
-		hobbitsUL.appendChild(hobbitsLI);
+		hobbitsLI.innerText = hobbit
 		hobbitsUL.appendChild(hobbitsLI);
 	});
 	
@@ -143,7 +141,16 @@ function makeBaddies() {
 function makeBuddies() {
 	console.log('5: makeBuddies')
 
+	const aside = document.createElement("aside");
+	document.getElementById("Rivendell").appendChild(aside)
+	const buddiesUL = document.createElement("ul");
+	aside.appendChild(buddiesUL);
 	
+	buddies.forEach((buddy)=> {
+	const buddiesLI = document.createElement("li");
+	buddiesLI.innerText = buddy;
+	buddiesUL.appendChild(buddiesLI);
+	})
 	// create an `aside` tag
 
 	// put an `unordered list` of the `'buddies'` in the aside
@@ -160,8 +167,10 @@ function makeBuddies() {
 
 function leaveTheShire() {
 	console.log('6: leaveTheShire')
-	const newListHobbits = document.getElementById("The-Shire").childNodes[1];
-	document.getElementById("Rivendell").appendChild(newListHobbits);
+	const newListHobbits = document.getElementById("The-Shire").childNodes[0];	
+	const rivendell = document.getElementById("Rivendell")
+	console.log(newListHobbits)
+	// rivendell.appendChild(newListHobbits);
 	// assemble the `hobbits` and move them to `rivendell`
 }
 
