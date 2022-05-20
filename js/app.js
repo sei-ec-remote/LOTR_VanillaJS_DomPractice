@@ -208,17 +208,22 @@ function forgeTheFellowShip() {
 	let connectRivendell = document.getElementById('Rivendell')
 	connectRivendell.append(divfellowship)
 	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
-	for (let i = 0; i < hobbits.length; i++){
+	for (let i = 0; i < buddies.length; i++){
 		let addbuddies = document.createElement('li')
 		addbuddies.append(buddies[i]);
-		divfellowship.append(addbuddies);
+		divfellowship.append(addbuddies);		
 
-		
+	}
+	for (let i = 0; i < hobbits.length; i++){
+		let leBoys = document.createElement('li')
+		leBoys.append(hobbits[i]);
+		divfellowship.append(leBoys);		
 
 	}
 	// after each character is added make an alert that they // have joined your party
-	document.addEventListener('click', function (){
-		 ('Gandaf has arrived')
+	document.addEventListener('click', function (e){
+		 alert ('Gandalf has arrived')
+		 e.stopPropagation();
 	})
 
 	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
@@ -253,9 +258,16 @@ function theBalrog() {
 function hornOfGondor() {
 	console.log('10: hornOfGondor')
 	// pop up an alert that the horn of gondor has been blown
-
+document.addEventListener('click', function (e){
+	alert ('Horn of Gondor has been blown')
+	alert ('Boromir has been killed by the Uruk-hai')
+})
 	// Boromir's been killed by the Uruk-hai!
+
 	// Remove `Boromir` from the Fellowship
+	let pointfellowship = document.getElementById('the-fellowship')
+	pointfellowship.removeChild(pointfellowship.childNodes[4])
+
 }
 
 // COMMIT YOUR WORK
