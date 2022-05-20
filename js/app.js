@@ -270,7 +270,17 @@ fellowsip.removeChild(fellowsip.childNodes[8]);
 function itsDangerousToGoAlone() {
 	console.log('11: itsDangerousToGoAlone')
 	// take `Frodo` and `Sam` out of the fellowship and move // them to `Mordor`
+const remFro = document.getElementById("the-fellowship").childNodes[0];
+const remSam = document.getElementById("the-fellowship").childNodes[1];
+document.getElementById("Mordor").appendChild(remFro);
+document.getElementById("Mordor").appendChild(remSam);
 	// add a div with an id of `'mount-doom'` to `Mordor`
+const mtdoomDiv = document.createElement("div");
+mtdoomDiv.id = "mount-doom"
+const mtDoomHead = document.createElement("h1");
+mtDoomHead.innerText = "Mount Doom"
+mtdoomDiv.appendChild(mtDoomHead);
+document.getElementById("Mordor").appendChild(mtdoomDiv);
 }
 
 // COMMIT YOUR WORK
@@ -283,7 +293,10 @@ function itsDangerousToGoAlone() {
 function weWantsIt() {
 	console.log('12: weWantsIt')
 	// Create a div with an id of `'gollum'` and add it to Mordor
+	const gollumDiv = document.createElement("div");
+	document.getElementById("Mordor").appendChild(gollumDiv);
 	// Remove `the ring` from `Frodo` and give it to `Gollum`
+	
 	// Move Gollum into Mount Doom
 }
 
