@@ -167,10 +167,9 @@ function makeBuddies() {
 
 function leaveTheShire() {
 	console.log('6: leaveTheShire')
-	const newListHobbits = document.getElementById("The-Shire").childNodes[0];	
+	const newListHobbits = document.getElementById("The-Shire").childNodes[1];	
 	const rivendell = document.getElementById("Rivendell")
-	console.log(newListHobbits)
-	// rivendell.appendChild(newListHobbits);
+	rivendell.appendChild(newListHobbits);
 	// assemble the `hobbits` and move them to `rivendell`
 }
 
@@ -183,6 +182,7 @@ function leaveTheShire() {
 
 function beautifulStranger() {
 	console.log('7: beautifulStranger')
+	document.getElementById("Rivendell").childNodes[1].childNodes[0].childNodes[3].innerText = "Aragorn";
 
 	// change the `'Strider'` text to `'Aragorn'`
 }
