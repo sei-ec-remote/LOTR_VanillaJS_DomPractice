@@ -60,7 +60,7 @@ function makeHobbits() {
 	// display an `unordered list` of hobbits in the shire
 
 	let hobbitUL = document.createElement("ul");
-
+    hobbitUL.id = "hobbits"
 
 	// give each hobbit a class of `hobbit`
 	for (i = 0; i < hobbits.length; i++) {
@@ -318,7 +318,7 @@ function itsDangerousToGoAlone() {
 // add a div with an id of `'mount-doom'` to `Mordor`
 
 mntDoom = document.createElement("div")
-mntDoom.setAttribute("id", "mount-doom ")
+mntDoom.setAttribute("id", "mount-doom")
 mordor.appendChild(mntDoom)
 }
 
@@ -340,7 +340,8 @@ let mordor = document.getElementById("Mordor")
 mordor.appendChild(gollum)
 let theRing = document.getElementById("the-ring")
 gollum.appendChild(theRing)
-let mntDoom =document.getElementById("mount-doom")
+let mntDoom = document.getElementById("mount-doom")
+console.log(mntDoom)
 mntDoom.appendChild(gollum)
 }
 
@@ -355,6 +356,15 @@ function thereAndBackAgain() {
 	console.log('13: thereAndBackAgain')
 	// remove `Gollum` and `the Ring` from the document
 	// Move all the `hobbits` back to `the shire`
+	let gollum = document.getElementById("gollum")
+	gollum.remove()
+	let hobbitsLi = document.querySelectorAll("li.hobbit")
+	let hobbitsUL = document.getElementById("hobbits")
+	hobbitsLi.forEach(hobbit => {
+    hobbitsUL.appendChild(hobbit)
+	})
+   let theShire = document.getElementById("The-Shire")
+   theShire.appendChild(hobbitsUL)
 }
 
 // COMMIT YOUR WORK
