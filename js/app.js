@@ -279,7 +279,11 @@ document.addEventListener('click', function (e){
 
 function itsDangerousToGoAlone() {
 	console.log('11: itsDangerousToGoAlone')
+
+
 	// take `Frodo` and `Sam` out of the fellowship and move // them to `Mordor`
+	let removefellow = document.getElementById('the-fellowship')
+	pointfellowship.removeChild(pointfellowship.childNodes[4])
 	// add a div with an id of `'mount-doom'` to `Mordor`
 }
 
