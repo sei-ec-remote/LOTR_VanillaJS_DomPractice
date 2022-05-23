@@ -212,9 +212,29 @@ function beautifulStranger() {
 function forgeTheFellowShip() {
 	console.log('8: forgeTheFellowShip')
 	// create a new div called `'the-fellowship'` within `rivendell`
+	const fellowShip = document.createElement('div')
+	const rivendell = document.getElementById('Rivendell')
+	rivendell.appendChild(fellowShip)
+	//console.log(fellowship)
+
 	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
 	// after each character is added make an alert that they // have joined your party
+	fellowshipHobbits = document.getElementsByClassName('hobbit')
+	fellowshipBuddies = document.getElementsByClassName('buddy')
 
+	//this looks at both lists (hobbits and buddies) under Rivendell instead of directly from the array
+	//it is done this way because the array doesn't have the name update from Strider to Aragorn
+	const rivendellLi = document
+		.getElementById('Rivendell')
+		.querySelectorAll('li')
+	rivendellLi.forEach((li) => {
+		fellowShip.appendChild(li)
+		//this is the alert
+		alert(`${li.innerText} has joined your party!`)
+	})
+
+	//alert("name has joined your party!")
+	
 	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
 }
 
