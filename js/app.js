@@ -196,6 +196,10 @@ function beautifulStranger() {
 	console.log('7: beautifulStranger')
 
 	// change the `'Strider'` text to `'Aragorn'`
+	const rivendell = document.getElementById("Rivendell")
+	shireBuddies = document.getElementsByClassName("buddy")
+	shireBuddies[3].innerHTML = "Aragorn"
+	
 }
 
 // COMMIT YOUR WORK
