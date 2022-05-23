@@ -213,6 +213,7 @@ function forgeTheFellowShip() {
 	console.log('8: forgeTheFellowShip')
 	// create a new div called `'the-fellowship'` within `rivendell`
 	const fellowShip = document.createElement('div')
+	fellowShip.setAttribute('id', 'fellow-ship')
 	const rivendell = document.getElementById('Rivendell')
 	rivendell.appendChild(fellowShip)
 	//console.log(fellowship)
@@ -246,11 +247,6 @@ function forgeTheFellowShip() {
 function theBalrog() {
 	console.log('9: theBalrog')
 	// change the `'Gandalf'` text to `'Gandalf the White'`
-	//this block of code changes the name in Rivendell list
-	const rivendell = document.getElementById('Rivendell')
-	rivendellBuddies = document.getElementsByClassName('buddy')
-	rivendellBuddies[0].innerHTML = 'Gandalf the White'
-	//this block of code changes the name in the FellowShip that still isn't displayed
 	const fellowShip = document.getElementById('Rivendell')
 	fellowShipBuddies = document.getElementsByClassName('buddy')
 	fellowShipBuddies[0].innerHTML = 'Gandalf the White'
@@ -272,8 +268,12 @@ function theBalrog() {
 function hornOfGondor() {
 	console.log('10: hornOfGondor')
 	// pop up an alert that the horn of gondor has been blown
+	alert("The Horn of Gondor has been blown!")
+
 	// Boromir's been killed by the Uruk-hai!
 	// Remove `Boromir` from the Fellowship
+	const fellowShip = document.getElementById('fellow-ship')
+	fellowShip.removeChild(document.getElementsByClassName('buddy')[4])
 }
 
 // COMMIT YOUR WORK
