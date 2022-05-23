@@ -332,8 +332,13 @@ function weWantsIt() {
 	// Create a div with an id of `'gollum'` and add it to Mordor
 	// Remove `the ring` from `Frodo` and give it to `Gollum`
 	// Move Gollum into Mount Doom
-
-	
+	// const gollum = document.createElement('div');
+    // gollum.setAttribute('id', 'gollum');
+    // const moveRing = document.getElementById('the-ring');
+    // const mD = getElementById('mount-doom');
+    
+    // gollum.append(moveRing);
+    // mD.append(gollum);
 }
 
 // COMMIT YOUR WORK
@@ -347,6 +352,22 @@ function thereAndBackAgain() {
 	console.log('13: thereAndBackAgain')
 	// remove `Gollum` and `the Ring` from the document
 	// Move all the `hobbits` back to `the shire`
+	// remove Gollum and the Ring from the document
+	// gollum.remove();
+	let ulHobbit = document.createElement("ul")
+	
+	ulHobbit.setAttribute('class', 'hobbit' )
+	const the_shire = document.getElementById('The-Shire') 
+	for(i = 0; i < hobbits.length; i++){
+
+		const li = document.createElement('li');
+
+		li.innerHTML = hobbits[i];
+		ulHobbit.appendChild(li)
+	}
+	
+	the_shire.appendChild(ulHobbit);
+	
 }
 
 // COMMIT YOUR WORK
