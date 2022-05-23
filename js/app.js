@@ -232,8 +232,6 @@ function forgeTheFellowShip() {
 		//this is the alert
 		alert(`${li.innerText} has joined your party!`)
 	})
-
-	//alert("name has joined your party!")
 	
 	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
 }
@@ -248,7 +246,20 @@ function forgeTheFellowShip() {
 function theBalrog() {
 	console.log('9: theBalrog')
 	// change the `'Gandalf'` text to `'Gandalf the White'`
+	//this block of code changes the name in Rivendell list
+	const rivendell = document.getElementById('Rivendell')
+	rivendellBuddies = document.getElementsByClassName('buddy')
+	rivendellBuddies[0].innerHTML = 'Gandalf the White'
+	//this block of code changes the name in the FellowShip that still isn't displayed
+	const fellowShip = document.getElementById('Rivendell')
+	fellowShipBuddies = document.getElementsByClassName('buddy')
+	fellowShipBuddies[0].innerHTML = 'Gandalf the White'
+	
 	// apply the following style to the element, make the // background 'white', add a grey border
+	
+	fellowShipBuddies[0].style.background = 'white'
+	fellowShipBuddies[0].style.border = '5px grey solid'
+	
 }
 
 // COMMIT YOUR WORK
