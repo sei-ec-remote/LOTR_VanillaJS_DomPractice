@@ -71,6 +71,7 @@ function makeHobbits() {
 		const hobLi = document.createElement('li')
 		hobLi.textContent = hobbits[i]
 		hobLi.id = `${hobbits[i]}`
+		hobLi.className= "hobbit"
 		ulHobbit.appendChild(hobLi)
 		//theShire.setAttribute('li', `${hobbits[i]}`)
 	}
@@ -152,6 +153,7 @@ function makeBuddies() {
 		//bud = buddies[i]
 		buddy = document.createElement('li');
 		buddy.id = `${buddies[i]}`
+		buddy.className = "buddies"
 		buddy.textContent = buddies[i];
 		buddyList.appendChild(buddy);
 		aside.appendChild(buddyList);
@@ -211,17 +213,20 @@ function forgeTheFellowShip() {
 	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
 	const allPeople = document.createElement('ul')
 	theFellowShip.appendChild(allPeople)
-	for(let i=0; i<hobbits.length;i++){
-		const hobbit = document.createElement('li')
-		hobbit.classList.add('fellowShipMember')
-		hobbit.textContent = hobbits[i]
-		allPeople.appendChild(hobbit);
+	const allHobbits = document.querySelectorAll(".hobbit")
+	const allBuddies = document.querySelectorAll(".buddies")
+	
+	for(let i=0; i<allHobbits.length;i++){
+		//const hobbit = document.createElement('li')
+		//hobbit.classList.add('fellowShipMember')
+		//hobbit.textContent = hobbits[i]
+		allPeople.appendChild(allHobbits[i]);
 	}
-	for(let j=0; j<buddies.length; j++){
-		const buddy = document.createElement('li')
-		buddy.id = `${buddies[j]}`
-		buddy.textContent = buddies[j]
-		allPeople.appendChild(buddy);
+	for(let j=0; j<allBuddies.length; j++){
+		//const buddy = document.createElement('li')
+		//buddy.id = `${buddies[j]}`
+		//buddy.textContent = buddies[j]
+		allPeople.appendChild(allBuddies[j]);
 }
 alert('They have joined the party')
 	// after each character is added make an alert that they // have joined your party
@@ -237,13 +242,13 @@ alert('They have joined the party')
 
 function theBalrog() {
 	console.log('9: theBalrog')
-	const theFellowShip = document.querySelector('.fellowShipMember')
-	let gandalf = theFellowShip[4];
-	console.log(theFellowShip);
+	//const theFellowShip = document.getElementById('.')
+	//let gandalf = theFellowShip[5];
+	//console.log(theFellowShip);
 	let Gand = document.getElementById('Gandalf the Grey')
 	Gand.textContent= 'Gandalf the White'
 	
-	console.log(gandalf)
+//console.log(gandalf)
 	
 	// change the `'Gandalf'` text to `'Gandalf the White'`
 	// apply the following style to the element, make the // background 'white', add a grey border
@@ -326,7 +331,19 @@ function weWantsIt() {
 function thereAndBackAgain() {
 	console.log('13: thereAndBackAgain')
 	// remove `Gollum` and `the Ring` from the document
+	let gollum = document.getElementById("gollum");
+	gollum.remove();
 	// Move all the `hobbits` back to `the shire`
+	let thehobbits = document.querySelectorAll(".hobbit");
+	let theShire = document.getElementById('The-Shire');
+	let hobbitsUl = document.querySelector(".hobbits")
+	console.log(thehobbits)
+	console.log(hobbitsUl)
+	thehobbits.forEach(hobbit => {
+		hobbitsUl.appendChild(hobbit)
+	});
+theShire.appendChild(hobbitsUl)
+
 }
 
 // COMMIT YOUR WORK
