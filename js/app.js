@@ -58,7 +58,10 @@ function makeHobbits() {
 	for (let i = 0;i < hobbits.length;i++){
 		let item = document.createElement('li')
 		item.setAttribute('class', 'hobbit')
+		addedId = hobbits[i].split(" ")[0]
+		item.setAttribute('id', addedId)
 		item.innerText = hobbits[i]
+		console.log(addedId)
 		myList.appendChild(item)
 	}
 	shire = document.getElementById('The-Shire')
@@ -129,6 +132,7 @@ function makeBuddies() {
 	console.log('5: makeBuddies')
 
 	// create an `aside` tag
+	let myAside = document.createElement('aside')
 
 	// put an `unordered list` of the `'buddies'` in the aside
 
