@@ -56,6 +56,7 @@ function makeHobbits() {
 	console.log('2: makeHobbits')
 	// display an `unordered list` of hobbits in the shire
 	const unorderedList = document.createElement("ul")
+	unorderedList.setAttribute("id", "shire-hobbits");
 	// give each hobbit a class of `hobbit`
 	for (i = 0; i < hobbits.length; i++) {
 		const hobbitList = document.createElement("li");
@@ -104,7 +105,7 @@ function makeBaddies() {
 	// display an unordered list of baddies in Mordor
 	const unorderedList = document.createElement("ul");
 	// give each of the baddies a class of "baddy"
-	for (i = 0; i < hobbits.length; i++) {
+	for (i = 0; i < baddies.length; i++) {
 		const baddiesList = document.createElement("li");
 		baddiesList.classList.add("baddy");
 		baddiesList.innerText = baddies[i];
@@ -128,7 +129,7 @@ function makeBuddies() {
 	const asideTag = document.createElement("aside");
 	// put an `unordered list` of the `'buddies'` in the aside
 	const unorderedList = document.createElement("ul");
-	for (i = 0; i < hobbits.length; i++) {
+	for (i = 0; i < buddies.length; i++) {
 		const buddiesList = document.createElement("li");
 		buddiesList.innerText = buddies[i];
 		unorderedList.appendChild(buddiesList);
@@ -148,7 +149,18 @@ function leaveTheShire() {
 	console.log('6: leaveTheShire')
 
 	// assemble the `hobbits` and move them to `rivendell`
+	const hobbitMigration = document.createElement("ul")
+	for (i = 0; i < hobbits.length; i++) {
+		const theHobbits = document.createElement("li");
+		theHobbits.innerText = hobbits[i];
+		hobbitMigration.appendChild(theHobbits);
+		// let hobbitMigration = document.getElementsByClassName("hobbit");
+	}
+	document.getElementById("shire-hobbits").remove();
+	document.querySelector("#Rivendell").appendChild(hobbitMigration);
+	
 }
+
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 6 complete - Left the Shire"
