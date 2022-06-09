@@ -32,7 +32,7 @@ function makeMiddleEarth() {
 		landH1.innerText=lands[i]
 		article.appendChild(landH1)
 		section.appendChild(article)
-		document.querySelector("body").appendChild(section)
+		document.querySelector("body").appendChild(section) 
 	}
 	//   2a. creates an article tag (there should be one for each land when the loop is done)
 
