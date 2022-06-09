@@ -135,6 +135,15 @@ function makeBuddies() {
 	let myAside = document.createElement('aside')
 
 	// put an `unordered list` of the `'buddies'` in the aside
+	let myList = document.createElement('ul')
+	for (let i = 0;i < buddies.length;i++){
+		let item = document.createElement('li')
+		item.setAttribute('class', 'buddy')
+		item.innerText = buddies[i]
+		myList.appendChild(item)
+	}
+	shire = document.getElementById('Rivendell')
+	shire.appendChild(myList)
 
 	// insert your aside as a child element of `rivendell`
 }
