@@ -142,6 +142,7 @@ function leaveTheShire() {
 	console.log('6: leaveTheShire')
 
 	// assemble the `hobbits` and move them to `rivendell`
+	rivendell.appendChild(hobbitList)
 }
 
 // COMMIT YOUR WORK
