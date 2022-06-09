@@ -130,7 +130,7 @@ function makeBuddies() {
 	// put an `unordered list` of the `'buddies'` in the aside
 	// create ul
 	let buddyList = document.createElement('ul');
-	buddyList.setAttribute('class','buddy-list');
+	buddyList.setAttribute('id','buddy-list');
 	// append ul to aside
 	asideTag.appendChild(buddyList);
 	// create loop for lis
@@ -157,9 +157,19 @@ function makeBuddies() {
 
 function leaveTheShire() {
 	console.log('6: leaveTheShire')
-
 	// assemble the `hobbits` and move them to `rivendell`
-}
+	// move the hobbits from under the shire to the list of buddies
+	const moveableHobbits = document.getElementsByClassName('hobbits');
+	// this returns a node list;
+	const frodo = document.getElementById('Frodo Baggins');
+	document.getElementById('buddy-list').appendChild(frodo);
+	const samwise = document.getElementById('Samwise "Sam" Gamgee');
+	document.getElementById('buddy-list').appendChild(samwise);
+	const meriadoc = document.getElementById('Meriadoc "Merry" Brandybuck');
+	document.getElementById('buddy-list').appendChild(meriadoc);
+	const peregrin = document.getElementById('Peregrin "Pippin" Took');
+	document.getElementById('buddy-list').appendChild(peregrin);
+	}
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 6 complete - Left the Shire"
