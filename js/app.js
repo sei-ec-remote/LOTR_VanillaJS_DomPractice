@@ -131,6 +131,7 @@ function makeBuddies() {
 	const unorderedList = document.createElement("ul");
 	for (i = 0; i < buddies.length; i++) {
 		const buddiesList = document.createElement("li");
+		buddiesList.setAttribute("id", `buddy-${i}`);
 		buddiesList.innerText = buddies[i];
 		unorderedList.appendChild(buddiesList);
 	}
@@ -173,6 +174,7 @@ function beautifulStranger() {
 	console.log('7: beautifulStranger')
 
 	// change the `'Strider'` text to `'Aragorn'`
+	document.getElementById("buddy-3").innerHTML = "Aragorn";
 }
 
 // COMMIT YOUR WORK
