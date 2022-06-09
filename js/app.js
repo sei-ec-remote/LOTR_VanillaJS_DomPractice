@@ -22,7 +22,7 @@ function makeMiddleEarth() {
 	console.log('1: makeMiddleEarth')
 
 	// 1. create a section tag with an id of middle-earth
-	let middleEarth = document.createElement('section')
+	const middleEarth = document.createElement('section')
 	middleEarth.id = 'middle-earth'
 	console.log(`Middle Earth created with and id of ${middleEarth.id}`)
 	// 2. use a for loop to iterate over the lands array that does the following:
@@ -33,7 +33,7 @@ function makeMiddleEarth() {
 		landArticle.id = lands[i]
 		console.log(`Land created with an id of ${landArticle.id}`)
 	//   2c. includes an h1 with the name of the land inside each land article
-		let nameOfLand = document.createElement('h1')
+		const nameOfLand = document.createElement('h1')
 		nameOfLand.innerText = lands[i]
 		landArticle.appendChild(nameOfLand)
 	//   2d. appends each land to the middle-earth section
@@ -54,9 +54,9 @@ function makeHobbits() {
 	console.log('2: makeHobbits')
 
 	// display an `unordered list` of hobbits in the shire
-	let hobbitList = document.createElement('ul')
+	const hobbitList = document.createElement('ul')
 	for (i = 0; i < hobbits.length; i ++) {
-		let hobbit = document.createElement('li')
+		const hobbit = document.createElement('li')
 		hobbit.innerText = hobbits[i]
 	// give each hobbit a class of `hobbit`
 		hobbit.classList.add('hobbit')
@@ -78,10 +78,14 @@ function keepItSecretKeepItSafe() {
 	console.log('3: keepItSecretKeepItSafe')
 
 	// create a div with an id of `'the-ring'`
-
+	const ringDiv = document.createElement('div')
+	console.log(`The ring has been created`)
 	// give the div a class of `'magic-imbued-jewelry'`
-
+	ringDiv.id = 'magic-imbued-jewelry'
+	console.log(`The ring's id is ${ringDiv.id}`)
 	// add the ring as a child of `Frodo`
+	document.querySelector('li').appendChild(ringDiv)
+	console.log(`The ring is in possession of ${ringDiv.parentElement.innerText}`)
 }
 
 // COMMIT YOUR WORK
