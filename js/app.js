@@ -195,10 +195,45 @@ function beautifulStranger() {
 function forgeTheFellowShip() {
 	console.log('8: forgeTheFellowShip')
 	// create a new div called `'the-fellowship'` within `rivendell`
+	const theFellowship = document.createElement('div');
+	theFellowship.setAttribute('id','the-fellowship');
+	document.getElementById('Rivendell').appendChild(theFellowship);
 	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
-	// after each character is added make an alert that they // have joined your party
-
-	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
+	const frodo = document.getElementById('Frodo Baggins');
+	document.getElementById('the-fellowship').appendChild(frodo);
+	console.log('Frodo has joined the party!')
+	const samwise = document.getElementById('Samwise "Sam" Gamgee');
+	document.getElementById('the-fellowship').appendChild(samwise);
+	console.log('Sam has joined the party!')
+	const meriadoc = document.getElementById('Meriadoc "Merry" Brandybuck');
+	document.getElementById('the-fellowship').appendChild(meriadoc);
+	console.log('Merry has joined the party!')
+	const peregrin = document.getElementById('Peregrin "Pippin" Took');
+	document.getElementById('the-fellowship').appendChild(peregrin);
+	console.log('Pippin has joined the party!')
+	const gandalf = document.getElementById('Gandalf the Grey');
+	//gandalf
+	document.getElementById('the-fellowship').appendChild(gandalf);
+	console.log('Gandalf has joined the party!')
+	//legolas
+	const legolas = document.getElementById('Legolas');
+	document.getElementById('the-fellowship').appendChild(legolas);
+	console.log('Legolas has joined the party!')
+	//gimli
+	const gimli = document.getElementById('Gimli');
+	document.getElementById('the-fellowship').appendChild(gimli);
+	console.log('Gimli has joined the party!')
+	//aragorn
+	const aragorn = document.getElementById('Strider');
+	document.getElementById('the-fellowship').appendChild(aragorn);
+	console.log('Aragorn has joined the party!')
+	//boromir
+	const boromir = document.getElementById('Boromir');
+	document.getElementById('the-fellowship').appendChild(boromir);
+	console.log('Boromir has joined the party!')
+	// after each character is added make an alert that they have joined your party
+	// NOTE: This won't change what you see in the browser.  Use your Elements tab of 
+	// your Inspector tools to make sure that it worked.
 }
 
 // COMMIT YOUR WORK
