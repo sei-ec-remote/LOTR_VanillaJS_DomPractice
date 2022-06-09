@@ -109,7 +109,8 @@ function makeBaddies() {
 	for (let i = 0;i < baddies.length;i++){
 		let item = document.createElement('li')
 		item.setAttribute('class', 'baddy')
-		item.innerText = hobbits[i]
+		item.setAttribute('id', baddies[i])
+		item.innerText = baddies[i]
 		myList.appendChild(item)
 	}
 	shire = document.getElementById('Mordor')
@@ -137,6 +138,7 @@ function makeBuddies() {
 
 	// put an `unordered list` of the `'buddies'` in the aside
 	let myList = document.createElement('ul')
+	myList.setAttribute('id','buddies')
 	for (let i = 0;i < buddies.length;i++){
 		let item = document.createElement('li')
 		item.setAttribute('class', 'buddy')
@@ -190,6 +192,26 @@ function beautifulStranger() {
 
 function forgeTheFellowShip() {
 	console.log('8: forgeTheFellowShip')
+	let myRivendell = document.getElementById('Rivendell')
+	let theFellow = document.createElement('div')
+	theFellow.setAttribute('id', 'the-fellowship')
+	myRivendell.appendChild(theFellow)
+
+	let theHobbits = document.getElementsByClassName('hobbits')
+	let theBuddies = document.getElementsByClassName('buddy')
+
+	
+	for(let i = 0; i < theBuddies.length;i++){
+		theFellow.appendChild(theBuddies[i])
+		window.alert(theBuddies[i].innerText + " has joined your party")
+	}
+
+	for(let i = 0; i < theHobbits.length;i++){
+		theFellow.appendChild(theHobbits[i])
+		window.alert(theHobbiys[i] + " Has joined your party")
+
+	}
+
 	// create a new div called `'the-fellowship'` within `rivendell`
 	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
 	// after each character is added make an alert that they // have joined your party
