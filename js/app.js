@@ -54,7 +54,6 @@ function makeMiddleEarth() {
 
 function makeHobbits() {
 	console.log('2: makeHobbits')
-
 	// display an `unordered list` of hobbits in the shire
 	const unorderedList = document.createElement("ul")
 	// give each hobbit a class of `hobbit`
@@ -62,8 +61,8 @@ function makeHobbits() {
 		const hobbitList = document.createElement("li");
 		hobbitList.classList.add("hobbit");
 		hobbitList.innerText = hobbits[i];
+		hobbitList.setAttribute("id", `Hobbit-${i}`);
 		unorderedList.appendChild(hobbitList);
-
 	}
 	document.querySelector("#The-Shire").appendChild(unorderedList);
 	// document.querySelector("body").appendChild(unorderedList);
@@ -83,10 +82,13 @@ function keepItSecretKeepItSafe() {
 	console.log('3: keepItSecretKeepItSafe')
 
 	// create a div with an id of `'the-ring'`
-
+	const theRing = document.createElement("div");
+	theRing.setAttribute("id", "the-ring");
 	// give the div a class of `'magic-imbued-jewelry'`
-
+	theRing.classList.add("magic-imbued-jewelry");
 	// add the ring as a child of `Frodo`
+	// let frodosID = document.getElementById()
+	document.getElementById("Hobbit-0").appendChild(theRing);
 }
 
 // COMMIT YOUR WORK
@@ -245,9 +247,7 @@ function thereAndBackAgain() {
 
 document.getElementById('chapter-1').addEventListener('click', makeMiddleEarth)
 document.getElementById('chapter-2').addEventListener('click', makeHobbits)
-document
-	.getElementById('chapter-3')
-	.addEventListener('click', keepItSecretKeepItSafe)
+document.getElementById('chapter-3').addEventListener('click', keepItSecretKeepItSafe)
 document.getElementById('chapter-4').addEventListener('click', makeBaddies)
 document.getElementById('chapter-5').addEventListener('click', makeBuddies)
 document.getElementById('chapter-6').addEventListener('click', leaveTheShire)
