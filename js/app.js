@@ -22,20 +22,24 @@ function makeMiddleEarth() {
 	console.log('1: makeMiddleEarth')
 
 	// 1. create a section tag with an id of middle-earth
-
+	const section = document.createElement('section')
+	section.setAttribute('id', 'middle-earth')
+	
 	// 2. use a for loop to iterate over the lands array that does the following:
-
+	for (i = 0; i<lands.length; i++) {
+		
 	//   2a. creates an article tag (there should be one for each land when the loop is done)
-
+		const article = document.createElement('article')
 	//   2b. gives each land article an `id` tag of the corresponding land name
-
+		article.setAttribute('id', lands[i])
 	//   2c. includes an h1 with the name of the land inside each land article
-
+		article.innerHTML = `<h1>${lands[i]}</h1>`
 	//   2d. appends each land to the middle-earth section
-
+		section.appendChild(article)
+	}
 	// 3. append the section to the body of the DOM.
+	document.querySelector('body').appendChild(section)
 }
-
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 1 complete - Made Middle Earth".
 
@@ -47,11 +51,16 @@ function makeHobbits() {
 	console.log('2: makeHobbits')
 
 	// display an `unordered list` of hobbits in the shire
-
+	const hobbitsList = document.createElement('ul')
 	// give each hobbit a class of `hobbit`
-
+	for (let i = 0; i < hobbits.length; i++) {
+		const hobbit = document.createElement('li')
+		hobbit.classList.add('hobbit')
+		hobbit.innerText = hobbits[i]
+		hobbitsList.appendChild(hobbit)
+	}
 	// hint: create a 'ul' outside the loop into which to append the 'li's
-
+	document.querySelector('#The-Shire').appendChild(hobbitsList)
 	// hint: get 'The-Shire' by using its id
 }
 
@@ -66,10 +75,12 @@ function keepItSecretKeepItSafe() {
 	console.log('3: keepItSecretKeepItSafe')
 
 	// create a div with an id of `'the-ring'`
-
+	const ring = document.createElement('div')
+	ring.setAttribute('id', 'the-ring')
 	// give the div a class of `'magic-imbued-jewelry'`
-
+	ring.classList.add('magic-imbued-jewelry')
 	// add the ring as a child of `Frodo`
+	document.querySelector('.hobbit').appendChild(ring)
 }
 
 // COMMIT YOUR WORK
