@@ -263,8 +263,12 @@ function theBalrog() {
 function hornOfGondor() {
 	console.log('10: hornOfGondor')
 	// pop up an alert that the horn of gondor has been blown
+	alert('The Horn of Gondor has been blown!');
 	// Boromir's been killed by the Uruk-hai!
+	console.log('I would have followed you, my brother, my captain, my king.')
 	// Remove `Boromir` from the Fellowship
+	const boromir = document.getElementById('Boromir');
+	boromir.remove();
 }
 
 // COMMIT YOUR WORK
