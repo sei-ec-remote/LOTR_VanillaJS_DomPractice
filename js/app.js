@@ -82,10 +82,14 @@ function keepItSecretKeepItSafe() {
 	console.log('3: keepItSecretKeepItSafe')
 
 	// create a div with an id of `'the-ring'`
+	let newdiv = document.createElement('div')
 
+	newdiv.setAttribute('id', 'the-ring')
 	// give the div a class of `'magic-imbued-jewelry'`
-
+	newdiv.setAttribute('id', "magic-imbued-jewelry")
 	// add the ring as a child of `Frodo`
+	
+	
 }
 
 // COMMIT YOUR WORK
@@ -97,9 +101,18 @@ function keepItSecretKeepItSafe() {
 
 function makeBaddies() {
 	console.log('4: makeBaddies')
+	let myList = document.createElement('ul')
+	for (let i = 0;i < baddies.length;i++){
+		let item = document.createElement('li')
+		item.setAttribute('class', 'baddy')
+		item.innerText = hobbits[i]
+		myList.appendChild(item)
+	}
+	shire = document.getElementById('Mordor')
+	shire.appendChild(myList)
 
 	// display an unordered list of baddies in Mordor
-
+	
 	// give each of the baddies a class of "baddy"
 
 	// remember to append them to Mordor
