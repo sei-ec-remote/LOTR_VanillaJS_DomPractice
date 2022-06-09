@@ -140,6 +140,7 @@ function makeBuddies() {
 	for (let i = 0;i < buddies.length;i++){
 		let item = document.createElement('li')
 		item.setAttribute('class', 'buddy')
+		item.setAttribute('id', buddies[i])
 		item.innerText = buddies[i]
 		myList.appendChild(item)
 	}
@@ -174,8 +175,10 @@ function leaveTheShire() {
 
 function beautifulStranger() {
 	console.log('7: beautifulStranger')
-
+	let Strider = document.getElementById('Strider')
+	Strider.innerText = 'Aragorn'
 	// change the `'Strider'` text to `'Aragorn'`
+
 }
 
 // COMMIT YOUR WORK
