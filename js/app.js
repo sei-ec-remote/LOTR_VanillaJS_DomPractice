@@ -156,6 +156,7 @@ function beautifulStranger() {
 	console.log('7: beautifulStranger')
 
 	// change the `'Strider'` text to `'Aragorn'`
+	buddyList[3].innerText = 'Aragorn'
 }
 
 // COMMIT YOUR WORK
