@@ -25,7 +25,7 @@ function makeMiddleEarth() {
 	const section = document.createElement("section")
 	section.setAttribute("id","middle-earth")
 	// 2. use a for loop to iterate over the lands array that does the following:
-	for(i=0; i<lands.length; i++){
+	for(let i=0; i<lands.length; i++){
 		const article = document.createElement("article")
 		article.setAttribute("id",lands[i])
 		const landH1 = document.createElement("h1")
@@ -54,7 +54,14 @@ function makeMiddleEarth() {
 
 function makeHobbits() {
 	console.log('2: makeHobbits')
-
+	const hobbitList = document.createElement("ul")
+	for(let i=0; i<hobbits.length; i++){
+		const hobbit = document.createElement("li")
+		hobbit.classList.add("hobbit")
+		hobbit.innerText = hobbits[i]
+		hobbitList.appendChild(hobbit)
+	}
+	document.querySelector("#The-Shire").appendChild(hobbitList)
 	// display an `unordered list` of hobbits in the shire
 
 	// give each hobbit a class of `hobbit`
