@@ -190,7 +190,7 @@ function forgeTheFellowShip() {
 	const list = document.getElementById("Rivendell").getElementsByTagName("li")
 	while(list.length!==0){
 		fellow.appendChild(list[0])
-		alert(list[0].innerText+ "have joined the Rivendell fellowship")
+		alert(list[0].innerText+ " have joined the Rivendell fellowship")
 	}
 	document.getElementById("Rivendell").appendChild(fellow)
 	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
@@ -205,6 +205,7 @@ function forgeTheFellowShip() {
 
 function theBalrog() {
 	console.log('9: theBalrog')
+	document.getElementById("Gandalf the Grey").innerText = "Gandalf the White"
 	// change the `'Gandalf'` text to `'Gandalf the White'`
 	// apply the following style to the element, make the // background 'white', add a grey border
 }
