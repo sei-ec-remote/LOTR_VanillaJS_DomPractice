@@ -125,6 +125,7 @@ function makeBuddies() {
 	for (let i = 0; i < buddies.length; i++) {
 		const buddy = document.createElement('li')
 		buddy.classList.add('buddy')
+		buddy.setAttribute('id', buddies[i])
 		buddy.innerText = buddies[i]
 		buddiesList.appendChild(buddy)
 	}
@@ -160,7 +161,7 @@ function beautifulStranger() {
 	console.log('7: beautifulStranger')
 
 	// change the `'Strider'` text to `'Aragorn'`
-	document.body.innerHTML = document.body.innerHTML.replace('Strider', 'Aragorn');
+	document.querySelector('#Strider').innerText = 'Aragorn'
 }
 
 // COMMIT YOUR WORK
@@ -172,8 +173,21 @@ function beautifulStranger() {
 
 function forgeTheFellowShip() {
 	console.log('8: forgeTheFellowShip')
-	// create a new div called `'the-fellowship'` within `rivendell`
-	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
+	// // create a new div called `'the-fellowship'` within `rivendell`
+	const theFellowship = document.createElement('div')
+	theFellowship.setAttribute('id', 'the-fellowship')
+	document.querySelector('#Rivendell').appendChild(theFellowship)
+	// // add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
+	for (let i = 0; i < buddies.length; i++) {
+		let friend = document.querySelector('.buddy')
+		theFellowship.appendChild(friend)
+		alert(`${friend.textContent} has joined your party`)
+	}
+	for (let i = 0; i < hobbits.length; i++) {
+		let friend = document.querySelector('.hobbit')
+		theFellowship.appendChild(friend)
+		alert(`${friend.textContent} has joined your party`)
+	}
 	// after each character is added make an alert that they // have joined your party
 
 	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
