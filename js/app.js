@@ -194,6 +194,7 @@ function forgeTheFellowShip() {
 
 	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
 	const theFellowship = document.createElement("div");
+	theFellowship.setAttribute("id", "the-fellowship");
 	for (hobbit of hobbits) {
 		theFellowship.appendChild(document.querySelector(`[id='${hobbit}']`));
 		console.log(`${hobbit} joined the Fellowship!`);
@@ -235,6 +236,8 @@ function hornOfGondor() {
 	// pop up an alert that the horn of gondor has been blown
 	// Boromir's been killed by the Uruk-hai!
 	// Remove `Boromir` from the Fellowship
+	alert("The Horn of Gondor has been blown!");
+	document.querySelector("#the-fellowship").removeChild(document.querySelector("#Boromir"));
 }
 
 // COMMIT YOUR WORK
