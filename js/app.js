@@ -54,6 +54,15 @@ function makeMiddleEarth() {
 
 function makeHobbits() {
 	console.log('2: makeHobbits')
+	const hobbitList = document.createElement("ul")
+	hobbitList.setAttribute("class", "The-Shire")
+	for (let i = 0; i < hobbits.length; i++) {
+		const hobbit = document.createElement('li')
+		hobbit.setAttribute("class", "hobbit")
+		hobbit.innerText = hobbits[i]
+		hobbitList.appendChild(hobbit)
+	}
+	document.getElementById("The-Shire").appendChild(hobbitList)
 
 	// display an `unordered list` of hobbits in the shire
 
