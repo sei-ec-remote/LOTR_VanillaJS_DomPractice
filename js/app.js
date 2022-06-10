@@ -121,14 +121,16 @@ function makeBuddies() {
 	const aside = document.createElement('aside')
 	// put an `unordered list` of the `'buddies'` in the aside
 	const buddiesList = document.createElement('ul')
+	buddiesList.classList.add('buddies')
 	for (let i = 0; i < buddies.length; i++) {
 		const buddy = document.createElement('li')
 		buddy.classList.add('buddy')
 		buddy.innerText = buddies[i]
 		buddiesList.appendChild(buddy)
 	}
+	aside.appendChild(buddiesList)
 	// insert your aside as a child element of `rivendell`
-	document.querySelector('#Rivendell').appendChild(buddiesList)
+	document.querySelector('#Rivendell').appendChild(aside)
 }
 
 // COMMIT YOUR WORK
@@ -142,8 +144,11 @@ function leaveTheShire() {
 	console.log('6: leaveTheShire')
 
 	// assemble the `hobbits` and move them to `rivendell`
+	for (let i = 0; i < hobbits.length; i++) {
+		
+		document.querySelector('.buddies').appendChild(document.querySelector('.hobbit'))
+	}
 }
-
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 6 complete - Left the Shire"
 
