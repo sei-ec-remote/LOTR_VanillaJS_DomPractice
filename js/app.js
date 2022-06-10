@@ -156,7 +156,10 @@ function makeBuddies() {
 
 function leaveTheShire() {
 	console.log('6: leaveTheShire')
-
+	for (i = 0; i < hobbits.length; i++){
+		document.querySelector('.buddies').appendChild(document.querySelector('.hobbit'))
+	}
+	
 	// assemble the `hobbits` and move them to `rivendell`
 }
 
