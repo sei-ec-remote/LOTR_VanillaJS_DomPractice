@@ -59,14 +59,14 @@ function makeHobbits() {
 	// display an `unordered list` of hobbits in the shire
 	let hobbitList = document.createElement('ul')
 	for(let i = 0; i < hobbits.length; i++){
-		console.log(hobbitList[i])
+		console.log(hobbits[i])
 		const hobbitName = document.createElement('li')
 		hobbitName.setAttribute('id', hobbits[i])
 		
 
 
 	// give each hobbit a class of `hobbit`
-	hobbitName.setAttribute('class', hobbits[i])
+	hobbitName.setAttribute('class', "hobbit")
 	
 	hobbitName.innerText = (hobbits[i])
 	hobbitList.appendChild(hobbitName)
@@ -109,9 +109,18 @@ function makeBaddies() {
 	console.log('4: makeBaddies')
 
 	// display an unordered list of baddies in Mordor
-
+	let baddiesList = document.createElement('ul')
+	for(let i = 0; i < baddies.length; i++){
+		console.log(baddies[i])
+		let baddyName = document.createElement('li')
+		baddyName.setAttribute('class', 'baddy')
+		baddyName.innerText = (baddies[i])
+		baddiesList.appendChild(baddyName)
+		
+	}
+	document.getElementById("Mordor").appendChild(baddiesList)
 	// give each of the baddies a class of "baddy"
-
+	
 	// remember to append them to Mordor
 }
 
@@ -126,9 +135,19 @@ function makeBuddies() {
 	console.log('5: makeBuddies')
 
 	// create an `aside` tag
-
+	let theBuddies = document.createElement('aside')
+	theBuddies.setAttribute('id', 'buddiesAside')
+	let buddiesList = document.createElement('ul')
+	for (i = 0; i < buddies.length; i++){
+		console.log(buddies[i])
+		let buddyName = document.createElement('li')
+		buddyName.setAttribute('id', buddies[i])
+		buddyName.innerText = (buddies[i])
+		buddiesList.appendChild(buddyName)
+		theBuddies.appendChild(buddiesList)
+	}
 	// put an `unordered list` of the `'buddies'` in the aside
-
+	document.getElementById("Rivendell").appendChild(theBuddies)
 	// insert your aside as a child element of `rivendell`
 }
 
