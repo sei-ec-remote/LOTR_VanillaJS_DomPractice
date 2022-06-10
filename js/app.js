@@ -31,7 +31,10 @@ function makeMiddleEarth() {
 	//   2b. gives each land article an `id` tag of the corresponding land name
 			landArt.setAttribute('id', lands[i])
 	//   2c. includes an h1 with the name of the land inside each land article
-			landArt.innerHTML = '<h2>lands[i]</h2>'
+			const landTitle = document.createElement('h1')
+			landTitle.innerHTML = lands[i]
+			landArt.appendChild(landTitle)
+
 	//   2d. appends each land to the middle-earth section
 			newSection.appendChild(landArt)
 		}
@@ -54,12 +57,15 @@ function makeHobbits() {
 	const hobbitList = document.createElement('ul')
 	// give each hobbit a class of `hobbit`
 	for (let i = 0; i < hobbits.length; i++) {
-		const hobbitItem = document.createElement('li', hobbits[i])
+		const hobbitItem = document.createElement('li')
+		hobbitItem.innerText = hobbits[i]
 		hobbitItem.classList.add('hobbit')
+		hobbitItem.setAttribute('id', hobbits[i])
 		hobbitList.appendChild(hobbitItem)
 	}
 	const theshire = document.getElementById('The-Shire')
 	theshire.appendChild(hobbitList)
+	console.log(hobbitList)
 	// hint: create a 'ul' outside the loop into which to append the 'li's
 
 	// hint: get 'The-Shire' by using its id
@@ -81,7 +87,7 @@ function keepItSecretKeepItSafe() {
 	// give the div a class of `'magic-imbued-jewelry'`
 	ringDiv.classList.add('magic-imbued-jewelry')
 	// add the ring as a child of `Frodo`
-	const frodo = document.querySelector('li')
+	const frodo = document.getElementById('Frodo Baggins')
 	frodo.appendChild(ringDiv)
 }
 
@@ -98,13 +104,14 @@ function makeBaddies() {
 	// display an unordered list of baddies in Mordor
 	const baddieList = document.createElement('ul')
 	for (let i = 0; i < baddies.length; i++) {
-		const baddieItem = document.createElement('li', baddies[i])
+		const baddieItem = document.createElement('li')
+		baddieItem.innerText =  baddies[i]
 		// give each of the baddies a class of "baddy"
 		baddieItem.classList.add('baddy')
 		baddieList.appendChild(baddieItem)
 	}
 	// remember to append them to Mordor
-	const mordor= document.getElementById('Mordor')
+	const mordor = document.getElementById('Mordor')
 	mordor.appendChild(baddieList)
 }
 
@@ -121,11 +128,15 @@ function makeBuddies() {
 	// create an `aside` tag
 	const asideTag = document.createElement('aside')
 	// put an `unordered list` of the `'buddies'` in the aside
-	const buddyList = asideTag.createElement('ul')
+	const buddyList = document.createElement('ul')
 	for (let i = 0; i < buddies.length; i++) {
-		const buddyItem = document.createElement('li', buddies[i])
+		const buddyItem = document.createElement('li')
+		buddyItem.innerText = buddies[i]
+		buddyItem.classList.add('buddy')
+		buddyItem.setAttribute('id', buddies[i])
 		buddyList.appendChild(buddyItem)
 	}
+	asideTag.appendChild(buddyList)
 	// insert your aside as a child element of `rivendell`
 	const rivendell = document.getElementById('Rivendell')
 	rivendell.appendChild(asideTag)
@@ -142,7 +153,28 @@ function leaveTheShire() {
 	console.log('6: leaveTheShire')
 
 	// assemble the `hobbits` and move them to `rivendell`
-	rivendell.appendChild(hobbitList)
+	// const rivendell = document.getElementById('Rivendell')
+	// const theShire = document.getElementById('The-Shire')
+	// const allHobbits = makeHobbits()
+	// rivendell.appendChild(allHobbits)
+	const hobbitsinShire = document.querySelectorAll('.hobbit')
+	const theshire = document.getElementById('The-Shire')
+	for (let i = 0; i < hobbitsinShire.length; i++) {
+		hobbitsinShire[i].remove()
+	}
+	const hobbitList2 = document.createElement('ul')
+	// give each hobbit a class of `hobbit`
+	for (let i = 0; i < hobbits.length; i++) {
+		const hobbitItem2 = document.createElement('li')
+		hobbitItem2.innerText = hobbits[i]
+		hobbitItem2.classList.add('hobbit')
+		hobbitItem2.setAttribute('id', hobbits[i])
+		hobbitList2.appendChild(hobbitItem2)
+	}
+	const rivendell = document.getElementById('Rivendell')
+	rivendell.appendChild(hobbitList2)
+
+	keepItSecretKeepItSafe()
 }
 
 // COMMIT YOUR WORK
@@ -156,7 +188,9 @@ function beautifulStranger() {
 	console.log('7: beautifulStranger')
 
 	// change the `'Strider'` text to `'Aragorn'`
-	buddyList[3].innerText = 'Aragorn'
+	const strider = document.getElementById('Strider')
+	strider.innerText = 'Aragorn'
+	strider.setAttribute('id', 'Aragorn')
 }
 
 // COMMIT YOUR WORK
@@ -171,6 +205,19 @@ function forgeTheFellowShip() {
 	// create a new div called `'the-fellowship'` within `rivendell`
 	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
 	// after each character is added make an alert that they // have joined your party
+	const thefellowship = document.createElement('div', 'the-fellowship')
+	const rivendell = document.getElementById('Rivendell')
+	rivendell.appendChild(thefellowship)
+	const theHobbits = document.querySelectorAll('.hobbit')
+	const theBuddies = document.querySelectorAll('.buddy')
+	for (let i = 0; i < theHobbits.length; i++) {
+		thefellowship.appendChild(theHobbits[i])
+		alert(`${theHobbits[i]} has joined the Fellowship`)
+	}
+	for (let i = 0; i < theBuddies.length; i++) {
+		thefellowship.appendChild(theBuddies[i])
+		alert(`${theBuddies[i]} has joined the Fellowship`)
+	}
 
 	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
 }
