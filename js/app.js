@@ -172,7 +172,7 @@ function leaveTheShire() {
 
 function beautifulStranger() {
 	console.log('7: beautifulStranger')
-	
+	//hi
 	// change the `'Strider'` text to `'Aragorn'`
 }
 
