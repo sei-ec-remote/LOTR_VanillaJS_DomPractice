@@ -145,6 +145,7 @@ function makeBuddies() {
 	for (let i = 0; i < buddies.length; i++) {
 		const liTag = document.createElement('li')
 		liTag.setAttribute('class', 'buddy')
+		liTag.setAttribute('id', buddies[i])
 		liTag.innerHTML = `<p>${buddies[i]}</p>`
 		rivendellPeeps.appendChild(liTag)
 	}
@@ -182,6 +183,7 @@ function beautifulStranger() {
 	console.log('7: beautifulStranger')
 
 	// change the `'Strider'` text to `'Aragorn'`
+	document.getElementById('Strider').innerText = "Aragorn"
 }
 
 // COMMIT YOUR WORK
