@@ -63,6 +63,7 @@ function makeHobbits() {
 
 	// hint: get 'The-Shire' by using its id
 	const hobbitList = document.createElement("ul");
+	hobbitList.setAttribute("id", "hobbits-list");
 	for (let i = 0; i < hobbits.length; i++) {
 		const thisHobbit = document.createElement("li");
 		thisHobbit.classList.add("hobbit");
@@ -108,6 +109,7 @@ function makeBaddies() {
 
 	// display an unordered list of baddies in Mordor
 	const baddieList = document.createElement("ul");
+	baddieList.setAttribute("id", "baddies-list");
 	for (let i = 0; i < baddies.length; i++) {
 		const thisBaddie = document.createElement("li");
 		thisBaddie.classList.add("baddy");
@@ -132,10 +134,21 @@ function makeBuddies() {
 	console.log('5: makeBuddies')
 
 	// create an `aside` tag
+	const newAsideTag = document.createElement("aside");
 
 	// put an `unordered list` of the `'buddies'` in the aside
+	const buddiesList = document.createElement("ul");
+	for (let i = 0; i < buddies.length; i++) {
+		const thisBuddy = document.createElement("li");
+		thisBuddy.classList.add("buddy");
+		thisBuddy.setAttribute("id", buddies[i]);
+		thisBuddy.innerText = buddies[i];
+		buddiesList.appendChild(thisBuddy);
+	}
+	newAsideTag.appendChild(buddiesList);
 
 	// insert your aside as a child element of `rivendell`
+	document.querySelector("#Rivendell").appendChild(buddiesList);
 }
 
 // COMMIT YOUR WORK
@@ -149,6 +162,7 @@ function leaveTheShire() {
 	console.log('6: leaveTheShire')
 
 	// assemble the `hobbits` and move them to `rivendell`
+	document.querySelector("#Rivendell").appendChild(document.querySelector("#hobbits-list"));
 }
 
 // COMMIT YOUR WORK
