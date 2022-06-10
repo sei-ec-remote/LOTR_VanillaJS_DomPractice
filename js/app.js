@@ -152,9 +152,7 @@ function makeBuddies() {
 function leaveTheShire() {
 	console.log('6: leaveTheShire')
 	const onTheMove = document.getElementsByClassName("hobbit");
-	console.log(onTheMove[2])
-	console.log(onTheMove)
-	const destination = document.createElement("ul")
+	const destination = document.createElement('ul')
 	while(onTheMove.length!==0){
 		destination.appendChild(onTheMove[0])
 	}
@@ -188,7 +186,13 @@ function forgeTheFellowShip() {
 	// create a new div called `'the-fellowship'` within `rivendell`
 	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
 	// after each character is added make an alert that they // have joined your party
-
+	const fellow = document.createElement('div')
+	const list = document.getElementById("Rivendell").getElementsByTagName("li")
+	while(list.length!==0){
+		fellow.appendChild(list[0])
+		alert(list[0].innerText+ "have joined the Rivendell fellowship")
+	}
+	document.getElementById("Rivendell").appendChild(fellow)
 	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
 }
 
