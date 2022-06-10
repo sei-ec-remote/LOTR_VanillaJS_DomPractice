@@ -47,7 +47,7 @@ function makeMiddleEarth() {
 
 	// 3. append the section to the body of the DOM.
 }
-makeMiddleEarth()
+
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 1 complete - Made Middle Earth".
@@ -138,7 +138,19 @@ function makeBuddies() {
 	console.log('5: makeBuddies')
 
 	// create an `aside` tag
+	const theBuddies = document.createElement('aside')
+	const rivendellPeeps = document.createElement('ul')
+	rivendellPeeps.setAttribute('id', 'The-Buddies')
 
+	for (let i = 0; i < buddies.length; i++) {
+		const liTag = document.createElement('li')
+		liTag.setAttribute('class', 'buddy')
+		liTag.innerHTML = `<p>${buddies[i]}</p>`
+		rivendellPeeps.appendChild(liTag)
+	}
+	theBuddies.appendChild(rivendellPeeps)
+	document.getElementById('Rivendell').appendChild(theBuddies)
+	console.log(theBuddies)
 	// put an `unordered list` of the `'buddies'` in the aside
 
 	// insert your aside as a child element of `rivendell`
