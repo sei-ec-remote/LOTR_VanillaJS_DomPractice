@@ -53,13 +53,28 @@ function makeHobbits() {
 	console.log('2: makeHobbits')
 
 	// display an `unordered list` of hobbits in the shire
+	const ul = document.createElement("ul")
+	//const shire = document.setAttribute("id", lands[0])
 
+	//const shire = document.getElementById("id", lands[0])
+
+	for (let i = 0; i < hobbits.length; i++) {
+		let li = document.createElement("li");
+		li.setAttribute("class", "hobbit")
+		ul.appendChild(li)
+		li.innerText = hobbits[i]
+		console.log(li)
+	}
+	document.getElementById(lands[0]).appendChild(ul)
+}
 	// give each hobbit a class of `hobbit`
+
 
 	// hint: create a 'ul' outside the loop into which to append the 'li's
 
+
 	// hint: get 'The-Shire' by using its id
-}
+
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 2 complete - Made the Hobbits".
