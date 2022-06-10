@@ -53,22 +53,22 @@ function makeHobbits() {
 	console.log('2: makeHobbits')
 
 	// display an `unordered list` of hobbits in the shire
-	const ul = document.createElement("ul")
-	//const shire = document.setAttribute("id", lands[0])
-
-	//const shire = document.getElementById("id", lands[0])
-
-	for (let i = 0; i < hobbits.length; i++) {
-		let li = document.createElement("li");
-		li.setAttribute("class", "hobbit")
-		ul.appendChild(li)
-		li.innerText = hobbits[i]
-		console.log(li)
-	}
-	document.getElementById(lands[0]).appendChild(ul)
-}
+	const hobbitUL = document.createElement("ul")
+	
 	// give each hobbit a class of `hobbit`
 
+	for (let i = 0; i < hobbits.length; i++) {
+		const hobbitLI = document.createElement("li")
+		
+		hobbitLI.classList.add("hobbit")
+		hobbitLI.setAttribute("id", hobbits[i])
+		
+		hobbitLI.innerText = hobbits[i]
+		hobbitUL.appendChild(hobbitLI)
+		
+		document.getElementById(lands[0]).appendChild(hobbitUL)
+	}
+}
 
 	// hint: create a 'ul' outside the loop into which to append the 'li's
 
@@ -87,10 +87,16 @@ function keepItSecretKeepItSafe() {
 	console.log('3: keepItSecretKeepItSafe')
 
 	// create a div with an id of `'the-ring'`
+	const ringDiv = document.createElement("div")
+	ringDiv.setAttribute("id", "the-ring")
 
 	// give the div a class of `'magic-imbued-jewelry'`
-
+	ringDiv.setAttribute("class", "magic-imbued-jewelry")
+	
 	// add the ring as a child of `Frodo`
+	const frodo = document.getElementById("Frodo Baggins")
+	frodo.appendChild(ringDiv)
+	
 }
 
 // COMMIT YOUR WORK
