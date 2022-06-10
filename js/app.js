@@ -23,24 +23,29 @@ function makeMiddleEarth() {
 
 	// 1. create a section tag with an id of middle-earth
 	let sectionTag = document.createElement('section')
-sectionTag.setAttribute('id', 'middle-earth');
+		sectionTag.setAttribute('id', 'middle-earth');
+
 	// 2. use a for loop to iterate over the lands array that does the following:
-for (let i=0; i < lands.length; i++){
-	console.log(lands[i])
-}
+		for (let i=0; i < lands.length; i++){
+			//console.log(lands[i])
+		
 	//   2a. creates an article tag (there should be one for each land when the loop is done)
-const articleTag = document.createElement('article')
+		const articleTag = document.createElement('article')
 
 	//   2b. gives each land article an `id` tag of the corresponding land name
-	articleTag.setAttribute('id', `${[i]}`)
-	//   2c. includes an h1 with the name of the land inside each land article
-const landHeader= document.createElement('h1')
-landHeader.innerHTML = `${[i]}`
-	//   2d. appends each land to the middle-earth section
-sectionTag.appendChild(articleTag)
-	// 3. append the section to the body of the DOM.
-} document.querySelector('body').appendChild(sectionTag)
+			articleTag.setAttribute('id', lands[i])
 
+	//   2c. includes an h1 with the name of the land inside each land article
+		const landHeader= document.createElement('h1')
+			landHeader.innerHTML = lands[i]
+		
+	//   2d. appends each land to the middle-earth section
+			articleTag.appendChild(landHeader)
+		sectionTag.appendChild(articleTag)
+		}
+	// 3. append the section to the body of the DOM.
+		document.querySelector('body').appendChild(sectionTag)
+	}
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 1 complete - Made Middle Earth".
 
@@ -52,7 +57,10 @@ function makeHobbits() {
 	console.log('2: makeHobbits')
 
 	// display an `unordered list` of hobbits in the shire
-
+hobbitList = "";
+for (let i=0; hobbit= hobbit[i]; i++){
+	hobbitList += "<li>"  + hobbit + "</li>"
+}
 	// give each hobbit a class of `hobbit`
 
 	// hint: create a 'ul' outside the loop into which to append the 'li's
