@@ -193,6 +193,16 @@ function forgeTheFellowShip() {
 	// after each character is added make an alert that they // have joined your party
 
 	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
+	const theFellowship = document.createElement("div");
+	for (hobbit of hobbits) {
+		theFellowship.appendChild(document.querySelector(`[id='${hobbit}']`));
+		console.log(`${hobbit} joined the Fellowship!`);
+	}
+	for (buddy of buddies) {
+		theFellowship.appendChild(document.querySelector(`[id='${buddy}']`));
+		console.log(`${buddy} joined the Fellowship!`);
+	}
+	document.querySelector("#Rivendell").appendChild(theFellowship);
 }
 
 // COMMIT YOUR WORK
