@@ -65,6 +65,7 @@ function makeHobbits() {
 		hobbitList.setAttribute("id", `Hobbit-${i}`);
 		unorderedList.appendChild(hobbitList);
 	}
+
 	document.querySelector("#The-Shire").appendChild(unorderedList);
 	// document.querySelector("body").appendChild(unorderedList);
 	// hint: create a 'ul' outside the loop into which to append the 'li's
@@ -129,9 +130,11 @@ function makeBuddies() {
 	const asideTag = document.createElement("aside");
 	// put an `unordered list` of the `'buddies'` in the aside
 	const unorderedList = document.createElement("ul");
+	unorderedList.setAttribute("id", "#buddies-ul");
 	for (i = 0; i < buddies.length; i++) {
 		const buddiesList = document.createElement("li");
 		buddiesList.setAttribute("id", `buddy-${i}`);
+		buddiesList.classList.add("buddies");
 		buddiesList.innerText = buddies[i];
 		unorderedList.appendChild(buddiesList);
 	}
@@ -151,9 +154,11 @@ function leaveTheShire() {
 
 	// assemble the `hobbits` and move them to `rivendell`
 	const hobbitMigration = document.createElement("ul")
+	hobbitMigration.setAttribute("id", "#hobbits-ul");
 	for (i = 0; i < hobbits.length; i++) {
 		const theHobbits = document.createElement("li");
 		theHobbits.innerText = hobbits[i];
+		theHobbits.classList.add("hobbits");
 		hobbitMigration.appendChild(theHobbits);
 		// let hobbitMigration = document.getElementsByClassName("hobbit");
 	}
@@ -187,7 +192,33 @@ function beautifulStranger() {
 function forgeTheFellowShip() {
 	console.log('8: forgeTheFellowShip')
 	// create a new div called `'the-fellowship'` within `rivendell`
-	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
+	const fellowDiv = document.createElement("div");
+	fellowDiv.setAttribute("id", "the-fellowship");
+	document.querySelector("#Rivendell").appendChild(fellowDiv);
+
+	const myHobbits = document.querySelectorAll("li.hobbits");
+	const myBuddies = document.querySelectorAll("li.buddies");
+
+	let fellowList = document.createElement("ul");
+	fellowList.setAttribute("id", "fellowshipGuys");
+	fellowDiv.appendChild(fellowList);
+
+	const theFellows = document.getElementById("fellowshipGuys");
+
+	for (let i = 0; i < myHobbits.length; i++) {
+		theFellows.appendChild(myHobbits[i]);
+		alert((myHobbits[i].textContent) + " has joined the party.")
+	}
+	for (let i = 0; i <myBuddies.length; i++) {
+		theFellows.appendChild(myBuddies[i]);
+		alert((myBuddies[i].textContent) + " has joined the party.")
+	};
+	
+	// // add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
+
+
+
+
 	// after each character is added make an alert that they // have joined your party
 
 	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
