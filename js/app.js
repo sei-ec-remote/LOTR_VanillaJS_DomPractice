@@ -63,10 +63,10 @@ function makeHobbits() {
 
 for (let i=0; i <hobbits.length; i++){
 	let li = document.createElement('li');
-	li.setAttribute('class', 'hobbit')
+	li.setAttribute('id', 'hobbit')
 	ul.appendChild(li)
 	li.innerText = hobbits[i]
-	console.log(li)
+	//console.log(li)
 
 
 	//hobbitList += "<li>"  + hobbit + "</li>"
@@ -88,9 +88,19 @@ document.getElementById(lands[0]).appendChild(ul)
 // Chapter 3
 // ============
 
+
+
 function keepItSecretKeepItSafe() {
 	console.log('3: keepItSecretKeepItSafe')
 
+	const theRing = document.createElement('div')
+	theRing.setAttribute('id', 'the-ring')
+	theRing.setAttribute('class', 'magic-imbued-jewelry')
+
+	const Frodo = document.getElementById('Frodo-Baggins')
+
+	document.getElementsByClassName('hobbits').querySelector([0]).setAttribute('id', 'Frodo')
+	div.getElementById('theRing').appendChild('Frodo')
 	// create a div with an id of `'the-ring'`
 
 	// give the div a class of `'magic-imbued-jewelry'`
@@ -109,7 +119,24 @@ function makeBaddies() {
 	console.log('4: makeBaddies')
 
 	// display an unordered list of baddies in Mordor
+	const ul = document.createElement('ul')
+ //landTag[0].setAttribute('id','The-Shire')
+	// display an `unordered list` of hobbits in the shire
+//hobbitList = "";
 
+for (let i=0; i <baddies.length; i++){
+	let li = document.createElement('li');
+	li.setAttribute('id', 'baddies')
+	li.setAttribute("class", "baddy")
+	ul.appendChild(li)
+	li.innerText = hobbits[i]
+	//console.log(li)
+
+
+	//hobbitList += "<li>"  + hobbit + "</li>"
+}
+document.getElementById(lands[0]).appendChild(ul)
+}
 	// give each of the baddies a class of "baddy"
 
 	// remember to append them to Mordor
