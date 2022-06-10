@@ -30,7 +30,7 @@ function makeMiddleEarth() {
 		//   2a. creates an article tag (there should be one for each land when the loop is done)
 		const article = document.createElement('article')
 		//   2b. gives each land article an `id` tag of the corresponding land name
-		article.setAttribute('id', 'lands[i]')
+		article.setAttribute('id', lands[i])
 		//   2c. includes an h1 with the name of the land inside each land article
 		article.innerHTML = '<h1>' + lands[i] + '</h1>'
 		//   2d. appends each land to the middle-earth section
@@ -52,9 +52,16 @@ function makeHobbits() {
 	console.log('2: makeHobbits')
 
 	// display an `unordered list` of hobbits in the shire
-
+	const unorderedHobbits = document.createElement('ul')
 	// give each hobbit a class of `hobbit`
-
+	for (i = 0; i < hobbits.length; i++) {
+		const hobbit = document.createElement('li')
+		hobbit.classList.add('hobbit')
+		hobbit.setAttribute('id', hobbits[i])
+		hobbit.innerText = hobbits[i]
+		unorderedHobbits.appendChild(hobbit)
+	}
+	document.querySelector('#The-Shire').appendChild(unorderedHobbits)
 	// hint: create a 'ul' outside the loop into which to append the 'li's
 
 	// hint: get 'The-Shire' by using its id
@@ -71,10 +78,12 @@ function keepItSecretKeepItSafe() {
 	console.log('3: keepItSecretKeepItSafe')
 
 	// create a div with an id of `'the-ring'`
-
+	const theRing = document.createElement('div')
+	theRing.setAttribute('id', 'the-ring')
 	// give the div a class of `'magic-imbued-jewelry'`
-
+	theRing.setAttribute('class', 'magic-imbued-jewelry')
 	// add the ring as a child of `Frodo`
+	document.getElementById('Frodo Baggins').appendChild(theRing)
 }
 
 // COMMIT YOUR WORK
