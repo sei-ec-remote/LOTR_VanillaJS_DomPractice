@@ -213,11 +213,11 @@ function forgeTheFellowShip() {
 	const theBuddies = document.querySelectorAll('.buddy')
 	for (let i = 0; i < theHobbits.length; i++) {
 		thefellowship.appendChild(theHobbits[i])
-		// alert(`${theHobbits[i]} has joined the Fellowship`)
+		alert(`${hobbits[i]} has joined the Fellowship`)
 	}
 	for (let i = 0; i < theBuddies.length; i++) {
 		thefellowship.appendChild(theBuddies[i])
-		// alert(`${theBuddies[i]} has joined the Fellowship`)
+		alert(`${buddies[i]} has joined the Fellowship`)
 	}
 	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
 }
