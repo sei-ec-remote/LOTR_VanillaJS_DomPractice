@@ -96,6 +96,7 @@ function makeBaddies() {
 
 	// display an unordered list of baddies in Mordor
 	const baddiesList = document.createElement('ul')
+	baddiesList.setAttribute('id', 'baddiesList')
 	// give each of the baddies a class of "baddy"
 	for (let i = 0; i < baddies.length; i++) {
 		const baddie = document.createElement('li')
@@ -241,7 +242,7 @@ function itsDangerousToGoAlone() {
 	// take `Frodo` and `Sam` out of the fellowship and move // them to `Mordor`
 	const frodo = document.getElementById('Frodo Baggins')
 	const sam = document.getElementById('Samwise "Sam" Gamgee')
-	const mordor = document.querySelector('#Mordor')
+	const mordor = document.querySelector('#baddiesList')
 	mordor.appendChild(frodo)
 	mordor.appendChild(sam)
 	// add a div with an id of `'mount-doom'` to `Mordor`
@@ -260,6 +261,16 @@ function itsDangerousToGoAlone() {
 function weWantsIt() {
 	console.log('12: weWantsIt')
 	// Create a div with an id of `'gollum'` and add it to Mordor
+	const gollum = document.createElement('div')
+	gollum.setAttribute('id', 'gollum')
+	document.querySelector('#Mordor').appendChild(gollum)
+	const frodo = document.getElementById('Frodo Baggins')
+	const theRing = document.querySelector('#the-ring')
+	theRing.remove()
+	gollum.appendChild(theRing)
+	document.querySelector('#mount-doom').appendChild(gollum)
+
+
 	// Remove `the ring` from `Frodo` and give it to `Gollum`
 	// Move Gollum into Mount Doom
 }
