@@ -56,6 +56,7 @@ function makeHobbits() {
 	for (let i = 0; i < hobbits.length; i++) {
 		const hobbit = document.createElement('li')
 		hobbit.classList.add('hobbit')
+		hobbit.setAttribute('id', hobbits[i])
 		hobbit.innerText = hobbits[i]
 		hobbitsList.appendChild(hobbit)
 	}
@@ -238,7 +239,15 @@ function hornOfGondor() {
 function itsDangerousToGoAlone() {
 	console.log('11: itsDangerousToGoAlone')
 	// take `Frodo` and `Sam` out of the fellowship and move // them to `Mordor`
+	const frodo = document.getElementById('Frodo Baggins')
+	const sam = document.getElementById('Samwise "Sam" Gamgee')
+	const mordor = document.querySelector('#Mordor')
+	mordor.appendChild(frodo)
+	mordor.appendChild(sam)
 	// add a div with an id of `'mount-doom'` to `Mordor`
+	const mountDoom = document.createElement('div')
+	mountDoom.setAttribute('id', 'mount-doom')
+	mordor.appendChild(mountDoom)
 }
 
 // COMMIT YOUR WORK
