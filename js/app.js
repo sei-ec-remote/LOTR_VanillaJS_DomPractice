@@ -62,8 +62,17 @@ function makeHobbits() {
 	console.log('2: makeHobbits')
 
 	// display an `unordered list` of hobbits in the shire
+	const hobbitUL =document.createElement('ul')
 
 	// give each hobbit a class of `hobbit`
+	for (let i = 0; i < hobbits.length; i++) { 
+		let shireLi = document.createElement('li')
+		shireLi.setAttribute('class', 'hobbit')
+		hobbitUL.appendChild(shireLi)
+		shireLi.innerText = hobbits[i]
+		console.log(shireLi)
+	}
+	document.getElementById(lands[0]).appendChild(hobbitUL)
 
 	// hint: create a 'ul' outside the loop into which to append the 'li's
 
