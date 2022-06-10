@@ -1,3 +1,4 @@
+
 console.log('Linked.')
 
 // Dramatis Personae
@@ -23,6 +24,9 @@ function makeMiddleEarth() {
 
 	// 1. create a section tag with an id of middle-earth
 
+	const sectionOne = document.createElement("section");
+	sectionOne.setAttribute("id","middle-earth");
+
 	// 2. use a for loop to iterate over the lands array that does the following:
 
 	//   2a. creates an article tag (there should be one for each land when the loop is done)
@@ -33,8 +37,22 @@ function makeMiddleEarth() {
 
 	//   2d. appends each land to the middle-earth section
 
+	for(let i=0;i<lands.length;i++) {
+		const createArticle = document.createElement("article");
+		createArticle.setAttribute("id",lands[i]);
+		const createHeaderInId = document.createElement("h1");
+		createHeaderInId.innerText = lands[i];
+		console.log(lands[i]);
+		document.getElementById(lands[i]).appendChild(createHeaderInId);
+		document.getElementById("middle-earth").appendChild(lands[i]);
+	}
+
 	// 3. append the section to the body of the DOM.
+
+	document.body.appendChild(sectionOne);
 }
+
+makeMiddleEarth();
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 1 complete - Made Middle Earth".
@@ -226,41 +244,41 @@ function thereAndBackAgain() {
 // This code is loading all of the event listeners for the buttons in your application.
 // =====================================
 
-document.getElementById('chapter-1').addEventListener('click', makeMiddleEarth)
-document.getElementById('chapter-2').addEventListener('click', makeHobbits)
-document
-	.getElementById('chapter-3')
-	.addEventListener('click', keepItSecretKeepItSafe)
-document.getElementById('chapter-4').addEventListener('click', makeBaddies)
-document.getElementById('chapter-5').addEventListener('click', makeBuddies)
-document.getElementById('chapter-6').addEventListener('click', leaveTheShire)
-document
-	.getElementById('chapter-7')
-	.addEventListener('click', beautifulStranger)
-document
-	.getElementById('chapter-8')
-	.addEventListener('click', forgeTheFellowShip)
-document.getElementById('chapter-9').addEventListener('click', theBalrog)
-document.getElementById('chapter-10').addEventListener('click', hornOfGondor)
-document
-	.getElementById('chapter-11')
-	.addEventListener('click', itsDangerousToGoAlone)
-document.getElementById('chapter-12').addEventListener('click', weWantsIt)
-document
-	.getElementById('chapter-13')
-	.addEventListener('click', thereAndBackAgain)
-document.getElementById('all-chapters').addEventListener('click', () => {
-	makeMiddleEarth()
-	makeHobbits()
-	keepItSecretKeepItSafe()
-	makeBaddies()
-	makeBuddies()
-	leaveTheShire()
-	beautifulStranger()
-	forgeTheFellowShip()
-	theBalrog()
-	hornOfGondor()
-	itsDangerousToGoAlone()
-	weWantsIt()
-	thereAndBackAgain()
-})
+// document.getElementById('chapter-1').addEventListener('click', makeMiddleEarth)
+// document.getElementById('chapter-2').addEventListener('click', makeHobbits)
+// document
+// 	.getElementById('chapter-3')
+// 	.addEventListener('click', keepItSecretKeepItSafe)
+// document.getElementById('chapter-4').addEventListener('click', makeBaddies)
+// document.getElementById('chapter-5').addEventListener('click', makeBuddies)
+// document.getElementById('chapter-6').addEventListener('click', leaveTheShire)
+// document
+// 	.getElementById('chapter-7')
+// 	.addEventListener('click', beautifulStranger)
+// document
+// 	.getElementById('chapter-8')
+// 	.addEventListener('click', forgeTheFellowShip)
+// document.getElementById('chapter-9').addEventListener('click', theBalrog)
+// document.getElementById('chapter-10').addEventListener('click', hornOfGondor)
+// document
+// 	.getElementById('chapter-11')
+// 	.addEventListener('click', itsDangerousToGoAlone)
+// document.getElementById('chapter-12').addEventListener('click', weWantsIt)
+// document
+// 	.getElementById('chapter-13')
+// 	.addEventListener('click', thereAndBackAgain)
+// document.getElementById('all-chapters').addEventListener('click', () => {
+// 	makeMiddleEarth()
+// 	makeHobbits()
+// 	keepItSecretKeepItSafe()
+// 	makeBaddies()
+// 	makeBuddies()
+// 	leaveTheShire()
+// 	beautifulStranger()
+// 	forgeTheFellowShip()
+// 	theBalrog()
+// 	hornOfGondor()
+// 	itsDangerousToGoAlone()
+// 	weWantsIt()
+// 	thereAndBackAgain()
+// })
