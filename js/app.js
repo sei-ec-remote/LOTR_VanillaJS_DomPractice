@@ -68,7 +68,7 @@ function makeHobbits() {
 
 	for (let i = 0; i < hobbits.length; i++){
 		let li = document.createElement('li')
-		li.setAttribute('class', 'hobbit')
+		li.setAttribute('id', hobbits[i])
 		ul.appendChild(li)
 		li.innerText = hobbits[i]
 		console.log(li)
@@ -96,10 +96,21 @@ function keepItSecretKeepItSafe() {
 
 	// create a div with an id of `'the-ring'`
 
+	const theRing = document.createElement('div')
+	theRing.setAttribute('id','the-ring')
+
 	// give the div a class of `'magic-imbued-jewelry'`
 
+	theRing.setAttribute('class', 'magic-imbued-jewelry')
+
+	// console.log(theRing)
 	// add the ring as a child of `Frodo`
+
+	const frodo = document.getElementById('Frodo Baggins')
+	
+	frodo.appendChild(theRing)
 }
+
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 3 complete - Made the ring and gave it to Frodo".
