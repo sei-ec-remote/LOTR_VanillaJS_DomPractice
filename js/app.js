@@ -132,6 +132,9 @@ function makeBuddies() {
 		buddy.classList.add('buddy')
 		buddiesList.appendChild(buddy)
 		console.log(`${buddies[i]} added to the list`)
+		if (buddy.innerText === 'Strider') {
+			buddy.id = 'heirOfGondor'
+		}
 	}
 	buddiesAside.appendChild(buddiesList)
 	// insert your aside as a child element of `rivendell`
@@ -164,6 +167,7 @@ function beautifulStranger() {
 	console.log('7: beautifulStranger')
 
 	// change the `'Strider'` text to `'Aragorn'`
+	document.getElementById('heirOfGondor').innerText = 'Aragorn'
 }
 
 // COMMIT YOUR WORK
