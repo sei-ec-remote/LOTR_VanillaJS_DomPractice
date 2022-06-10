@@ -57,7 +57,7 @@ function makeHobbits() {
 	for (let i = 0; i < hobbits.length; i++){
 		console.log(hobbits[i])
 		let thisHobbit = document.createElement('li')
-		thisHobbit.setAttribute('class', hobbits[i])
+		thisHobbit.setAttribute('id', hobbits[i])
 		thisHobbit.setAttribute('class', 'hobbit')
 		thisHobbit.innerText = (hobbits[i])
 		hobbitsTag.appendChild(thisHobbit)
@@ -80,6 +80,10 @@ function makeHobbits() {
 function keepItSecretKeepItSafe() {
 	console.log('3: keepItSecretKeepItSafe')
 
+	let keepItSecretKeepItSafe = document.createElement('div')
+	keepItSecretKeepItSafe.setAttribute('id', 'the-ring')
+	keepItSecretKeepItSafe.setAttribute('class', 'magic-imbued-jewelry')
+	document.getElementById('Frodo Baggins').appendChild(keepItSecretKeepItSafe)
 	// create a div with an id of `'the-ring'`
 
 	// give the div a class of `'magic-imbued-jewelry'`
