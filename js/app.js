@@ -59,7 +59,10 @@ function makeHobbits() {
 		let thisHobbit = document.createElement('li')
 		thisHobbit.setAttribute('class', hobbits[i])
 		thisHobbit.setAttribute('class', 'hobbit')
+		thisHobbit.innerText = (hobbits[i])
+		hobbitsTag.appendChild(thisHobbit)
 	}
+	document.querySelector('#The-Shire').appendChild(hobbitsTag)
 	// give each hobbit a class of `hobbit`
 
 	// hint: create a 'ul' outside the loop into which to append the 'li's
