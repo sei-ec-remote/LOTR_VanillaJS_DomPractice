@@ -122,17 +122,16 @@ function keepItSecretKeepItSafe() {
 function makeBaddies() {
 	console.log('4: makeBaddies')
 
-	const ul2 = document.createElement('ul')
-
-	for (let i = 0; i < baddies.length; i++){
-		let li2 = document.createElement('li')
-		li2.setAttribute('id', 'baddies[i]')
-		ul2.appendChild(li2)
-		li2.innerText = hobbits[i]
-		console.log(li2)
+	const ul = document.createElement("ul")
+	for (let i = 0; i < baddies.length; i++) {
+		let li = document.createElement("li")
+		li.setAttribute("id", baddies[i])
+		li.setAttribute("class", "baddy")
+		ul.appendChild(li)
+		li.innerText = baddies[i]
+		console.log(li)
 	}
-
-	document.getElementByClass(baddies[i]).appendChild(ul2)
+	document.getElementById(lands[2]).appendChild(ul)
 
 	// display an unordered list of baddies in Mordor
 
@@ -150,6 +149,19 @@ function makeBaddies() {
 
 function makeBuddies() {
 	console.log('5: makeBuddies')
+
+	let aside = document.createElement("aside")
+	aside.setAttribute("class", "buddies")
+	const ul = document.createElement("ul")
+	for (let i = 0; i < buddies.length; i++) {
+		let li = document.createElement("li")
+		li.setAttribute("id", buddies[i])
+		li.setAttribute("class", "buddy")
+		ul.appendChild(li)
+		li.innerText = buddies[i]
+		console.log(li)
+	}
+	document.getElementById(lands[1]).appendChild(ul)
 
 	// create an `aside` tag
 
