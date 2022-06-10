@@ -204,15 +204,15 @@ function forgeTheFellowShip() {
 	fellowDiv.appendChild(fellowList);
 
 	const theFellows = document.getElementById("fellowshipGuys");
-
+	for (let i = 0; i <myBuddies.length; i++) {
+			theFellows.appendChild(myBuddies[i]);
+			alert((myBuddies[i].textContent) + " has joined the party.")
+		}
 	for (let i = 0; i < myHobbits.length; i++) {
 		theFellows.appendChild(myHobbits[i]);
 		alert((myHobbits[i].textContent) + " has joined the party.")
 	}
-	for (let i = 0; i <myBuddies.length; i++) {
-		theFellows.appendChild(myBuddies[i]);
-		alert((myBuddies[i].textContent) + " has joined the party.")
-	};
+	
 	
 	// // add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
 
@@ -234,8 +234,14 @@ function forgeTheFellowShip() {
 function theBalrog() {
 	console.log('9: theBalrog')
 	// change the `'Gandalf'` text to `'Gandalf the White'`
-	// apply the following style to the element, make the // background 'white', add a grey border
+	document.getElementById("buddy-0").innerHTML = "Gandalf the White";
+	document.getElementById("buddy-0").style.backgroundColor = "white";
+	document.getElementById("buddy-0").style.border = "solid grey";
+	document.getElementById("buddy-0").style.width = "140px";
+
 }
+	// apply the following style to the element, make the // background 'white', add a grey border
+
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 9 complete - Updated Gandalf"
@@ -249,6 +255,10 @@ function hornOfGondor() {
 	// pop up an alert that the horn of gondor has been blown
 	// Boromir's been killed by the Uruk-hai!
 	// Remove `Boromir` from the Fellowship
+	alert("The Horn of Gondor has been blown! Boromir died! :(")
+	document.getElementById("buddy-4").remove();
+
+
 }
 
 // COMMIT YOUR WORK
