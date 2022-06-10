@@ -160,6 +160,7 @@ function beautifulStranger() {
 	console.log('7: beautifulStranger')
 
 	// change the `'Strider'` text to `'Aragorn'`
+	document.body.innerHTML = document.body.innerHTML.replace('Strider', 'Aragorn');
 }
 
 // COMMIT YOUR WORK
