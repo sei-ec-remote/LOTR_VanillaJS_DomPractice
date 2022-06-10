@@ -55,7 +55,6 @@ function makeMiddleEarth() {
 function makeHobbits() {
 	console.log('2: makeHobbits')
 	const hobbitList = document.createElement("ul")
-	hobbitList.setAttribute("class", "The-Shire")
 	for (let i = 0; i < hobbits.length; i++) {
 		const hobbit = document.createElement('li')
 		hobbit.setAttribute("class", "hobbit")
@@ -106,6 +105,15 @@ function keepItSecretKeepItSafe() {
 
 function makeBaddies() {
 	console.log('4: makeBaddies')
+
+	let enemies = document.createElement("ul")
+	for (let i = 0; i < baddies.length; i++) {
+		const badguys = document.createElement('li')
+		badguys.setAttribute("class", "baddy")
+		badguys.innerText = baddies[i]
+		enemies.appendChild(badguys)
+	}
+	document.getElementById("Mordor").appendChild(enemies)
 
 	// display an unordered list of baddies in Mordor
 
