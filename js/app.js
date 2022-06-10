@@ -78,7 +78,7 @@ function makeHobbits() {
 
 	// hint: get 'The-Shire' by using its id
 }
-makeHobbits()	
+
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 2 complete - Made the Hobbits".
@@ -100,7 +100,7 @@ function keepItSecretKeepItSafe() {
 
 	// add the ring as a child of `Frodo`
 }
-keepItSecretKeepItSafe()
+
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 3 complete - Made the ring and gave it to Frodo".
 
@@ -110,9 +110,18 @@ keepItSecretKeepItSafe()
 
 function makeBaddies() {
 	console.log('4: makeBaddies')
+	const theBaddies = document.createElement('ul')
+	theBaddies.setAttribute('id', 'The-Baddies')
 
 	// display an unordered list of baddies in Mordor
-
+	for (let i = 0; i < baddies.length; i++) {
+		const liTag = document.createElement('li')
+		liTag.setAttribute('class', 'baddy')
+		liTag.innerHTML = `<p>${baddies[i]}</p>`
+		theBaddies.appendChild(liTag)
+	}
+	document.getElementById('Mordor').appendChild(theBaddies)
+	console.log(theBaddies)
 	// give each of the baddies a class of "baddy"
 
 	// remember to append them to Mordor
