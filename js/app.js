@@ -198,26 +198,30 @@ function forgeTheFellowShip() {
 	theFellow.setAttribute('id', 'the-fellowship')
 
 	myRivendell.appendChild(theFellow)
-	myUl = document.createElement('ul')
-	theFellow.appendChild(myUl)
 
-	for(let i = 0;i < hobbits.length;i++){
-		let myHobbit = document.getElementById(hobbits[i].split(" ")[0])
-		alert(myHobbit.innerText + " has joined your party")
-		myUl.appendChild(myHobbit)
-		
-	}
-	let hobbitList = document.getElementById('hobbits')
-	hobbitList.remove()
+
 	
+	let myBuddList = document.createElement('ul')
+	theFellow.appendChild(myBuddList)
 	for(let i = 0;i < buddies.length;i++){
 		let myBud = document.getElementById(buddies[i])
 		alert(myBud.innerText + " has joined your party")
-		myUl.appendChild(myBud)
+		myBuddList.appendChild(myBud)
 		
 	}
 	let budList = document.getElementById('buddies')
 	budList.remove()
+
+	let myHoboList = document.createElement('ul')
+	theFellow.appendChild(myHoboList)
+	for(let i = 0;i < hobbits.length;i++){
+		let myHobbit = document.getElementById(hobbits[i].split(" ")[0])
+		alert(myHobbit.innerText + " has joined your party")
+		myHoboList.appendChild(myHobbit)
+		
+	}
+	let hobbitList = document.getElementById('hobbits')
+	hobbitList.remove()
 
 	// create a new div called `'the-fellowship'` within `rivendell`
 	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
@@ -319,6 +323,17 @@ function thereAndBackAgain() {
 	let Gollum = document.getElementById("gollum")
 	Gollum.remove()
 	// Move all the `hobbits` back to `the shire`
+	let theShy = document.getElementById('The-Shire')
+
+	let shyList = document.createElement('ul')
+
+	theShy.appendChild(shyList)
+
+	for(let i = 0;i < hobbits.length;i++){
+		let myHobbit = document.getElementById(hobbits[i].split(" ")[0])
+		shyList.appendChild(myHobbit)
+		
+	}
 
 }
 
