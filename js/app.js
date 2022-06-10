@@ -32,7 +32,7 @@ function makeMiddleEarth() {
 		//   2a. creates an article tag (there should be one for each land when the loop is done)
 		const articleTag = document.createElement('article')
 		//   2b. gives each land article an `id` tag of the corresponding land name
-		articleTag.setAttribute('id', 'lands[i]')
+		articleTag.setAttribute('id', lands[i])
 		//   2c. includes an h1 with the name of the land inside each land article	
 		const h1Tag = document.createElement('h1')
 		h1Tag.innerText = lands[i]
@@ -51,14 +51,28 @@ function makeMiddleEarth() {
 // ============
 // Chapter 2
 // ============
-
+makeHobbits()
 function makeHobbits() {
 	console.log('2: makeHobbits')
 
 	// display an `unordered list` of hobbits in the shire
+	const hobbitsUlTag = document.createElement('ul')
+	for (let i = 0; i < hobbits.length; i++) {
+		const hobbitsLiTag = document.createElement('li')
+		hobbitsLiTag.innerText = hobbits[i]
+		hobbitsLiTag.classList.add('hobbit') 
+		hobbitsUlTag.appendChild(hobbitsLiTag)
+	}
+	document.getElementById('The-Shire').appendChild(hobbitsUlTag)
+	//??? When they say add class to hobbit they mena the list or the ul?
+	//??? What this talking about id 'The-Shire' I dont' see that on the
+	///// html.
+	
+	// hobbitsUlTag.classList = 'hobbit'
+	//	document.getElementById('The-Shire').appendChild(hobbitsUlTag)
+	// or this document.body.appendChild(hobbitsUlTag)
 
 	// give each hobbit a class of `hobbit`
-
 	// hint: create a 'ul' outside the loop into which to append the 'li's
 
 	// hint: get 'The-Shire' by using its id
@@ -75,7 +89,8 @@ function keepItSecretKeepItSafe() {
 	console.log('3: keepItSecretKeepItSafe')
 
 	// create a div with an id of `'the-ring'`
-
+	const divRing = document.createElement('div')
+	divRing.setAttribute('id', 'the-ring')
 	// give the div a class of `'magic-imbued-jewelry'`
 
 	// add the ring as a child of `Frodo`
