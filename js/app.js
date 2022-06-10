@@ -289,6 +289,7 @@ function itsDangerousToGoAlone() {
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 11 complete - Sam and Frodo are in Mordor and Mount Doom has been created"
 
+
 // ============
 // Chapter 12
 // ============
@@ -319,6 +320,18 @@ function thereAndBackAgain() {
 	console.log('13: thereAndBackAgain')
 	// remove `Gollum` and `the Ring` from the document
 	// Move all the `hobbits` back to `the shire`
+	document.getElementById("gollum").remove();
+
+	let theShire = document.querySelector("#The-Shire");
+	const hobbitsHome = document.querySelectorAll("li.hobbits");
+	const newHobbitList = document.createElement("ul");
+	newHobbitList.setAttribute("id", "hobbitlist");
+	theShire.appendChild(newHobbitList);
+	const destination = document.getElementById("hobbitlist");
+	for (let i = 0; i < hobbitsHome.length; i++) {
+		destination.appendChild(hobbitsHome[i]);
+	}
+	theShire.appendChild(destination);
 }
 
 // COMMIT YOUR WORK
