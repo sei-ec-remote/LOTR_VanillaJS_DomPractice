@@ -106,6 +106,7 @@ function keepItSecretKeepItSafe() {
 function makeBaddies() {
 	console.log('4: makeBaddies')
 	let myList = document.createElement('ul')
+	myList.setAttribute('id', 'baddies')
 	for (let i = 0;i < baddies.length;i++){
 		let item = document.createElement('li')
 		item.setAttribute('class', 'baddy')
@@ -203,12 +204,12 @@ function forgeTheFellowShip() {
 	
 	for(let i = 0; i < theBuddies.length;i++){
 		theFellow.appendChild(theBuddies[i])
-		window.alert(theBuddies[i].innerText + " has joined your party")
+		//window.alert(theBuddies[i].innerText + " has joined your party")
 	}
 
 	for(let i = 0; i < theHobbits.length;i++){
 		theFellow.appendChild(theHobbits[i])
-		window.alert(theHobbiys[i] + " Has joined your party")
+		//window.alert(theHobbiys[i] + " Has joined your party")
 
 	}
 
@@ -263,6 +264,16 @@ function hornOfGondor() {
 function itsDangerousToGoAlone() {
 	console.log('11: itsDangerousToGoAlone')
 	// take `Frodo` and `Sam` out of the fellowship and move // them to `Mordor`
+	let Frodo = document.getElementById('Frodo')
+	let Sam = document.getElementById('Samwise')
+	let myBaddies = document.getElementById('baddies')
+	myBaddies.appendChild(Frodo)
+	myBaddies.appendChild(Sam)
+	let Mordor = document.getElementById('Mordor')
+	let myDiv = document.createElement('div')
+	myDiv.setAttribute('id','mount-doom')
+	Mordor.appendChild(myDiv)
+
 	// add a div with an id of `'mount-doom'` to `Mordor`
 }
 
