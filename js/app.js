@@ -96,12 +96,20 @@ function keepItSecretKeepItSafe() {
 function makeBaddies() {
 	console.log('4: makeBaddies')
 
-	// display an unordered list of baddies in Mordor
-
-	// give each of the baddies a class of "baddy"
-
-	// remember to append them to Mordor
+	// 	// display an unordered list of baddies in Mordor
+	const unorderedBaddies = document.createElement('ul')
+	// 	// give each of the baddies a class of "baddy"
+	for (i = 0; i < baddies.length; i++) {
+		const baddy = document.createElement('li')
+		baddy.classList.add('baddy')
+		baddy.setAttribute('id', baddies[i])
+		baddy.innerText = baddies[i]
+		unorderedBaddies.appendChild(baddy)
+	}
+	document.querySelector('#Mordor').appendChild(unorderedBaddies)
+	// 	// remember to append them to Mordor
 }
+
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 4 complete - Made the Baddies"..
@@ -114,10 +122,20 @@ function makeBuddies() {
 	console.log('5: makeBuddies')
 
 	// create an `aside` tag
-
+	const aside = document.createElement('aside')
+	aside.setAttribute('id', 'buddyAside')
 	// put an `unordered list` of the `'buddies'` in the aside
-
+	const unorderedBuddies = document.createElement('ul')
+	for (i = 0; i < buddies.length; i++) {
+		const buddy = document.createElement('li')
+		buddy.classList.add('buddy')
+		buddy.setAttribute('id', buddies[i])
+		buddy.innerText = buddies[i]
+		unorderedBuddies.appendChild(buddy)
+	} console.log(unorderedBuddies)
+	aside.appendChild(unorderedBuddies)
 	// insert your aside as a child element of `rivendell`
+	document.querySelector('#Rivendell').appendChild(aside)
 }
 
 // COMMIT YOUR WORK
