@@ -55,13 +55,13 @@ function makeHobbits() {
 
 	// display an `unordered list` of hobbits in the shire
 	const hobbitList = document.createElement('ul')
-	hobbitList.id = 'hobbitList'
+	hobbitList.id = 'hobbitsUl'
 	for (i = 0; i < hobbits.length; i ++) {
 		const hobbit = document.createElement('li')
 		hobbit.innerText = hobbits[i]
 		hobbit.id = `hobbit-${i}`
 	// give each hobbit a class of `hobbit`
-		hobbit.classList.add('hobbit')
+		hobbit.classList.add('hobbitClass')
 	// hint: create a 'ul' outside the loop into which to append the 'li's
 		hobbitList.appendChild(hobbit)
 	// hint: get 'The-Shire' by using its id
@@ -157,7 +157,7 @@ function leaveTheShire() {
 	console.log('6: leaveTheShire')
 
 	// assemble the `hobbits` and move them to `rivendell`
-	const hobbitGroup = document.querySelector('ul')
+	const hobbitGroup = document.getElementById('hobbitsUl')
 	document.getElementById('Rivendell').appendChild(hobbitGroup)
 }
 
@@ -272,6 +272,7 @@ function weWantsIt() {
 	// Remove `the ring` from `Frodo` and give it to `Gollum`
 	document.getElementById('gollum').appendChild(document.getElementById('magic-imbued-jewelry'))
 	// Move Gollum into Mount Doom
+	document.getElementById('mount-doom').appendChild(document.getElementById('gollum'))
 }
 
 // COMMIT YOUR WORK
@@ -284,7 +285,11 @@ function weWantsIt() {
 function thereAndBackAgain() {
 	console.log('13: thereAndBackAgain')
 	// remove `Gollum` and `the Ring` from the document
+	document.getElementById('mount-doom').removeChild(document.getElementById('gollum'))
 	// Move all the `hobbits` back to `the shire`
+	for (let i = 0; i < document.getElementsByClassName('hobbitClass').length; i++) {
+		document.getElementById('The-Shire').appendChild(document.getElementById(`hobbit-${i}`))
+	}
 }
 
 // COMMIT YOUR WORK
