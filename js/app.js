@@ -80,7 +80,13 @@ function keepItSecretKeepItSafe() {
 	console.log('3: keepItSecretKeepItSafe')
 
 	// create a div with an id of `'the-ring'`
-	
+	const theRing = document.createElement('div')
+	theRing.setAttribute('id','the-ring')
+	// give the div a class of `'magic-imbued-jewelry'`
+	theRing.setAttribute('class','magic-imbued-jewelry')
+	// add the ring as a child of `Frodo`
+	document.getElementById('Frodo Baggins').appendChild(theRing)
+}
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 3 complete - Made the ring and gave it to Frodo".
@@ -93,7 +99,7 @@ function makeBaddies() {
 	console.log('4: makeBaddies')
 
 	// display an unordered list of baddies in Mordor
-	
+}
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 4 complete - Made the Baddies"..
 
