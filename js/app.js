@@ -53,6 +53,7 @@ function makeHobbits() {
 
 	// display an `unordered list` of hobbits in the shire
 	const unorderedHobbits = document.createElement('ul')
+	unorderedHobbits.setAttribute('id', 'listOfHobbits')
 	// give each hobbit a class of `hobbit`
 	for (i = 0; i < hobbits.length; i++) {
 		const hobbit = document.createElement('li')
@@ -149,6 +150,11 @@ function leaveTheShire() {
 	console.log('6: leaveTheShire')
 
 	// assemble the `hobbits` and move them to `rivendell`
+	document.querySelector('#Rivendell').appendChild(document.getElementById('listOfHobbits'))
+
+
+
+
 }
 
 // COMMIT YOUR WORK
