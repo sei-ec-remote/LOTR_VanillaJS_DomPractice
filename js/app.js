@@ -216,6 +216,11 @@ function theBalrog() {
 	console.log('9: theBalrog')
 	// change the `'Gandalf'` text to `'Gandalf the White'`
 	// apply the following style to the element, make the // background 'white', add a grey border
+
+	const gandalf = document.querySelector(`[id='Gandalf the Grey']`);
+	gandalf.innerHTML = "Gandalf the White";
+	gandalf.style.backgroundColor = "white";
+	gandalf.style.border = "3px solid grey";
 }
 
 // COMMIT YOUR WORK
