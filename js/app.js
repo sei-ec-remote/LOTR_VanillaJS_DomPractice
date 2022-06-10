@@ -251,6 +251,13 @@ function itsDangerousToGoAlone() {
 	console.log('11: itsDangerousToGoAlone')
 	// take `Frodo` and `Sam` out of the fellowship and move // them to `Mordor`
 	// add a div with an id of `'mount-doom'` to `Mordor`
+	const mordor = document.querySelector("#Mordor");
+	mordor.appendChild(document.querySelector(`[id='Frodo Baggins']`));
+	mordor.appendChild(document.querySelector(`[id='Samwise "Sam" Gamgee']`));
+	
+	const mountDoom = document.createElement("div");
+	mountDoom.setAttribute("id", "mount-doom");
+	mordor.appendChild(mountDoom);
 }
 
 // COMMIT YOUR WORK
