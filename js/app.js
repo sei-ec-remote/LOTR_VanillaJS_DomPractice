@@ -23,28 +23,45 @@ function makeMiddleEarth() {
 
     // 1. create a section tag with an id of middle-earth
     const nameSec = document.createElement('section')
-    nameSec.setAttribute('id', "Middle Earth")
+    nameSec.setAttribute('id', 'middle-earth')
     console.log(nameSec)
+    for (i = 0; i < lands.length; i++) {
+
+        //   2a. creates an article tag (there should be one for each land when the loop is done)
+        const article = document.createElement('article')
+            //   2b. gives each land article an `id` tag of the corresponding land name
+        article.id = lands[i]
+            //   2c. includes an h1 with the name of the land inside each land article
+        let h1 = document.createElement('h1')
+        h1.innerText = lands[i]
+        article.appendChild(h1)
+
+        //   2d. appends each land to the middle-earth section
+        nameSec.appendChild(article)
+
+        // 3. append the section to the body of the DOM.
+        document.querySelector('body ').appendChild(nameSec)
+    }
 }
 makeMiddleEarth()
     // 2. use a for loop to iterate over the lands array that does the following:
-for (i = 0; i < lands.length; i++) {
+    // for (i = 0; i < lands.length; i++) {
 
-    //   2a. creates an article tag (there should be one for each land when the loop is done)
-    const article = document.createElement('article')
-        //   2b. gives each land article an `id` tag of the corresponding land name
-    article.id = lands[i]
-        //   2c. includes an h1 with the name of the land inside each land article
-    let h1 = document.createElement('h1')
-    h1 = lands[i]
-    article.appendChild(h1)
+//     //   2a. creates an article tag (there should be one for each land when the loop is done)
+//     const article = document.createElement('article')
+//         //   2b. gives each land article an `id` tag of the corresponding land name
+//     article.id = lands[i]
+//         //   2c. includes an h1 with the name of the land inside each land article
+//     let h1 = document.createElement('h1')
+//     h1.innerText = lands[i]
+//     article.appendChild(h1)
 
-    //   2d. appends each land to the middle-earth section
-    section.appendChild(article)
+//     //   2d. appends each land to the middle-earth section
+//     nameSec.appendChild(article)
 
-    // 3. append the section to the body of the DOM.
-    document.body.appendChild(section)
-}
+//     // 3. append the section to the body of the DOM.
+//     document.body.appendChild(section)
+//}
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 1 complete - Made Middle Earth".
 
@@ -56,7 +73,7 @@ function makeHobbits() {
     console.log('2: makeHobbits')
 
     // display an `unordered list` of hobbits in the shire
-    let Shire = ocument.getElementById('Shire')
+    let Shire = document.getElementById('Shire')
     let ulHobbit = document.createElement('ul')
     ulHobbit.className = 'Hobbits'
 
@@ -168,6 +185,9 @@ function leaveTheShire() {
     console.log('6: leaveTheShire')
 
     // assemble the `hobbits` and move them to `rivendell`
+    let ulHobbit = document.getElementsByClassName('Hobbits')
+    let rivendell = document.getElementById('Rivendell')
+    rivendell.appendChild(ulHobbit[1])
 }
 
 // COMMIT YOUR WORK
