@@ -39,7 +39,7 @@ function makeMiddleEarth() {
 	section.appendChild(landTag)
 	}
 	// 3. append the section to the body of the DOM.
-	document.querySelector('body').appendChild(section)
+	document.querySelector('body').appendChild(hobbits[0])
 }
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 1 complete - Made Middle Earth".
@@ -55,7 +55,7 @@ function makeHobbits() {
 
 		for (let i =0; i < hobbits.length; i++) {
 			let li = document.createElement('li');
-			li.setAttribute('class', 'hobbit')
+			li.setAttribute('id', 'hobbit')
 			ul.appendChild(li)
 			li.innerText = hobbits[i]
 			//console.log(li)
@@ -77,14 +77,18 @@ function makeHobbits() {
 // ============
 
 function keepItSecretKeepItSafe() {
-	console.log('3: keepItSecretKeepItSafe')
-
+console.log('3: keepItSecretKeepItSafe')	
+	
+	const theRing = document.createElement('div')
+	dispatchEvent.setAttribute(`id`, `the-ring`)
 	// create a div with an id of `'the-ring'`
-
+	theRing.setAttribute(`class`, `magic-imbued-jewelry`)
 	// give the div a class of `'magic-imbued-jewelry'`
 
 	// add the ring as a child of `Frodo`
+	const frodo =document.getElementById(`Frodo Baggins`)
 }
+
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 3 complete - Made the ring and gave it to Frodo".
