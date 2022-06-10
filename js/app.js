@@ -159,11 +159,13 @@ function leaveTheShire() {
 		const theHobbits = document.createElement("li");
 		theHobbits.innerText = hobbits[i];
 		theHobbits.classList.add("hobbits");
+		theHobbits.setAttribute("id", `Hobbit-${i}`)
 		hobbitMigration.appendChild(theHobbits);
 		// let hobbitMigration = document.getElementsByClassName("hobbit");
 	}
 	document.getElementById("shire-hobbits").remove();
 	document.querySelector("#Rivendell").appendChild(hobbitMigration);
+	keepItSecretKeepItSafe()
 	
 }
 
@@ -206,11 +208,11 @@ function forgeTheFellowShip() {
 	const theFellows = document.getElementById("fellowshipGuys");
 	for (let i = 0; i <myBuddies.length; i++) {
 			theFellows.appendChild(myBuddies[i]);
-			alert((myBuddies[i].textContent) + " has joined the party.")
+			// alert((myBuddies[i].textContent) + " has joined the party.")
 		}
 	for (let i = 0; i < myHobbits.length; i++) {
 		theFellows.appendChild(myHobbits[i]);
-		alert((myHobbits[i].textContent) + " has joined the party.")
+		// alert((myHobbits[i].textContent) + " has joined the party.")
 	}
 	
 	
@@ -255,6 +257,7 @@ function hornOfGondor() {
 	// pop up an alert that the horn of gondor has been blown
 	// Boromir's been killed by the Uruk-hai!
 	// Remove `Boromir` from the Fellowship
+
 	alert("The Horn of Gondor has been blown! Boromir died! :(")
 	document.getElementById("buddy-4").remove();
 
@@ -272,8 +275,17 @@ function itsDangerousToGoAlone() {
 	console.log('11: itsDangerousToGoAlone')
 	// take `Frodo` and `Sam` out of the fellowship and move // them to `Mordor`
 	// add a div with an id of `'mount-doom'` to `Mordor`
-}
+	let frodobaggins = document.querySelectorAll("li.hobbits")[0];
+	let samwisegamgee = document.querySelectorAll("li.hobbits")[1];
 
+	const Mordor = document.querySelector("#Mordor");
+	Mordor.appendChild(frodobaggins);
+	Mordor.appendChild(samwisegamgee);
+
+	const doomDiv = document.createElement("div");
+	doomDiv.setAttribute("id", "mount-doom");
+	Mordor.appendChild(doomDiv);
+}
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 11 complete - Sam and Frodo are in Mordor and Mount Doom has been created"
 
@@ -286,6 +298,14 @@ function weWantsIt() {
 	// Create a div with an id of `'gollum'` and add it to Mordor
 	// Remove `the ring` from `Frodo` and give it to `Gollum`
 	// Move Gollum into Mount Doom
+	const gollumDiv = document.createElement("div");
+	gollumDiv.setAttribute("id", "gollum");
+	const Mordor = document.querySelector("#Mordor");
+	Mordor.appendChild(gollumDiv);
+	
+	const ring = document.querySelector("#the-ring");
+	gollumDiv.appendChild(ring);
+
 }
 
 // COMMIT YOUR WORK
