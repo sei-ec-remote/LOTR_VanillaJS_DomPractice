@@ -26,22 +26,20 @@ function makeMiddleEarth() {
 	sectionTag.setAttribute('id', 'middle-eart')
 	// 2. use a for loop to iterate over the lands array that does the following:
 for ( let i = 0; i < lands.length; i++) {
+	
+	//   2a. creates an article tag (there should be one for each land when the loop is done)
 	const articleTag = document.createElement('article')
+	//   2b. gives each land article an `id` tag of the corresponding land name
 	articleTag.setAttribute('id', `${lands[i]}`)
-	articleTag.innerHTML = `<h1>, ${land[i]} </h1>`
+	//   2c. includes an h1 with the name of the land inside each land article
+	articleTag.innerHTML = `<h1>, ${lands[i]} </h1>`
+	//   2d. appends each land to the middle-earth section
 	sectionTag.appendChild(articleTag)
 }
-	//   2a. creates an article tag (there should be one for each land when the loop is done)
-
-	//   2b. gives each land article an `id` tag of the corresponding land name
-
-	//   2c. includes an h1 with the name of the land inside each land article
-
-	//   2d. appends each land to the middle-earth section
-
 	// 3. append the section to the body of the DOM.
 	document.querySelector('body').appendChild(sectionTag)
 }
+
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 1 complete - Made Middle Earth".
@@ -53,13 +51,24 @@ for ( let i = 0; i < lands.length; i++) {
 function makeHobbits() {
 	console.log('2: makeHobbits')
 
+
 	// display an `unordered list` of hobbits in the shire
-
+	const hobbitUL = document.createElement('ul')
+	// const shire = document.setAttribute('id', lands[0])
+	for (let i = 0; i < hobbits.length; i++) {
+		const hobbitLI = document.createElement('li')
 	// give each hobbit a class of `hobbit`
-
+	hobbitLI.classList.add('hobbit')
+	hobbitLI.setAttribute('id', hobbits[i])
+	// hobbitLI.setAttribute('class', 'hobbit')
+	hobbitLI.innerText = hobbits[i]
+	hobbitUL.appendChild(hobbitLI)
 	// hint: create a 'ul' outside the loop into which to append the 'li's
 
 	// hint: get 'The-Shire' by using its id
+	
+	}
+	document.getElementById(lands[0]).appendChild(hobbitUL)
 }
 
 // COMMIT YOUR WORK
@@ -73,10 +82,13 @@ function keepItSecretKeepItSafe() {
 	console.log('3: keepItSecretKeepItSafe')
 
 	// create a div with an id of `'the-ring'`
-
+	const ringDiv = document.createElement('div')
+	ringDiv.setAttribute('id', 'the-ring')
 	// give the div a class of `'magic-imbued-jewelry'`
-
+	ringDiv.setAttribute('class', 'magic-imbued-jewelry')
 	// add the ring as a child of `Frodo`
+	const frodo = document.getElementById('Frodo Baggins')
+	frodo.appendChild(ringDiv)
 }
 
 // COMMIT YOUR WORK
