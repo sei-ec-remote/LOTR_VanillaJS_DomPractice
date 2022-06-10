@@ -129,6 +129,7 @@ function makeBuddies() {
 	const buddiesAside = document.createElement('aside')
 	// put an `unordered list` of the `'buddies'` in the aside
 	const buddiesList = document.createElement('ul')
+	buddiesList.id = 'buddiesUl'
 	for (i = 0; i < buddies.length; i++) {
 		const buddy = document.createElement('li')
 		buddy.innerText = buddies[i]
@@ -188,15 +189,20 @@ function forgeTheFellowShip() {
 	fellowship.id = 'the-fellowship'
 	document.getElementById('Rivendell').appendChild(fellowship)
 	const fellowshipList = document.createElement('ul')
+	fellowshipList.id = 'fellowshipUl'
 	fellowship.appendChild(fellowshipList)
 	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
-	console.log(document.getElementsByClassName('hobbit').length)
+	for (let i = 0; i < buddies.length; i++) {
+		fellowshipList.appendChild(document.getElementById(`buddy-${i}`))
+		console.log(`${document.getElementById(`buddy-${i}`)} has been added to the fellowship`)
+	}
+
 	for (let i = 0; i < hobbits.length; i++) {
 		fellowshipList.appendChild(document.getElementById(`hobbit-${i}`))
-
-	// after each character is added make an alert that they // have joined your party
 		console.log(`${document.getElementById(`hobbit-${i}`)} has been added to the fellowship`)
 	}
+	// after each character is added make an alert that they // have joined your party
+
 	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
 }
 
@@ -226,6 +232,8 @@ function theBalrog() {
 function hornOfGondor() {
 	console.log('10: hornOfGondor')
 	// pop up an alert that the horn of gondor has been blown
+	alert(`The Horn of Gondor has been blown!`)
+	document.getElementById('fellowshipUl').removeChild(document.getElementById('buddy-4'))
 	// Boromir's been killed by the Uruk-hai!
 	// Remove `Boromir` from the Fellowship
 }
