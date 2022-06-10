@@ -52,6 +52,7 @@ function makeHobbits() {
 	// create var for ul list
 	const hobbitList = document.createElement('ul');
 	hobbitList.setAttribute('class','The-Shire');
+	hobbitList.setAttribute('id','shire-list')
 	console.log(hobbitList);
 	// use loop to create list for each hobbit
 	for (let i = 0; i < hobbits.length; i++) {
@@ -301,8 +302,14 @@ function itsDangerousToGoAlone() {
 function weWantsIt() {
 	console.log('12: weWantsIt')
 	// Create a div with an id of `'gollum'` and add it to Mordor
+	const gollum = document.createElement('div');
+	gollum.setAttribute('id','gollum');
+	document.getElementById('Mordor').appendChild(gollum);
 	// Remove `the ring` from `Frodo` and give it to `Gollum`
+	const theRing = document.getElementById('the-ring');
+	document.getElementById('gollum').appendChild(theRing);
 	// Move Gollum into Mount Doom
+	document.getElementById('mount-doom').appendChild(gollum);
 }
 
 // COMMIT YOUR WORK
@@ -315,7 +322,19 @@ function weWantsIt() {
 function thereAndBackAgain() {
 	console.log('13: thereAndBackAgain')
 	// remove `Gollum` and `the Ring` from the document
+	const gollum = document.getElementById('gollum');
+	gollum.remove();
 	// Move all the `hobbits` back to `the shire`
+	//const hobbitList = document.getElementsByClassName('hobbits'); 
+	const theShire = document.getElementById('shire-list')
+	const frodo = document.getElementById('Frodo Baggins');
+	theShire.appendChild(frodo);
+	const samwise = document.getElementById('Samwise "Sam" Gamgee');
+	theShire.appendChild(samwise);
+	const meriadoc = document.getElementById('Meriadoc "Merry" Brandybuck');
+	theShire.appendChild(meriadoc);
+	const peregrin = document.getElementById('Peregrin "Pippin" Took');
+	theShire.appendChild(peregrin);
 }
 
 // COMMIT YOUR WORK
