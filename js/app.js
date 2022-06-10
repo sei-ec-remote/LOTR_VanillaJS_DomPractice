@@ -159,7 +159,7 @@ function leaveTheShire() {
 	for (i = 0; i < hobbits.length; i++){
 		document.querySelector('.buddies').appendChild(document.querySelector('.hobbit'))
 	}
-	
+
 	// assemble the `hobbits` and move them to `rivendell`
 }
 
@@ -172,7 +172,7 @@ function leaveTheShire() {
 
 function beautifulStranger() {
 	console.log('7: beautifulStranger')
-
+	
 	// change the `'Strider'` text to `'Aragorn'`
 }
 
