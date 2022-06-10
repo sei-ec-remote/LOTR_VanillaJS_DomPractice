@@ -35,6 +35,8 @@ function makeMiddleEarth() {
 	
 	document.querySelector('body').appendChild(newIdTag)
 
+	console.log(newIdTag)
+
 	//   2a. creates an article tag (there should be one for each land when the loop is done)
 
 	//   2b. gives each land article an `id` tag of the corresponding land name
@@ -59,23 +61,24 @@ function makeHobbits() {
 	
 	// display an `unordered list` of hobbits in the shire
 	const hobbitsInShire = document.createElement('ul')
+	hobbitsInShire.setAttribute('id', 'The-Shire')
 	
 	for (let i = 0; i < hobbits.length; i++) {
 		const liTag = document.createElement('li')
 		liTag.setAttribute('class', 'hobbit')
+		liTag.setAttribute('id', `${hobbits[i]}`)
 		liTag.innerText = hobbits[i]
 		hobbitsInShire.appendChild(liTag)
 	}
 
-	console.log(hobbitsInShire)
-
+	document.querySelector('body').appendChild(hobbitsInShire)
 	// give each hobbit a class of `hobbit`
-
+	console.log(hobbitsInShire)
 	// hint: create a 'ul' outside the loop into which to append the 'li's
 
 	// hint: get 'The-Shire' by using its id
 }
-makeHobbits()
+makeHobbits()	
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 2 complete - Made the Hobbits".
@@ -88,12 +91,16 @@ function keepItSecretKeepItSafe() {
 	console.log('3: keepItSecretKeepItSafe')
 
 	// create a div with an id of `'the-ring'`
+	const theRing = document.createElement('div')
+	theRing.setAttribute('id', 'the-ring')
+	theRing.setAttribute('class', 'magic-imbued-jewelry')
+	document.getElementById('Frodo Baggins').appendChild(theRing)
 
 	// give the div a class of `'magic-imbued-jewelry'`
 
 	// add the ring as a child of `Frodo`
 }
-
+keepItSecretKeepItSafe()
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 3 complete - Made the ring and gave it to Frodo".
 
