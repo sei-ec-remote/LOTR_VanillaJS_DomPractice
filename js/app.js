@@ -90,6 +90,11 @@ function keepItSecretKeepItSafe() {
     // give the div a class of `'magic-imbued-jewelry'`
 
     // add the ring as a child of `Frodo`
+    const ringDiv = document.createElement('div')
+    ringDiv.className = "magic-imbued-jewelry"
+    const ulHobbit = document.querySelector('ul')
+    const lifrodo = ulHobbit.children[0]
+    lifrodo.appendChild(ringDiv)
 }
 
 // COMMIT YOUR WORK
