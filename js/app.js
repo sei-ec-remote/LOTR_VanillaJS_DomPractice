@@ -33,9 +33,9 @@ for (i = 0; i < lands.length; i++) {
     //   2a. creates an article tag (there should be one for each land when the loop is done)
     const article = document.createElement('article')
         //   2b. gives each land article an `id` tag of the corresponding land name
-    article.setAttribute(id = lands)
+    article.id = lands[i]
         //   2c. includes an h1 with the name of the land inside each land article
-    h1 = document.createElement('h1')
+    let h1 = document.createElement('h1')
     h1 = lands[i]
     article.appendChild(h1)
 
@@ -112,6 +112,18 @@ function makeBaddies() {
     // give each of the baddies a class of "baddy"
 
     // remember to append them to Mordor
+    let Mordor = document.getElementById('Mordor')
+    let ulBaddies = document.createElement('ul')
+    ulBaddies.className = 'Bad'
+
+    for (let i = 0; i < Bad.length; i++) {
+        let liBaddies = document.createElement('li')
+        liBaddies.textContent = baddies[i]
+        liBaddies.className = "Bad guys"
+        ulBaddies.appendChild(liBaddies)
+    }
+
+    Mordor.appendChild(ulBaddies)
 }
 
 // COMMIT YOUR WORK
