@@ -32,8 +32,8 @@ function makeMiddleEarth() {
 		landH1.innerText=lands[i]
 		article.appendChild(landH1)
 		section.appendChild(article)
-		document.querySelector("body").appendChild(section) 
 	}
+	document.querySelector("body").appendChild(section) 
 	//   2a. creates an article tag (there should be one for each land when the loop is done)
 
 	//   2b. gives each land article an `id` tag of the corresponding land name
@@ -56,10 +56,10 @@ function makeHobbits() {
 	console.log('2: makeHobbits')
 	const hobbitList = document.createElement("ul")
 	for(let i=0; i<hobbits.length; i++){
-		const hobbit = document.createElement("li")
-		hobbit.classList.add("hobbit")
-		hobbit.innerText = hobbits[i]
-		hobbitList.appendChild(hobbit)
+		const hob = document.createElement("li")
+		hob.classList.add("hobbit")
+		hob.innerText = hobbits[i]
+		hobbitList.appendChild(hob)
 	}
 	document.querySelector("#The-Shire").appendChild(hobbitList)
 	// display an `unordered list` of hobbits in the shire
@@ -124,6 +124,16 @@ function makeBaddies() {
 
 function makeBuddies() {
 	console.log('5: makeBuddies')
+	const aside = document.createElement("aside")
+	const buddieList = document.createElement("ul")
+	for(let i=0; i<buddies.length; i++){
+		const buddie = document.createElement("li")
+		buddie.setAttribute("id",buddies[i])
+		buddie.innerText = buddies[i]
+		buddieList.appendChild(buddie)
+	}
+	aside.appendChild(buddieList)
+	document.querySelector("#Rivendell").appendChild(aside)
 
 	// create an `aside` tag
 
@@ -141,6 +151,14 @@ function makeBuddies() {
 
 function leaveTheShire() {
 	console.log('6: leaveTheShire')
+	const onTheMove = document.getElementsByClassName("hobbit");
+	console.log(onTheMove[2])
+	console.log(onTheMove)
+	const destination = document.createElement("ul")
+	while(onTheMove.length!==0){
+		destination.appendChild(onTheMove[0])
+	}
+	document.querySelector("#Rivendell").appendChild(destination)
 
 	// assemble the `hobbits` and move them to `rivendell`
 }
@@ -154,7 +172,7 @@ function leaveTheShire() {
 
 function beautifulStranger() {
 	console.log('7: beautifulStranger')
-
+	document.getElementById("Strider").innerText = "Aragorn"
 	// change the `'Strider'` text to `'Aragorn'`
 }
 
