@@ -55,6 +55,7 @@ function makeHobbits() {
 
 	// display an `unordered list` of hobbits in the shire
 	const hobbitList = document.createElement('ul')
+	hobbitList.setAttribute('id', 'the-hobbits')
 	// give each hobbit a class of `hobbit`
 	for (let i = 0; i < hobbits.length; i++) {
 		const hobbitItem = document.createElement('li')
@@ -153,28 +154,10 @@ function leaveTheShire() {
 	console.log('6: leaveTheShire')
 
 	// assemble the `hobbits` and move them to `rivendell`
-	// const rivendell = document.getElementById('Rivendell')
-	// const theShire = document.getElementById('The-Shire')
-	// const allHobbits = makeHobbits()
-	// rivendell.appendChild(allHobbits)
-	const hobbitsinShire = document.querySelectorAll('.hobbit')
-	const theshire = document.getElementById('The-Shire')
-	for (let i = 0; i < hobbitsinShire.length; i++) {
-		hobbitsinShire[i].remove()
-	}
-	const hobbitList2 = document.createElement('ul')
-	// give each hobbit a class of `hobbit`
-	for (let i = 0; i < hobbits.length; i++) {
-		const hobbitItem2 = document.createElement('li')
-		hobbitItem2.innerText = hobbits[i]
-		hobbitItem2.classList.add('hobbit')
-		hobbitItem2.setAttribute('id', hobbits[i])
-		hobbitList2.appendChild(hobbitItem2)
-	}
 	const rivendell = document.getElementById('Rivendell')
-	rivendell.appendChild(hobbitList2)
+	const allHobbits = document.getElementById('the-hobbits')
+	rivendell.appendChild(allHobbits)
 
-	keepItSecretKeepItSafe()
 }
 
 // COMMIT YOUR WORK
@@ -212,13 +195,13 @@ function forgeTheFellowShip() {
 
 	const theHobbits = document.querySelectorAll('.hobbit')
 	const theBuddies = document.querySelectorAll('.buddy')
-	for (let i = 0; i < theHobbits.length; i++) {
-		thefellowship.appendChild(theHobbits[i])
-		alert(`${hobbits[i]} has joined the Fellowship`)
-	}
 	for (let i = 0; i < theBuddies.length; i++) {
 		thefellowship.appendChild(theBuddies[i])
 		alert(`${buddies[i]} has joined the Fellowship`)
+	}
+	for (let i = 0; i < theHobbits.length; i++) {
+		thefellowship.appendChild(theHobbits[i])
+		alert(`${hobbits[i]} has joined the Fellowship`)
 	}
 	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
 }
@@ -298,7 +281,7 @@ function weWantsIt() {
 	gollum.appendChild(thering)
 	// Move Gollum into Mount Doom
 	const mountDoom = document.getElementById('mount-doom')
-	mountDoom.append(gollum)
+	mountDoom.appendChild(gollum)
 }
 
 // COMMIT YOUR WORK
@@ -311,7 +294,16 @@ function weWantsIt() {
 function thereAndBackAgain() {
 	console.log('13: thereAndBackAgain')
 	// remove `Gollum` and `the Ring` from the document
+	const gollum = document.getElementById('gollum')
+	const thering = document.getElementById('the-ring')
+	gollum.remove()
+	thering.remove()
 	// Move all the `hobbits` back to `the shire`
+	const theshire = document.getElementById('The-Shire')
+	const allHobbits  = document.querySelectorAll('.hobbit')
+	for(let i = 0; i < allHobbits.length; i++) {
+		theshire.appendChild(allHobbits[i])
+	}
 }
 
 // COMMIT YOUR WORK
