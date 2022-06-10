@@ -287,6 +287,15 @@ function itsDangerousToGoAlone() {
 function weWantsIt() {
 	console.log('12: weWantsIt')
 	// Create a div with an id of `'gollum'` and add it to Mordor
+	let Mordor = document.getElementById('Mordor')
+	let myDiv = document.createElement('div')
+	myDiv.setAttribute('id','gollum')
+	Mordor.appendChild(myDiv)
+	let ring = document.getElementById('the-ring')
+	myDiv.appendChild(ring)
+	
+	let mountDoom = document.getElementById('mount-doom')
+	mountDoom.appendChild(myDiv)
 	// Remove `the ring` from `Frodo` and give it to `Gollum`
 	// Move Gollum into Mount Doom
 }
