@@ -316,8 +316,6 @@ function weWantsIt() {
 	theRing.setAttribute('class', 'magic-imbued-jewelry')
 	document.getElementById('gollum').appendChild(theRing)
 	document.querySelector("#mount-doom").appendChild(gollum)
-
-	document.querySelector("#mount-doom").appendChild(gollum)
 }
 
 // COMMIT YOUR WORK
@@ -331,6 +329,26 @@ function thereAndBackAgain() {
 	console.log('13: thereAndBackAgain')
 	// remove `Gollum` and `the Ring` from the document
 	// Move all the `hobbits` back to `the shire`
+	document.getElementById('the-ring').remove()
+	document.getElementById("gollum").remove()
+	
+	document.getElementById("Frodo Baggins").remove()
+	document.getElementById('Samwise "Sam" Gamgee').remove()
+	document.getElementById('Meriadoc "Merry" Brandybuck').remove()
+	document.getElementById('Peregrin "Pippin" Took').remove()
+
+	let hobbitList = document.createElement('ul')
+	hobbitList.setAttribute("class", "hobbitList")
+	for(let i = 0; i < hobbits.length; i++){
+		const hobbitName = document.createElement('li')
+		hobbitName.setAttribute('id', hobbits[i])
+		hobbitName.setAttribute('class', "hobbit")
+		hobbitName.innerText = (hobbits[i])
+		hobbitList.appendChild(hobbitName)
+}
+	document.querySelector("#The-Shire").appendChild(hobbitList)
+
+	
 }
 
 // COMMIT YOUR WORK
