@@ -52,6 +52,7 @@ function makeHobbits() {
 
 	// display an `unordered list` of hobbits in the shire
 	const hobbitsList = document.createElement('ul')
+	hobbitsList.setAttribute('id','hobbitList')
 	// give each hobbit a class of `hobbit`
 	for (let i = 0; i < hobbits.length; i++) {
 		const hobbit = document.createElement('li')
@@ -285,7 +286,13 @@ function weWantsIt() {
 function thereAndBackAgain() {
 	console.log('13: thereAndBackAgain')
 	// remove `Gollum` and `the Ring` from the document
+	document.getElementById('gollum').remove()
 	// Move all the `hobbits` back to `the shire`
+	const hobbitList = document.getElementById('hobbitList')
+	let hobShire = document.querySelectorAll('li.hobbit')
+	for (let i = 0; i < hobShire.length; i++) {
+		hobbitList.appendChild(hobShire[i])
+	}		
 }
 
 // COMMIT YOUR WORK
