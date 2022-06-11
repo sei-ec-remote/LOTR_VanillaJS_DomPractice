@@ -58,12 +58,9 @@ function makeHobbits() {
 	let hobbitList = document.createElement('ul')
 	hobbitList.setAttribute("class", "hobbitList")
 	for(let i = 0; i < hobbits.length; i++){
-		console.log(hobbits[i])
 		const hobbitName = document.createElement('li')
 		hobbitName.setAttribute('id', hobbits[i])
-
 		hobbitName.setAttribute('class', "hobbit")
-	
 		hobbitName.innerText = (hobbits[i])
 		hobbitList.appendChild(hobbitName)
 }
@@ -234,6 +231,8 @@ function theBalrog() {
 	console.log('9: theBalrog')
 	// change the `'Gandalf'` text to `'Gandalf the White'`
 	// apply the following style to the element, make the // background 'white', add a grey border
+	document.getElementById('Gandalf the Grey').innerText = "Gandalf the White"
+	document.getElementById('Gandalf the Grey').style.cssText += 'background-color:white;border:2px solid grey';
 }
 
 // COMMIT YOUR WORK
