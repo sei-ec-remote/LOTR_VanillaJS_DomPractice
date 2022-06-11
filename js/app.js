@@ -64,6 +64,7 @@ function makeHobbits() {
 for (let i=0; i <hobbits.length; i++){
 	let li = document.createElement('li');
 	li.setAttribute('id', 'hobbit')
+	ul.setAttribute('id', 'getHobbits')
 	ul.appendChild(li)
 	li.innerText = hobbits[i]
 	//console.log(li)
@@ -119,23 +120,16 @@ function makeBaddies() {
 	console.log('4: makeBaddies')
 
 	// display an unordered list of baddies in Mordor
-	const ul = document.createElement('ul')
- //landTag[0].setAttribute('id','The-Shire')
-	// display an `unordered list` of hobbits in the shire
-//hobbitList = "";
-
-for (let i=0; i <baddies.length; i++){
-	let li = document.createElement('li');
-	li.setAttribute('id', 'baddies')
-	li.setAttribute("class", "baddy")
-	ul.appendChild(li)
-	li.innerText = hobbits[i]
-	//console.log(li)
-
-
-	//hobbitList += "<li>"  + hobbit + "</li>"
-}
-document.getElementById(lands[0]).appendChild(ul)
+	const ul = document.createElement("ul")
+	for (let i = 0; i < baddies.length; i++) {
+		let li = document.createElement("li")
+		li.setAttribute("id", baddies[i])
+		li.setAttribute("class", "baddy")
+		ul.appendChild(li)
+		li.innerText = baddies[i]
+		console.log(li)
+	}
+	document.getElementById(lands[2]).appendChild(ul)
 }
 	// give each of the baddies a class of "baddy"
 
@@ -152,9 +146,20 @@ function makeBuddies() {
 	console.log('5: makeBuddies')
 
 	// create an `aside` tag
+	let aside = document.createElement("aside")
+	aside.setAttribute("class", "buddies")
 
 	// put an `unordered list` of the `'buddies'` in the aside
-
+	const ul = document.createElement("ul")
+	for (let i = 0; i < buddies.length; i++) {
+		let li = document.createElement("li")
+		li.setAttribute("id", buddies[i])
+		li.setAttribute("class", "buddy")
+		ul.appendChild(li)
+		li.innerText = buddies[i]
+		console.log(li)
+	}
+	document.getElementById(lands[1]).appendChild(ul)
 	// insert your aside as a child element of `rivendell`
 }
 
@@ -168,11 +173,27 @@ function makeBuddies() {
 function leaveTheShire() {
 	console.log('6: leaveTheShire')
 
+	const assembleHobbits = document.querySelector('#getHobbits')
+	assembleHobbits.remove();
+	const rivendell= document.querySelector('#Rivendell');
+	rivendell.appendChild(assembleHobbits)
+
+	// const assembleHobbits = document.querySelector('hobbit')
+	// const Rivendell = document.getElementById(`${lands[1]}`)
+
+
+
+	// for (let i=0; i < hobbits.length; i++){
+	// 	hobbitList.remove(document.getElementById(`#${hobbits[i]}`))
+	// 	Rivendell.append(`#${hobbits[i]}`)
+	// }
+
 	// assemble the `hobbits` and move them to `rivendell`
 }
 
 // COMMIT YOUR WORK
-// The commit message should read: "Chapter 6 complete - Left the Shire"
+// The commit message should read: "Chapter 6 complete - Left 
+// the Shire"
 
 // ============
 // Chapter 7
