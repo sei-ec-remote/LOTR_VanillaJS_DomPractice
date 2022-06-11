@@ -140,7 +140,6 @@ document.getElementById(lands[0]).appendChild(ul)
 	// give each of the baddies a class of "baddy"
 
 	// remember to append them to Mordor
-}
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 4 complete - Made the Baddies"..
