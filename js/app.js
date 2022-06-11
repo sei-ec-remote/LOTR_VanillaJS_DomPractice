@@ -27,8 +27,6 @@ function makeMiddleEarth() {
 
 	// 2. use a for loop to iterate over the lands array that does the following:
 		for (let i = 0; i < lands.length; i++){
-			console.log(lands[i]);
-		
 	//   2a. creates an article tag (there should be one for each land when the loop is done)
 				const articleTag = document.createElement('article')
 	//   2b. gives each land article an `id` tag of the corresponding land name
@@ -63,16 +61,13 @@ function makeHobbits() {
 		console.log(hobbits[i])
 		const hobbitName = document.createElement('li')
 		hobbitName.setAttribute('id', hobbits[i])
-		
 
-
-	// give each hobbit a class of `hobbit`
-	hobbitName.setAttribute('class', "hobbit")
+		hobbitName.setAttribute('class', "hobbit")
 	
-	hobbitName.innerText = (hobbits[i])
-	hobbitList.appendChild(hobbitName)
+		hobbitName.innerText = (hobbits[i])
+		hobbitList.appendChild(hobbitName)
 }
-	document.querySelector("#The-Shire").appendChild(hobbitList)
+		document.querySelector("#The-Shire").appendChild(hobbitList)
 }
 	// hint: create a 'ul' outside the loop into which to append the 'li's
 
@@ -112,7 +107,6 @@ function makeBaddies() {
 	// display an unordered list of baddies in Mordor
 	let baddiesList = document.createElement('ul')
 	for(let i = 0; i < baddies.length; i++){
-		console.log(baddies[i])
 		let baddyName = document.createElement('li')
 		baddyName.setAttribute('class', 'baddy')
 		baddyName.innerText = (baddies[i])
@@ -140,7 +134,7 @@ function makeBuddies() {
 	theBuddies.setAttribute('id', 'buddiesAside')
 	let buddiesList = document.createElement('ul')
 	for (i = 0; i < buddies.length; i++){
-		console.log(buddies[i])
+		
 		let buddyName = document.createElement('li')
 		buddyName.setAttribute('id', buddies[i])
 		buddiesList.setAttribute('class', "buddies")
@@ -161,6 +155,7 @@ function makeBuddies() {
 // ============
 
 function leaveTheShire() {
+	console.log("6: Leave the Shire")
 	document.querySelector("#Rivendell").appendChild(document.querySelector(".hobbitList"))
 }
 
@@ -175,6 +170,7 @@ function beautifulStranger() {
 	console.log('7: beautifulStranger')
 
 	// change the `'Strider'` text to `'Aragorn'`
+	document.querySelector("#Strider").innerHTML = "Aragorn"
 }
 
 // COMMIT YOUR WORK
@@ -189,7 +185,41 @@ function forgeTheFellowShip() {
 	// create a new div called `'the-fellowship'` within `rivendell`
 	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
 	// after each character is added make an alert that they // have joined your party
+	document.querySelector(".buddies").remove()
+	document.querySelector(".hobbitList").remove()
+	
+	let the_fellowshipDiv = document.createElement('div')
+	the_fellowshipDiv.setAttribute("id", "the-fellowship")
+	let fellowship = document.createElement('ul')
+	fellowship.setAttribute("id", "fellowship")
+	the_fellowshipDiv.appendChild(fellowship)
+	document.querySelector('#Rivendell').appendChild(the_fellowshipDiv)
 
+	for(let i = 0; i < buddies.length; i++){
+		
+		const buddyName = document.createElement('li')
+		buddyName.setAttribute('id', buddies[i])
+		buddyName.setAttribute('class', "hobbit")
+		buddyName.innerText = (buddies[i])
+	
+		fellowship.appendChild(buddyName)
+	}
+	document.querySelector("#Strider").innerHTML = "Aragorn"
+	
+	for(let i = 0; i < hobbits.length; i++){
+		
+		const hobbitName = document.createElement('li')
+		hobbitName.setAttribute('id', hobbits[i])
+		hobbitName.setAttribute('class', "hobbit")
+		hobbitName.innerText = (hobbits[i])
+		fellowship.appendChild(hobbitName)
+	}
+	let theRing = document.createElement('div')
+	theRing.setAttribute('id', 'the-ring')
+	theRing.setAttribute('class', 'magic-imbued-jewelry')
+	document.getElementById('Frodo Baggins').appendChild(theRing)
+	
+	console.log("all fellows present")
 	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
 }
 
