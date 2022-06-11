@@ -188,9 +188,11 @@ function forgeTheFellowShip() {
 	// after each character is added make an alert that they // have joined your party
 	const fellow = document.createElement('div')
 	const list = document.getElementById("Rivendell").getElementsByTagName("li")
+	console.log(list)
 	while(list.length!==0){
+		console.log(list.length)
 		fellow.appendChild(list[0])
-		alert(list[0].innerText+ " have joined the Rivendell fellowship")
+		console.log(list[0].innerText+ " have joined the Rivendell fellowship")
 	}
 	document.getElementById("Rivendell").appendChild(fellow)
 	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
@@ -219,6 +221,8 @@ function theBalrog() {
 
 function hornOfGondor() {
 	console.log('10: hornOfGondor')
+	alert("The horn of gondor has been blown\nBoromir's been killed by the Uruk-hai!")
+	document.getElementById("fellowship")
 	// pop up an alert that the horn of gondor has been blown
 	// Boromir's been killed by the Uruk-hai!
 	// Remove `Boromir` from the Fellowship
