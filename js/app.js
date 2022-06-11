@@ -232,7 +232,7 @@ function theBalrog() {
 	// change the `'Gandalf'` text to `'Gandalf the White'`
 	// apply the following style to the element, make the // background 'white', add a grey border
 	document.getElementById('Gandalf the Grey').innerText = "Gandalf the White"
-	document.getElementById('Gandalf the Grey').style.cssText += 'background-color:white;border:2px solid grey';
+	document.getElementById('Gandalf the Grey').style.cssText += 'background-color:white;border:2px solid grey;width:70px';
 }
 
 // COMMIT YOUR WORK
@@ -259,9 +259,37 @@ function hornOfGondor() {
 // ============
 
 function itsDangerousToGoAlone() {
+	
 	console.log('11: itsDangerousToGoAlone')
 	// take `Frodo` and `Sam` out of the fellowship and move // them to `Mordor`
 	// add a div with an id of `'mount-doom'` to `Mordor`
+	document.getElementById("Frodo Baggins").remove()
+	document.getElementById('Samwise "Sam" Gamgee').remove()
+	let threeIsCompany = document.createElement('ul')
+	threeIsCompany.setAttribute("id", "threeIsCompany")
+	document.querySelector("#Mordor").appendChild(threeIsCompany)
+
+	let mount_doom = document.createElement('div')
+	mount_doom.setAttribute("id", "mount-doom")
+	document.querySelector("#Mordor").appendChild(mount_doom)
+	
+	const frodoB = document.createElement('li')
+	frodoB.innerText = hobbits[0]
+	frodoB.setAttribute("id", hobbits[0])
+	let theRing = document.createElement('div')
+	threeIsCompany.appendChild(frodoB)
+	
+	theRing.setAttribute('id', 'the-ring')
+	theRing.setAttribute('class', 'magic-imbued-jewelry')
+	document.getElementById('Frodo Baggins').appendChild(theRing)
+
+	const samG = document.createElement('li')
+	samG.innerText = hobbits[1]
+	samG.setAttribute("id", hobbits[1])
+	threeIsCompany.appendChild(samG)
+
+	
+	
 }
 
 // COMMIT YOUR WORK
@@ -276,6 +304,10 @@ function weWantsIt() {
 	// Create a div with an id of `'gollum'` and add it to Mordor
 	// Remove `the ring` from `Frodo` and give it to `Gollum`
 	// Move Gollum into Mount Doom
+
+	// let gollum = document.createElement('div')
+	// gollum.setAttribute("id", "gollum")
+	// document.querySelector("#mount-doom").appendChild(gollum)
 }
 
 // COMMIT YOUR WORK
