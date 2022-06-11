@@ -58,6 +58,7 @@ function makeHobbits() {
 		
 	// display an `unordered list` of hobbits in the shire
 	let hobbitList = document.createElement('ul')
+	hobbitList.setAttribute("class", "hobbitList")
 	for(let i = 0; i < hobbits.length; i++){
 		console.log(hobbits[i])
 		const hobbitName = document.createElement('li')
@@ -142,6 +143,7 @@ function makeBuddies() {
 		console.log(buddies[i])
 		let buddyName = document.createElement('li')
 		buddyName.setAttribute('id', buddies[i])
+		buddiesList.setAttribute('class', "buddies")
 		buddyName.innerText = (buddies[i])
 		buddiesList.appendChild(buddyName)
 		theBuddies.appendChild(buddiesList)
@@ -159,9 +161,7 @@ function makeBuddies() {
 // ============
 
 function leaveTheShire() {
-	console.log('6: leaveTheShire')
-
-	// assemble the `hobbits` and move them to `rivendell`
+	document.querySelector("#Rivendell").appendChild(document.querySelector(".hobbitList"))
 }
 
 // COMMIT YOUR WORK
