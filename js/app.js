@@ -305,9 +305,19 @@ function weWantsIt() {
 	// Remove `the ring` from `Frodo` and give it to `Gollum`
 	// Move Gollum into Mount Doom
 
-	// let gollum = document.createElement('div')
-	// gollum.setAttribute("id", "gollum")
-	// document.querySelector("#mount-doom").appendChild(gollum)
+	let gollum = document.createElement('div')
+	gollum.setAttribute("id", "gollum")
+	document.querySelector("#Mordor").appendChild(gollum)
+
+	document.getElementById("the-ring").remove()
+	
+	let theRing = document.createElement('div')
+	theRing.setAttribute('id', 'the-ring')
+	theRing.setAttribute('class', 'magic-imbued-jewelry')
+	document.getElementById('gollum').appendChild(theRing)
+	document.querySelector("#mount-doom").appendChild(gollum)
+
+	document.querySelector("#mount-doom").appendChild(gollum)
 }
 
 // COMMIT YOUR WORK
