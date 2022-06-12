@@ -58,7 +58,7 @@ function makeHobbits() {
 	for (let i = 0; i < hobbits.length; i++) {
 		const hobbit = document.createElement('li')
 		hobbit.setAttribute("class", "hobbit")
-		hobbit.setAttribute("id", hobbits[0])
+		hobbit.setAttribute("id", hobbits[i])
 		hobbit.innerText = hobbits[i]
 		hobbitList.appendChild(hobbit)
 	}
@@ -157,6 +157,14 @@ function makeBuddies() {
 
 function leaveTheShire() {
 	console.log('6: leaveTheShire')
+	const rivendell = document.getElementById("Rivendell")
+	const convoy = document.getElementsByClassName("hobbit")
+	const travel = document.createElement("ul")
+	while (convoy.length != 0) {
+		travel.appendChild(convoy[0])
+	}
+
+	rivendell.appendChild(travel)
 
 	// assemble the `hobbits` and move them to `rivendell`
 }
@@ -170,6 +178,9 @@ function leaveTheShire() {
 
 function beautifulStranger() {
 	console.log('7: beautifulStranger')
+
+	const allies = document.getElementsByClassName("buddies")
+	console.log(allies[3])
 
 	// change the `'Strider'` text to `'Aragorn'`
 }
