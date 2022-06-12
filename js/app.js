@@ -158,6 +158,7 @@ function makeBuddies() {
 
 function leaveTheShire() {
 	console.log('6: leaveTheShire')
+
 	const rivendell = document.getElementById("Rivendell")
 	const convoy = document.getElementsByClassName("hobbit")
 	const travel = document.createElement("ul")
@@ -194,6 +195,25 @@ function beautifulStranger() {
 
 function forgeTheFellowShip() {
 	console.log('8: forgeTheFellowShip')
+	
+	const rivendell = document.getElementById("Rivendell")
+	const theFellowship = document.createElement("div")
+	theFellowship.id = "the-fellowship"
+	rivendell.appendChild(theFellowship)
+	const fellowHobbit = document.getElementById("Rivendell").getElementsByClassName("hobbit")
+	const fellowAllies = document.getElementById("Rivendell").getElementsByClassName("buddy")
+
+	
+	for (let i = 0; i < fellowHobbit.length; i++) {
+		theFellowship.appendChild(fellowHobbit[0])
+	}
+	for (let i = 0; i < fellowAllies.length; i++) {
+		theFellowship.appendChild(fellowAllies[0])
+	}
+
+	document.getElementById("Rivendell").appendChild(theFellowship)
+	console.log(theFellowship)
+
 	// create a new div called `'the-fellowship'` within `rivendell`
 	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
 	// after each character is added make an alert that they // have joined your party
@@ -210,6 +230,8 @@ function forgeTheFellowShip() {
 
 function theBalrog() {
 	console.log('9: theBalrog')
+
+	
 	// change the `'Gandalf'` text to `'Gandalf the White'`
 	// apply the following style to the element, make the // background 'white', add a grey border
 }
