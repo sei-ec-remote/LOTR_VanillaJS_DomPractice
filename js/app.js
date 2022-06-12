@@ -116,14 +116,22 @@ function makeBaddies() {
 // Chapter 5
 // ============
 
+makeBuddies()
 function makeBuddies() {
 	console.log('5: makeBuddies')
 
 	// create an `aside` tag
-
+	const asideTag = document.createElement('aside')
 	// put an `unordered list` of the `'buddies'` in the aside
-
-	// insert your aside as a child element of `rivendell`
+	const ulTag = document.createElement('ul')
+	for (let i = 0; i < buddies.length; i++) {
+		const liTag = document.createElement('li')
+		liTag.innerText = buddies[i]
+		ulTag.appendChild(liTag)
+	}
+	asideTag.appendChild(ulTag)
+	// insert your aside as a child element of `rivendell`//Not having a R there is just plain evil.
+	document.getElementById('Rivendell').appendChild(asideTag)
 }
 
 // COMMIT YOUR WORK
