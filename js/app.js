@@ -168,7 +168,7 @@ function beautifulStranger() {
 	console.log('7: beautifulStranger')
 
 	// change the `'Strider'` text to `'Aragorn'`
-	document.getElementById('Strider').innerText = 'Aragorn'
+	document.querySelector('#Strider').innerText = 'Aragorn'
 }
 
 // COMMIT YOUR WORK
@@ -181,6 +181,8 @@ function beautifulStranger() {
 function forgeTheFellowShip() {
 	console.log('8: forgeTheFellowShip')
 	// create a new div called `'the-fellowship'` within `rivendell`
+	const theFellowship = - document.createElement('div')
+	theFellowship.setAttribute('id', 'theFellowship')
 	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
 	// after each character is added make an alert that they // have joined your party
 
@@ -205,7 +207,7 @@ function theBalrog() {
 
 // ============
 // Chapter 10
-// ============
+// ============"Chapter 7 complete - Strider is changed to Aragorn"
 
 function hornOfGondor() {
 	console.log('10: hornOfGondor')
