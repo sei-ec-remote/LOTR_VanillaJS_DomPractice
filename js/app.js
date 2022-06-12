@@ -181,12 +181,32 @@ function beautifulStranger() {
 function forgeTheFellowShip() {
 	console.log('8: forgeTheFellowShip')
 	// create a new div called `'the-fellowship'` within `rivendell`
-	const theFellowship = - document.createElement('div')
+	const theFellowship = document.createElement('div')
 	theFellowship.setAttribute('id', 'theFellowship')
+	document.querySelector('#Rivendell').appendChild(theFellowship)
+	const theSquad = document.createElement('ul')
+	theFellowship.appendChild(theSquad)
 	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
+
+	for (i = 0; i < hobbits.length; i++) {
+		const squad = document.createElement('li')
+		squad.classList.add('squad')
+		squad.setAttribute('id', hobbits[i])
+		theSquad.appendChild(squad)
+		alert(hobbits[i] + " has joined the Fellowship")
+	}
+	for (i = 0; i < buddies.length; i++) {
+		const squad = document.createElement('li')
+		squad.classList.add('squad')
+		squad.setAttribute('id', buddies[i])
+		theSquad.appendChild(squad)
+		alert(buddies[i] + " has joined the Fellowship")
+	}
+
 	// after each character is added make an alert that they // have joined your party
 
-	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
+	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to 
+	//make sure that it worked.
 }
 
 // COMMIT YOUR WORK
