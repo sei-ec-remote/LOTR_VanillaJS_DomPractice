@@ -253,6 +253,8 @@ function hornOfGondor() {
 	alert("The Horn of Gondor has been blown!")
 	alert("Boromir has been killed by the Uruk-Hai!")
 	document.getElementById("Boromir").remove()
+	// :[
+
 	// pop up an alert that the horn of gondor has been blown
 	// Boromir's been killed by the Uruk-hai!
 	// Remove `Boromir` from the Fellowship
@@ -267,6 +269,18 @@ function hornOfGondor() {
 
 function itsDangerousToGoAlone() {
 	console.log('11: itsDangerousToGoAlone')
+
+	const frodo = document.getElementById("Frodo Baggins")
+	const sam = document.getElementById('Samwise "Sam" Gamgee')
+	const mordor = document.getElementById("Mordor")
+	const mountDoom = document.createElement("div")
+	mountDoom.id = "mount-doom"
+
+	mordor.appendChild(frodo)
+	mordor.appendChild(sam)
+	mordor.appendChild(mountDoom)
+
+
 	// take `Frodo` and `Sam` out of the fellowship and move // them to `Mordor`
 	// add a div with an id of `'mount-doom'` to `Mordor`
 }
