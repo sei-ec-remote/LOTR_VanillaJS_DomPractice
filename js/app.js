@@ -61,8 +61,13 @@ function makeHobbits() {
 		const hobbitsLiTag = document.createElement('li')
 		hobbitsLiTag.innerText = hobbits[i]
 		hobbitsLiTag.classList.add('hobbit') 
+		//hobbitsLiTag.className = 'hobbit' 
+
+		console.log(hobbitsLiTag.className) //either methed I get 4 hobbits.
+
 		hobbitsUlTag.appendChild(hobbitsLiTag)
 	}
+	console.log(hobbitsUlTag)
 	document.getElementById('The-Shire').appendChild(hobbitsUlTag)
 }
 
@@ -140,11 +145,20 @@ function makeBuddies() {
 // ============
 // Chapter 6
 // ============
-
+leaveTheShire()
 function leaveTheShire() {
 	console.log('6: leaveTheShire')
 
 	// assemble the `hobbits` and move them to `rivendell`
+	const ul = document.createElement('ul')
+	const hobbitsList = document.querySelectorAll('.hobbit')
+	for (let i = 0; i < hobbitsList.length; i++) {
+		console.log('Hi '+ i)
+		ul.appendChild(hobbitsList[i])
+		
+	}
+	console.log(ul)
+	document.getElementById('Rivendell').appendChild(ul)
 }
 
 // COMMIT YOUR WORK
