@@ -249,6 +249,10 @@ function theBalrog() {
 
 function hornOfGondor() {
 	console.log('10: hornOfGondor')
+
+	alert("The Horn of Gondor has been blown!")
+	alert("Boromir has been killed by the Uruk-Hai!")
+	document.getElementById("Boromir").remove()
 	// pop up an alert that the horn of gondor has been blown
 	// Boromir's been killed by the Uruk-hai!
 	// Remove `Boromir` from the Fellowship
