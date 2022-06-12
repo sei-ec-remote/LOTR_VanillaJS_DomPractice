@@ -57,20 +57,16 @@ function makeHobbits() {
 	console.log('2: makeHobbits')
 
 	const ul = document.createElement('ul')
- //landTag[0].setAttribute('id','The-Shire')
-	// display an `unordered list` of hobbits in the shire
-//hobbitList = "";
 
 for (let i=0; i <hobbits.length; i++){
 	let li = document.createElement('li');
 	li.setAttribute('id', 'hobbit')
+	let ul = document.createElement('ul')
 	ul.setAttribute('id', 'getHobbits')
 	ul.appendChild(li)
 	li.innerText = hobbits[i]
-	//console.log(li)
 
 
-	//hobbitList += "<li>"  + hobbit + "</li>"
 }
 document.getElementById(lands[0]).appendChild(ul)
 }
@@ -161,8 +157,9 @@ function makeBuddies() {
 	}
 	document.getElementById(lands[1]).appendChild(ul)
 	// insert your aside as a child element of `rivendell`
+	
 }
-
+const rivendell = document.getElementsByClassName('Rivendell')[0];
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 5 complete - Made the Buddies".
 
@@ -173,20 +170,35 @@ function makeBuddies() {
 function leaveTheShire() {
 	console.log('6: leaveTheShire')
 
-	const assembleHobbits = document.querySelector('#getHobbits')
-	assembleHobbits.remove();
-	const rivendell= document.querySelector('#Rivendell');
+	const assembleHobbits = document.querySelector('#gethobbits')
 	rivendell.appendChild(assembleHobbits)
+	for (let i = 0; i < hobbits.length; i++) {
+		assembleHobbits.appendChild(hobbit[0])
+	// assembleHobbits.remove()
+	}
+		// const rivendell = document.querySelector('Rivendell')
+		// rivendell.appendChild(assembleHobbits)
+	
+	// getElementById(${lands[1]})
+	
+	
+	// function 
+	// assembleHobbits.remove();
+	// const rivendell= document.querySelector('#Rivendell');
+	// rivendell.appendChild(assembleHobbits)
 
-	// const assembleHobbits = document.querySelector('hobbit')
-	// const Rivendell = document.getElementById(`${lands[1]}`)
+	// const hobbitsList = document.querySelector('.hobbit')
+    // const rivendalle = document.getElementById(${lands[1]})
+    // // const frodo = document.getElementById("#Frodo Baggins")
+    // const sam = document.getElementById("#Meriadoc "Merry" Brandybuck")
+    // const pippin = document.getElementById("#Frodo Baggins")
+    // const merry = document.getElementById("#Frodo Baggins")
 
+    //  for (let i = 0; i < hobbits.length; i++) {
+    //      assembleHobbits.remove(document.getElementById(`#${hobbits[i]})`)
+    //     rivendalle.append(hobbitsList);
+    // }
 
-
-	// for (let i=0; i < hobbits.length; i++){
-	// 	hobbitList.remove(document.getElementById(`#${hobbits[i]}`))
-	// 	Rivendell.append(`#${hobbits[i]}`)
-	// }
 
 	// assemble the `hobbits` and move them to `rivendell`
 }
@@ -201,9 +213,17 @@ function leaveTheShire() {
 
 function beautifulStranger() {
 	console.log('7: beautifulStranger')
+	const replaceStrider = {'Strider': 'Aragorn'}
+	replaceStrider.newKey = replaceStrider.oldKey
+	delete replaceStrider.oldKey
 
-	// change the `'Strider'` text to `'Aragorn'`
+	// const addAragon = changeKeyObjects(buddies, replaceStrider)
+// 	const buddyList = document.querySelectorAll('buddies')
+//   const strider = buddyList.item(3)
+//   strider.innerHTML = 'Aragorn'
 }
+	// document.getElementById('strider').innerHTML = "Aragorn"
+	// change the `'Strider'` text to `'Aragorn'`
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 7 complete - Strider is changed to Aragorn"
@@ -217,8 +237,28 @@ function forgeTheFellowShip() {
 	// create a new div called `'the-fellowship'` within `rivendell`
 	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
 	// after each character is added make an alert that they // have joined your party
+const theFellowship = document.createElement('div')
+theFellowship.setAttribute('id', 'fellowship')
+theFellowship.setAttribute('class', 'fellowship')
+const rivendell = document.querySelector("#Rivendell");
+rivendell.appendChild(theFellowship);
+const hobbitsJoinFellowship = document.querySelectorAll('hobbit');
+const buddiesJoinFellowship = document.querySelectorAll('buddy');
+const buddies = document.querySelector("#buddy");
+buddies.remove();
+const hobbits = document.querySelector("#getHobbits");
+hobbits.remove();
+for (let buddy of buddiesJoinFellowship) {
+  theFellowshipDiv.appendChild(buddy);
+  alert(`${buddy.textContent} has joined the Fellowship!`);
+}
+for (let hobbit of hobbitsJoinFellowship) {
+  theFellowshipDiv.appendChild(hobbit);
+  alert(`${hobbit.textContent} has joined the Fellowship!`);
+
 
 	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
+}
 }
 
 // COMMIT YOUR WORK
