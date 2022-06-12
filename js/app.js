@@ -91,15 +91,22 @@ function keepItSecretKeepItSafe() {
 // ============
 // Chapter 4
 // ============
-
+makeBaddies()
 function makeBaddies() {
 	console.log('4: makeBaddies')
 
 	// display an unordered list of baddies in Mordor
-
-	// give each of the baddies a class of "baddy"
-
+	const baddiesList = document.createElement('ul')
+	
+	for (let i = 0; i < baddies.length; i++) {
+		const baddiesItem = document.createElement('li')
+		// give each of the baddies a class of "baddy"
+		baddiesItem.classList.add('baddy')
+		baddiesItem.innerText = baddies[i]
+		baddiesList.appendChild(baddiesItem)
+	}
 	// remember to append them to Mordor
+	document.getElementById('Mordor').appendChild(baddiesList)
 }
 
 // COMMIT YOUR WORK
