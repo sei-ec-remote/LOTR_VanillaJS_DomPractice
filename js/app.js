@@ -136,6 +136,7 @@ function makeBuddies() {
 	for (let i = 0; i < buddies.length; i++) {
 		const allies = document.createElement('li')
 		allies.setAttribute("class", "buddy")
+		allies.setAttribute("id", buddies[i])
 		allies.innerText = buddies[i]
 		asideTag.appendChild(allies)
 	}
@@ -179,8 +180,7 @@ function leaveTheShire() {
 function beautifulStranger() {
 	console.log('7: beautifulStranger')
 
-	const allies = document.getElementsByClassName("buddies")
-	console.log(allies[3])
+	document.getElementById("Strider").innerText = "Aragorn"
 
 	// change the `'Strider'` text to `'Aragorn'`
 }
