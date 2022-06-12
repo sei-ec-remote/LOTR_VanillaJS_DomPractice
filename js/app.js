@@ -72,7 +72,7 @@ function makeHobbits() {
 // ============
 // Chapter 3
 // ============
-
+keepItSecretKeepItSafe()
 function keepItSecretKeepItSafe() {
 	console.log('3: keepItSecretKeepItSafe')
 
@@ -80,8 +80,9 @@ function keepItSecretKeepItSafe() {
 	const divRing = document.createElement('div')
 	divRing.setAttribute('id', 'the-ring')
 	// give the div a class of `'magic-imbued-jewelry'`
-
+	divRing.classList.add('magic-imbued-jewelry')
 	// add the ring as a child of `Frodo`
+	document.getElementsByClassName('hobbit')[0].appendChild(divRing)
 }
 
 // COMMIT YOUR WORK
