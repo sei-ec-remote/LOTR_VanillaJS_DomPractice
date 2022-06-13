@@ -235,11 +235,11 @@ function forgeTheFellowShip() {
 	const fellowship = document.createElement("ul");
 	fellowship.setAttribute("id","the-fellowship");
 	for(let i=0;i<buddies.length;i++) {
-			thisBuddy = document.createElement("li");
-			thisBuddy.setAttribute("id","fellowship-"+buddies[i]);
-			thisBuddy.innerText = buddies[i];
-			fellowship.appendChild(thisBuddy);
-			window.alert(buddies[i]+" joined the Fellowship");
+		thisBuddy = document.createElement("li");
+		thisBuddy.setAttribute("id","fellowship-"+buddies[i]);
+		thisBuddy.innerText = buddies[i];
+		fellowship.appendChild(thisBuddy);
+		window.alert(buddies[i]+" joined the Fellowship");
 		}
 
 	for(let i=0;i<hobbits.length;i++) {
@@ -250,7 +250,13 @@ function forgeTheFellowShip() {
 		window.alert(hobbits[i]+" joined the Fellowship");
 	}
 
+	
+	
 	Rivendell.appendChild(fellowship);
+
+	theRing = document.getElementById("the-ring");
+	document.getElementById("fellowship-Frodo Baggins").appendChild(theRing);
+
 	document.getElementById("hobbits").remove();
 	document.getElementById("buddies").remove();
 
@@ -308,6 +314,19 @@ function itsDangerousToGoAlone() {
 	console.log('11: itsDangerousToGoAlone')
 	// take `Frodo` and `Sam` out of the fellowship and move // them to `Mordor`
 	// add a div with an id of `'mount-doom'` to `Mordor`
+
+	addList = document.createElement("ul");
+	const frodo = document.getElementById("fellowship-Frodo Baggins");
+	const sam = document.getElementById(`fellowship-Samwise "Sam" Gamgee`);
+	const Mordor = document.getElementById("Mordor");
+	addList.appendChild(frodo);
+	addList.appendChild(sam);
+	Mordor.appendChild(addList);
+
+	const MountDoom = document.createElement("div");
+	MountDoom.setAttribute("id","mount-doom");
+	Mordor.appendChild(MountDoom);
+
 }
 
 // COMMIT YOUR WORK
