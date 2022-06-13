@@ -48,7 +48,7 @@ function makeMiddleEarth() {
 	}
 
 	// 3. append the section to the body of the DOM.
-	
+
 }
 
 makeMiddleEarth();
@@ -70,7 +70,21 @@ function makeHobbits() {
 	// hint: create a 'ul' outside the loop into which to append the 'li's
 
 	// hint: get 'The-Shire' by using its id
+
+	theHobbits = document.createElement("ul");
+	theShire = document.getElementById("The-Shire");
+	theShire.appendChild(theHobbits);
+
+	for(let i=0;i<hobbits.length;i++) {
+		thisHobbit = document.createElement("li");
+		thisHobbit.setAttribute("class","hobbit");
+		thisHobbit.innerText = hobbits[i];
+		theHobbits.appendChild(thisHobbit);
+	}
+
 }
+
+makeHobbits();
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 2 complete - Made the Hobbits".
