@@ -162,7 +162,23 @@ function makeBuddies() {
 	// put an `unordered list` of the `'buddies'` in the aside
 
 	// insert your aside as a child element of `rivendell`
+
+	const Rivendell = document.getElementById("Rivendell");
+	const addList = document.createElement("ul");
+
+	for(let i=0;i<buddies.length;i++) {
+		const createLi = document.createElement("li");
+		createLi.setAttribute("class","buddy");
+		createLi.setAttribute("id",buddies[i]);
+		createLi.innerText = buddies[i];
+		addList.appendChild(createLi);
+	}
+
+	Rivendell.appendChild(addList);
+
 }
+
+makeBuddies();
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 5 complete - Made the Buddies".
