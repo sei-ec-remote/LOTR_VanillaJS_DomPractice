@@ -194,14 +194,14 @@ function forgeTheFellowShip() {
 		squad.classList.add('squad')
 		squad.setAttribute('id', hobbits[i])
 		theSquad.appendChild(squad)
-		//alert(hobbits[i] + " has joined the Fellowship")
+		alert(hobbits[i] + " has joined the Fellowship")
 	}
 	for (i = 0; i < buddies.length; i++) {
 		const squad = document.createElement('li')
 		squad.classList.add('squad')
 		squad.setAttribute('id', buddies[i])
 		theSquad.appendChild(squad)
-		//alert(buddies[i] + " has joined the Fellowship")
+		alert(buddies[i] + " has joined the Fellowship")
 	}
 
 	// after each character is added make an alert that they // have joined your party
@@ -239,7 +239,8 @@ function hornOfGondor() {
 	alert("The Horn of Gondor! Boromir!")
 	// Boromir's been killed by the Uruk-hai!
 	// Remove `Boromir` from the Fellowship
-	document.getElementById('theSquad').removeChild(document.getElementById('theSquad').children[8])
+	const boromir = document.querySelector('#Boromir')
+	document.querySelector('#theSquad').removeChild(boromir)
 }
 
 // COMMIT YOUR WORK
@@ -292,7 +293,15 @@ function weWantsIt() {
 function thereAndBackAgain() {
 	console.log('13: thereAndBackAgain')
 	// remove `Gollum` and `the Ring` from the document
+	document.querySelector('#Mordor').removeChild(document.querySelector('#gollum'))
 	// Move all the `hobbits` back to `the shire`
+	const mrFrodo = document.getElementById('Frodo Baggins')
+	const sam = document.getElementById('Samwise "Sam" Gamgee')
+	document.querySelector('#The-Shire').appendChild(mrFrodo)
+	document.querySelector('#The-Shire').appendChild(sam)
+	document.querySelector('#The-Shire').appendChild(document.querySelector('#Peregrin "Pippin" Took'))
+	document.querySelector('#The-Shire').appendChild(document.querySelector('#Meriadoc "Merry" Brandybuck'))
+
 }
 
 // COMMIT YOUR WORK
