@@ -366,6 +366,19 @@ function thereAndBackAgain() {
 	console.log('13: thereAndBackAgain')
 	// remove `Gollum` and `the Ring` from the document
 	// Move all the `hobbits` back to `the shire`
+
+	const theRing = document.getElementById("the-ring");
+	const gollum = document.getElementById("gollum");
+	theRing.remove();
+	gollum.remove();
+
+	const theShire = document.getElementById("The-Shire");
+
+	for(let i=0;i<hobbits.length;i++) {
+		const thisHobbit = document.getElementById("fellowship-"+hobbits[i]);
+		theShire.appendChild(thisHobbit);
+	}
+
 }
 
 // COMMIT YOUR WORK
