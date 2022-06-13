@@ -224,7 +224,8 @@ function beautifulStranger() {
 	Strider.innerText = "Aragorn";
 	Strider.setAttribute("id","Aragorn");
 	Strider.removeAttribute("Strider");
-	
+	const index = buddies.indexOf("Strider");
+	buddies[index] = "Aragorn";
 }
 
 beautifulStranger();
@@ -243,7 +244,30 @@ function forgeTheFellowShip() {
 	// after each character is added make an alert that they // have joined your party
 
 	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
+
+	const Rivendell = document.getElementById("Rivendell");
+	const fellowship = document.createElement("div");
+	fellowship.setAttribute("id","fellowship");
+
+	for(let i=0;i<hobbits.length;i++) {
+		thisHobbit = document.createElement("div");
+		thisHobbit.setAttribute("id","fellowship-"+hobbits[i]);
+		fellowship.appendChild(thisHobbit);
+		window.alert(hobbits[i]+" joined the Fellowship");
+	}
+
+	for(let i=0;i<buddies.length;i++) {
+		thisBuddy = document.createElement("div");
+		thisBuddy.setAttribute("id","fellowship-"+buddies[i]);
+		fellowship.appendChild(thisBuddy);
+		window.alert(buddies[i]+" joined the Fellowship");
+	}
+
+	Rivendell.appendChild(fellowship);
+
 }
+
+forgeTheFellowShip();
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 8 complete - The Fellowship is created"
