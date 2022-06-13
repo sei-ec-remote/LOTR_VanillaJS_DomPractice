@@ -338,7 +338,13 @@ function weWantsIt() {
 function thereAndBackAgain() {
 	console.log('13: thereAndBackAgain')
 	// remove `Gollum` and `the Ring` from the document
+	const removeGollumAndRing = document.getElementById('gollum')
+	removeGollumAndRing.remove()
 	// Move all the `hobbits` back to `the shire`
+	document.getElementById('The-Shire').appendChild(document.getElementById('Frodo Baggins'))
+	document.getElementById('The-Shire').appendChild(document.getElementById('Samwise "Sam" Gamgee'))	
+	document.getElementById('The-Shire').appendChild(document.getElementById('Meriadoc "Merry" Brandybuck'))
+	document.getElementById('The-Shire').appendChild(document.getElementById('Peregrin "Pippin" Took'))
 }
 
 // COMMIT YOUR WORK
