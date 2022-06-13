@@ -71,7 +71,7 @@ function makeHobbits() {
 		shireLi.setAttribute('class', 'hobbit')
 		hobbitUL.appendChild(shireLi)
 		shireLi.innerText = hobbits[i]
-		console.log(shireLi)
+		// console.log(shireLi)
 	}
 	document.getElementById(lands[0]).appendChild(hobbitUL)
 
@@ -113,8 +113,17 @@ function makeBaddies() {
 	console.log('4: makeBaddies')
 
 	// display an unordered list of baddies in Mordor
+	const baddiesUL = document.createElement('ul')
 
 	// give each of the baddies a class of "baddy"
+	for (let i = 0; i < baddies.length; i++) {
+		let baddiesLi = document.createElement('li')
+		baddiesLi.setAttribute('class', 'baddy')
+		baddiesUL.appendChild(baddiesLi)
+		baddiesLi.innerText = baddies[i]
+		// console.log(shireLi)
+	}
+	document.getElementById(lands[2]).appendChild(baddiesUL)
 
 	// remember to append them to Mordor
 }
