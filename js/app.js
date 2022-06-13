@@ -26,6 +26,7 @@ function makeMiddleEarth() {
 
 	const sectionOne = document.createElement("section");
 	sectionOne.setAttribute("id","middle-earth");
+	document.body.appendChild(sectionOne);
 
 	// 2. use a for loop to iterate over the lands array that does the following:
 
@@ -42,14 +43,12 @@ function makeMiddleEarth() {
 		createArticle.setAttribute("id",lands[i]);
 		const createHeaderInId = document.createElement("h1");
 		createHeaderInId.innerText = lands[i];
-		console.log(lands[i]);
-		document.getElementById(lands[i]).appendChild(createHeaderInId);
-		document.getElementById("middle-earth").appendChild(lands[i]);
+		createArticle.appendChild(createHeaderInId);
+		document.getElementById("middle-earth").appendChild(createArticle);
 	}
 
 	// 3. append the section to the body of the DOM.
-
-	document.body.appendChild(sectionOne);
+	
 }
 
 makeMiddleEarth();
