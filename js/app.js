@@ -59,10 +59,8 @@ function makeHobbits() {
 
 	for (let i = 0; i < hobbits.length; i++) {
 		const hobbitLI = document.createElement("li")
-		
 		hobbitLI.classList.add("hobbit")
 		hobbitLI.setAttribute("id", hobbits[i])
-		
 		hobbitLI.innerText = hobbits[i]
 		hobbitUL.appendChild(hobbitLI)
 		
@@ -110,7 +108,20 @@ function makeBaddies() {
 	console.log('4: makeBaddies')
 
 	// display an unordered list of baddies in Mordor
+	
+		// display an unordered list of baddies in Mordor
+		const ul = document.createElement("ul")
+		for (let i = 0; i < baddies.length; i++) {
+			let li = document.createElement("li")
+			li.setAttribute("id", baddies[i])
+			li.setAttribute("class", "baddy")
+			ul.appendChild(li)
+			li.innerText = baddies[i]
+			console.log(li)
+		}
+		document.getElementById(lands[2]).appendChild(ul)
 
+		// give each of the baddies a class of "baddy"
 	// give each of the baddies a class of "baddy"
 
 	// remember to append them to Mordor
@@ -128,6 +139,24 @@ function makeBuddies() {
 
 	// create an `aside` tag
 
+	
+	
+		// create an `aside` tag
+		let aside = document.createElement("aside")
+		aside.setAttribute("class", "buddies")
+	
+		// put an `unordered list` of the `'buddies'` in the aside
+		const ul = document.createElement("ul")
+		for (let i = 0; i < buddies.length; i++) {
+			let li = document.createElement("li")
+			li.setAttribute("id", buddies[i])
+			li.setAttribute("class", "buddy")
+			ul.appendChild(li)
+			li.innerText = buddies[i]
+			console.log(li)
+		}
+		document.getElementById(lands[1]).appendChild(ul)
+
 	// put an `unordered list` of the `'buddies'` in the aside
 
 	// insert your aside as a child element of `rivendell`
@@ -144,7 +173,15 @@ function leaveTheShire() {
 	console.log('6: leaveTheShire')
 
 	// assemble the `hobbits` and move them to `rivendell`
+	const hobbitsList = document.querySelector(".hobbit")
+	const rivendalle = document.getElementById(`${lands[1]}`)
+	
+for (let i = 0; i < hobbits.length; i++) {
+	hobbitsList. remove(document.getElementById(`#${hobbits[i]}`))
+	rivendalle.append.apply(`${hobbits[i]}`)
 }
+}
+
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 6 complete - Left the Shire"
