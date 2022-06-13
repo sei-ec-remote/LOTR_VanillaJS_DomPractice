@@ -193,14 +193,14 @@ function forgeTheFellowShip() {
 		squad.classList.add('squad')
 		squad.setAttribute('id', hobbits[i])
 		theSquad.appendChild(squad)
-		alert(hobbits[i] + " has joined the Fellowship")
+		//alert(hobbits[i] + " has joined the Fellowship")
 	}
 	for (i = 0; i < buddies.length; i++) {
 		const squad = document.createElement('li')
 		squad.classList.add('squad')
 		squad.setAttribute('id', buddies[i])
 		theSquad.appendChild(squad)
-		alert(buddies[i] + " has joined the Fellowship")
+		//alert(buddies[i] + " has joined the Fellowship")
 	}
 
 	// after each character is added make an alert that they // have joined your party
@@ -219,7 +219,10 @@ function forgeTheFellowShip() {
 function theBalrog() {
 	console.log('9: theBalrog')
 	// change the `'Gandalf'` text to `'Gandalf the White'`
+	document.getElementById('Gandalf the Grey').innerText = 'Gandalf the White'
 	// apply the following style to the element, make the // background 'white', add a grey border
+	document.getElementById('Gandalf the Grey').style.backgroundColor = "white"
+	document.getElementById('Gandalf the Grey').style.borderColor = "grey"
 }
 
 // COMMIT YOUR WORK
