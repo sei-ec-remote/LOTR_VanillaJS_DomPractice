@@ -206,53 +206,25 @@ function beautifulStranger() {
 forgeTheFellowShip()
 function forgeTheFellowShip() {
 	console.log('8: forgeTheFellowShip')
-	
-		console.log('8: forgeTheFellowShip')
-
-		// // create a new div called 'the-fellowship' within rivendell
-		// const theFellowship = document.createElement('div')
-		// theFellowship.setAttribute('id', 'theFellowship')
-		// document.querySelector('#Rivendell').appendChild(theFellowship)
-		// const theSquad = document.createElement('ul')
-		// theSquad.setAttribute('id', 'theSquad')
-		// theFellowship.appendChild(theSquad)
-		// // add each hobbit and buddy one at a time to 'the-fellowship'
-	
-		// for (let i = 0; i < hobbits.length; i++) {
-		// 	const squad = document.createElement('li')
-		// 	squad.classList.add('squad')
-		// 	squad.setAttribute('id', hobbits[i])
-		// 	theSquad.appendChild(squad)
-		// 	//alert(hobbits[i] + " has joined the Fellowship")
-		// }
-		// for (let i = 0; i < buddies.length; i++) {
-		// 	const squad = document.createElement('li')
-		// 	squad.classList.add('squad')
-		// 	squad.setAttribute('id', buddies[i])
-		// 	theSquad.appendChild(squad)
-		// 	//alert(buddies[i] + " has joined the Fellowship")
-		// }
-		
 
 	// create a new div called `'the-fellowship'` within `rivendell`
 	const newDiv = document.createElement('div')
-	//newDiv.classList.add('the-fellowship')
-	//newDiv.appendChild(document.createElement('ul')) //figured a li should be in an list holder
+	const ul = document.createElement('ul')
+	newDiv.appendChild(ul) //figured a li should be in an list holder
 	document.getElementById('Rivendell').appendChild(newDiv)
-	// document.getElementById('Rivendell').appendChild(newDiv)
-	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
-	//Rounding everyone up.
+	
 	const eachHobbit = document.querySelectorAll('.hobbit')
 	const eachBuddy = document.querySelectorAll('.buddy')
-	let buddyList = document.getElementById('Rivendell')
-	for (let i = 0; i < eachHobbit.length; i++){
-		newDiv.appendChild(eachHobbit[i])
-		alert(eachHobbit[i].innerText + " has join the The FellowShip")
-	}
 	
+	//Added the hobbits
+	for (let i = 0; i < eachHobbit.length; i++){
+		ul.appendChild(eachHobbit[i])
+	//	alert(eachHobbit[i].innerText + " has join the The FellowShip")
+	}
+	//Added the buddys
 	for (let i = 0; i < eachBuddy.length; i++) {
-		newDiv.appendChild(eachBuddy[i])
-		alert(eachBuddy[i].innerText + " has join the The FellowShip")
+		ul.appendChild(eachBuddy[i])
+	//	alert(eachBuddy[i].innerText + " has join the The FellowShip")
 	}
 }
 
