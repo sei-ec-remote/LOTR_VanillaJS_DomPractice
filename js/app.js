@@ -51,8 +51,6 @@ function makeMiddleEarth() {
 
 }
 
-makeMiddleEarth();
-
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 1 complete - Made Middle Earth".
 
@@ -87,8 +85,6 @@ function makeHobbits() {
 
 }
 
-makeHobbits();
-
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 2 complete - Made the Hobbits".
 
@@ -111,8 +107,6 @@ function keepItSecretKeepItSafe() {
 	document.getElementById("Frodo Baggins").appendChild(theRing);
 
 }
-
-keepItSecretKeepItSafe();
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 3 complete - Made the ring and gave it to Frodo".
@@ -144,8 +138,6 @@ function makeBaddies() {
 	Mordor.appendChild(addList);
 
 }
-
-makeBaddies();
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 4 complete - Made the Baddies"..
@@ -179,8 +171,6 @@ function makeBuddies() {
 
 }
 
-makeBuddies();
-
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 5 complete - Made the Buddies".
 
@@ -206,8 +196,6 @@ function leaveTheShire() {
 
 }
 
-leaveTheShire();
-
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 6 complete - Left the Shire"
 
@@ -228,8 +216,6 @@ function beautifulStranger() {
 	buddies[index] = "Aragorn";
 }
 
-beautifulStranger();
-
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 7 complete - Strider is changed to Aragorn"
 
@@ -246,28 +232,29 @@ function forgeTheFellowShip() {
 	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
 
 	const Rivendell = document.getElementById("Rivendell");
-	const fellowship = document.createElement("div");
-	fellowship.setAttribute("id","fellowship");
+	const fellowship = document.createElement("ul");
+	fellowship.setAttribute("id","the-fellowship");
+	for(let i=0;i<buddies.length;i++) {
+			thisBuddy = document.createElement("li");
+			thisBuddy.setAttribute("id","fellowship-"+buddies[i]);
+			thisBuddy.innerText = buddies[i];
+			fellowship.appendChild(thisBuddy);
+			window.alert(buddies[i]+" joined the Fellowship");
+		}
 
 	for(let i=0;i<hobbits.length;i++) {
-		thisHobbit = document.createElement("div");
+		thisHobbit = document.createElement("li");
 		thisHobbit.setAttribute("id","fellowship-"+hobbits[i]);
+		thisHobbit.innerText = hobbits[i];
 		fellowship.appendChild(thisHobbit);
 		window.alert(hobbits[i]+" joined the Fellowship");
 	}
 
-	for(let i=0;i<buddies.length;i++) {
-		thisBuddy = document.createElement("div");
-		thisBuddy.setAttribute("id","fellowship-"+buddies[i]);
-		fellowship.appendChild(thisBuddy);
-		window.alert(buddies[i]+" joined the Fellowship");
-	}
-
 	Rivendell.appendChild(fellowship);
+	document.getElementById("hobbits").remove();
+	document.getElementById("buddies").remove();
 
 }
-
-forgeTheFellowShip();
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 8 complete - The Fellowship is created"
@@ -280,6 +267,15 @@ function theBalrog() {
 	console.log('9: theBalrog')
 	// change the `'Gandalf'` text to `'Gandalf the White'`
 	// apply the following style to the element, make the // background 'white', add a grey border
+
+	const oldGandalf = document.getElementById("fellowship-Gandalf the Grey");
+	oldGandalf.innerText = "Gandalf the White";
+	oldGandalf.setAttribute("id","fellowship-Gandalf the White");
+	oldGandalf.removeAttribute("fellowship-Gandalf the Grey");
+	document.getElementById("fellowship-Gandalf the White").style.backgroundColor = "white";
+	document.getElementById("fellowship-Gandalf the White").style.borderColor = "grey";
+	document.getElementById("fellowship-Gandalf the White").style.borderWidth = "4px";
+	document.getElementById("fellowship-Gandalf the White").style.borderStyle = "solid";
 }
 
 // COMMIT YOUR WORK
@@ -347,41 +343,41 @@ function thereAndBackAgain() {
 // This code is loading all of the event listeners for the buttons in your application.
 // =====================================
 
-// document.getElementById('chapter-1').addEventListener('click', makeMiddleEarth)
-// document.getElementById('chapter-2').addEventListener('click', makeHobbits)
-// document
-// 	.getElementById('chapter-3')
-// 	.addEventListener('click', keepItSecretKeepItSafe)
-// document.getElementById('chapter-4').addEventListener('click', makeBaddies)
-// document.getElementById('chapter-5').addEventListener('click', makeBuddies)
-// document.getElementById('chapter-6').addEventListener('click', leaveTheShire)
-// document
-// 	.getElementById('chapter-7')
-// 	.addEventListener('click', beautifulStranger)
-// document
-// 	.getElementById('chapter-8')
-// 	.addEventListener('click', forgeTheFellowShip)
-// document.getElementById('chapter-9').addEventListener('click', theBalrog)
-// document.getElementById('chapter-10').addEventListener('click', hornOfGondor)
-// document
-// 	.getElementById('chapter-11')
-// 	.addEventListener('click', itsDangerousToGoAlone)
-// document.getElementById('chapter-12').addEventListener('click', weWantsIt)
-// document
-// 	.getElementById('chapter-13')
-// 	.addEventListener('click', thereAndBackAgain)
-// document.getElementById('all-chapters').addEventListener('click', () => {
-// 	makeMiddleEarth()
-// 	makeHobbits()
-// 	keepItSecretKeepItSafe()
-// 	makeBaddies()
-// 	makeBuddies()
-// 	leaveTheShire()
-// 	beautifulStranger()
-// 	forgeTheFellowShip()
-// 	theBalrog()
-// 	hornOfGondor()
-// 	itsDangerousToGoAlone()
-// 	weWantsIt()
-// 	thereAndBackAgain()
-// })
+document.getElementById('chapter-1').addEventListener('click', makeMiddleEarth)
+document.getElementById('chapter-2').addEventListener('click', makeHobbits)
+document
+	.getElementById('chapter-3')
+	.addEventListener('click', keepItSecretKeepItSafe)
+document.getElementById('chapter-4').addEventListener('click', makeBaddies)
+document.getElementById('chapter-5').addEventListener('click', makeBuddies)
+document.getElementById('chapter-6').addEventListener('click', leaveTheShire)
+document
+	.getElementById('chapter-7')
+	.addEventListener('click', beautifulStranger)
+document
+	.getElementById('chapter-8')
+	.addEventListener('click', forgeTheFellowShip)
+document.getElementById('chapter-9').addEventListener('click', theBalrog)
+document.getElementById('chapter-10').addEventListener('click', hornOfGondor)
+document
+	.getElementById('chapter-11')
+	.addEventListener('click', itsDangerousToGoAlone)
+document.getElementById('chapter-12').addEventListener('click', weWantsIt)
+document
+	.getElementById('chapter-13')
+	.addEventListener('click', thereAndBackAgain)
+document.getElementById('all-chapters').addEventListener('click', () => {
+	makeMiddleEarth()
+	makeHobbits()
+	keepItSecretKeepItSafe()
+	makeBaddies()
+	makeBuddies()
+	leaveTheShire()
+	beautifulStranger()
+	forgeTheFellowShip()
+	theBalrog()
+	hornOfGondor()
+	itsDangerousToGoAlone()
+	weWantsIt()
+	thereAndBackAgain()
+})
