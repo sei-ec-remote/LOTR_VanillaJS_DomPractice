@@ -200,21 +200,60 @@ function forgeTheFellowShip() {
 	theFellowship.setAttribute('id', 'The-Fellowship')
 	document.getElementById('Rivendell').appendChild(theFellowship)
 	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
-	const buddiesList = document.getElementsByClassName('buddy')
-	console.log(buddiesList.firstChild)
-	while (buddiesList.firstChild) {
-		console.log(`${buddiesList[0]}` + ' has joined the fellowship.')
-		theFellowship.appendChild(buddiesList[0])
-	}
 
+	theFellowship.appendChild(document.getElementById('Frodo Baggins'))
+	alert(`${document.getElementById('Frodo Baggins').innerText}` + ' has joined the fellowship.')
+
+	theFellowship.appendChild(document.getElementById('Samwise "Sam" Gamgee'))
+	alert(`${document.getElementById('Samwise "Sam" Gamgee').innerText}` + ' has joined the fellowship.')
+
+	theFellowship.appendChild(document.getElementById('Meriadoc "Merry" Brandybuck'))
+	alert(`${document.getElementById('Meriadoc "Merry" Brandybuck').innerText}` + ' has joined the fellowship.')
+
+	theFellowship.appendChild(document.getElementById('Peregrin "Pippin" Took'))
+	alert(`${document.getElementById('Peregrin "Pippin" Took').innerText}` + ' has joined the fellowship.')
+
+	theFellowship.appendChild(document.getElementById('Gandalf the Grey'))
+	alert(`${document.getElementById('Gandalf the Grey').innerText}` + ' has joined the fellowship.')
+
+	theFellowship.appendChild(document.getElementById('Legolas'))
+	alert(`${document.getElementById('Legolas').innerText}` + ' has joined the fellowship.')
+
+	theFellowship.appendChild(document.getElementById('Gimli'))
+	alert(`${document.getElementById('Gimli').innerText}` + ' has joined the fellowship.')
+
+	theFellowship.appendChild(document.getElementById('Strider'))
+	alert(`${document.getElementById('Strider').innerText}` + ' has joined the fellowship.')
+
+	theFellowship.appendChild(document.getElementById('Boromir'))
+	alert(`${document.getElementById('Boromir').innerText}` + ' has joined the fellowship.')
+	
+
+	// const buddiesList = document.getElementsByClassName('buddy')
+	// console.log(buddiesList)
+	// let i = 0
+	// while (buddiesList.length > 0) {
+	// 	console.log(`${buddiesList[0]}` + ' has joined the fellowship.')
+	// 	theFellowship.appendChild(buddiesList.shift())
+	// 	// i++
+	// }
+	// for (i = 0; i < buddiesList.length; i++ ){
+	// 	console.log(`${buddiesList[i]}` + ' has joined the fellowship.', buddiesList.length)
+	// 	  theFellowship.appendChild(buddiesList[i],)
+	// 	console.log(`${buddiesList[i]}` + ' has joined the fellowship.', buddiesList.length)
+	  }
+	// console.log(buddiesList, theFellowship)
+	// console.log(bud)
+	// let a = 0
 	// const hobbitsList = document.getElementsByClassName('hobbit')
-	// while (hobbitsList.firstChild) {
-	// 	theFellowship.appendChild(hobbitsList[i])
-	// 	console.log(`${hobbits[i]}` + ' has joined the fellowship.')
+	// while (hobbitsList.length > a) {
+	// 	theFellowship.appendChild(hobbitsList[a])
+	// 	console.log(`${hobbits[a]}` + ' has joined the fellowship.')
+	// 	a++
 	// }
 	// after each character is added make an alert that they // have joined your party
 	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
-}
+// }
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 8 complete - The Fellowship is created"
