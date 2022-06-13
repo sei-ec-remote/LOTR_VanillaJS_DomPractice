@@ -318,6 +318,19 @@ function weWantsIt() {
 
 function thereAndBackAgain() {
 	console.log('13: thereAndBackAgain')
+
+	
+	document.getElementById("gollum").remove()
+	
+	const theShire = document.getElementById("The-Shire")
+	const convoy = document.getElementsByClassName("hobbit")
+	const travel = document.createElement("ul")
+	while (convoy.length != 0) {
+		travel.appendChild(convoy[0])
+	}
+
+	theShire.appendChild(travel)
+
 	// remove `Gollum` and `the Ring` from the document
 	// Move all the `hobbits` back to `the shire`
 }
