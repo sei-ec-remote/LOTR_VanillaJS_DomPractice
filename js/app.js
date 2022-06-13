@@ -202,31 +202,31 @@ function forgeTheFellowShip() {
 	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
 
 	theFellowship.appendChild(document.getElementById('Frodo Baggins'))
-	alert(`${document.getElementById('Frodo Baggins').innerText}` + ' has joined the fellowship.')
+	// alert(`${document.getElementById('Frodo Baggins').innerText}` + ' has joined the fellowship.')
 
 	theFellowship.appendChild(document.getElementById('Samwise "Sam" Gamgee'))
-	alert(`${document.getElementById('Samwise "Sam" Gamgee').innerText}` + ' has joined the fellowship.')
+	// alert(`${document.getElementById('Samwise "Sam" Gamgee').innerText}` + ' has joined the fellowship.')
 
 	theFellowship.appendChild(document.getElementById('Meriadoc "Merry" Brandybuck'))
-	alert(`${document.getElementById('Meriadoc "Merry" Brandybuck').innerText}` + ' has joined the fellowship.')
+	// alert(`${document.getElementById('Meriadoc "Merry" Brandybuck').innerText}` + ' has joined the fellowship.')
 
 	theFellowship.appendChild(document.getElementById('Peregrin "Pippin" Took'))
-	alert(`${document.getElementById('Peregrin "Pippin" Took').innerText}` + ' has joined the fellowship.')
+	// alert(`${document.getElementById('Peregrin "Pippin" Took').innerText}` + ' has joined the fellowship.')
 
 	theFellowship.appendChild(document.getElementById('Gandalf the Grey'))
-	alert(`${document.getElementById('Gandalf the Grey').innerText}` + ' has joined the fellowship.')
+	// alert(`${document.getElementById('Gandalf the Grey').innerText}` + ' has joined the fellowship.')
 
 	theFellowship.appendChild(document.getElementById('Legolas'))
-	alert(`${document.getElementById('Legolas').innerText}` + ' has joined the fellowship.')
+	// alert(`${document.getElementById('Legolas').innerText}` + ' has joined the fellowship.')
 
 	theFellowship.appendChild(document.getElementById('Gimli'))
-	alert(`${document.getElementById('Gimli').innerText}` + ' has joined the fellowship.')
+	// alert(`${document.getElementById('Gimli').innerText}` + ' has joined the fellowship.')
 
 	theFellowship.appendChild(document.getElementById('Strider'))
-	alert(`${document.getElementById('Strider').innerText}` + ' has joined the fellowship.')
+	// alert(`${document.getElementById('Strider').innerText}` + ' has joined the fellowship.')
 
 	theFellowship.appendChild(document.getElementById('Boromir'))
-	alert(`${document.getElementById('Boromir').innerText}` + ' has joined the fellowship.')
+	// alert(`${document.getElementById('Boromir').innerText}` + ' has joined the fellowship.')
 	
 
 	// const buddiesList = document.getElementsByClassName('buddy')
@@ -301,7 +301,12 @@ function hornOfGondor() {
 function itsDangerousToGoAlone() {
 	console.log('11: itsDangerousToGoAlone')
 	// take `Frodo` and `Sam` out of the fellowship and move // them to `Mordor`
+	document.getElementById('Mordor').appendChild(document.getElementById('Frodo Baggins'))
+	document.getElementById('Mordor').appendChild(document.getElementById('Samwise "Sam" Gamgee'))
 	// add a div with an id of `'mount-doom'` to `Mordor`
+	const mountDoom = document.createElement('div')
+	mountDoom.setAttribute('id', 'mount-doom')
+	document.getElementById('Mordor').appendChild(mountDoom)
 }
 
 // COMMIT YOUR WORK
