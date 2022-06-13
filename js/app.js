@@ -165,6 +165,7 @@ function makeBuddies() {
 
 	const Rivendell = document.getElementById("Rivendell");
 	const addList = document.createElement("ul");
+	addList.setAttribute("id","buddies");
 
 	for(let i=0;i<buddies.length;i++) {
 		const createLi = document.createElement("li");
@@ -191,7 +192,21 @@ function leaveTheShire() {
 	console.log('6: leaveTheShire')
 
 	// assemble the `hobbits` and move them to `rivendell`
+
+	const addList = document.createElement("ul");
+	addList.setAttribute("id","hobbits");
+	
+	for(let i=0;i<hobbits.length;i++) {
+		thisHobbit = document.getElementById(hobbits[i]);
+		addList.appendChild(thisHobbit);
+	}
+
+	const Rivendell = document.getElementById("Rivendell");
+	Rivendell.appendChild(addList);
+
 }
+
+leaveTheShire();
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 6 complete - Left the Shire"
