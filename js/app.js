@@ -147,6 +147,7 @@ function makeBuddies() {
 	for(let i = 0 ; i < buddies.length ; i++){
 		const buddy_one = document.createElement('li')
 		buddy_one.innerHTML = buddies[i]
+		buddy_one.setAttribute('id',buddies[i])
 		buddy_list.appendChild(buddy_one)
 		
 	}
@@ -171,7 +172,7 @@ function leaveTheShire() {
 
 	Rivendell.appendChild(The_Shire.removeChild(The_Shire.children[1]))
 	console.log(The_Shire)
-	
+	console.log(Rivendell)
 	// assemble the `hobbits` and move them to `rivendell`
 }
 
@@ -184,7 +185,11 @@ function leaveTheShire() {
 
 function beautifulStranger() {
 	console.log('7: beautifulStranger')
-
+	const Strider = document.getElementById("Strider")
+	console.log(Strider)
+	Strider.innerHTML = "Aragorn"
+	Strider.setAttribute('id',"Aragorn")
+	buddies[3] = "Aragorn"
 	// change the `'Strider'` text to `'Aragorn'`
 }
 
