@@ -71,8 +71,8 @@ function makeHobbits() {
 
 	// hint: get 'The-Shire' by using its id
 
-	theHobbits = document.createElement("ul");
-	theShire = document.getElementById("The-Shire");
+	const theHobbits = document.createElement("ul");
+	const theShire = document.getElementById("The-Shire");
 	
 
 	for(let i=0;i<hobbits.length;i++) {
@@ -219,7 +219,15 @@ function beautifulStranger() {
 	console.log('7: beautifulStranger')
 
 	// change the `'Strider'` text to `'Aragorn'`
+
+	const Strider = document.getElementById("Strider");
+	Strider.innerText = "Aragorn";
+	Strider.setAttribute("id","Aragorn");
+	Strider.removeAttribute("Strider");
+	
 }
+
+beautifulStranger();
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 7 complete - Strider is changed to Aragorn"
