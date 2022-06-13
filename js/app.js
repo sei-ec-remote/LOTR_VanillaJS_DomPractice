@@ -185,6 +185,7 @@ function forgeTheFellowShip() {
 	theFellowship.setAttribute('id', 'theFellowship')
 	document.querySelector('#Rivendell').appendChild(theFellowship)
 	const theSquad = document.createElement('ul')
+	theSquad.setAttribute('id', 'theSquad')
 	theFellowship.appendChild(theSquad)
 	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
 
@@ -235,8 +236,10 @@ function theBalrog() {
 function hornOfGondor() {
 	console.log('10: hornOfGondor')
 	// pop up an alert that the horn of gondor has been blown
+	alert("The Horn of Gondor! Boromir!")
 	// Boromir's been killed by the Uruk-hai!
 	// Remove `Boromir` from the Fellowship
+	document.getElementById('theSquad').removeChild(document.getElementById('theSquad').children[8])
 }
 
 // COMMIT YOUR WORK
