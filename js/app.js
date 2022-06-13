@@ -63,11 +63,9 @@ function makeHobbits() {
 		hobbitsLiTag.classList.add('hobbit') 
 		//hobbitsLiTag.className = 'hobbit' 
 
-		console.log(hobbitsLiTag.className) //either methed I get 4 hobbits.
-
 		hobbitsUlTag.appendChild(hobbitsLiTag)
 	}
-	console.log(hobbitsUlTag)
+	
 	document.getElementById('The-Shire').appendChild(hobbitsUlTag)
 }
 
@@ -153,11 +151,10 @@ function leaveTheShire() {
 	const ul = document.createElement('ul')
 	const hobbitsList = document.querySelectorAll('.hobbit')
 	for (let i = 0; i < hobbitsList.length; i++) {
-		console.log('Hi '+ i)
+		('Hi '+ i)
 		ul.appendChild(hobbitsList[i])
 		
 	}
-	console.log(ul)
 	document.getElementById('Rivendell').appendChild(ul)
 }
 
@@ -167,11 +164,15 @@ function leaveTheShire() {
 // ============
 // Chapter 7
 // ============
-
+beautifulStranger()
 function beautifulStranger() {
 	console.log('7: beautifulStranger')
-
+	let buddyList = document.getElementById('Rivendell')
+	buddyList = buddyList.childNodes.item(1)
+	buddyList = buddyList.firstChild
+	buddyList = buddyList.childNodes.item(3)
 	// change the `'Strider'` text to `'Aragorn'`
+	buddyList = buddyList.innerText = 'Aragorn'
 }
 
 // COMMIT YOUR WORK
@@ -256,6 +257,9 @@ function thereAndBackAgain() {
 	// remove `Gollum` and `the Ring` from the document
 	// Move all the `hobbits` back to `the shire`
 }
+document.addEventListener('DOMContentLoaded', function() {
+  //code and events go here
+});
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 13 complete -Gollum and the ring are gone, the baddies are done, and the hobbits are back in the shire".
