@@ -133,6 +133,7 @@ function makeBuddies() {
 		let str = buddies[i]
 		str = str.replaceAll(' ','-')
 		liTag.setAttribute("id", buddies[i])
+		liTag.classList.add('buddy')
 		liTag.innerText = buddies[i]
 		ulTag.appendChild(liTag)
 	}
@@ -192,7 +193,6 @@ beautifulStranger()
 function beautifulStranger() {
 	console.log('7: beautifulStranger')
 	let beautifulStranger = document.getElementById('Strider')
-	p(beautifulStranger)
 	// change the `'Strider'` text to `'Aragorn'`
 	beautifulStranger.innerText = 'Aragorn' 
 }
@@ -203,76 +203,57 @@ function beautifulStranger() {
 // ============
 // Chapter 8
 // ============
-// forgeTheFellowShip()
+forgeTheFellowShip()
 function forgeTheFellowShip() {
 	console.log('8: forgeTheFellowShip')
+	
+		console.log('8: forgeTheFellowShip')
+
+		// // create a new div called 'the-fellowship' within rivendell
+		// const theFellowship = document.createElement('div')
+		// theFellowship.setAttribute('id', 'theFellowship')
+		// document.querySelector('#Rivendell').appendChild(theFellowship)
+		// const theSquad = document.createElement('ul')
+		// theSquad.setAttribute('id', 'theSquad')
+		// theFellowship.appendChild(theSquad)
+		// // add each hobbit and buddy one at a time to 'the-fellowship'
+	
+		// for (let i = 0; i < hobbits.length; i++) {
+		// 	const squad = document.createElement('li')
+		// 	squad.classList.add('squad')
+		// 	squad.setAttribute('id', hobbits[i])
+		// 	theSquad.appendChild(squad)
+		// 	//alert(hobbits[i] + " has joined the Fellowship")
+		// }
+		// for (let i = 0; i < buddies.length; i++) {
+		// 	const squad = document.createElement('li')
+		// 	squad.classList.add('squad')
+		// 	squad.setAttribute('id', buddies[i])
+		// 	theSquad.appendChild(squad)
+		// 	//alert(buddies[i] + " has joined the Fellowship")
+		// }
+		
+
 	// create a new div called `'the-fellowship'` within `rivendell`
 	const newDiv = document.createElement('div')
-	newDiv.classList.add('the-fellowship')
+	//newDiv.classList.add('the-fellowship')
+	//newDiv.appendChild(document.createElement('ul')) //figured a li should be in an list holder
 	document.getElementById('Rivendell').appendChild(newDiv)
+	// document.getElementById('Rivendell').appendChild(newDiv)
 	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
 	//Rounding everyone up.
 	const eachHobbit = document.querySelectorAll('.hobbit')
+	const eachBuddy = document.querySelectorAll('.buddy')
 	let buddyList = document.getElementById('Rivendell')
-	buddyList = buddyList.childNodes.item(1)
-	buddyList = buddyList.firstElementChild
-	buddyList = buddyList.childNodes
-	p(buddyList.length)
-	newDiv.appendChild(buddyList[0])
-	newDiv.appendChild(buddyList[1])
-	newDiv.appendChild(buddyList[2])
-	//newDiv.appendChild(buddyList[3])
-	// newDiv.appendChild(buddyList[4])
-	//buddyList = buddyList.childNodes.item(4)
-	//HOOOOOOMEEEEEE
-	// newDiv.appendChild(buddyList.childNodes.item(0))
-	// newDiv.appendChild(buddyList.childNodes.item(1))
-	// newDiv.appendChild(buddyList.childNodes.item(2))
-	// newDiv.appendChild(buddyList.childNodes.item(3))
-	// newDiv.appendChild(buddyList.childNodes.item(4))
-	// p(buddyList.childNodes.item(4)
-
-
-	// for (let index = 0; index < buddyList.childNodes.length; index++) {
-	// 	newDiv.appendChild(buddyList.childNodes.item(index))
-	// 	p(index)
-	// }
-
-
-	// for (let index = 0; index < buddyList.length; index++) {
-	// 	// const Chow = buddyList[index];
-	// 	// p(Chow.innerText)
-	// 	p(index+" Before teahcing a buddy")
-	// 	p(index+" "+ buddyList[index].innerText)
-	// 	buddyList[index].classList.add('buddy'))
-	// 	p('End of the line')
-	// }
-	
-	// p(buddyList.childNodes.item(4))
-	//Moving hobbits now.
 	for (let i = 0; i < eachHobbit.length; i++){
-		newDiv.appendChild(eachHobbit[i])}
-
+		newDiv.appendChild(eachHobbit[i])
+		alert(eachHobbit[i].innerText + " has join the The FellowShip")
+	}
 	
-	// for (let x = 0; x < buddyList.length; x++){
-	// }
-	// for (let index = 0; index < array.length; index++) {
-	// 	const element = array[index];
-		
-	// }
-	// p(buddyList.length)
-	// for (let index = 0; index < buddyList.length; index++) {
-	// 	// const Chow = buddyList[index];
-	// 	// p(Chow.innerText)
-	// 	p(index+" Before teahcing a buddy")
-	// 	p(index+" "+ buddyList[index].innerText)
-	// 	newDiv.appendChild(buddyList[index])
-	// 	p('End of the line')
-	// }
-	
-	// after each character is added make an alert that they // have joined your party
-	//NEED TO ADD BACK//////////////////alert('The FellowShip has be forged!')
-	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
+	for (let i = 0; i < eachBuddy.length; i++) {
+		newDiv.appendChild(eachBuddy[i])
+		alert(eachBuddy[i].innerText + " has join the The FellowShip")
+	}
 }
 
 // COMMIT YOUR WORK
