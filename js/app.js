@@ -129,12 +129,37 @@ function makeBuddies() {
 	const ulTag = document.createElement('ul')
 	for (let i = 0; i < buddies.length; i++) {
 		const liTag = document.createElement('li')
+			//Make an id for them.
+		let str = buddies[i]
+		str = str.replaceAll(' ','-')
+		liTag.setAttribute("id", buddies[i])
 		liTag.innerText = buddies[i]
 		ulTag.appendChild(liTag)
 	}
 	asideTag.appendChild(ulTag)
 	// insert your aside as a child element of `rivendell`//Not having a R there is just plain evil.
 	document.getElementById('Rivendell').appendChild(asideTag)
+	
+	// Because the code below doesn't work, I am going to add an id above.
+	/////////QUESTION
+	// const newDiv = document.createElement('div')
+	// newDiv.classList.add('the-fellowship')
+	// document.getElementById('Rivendell').appendChild(newDiv)
+	// let buddyList = document.getElementById('Rivendell')
+	// buddyList = buddyList.childNodes.item(1)
+	// buddyList = buddyList.firstElementChild
+	// buddyList = buddyList.childNodes
+	// p(buddyList.length) //it prints out correct number
+	// newDiv.appendChild(buddyList[0])
+	// newDiv.appendChild(buddyList[1])
+	// newDiv.appendChild(buddyList[2])
+	// // newDiv.appendChild(buddyList[3]) 
+	// // newDiv.appendChild(buddyList[4])
+	// // Above the comment out lines work fine. 
+	// // Untill it hits 3. 
+	// // Uncaught TypeError: Failed to execute 'appendChild' on 'Node': 
+	// // parameter 1 is not of type 'Node'.
+	// // at makeBuddies (app.js:151:9)
 }
 
 // COMMIT YOUR WORK
@@ -153,7 +178,6 @@ function leaveTheShire() {
 	for (let i = 0; i < hobbitsList.length; i++) {
 		('Hi '+ i)
 		ul.appendChild(hobbitsList[i])
-		
 	}
 	document.getElementById('Rivendell').appendChild(ul)
 }
@@ -167,12 +191,10 @@ function leaveTheShire() {
 beautifulStranger()
 function beautifulStranger() {
 	console.log('7: beautifulStranger')
-	let buddyList = document.getElementById('Rivendell')
-	buddyList = buddyList.childNodes.item(1)
-	buddyList = buddyList.firstChild
-	buddyList = buddyList.childNodes.item(3)
+	let beautifulStranger = document.getElementById('Strider')
+	p(beautifulStranger)
 	// change the `'Strider'` text to `'Aragorn'`
-	buddyList = buddyList.innerText = 'Aragorn'
+	beautifulStranger.innerText = 'Aragorn' 
 }
 
 // COMMIT YOUR WORK
@@ -181,13 +203,75 @@ function beautifulStranger() {
 // ============
 // Chapter 8
 // ============
-
+// forgeTheFellowShip()
 function forgeTheFellowShip() {
 	console.log('8: forgeTheFellowShip')
 	// create a new div called `'the-fellowship'` within `rivendell`
+	const newDiv = document.createElement('div')
+	newDiv.classList.add('the-fellowship')
+	document.getElementById('Rivendell').appendChild(newDiv)
 	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
-	// after each character is added make an alert that they // have joined your party
+	//Rounding everyone up.
+	const eachHobbit = document.querySelectorAll('.hobbit')
+	let buddyList = document.getElementById('Rivendell')
+	buddyList = buddyList.childNodes.item(1)
+	buddyList = buddyList.firstElementChild
+	buddyList = buddyList.childNodes
+	p(buddyList.length)
+	newDiv.appendChild(buddyList[0])
+	newDiv.appendChild(buddyList[1])
+	newDiv.appendChild(buddyList[2])
+	//newDiv.appendChild(buddyList[3])
+	// newDiv.appendChild(buddyList[4])
+	//buddyList = buddyList.childNodes.item(4)
+	//HOOOOOOMEEEEEE
+	// newDiv.appendChild(buddyList.childNodes.item(0))
+	// newDiv.appendChild(buddyList.childNodes.item(1))
+	// newDiv.appendChild(buddyList.childNodes.item(2))
+	// newDiv.appendChild(buddyList.childNodes.item(3))
+	// newDiv.appendChild(buddyList.childNodes.item(4))
+	// p(buddyList.childNodes.item(4)
 
+
+	// for (let index = 0; index < buddyList.childNodes.length; index++) {
+	// 	newDiv.appendChild(buddyList.childNodes.item(index))
+	// 	p(index)
+	// }
+
+
+	// for (let index = 0; index < buddyList.length; index++) {
+	// 	// const Chow = buddyList[index];
+	// 	// p(Chow.innerText)
+	// 	p(index+" Before teahcing a buddy")
+	// 	p(index+" "+ buddyList[index].innerText)
+	// 	buddyList[index].classList.add('buddy'))
+	// 	p('End of the line')
+	// }
+	
+	// p(buddyList.childNodes.item(4))
+	//Moving hobbits now.
+	for (let i = 0; i < eachHobbit.length; i++){
+		newDiv.appendChild(eachHobbit[i])}
+
+	
+	// for (let x = 0; x < buddyList.length; x++){
+	// }
+	// for (let index = 0; index < array.length; index++) {
+	// 	const element = array[index];
+		
+	// }
+	// p(buddyList.length)
+	// for (let index = 0; index < buddyList.length; index++) {
+	// 	// const Chow = buddyList[index];
+	// 	// p(Chow.innerText)
+	// 	p(index+" Before teahcing a buddy")
+	// 	p(index+" "+ buddyList[index].innerText)
+	// 	newDiv.appendChild(buddyList[index])
+	// 	p('End of the line')
+	// }
+	
+	// after each character is added make an alert that they // have joined your party
+	//NEED TO ADD BACK//////////////////alert('The FellowShip has be forged!')
 	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
 }
 
