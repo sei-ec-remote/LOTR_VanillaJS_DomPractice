@@ -156,7 +156,9 @@ function leaveTheShire() {
 
 	// assemble the `hobbits` and move them to `rivendell`
 
-	// try grabbing a li then get parend and remove all children
+	// try grabbing a li then get parent and remove all children
+	const buddiesAsideGrab = document.querySelector('aside')
+	buddiesAsideGrab.remove()
 
 
 }
