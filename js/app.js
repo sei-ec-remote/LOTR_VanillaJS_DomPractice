@@ -104,14 +104,16 @@ function makeBaddies() {
 	// display an unordered list of baddies in Mordor
 	const baddiesList = document.createElement('ul')
 
+
 	for (let i = 0; i < baddies.length; i++){
-		let li = document.createElement('li')
-		li.setAttribute('class','baddy')
-		ul.appendChild(li)
-		li.innerText = baddies[i]
+		let liBaddy = document.createElement('li')
+		
+		liBaddy.setAttribute('class','baddy')
+		baddiesList.appendChild(liBaddy)
+		liBaddy.innerText = baddies[i]
 	}
 
-	document.getElementById(lands[2]).appendChild(ul)
+	document.getElementById(lands[2]).appendChild(baddiesList)
 	// give each of the baddies a class of "baddy"
 	// baddiesList.setAttribute('class', 'baddy')
 
@@ -130,11 +132,12 @@ function makeBuddies() {
 
 	// create an `aside` tag
 
+
 	// put an `unordered list` of the `'buddies'` in the aside
 
 	// insert your aside as a child element of `rivendell`
-}
 
+}
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 5 complete - Made the Buddies".
 
@@ -146,6 +149,10 @@ function leaveTheShire() {
 	console.log('6: leaveTheShire')
 
 	// assemble the `hobbits` and move them to `rivendell`
+
+	// try grabbing a li then get parend and remove all children
+
+
 }
 
 // COMMIT YOUR WORK
