@@ -29,15 +29,15 @@ function makeMiddleEarth() {
 	for (let i = 0; i < lands.length; i++){
 	
 	//   2a. creates an article tag (there should be one for each land when the loop is done)
-	let landTag = document.createElement('article')
+		let landTag = document.createElement('article')
 	//   2b. gives each land article an `id` tag of the corresponding land name
-	landTag.setAttribute('id',lands[i])
+		landTag.setAttribute('id',lands[i])
 	//   2c. includes an h1 with the name of the land inside each land article
-	const landHeader = document.createElement('h1')
-	landHeader.innerHTML = lands[i]
+		const landHeader = document.createElement('h1')
+		landHeader.innerHTML = lands[i]
 	//   2d. appends each land to the middle-earth section
-	landTag.appendChild(landHeader)
-	section.appendChild(landTag)
+		landTag.appendChild(landHeader)
+		section.appendChild(landTag)
 	}
 	// 3. append the section to the body of the DOM.
 	document.querySelector('body').appendChild(section)
@@ -116,7 +116,6 @@ function makeBaddies() {
 	document.getElementById(lands[2]).appendChild(baddiesList)
 	// give each of the baddies a class of "baddy"
 	// baddiesList.setAttribute('class', 'baddy')
-
 	// remember to append them to Mordor
 }
 
@@ -156,11 +155,27 @@ function leaveTheShire() {
 
 	// assemble the `hobbits` and move them to `rivendell`
 
-	// try grabbing a li then get parent and remove all children
-	const buddiesAsideGrab = document.querySelector('aside')
-	buddiesAsideGrab.remove()
+	document.getElementById('Frodo Baggins').remove()
+	document.getElementById('Samwise "Sam" Gamgee').remove()
+	document.getElementById('Meriadoc "Merry" Brandybuck').remove()
+	document.getElementById('Peregrin "Pippin" Took').remove()
 
+	let ul = document.createElement('ul')
 
+	for (let i = 0; i < hobbits.length; i++){
+		let li = document.createElement('li')
+		li.setAttribute('class','hobbit')
+		li.setAttribute('id',hobbits[i])
+		ul.appendChild(li)
+		li.innerText = hobbits[i]
+	}
+
+	document.getElementById(lands[1]).appendChild(ul)
+
+	const ringDiv = document.createElement('div')
+	ringDiv.setAttribute('id','the-ring')
+	ringDiv.setAttribute('class', 'magic-imbued-jewelry')
+	document.getElementById(hobbits[0]).appendChild(ringDiv)
 }
 
 // COMMIT YOUR WORK
@@ -174,6 +189,7 @@ function beautifulStranger() {
 	console.log('7: beautifulStranger')
 
 	// change the `'Strider'` text to `'Aragorn'`
+	cdocument.querySelector('aside')[3].innerHTML="Aragorn"
 }
 
 // COMMIT YOUR WORK
