@@ -135,7 +135,7 @@ function makeBuddies() {
 	for (let i = 0; i < buddies.length; i++) {
 		let li = document.createElement('li');
 		li.setAttribute('class', 'buddy')
-		li.setAttribute()
+		//li.setAttribute()
 	}
 	// insert your aside as a child element of `rivendell`
 }
@@ -149,6 +149,14 @@ function makeBuddies() {
 
 function leaveTheShire() {
 	console.log('6: leaveTheShire')
+
+	const hobbitsList = document.querySelector('.hobbit')
+	const rivendalle = document.getElementById(`${lands[1]}`)
+
+	for (let i = 0; i < hobbits.length; i++) {
+		hobbitsList.remove(document.getElementById(`#${hobbits[i]}`))
+		rivendalle.append(hobbitsList)
+	}
 
 	// assemble the `hobbits` and move them to `rivendell`
 }
