@@ -41,7 +41,7 @@ function makeMiddleEarth() {
 		const landHeader = document.createElement('h1')
 		landHeader.innerHTML= lands[i]
 		// console.log(middleEarthTag)
-
+	
 		//   2d. appends each land to the middle-earth section
 		landTag.appendChild(landHeader)
 		middleEarthTag.appendChild(landTag)
@@ -62,8 +62,8 @@ function makeHobbits() {
 	console.log('2: makeHobbits')
 
 	// display an `unordered list` of hobbits in the shire
-	const hobbitUL =document.createElement('ul')
-
+	const hobbitUL = document.createElement('ul')
+	hobbitUL.setAttribute('id', 'the-hobbits')
 	// give each hobbit a class of `hobbit`
 	for (let i = 0; i < hobbits.length; i++) { 
 		let shireLi = document.createElement('li')
@@ -117,15 +117,15 @@ function makeBaddies() {
 
 	// give each of the baddies a class of "baddy"
 	for (let i = 0; i < baddies.length; i++) {
-		let baddiesLi = document.createElement('li')
+		const baddiesLi = document.createElement('li')
 		baddiesLi.setAttribute('class', 'baddy')
 		baddiesLi.innerText = baddies[i]
 		baddiesUL.appendChild(baddiesLi)
 		// console.log(shireLi)
 	}
-	document.getElementById(lands[2]).appendChild(baddiesUL)
-
+	
 	// remember to append them to Mordor
+	document.getElementById(lands[2]).appendChild(baddiesUL)
 }
 
 // COMMIT YOUR WORK
@@ -142,19 +142,20 @@ function makeBuddies() {
 	const asideTag = document.createElement('aside')
 
 	// put an `unordered list` of the `'buddies'` in the aside
+	const buddiesUL = document.createElement('ul')
 	for (let i = 0; i < buddies.length; i++) {
-		let buddiesLi = document.createElement('li')
-		baddiesLi.setAttribute('class', 'baddy')
+		const buddiesLi = document.createElement('li')
+		buddiesLi.setAttribute('class', 'buddy')
+		buddiesLi.setAttribute('id', buddies[i])
 		buddiesLi.innerText = buddies[i]
 		buddiesUL.appendChild(buddiesLi)
-		
-		// console.log(shireLi)
+		// console.log(buddiesLi)
 	}
-	document.getElementById(lands[2]).appendChild(baddiesUL)
-
-
+	asideTag.appendChild(buddiesUL)
 	// insert your aside as a child element of `rivendell`
-} document.getElementById(lands[1]).appendChild(asideTag)
+	const rivendell = document.getElementById('Rivendell')
+	rivendell.appendChild(asideTag)
+}
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 5 complete - Made the Buddies".
@@ -167,6 +168,8 @@ function leaveTheShire() {
 	console.log('6: leaveTheShire')
 
 	// assemble the `hobbits` and move them to `rivendell`
+	const theHobbitsId = document.getElementById('the-hobbits')
+	document.getElementById('Rivendell').appendChild(theHobbitsId)
 }
 
 // COMMIT YOUR WORK
