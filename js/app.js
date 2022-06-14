@@ -281,7 +281,7 @@ function hornOfGondor() {
 	// Remove `Boromir` from the Fellowship
 	alert ("The horn of gondor has been blown!!")
 	document.getElementById(buddies[4]).remove()
-	
+
 }
 
 // COMMIT YOUR WORK
@@ -295,9 +295,29 @@ function itsDangerousToGoAlone() {
 	console.log('11: itsDangerousToGoAlone')
 	// take `Frodo` and `Sam` out of the fellowship and move // them to `Mordor`
 	// add a div with an id of `'mount-doom'` to `Mordor`
-}
 
-//append things to mordor
+	for(let i = 0; i < 2 ; i++) {
+		document.getElementById(hobbits[i]).remove()
+		const ul = document.createElement("ul")
+		let li = document.createElement("li")
+		li.setAttribute("id", hobbits[i])
+		li.setAttribute("class", "hobbits")
+		ul.appendChild(li)
+		li.innerText = hobbits[i]
+		document.getElementById(lands[2]).appendChild(ul)
+		console.log(li)
+	}
+
+	const theRing = document.createElement("div")
+		theRing.setAttribute("id", "the-ring")
+		theRing.setAttribute("class", "magic-imbued-jewelry")
+		const frodo = document.getElementById("Frodo Baggins")
+		frodo.appendChild(theRing)
+
+		const mountDoom = document.createElement('div')
+	mountDoom.setAttribute('id', 'mount-doom')
+	document.getElementById(lands[2]).appendChild(mountDoom)
+}
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 11 complete - Sam and Frodo are in Mordor and Mount Doom has been created"
