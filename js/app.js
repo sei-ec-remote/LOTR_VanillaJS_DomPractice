@@ -229,7 +229,7 @@ function forgeTheFellowShip() {
 
 function theBalrog() {
 	console.log('9: theBalrog')
-	
+
 	// change the `'Gandalf'` text to `'Gandalf the White'`
 	const gandalfText = document.getElementById(buddies[0])
 	gandalfText.innerText = 'Gandalf the White'
@@ -274,8 +274,9 @@ function itsDangerousToGoAlone() {
 	mordorId.appendChild(document.getElementById(hobbits[1]))
 
 	// add a div with an id of `'mount-doom'` to `Mordor`
-	const mountDoomDiv = document.createElement('div')
-	mountDoomDiv.setAttribute('id', 'mount-doom')
+	const mordorDiv = document.createElement('div')
+	mordorDiv.setAttribute('id', 'mount-doom')
+	mordorId.appendChild(mordorDiv)
 }
 
 // COMMIT YOUR WORK
@@ -287,9 +288,22 @@ function itsDangerousToGoAlone() {
 
 function weWantsIt() {
 	console.log('12: weWantsIt')
+
 	// Create a div with an id of `'gollum'` and add it to Mordor
+	const gollumDiv = document.createElement('div')
+	gollumDiv.setAttribute('id', 'gollum')
+	console.log(document.getElementById('Mordor'))
+	// document.getElementById('Mordor').appendChild(gollumDiv)
+
 	// Remove `the ring` from `Frodo` and give it to `Gollum`
+	// const frodoInfo = document.getElementById(hobbits[0])
+	// console.log(frodoInfo)
+	const ringId=document.getElementById('the-ring')
+	gollumDiv.appendChild(ringId)
+	
 	// Move Gollum into Mount Doom
+	console.log(document.getElementById('mount-doom'))
+	document.getElementById('mount-doom').appendChild(gollumDiv)
 }
 
 // COMMIT YOUR WORK
