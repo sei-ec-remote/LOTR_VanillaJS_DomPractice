@@ -137,6 +137,7 @@ function makeBuddies() {
 	// put an `unordered list` of the `'buddies'` in the aside
 	for (let i = 0; i < buddies.length; i++){
 		let liBuddy = document.createElement('li')
+		liBuddy.setAttribute("id",buddies[i])
 		buddiesAside.appendChild(liBuddy)
 		liBuddy.innerText = buddies[i]
 	}	
@@ -189,7 +190,7 @@ function beautifulStranger() {
 	console.log('7: beautifulStranger')
 
 	// change the `'Strider'` text to `'Aragorn'`
-	cdocument.querySelector('aside')[3].innerHTML="Aragorn"
+	document.getElementById('Strider').innerHTML="Aragorn"
 }
 
 // COMMIT YOUR WORK
