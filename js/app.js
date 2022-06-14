@@ -201,13 +201,6 @@ function beautifulStranger() {
 	console.log('7: beautifulStranger')
 
 	// // change the `'Strider'` text to `'Aragorn'`
-	// let newName = document.getElementById(buddy)
-	// newName.fill
-// for (let i=, i=buddies[3], i++)
-// buddies.fill('Gandalf the Grey', 'Legolas', 'Gimli', 'Aragorn', 'Boromir')	
-// 	console.log(buddies[3])
-// 	// document.getElementById(buddies[3]),
-// }
 
 document.getElementById(buddies[3]).innerHTML= 'Aragon'
 
@@ -225,6 +218,35 @@ function forgeTheFellowShip() {
 	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
 	// after each character is added make an alert that they // have joined your party
 
+
+	const theFellowship = document.createElement('div')
+	theFellowship.setAttribute('id', 'theFellowship')
+	document.querySelector('#Rivendell').appendChild(theFellowship)
+	
+	const friends = document.createElement('ul')
+	friends.setAttribute('id', 'friends')
+	theFellowship.appendChild(friends)	
+
+	for(let i = 0; i < hobbits.length; i++) {
+		const friends = document.createElement('li')
+		friends.classList.add('squad')
+		friends.setAttribute('id', hobbits[i])
+		friends.appendChild(friends)
+
+		document.getElementById(hobbits[i]).appendChild(friends)
+		// alert (`${hobbits[i]} have joined your party`)
+	}
+
+	for(let i = 0; i < buddies.length; i++) {
+		const friends = document.createElement('li')
+		friends.classList.add('squad')
+		friends.setAttribute('id', buddies[i])
+		friends.appendChild(friends)
+
+		document.getElementById(buddies[i]).appendChild(friends)
+		// alert (`${buddies[i]} have joined party party`)
+	}
+
 	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
 }
 
@@ -238,6 +260,7 @@ function forgeTheFellowShip() {
 function theBalrog() {
 	console.log('9: theBalrog')
 	// change the `'Gandalf'` text to `'Gandalf the White'`
+	
 	// apply the following style to the element, make the // background 'white', add a grey border
 }
 
@@ -267,6 +290,8 @@ function itsDangerousToGoAlone() {
 	// take `Frodo` and `Sam` out of the fellowship and move // them to `Mordor`
 	// add a div with an id of `'mount-doom'` to `Mordor`
 }
+
+//append things to mordor
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 11 complete - Sam and Frodo are in Mordor and Mount Doom has been created"
