@@ -181,6 +181,7 @@ function leaveTheShire() {
 
 function beautifulStranger() {
 	console.log('7: beautifulStranger')
+
 	const striderText = document.getElementById('Strider')
 	striderText.innerText = 'Aragorn'
 	striderText.setAttribute('id', 'Aragon')
@@ -197,9 +198,24 @@ function beautifulStranger() {
 
 function forgeTheFellowShip() {
 	console.log('8: forgeTheFellowShip')
+
 	// create a new div called `'the-fellowship'` within `rivendell`
+	const fellowshipDiv = document.createElement('div', 'the-fellowship')
+	// console.log(fellowshipDiv)
+	document.getElementById('Rivendell').appendChild(fellowshipDiv)
+
 	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
 	// after each character is added make an alert that they // have joined your party
+	const hobbitsSelectorAll = document.querySelectorAll('.hobbit')
+	const buddiesSelectorAll = document.querySelectorAll('.buddy')
+	for (let i = 0; i < buddiesSelectorAll.length; i++) {
+		fellowshipDiv.appendChild(buddiesSelectorAll[i])
+		alert(`${buddies[i]} has joined your party!`)
+	}
+	for (let i = 0; i < hobbitsSelectorAll.length; i++) {
+		fellowshipDiv.appendChild(hobbitsSelectorAll[i])
+		alert(`${hobbits[i]} has joined your party!`)
+	}
 
 	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
 }
