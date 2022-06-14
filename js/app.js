@@ -109,7 +109,7 @@ function makeBaddies() {
 	li.setAttribute('id', baddies[i])
 	li.setAttribute("class", "baddy")
 	baddiesUL.appendChild(li)
-	li.innerText = [i]
+	li.innerText = baddies[i]
 	console.log(li)
 	}
 	// remember to append them to Mordor
@@ -187,8 +187,28 @@ function beautifulStranger() {
 function forgeTheFellowShip() {
 	console.log('8: forgeTheFellowShip')
 	// create a new div called `'the-fellowship'` within `rivendell`
+	const theFellowship = document.createElement("div")
+    theFellowship.setAttribute("id", "the-fellowship")
+    document.getElementById(lands[1]).appendChild(theFellowship)
+    const friends = document.createElement("ul")
+    friends.setAttribute("id", "theCrew")
+    theFellowship.appendChild(friends)
+    for(let i = 0; i < hobbits.length; i++) {
+    const theCrew = document.createElement("li")
+    friends.classList.add("squad")
+    friends.setAttribute("id", hobbits[i])
+    friends.appendChild(friends)
+    document.getElementById(hobbits[i]).appendChild(friends)
 	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
+	for(let i = 0; i < buddies.length; i++) {
+		const friends = document.createElement("li")
+		friends.classList.add("squad")
+		friends.setAttribute("id", buddies[i])
+		friends.appendChild(friends)
+		document.getElementById(buddies[i]).appendChild(friends)
+	}}
 	// after each character is added make an alert that they // have joined your party
+
 
 	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
 }
@@ -203,8 +223,13 @@ function forgeTheFellowShip() {
 function theBalrog() {
 	console.log('9: theBalrog')
 	// change the `'Gandalf'` text to `'Gandalf the White'`
+	document.getElementById(buddies[0]).innerText = "Gandalf the White"
 	// apply the following style to the element, make the // background 'white', add a grey border
+	
+    let gandalfBorder = document.getElementById(buddies[0])
+    gandalfBorder.setAttribute("style", "border: 5px solid grey; background: white")
 }
+
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 9 complete - Updated Gandalf"
