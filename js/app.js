@@ -210,11 +210,11 @@ function forgeTheFellowShip() {
 	const buddiesSelectorAll = document.querySelectorAll('.buddy')
 	for (let i = 0; i < buddiesSelectorAll.length; i++) {
 		fellowshipDiv.appendChild(buddiesSelectorAll[i])
-		alert(`${buddies[i]} has joined your party!`)
+		// alert(`${buddies[i]} has joined your party!`)
 	}
 	for (let i = 0; i < hobbitsSelectorAll.length; i++) {
 		fellowshipDiv.appendChild(hobbitsSelectorAll[i])
-		alert(`${hobbits[i]} has joined your party!`)
+		// alert(`${hobbits[i]} has joined your party!`)
 	}
 
 	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
@@ -315,8 +315,16 @@ function weWantsIt() {
 
 function thereAndBackAgain() {
 	console.log('13: thereAndBackAgain')
-	// remove `Gollum` and `the Ring` from the document
+
+	// remove `Gollum` and `the Ring` from the document 
+	document.getElementById('gollum').remove()
+	// document.getElementById('the-ring').remove()
+
 	// Move all the `hobbits` back to `the shire`
+	const theHobbits = document.getElementsByClassName('hobbit')
+	for (let i = 0; i < theHobbits.length; i++) {
+		document.getElementById(lands[0]).appendChild(theHobbits[i])
+	}
 }
 
 // COMMIT YOUR WORK
