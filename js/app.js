@@ -149,9 +149,10 @@ function makeBuddies() {
 		li.innerText = buddies[i]
 		console.log(li)
 	}
+	// insert your aside as a child element of `rivendell`
 	document.getElementById(lands[1]).appendChild(ul)
 
-	// insert your aside as a child element of `rivendell`
+	
 }
 
 // COMMIT YOUR WORK
@@ -163,6 +164,7 @@ function makeBuddies() {
 
 function leaveTheShire() {
 	console.log('6: leaveTheShire')
+// assemble the `hobbits` and move them to `rivendell`
 
 	for(let i = 0; i < hobbits.length; i++) {
 		document.getElementById(hobbits[i]).remove()
@@ -184,7 +186,7 @@ function leaveTheShire() {
 	theRing.setAttribute("class", "magic-imbued-jewelry")
 	const frodo = document.getElementById("Frodo Baggins")
 	frodo.appendChild(theRing)
-	// assemble the `hobbits` and move them to `rivendell`
+	
 	
 }
 
@@ -198,9 +200,18 @@ function leaveTheShire() {
 function beautifulStranger() {
 	console.log('7: beautifulStranger')
 
-	// change the `'Strider'` text to `'Aragorn'`
-}
+	// // change the `'Strider'` text to `'Aragorn'`
+	// let newName = document.getElementById(buddy)
+	// newName.fill
+// for (let i=, i=buddies[3], i++)
+// buddies.fill('Gandalf the Grey', 'Legolas', 'Gimli', 'Aragorn', 'Boromir')	
+// 	console.log(buddies[3])
+// 	// document.getElementById(buddies[3]),
+// }
 
+document.getElementById(buddies[3]).innerHTML= 'Aragon'
+
+}
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 7 complete - Strider is changed to Aragorn"
 
