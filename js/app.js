@@ -220,8 +220,8 @@ function forgeTheFellowShip() {
         newHobbitli.classList.add('newHobbitli')
         newHobbitli.setAttribute('id', hobbits[i])
         fellowshipUl.appendChild(newHobbitli)
-		
-        alert(hobbits[i] + " has joined the Fellowship")
+
+        // alert(hobbits[i] + " has joined the Fellowship")
     }
 
 	for (i = 0; i < buddies.length; i++) {
@@ -231,7 +231,7 @@ function forgeTheFellowShip() {
 	
         fellowshipUl.appendChild(newBuddyLi)
 
-        alert(buddies[i] + " has joined the Fellowship")
+        // alert(buddies[i] + " has joined the Fellowship")
     }
 
 	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
@@ -246,8 +246,14 @@ function forgeTheFellowShip() {
 
 function theBalrog() {
 	console.log('9: theBalrog')
+
+	gandalfElement = document.getElementById(buddies[0])
 	// change the `'Gandalf'` text to `'Gandalf the White'`
+	gandalfElement.innerHTML="Gandalf the White"
 	// apply the following style to the element, make the // background 'white', add a grey border
+	gandalfElement.style.background = 'white'
+	gandalfElement.style.border = "thick solid grey"
+
 }
 
 // COMMIT YOUR WORK
