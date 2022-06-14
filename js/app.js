@@ -229,6 +229,7 @@ function forgeTheFellowShip() {
 
 function theBalrog() {
 	console.log('9: theBalrog')
+	
 	// change the `'Gandalf'` text to `'Gandalf the White'`
 	const gandalfText = document.getElementById(buddies[0])
 	gandalfText.innerText = 'Gandalf the White'
@@ -248,6 +249,7 @@ function theBalrog() {
 
 function hornOfGondor() {
 	console.log('10: hornOfGondor')
+
 	// pop up an alert that the horn of gondor has been blown
 	alert('The horn of gondor has been blown!')
 	// Boromir's been killed by the Uruk-hai!
@@ -265,8 +267,15 @@ function hornOfGondor() {
 
 function itsDangerousToGoAlone() {
 	console.log('11: itsDangerousToGoAlone')
+
 	// take `Frodo` and `Sam` out of the fellowship and move // them to `Mordor`
+	const mordorId = document.getElementById('Mordor')
+	mordorId.appendChild(document.getElementById(hobbits[0]))
+	mordorId.appendChild(document.getElementById(hobbits[1]))
+
 	// add a div with an id of `'mount-doom'` to `Mordor`
+	const mountDoomDiv = document.createElement('div')
+	mountDoomDiv.setAttribute('id', 'mount-doom')
 }
 
 // COMMIT YOUR WORK
