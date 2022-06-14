@@ -137,6 +137,7 @@ function makeBuddies() {
 	// put an `unordered list` of the `'buddies'` in the aside
 	for (let i = 0; i < buddies.length; i++){
 		let liBuddy = document.createElement('li')
+
 		liBuddy.setAttribute("id",buddies[i])
 		buddiesAside.appendChild(liBuddy)
 		liBuddy.innerText = buddies[i]
@@ -190,7 +191,7 @@ function beautifulStranger() {
 	console.log('7: beautifulStranger')
 
 	// change the `'Strider'` text to `'Aragorn'`
-	document.getElementById('Strider').innerHTML="Aragorn"
+	document.getElementById(buddies[3]).innerHTML="Aragorn"
 }
 
 // COMMIT YOUR WORK
@@ -205,6 +206,33 @@ function forgeTheFellowShip() {
 	// create a new div called `'the-fellowship'` within `rivendell`
 	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
 	// after each character is added make an alert that they // have joined your party
+
+	let fellowshipDiv = document.createElement('div')
+	fellowshipDiv.setAttribute('id','fellowshipDiv')
+	document.getElementById(lands[1]).appendChild(fellowshipDiv)
+
+	const fellowshipUl = document.createElement('ul')
+	fellowshipUl.setAttribute('id','fellowshipUl')
+	fellowshipDiv.append(fellowshipUl)
+
+	for (i = 0; i < hobbits.length; i++) {
+        const newHobbitli = document.createElement('li')
+        newHobbitli.classList.add('newHobbitli')
+        newHobbitli.setAttribute('id', hobbits[i])
+        fellowshipUl.appendChild(newHobbitli)
+		
+        alert(hobbits[i] + " has joined the Fellowship")
+    }
+
+	for (i = 0; i < buddies.length; i++) {
+        const newBuddyLi = document.createElement('li')
+        newBuddyLi.classList.add('newBuddyLi')
+        newBuddyLi.setAttribute('id', buddies[i])
+	
+        fellowshipUl.appendChild(newBuddyLi)
+
+        alert(buddies[i] + " has joined the Fellowship")
+    }
 
 	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
 }
