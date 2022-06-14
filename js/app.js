@@ -136,6 +136,7 @@ function makeBuddies() {
 		liTag.classList.add('buddy')
 		liTag.innerText = buddies[i]
 		ulTag.appendChild(liTag)
+		//p(liTag)
 	}
 	asideTag.appendChild(ulTag)
 	// insert your aside as a child element of `rivendell`//Not having a R there is just plain evil.
@@ -234,11 +235,16 @@ function forgeTheFellowShip() {
 // ============
 // Chapter 9
 // ============
-
+theBalrog()
 function theBalrog() {
 	console.log('9: theBalrog')
 	// change the `'Gandalf'` text to `'Gandalf the White'`
-	// apply the following style to the element, make the // background 'white', add a grey border
+	const mrWhite = document.getElementById('Gandalf the Grey')
+	mrWhite.innerText = 'Gandalf the White'
+	// apply the following style to the element, make the 
+	// background 'white', add a grey border
+	mrWhite.style.backgroundColor = 'white'
+	mrWhite.style.border = 'solid gray'
 }
 
 // COMMIT YOUR WORK
