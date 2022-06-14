@@ -308,9 +308,9 @@ function itsDangerousToGoAlone() {
 		console.log(li)
 	}
 
-	const theRing = document.createElement("div")
-		theRing.setAttribute("id", "the-ring")
-		theRing.setAttribute("class", "magic-imbued-jewelry")
+	const theRing = document.createElement('div')
+		theRing.setAttribute('id', 'the-ring')
+		theRing.setAttribute("class", 'magic-imbued-jewelry')
 		const frodo = document.getElementById("Frodo Baggins")
 		frodo.appendChild(theRing)
 
@@ -331,6 +331,23 @@ function weWantsIt() {
 	// Create a div with an id of `'gollum'` and add it to Mordor
 	// Remove `the ring` from `Frodo` and give it to `Gollum`
 	// Move Gollum into Mount Doom
+
+	const gollumDiv = document.createElement('div')
+		gollumDiv.id = "gollum"
+		document.getElementById(lands[2]).appendChild(gollumDiv)
+
+	const theRing = document.createElement('div')
+		theRing.setAttribute('id', 'the-ring')
+		theRing.setAttribute("class", 'magic-imbued-jewelry')
+		document.getElementById('gollum')
+		gollumDiv.appendChild(theRing)
+
+		document.getElementById('Frodo Baggins')
+		document.getElementById('the-ring').remove()
+
+
+		document.getElementById('mount-doom').appendChild(gollumDiv)
+		
 }
 
 // COMMIT YOUR WORK
