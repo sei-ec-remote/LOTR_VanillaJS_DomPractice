@@ -58,6 +58,7 @@ function makeHobbits() {
 	for(let i=0; i<hobbits.length; i++){
 		const hob = document.createElement("li")
 		hob.classList.add("hobbit")
+		hob.setAttribute("id",hobbits[i])
 		hob.innerText = hobbits[i]
 		hobbitList.appendChild(hob)
 	}
@@ -101,6 +102,7 @@ function keepItSecretKeepItSafe() {
 function makeBaddies() {
 	console.log('4: makeBaddies')
 	const baddiesList = document.createElement("ul")
+	baddiesList.setAttribute("id","bady")
 	for(let i=0; i<baddies.length; i++){
 		const baddie = document.createElement("li")
 		baddie.classList.add("baddy")
@@ -239,6 +241,11 @@ function hornOfGondor() {
 
 function itsDangerousToGoAlone() {
 	console.log('11: itsDangerousToGoAlone')
+	const mountDoom = document.createElement("div")
+	mountDoom.setAttribute("id","mount-doom")
+	document.getElementById("Mordor").appendChild(mountDoom)
+	document.getElementById("bady").appendChild(document.getElementById("Frodo Baggins"))
+	document.getElementById("bady").appendChild(document.getElementById(`Samwise "Sam" Gamgee`))
 	// take `Frodo` and `Sam` out of the fellowship and move // them to `Mordor`
 	// add a div with an id of `'mount-doom'` to `Mordor`
 }
