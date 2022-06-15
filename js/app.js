@@ -281,6 +281,7 @@ function itsDangerousToGoAlone() {
 	Mordor.appendChild(Frodo)
 	Mordor.appendChild(Sam)
 	// add a div with an id of `'mount-doom'` to `Mordor`
+	Mordor.appendChild(document.createElement('div'))
 }
 
 // COMMIT YOUR WORK
