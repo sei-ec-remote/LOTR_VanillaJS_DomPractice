@@ -277,7 +277,9 @@ function itsDangerousToGoAlone() {
 	// them to `Mordor`
 	let Mordor = document.getElementById('Mordor') //this grab right
 	let Frodo = document.querySelectorAll('li.hobbit')[0]
+	let Sam = document.querySelectorAll('li.hobbit')[1]
 	Mordor.appendChild(Frodo)
+	Mordor.appendChild(Sam)
 	// add a div with an id of `'mount-doom'` to `Mordor`
 }
 
