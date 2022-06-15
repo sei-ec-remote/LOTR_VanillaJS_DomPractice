@@ -64,8 +64,9 @@ function makeHobbits() {
 		hobbitLI.innerText = hobbits[i]
 		hobbitUL.appendChild(hobbitLI)
 		
-		document.getElementById(lands[0]).appendChild(hobbitUL)
 	}
+
+	document.getElementById(lands[0]).appendChild(hobbitUL)
 }
 
 	// hint: create a 'ul' outside the loop into which to append the 'li's
@@ -177,7 +178,7 @@ function leaveTheShire() {
 	const rivendalle = document.getElementById(`${lands[1]}`)
 	
 for (let i = 0; i < hobbits.length; i++) {
-	hobbitsList. remove(document.getElementById(`#${hobbits[i]}`))
+	hobbitsList.remove(document.getElementById(`${hobbits[i]}`))
 	rivendalle.append.apply(`${hobbits[i]}`)
 }
 }
@@ -194,6 +195,7 @@ function beautifulStranger() {
 	console.log('7: beautifulStranger')
 
 	// change the `'Strider'` text to `'Aragorn'`
+	document.getElementById(buddies[3]).innerText = "Aragon"
 }
 
 // COMMIT YOUR WORK
@@ -206,11 +208,37 @@ function beautifulStranger() {
 function forgeTheFellowShip() {
 	console.log('8: forgeTheFellowShip')
 	// create a new div called `'the-fellowship'` within `rivendell`
+	
+	const theFellowship = document.createElement("div")
+	theFellowship.setAttribute("id", "the-fellowship")
+	document.getElementById(lands[1]).appendChild(theFellowship)
+
+	const friends = document.createElement("ul")
+	friends.setAttribute("id", "theCrew")
+	theFellowship.appendChild(friends)
+	for(let i = 0; i < hobbits.length; i++) {
+		
+	const theCrew = document.createElement("li")
+	friends.classList.add("squad")
+	friends.setAttribute("id", hobbits[i])
+	friends.appendChild(friends)
+
+	document.getElementById(hobbits[i]).appendChild(friends)
+	// alert(`${hobbits[i]} have join your party.`)}
+	for(let i = 0; i < buddies.length; i++) {
+	const friends = document.createElement("li")
+	friends.classList.add("squad")
+	friends.setAttribute("id", buddies[i])
+	friends.appendChild(friends)
+	document.getElementById(buddies[i]).appendChild(friends)
+		// alert(`${buddies[i]} have join your party.`)
+	
+	}}}
 	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
 	// after each character is added make an alert that they // have joined your party
 
-	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
-}
+	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your 
+	// Inspector tools to make sure that it worked.
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 8 complete - The Fellowship is created"
@@ -223,7 +251,13 @@ function theBalrog() {
 	console.log('9: theBalrog')
 	// change the `'Gandalf'` text to `'Gandalf the White'`
 	// apply the following style to the element, make the // background 'white', add a grey border
+	
+	document.getElementById(buddies[0]).innerText = "Gandalf the White"
+
+	let gandalfBorder = document.getElementById(buddies[0])
+	gandalfBorder.setAttribute("style", "border: 5px solid grey; background: white")
 }
+
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 9 complete - Updated Gandalf"
@@ -235,49 +269,105 @@ function theBalrog() {
 function hornOfGondor() {
 	console.log('10: hornOfGondor')
 	// pop up an alert that the horn of gondor has been blown
-	// Boromir's been killed by the Uruk-hai!
-	// Remove `Boromir` from the Fellowship
+	alert(`The horn of gondor has been blown!`)
+
+// 	// Boromir's been killed by the Uruk-hai!
+	alert(`Boromir's been killed by the Uruk-hai!`)
+// 	// Remove `Boromir` from the Fellowship
+	  document.getElementById(buddies[4]).remove()
+	
 }
 
-// COMMIT YOUR WORK
-// The commit message should read: "Chapter 10 complete - horn of gandor blew and Boromir is dead"
+// // COMMIT YOUR WORK
+// // The commit message should read: "Chapter 10 complete - horn of gandor blew and Boromir is dead"
 
-// ============
-// Chapter 11
-// ============
+// // ============
+// // Chapter 11
+// // ============
 
 function itsDangerousToGoAlone() {
 	console.log('11: itsDangerousToGoAlone')
-	// take `Frodo` and `Sam` out of the fellowship and move // them to `Mordor`
-	// add a div with an id of `'mount-doom'` to `Mordor`
+
+// 	// take `Frodo` and `Sam` out of the fellowship and move // them to `Mordor`
+	// document.getElementById(hobbits[0]).remove()
+	// document.getElementById(hobbits[1]).remove()
+
+	// const frodo = document.querySelectorAll("li.hobbits")[0]
+	// const sam = document.querySelectorAll("li.hobbits")[1]
+	// const mordor = document.getElementById("Mordor")
+	// mordor.appendChild(frodo)
+
+	let Mordor = document.getElementById("Mordor")
+	let Frodo = document.querySelectorAll("li.hobbit")[0]
+	let Sam = document.querySelectorAll("li.hobbit")[1]
+	Mordor.appendChild(Frodo)
+	Mordor.appendChild(Sam)
+
+
+
+// lands[2].appendChild(document.getElementById[hobbits(0, 1)])
+
+// 	// add a div with an id of `'mount-doom'` to `Mordor`
+	newDiv = document.createElement("div")
+	newDiv.setAttribute("id", "mount-doom")
+	Mordor.appendChild(newDiv)
+	//appenchild?
 }
 
-// COMMIT YOUR WORK
-// The commit message should read: "Chapter 11 complete - Sam and Frodo are in Mordor and Mount Doom has been created"
+// // COMMIT YOUR WORK
+// // The commit message should read: "Chapter 11 complete - Sam and Frodo are in Mordor and Mount Doom has been created"
 
-// ============
-// Chapter 12
-// ============
+// // ============
+// // Chapter 12
+// // ============
 
 function weWantsIt() {
 	console.log('12: weWantsIt')
-	// Create a div with an id of `'gollum'` and add it to Mordor
-	// Remove `the ring` from `Frodo` and give it to `Gollum`
-	// Move Gollum into Mount Doom
+// 	// Create a div with an id of `'gollum'` and add it to Mordor
+
+	const Mordor = document.getElementById("Mordor")
+	const gollumDiv = document.createElement("div")
+	gollumDiv.setAttribute("id", "gollum")
+	Mordor.appendChild(gollum)
+// 	// Remove `the ring` from `Frodo` and give it to `Gollum`
+	gollumDiv.appendChild(document.getElementById("the-ring"))
+
+// 	// Move Gollum into Mount Doom
+	document.getElementById("mount-doom")
 }
 
-// COMMIT YOUR WORK
-// The commit message should read: "Chapter 12 complete - Gollum is trying to get the ring".
+// // COMMIT YOUR WORK
+// // The commit message should read: "Chapter 12 complete - Gollum is trying to get the ring".
 
-// ============
-// Chapter 13
-// ============
+// // ============
+// // Chapter 13
+// // ============
 
 function thereAndBackAgain() {
 	console.log('13: thereAndBackAgain')
-	// remove `Gollum` and `the Ring` from the document
-	// Move all the `hobbits` back to `the shire`
+
+// 	remove `Gollum` and `the Ring` from the document
+	document.getElementById("gollum").remove()
+	
+
+// 	Move all the `hobbits` back to `the shire`
+	const newShire = document.getElementById("The-Shire")
+	const hobbits = document.getElementsByClassName("hobbit")
+	for (let i = 0; i < hobbits.length; i++) {
+		hobbits[i].appendChild(theShire) 
+
+		
+	}
+
+
+	// newShire.appendChild(document.getElementById)
+	// document.getElementByIdByClassName("hobbit")//
+
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+
+})
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 13 complete -Gollum and the ring are gone, the baddies are done, and the hobbits are back in the shire".
