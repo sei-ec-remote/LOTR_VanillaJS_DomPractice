@@ -31,8 +31,8 @@ function makeMiddleEarth() {
 	//   2b. gives each land article an `id` tag of the corresponding land name
 	landsArticle.id = lands[i]
 	//   2c. includes an h1 with the name of the land inside each land article
-	const landsArray = document.createElement('h1')
-	landsArray.textContent = lands[i]
+	const h1 = document.createElement('h1')
+	h1.textContent = lands[i]
 	//   2d. appends each land to the middle-earth section
 	section.appendChild(landsArticle)
 	// // 3. append the section to the body of the DOM.
@@ -55,6 +55,7 @@ function makeHobbits() {
 
 	for (let i = 0; i < hobbits.length; i++) {
 		const liHobbits = document.createElement('li')
+		liHobbits.textContent = hobbits[i]
 	// give each hobbit a class of `hobbit`
 		liHobbits.className = 'hobbit'
 		shireHobbits.appendChild(liHobbits)
@@ -75,10 +76,15 @@ function keepItSecretKeepItSafe() {
 	console.log('3: keepItSecretKeepItSafe')
 
 	// create a div with an id of `'the-ring'`
+	const theRing = document.createElement('div')
+	theRing.id = ('the-ring')
 
 	// give the div a class of `'magic-imbued-jewelry'`
-
+	theRing.className = 'magic-imbued-jewelry'
 	// add the ring as a child of `Frodo`
+	const shireHobbits = document.querySelector('ul')
+	const frodoBaggins = shireHobbits.children[0]
+	frodoBaggins.appendChild(theRing) 
 }
 
 // COMMIT YOUR WORK
