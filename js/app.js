@@ -49,20 +49,20 @@ document.body.appendChild(section)
 function makeHobbits() {
 	console.log('2: makeHobbits')
 	// display an `unordered list` of hobbits in the shire
-	const theShire = document.getElementById('The-Shire')
-	const shireHobbits = document.createElement('ul')
-	shireHobbits.className = 'hobbits'
+	const inShire = document.getElementById('The-Shire')
+	const ulHobbits = document.createElement('ul')
+	ulHobbits.className = 'hobbits'
 
 	for (let i = 0; i < hobbits.length; i++) {
 		const liHobbits = document.createElement('li')
 		liHobbits.textContent = hobbits[i]
 	// give each hobbit a class of `hobbit`
 		liHobbits.className = 'hobbit'
-		shireHobbits.appendChild(liHobbits)
+		ulHobbits.appendChild(liHobbits)
 	// hint: create a 'ul' outside the loop into which to append the 'li's
 	// hint: get 'The-Shire' by using its id
 	}
-	theShire.appendChild(shireHobbits)
+	inShire.appendChild(ulHobbits)
 }
 
 // COMMIT YOUR WORK
@@ -82,8 +82,8 @@ function keepItSecretKeepItSafe() {
 	// give the div a class of `'magic-imbued-jewelry'`
 	theRing.className = 'magic-imbued-jewelry'
 	// add the ring as a child of `Frodo`
-	const shireHobbits = document.querySelector('ul')
-	const frodoBaggins = shireHobbits.children[0]
+	const ulHobbits = document.querySelector('ul')
+	const frodoBaggins = ulHobbits.children[0]
 	frodoBaggins.appendChild(theRing) 
 }
 
@@ -148,6 +148,9 @@ function leaveTheShire() {
 	console.log('6: leaveTheShire')
 
 	// assemble the `hobbits` and move them to `rivendell`
+	const ulHobbits = document.getElementById('hobbits')
+	const rivendell = document.getElementById('Rivendell')
+	rivendell.appendChild(ulHobbits[0])
 }
 
 // COMMIT YOUR WORK
