@@ -84,7 +84,7 @@ function keepItSecretKeepItSafe() {
 	const ringDiv = document.createElement("div")
 	ringDiv.setAttribute("id","the-ring")
 	ringDiv.classList.add("magic-imbued-jewelry")
-	document.querySelectorAll(".hobbit")[0].appendChild(ringDiv)
+	document.getElementById("Frodo Baggins").appendChild(ringDiv)
 	// create a div with an id of `'the-ring'`
 
 	// give the div a class of `'magic-imbued-jewelry'`
@@ -262,6 +262,12 @@ function weWantsIt() {
 	// Create a div with an id of `'gollum'` and add it to Mordor
 	// Remove `the ring` from `Frodo` and give it to `Gollum`
 	// Move Gollum into Mount Doom
+	const gollum = document.createElement("div")
+	gollum.setAttribute("id","gollum")
+	document.getElementById("Mordor").appendChild(gollum)
+	document.getElementById("gollum").appendChild(document.getElementById("the-ring"))
+	document.getElementById("mount-doom").appendChild(document.getElementById("gollum"))
+
 }
 
 // COMMIT YOUR WORK
