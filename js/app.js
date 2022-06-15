@@ -248,6 +248,9 @@ function forgeTheFellowShip() {
         // alert(buddies[i] + " has joined the Fellowship")
     }
 
+	const fellowshipULgrab = document.getElementById('fellowshipUl')
+	fellowshipULgrab.hidden = true
+
 	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
 }
 
@@ -262,8 +265,10 @@ function theBalrog() {
 	console.log('9: theBalrog')
 
 	gandalfElement = document.getElementById(buddies[0])
+	
 	// change the `'Gandalf'` text to `'Gandalf the White'`
 	gandalfElement.innerHTML="Gandalf the White"
+	
 	// apply the following style to the element, make the // background 'white', add a grey border
 	gandalfElement.style.background = 'white'
 	gandalfElement.style.border = "thick solid grey"
@@ -335,15 +340,16 @@ function itsDangerousToGoAlone() {
 		//add the ring back to frodo
 
 		const ringDiv = document.createElement('div')
-		ringDiv.setAttribute('id','the-ring')
+		ringDiv.setAttribute('id','the-ring5')
 		ringDiv.setAttribute('class', 'magic-imbued-jewelry')
 	
 		const frodoRing2 = document.getElementById("frodo3")
 		frodoRing2.appendChild(ringDiv)
 
 	// remove old ring
-	document.querySelector('id','the-ring').remove()
-	document.querySelector('id','the-ring2').remove()
+
+	const ringErase = document.querySelector('id','the-ring2')
+	ringErase.setAttribute('style','list-style-type:none')
 }
 
 // COMMIT YOUR WORK
@@ -355,27 +361,42 @@ function itsDangerousToGoAlone() {
 
 function weWantsIt() {
 	console.log('12: weWantsIt')
-	document.querySelector('id','the-ring').remove()
-	document.querySelector('id','the-ring2').remove()
-	document.querySelector('class','magic-imbued-jewelry').remove()
-
-
-	// remove div id="the-ring" class= "magic-imbued-jewelry"
-	// remove div of id="the-ring2" class="magic-imbued-jewelry"
-
+	
 
 	// Create a div with an id of `'gollum'` and add it to Mordor.
-	const gollum = document.createElement('gollumDiv')
+	const gollum = document.createElement('div')
 	gollum.setAttribute('id','gollum')
+	
+	const adds = document.getElementById(lands[2])
+	adds.append(gollum)
 
-	document.getElementById(land[2]).appendChild(gollum)
 
 	// Remove `the ring` from `Frodo` and give it to `Gollum`
-	document.querySelector('id','the-ring2').remove()
-
-	// Move Gollum into Mount Doom
-
+	const frodoGrab3 = document.getElementById("the-ring5")
+	frodoGrab3.remove()
 	
+	// Move Gollum into Mount Doom
+	
+	// add ring. almost
+	// const ringDiv = document.createElement('div')
+	// ringDiv.setAttribute('id','the-ring6')
+	// ringDiv.setAttribute('class', 'magic-imbued-jewelry')
+
+	// const gollumGrab2 = document.getElementById=("gollum")
+	
+	// gollumGrab2.append(ringDiv)
+
+	const ringDiv = document.createElement('div')
+	ringDiv.setAttribute('id','the-ring5')
+	ringDiv.setAttribute('class', 'magic-imbued-jewelry')
+
+	const gollumring = document.getElementById("frodo3")
+	gollumring.appendChild(ringDiv)
+
+	const gollumGrab2 = document.getElementById("gollum")
+	gollumGrab2.append(ringDiv)
+
+
 }
 
 // COMMIT YOUR WORK
