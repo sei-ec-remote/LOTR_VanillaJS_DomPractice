@@ -154,13 +154,12 @@ function leaveTheShire() {
 	console.log('6: leaveTheShire')
 
 	// assemble the `hobbits` and move them to `rivendell`
-	const hobbitsList = document.querySelector('.hobbit')
-	const rivendell = document.getElementById(`${lands[1]}`)
-
-	for (let i = 0; i < hobbits.length; i++) {
-		hobbitsList.remove(document.getElementById(`${hobbits[i]}`))
-		rivendell.append.apply(`${hobbits[i]}`)
-	}
+	const hobbitsList = document.querySelector(".hobbit")
+    const rivendell = document.getElementById(`${lands[1]}`)
+for (let i = 0; i < hobbits.length; i++) {
+    hobbitsList.remove(document.getElementById(`${hobbits[i]}`))
+	rivendell.append.apply(`${hobbits[i]}`)
+}
 }
 
 // COMMIT YOUR WORK
@@ -241,8 +240,11 @@ function theBalrog() {
 function hornOfGondor() {
 	console.log('10: hornOfGondor')
 	// pop up an alert that the horn of gondor has been blown
+	alert(`The horn of gondor has been blown!`)
 	// Boromir's been killed by the Uruk-hai!
+	alert(`Boromir's been killed by the Uruk-hai!`)
 	// Remove `Boromir` from the Fellowship
+	document.getElementById(buddies[4]).remove()
 }
 
 // COMMIT YOUR WORK
@@ -255,7 +257,13 @@ function hornOfGondor() {
 function itsDangerousToGoAlone() {
 	console.log('11: itsDangerousToGoAlone')
 	// take `Frodo` and `Sam` out of the fellowship and move // them to `Mordor`
+	const frodo = document.querySelectorAll('li.hobbits')[0]
+	const sam = document.querySelectorAll('li.hobbits')[1]
+	const mordor = document.getElementById('mordor')
+	mordor.append(frodo)
+
 	// add a div with an id of `'mount-doom'` to `Mordor`
+
 }
 
 // COMMIT YOUR WORK
