@@ -56,7 +56,6 @@ function makeHobbits() {
 
 	// display an `unordered list` of hobbits in the shire
 	const ul = document.createElement("ul")
-	//const shire = document.setAttribute("id", lands[0])
 	
 	for(let i = 0; i < hobbits.length; i++) {
 		let li = document.createElement("li")
@@ -234,7 +233,7 @@ function forgeTheFellowShip() {
 		friends.appendChild(friends)
 
 		document.getElementById(hobbits[i]).appendChild(friends)
-		// alert (`${hobbits[i]} have joined your party`)
+		alert (`${hobbits[i]} have joined your party`)
 	}
 
 	for(let i = 0; i < buddies.length; i++) {
@@ -244,7 +243,7 @@ function forgeTheFellowShip() {
 		friends.appendChild(friends)
 
 		document.getElementById(buddies[i]).appendChild(friends)
-		// alert (`${buddies[i]} have joined party party`)
+		alert (`${buddies[i]} have joined party party`)
 	}
 
 	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
@@ -331,9 +330,9 @@ function weWantsIt() {
 	// Create a div with an id of `'gollum'` and add it to Mordor
 	// Remove `the ring` from `Frodo` and give it to `Gollum`
 	// Move Gollum into Mount Doom
-
+	
 	const gollumDiv = document.createElement('div')
-		gollumDiv.id = "gollum"
+		gollumDiv.id = 'gollum'
 		document.getElementById(lands[2]).appendChild(gollumDiv)
 
 	const theRing = document.createElement('div')
@@ -347,7 +346,7 @@ function weWantsIt() {
 
 
 		document.getElementById('mount-doom').appendChild(gollumDiv)
-		
+
 }
 
 // COMMIT YOUR WORK
@@ -361,6 +360,50 @@ function thereAndBackAgain() {
 	console.log('13: thereAndBackAgain')
 	// remove `Gollum` and `the Ring` from the document
 	// Move all the `hobbits` back to `the shire`
+
+	for(let i = 0; i < 2 ; i++) {
+		document.getElementById(hobbits[i]).remove()
+		const ul = document.createElement("ul")
+		let li = document.createElement("li")
+		li.setAttribute("id", hobbits[i])
+		li.setAttribute("class", "hobbits")
+		ul.appendChild(li)
+		li.innerText = hobbits[i]
+		document.getElementById(lands[0]).appendChild(ul)
+		console.log(li)
+	}
+	for(let i = 0; i <2 ; i++) {
+		document.getElementById(hobbits[i]).remove()
+		const ul = document.createElement("ul")
+		document.getElementById(lands[1]).appendChild(ul)
+		let li = document.createElement("li")
+		li.setAttribute("id", hobbits[i])
+		li.setAttribute("class", "hobbits")
+		ul.appendChild(li)
+		li.innerText = hobbits[i]
+		console.log(li)
+		document.getElementById(lands[1]).appendChild(ul)
+	}
+
+	for(let i = 0; i < hobbits.length ; i++) {
+		document.getElementById(hobbits[i]).remove()
+		const ul = document.createElement("ul")
+		document.getElementById(lands[1]).appendChild(ul)
+		let li = document.createElement("li")
+		li.setAttribute("id", hobbits[i])
+		li.setAttribute("class", "hobbits")
+		ul.appendChild(li)
+		li.innerText = hobbits[i]
+		console.log(li)
+		document.getElementById(lands[0]).appendChild(ul)
+	}
+
+	document.getElementById('gollum').remove()
+
+
+	const hobbitList = document.getElementById(hobbits[i])
+	document.getElementById(lands[0]).append(hobbitList)
+
 }
 
 // COMMIT YOUR WORK
