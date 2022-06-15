@@ -146,11 +146,26 @@ function makeBuddies() {
 
 function leaveTheShire() {
 	console.log('6: leaveTheShire')
-
+	
+	for(let i = 0; i < hobbits.length; i++) {
+		document.getElementById(hobbits[i]).remove()}
 	// assemble the `hobbits` and move them to `rivendell`
-	const ulHobbits = document.getElementById('hobbits')
-	const rivendell = document.getElementById('Rivendell')
-	rivendell.appendChild(ulHobbits[0])
+	const ul = document.createElement("ul")
+	for(let i = 0; i < hobbits.length; i++) {
+		let li = document.createElement("li")
+		li.setAttribute("id", hobbits[i])
+		li.setAttribute("class", "hobbits")
+		ul.appendChild(li)
+		li.innerText = hobbits[i]
+		console.log(li)
+	}
+
+	document.getElementById(lands[1]).appendChild(ul)
+	const theRing = document.createElement("div")
+	theRing.setAttribute("id", "the-ring")
+	theRing.setAttribute("class", "magic-imbued-jewelry")
+	const frodo = document.getElementById("Frodo Baggins")
+	frodo.appendChild(theRing)
 }
 
 // COMMIT YOUR WORK
@@ -164,6 +179,8 @@ function beautifulStranger() {
 	console.log('7: beautifulStranger')
 
 	// change the `'Strider'` text to `'Aragorn'`
+	const beautifulAragorn = document.getElementsByClassName('buddies')[3]
+	beautifulAragorn.textContent = 'Aragorn'
 }
 
 // COMMIT YOUR WORK
