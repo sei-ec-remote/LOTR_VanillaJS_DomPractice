@@ -281,7 +281,9 @@ function itsDangerousToGoAlone() {
 	Mordor.appendChild(Frodo)
 	Mordor.appendChild(Sam)
 	// add a div with an id of `'mount-doom'` to `Mordor`
-	Mordor.appendChild(document.createElement('div'))
+	newDiv = document.createElement('div')
+	newDiv.setAttribute('id', 'mount-doom')
+	Mordor.appendChild(newDiv)
 }
 
 // COMMIT YOUR WORK
@@ -294,6 +296,7 @@ function itsDangerousToGoAlone() {
 function weWantsIt() {
 	console.log('12: weWantsIt')
 	// Create a div with an id of `'gollum'` and add it to Mordor
+	
 	// Remove `the ring` from `Frodo` and give it to `Gollum`
 	// Move Gollum into Mount Doom
 }
