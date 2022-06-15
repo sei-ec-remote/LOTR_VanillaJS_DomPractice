@@ -55,6 +55,7 @@ function makeMiddleEarth() {
 function makeHobbits() {
 	console.log('2: makeHobbits')
 	const hobbitList = document.createElement("ul")
+	hobbitList.setAttribute("id","hob")
 	for(let i=0; i<hobbits.length; i++){
 		const hob = document.createElement("li")
 		hob.classList.add("hobbit")
@@ -189,16 +190,16 @@ function forgeTheFellowShip() {
 	// create a new div called `'the-fellowship'` within `rivendell`
 	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
 	// after each character is added make an alert that they // have joined your party
-	const fellow = document.createElement('div')
-	fellow.setAttribute("id",'the-fellowship')
+	const fellowShip = document.createElement('div')
+	fellowShip.setAttribute("id",'the-fellowship')
+	const fellow = document.createElement("ul")
 	const fellowList = document.getElementById("Rivendell").getElementsByTagName("li")
-	console.log(fellowList)
 	while(fellowList.length!==0){
-		console.log(fellowList[0])
+		alert(fellowList[0].innerText+ " have joined the Rivendell fellowship")
 		fellow.appendChild(fellowList[0])
-		// console.log(fellowList[0].innerText+ " have joined the Rivendell fellowship")
 	}
-	document.getElementById("Rivendell").appendChild(fellow)
+	fellowShip.appendChild(fellow)
+	document.getElementById("Rivendell").appendChild(fellowShip)
 	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
 }
 
@@ -279,6 +280,14 @@ function weWantsIt() {
 
 function thereAndBackAgain() {
 	console.log('13: thereAndBackAgain')
+	document.getElementById("gollum").remove()
+	const hobbit = document.getElementsByClassName("hobbit")
+	const newList = document.createElement("ul")
+	document.getElementById("hob").remove()
+	while(hobbit.length!==0){
+		newList.appendChild(hobbit[0])
+	}
+	document.getElementById("The-Shire").appendChild(newList)
 	// remove `Gollum` and `the Ring` from the document
 	// Move all the `hobbits` back to `the shire`
 }
