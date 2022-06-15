@@ -270,10 +270,14 @@ function hornOfGondor() {
 // ============
 // Chapter 11
 // ============
-
+itsDangerousToGoAlone()
 function itsDangerousToGoAlone() {
 	console.log('11: itsDangerousToGoAlone')
-	// take `Frodo` and `Sam` out of the fellowship and move // them to `Mordor`
+	// take `Frodo` and `Sam` out of the fellowship and move 
+	// them to `Mordor`
+	let Mordor = document.getElementById('Mordor') //this grab right
+	let Frodo = document.querySelectorAll('li.hobbit')[0]
+	Mordor.appendChild(Frodo)
 	// add a div with an id of `'mount-doom'` to `Mordor`
 }
 
