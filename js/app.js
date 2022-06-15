@@ -281,7 +281,7 @@ function itsDangerousToGoAlone() {
 	Mordor.appendChild(Frodo)
 	Mordor.appendChild(Sam)
 	// add a div with an id of `'mount-doom'` to `Mordor`
-	newDiv = document.createElement('div')
+	const newDiv = document.createElement('div')
 	newDiv.setAttribute('id', 'mount-doom')
 	Mordor.appendChild(newDiv)
 }
@@ -312,11 +312,17 @@ function weWantsIt() {
 // ============
 // Chapter 13
 // ============
-
+thereAndBackAgain()
 function thereAndBackAgain() {
 	console.log('13: thereAndBackAgain')
 	// remove `Gollum` and `the Ring` from the document
+	document.getElementById('gollum').remove()
 	// Move all the `hobbits` back to `the shire`
+	const theShire = document.getElementById('The-Shire')
+	const hobbits = document.getElementsByClassName('hobbit')
+	for (let i = 0; i < hobbits.length; i++) {
+		theShire.appendChild(hobbits[i])
+	}
 }
 document.addEventListener('DOMContentLoaded', function() {
   //code and events go here
