@@ -103,6 +103,7 @@ function makeBaddies() {
 
 	// display an unordered list of baddies in Mordor
 	const baddiesList = document.createElement('ul')
+	baddiesList.setAttribute('id','baddy')
 
 
 	for (let i = 0; i < baddies.length; i++){
@@ -177,7 +178,11 @@ function leaveTheShire() {
 	const ringDiv = document.createElement('div')
 	ringDiv.setAttribute('id','the-ring')
 	ringDiv.setAttribute('class', 'magic-imbued-jewelry')
-	document.getElementById(hobbits[0]).appendChild(ringDiv)
+	// document.getElementById(hobbits[0]).appendChild(ringDiv)
+
+	const frodoRing1 = document.getElementById(hobbits[0])
+	frodoRing1.appendChild(ringDiv)
+
 }
 
 // COMMIT YOUR WORK
@@ -215,20 +220,29 @@ function forgeTheFellowShip() {
 	fellowshipUl.setAttribute('id','fellowshipUl')
 	fellowshipDiv.append(fellowshipUl)
 
+	console.log(hobbits)
+
 	for (i = 0; i < hobbits.length; i++) {
         const newHobbitli = document.createElement('li')
+
         newHobbitli.classList.add('newHobbitli')
         newHobbitli.setAttribute('id', hobbits[i])
+		
         fellowshipUl.appendChild(newHobbitli)
-
+		//display none 
+		document.getElementById(hobbits[i]).setAttribute('style',"list-style-type:none")
+		newHobbitli.setAttribute('id', hobbits[i])
+		
+		
         // alert(hobbits[i] + " has joined the Fellowship")
     }
 
 	for (i = 0; i < buddies.length; i++) {
         const newBuddyLi = document.createElement('li')
+
         newBuddyLi.classList.add('newBuddyLi')
         newBuddyLi.setAttribute('id', buddies[i])
-	
+		document.getElementById(buddies[i]).setAttribute('style',"list-style-type:none")
         fellowshipUl.appendChild(newBuddyLi)
 
         // alert(buddies[i] + " has joined the Fellowship")
@@ -287,6 +301,49 @@ function itsDangerousToGoAlone() {
 	console.log('11: itsDangerousToGoAlone')
 	// take `Frodo` and `Sam` out of the fellowship and move // them to `Mordor`
 	// add a div with an id of `'mount-doom'` to `Mordor`
+
+	//mount doom lands[2]
+
+	let frodoAndSamUl = document.createElement("ul")
+
+		let pullFrodo = document.getElementById(hobbits[0])
+		let pullSam = document.getElementById(hobbits[1])
+
+		pullFrodo.remove()
+		pullSam.remove()
+		
+		
+		let li1  = document.createElement("li")
+		let li2  = document.createElement("li")
+
+		li1.setAttribute("id","frodo3")
+		li1.setAttribute("class","frodo3")	
+
+		li2.setAttribute("id",hobbits[1])
+		li2.setAttribute("class",hobbits[1])
+		
+		li1.innerText = hobbits[0]
+		li2.innerText = hobbits[1]
+	
+				
+		frodoAndSamUl.appendChild(li1)
+		frodoAndSamUl.appendChild(li2)
+
+		document.getElementById(lands[2]).appendChild(frodoAndSamUl)
+
+	
+		//add the ring back to frodo
+
+		const ringDiv = document.createElement('div')
+		ringDiv.setAttribute('id','the-ring')
+		ringDiv.setAttribute('class', 'magic-imbued-jewelry')
+	
+		const frodoRing2 = document.getElementById("frodo3")
+		frodoRing2.appendChild(ringDiv)
+
+	// remove old ring
+	document.querySelector('id','the-ring').remove()
+	document.querySelector('id','the-ring2').remove()
 }
 
 // COMMIT YOUR WORK
@@ -298,9 +355,27 @@ function itsDangerousToGoAlone() {
 
 function weWantsIt() {
 	console.log('12: weWantsIt')
-	// Create a div with an id of `'gollum'` and add it to Mordor
+	document.querySelector('id','the-ring').remove()
+	document.querySelector('id','the-ring2').remove()
+	document.querySelector('class','magic-imbued-jewelry').remove()
+
+
+	// remove div id="the-ring" class= "magic-imbued-jewelry"
+	// remove div of id="the-ring2" class="magic-imbued-jewelry"
+
+
+	// Create a div with an id of `'gollum'` and add it to Mordor.
+	const gollum = document.createElement('gollumDiv')
+	gollum.setAttribute('id','gollum')
+
+	document.getElementById(land[2]).appendChild(gollum)
+
 	// Remove `the ring` from `Frodo` and give it to `Gollum`
+	document.querySelector('id','the-ring2').remove()
+
 	// Move Gollum into Mount Doom
+
+	
 }
 
 // COMMIT YOUR WORK
