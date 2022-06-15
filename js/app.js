@@ -61,6 +61,7 @@ function makeHobbits() {
 		li.setAttribute('id',hobbits[i])
 		ul.appendChild(li)
 		li.innerText = hobbits[i]
+		li.setAttribute('style','list-style-type:none')
 	}
 
 	document.getElementById(lands[0]).appendChild(ul)
@@ -112,6 +113,7 @@ function makeBaddies() {
 		liBaddy.setAttribute('class','baddy')
 		baddiesList.appendChild(liBaddy)
 		liBaddy.innerText = baddies[i]
+		liBaddy.setAttribute('style','list-style-type:none')
 	}
 
 	document.getElementById(lands[2]).appendChild(baddiesList)
@@ -142,6 +144,7 @@ function makeBuddies() {
 		liBuddy.setAttribute("id",buddies[i])
 		buddiesAside.appendChild(liBuddy)
 		liBuddy.innerText = buddies[i]
+		liBuddy.setAttribute('style','list-style-type:none')
 	}	
 	// insert your aside as a child element of `rivendell`
 	document.getElementById(lands[1]).appendChild(buddiesAside)
@@ -171,6 +174,7 @@ function leaveTheShire() {
 		li.setAttribute('id',hobbits[i])
 		ul.appendChild(li)
 		li.innerText = hobbits[i]
+		li.setAttribute('style','list-style-type:none')
 	}
 
 	document.getElementById(lands[1]).appendChild(ul)
@@ -288,7 +292,7 @@ function hornOfGondor() {
 	// Boromir's been killed by the Uruk-hai!
 	// Remove `Boromir` from the Fellowship
 
-	alert("The horn of gondor has been blown!")
+	// alert("The horn of gondor has been blown!")
 	document.getElementById(buddies[4]).remove()
 
 
@@ -324,11 +328,14 @@ function itsDangerousToGoAlone() {
 		li1.setAttribute("id","frodo3")
 		li1.setAttribute("class","frodo3")	
 
-		li2.setAttribute("id",hobbits[1])
+		li2.setAttribute("id","sam")
 		li2.setAttribute("class",hobbits[1])
 		
 		li1.innerText = hobbits[0]
 		li2.innerText = hobbits[1]
+		li1.setAttribute('style','list-style-type:none')
+		li2.setAttribute('style','list-style-type:none')
+		
 	
 				
 		frodoAndSamUl.appendChild(li1)
@@ -375,16 +382,7 @@ function weWantsIt() {
 	const frodoGrab3 = document.getElementById("the-ring5")
 	frodoGrab3.remove()
 	
-	// Move Gollum into Mount Doom
-	
-	// add ring. almost
-	// const ringDiv = document.createElement('div')
-	// ringDiv.setAttribute('id','the-ring6')
-	// ringDiv.setAttribute('class', 'magic-imbued-jewelry')
-
-	// const gollumGrab2 = document.getElementById=("gollum")
-	
-	// gollumGrab2.append(ringDiv)
+	// Move Gollum into Mount Doom	
 
 	const ringDiv = document.createElement('div')
 	ringDiv.setAttribute('id','the-ring5')
@@ -396,6 +394,8 @@ function weWantsIt() {
 	const gollumGrab2 = document.getElementById("gollum")
 	gollumGrab2.append(ringDiv)
 
+
+	
 
 }
 
@@ -409,7 +409,28 @@ function weWantsIt() {
 function thereAndBackAgain() {
 	console.log('13: thereAndBackAgain')
 	// remove `Gollum` and `the Ring` from the document
+	const gollumGrab2 = document.getElementById("gollum")
+	gollumGrab2.remove()
+
 	// Move all the `hobbits` back to `the shire`
+	document.getElementById("frodo3").remove()
+	document.getElementById("sam").remove()
+	document.getElementById(`Meriadoc "Merry" Brandybuck`).remove()
+	document.getElementById(`Peregrin "Pippin" Took`).remove()
+
+	let ul = document.createElement('ul')
+
+	for (let i = 0; i < hobbits.length; i++){
+		let li = document.createElement('li')
+		li.setAttribute('class','hobbit')
+		li.setAttribute('id',hobbits[i])
+		ul.appendChild(li)
+		li.innerText = hobbits[i]
+		li.setAttribute('style','list-style-type:none')
+	}
+
+	document.getElementById(lands[0]).appendChild(ul)
+
 }
 
 // COMMIT YOUR WORK
