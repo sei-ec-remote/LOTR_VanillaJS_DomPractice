@@ -220,7 +220,7 @@ function forgeTheFellowShip() {
 	//Added the hobbits
 	for (let i = 0; i < eachHobbit.length; i++){
 		ul.appendChild(eachHobbit[i])
-	//	alert(eachHobbit[i].innerText + " has join the The FellowShip")
+		alert(eachHobbit[i].innerText + " has join the The FellowShip")
 	}
 	//Added the buddys
 	for (let i = 0; i < eachBuddy.length; i++) {
@@ -257,9 +257,9 @@ hornOfGondor()
 function hornOfGondor() {
 	console.log('10: hornOfGondor')
 	// pop up an alert that the horn of gondor has been blown
-	//NNNNEEED ADDDD////////////////alert('The horn of gondor has been blown')
+	alert('The horn of gondor has been blown')
 	// Boromir's been killed by the Uruk-hai!
-	//NNNNNEEED ADDDDD////////////////alert('Boromir\'s been killed by the Uruk-hai!')
+	alert('Boromir\'s been killed by the Uruk-hai!')
 	// Remove `Boromir` from the Fellowship
 	document.getElementById('Boromir').remove()
 }
@@ -324,8 +324,20 @@ function thereAndBackAgain() {
 		theShire.appendChild(hobbits[i])
 	}
 }
-document.addEventListener('DOMContentLoaded', function() {
-  //code and events go here
+document.addEventListener('DOMContentLoaded', function() { 
+  document.getElementById('chapter-1').addEventListener('click', 'makeMiddleEarth')
+  document.getElementById('chapter-2').addEventListener('click', 'makeHobbits')
+  document.getElementById('chapter-3').addEventListener('click', 'keepItSecretKeepItSafe')
+  document.getElementById('chapter-4').addEventListener('click', 'makeBaddies')
+  document.getElementById('chapter-5').addEventListener('click', 'makeBuddies')
+  document.getElementById('chapter-6').addEventListener('click', 'leaveTheShire')
+  document.getElementById('chapter-7').addEventListener('click', 'beautifulStranger')
+  document.getElementById('chapter-8').addEventListener('click', 'forgeTheFellowShip')
+  document.getElementById('chapter-9').addEventListener('click', 'theBalrog')
+  document.getElementById('chapter-10').addEventListener('click', 'hornOfGondor')
+  document.getElementById('chapter-11').addEventListener('click', 'itsDangerousToGoAlone')
+  document.getElementById('chapter-12').addEventListener('click', 'weWantsIt')
+  document.getElementById('chapter-13').addEventListener('click', 'thereAndBackAgain')
 });
 
 // COMMIT YOUR WORK
