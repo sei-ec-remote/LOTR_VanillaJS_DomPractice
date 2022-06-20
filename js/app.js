@@ -56,8 +56,7 @@ function makeHobbits() {
 for (let i = 0; i <hobbits.length; i++) {
 	hobbits.appendChild(document.createElement('li'))
 	hobbits.classList.add('hobbit')
-	hobbits.innerText = hobbits[1]
-
+	hobbits.innerText = hobbits[i] 
 	
 }
 	// give each hobbit a class of `hobbit`
