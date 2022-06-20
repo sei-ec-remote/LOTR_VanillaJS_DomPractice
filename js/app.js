@@ -29,7 +29,7 @@ sectionTag.classList.add('middle-earth')
 	//   2a. creates an article tag (there should be one for each land when the loop is done)
        const articleTag = document.createElement('article')
 	//   2b. gives each land article an `id` tag of the corresponding land name
-        articleTag.classList.add(lands[i])
+        articleTag.setAttribute("id",lands[i])
 	//   2c. includes an h1 with the name of the land inside each land article
 const h1Element= articleTag.appendChild(document.createElement('h1'))
 h1Element.innerText=lands[i]
@@ -77,10 +77,15 @@ function keepItSecretKeepItSafe() {
 	console.log('3: keepItSecretKeepItSafe')
 
 	// create a div with an id of `'the-ring'`
+	const theRing = document.createElement('div')
+	theRing.setAttribute('id',"the-ring")
+
 
 	// give the div a class of `'magic-imbued-jewelry'`
+	theRing.classList.add("magic-imbued-jewelry")
 
 	// add the ring as a child of `Frodo`
+	Fredo.appendChild(theRing)
 }
 
 // COMMIT YOUR WORK
