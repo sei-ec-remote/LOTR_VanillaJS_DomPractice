@@ -22,18 +22,23 @@ function makeMiddleEarth() {
 	console.log('1: makeMiddleEarth')
 
 	// 1. create a section tag with an id of middle-earth
-
+const sectionTag = document.createElement('section')
+sectionTag.classList.add('middle-earth')
 	// 2. use a for loop to iterate over the lands array that does the following:
-
+	for (let i = 0; i < lands.length; i++) {
 	//   2a. creates an article tag (there should be one for each land when the loop is done)
-
+       const articleTag = document.createElement('article')
 	//   2b. gives each land article an `id` tag of the corresponding land name
-
+        articleTag.classList.add(lands[i])
 	//   2c. includes an h1 with the name of the land inside each land article
-
+const h1Element= articleTag.appendChild(document.createElement('h1'))
+h1Element.innerText=lands[i]
 	//   2d. appends each land to the middle-earth section
-
+sectionTag.appendChild(h1Element)
 	// 3. append the section to the body of the DOM.
+		
+	}
+
 }
 
 // COMMIT YOUR WORK
@@ -47,7 +52,14 @@ function makeHobbits() {
 	console.log('2: makeHobbits')
 
 	// display an `unordered list` of hobbits in the shire
+	const hobbits = document.createElement('ul')
+for (let i = 0; i <hobbits.length; i++) {
+	hobbits.appendChild(document.createElement('li'))
+	hobbits.classList.add('hobbit')
+	hobbits.innerText = hobbits[1]
 
+	
+}
 	// give each hobbit a class of `hobbit`
 
 	// hint: create a 'ul' outside the loop into which to append the 'li's
