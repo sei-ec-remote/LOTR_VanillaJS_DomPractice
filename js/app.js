@@ -162,6 +162,10 @@ function beautifulStranger() {
 	console.log('7: beautifulStranger')
 
 	// change the `'Strider'` text to `'Aragorn'`
+	 buddies[3] = Aragorn
+	 console.log(buddies)
+
+
 }
 
 // COMMIT YOUR WORK
