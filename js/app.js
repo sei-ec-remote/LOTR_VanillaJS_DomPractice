@@ -242,8 +242,15 @@ function hornOfGondor() {
 
 function itsDangerousToGoAlone() {
 	console.log('11: itsDangerousToGoAlone')
-	// take `Frodo` and `Sam` out of the fellowship and move // them to `Mordor`
+	// take `Frodo` and `Sam` out of the fellowship and move 
+	document.querySelectorAll('li.hobbits')[0]
+	const sam = document.querySelectorAll('li.hobbits')[1]
+	// them to `Mordor`
+	const mordor = document.getElementById('mordor')
+	mordor.appendChild(frodo)
 	// add a div with an id of `'mount-doom'` to `Mordor`
+	mordor.createElement('div')
+	mordor.setAttribute('id','mount-doom')
 }
 
 // COMMIT YOUR WORK
@@ -256,7 +263,12 @@ function itsDangerousToGoAlone() {
 function weWantsIt() {
 	console.log('12: weWantsIt')
 	// Create a div with an id of `'gollum'` and add it to Mordor
+	const gollum = document.createElement('div')
+	gollum.setAttribute("id","gollum")
+	mordor.appendChild(gollum)
 	// Remove `the ring` from `Frodo` and give it to `Gollum`
+	frodo.remove("the-ring")
+	gollum.append("the-ring")
 	// Move Gollum into Mount Doom
 }
 
@@ -270,6 +282,7 @@ function weWantsIt() {
 function thereAndBackAgain() {
 	console.log('13: thereAndBackAgain')
 	// remove `Gollum` and `the Ring` from the document
+	
 	// Move all the `hobbits` back to `the shire`
 }
 
@@ -290,7 +303,7 @@ document
 	.getElementById('chapter-3')
 	.addEventListener('click', keepItSecretKeepItSafe)
 document.getElementById('chapter-4').addEventListener('click', makeBaddies)
-document.getElementById('chapter-5').addEventListener('click', makeBuddies)
+document.getElementById('chapter-5').addEventListener('click', makeBuddies)     
 document.getElementById('chapter-6').addEventListener('click', leaveTheShire)
 document
 	.getElementById('chapter-7')
