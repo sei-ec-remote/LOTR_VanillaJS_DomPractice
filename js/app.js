@@ -55,11 +55,10 @@ const unorderedList = document.createElement('ul')
 	// give each hobbit a class of `hobbit`
 for (i = 0; i < hobbits.length; i++){
 	const hobbitList = document.createElement('li')
-	//hobbitList.setAttribute('id', hobbit[i])
 	hobbitList.classList.add('hobbit')
 	hobbitList.innerText = hobbits[i]
 	hobbitList.setAttribute('id', hobbits[i])
-	//hobbitList.appendChild(hobbit)
+	unorderedList.setAttribute('id', 'moveHobbits')
 	unorderedList.appendChild(hobbitList)
 }
 document.querySelector('#The-Shire').appendChild(unorderedList)
@@ -127,7 +126,9 @@ function makeBuddies() {
     const unorderedList3 = document.createElement('ul')
     for (i = 0; i < buddies.length; i++){
         const buddiesList = document.createElement('li')
+		buddiesList.setAttribute('id', buddies[i])
         buddiesList.innerText = buddies[i]
+		unorderedList3.setAttribute('id', 'moveBuddies')
     unorderedList3.appendChild(buddiesList)
     
     // insert your aside as a child element of `rivendell`
@@ -147,6 +148,7 @@ function leaveTheShire() {
 	console.log('6: leaveTheShire')
 
 	// assemble the `hobbits` and move them to `rivendell`
+	document.querySelector('#Rivendell').appendChild(moveHobbits)
 }
 
 // COMMIT YOUR WORK
@@ -160,6 +162,15 @@ function beautifulStranger() {
 	console.log('7: beautifulStranger')
 
 	// change the `'Strider'` text to `'Aragorn'`
+	const Strider = document.getElementById('Strider');
+	Strider.innerText = "Aragorn";
+	Strider.setAttribute('id', 'Aragorn');
+	Strider.removeAttribute('id', 'Strider');
+	const index = buddies.indexOf('Strider');
+	buddies[index] = 'Aragorn';
+	// This doesn't show in browser that he's removed but it says that 'Aragorn' is in my party rather than 'Strider' in Chapter 8 and I can't figure out why he isn't changed in the browser
+
+// 	}
 }
 
 // COMMIT YOUR WORK
@@ -172,8 +183,33 @@ function beautifulStranger() {
 function forgeTheFellowShip() {
 	console.log('8: forgeTheFellowShip')
 	// create a new div called `'the-fellowship'` within `rivendell`
+	
+	const fellowship = document.createElement('ul')
+	fellowship.setAttribute('id', 'the-fellowship')
+	const Rivendell = document.getElementById('Rivendell')
+	
+	
 	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
+	
+	
 	// after each character is added make an alert that they // have joined your party
+    for (i = 0; i < buddies.length; i++){
+		thisBuddy = document.createElement('li')
+		thisBuddy.setAttribute('id','fellowship'+buddies[i])
+		thisBuddy.innerText = buddies[i]
+		fellowship.append(`${buddies[i]}`)
+		alert(`${buddies[i]} has been added to your party`)
+	}
+	for (i=0; i< hobbits.length; i++) {
+		fellowship.append(`${hobbits[i]}`)
+		alert(`${hobbits[i]} has been added to your party`)
+	}
+	
+	//document.querySelector('#Rivendell').appendChild(fellowship)
+	document.getElementById('hobbits').remove()
+	// document.querySelector('#Rivendell').removeChild(moveHobbits)
+	// document.querySelector('#Rivendell').removeChild(moveBuddies)
+	//** THIS IS AS CLOSE AS I CAN GET IT TO THE INSTRUCTIONS*/
 
 	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
 }

@@ -176,4 +176,8 @@ ul {
     top: 385px;
   }
 
+}}
+
+div.fellowship {
+  display: none;
 }
