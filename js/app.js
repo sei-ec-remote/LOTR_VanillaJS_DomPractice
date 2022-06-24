@@ -320,6 +320,11 @@ function weWantsIt() {
 	// Create a div with an id of `'gollum'` and add it to Mordor
 	// Remove `the ring` from `Frodo` and give it to `Gollum`
 	// Move Gollum into Mount Doom
+	const MORDOR = document.getElementById("Mordor")
+    const gollum = document.createElement('div')
+    gollum.setAttribute('id', 'gollum')
+
+    MORDOR.appendChild(gollum)
 }
 
 // COMMIT YOUR WORK
@@ -333,6 +338,49 @@ function thereAndBackAgain() {
 	console.log('13: thereAndBackAgain')
 	// remove `Gollum` and `the Ring` from the document
 	// Move all the `hobbits` back to `the shire`
+	for(let i = 0; i < 2 ; i++) {
+        document.getElementById(hobbits[i]).remove()
+        const ul = document.createElement("ul")
+        let li = document.createElement("li")
+        li.setAttribute("id", hobbits[i])
+        li.setAttribute("class", "hobbits")
+        ul.appendChild(li)
+        li.innerText = hobbits[i]
+        document.getElementById(lands[0]).appendChild(ul)
+        console.log(li)
+    }
+    for(let i = 0; i <2 ; i++) {
+        document.getElementById(hobbits[i]).remove()
+        const ul = document.createElement("ul")
+        document.getElementById(lands[1]).appendChild(ul)
+        let li = document.createElement("li")
+        li.setAttribute("id", hobbits[i])
+        li.setAttribute("class", "hobbits")
+        ul.appendChild(li)
+        li.innerText = hobbits[i]
+        console.log(li)
+        document.getElementById(lands[1]).appendChild(ul)
+    }
+
+    for(let i = 0; i < hobbits.length ; i++) {
+        document.getElementById(hobbits[i]).remove()
+        const ul = document.createElement("ul")
+        document.getElementById(lands[1]).appendChild(ul)
+        let li = document.createElement("li")
+        li.setAttribute("id", hobbits[i])
+        li.setAttribute("class", "hobbits")
+        ul.appendChild(li)
+        li.innerText = hobbits[i]
+        console.log(li)
+        document.getElementById(lands[0]).appendChild(ul)
+    }
+
+    document.getElementById('gollum').remove()
+
+
+
+    const hobbitList = document.getElementById(hobbits[i])
+    document.getElementById(lands[0]).append(hobbitList)
 }
 
 // COMMIT YOUR WORK
