@@ -180,7 +180,7 @@ function leaveTheShire() {
 
 function beautifulStranger() {
 	console.log('7: beautifulStranger')
-
+    strider.textContent = 'Aragon';
 	// change the `'Strider'` text to `'Aragorn'`
 }
 
