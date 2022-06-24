@@ -294,17 +294,27 @@ function hornOfGondor() {
 function itsDangerousToGoAlone() {
 	console.log('11: itsDangerousToGoAlone')
 	// take `Frodo` and `Sam` out of the fellowship and move // them to `Mordor`
-	const lisHobbits = document.querySelectorAll('.hobbit')
-	const frodo = document.querySelectorAll(lisHobbit[0])
-	const samwise = document.querySelectorAll(lisHobbit[1])
-	const mordor = document.getElementById(lands[2])
-	
-	mordor.appendChild(frodo)
-	mordor.appendChild(samwise)
-	// add a div with an id of `'mount-doom'` to `Mordor`
-	const mountDoom = document.createElement('div')
-	mountDoom.id = 'mount-doom'
-	morder.appendChild(mountDoom)
+	for(let i = 0; i < 2 ; i++) {
+        document.getElementById(hobbits[i]).remove()
+        const ul = document.createElement("ul")
+        let li = document.createElement("li")
+        li.setAttribute("id", hobbits[i])
+        li.setAttribute("class", "hobbits")
+        ul.appendChild(li)
+        li.innerText = hobbits[i]
+        document.getElementById(lands[2]).appendChild(ul)
+        console.log(li)
+    }
+
+    const theRing = document.createElement('div')
+        theRing.setAttribute('id', 'the-ring')
+        theRing.setAttribute("class", 'magic-imbued-jewelry')
+        const frodo = document.getElementById("Frodo Baggins")
+        frodo.appendChild(theRing)
+
+        const mountDoom = document.createElement('div')
+    mountDoom.setAttribute('id', 'mount-doom')
+    document.getElementById(lands[2]).appendChild(mountDoom)
 
 }
 
