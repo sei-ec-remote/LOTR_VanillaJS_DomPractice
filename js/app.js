@@ -43,7 +43,6 @@ function makeMiddleEarth() {
 		landText.innerHTML = lands[i]
 		midEarth.appendChild(land)
 		land.appendChild(landText)
-		console.log(land)
 	}
 
 	// 3. append the section to the body of the DOM.
@@ -62,6 +61,18 @@ function makeHobbits() {
 	console.log('2: makeHobbits')
 
 	// display an `unordered list` of hobbits in the shire
+	let hobbitNames = document.createElement('ul')
+	
+	for(let i= 0; i < hobbits.length; i++){
+		let name = document.createElement('li')
+		name.setAttribute('class', 'hobbit')
+		name.innerText = hobbits[i]
+		hobbitNames.appendChild(name)
+	}
+
+
+	let theShire = document.getElementById('The-Shire')
+	theShire.appendChild(hobbitNames)
 
 
 	// give each hobbit a class of `hobbit`
