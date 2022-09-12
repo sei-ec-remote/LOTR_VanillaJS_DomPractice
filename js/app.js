@@ -227,7 +227,7 @@ function theBalrog() {
 	console.log('9: theBalrog')
 	// change the `'Gandalf'` text to `'Gandalf the White'`
 	// apply the following style to the element, make the // background 'white', add a grey border
-	let fellowshipItems = document.querySelector('#the-fellowship').querySelectorAll('li')
+	const fellowshipItems = document.querySelector('#the-fellowship').querySelectorAll('li')
 	for (let fellow of fellowshipItems) {
 		if (fellow.textContent === 'Gandalf the Grey') {
 			fellow.textContent = 'Gandalf the White'
@@ -250,6 +250,13 @@ function hornOfGondor() {
 	// pop up an alert that the horn of gondor has been blown
 	// Boromir's been killed by the Uruk-hai!
 	// Remove `Boromir` from the Fellowship
+	alert('The Horn of Gondor has been blown')
+	const theFellowshipList = document.querySelector('#the-fellowship').querySelector('ul')
+	const fellowshipItems = theFellowshipList.childNodes
+	let boromir = fellowshipItems[4]
+	theFellowshipList.removeChild(boromir)
+	
+
 }
 
 // COMMIT YOUR WORK
