@@ -58,6 +58,15 @@ function makeHobbits() {
 	// hint: create a 'ul' outside the loop into which to append the 'li's
 
 	// hint: get 'The-Shire' by using its id
+	const theShire = document.getElementById("The-Shire")
+	const list = document.createElement('ul')
+	for (i = 0; i < hobbits.length; i++){
+		const listItem = document.createElement('li')
+		listItem.setAttribute('id', 'hobbit')
+		listItem.innerText = hobbits[i]
+		list.appendChild(listItem)
+	}
+	theShire.appendChild(list)
 }
 
 // COMMIT YOUR WORK
