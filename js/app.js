@@ -58,13 +58,6 @@ function makeHobbits() {
 }
 
 // COMMIT YOUR WORK
-// The commit message should read: "Chapter 1 complete - Made Middle Earth".
-
-// ============
-// Chapter 2
-// ============
-
-// COMMIT YOUR WORK
 // The commit message should read: "Chapter 2 complete - Made the Hobbits".
 
 // ============
