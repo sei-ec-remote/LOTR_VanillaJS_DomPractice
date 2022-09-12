@@ -78,7 +78,11 @@ function makeHobbits() {
 
 function keepItSecretKeepItSafe() {
 	console.log('3: keepItSecretKeepItSafe')
-
+	const theRing = document.createElement('div')
+	div.setAttribute('id', 'the-ring')
+	div.setAttribute('class', 'magic-imbued-jewelry')
+	const frodo = document.querySelector('hobbit')
+	frodo.appendChild(theRing)
 	// create a div with an id of `'the-ring'`
 
 	// give the div a class of `'magic-imbued-jewelry'`
