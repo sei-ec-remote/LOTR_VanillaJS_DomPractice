@@ -54,6 +54,7 @@ function makeHobbits() {
 	// display an `unordered list` of hobbits in the shire
 	let theShire = document.getElementById("The-Shire")
 	let hobbitList = document.createElement("ul")
+	hobbitList.setAttribute("id", "hobbitList")
 	theShire.appendChild(hobbitList)
 	for (i=0; i<hobbits.length; i++) {
 		let hob = document.createElement("li")
@@ -105,6 +106,7 @@ function makeBaddies() {
 	// display an unordered list of baddies in Mordor
 	let mordor = document.getElementById("Mordor")
 	let baddiesList = document.createElement("ul")
+	baddiesList.setAttribute("id", "baddiesList")
 	mordor.appendChild(baddiesList)
 	for (i=0; i<baddies.length; i++) {
 		let bad = document.createElement("li")
@@ -133,8 +135,10 @@ function makeBuddies() {
 
 	// create an `aside` tag
 	const aside = document.createElement("aside")
+	aside.setAttribute("id", "rivendellAside")
 	// put an `unordered list` of the `'buddies'` in the aside
 	let buddiesList = document.createElement("ul")
+	buddiesList.setAttribute("id", "buddiesList")
 	aside.appendChild(buddiesList)
 	for (i=0; i<buddies.length; i++) {
 		let bud = document.createElement("li")
@@ -159,8 +163,10 @@ function makeBuddies() {
 
 function leaveTheShire() {
 	console.log('6: leaveTheShire')
-
 	// assemble the `hobbits` and move them to `rivendell`
+	const hobbitList = document.getElementById("hobbitList")
+	const rivendell = document.getElementById("rivendellAside")
+	rivendell.appendChild(hobbitList)
 }
 
 // COMMIT YOUR WORK
