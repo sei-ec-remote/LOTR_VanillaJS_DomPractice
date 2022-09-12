@@ -103,8 +103,7 @@ function keepItSecretKeepItSafe() {
 function makeBaddies() {
 	console.log('4: makeBaddies')
 	const baddiesList = document.createElement('ul')
-	const findMordor = document.querySelector('#Mordor')
-	console.log(findMordor)
+
 	// display an unordered list of baddies in Mordor
 	for (i = 0; i<baddies.length; i++){
 		const listItem = document.createElement('li')
@@ -131,10 +130,20 @@ function makeBuddies() {
 	console.log('5: makeBuddies')
 
 	// create an `aside` tag
-
+	const aside = document.createElement('aside')
 	// put an `unordered list` of the `'buddies'` in the aside
+	const buddiesList = document.createElement('ul')
 
+	// display an unordered list of baddies in Mordor
+	for (i = 0; i<buddies.length; i++){
+		const listItem = document.createElement('li')
+		const buddyName = buddies[i]
+		listItem.append(buddyName)
+		buddiesList.appendChild(listItem)
+	}
 	// insert your aside as a child element of `rivendell`
+	const findRivendell = document.querySelector('#Rivendell')
+	findRivendell.appendChild(buddiesList)
 }
 
 // COMMIT YOUR WORK
