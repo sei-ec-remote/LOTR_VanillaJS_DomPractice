@@ -320,7 +320,16 @@ function weWantsIt() {
 function thereAndBackAgain() {
 	console.log('13: thereAndBackAgain')
 	// remove `Gollum` and `the Ring` from the document
+	const gollum = document.getElementById(`gollum`)
+	const theRing = document.getElementById(`'the-ring'`)
+	gollum.remove()
+	theRing.remove()
 	// Move all the `hobbits` back to `the shire`
+	const hobbits = document.querySelectorAll('.hobbit')
+	const shire = document.getElementById(`The-Shire`)
+	for (value of hobbits) {
+		shire.appendChild(value)
+	}
 }
 
 // COMMIT YOUR WORK
