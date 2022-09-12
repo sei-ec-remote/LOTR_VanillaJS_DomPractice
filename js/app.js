@@ -22,7 +22,8 @@ function makeMiddleEarth() {
 	console.log('1: makeMiddleEarth')
 
 	// 1. create a section tag with an id of middle-earth
-
+	const middleEarth = document.createElement('section')
+	middleEarth.id = 'middle-earth'
 	// 2. use a for loop to iterate over the lands array that does the following:
 
 	//   2a. creates an article tag (there should be one for each land when the loop is done)
@@ -34,7 +35,15 @@ function makeMiddleEarth() {
 	//   2d. appends each land to the middle-earth section
 
 	// 3. append the section to the body of the DOM.
+	for (let land of lands) {
+		let article = document.createElement('article')
+		article.id = land
+		article.innerHTML = `<h1>${land}</h2>`
+		middleEarth.appendChild(article)
+	}
+	console.log(middleEarth)
 }
+
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 1 complete - Made Middle Earth".
