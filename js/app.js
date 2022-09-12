@@ -224,6 +224,17 @@ function forgeTheFellowShip() {
 function theBalrog() {
 	console.log('9: theBalrog')
 	// change the `'Gandalf'` text to `'Gandalf the White'`
+	buddies[0] = 'Gandalf the White'
+	const theFellowship = document.getElementById(`'the-fellowship'`)
+	const gandalf = theFellowship.querySelectorAll(`.buddy`)
+	for (value of gandalf) {
+		if (value.innerText === 'gandalf the grey'){
+			value.innerText = "Gandalf the White"
+			value.style.backgroundColor = 'white'
+			value.style.border = '4px solid grey'
+		}
+	}
+
 	// apply the following style to the element, make the // background 'white', add a grey border
 }
 
