@@ -143,7 +143,7 @@ function makeBuddies() {
 		list.appendChild(listItem)
 	}
 	aside.appendChild(list)
-	rivendell.append(aside)
+	rivendell.appendChild(aside)
 }
 
 // COMMIT YOUR WORK
@@ -157,6 +157,13 @@ function leaveTheShire() {
 	console.log('6: leaveTheShire')
 
 	// assemble the `hobbits` and move them to `rivendell`
+	const assembleHobbits = document.querySelectorAll('.hobbit')
+	const rivendell = document.querySelector('#Rivendell')
+	const rivendellList = rivendell.querySelector('ul')
+	console.log(rivendellList)
+	for (value of assembleHobbits) {
+		rivendellList.appendChild(value)
+	}
 }
 
 // COMMIT YOUR WORK
