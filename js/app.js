@@ -39,7 +39,7 @@ function makeMiddleEarth() {
 		land.appendChild(landName)
 
 	//   2d. appends each land to the middle-earth section
-		document.body.appendChild(land)
+		middleEarth.appendChild(land)
 	}
 
 	// 3. append the section to the body of the DOM.
@@ -68,11 +68,6 @@ function makeHobbits() {
 		theHobbits.appendChild(newHobbit)
 	}
 	shire.appendChild(theHobbits)
-	
-
-	// hint: create a 'ul' outside the loop into which to append the 'li's
-
-	// hint: get 'The-Shire' by using its id
 }
 
 // COMMIT YOUR WORK
@@ -86,10 +81,15 @@ function keepItSecretKeepItSafe() {
 	console.log('3: keepItSecretKeepItSafe')
 
 	// create a div with an id of `'the-ring'`
+	const theRing = document.createElement('div')
+	theRing.setAttribute('id', 'the-ring')
 
 	// give the div a class of `'magic-imbued-jewelry'`
+	theRing.setAttribute('class', 'magic-imbued-jewelry')
 
 	// add the ring as a child of `Frodo`
+	const frodo = document.querySelector('.hobbit')
+	frodo.appendChild(theRing)
 }
 
 // COMMIT YOUR WORK
