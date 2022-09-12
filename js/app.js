@@ -189,18 +189,16 @@ function forgeTheFellowShip() {
 	const fellowship = document.createElement("div")
 	fellowship.setAttribute("id", "the-fellowship")
 	document.getElementById("rivendellAside").appendChild(fellowship)
-	const fellowshipUL = document.createElement("ul")
-	fellowship.appendChild(fellowshipUL)
 	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
 	for (i=0; i<hobbits.length; i++) {
 		let hob = document.getElementById(`${hobbits[i]}`)
-		fellowshipUL.appendChild(hob)
+		fellowship.appendChild(hob)
 		// after each character is added make an alert that they // have joined your party
 		console.log(`${hobbits[i]} has joined your party!`)
 	}
 	for (i=0; i<buddies.length; i++) {
 		let bud = document.getElementById(`${buddies[i]}`)
-		fellowshipUL.appendChild(bud)
+		fellowship.appendChild(bud)
 		// after each character is added make an alert that they // have joined your party
 		console.log(`${buddies[i]} has joined your party!`)
 	}
@@ -223,7 +221,7 @@ function theBalrog() {
 	// apply the following style to the element, make the // background 'white', add a grey border
 	gandalf.style.backgroundColor = "white"
 	gandalf.style.border = "4px solid grey"
-	gandalf.style.width = "150px"
+	gandalf.style.width = "200px"
 }
 
 // COMMIT YOUR WORK
@@ -252,7 +250,12 @@ function hornOfGondor() {
 function itsDangerousToGoAlone() {
 	console.log('11: itsDangerousToGoAlone')
 	// take `Frodo` and `Sam` out of the fellowship and move // them to `Mordor`
+	document.getElementById("Mordor").appendChild(document.getElementById("Frodo Baggins"))
+	document.getElementById("Mordor").appendChild(document.getElementById('Samwise "Sam" Gamgee'))
 	// add a div with an id of `'mount-doom'` to `Mordor`
+	let mtDoom = document.createElement("div")
+	mtDoom.setAttribute("id", "mount-doom")
+	document.getElementById("Mordor").appendChild(mtDoom)
 }
 
 // COMMIT YOUR WORK
