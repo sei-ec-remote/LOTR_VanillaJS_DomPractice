@@ -42,7 +42,7 @@ function makeMiddleEarth() {
 		article.innerHTML = `<h1>${land}</h2>`
 		middleEarth.appendChild(article)
 	}
-	document.querySelector('body').appendChild('middleEarth')
+	document.querySelector('body').appendChild(middleEarth)
 }
 
 
@@ -64,11 +64,13 @@ function makeHobbits() {
 
 	// hint: get 'The-Shire' by using its id
 	const hobbitList = document.createElement('ul')
-	for (let hobbit in hobbits) {
+	for (let hobbit of hobbits) {
 		let shireFolk = document.createElement('li')
+		shireFolk.innerText = hobbit
 		shireFolk.classList.add('hobbit')
 		hobbitList.appendChild(shireFolk)
 	}
+	document.querySelector('#The-Shire').appendChild(hobbitList)
 }
 
 // COMMIT YOUR WORK
