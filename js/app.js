@@ -58,9 +58,7 @@ function makeHobbits() {
 	theShire.appendChild(hobbitList)
 	for (i=0; i<hobbits.length; i++) {
 		let hob = document.createElement("li")
-		let name = hobbits[i]
-		let breakName = name.split(" ")
-		hob.setAttribute("id", breakName[0])
+		hob.setAttribute("id", `${hobbits[i]}`)
 		hob.innerText = `${hobbits[i]}`
 		// give each hobbit a class of `hobbit`
 		hob.classList.add("hobbit")
@@ -89,7 +87,7 @@ function keepItSecretKeepItSafe() {
 	// give the div a class of `'magic-imbued-jewelry'`
 	ring.classList.add("magic-imbued-jewelry")
 	// add the ring as a child of `Frodo`
-	document.getElementById("Frodo").appendChild(ring)
+	document.getElementById("Frodo Baggins").appendChild(ring)
 
 }
 
@@ -110,9 +108,7 @@ function makeBaddies() {
 	mordor.appendChild(baddiesList)
 	for (i=0; i<baddies.length; i++) {
 		let bad = document.createElement("li")
-		let name = baddies[i]
-		let breakName = name.split(" ")
-		bad.setAttribute("id", breakName[0])
+		bad.setAttribute("id", `${baddies[i]}`)
 		bad.innerText = `${baddies[i]}`
 	// give each of the baddies a class of "baddy"
 		bad.classList.add("baddy")
@@ -142,9 +138,7 @@ function makeBuddies() {
 	aside.appendChild(buddiesList)
 	for (i=0; i<buddies.length; i++) {
 		let bud = document.createElement("li")
-		let name = buddies[i]
-		let breakName = name.split(" ")
-		bud.setAttribute("id", breakName[0])
+		bud.setAttribute("id", `${buddies[i]}`)
 		bud.innerText = `${buddies[i]}`
 		bud.classList.add("buddy")
 		buddiesList.appendChild(bud)
@@ -192,8 +186,24 @@ function beautifulStranger() {
 function forgeTheFellowShip() {
 	console.log('8: forgeTheFellowShip')
 	// create a new div called `'the-fellowship'` within `rivendell`
+	const fellowship = document.createElement("div")
+	fellowship.setAttribute("id", "the-fellowship")
+	document.getElementById("rivendellAside").appendChild(fellowship)
+	const fellowshipUL = document.createElement("ul")
+	fellowship.appendChild(fellowshipUL)
 	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
-	// after each character is added make an alert that they // have joined your party
+	for (i=0; i<hobbits.length; i++) {
+		let hob = document.getElementById(`${hobbits[i]}`)
+		fellowshipUL.appendChild(hob)
+		// after each character is added make an alert that they // have joined your party
+		console.log(`${hobbits[i]} has joined your party!`)
+	}
+	for (i=0; i<buddies.length; i++) {
+		let bud = document.getElementById(`${buddies[i]}`)
+		fellowshipUL.appendChild(bud)
+		// after each character is added make an alert that they // have joined your party
+		console.log(`${buddies[i]} has joined your party!`)
+	}
 
 	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
 }
