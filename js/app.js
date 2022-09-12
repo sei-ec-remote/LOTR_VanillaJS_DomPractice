@@ -218,7 +218,12 @@ function forgeTheFellowShip() {
 function theBalrog() {
 	console.log('9: theBalrog')
 	// change the `'Gandalf'` text to `'Gandalf the White'`
+	let gandalf = document.getElementById("Gandalf the Grey")
+	gandalf.innerText = "Gandalf the White"
 	// apply the following style to the element, make the // background 'white', add a grey border
+	gandalf.style.backgroundColor = "white"
+	gandalf.style.border = "4px solid grey"
+	gandalf.style.width = "150px"
 }
 
 // COMMIT YOUR WORK
