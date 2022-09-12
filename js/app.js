@@ -250,6 +250,16 @@ function hornOfGondor() {
 	// pop up an alert that the horn of gondor has been blown
 	// Boromir's been killed by the Uruk-hai!
 	// Remove `Boromir` from the Fellowship
+	window.alert(`The Horn of Gondor has been blown!\nBoromir's been killed by the Uruk-hai!`)
+	buddies.pop()
+	const fellowship = document.getElementById(`'the-fellowship'`)
+	const buddy = fellowship.querySelectorAll('.buddy')
+	for (value of buddy) {
+		if (value.innerText == 'boromir') {
+			value.remove()
+		}
+	}
+
 }
 
 // COMMIT YOUR WORK
