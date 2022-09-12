@@ -68,9 +68,7 @@ function makeHobbits() {
 	shireArticle.appendChild(hobbitList)
 
 	// give each hobbit a class of `hobbit`
-
 	// hint: create a 'ul' outside the loop into which to append the 'li's
-
 	// hint: get 'The-Shire' by using its id
 }
 
@@ -104,11 +102,21 @@ function keepItSecretKeepItSafe() {
 
 function makeBaddies() {
 	console.log('4: makeBaddies')
-
+	const baddiesList = document.createElement('ul')
+	const findMordor = document.querySelector('#Mordor')
+	console.log(findMordor)
 	// display an unordered list of baddies in Mordor
-
+	for (i = 0; i<baddies.length; i++){
+		const listItem = document.createElement('li')
+		const baddieName = baddies[i]
+		listItem.append(baddieName)
+		listItem.classList.add('baddy')
+		baddiesList.appendChild(listItem)
+	}
 	// give each of the baddies a class of "baddy"
+	const mordorArticle = document.querySelector('#Mordor')
 
+	mordorArticle.appendChild(baddiesList)
 	// remember to append them to Mordor
 }
 
