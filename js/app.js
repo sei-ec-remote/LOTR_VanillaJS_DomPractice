@@ -193,11 +193,11 @@ function forgeTheFellowShip() {
 	// create a new div called `'the-fellowship'` within `rivendell`
 	const rivendell = document.getElementById('Rivendell')
 	const div = document.createElement('div')
-	div.setAttribute(`id`, `'the-fellowship'`)
+	div.setAttribute(`id`, `the-fellowship`)
 	rivendell.appendChild(div)
 	
 	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
-	const fellowshipDiv = document.getElementById(`'the-fellowship'`)
+	const fellowshipDiv = document.getElementById(`the-fellowship`)
 	const addHobbits = document.querySelectorAll('.hobbit')
 	const addBuddies = document.querySelectorAll('.buddy')
 	// after each character is added make an alert that they // have joined your party
@@ -225,7 +225,7 @@ function theBalrog() {
 	console.log('9: theBalrog')
 	// change the `'Gandalf'` text to `'Gandalf the White'`
 	buddies[0] = 'Gandalf the White'
-	const theFellowship = document.getElementById(`'the-fellowship'`)
+	const theFellowship = document.getElementById(`the-fellowship`)
 	const gandalf = theFellowship.querySelectorAll(`.buddy`)
 	for (value of gandalf) {
 		if (value.innerText === 'gandalf the grey'){
@@ -252,7 +252,7 @@ function hornOfGondor() {
 	// Remove `Boromir` from the Fellowship
 	window.alert(`The Horn of Gondor has been blown!\nBoromir's been killed by the Uruk-hai!`)
 	buddies.pop()
-	const fellowship = document.getElementById(`'the-fellowship'`)
+	const fellowship = document.getElementById(`the-fellowship`)
 	const buddy = fellowship.querySelectorAll('.buddy')
 	for (value of buddy) {
 		if (value.innerText == 'boromir') {
@@ -272,6 +272,14 @@ function hornOfGondor() {
 function itsDangerousToGoAlone() {
 	console.log('11: itsDangerousToGoAlone')
 	// take `Frodo` and `Sam` out of the fellowship and move // them to `Mordor`
+	const fellowship = document.getElementById(`the-fellowship`)
+	const hobbits = fellowship.querySelectorAll('.hobbit')
+	const mordor = document.getElementById(`Mordor`)
+	for (value of hobbits) {
+		if (value.innerText == `frodo baggins` || value.innerText == `samwise "sam" gamgee`) {
+			mordor.appendChild(value)
+		}
+	}	
 	// add a div with an id of `'mount-doom'` to `Mordor`
 }
 
@@ -285,7 +293,9 @@ function itsDangerousToGoAlone() {
 function weWantsIt() {
 	console.log('12: weWantsIt')
 	// Create a div with an id of `'gollum'` and add it to Mordor
+
 	// Remove `the ring` from `Frodo` and give it to `Gollum`
+
 	// Move Gollum into Mount Doom
 }
 
