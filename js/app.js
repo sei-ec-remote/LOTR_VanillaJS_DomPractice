@@ -57,6 +57,9 @@ function makeHobbits() {
 	theShire.appendChild(hobbitList)
 	for (i=0; i<hobbits.length; i++) {
 		let hob = document.createElement("li")
+		let name = hobbits[i]
+		let breakName = name.split(" ")
+		hob.setAttribute("id", breakName[0])
 		hob.innerText = `${hobbits[i]}`
 		// give each hobbit a class of `hobbit`
 		hob.classList.add("hobbit")
@@ -80,10 +83,13 @@ function keepItSecretKeepItSafe() {
 	console.log('3: keepItSecretKeepItSafe')
 
 	// create a div with an id of `'the-ring'`
-
+	let ring = document.createElement("div")
+	ring.setAttribute("id", "the-ring")
 	// give the div a class of `'magic-imbued-jewelry'`
-
+	ring.classList.add("magic-imbued-jewelry")
 	// add the ring as a child of `Frodo`
+	document.getElementById("Frodo").appendChild(ring)
+
 }
 
 // COMMIT YOUR WORK
