@@ -104,7 +104,18 @@ function makeBaddies() {
 	// give each of the baddies a class of "baddy"
 
 	// remember to append them to Mordor
+	const mordor = document.getElementById("Mordor")
+	const list = document.createElement('ul')
+	for (i = 0; i < baddies.length; i++){
+		const listItem = document.createElement('li')
+		listItem.setAttribute('class', 'baddy')
+		listItem.setAttribute('id', `baddy${i}`)
+		listItem.innerText = baddies[i]
+		list.appendChild(listItem)
+	}
+	mordor.appendChild(list)
 }
+
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 4 complete - Made the Baddies"..
