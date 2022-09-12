@@ -67,6 +67,7 @@ function makeHobbits() {
 		newHobbit.innerText = hobbits[i]
 		theHobbits.appendChild(newHobbit)
 	}
+	theHobbits.setAttribute('id', 'The-Hobbits')
 	shire.appendChild(theHobbits)
 }
 
@@ -113,6 +114,7 @@ function makeBaddies() {
 		newBaddy.innerText = baddies[i]
 		theBaddies.appendChild(newBaddy)
 	}
+	theBaddies.setAttribute('id', 'The-Baddies')
 	mordor.appendChild(theBaddies)
 }
 
@@ -137,6 +139,7 @@ function makeBuddies() {
 		newBuddy.innerText = buddies[i]
 		theBuddies.appendChild(newBuddy)
 	}
+	theBuddies.setAttribute('id', 'The-Buddies')
 	aside.appendChild(theBuddies)
 
 	// insert your aside as a child element of `rivendell`
@@ -156,6 +159,11 @@ function leaveTheShire() {
 	console.log('6: leaveTheShire')
 
 	// assemble the `hobbits` and move them to `rivendell`
+	const theHobbits = document.getElementById('The-Hobbits')
+	const rivendell = document.getElementById('Rivendell')
+	const shire = document.getElementById('The-Shire')
+	shire.removeChild(theHobbits)
+	rivendell.appendChild(theHobbits)
 }
 
 // COMMIT YOUR WORK
