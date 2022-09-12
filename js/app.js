@@ -141,7 +141,6 @@ function makeBuddies() {
 	for (buddy of buddies) {
 		let buddyItem = document.createElement('li')
 		buddyItem.innerText = buddy
-		buddyItem.id = buddy
 		buddiesList.appendChild(buddyItem)
 	}
 	document.querySelector('#Rivendell').appendChild(buddiesAside)
@@ -176,6 +175,13 @@ function beautifulStranger() {
 	console.log('7: beautifulStranger')
 
 	// change the `'Strider'` text to `'Aragorn'`
+	const buddyList = document.querySelector('#Rivendell').querySelector('aside').querySelector('ul')
+	const buddyNodes = buddyList.querySelectorAll('li')
+	for (let node of buddyNodes) {
+		if (node.innerText === 'strider') {
+			node.innerText = 'Aragorn'
+		}
+	}
 }
 
 // COMMIT YOUR WORK
