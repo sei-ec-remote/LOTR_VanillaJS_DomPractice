@@ -54,7 +54,7 @@ function makeHobbits() {
 	// display an `unordered list` of hobbits in the shire
 	let theShire = document.getElementById("The-Shire")
 	let hobbitList = document.createElement("ul")
-	hobbitList.setAttribute("id", "hobbitList")
+	hobbitList.setAttribute("id", "shireList")
 	theShire.appendChild(hobbitList)
 	for (i=0; i<hobbits.length; i++) {
 		let hob = document.createElement("li")
@@ -104,7 +104,7 @@ function makeBaddies() {
 	// display an unordered list of baddies in Mordor
 	let mordor = document.getElementById("Mordor")
 	let baddiesList = document.createElement("ul")
-	baddiesList.setAttribute("id", "baddiesList")
+	baddiesList.setAttribute("id", "mordorList")
 	mordor.appendChild(baddiesList)
 	for (i=0; i<baddies.length; i++) {
 		let bad = document.createElement("li")
@@ -134,7 +134,7 @@ function makeBuddies() {
 	aside.setAttribute("id", "rivendellAside")
 	// put an `unordered list` of the `'buddies'` in the aside
 	let buddiesList = document.createElement("ul")
-	buddiesList.setAttribute("id", "buddiesList")
+	buddiesList.setAttribute("id", "rivendellList")
 	aside.appendChild(buddiesList)
 	for (i=0; i<buddies.length; i++) {
 		let bud = document.createElement("li")
@@ -158,9 +158,12 @@ function makeBuddies() {
 function leaveTheShire() {
 	console.log('6: leaveTheShire')
 	// assemble the `hobbits` and move them to `rivendell`
-	const hobbitList = document.getElementById("hobbitList")
-	const rivendell = document.getElementById("rivendellAside")
-	rivendell.appendChild(hobbitList)
+	const rivendell = document.getElementById("rivendellList")
+	for (i=0; i<hobbits.length; i++) {
+		let hob = document.getElementById(`${hobbits[i]}`)
+		rivendell.appendChild(hob)
+	}
+
 }
 
 // COMMIT YOUR WORK
@@ -189,16 +192,18 @@ function forgeTheFellowShip() {
 	const fellowship = document.createElement("div")
 	fellowship.setAttribute("id", "the-fellowship")
 	document.getElementById("rivendellAside").appendChild(fellowship)
+	let fellowList = document.createElement("ul")
+	fellowship.appendChild(fellowList)
 	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
 	for (i=0; i<hobbits.length; i++) {
 		let hob = document.getElementById(`${hobbits[i]}`)
-		fellowship.appendChild(hob)
+		fellowList.appendChild(hob)
 		// after each character is added make an alert that they // have joined your party
 		console.log(`${hobbits[i]} has joined your party!`)
 	}
 	for (i=0; i<buddies.length; i++) {
 		let bud = document.getElementById(`${buddies[i]}`)
-		fellowship.appendChild(bud)
+		fellowList.appendChild(bud)
 		// after each character is added make an alert that they // have joined your party
 		console.log(`${buddies[i]} has joined your party!`)
 	}
@@ -221,7 +226,7 @@ function theBalrog() {
 	// apply the following style to the element, make the // background 'white', add a grey border
 	gandalf.style.backgroundColor = "white"
 	gandalf.style.border = "4px solid grey"
-	gandalf.style.width = "200px"
+	gandalf.style.width = "150px"
 }
 
 // COMMIT YOUR WORK
@@ -250,8 +255,8 @@ function hornOfGondor() {
 function itsDangerousToGoAlone() {
 	console.log('11: itsDangerousToGoAlone')
 	// take `Frodo` and `Sam` out of the fellowship and move // them to `Mordor`
-	document.getElementById("Mordor").appendChild(document.getElementById("Frodo Baggins"))
-	document.getElementById("Mordor").appendChild(document.getElementById('Samwise "Sam" Gamgee'))
+	document.getElementById("mordorList").appendChild(document.getElementById("Frodo Baggins"))
+	document.getElementById("mordorList").appendChild(document.getElementById('Samwise "Sam" Gamgee'))
 	// add a div with an id of `'mount-doom'` to `Mordor`
 	let mtDoom = document.createElement("div")
 	mtDoom.setAttribute("id", "mount-doom")
@@ -287,7 +292,13 @@ function weWantsIt() {
 function thereAndBackAgain() {
 	console.log('13: thereAndBackAgain')
 	// remove `Gollum` and `the Ring` from the document
+	document.getElementById("the-ring").remove()
+	document.getElementById("gollum").remove()
 	// Move all the `hobbits` back to `the shire`
+	for (i=0; i<hobbits.length; i++) {
+		let hob = document.getElementById(`${hobbits[i]}`)
+		document.getElementById("shireList").appendChild(hob)
+	}	
 }
 
 // COMMIT YOUR WORK
