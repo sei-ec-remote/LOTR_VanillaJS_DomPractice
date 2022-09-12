@@ -24,7 +24,7 @@ function makeMiddleEarth() {
 	// 1. create a section tag with an id of middle-earth
 	const midEarth = document.createElement('section')
 	midEarth.setAttribute('id', 'middle-earth')
-	document.body.appendChild(midEarth)
+	
 
 	// 2. use a for loop to iterate over the lands array that does the following:
 
@@ -36,7 +36,19 @@ function makeMiddleEarth() {
 
 	//   2d. appends each land to the middle-earth section
 
+	for ( let i= 0; i < lands.length; i++){
+		let land = document.createElement('article')
+		land.setAttribute('id', lands[i])
+		let landText = document.createElement('h1')
+		landText.innerHTML = lands[i]
+		midEarth.appendChild(land)
+		land.appendChild(landText)
+		console.log(land)
+	}
+
 	// 3. append the section to the body of the DOM.
+	document.body.appendChild(midEarth)
+
 }
 
 // COMMIT YOUR WORK
@@ -50,6 +62,7 @@ function makeHobbits() {
 	console.log('2: makeHobbits')
 
 	// display an `unordered list` of hobbits in the shire
+
 
 	// give each hobbit a class of `hobbit`
 
