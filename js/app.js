@@ -110,6 +110,14 @@ function makeBaddies() {
 	// give each of the baddies a class of "baddy"
 
 	// remember to append them to Mordor
+	let baddyList = document.createElement('ul')
+	for (let baddy of baddies) {
+		let baddyItem = document.createElement('li')
+		baddyItem.classList.add('baddy')
+		baddyItem.innerText = baddy
+		baddyList.appendChild(baddyItem)
+	}
+	document.querySelector('#Mordor').appendChild(baddyList)
 }
 
 // COMMIT YOUR WORK
