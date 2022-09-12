@@ -160,7 +160,6 @@ function leaveTheShire() {
 	const assembleHobbits = document.querySelectorAll('.hobbit')
 	const rivendell = document.querySelector('#Rivendell')
 	const rivendellList = rivendell.querySelector('ul')
-	console.log(rivendellList)
 	for (value of assembleHobbits) {
 		rivendellList.appendChild(value)
 	}
@@ -177,6 +176,9 @@ function beautifulStranger() {
 	console.log('7: beautifulStranger')
 
 	// change the `'Strider'` text to `'Aragorn'`
+	buddies[3] = 'Aragorn'
+	const strider = document.getElementById('buddy3')
+	strider.innerText = 'Aragorn'
 }
 
 // COMMIT YOUR WORK
