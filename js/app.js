@@ -53,15 +53,16 @@ function makeHobbits() {
 	console.log('2: makeHobbits')
 	// display an `unordered list` of hobbits in the shire
 	const hobbitBunch = document.createElement('ul')
-
-	// give each hobbit a class of `hobbit`
 	for (let i = 0; i < hobbits.length; i++) {
 		const hobbit = document.createElement('li')
 		hobbit.innerText = hobbits[i]
 		hobbitBunch.appendChild(hobbit)
 		document.getElementById('The-Shire').appendChild(hobbitBunch)
-	}
+
 	
+	// give each hobbit a class of `hobbit`
+	hobbit.setAttribute('class','hobbit')
+	}
 
 	// hint: create a 'ul' outside the loop into which to append the 'li's
 
@@ -79,10 +80,21 @@ function keepItSecretKeepItSafe() {
 	console.log('3: keepItSecretKeepItSafe')
 
 	// create a div with an id of `'the-ring'`
+	const bilbosGift = document.createElement('div')
+	bilbosGift.setAttribute('id','the-ring')
 
 	// give the div a class of `'magic-imbued-jewelry'`
-
+	bilbosGift.setAttribute('class', 'magic-imbued-jewelry')
 	// add the ring as a child of `Frodo`
+	const present = document.getElementsByClassName('hobbit')
+	for (i = 0; i < (present.length); i++) {
+		console.log(present[i])
+		if (present[i].innerHTML == 'Frodo Baggins') {
+			present[i].appendChild(bilbosGift)
+		}
+		
+	}
+	
 }
 
 // COMMIT YOUR WORK
