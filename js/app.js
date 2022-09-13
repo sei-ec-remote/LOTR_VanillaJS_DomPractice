@@ -2,7 +2,7 @@ console.log('Linked.')
 
 // Dramatis Personae
 const hobbits = [
-	`Frodo Baggins`,
+	`Frodo-Baggins`,
 	`Samwise "Sam" Gamgee`,
 	`Meriadoc "Merry" Brandybuck`,
 	`Peregrin "Pippin" Took`,
@@ -58,7 +58,7 @@ function makeHobbits() {
 		const hobbitsListNames = document.createElement('li')
 		hobbitsListNames.setAttribute('id', hobbits[i])
 		hobbitsListNames.innerText = hobbits[i]
-		hobbitsListNames.setAttribute('class', hobbits[i])
+		hobbitsListNames.setAttribute('class', 'hobbits')
 		hobbitsList.appendChild(hobbitsListNames)
     }   console.log(hobbitsList)
 
@@ -81,10 +81,16 @@ function keepItSecretKeepItSafe() {
 	console.log('3: keepItSecretKeepItSafe')
 
 	// create a div with an id of `'the-ring'`
-
+	const theRing = document.createElement('div')
+	theRing.setAttribute('id', 'the-ring')
+	console.log(theRing)
 	// give the div a class of `'magic-imbued-jewelry'`
-
+	theRing.setAttribute('class', 'magic-imbued-jewelry')
 	// add the ring as a child of `Frodo`
+
+	const frodoRingChild = document.querySelector('#Frodo-Baggins')
+	frodoRingChild.appendChild(theRing)
+	console.log(frodoRingChild)
 }
 
 // COMMIT YOUR WORK
