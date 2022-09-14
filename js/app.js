@@ -143,7 +143,7 @@ function makeBuddies() {
 	}
 	// insert your aside as a child element of `rivendell`
 	document.getElementById('Rivendell').appendChild(buddyBench)
-
+}
 
 
 // COMMIT YOUR WORK
