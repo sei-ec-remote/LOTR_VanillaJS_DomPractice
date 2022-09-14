@@ -206,8 +206,17 @@ function forgeTheFellowShip() {
 
 function theBalrog() {
 	console.log('9: theBalrog')
+	const buddiesNum = document.getElementsByClassName("buddies").length
 	// change the `'Gandalf'` text to `'Gandalf the White'`
-	// apply the following style to the element, make the // background 'white', add a grey border
+	for (let i = 0; i < buddiesNum; i++){
+		if(document.getElementsByClassName("buddies")[i].innerHTML === 'Gandalf the Grey'){
+			document.getElementsByClassName("buddies")[i].innerHTML = 'Gandalf the White'
+			// apply the following style to the element, make the // background 'white', add a grey border
+			document.getElementsByClassName("buddies")[i].style.border = 'thick solid grey'
+			document.getElementsByClassName("buddies")[i].style.background = 'white'
+		}
+	}
+	
 }
 
 // COMMIT YOUR WORK
