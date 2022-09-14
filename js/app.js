@@ -156,7 +156,16 @@ function makeBuddies() {
 function leaveTheShire() {
 	console.log('6: leaveTheShire')
 
-	// assemble the `hobbits` and move them to `rivendell`
+	// assemble the `hobbits` and move them to `rivendell'
+
+	
+	const theShire = document.getElementById('The-Shire')
+	const rivendell= document.getElementById('Rivendell')
+
+	while (theShire.childNodes.length > 0) {
+		rivendell.appendChild(theShire.childNodes[1])
+	} 
+	
 }
 
 // COMMIT YOUR WORK
