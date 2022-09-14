@@ -95,8 +95,14 @@ theRing.setAttribute('id', 'the-ring')
 
 	// give the div a class of `'magic-imbued-jewelry'`
 theRing.setAttribute('class', 'magic-imbued-jewelry')
-	// add the ring as a child of `Frodo`
-document.getElementById('Frodo Baggins').appendChild(theRing)
+console.log(theRing)	
+const ulHobbit = document.querySelector('ul')
+console.log(ulHobbit)
+const liHobbit = ulHobbit.children[0]
+console.log(liHobbit)
+
+// add the ring as a child of `Frodo`
+liHobbit.appendChild(theRing)
 }
 
 // COMMIT YOUR WORK
@@ -110,10 +116,16 @@ function makeBaddies() {
 	console.log('4: makeBaddies')
 
 	// display an unordered list of baddies in Mordor
-
+const baddieList= docement.creatElement('ul')
 	// give each of the baddies a class of "baddy"
-
+for (let i =0; i < baddies.length; i++) {
+	const baddiesNames= document.creatElement('li')
+	baddiesNames.setAttribute('class', 'baddie')
+	baddiesNames.innerHTML= baddies[i]
+	baddieList.appendChild(baddiesNames)
+}
 	// remember to append them to Mordor
+	document.getElementById('Mordor').appendChild(baddieList)
 }
 
 // COMMIT YOUR WORK
