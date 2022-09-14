@@ -52,7 +52,7 @@ function makeMiddleEarth() {
 
 function makeHobbits() {
 	console.log('2: makeHobbits')
-	const ulHobbits = document.createElement('ul')
+	const ulHob = document.createElement('ul')
 	const theShire = document.getElementById('The-Shire')
 	// display an `unordered list` of hobbits in the shire
 
@@ -61,9 +61,9 @@ function makeHobbits() {
 		const li = document.createElement('li')
 		li.innerHTML = hobbits[i]
 		li.setAttribute('class', 'hobbit')
-		ulHobbits.appendChild(li)
+		ulHob.appendChild(li)
 	}
-	theShire.appendChild(ulHobbits)
+	theShire.appendChild(ulHob)
 	// hint: create a 'ul' outside the loop into which to append the 'li's
 
 	// hint: get 'The-Shire' by using its id
@@ -79,9 +79,9 @@ function makeHobbits() {
 function keepItSecretKeepItSafe() {
 	console.log('3: keepItSecretKeepItSafe')
 	const theRing = document.createElement('div')
-	div.setAttribute('id', 'the-ring')
-	div.setAttribute('class', 'magic-imbued-jewelry')
-	const frodo = document.querySelector('hobbit')
+	theRing.setAttribute('id', 'the-ring')
+	theRing.setAttribute('class', 'magic-imbued-jewelry')
+	const frodo = document.querySelector('.hobbit')
 	frodo.appendChild(theRing)
 	// create a div with an id of `'the-ring'`
 
@@ -149,7 +149,10 @@ function makeBuddies() {
 
 function leaveTheShire() {
 	console.log('6: leaveTheShire')
-
+	const rivendell = document.getElementById('Rivendell')
+	const ulHobbits = document.querySelector('#The-Shire > ul')
+	rivendell.appendChild(ulHobbits)
+	
 	// assemble the `hobbits` and move them to `rivendell`
 }
 
