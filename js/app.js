@@ -188,11 +188,11 @@ function forgeTheFellowShip() {
 	const buddies = document.querySelectorAll('.buddy')
 	buddies.forEach(buddy => { 
 		div.appendChild(buddy)
-		console.log(`${buddy} has joined The Fellowship`)
+		console.log(`${buddy.innerText} has joined The Fellowship`)
 	})
 	hobbits.forEach(hobbit => { 
 		div.appendChild(hobbit)
-		console.log(`${hobbit} has joined The Fellowship`)
+		console.log(`${hobbit.innerText} has joined The Fellowship`)
 	})
 	
 	// create a new div called `'the-fellowship'` within `rivendell`
@@ -211,6 +211,10 @@ function forgeTheFellowShip() {
 
 function theBalrog() {
 	console.log('9: theBalrog')
+	const gandalf = document.querySelector('.buddy')
+	gandalf.innerHTML = 'Gandalf the White'
+	gandalf.style.background = 'white'
+	gandalf.style.border = '3px solid grey'
 	// change the `'Gandalf'` text to `'Gandalf the White'`
 	// apply the following style to the element, make the // background 'white', add a grey border
 }
