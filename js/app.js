@@ -146,7 +146,7 @@ function leaveTheShire() {
 	console.log('6: leaveTheShire')
 	// assemble the `hobbits` and move them to `rivendell`
 	rivendelPeople = document.getElementById('rivendell-list')
-	hobbitNum = document.getElementsByClassName("hobbit").length
+	const hobbitNum = document.getElementsByClassName("hobbit").length
 	for(let i = 0; i < hobbitNum; i++){
 		rivendelPeople.appendChild(document.getElementsByClassName("hobbit")[0])
 	}
@@ -161,7 +161,14 @@ function leaveTheShire() {
 
 function beautifulStranger() {
 	console.log('7: beautifulStranger')
-
+	const buddiesNum = document.getElementsByClassName("buddies").length
+	// Loop through all buddies in land and find `'Strider'`
+	for(let i = 0; i < buddiesNum; i++){
+		if(document.getElementsByClassName("buddies")[i].innerHTML === 'Strider'){
+			// change the `'Strider'` text to `'Aragorn'`
+			document.getElementsByClassName("buddies")[i].innerHTML = 'Aragorn'
+		}
+	}
 	// change the `'Strider'` text to `'Aragorn'`
 }
 
