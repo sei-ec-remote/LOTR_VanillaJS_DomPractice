@@ -139,6 +139,7 @@ function makeBuddies() {
 		const listItem = document.createElement('li')
 		const buddyName = buddies[i]
 		listItem.append(buddyName)
+		listItem.classList.add('buddy')
 		buddiesList.appendChild(listItem)
 	}
 	// insert your aside as a child element of `rivendell`
@@ -156,17 +157,15 @@ function makeBuddies() {
 function leaveTheShire() {
 	console.log('6: leaveTheShire')
 	const findShire = document.querySelector('#The-Shire')
-	console.log(typeof findShire)
+	// console.log(typeof findShire)
 	const getHobbits = document.querySelectorAll('.hobbit')
 
 	console.log("hobbit list",typeof getHobbits)
 	const findRivendell = document.querySelector('#Rivendell')
 	for (i=0; i < getHobbits.length; i++){
-		console.log(getHobbits[i])
+		// console.log(getHobbits[i])
 		findRivendell.appendChild(getHobbits[i])
 	}
-
-
 	// assemble the `hobbits` and move them to `rivendell`
 }
 
@@ -179,8 +178,17 @@ function leaveTheShire() {
 
 function beautifulStranger() {
 	console.log('7: beautifulStranger')
-
+	const buddyList = document.querySelectorAll('.buddy')
+	// console.log("find it", buddyList.length)
+	for (i=0; i < buddyList.length; i++){
+		console.log(buddyList[i].innerText)
+		if (buddyList[i].innerText==='strider'){
+			buddyList[i].innerText = 'Aragorn'
+		}
+		
+	}
 	// change the `'Strider'` text to `'Aragorn'`
+	console.log("did he change",buddyList[3].innerText)
 }
 
 // COMMIT YOUR WORK
