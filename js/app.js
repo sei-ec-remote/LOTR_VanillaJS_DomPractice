@@ -62,6 +62,7 @@ function makeHobbits() {
 
 	// display an `unordered list` of hobbits in the shire
 	let hobbitNames = document.createElement('ul')
+	hobbitNames.setAttribute('id', 'hobbit-names')
 	
 	for(let i= 0; i < hobbits.length; i++){
 		let name = document.createElement('li')
@@ -70,8 +71,11 @@ function makeHobbits() {
 		hobbitNames.appendChild(name)
 	}
 
+	console.log(hobbitNames)
+
 
 	let theShire = document.getElementById('The-Shire')
+	console.log(theShire)
 	theShire.appendChild(hobbitNames)
 
 
@@ -93,10 +97,20 @@ function keepItSecretKeepItSafe() {
 	console.log('3: keepItSecretKeepItSafe')
 
 	// create a div with an id of `'the-ring'`
+	const theRing = document.createElement('div')
+	theRing.setAttribute('id', 'the-ring')
+	console.log(theRing)
 
 	// give the div a class of `'magic-imbued-jewelry'`
+	theRing.setAttribute('class', 'magic-imbued-jewelry')
 
 	// add the ring as a child of `Frodo`
+	
+	const hobbitUl = document.querySelector('ul')
+	const hobbitLi = hobbitUl.children[0]
+	hobbitLi.appendChild(theRing)
+	console.log(hobbitLi)
+	console.log(hobbitUl)
 }
 
 // COMMIT YOUR WORK
@@ -110,8 +124,21 @@ function makeBaddies() {
 	console.log('4: makeBaddies')
 
 	// display an unordered list of baddies in Mordor
+	let baddiesNames = document.createElement('ul')
+	baddiesNames.setAttribute('id', 'baddy-names')
+	console.log(baddiesNames)
 
 	// give each of the baddies a class of "baddy"
+	for (i = 0; i < baddies.length; i++){
+		let baddy = document.createElement('li')
+		baddy.setAttribute('class', 'baddy')
+		baddy.innerText = baddies[i]
+		baddiesNames.appendChild(baddy)
+	}
+
+
+	let mordor = document.getElementById('Mordor')
+	mordor.appendChild(baddiesNames)
 
 	// remember to append them to Mordor
 }
@@ -127,8 +154,23 @@ function makeBuddies() {
 	console.log('5: makeBuddies')
 
 	// create an `aside` tag
+	let buddyNames = document.createElement('aside')
+	buddyNames.setAttribute('id', 'buddy-names')
+	
 
 	// put an `unordered list` of the `'buddies'` in the aside
+	for(let i=0; i < buddies.length; i++){
+		let buddy = document.createElement('li')
+		buddy.setAttribute('class', 'buddy')
+		buddy.innerText = buddies[i]
+		buddyNames.appendChild(buddy)
+	}
+
+	console.log(buddyNames)
+
+	let rivendell = document.getElementById('Rivendell')
+	console.log(rivendell)
+	rivendell.appendChild(buddyNames)
 
 	// insert your aside as a child element of `rivendell`
 }
@@ -144,6 +186,11 @@ function leaveTheShire() {
 	console.log('6: leaveTheShire')
 
 	// assemble the `hobbits` and move them to `rivendell`
+	const hobbitUl = document.querySelector('ul')
+	let rivendell = document.getElementById('Rivendell')
+	rivendell.appendChild(hobbitUl)
+
+
 }
 
 // COMMIT YOUR WORK
@@ -157,6 +204,10 @@ function beautifulStranger() {
 	console.log('7: beautifulStranger')
 
 	// change the `'Strider'` text to `'Aragorn'`
+	buddies.splice(3, 1, 'Aragorn')
+	console.log(buddies)
+
+
 }
 
 // COMMIT YOUR WORK
