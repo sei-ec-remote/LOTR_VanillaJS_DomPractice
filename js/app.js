@@ -90,7 +90,7 @@ function keepItSecretKeepItSafe() {
 	console.log('3: keepItSecretKeepItSafe')
 
 	// create a div with an id of `'the-ring'`
-const theRing= document.createElement('div')
+const theRing = document.createElement('div')
 theRing.setAttribute('id', 'the-ring') 
 
 	// give the div a class of `'magic-imbued-jewelry'`
@@ -116,12 +116,12 @@ function makeBaddies() {
 	console.log('4: makeBaddies')
 
 	// display an unordered list of baddies in Mordor
-const baddieList= docement.creatElement('ul')
+	const baddieList= document.createElement ('ul');
 	// give each of the baddies a class of "baddy"
 for (let i =0; i < baddies.length; i++) {
-	const baddiesNames= document.creatElement('li')
+	let baddiesNames = document.createElement('li')
 	baddiesNames.setAttribute('class', 'baddie')
-	baddiesNames.innerHTML= baddies[i]
+	baddiesNames.innerHTML = `${baddies[i]}`
 	baddieList.appendChild(baddiesNames)
 }
 	// remember to append them to Mordor
