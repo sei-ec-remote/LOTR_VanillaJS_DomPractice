@@ -140,9 +140,9 @@ function makeBuddies() {
 	const teamBud = document.createElement('ul')
 	buddyTeam.appendChild(teamBud)
 
-	for(i = 0; i < baddies.length; i++) {
+	for(i = 0; i < buddies.length; i++) {
 		const badGuys = document.createElement('li')
-		badGuys.innerText = baddies[i]
+		.innerText = buddies[i]
 		bigBads.appendChild(badGuys)
 		document.getElementById('Mordor').appendChild(bigBads)
 		}
