@@ -156,20 +156,17 @@ function makeBuddies() {
 function leaveTheShire() {
 	console.log('6: leaveTheShire')
 	const findShire = document.querySelector('#The-Shire')
-	console.log(findShire[1])
+	console.log(typeof findShire)
 	const getHobbits = document.querySelectorAll('.hobbit')
 
 	console.log("hobbit list",typeof getHobbits)
-	
+	const findRivendell = document.querySelector('#Rivendell')
 	for (i=0; i < getHobbits.length; i++){
 		console.log(getHobbits[i])
-		getHobbits[i].setAttribute('id', 'Rivendell')
-
+		findRivendell.appendChild(getHobbits[i])
 	}
-	
-	const findRivendell = document.querySelector('#Rivendell')
-	getHobbits.setAttribute('id', 'Rivendell')
-	findRivendell.appendChild(getHobbits)
+
+
 	// assemble the `hobbits` and move them to `rivendell`
 }
 
