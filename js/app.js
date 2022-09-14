@@ -74,6 +74,7 @@ function keepItSecretKeepItSafe() {
 	for(let i = 0; i < hobbits.length; i++){
 		if(document.getElementsByClassName("hobbit")[i].innerHTML === "Frodo Baggins"){
 			document.getElementsByClassName("hobbit")[i].appendChild(theRing)
+			document.getElementsByClassName("hobbit")[i].setAttribute('id','Frodo')
 		}
 	}
 
@@ -251,7 +252,19 @@ function hornOfGondor() {
 function itsDangerousToGoAlone() {
 	console.log('11: itsDangerousToGoAlone')
 	// take `Frodo` and `Sam` out of the fellowship and move // them to `Mordor`
+	const hobbitNum = document.getElementsByClassName("hobbit").length
+	// I couldn't get frodo to move using the same logic as moving sam so I went back and added an ID for frodo to help brute force this one step
+	document.getElementById("mordor-list").appendChild(document.getElementById('Frodo'))
+	for (let i = 0; i < hobbitNum; i++){
+		if(document.getElementsByClassName("hobbit")[i].innerHTML === 'Samwise "Sam" Gamgee'){
+			document.getElementById("mordor-list").appendChild(document.getElementsByClassName("hobbit")[i])
+		}
+	}
+	
 	// add a div with an id of `'mount-doom'` to `Mordor`
+	const mountDoom = document.createElement('div')
+	mountDoom.setAttribute('id','mount-doom')
+	document.getElementById('Mordor').appendChild(mountDoom)
 }
 
 // COMMIT YOUR WORK
