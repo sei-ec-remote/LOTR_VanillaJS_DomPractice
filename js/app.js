@@ -165,8 +165,10 @@ function leaveTheShire() {
 
 function beautifulStranger() {
 	console.log('7: beautifulStranger')
-
+	const buddies = document.querySelectorAll('.buddy')
+	buddies[3].innerHTML = 'Aragorn'
 	// change the `'Strider'` text to `'Aragorn'`
+
 }
 
 // COMMIT YOUR WORK
