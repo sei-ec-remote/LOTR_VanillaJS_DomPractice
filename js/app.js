@@ -59,18 +59,25 @@ function makeMiddleEarth() {
 // Chapter 2
 // ============
 
-function makeHobbits() {
-	console.log('2: makeHobbits')
-
-	const ul = document.createElement("ul");
+const hobbitList = document.createElement("ul");
 	for (let name of hobbits) {
 		let li = document.createElement("li")
 		li.innerText = name
-		ul.appendChild(li)
+		hobbitList.appendChild(li)
 	}
 
-	const theShire = document.getElementById("The-Shire")
-	theShire.appendChild(ul)
+function makeHobbits() {
+	console.log('2: makeHobbits')
+
+	// const hobbitList = document.createElement("ul");
+	// for (let name of hobbits) {
+	// 	let li = document.createElement("li")
+	// 	li.innerText = name
+	// 	hobbitList.appendChild(li)
+	// }
+
+	// const theShire = document.getElementById("The-Shire")
+	// theShire.appendChild(hobbitList)
 	// display an `unordered list` of hobbits in the shire
 
 	// give each hobbit a class of `hobbit`
@@ -168,6 +175,9 @@ function makeBuddies() {
 
 function leaveTheShire() {
 	console.log('6: leaveTheShire')
+	const inRivendell = document.getElementById("Rivendell")
+	inRivendell.appendChild(hobbitList)
+	console.log(inRivendell);
 
 	// assemble the `hobbits` and move them to `rivendell`
 }
