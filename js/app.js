@@ -72,12 +72,12 @@ function makeHobbits() {
 		// person.classList.add('hobbit')
 		listOfHobbits.appendChild(person)
 	} 
-	const theShire= document.getElementbyID('The-Shire');
+	const theShire= document.getElementById('The-Shire');
 	theShire.appendChild(listOfHobbits)
 	// hint: create a 'ul' outside the loop into which to append the 'li's
 
 // 	// hint: get 'The-Shire' by using its id
-// 	}
+	}
 // }
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 2 complete - Made the Hobbits".
@@ -90,10 +90,13 @@ function keepItSecretKeepItSafe() {
 	console.log('3: keepItSecretKeepItSafe')
 
 	// create a div with an id of `'the-ring'`
+const theRing= document.createElement('div')
+theRing.setAttribute('id', 'the-ring') 
 
 	// give the div a class of `'magic-imbued-jewelry'`
-
+theRing.setAttribute('class', 'magic-imbued-jewelry')
 	// add the ring as a child of `Frodo`
+document.getElementById('Frodo Baggins').appendChild(theRing)
 }
 
 // COMMIT YOUR WORK
