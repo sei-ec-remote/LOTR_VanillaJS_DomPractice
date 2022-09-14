@@ -141,10 +141,10 @@ function makeBuddies() {
 	buddyTeam.appendChild(teamBud)
 
 	for(i = 0; i < buddies.length; i++) {
-		const badGuys = document.createElement('li')
-		.innerText = buddies[i]
-		bigBads.appendChild(badGuys)
-		document.getElementById('Mordor').appendChild(bigBads)
+		const budLi = document.createElement('li')
+		budLi.innerText = buddies[i]
+		teamBud.appendChild(budLi)
+		document.getElementById('Rivendell').appendChild(teamBud)
 		}
 
 	// put an `unordered list` of the `'buddies'` in the aside
