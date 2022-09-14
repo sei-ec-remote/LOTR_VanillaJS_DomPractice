@@ -61,13 +61,13 @@ function makeHobbits() {
 	// display an `unordered list` of hobbits in the shire
 	const hobbitFam = document.createElement('ul')
 	
-	document.The-Shire.appendChild(hobbitFam)
 	
 	// give each hobbit a class of `hobbit`
 	for(i = 0; i < hobbits.length; i++) {
-		const li = document.createElement('li')
-		ul.appendChild(li)
-		li.innerText = hobbits[i]
+		const halfFolk = document.createElement('li')
+		halfFolk.innerText = hobbits[i]
+		hobbitFam.appendChild(halfFolk)
+		document.getElementById('The-Shire').appendChild(hobbitFam)
 		}
 
 	// hint: create a 'ul' outside the loop into which to append the 'li's
@@ -86,9 +86,12 @@ function keepItSecretKeepItSafe() {
 	console.log('3: keepItSecretKeepItSafe')
 
 	// create a div with an id of `'the-ring'`
+	const oneRing = document.createElement('div')
+	oneRing.setAttribute("id", "the-ring")
 
 	// give the div a class of `'magic-imbued-jewelry'`
-
+	oneRing.setAttribute("class", "magic-imbued-jewelry")
+	
 	// add the ring as a child of `Frodo`
 }
 
