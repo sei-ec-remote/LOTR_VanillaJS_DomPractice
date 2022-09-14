@@ -14,6 +14,15 @@ const baddies = ['Sauron', 'Saruman', 'The Uruk-hai', 'Orcs']
 
 const lands = ['The-Shire', 'Rivendell', 'Mordor']
 
+
+
+
+const hobbitList = document.createElement('ul')
+const mordorBaddies = document.createElement("ul")
+const buddyListBox = document.createElement("ul")
+
+
+
 // ============
 // Chapter 1
 // ============
@@ -53,7 +62,7 @@ document.body.appendChild(middleEarth)
 
 function makeHobbits() {
 	console.log('2: makeHobbits')
-	let hobbitList = document.createElement('ul')
+	//let hobbitList = document.createElement('ul')
 	let theShire = document.getElementById('The-Shire')
 	theShire.appendChild(hobbitList)
 	for (let i = 0; i < hobbits.length; i ++){
@@ -102,9 +111,10 @@ function makeBaddies() {
 	console.log('4: makeBaddies')
 	
 	// display an unordered list of baddies in Mordor
-let mordor = document.getElementById("Mordor")
-let mordorBaddies = document.createElement("ul")
+const mordor = document.getElementById("Mordor")
+//const mordorBaddies = document.createElement("ul")
 mordor.appendChild(mordorBaddies)
+
 //console.log(mordorBaddies)
 
 const mordorList = baddies.map((name)=> {
@@ -129,8 +139,7 @@ console.log(list)
 function makeBuddies() {
 	console.log('5: makeBuddies')
 const sideBuddy = document.createElement("aside")
-console.log(sideBuddy)
-const buddyListBox = document.createElement("ul")
+//const buddyListBox = document.createElement("ul")
 sideBuddy.appendChild(buddyListBox)
 // create an `aside` tag
 const buddyList = buddies.map((names)=>{
@@ -141,7 +150,7 @@ const buddyList = buddies.map((names)=>{
 	console.log(list)
 })
 	// put an `unordered list` of the `'buddies'` in the aside
-const rivendell = document.getElementById('Rivendell')
+const rivendell = document.getElementById("Rivendell")
 console.log(rivendell)
 rivendell.appendChild(sideBuddy)
 	// insert your aside as a child element of `rivendell`
@@ -154,9 +163,12 @@ rivendell.appendChild(sideBuddy)
 // Chapter 6
 // ============
 
-function leaveTheShire() {
-	console.log('6: leaveTheShire')
 
+
+function leaveTheShire() {
+	const rivendell = document.getElementById("Rivendell")
+	console.log(hobbitList)
+	rivendell.appendChild(hobbitList)
 	// assemble the `hobbits` and move them to `rivendell`
 }
 
