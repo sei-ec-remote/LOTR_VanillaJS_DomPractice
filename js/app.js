@@ -116,11 +116,7 @@ const mordorList = baddies.map((name)=> {
 console.log(`this is baddie: ${name}`)
 console.log(list)
 })
-
-
-
 	// give each of the baddies a class of "baddy"
-
 	// remember to append them to Mordor
 }
 // COMMIT YOUR WORK
@@ -132,11 +128,22 @@ console.log(list)
 
 function makeBuddies() {
 	console.log('5: makeBuddies')
-
-	// create an `aside` tag
-
+const sideBuddy = document.createElement("aside")
+console.log(sideBuddy)
+const buddyListBox = document.createElement("ul")
+sideBuddy.appendChild(buddyListBox)
+// create an `aside` tag
+const buddyList = buddies.map((names)=>{
+	list = document.createElement("li")
+	list.innerText = names
+	console.log("this is buddy: "+ names)
+	buddyListBox.appendChild(list)
+	console.log(list)
+})
 	// put an `unordered list` of the `'buddies'` in the aside
-
+const rivendell = document.getElementById('Rivendell')
+console.log(rivendell)
+rivendell.appendChild(sideBuddy)
 	// insert your aside as a child element of `rivendell`
 }
 
