@@ -91,8 +91,12 @@ function keepItSecretKeepItSafe() {
 
 	// give the div a class of `'magic-imbued-jewelry'`
 	oneRing.setAttribute("class", "magic-imbued-jewelry")
-	
+
 	// add the ring as a child of `Frodo`
+	// const hobbitSearch = document.querySelector('ul')
+	const frodoB = document.querySelector('li')
+
+	frodoB.appendChild(oneRing)
 }
 
 // COMMIT YOUR WORK
@@ -106,10 +110,19 @@ function makeBaddies() {
 	console.log('4: makeBaddies')
 
 	// display an unordered list of baddies in Mordor
+	const bigBads = document.createElement('ul')
+	for(i = 0; i < baddies.length; i++) {
+		const badGuys = document.createElement('li')
+		badGuys.innerText = baddies[i]
+		bigBads.appendChild(badGuys)
+		document.getElementById('Mordor').appendChild(bigBads)
+		}
 
 	// give each of the baddies a class of "baddy"
 
+
 	// remember to append them to Mordor
+
 }
 
 // COMMIT YOUR WORK
@@ -123,6 +136,16 @@ function makeBuddies() {
 	console.log('5: makeBuddies')
 
 	// create an `aside` tag
+	const buddyTeam = document.createElement('aside')
+	const teamBud = document.createElement('ul')
+	buddyTeam.appendChild(teamBud)
+
+	for(i = 0; i < baddies.length; i++) {
+		const badGuys = document.createElement('li')
+		badGuys.innerText = baddies[i]
+		bigBads.appendChild(badGuys)
+		document.getElementById('Mordor').appendChild(bigBads)
+		}
 
 	// put an `unordered list` of the `'buddies'` in the aside
 
