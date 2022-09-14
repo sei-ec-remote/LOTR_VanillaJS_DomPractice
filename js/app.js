@@ -22,9 +22,24 @@ function makeMiddleEarth() {
 	console.log('1: makeMiddleEarth')
 
 	// 1. create a section tag with an id of middle-earth
+	let middleEarth = document.createElement('section');
 
+	middleEarth.setAttribute('id', "middle-earth")
 	// 2. use a for loop to iterate over the lands array that does the following:
+	for (let i = 0; i < lands.length; i++) {
+		let landArticle = document.createElement("article");
 
+		landArticle.setAttribute('id', lands[i]);
+
+		let h1 = document.createElement('h1');
+
+		h1.innerHTML = lands[i];
+
+		landArticle.appendChild(h1)
+
+		middleEarth.appendChild(landArticle);
+
+	}
 	//   2a. creates an article tag (there should be one for each land when the loop is done)
 
 	//   2b. gives each land article an `id` tag of the corresponding land name
@@ -34,6 +49,7 @@ function makeMiddleEarth() {
 	//   2d. appends each land to the middle-earth section
 
 	// 3. append the section to the body of the DOM.
+	document.body.appendChild(middleEarth)
 }
 
 // COMMIT YOUR WORK
@@ -46,6 +62,15 @@ function makeMiddleEarth() {
 function makeHobbits() {
 	console.log('2: makeHobbits')
 
+	const ul = document.createElement("ul");
+	for (let name of hobbits) {
+		let li = document.createElement("li")
+		li.innerText = name
+		ul.appendChild(li)
+	}
+
+	const theShire = document.getElementById("The-Shire")
+	theShire.appendChild(ul)
 	// display an `unordered list` of hobbits in the shire
 
 	// give each hobbit a class of `hobbit`
@@ -54,6 +79,7 @@ function makeHobbits() {
 
 	// hint: get 'The-Shire' by using its id
 }
+
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 2 complete - Made the Hobbits".
@@ -64,9 +90,15 @@ function makeHobbits() {
 
 function keepItSecretKeepItSafe() {
 	console.log('3: keepItSecretKeepItSafe')
+ 
+	const div = document.createElement("div");
+	div.id = "the-ring";
+	div.className = "magic-imbued-jewelry";
+	const frodo = document.querySelector('li:nth-child(1)');
+	frodo.appendChild(div);
 
+	
 	// create a div with an id of `'the-ring'`
-
 	// give the div a class of `'magic-imbued-jewelry'`
 
 	// add the ring as a child of `Frodo`
@@ -82,6 +114,15 @@ function keepItSecretKeepItSafe() {
 function makeBaddies() {
 	console.log('4: makeBaddies')
 
+	const ul = document.createElement("ul");
+	for (let name of baddies) {
+		let li = document.createElement("li")
+		li.innerText = name
+		ul.appendChild(li)
+	}
+
+	const inMordor = document.getElementById("Mordor")
+	inMordor.appendChild(ul)
 	// display an unordered list of baddies in Mordor
 
 	// give each of the baddies a class of "baddy"
@@ -99,6 +140,18 @@ function makeBaddies() {
 function makeBuddies() {
 	console.log('5: makeBuddies')
 
+	const aside = document.createElement("Aside");
+	const ul = document.createElement("ul");
+	for (let name of baddies) {
+		let li = document.createElement("li")
+		li.innerText = name
+		ul.appendChild(li)
+	}
+
+	aside.appendChild(ul)
+
+	const inRivendell = document.getElementById("Rivendell")
+	inRivendell.appendChild(aside)
 	// create an `aside` tag
 
 	// put an `unordered list` of the `'buddies'` in the aside
