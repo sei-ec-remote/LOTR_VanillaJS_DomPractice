@@ -192,6 +192,8 @@ function forgeTheFellowShip() {
 		theFellowship.appendChild(fellowshipList[0])
 	} 
 
+	// This line only adds them to the DIV of rivendell, if the fellowship list was supposed to endup back in the aside use the below commented out line:
+	// document.getElementsByTagName(‘aside’)[0].appendChild(theFellowship)
 	document.getElementById('Rivendell').appendChild(theFellowship)
 	// after each character is added make an alert that they // have joined your party
 	alert("The Fellowship Has Joined Your Party")
