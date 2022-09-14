@@ -31,9 +31,9 @@ function makeMiddleEarth() {
      //   2a. creates an article tag (there should be one for each land when the loop is done)
 	const article = document.createElement('article');
 	//   2b. gives each land article an `id` tag of the corresponding land name
-     article.setAttribute('id', land) {
+     article.setAttribute('id', land); {
 
-   }
+   
 	//   2c. includes an h1 with the name of the land inside each land article
       const h1 = document.createElement('h1');
 	  h1.innerText = lands;
@@ -103,10 +103,12 @@ function makeBaddies() {
 	console.log('4: makeBaddies')
 
 	// display an unordered list of baddies in Mordor
-
+    const baddiesArr = document.getElementById('article:nth-child(3)');
+	const ul = document.createElement('ul')
 	// give each of the baddies a class of "baddy"
-
+   const baddies = document.setAttribute('class', baddy)
 	// remember to append them to Mordor
+	ul.appendChild('Mordor')
 }
 
 // COMMIT YOUR WORK
