@@ -100,14 +100,29 @@ function keepItSecretKeepItSafe() {
 
 function makeBaddies() {
 	console.log('4: makeBaddies')
-
+	
 	// display an unordered list of baddies in Mordor
+let mordor = document.getElementById("Mordor")
+let mordorBaddies = document.createElement("ul")
+mordor.appendChild(mordorBaddies)
+//console.log(mordorBaddies)
+
+const mordorList = baddies.map((name)=> {
+	let list = document.createElement("li")
+	list.innerText = name
+	list.setAttribute("id", "baddy")
+	mordorBaddies.appendChild(list)
+	
+console.log(`this is baddie: ${name}`)
+console.log(list)
+})
+
+
 
 	// give each of the baddies a class of "baddy"
 
 	// remember to append them to Mordor
 }
-
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 4 complete - Made the Baddies"..
 
