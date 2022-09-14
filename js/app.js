@@ -1,3 +1,4 @@
+
 console.log('Linked.')
 
 // Dramatis Personae
@@ -22,35 +23,7 @@ function makeMiddleEarth() {
 	console.log('1: makeMiddleEarth')
 
 	// 1. create a section tag with an id of middle-earth
-const middleEarth = document.createElement('section');
-	middleEarth.setAttribute('id', 'middle-earth');
-	// document.body.appendChild(middleEarth);
-	// 2. use a for loop to iterate over the lands array that does the following:
-	console.log('Linked.')
-
-// Dramatis Personae
-const hobbits = [
-	`Frodo Baggins`,
-	`Samwise "Sam" Gamgee`,
-	`Meriadoc "Merry" Brandybuck`,
-	`Peregrin "Pippin" Took`,
-]
-
-const buddies = ['Gandalf the Grey', 'Legolas', 'Gimli', 'Strider', 'Boromir']
-
-const baddies = ['Sauron', 'Saruman', 'The Uruk-hai', 'Orcs']
-
-const lands = ['The-Shire', 'Rivendell', 'Mordor']
-
-// ============
-// Chapter 1
-// ============
-
-function makeMiddleEarth() {
-	console.log('1: makeMiddleEarth')
-
-	// 1. create a section tag with an id of middle-earth
-const middleEarth = document.createElement('section');
+	const middleEarth = document.createElement('section');
 	middleEarth.setAttribute('id', 'middle-earth');
 	// document.body.appendChild(middleEarth);
 
@@ -84,20 +57,25 @@ function makeHobbits() {
 	console.log('2: makeHobbits')
 
 	// display an `unordered list` of hobbits in the shire
-	const hobbits =document.createElement('div', 'hobbits');
-	const div = document.getElementById ('hobbits');
-	const hobbit = document.createElement('ul');
-	hobbits.appendChild(hobbit);
-	document.body.appendChild(hobbit);
+	const theShire= document.createElementbyID('The-Shire');
+	const listOfHobbits= document.createElement ('ul');
+	
+	theShire.appendChild(listOfHobbits);
+	// document.body.appendChild(hobbit);
 		
 	// give each hobbit a class of `hobbit`
 	for (let i = 0; i <hobbits.length; i++){
-		if (hobbits[i])
+		let person = document.createElement('li')
+		person.innerText =`${hobbits[i]}`
+
+		person.classList.add('hobbit')
+		hobbistList.appendChild(person)
+	} 
 	// hint: create a 'ul' outside the loop into which to append the 'li's
 
-	// hint: get 'The-Shire' by using its id
-	}
-}
+// 	// hint: get 'The-Shire' by using its id
+// 	}
+// }
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 2 complete - Made the Hobbits".
 
