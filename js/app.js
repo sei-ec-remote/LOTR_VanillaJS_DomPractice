@@ -146,7 +146,10 @@ function leaveTheShire() {
 	console.log('6: leaveTheShire')
 
 	// assemble the `hobbits` and move them to `rivendell`
+	rivendell.appendChild(hobbits);
 }
+  leaveTheShire();
+
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 6 complete - Left the Shire"
