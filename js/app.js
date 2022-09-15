@@ -278,6 +278,21 @@ function hornOfGondor() {
 
 function itsDangerousToGoAlone() {
 	console.log('11: itsDangerousToGoAlone')
+	const mordor = document.getElementById("Mordor")
+	const mountDoom = document.createElement("div")
+	mountDoom.setAttribute("id", "mount-doom")
+	mordor.appendChild(mountDoom)
+	console.log(mountDoom)
+	const twoFriendsTravel = () => {
+		
+		const frodo = document.getElementById(`Frodo Baggins`)
+		const sam = document.getElementById('Samwise "Sam" Gamgee')
+		console.log(frodo + "  " + sam + "head to mordor")
+		mordor.appendChild(frodo)
+		mordor.appendChild(sam)
+	}
+	
+	twoFriendsTravel();
 	// take `Frodo` and `Sam` out of the fellowship and move // them to `Mordor`
 	// add a div with an id of `'mount-doom'` to `Mordor`
 }
