@@ -163,6 +163,12 @@ function leaveTheShire() {
 	console.log('6: leaveTheShire')
 
 	// assemble the `hobbits` and move them to `rivendell`
+	const theShire = document.querySelector('#The-Shire')
+	const listOfHobbits = theShire.querySelector('ul')
+	const rivendell = document.querySelector('#Rivendell')
+	rivendell.appendChild(listOfHobbits)
+
+	
 }
 
 // COMMIT YOUR WORK
@@ -176,7 +182,12 @@ function beautifulStranger() {
 	console.log('7: beautifulStranger')
 
 	// change the `'Strider'` text to `'Aragorn'`
+let strider = document.querySelectorAll('li.buddieList')[3]
+strider.innerText = 'Aragorn'
+console.log(strider)
+
 }
+
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 7 complete - Strider is changed to Aragorn"
