@@ -92,7 +92,6 @@ function keepItSecretKeepItSafe() {
 	// makeHobbits(hobbits[0])
 	console.log('3: keepItSecretKeepItSafe')
 	
-	console.log('3: keepItSecretKeepItSafe')
 	let theRing = document.createElement ('div')
 	theRing.setAttribute ('id', 'the-ring')
 	theRing.setAttribute ('class', 'magic-imbued-jewelry')
@@ -115,6 +114,18 @@ function keepItSecretKeepItSafe() {
 
 function makeBaddies() {
 	console.log('4: makeBaddies')
+	let baddiesList = document.createElement('ul')
+	for(let i = 0; i < baddies.length; i++ ){
+		
+		
+		let baddyName = document.createElement('li')
+		baddyName.setAttribute('class', 'baddy')
+		baddyName.innerHTML = baddies[i]
+		baddiesList.appendChild(baddyName)
+		
+		
+	}
+	document.getElementById("Mordor").appendChild(baddiesList)
 
 	// display an unordered list of baddies in Mordor
 
