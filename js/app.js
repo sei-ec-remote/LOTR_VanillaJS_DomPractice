@@ -345,7 +345,28 @@ function weWantsIt() {
 function thereAndBackAgain() {
 	console.log('13: thereAndBackAgain')
 	// remove `Gollum` and `the Ring` from the document
+	let gollum = document.getElementById('gollum')
+	gollum.remove()
+	
+	// let theRing = document.querySelector('#the-ring')
+	
 	// Move all the `hobbits` back to `the shire`
+	let hobbitNames = document.createElement('ul')
+	hobbitNames.setAttribute('id', 'hobbit-names')
+	
+	for(let i= 0; i < hobbits.length; i++){
+		let name = document.createElement('li')
+		name.setAttribute('class', 'hobbit')
+		name.innerText = hobbits[i]
+		hobbitNames.appendChild(name)
+	}
+
+	console.log(hobbitNames)
+
+
+	let theShire = document.getElementById('The-Shire')
+	console.log(theShire)
+	theShire.appendChild(hobbitNames)
 }
 
 // COMMIT YOUR WORK
