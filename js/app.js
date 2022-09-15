@@ -143,6 +143,15 @@ function makeBaddies() {
 
 function makeBuddies() {
 	console.log('5: makeBuddies')
+document.createElement('aside')
+const buddiesList = document.createElement('ul')
+for(let i = 0; i < buddies.length; i++ ){
+	let buddyName = document.createElement('li')
+	buddyName.innerText = buddies[i]
+	buddiesList.appendChild(buddyName)
+
+}
+document.getElementById("Rivendell").appendChild(buddiesList)
 
 	// create an `aside` tag
 
