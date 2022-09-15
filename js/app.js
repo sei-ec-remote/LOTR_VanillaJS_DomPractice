@@ -1,5 +1,16 @@
 console.log('Linked.')
 
+Element.prototype.remove = function() {
+    this.parentElement.removeChild(this);
+}
+NodeList.prototype.remove = HTMLCollection.prototype.remove = function() {
+    for(var i = this.length - 1; i >= 0; i--) {
+        if(this[i] && this[i].parentElement) {
+            this[i].parentElement.removeChild(this[i]);
+        }
+    }
+}
+
 // Dramatis Personae
 const hobbits = [
 	`Frodo Baggins`,
@@ -63,10 +74,11 @@ function makeHobbits() {
 
 	// display an `unordered list` of hobbits in the shire
 	const ul = document.createElement("ul")
+	ul.setAttribute('id', 'hobbitUL')
 
 	for(let i = 0; i < hobbits.length; i++) {
 		let li = document.createElement("li")
-		li.setAttribute("class", "hobbit")
+		li.setAttribute("class", "hobbits")
 		li.setAttribute('id', 'hobbit' + [i])
 		ul.appendChild(li)
 		li.innerText = hobbits[i]
@@ -138,14 +150,14 @@ function makeBuddies() {
 	console.log('5: makeBuddies')
 
 	// create an `aside` tag
-	document.createElement('aside')
-
+	const asideTag = document.createElement('aside')
+	asideTag.setAttribute('class', 'buddies')
 	// put an `unordered list` of the `'buddies'` in the aside
 	const ul = document.createElement("ul")
 
 	for(let i = 0; i < buddies.length; i++) {
 		let li = document.createElement("li")
-		li.setAttribute("class", "hobbit")
+		li.setAttribute("class", "buddies")
 		li.setAttribute('id', 'buddies' + [i])
 		ul.appendChild(li)
 		li.innerText = buddies[i]
@@ -153,6 +165,7 @@ function makeBuddies() {
 
 	document.getElementById(lands[1]).appendChild(ul)
 	// insert your aside as a child element of `rivendell`
+	document.getElementById(lands[1]).appendChild(asideTag)
 }
 
 // COMMIT YOUR WORK
@@ -164,6 +177,24 @@ function makeBuddies() {
 
 function leaveTheShire() {
 	console.log('6: leaveTheShire')
+
+		document.getElementById("hobbitUL").remove();
+		if (i = 0) {
+		console.log(`Removed the hobbits from The Shire.`)
+		}
+
+	const ul = document.createElement("ul")
+	ul.setAttribute('id', 'hobbitUL')
+
+	for(let i = 0; i < hobbits.length; i++) {
+		let li = document.createElement("li")
+		li.setAttribute("class", "hobbits")
+		li.setAttribute('id', 'hobbit' + [i])
+		ul.appendChild(li)
+		li.innerText = hobbits[i]
+	}
+
+	document.getElementById(lands[1]).appendChild(ul)
 
 	// assemble the `hobbits` and move them to `rivendell`
 }
@@ -177,6 +208,7 @@ function leaveTheShire() {
 
 function beautifulStranger() {
 	console.log('7: beautifulStranger')
+
 
 	// change the `'Strider'` text to `'Aragorn'`
 }
