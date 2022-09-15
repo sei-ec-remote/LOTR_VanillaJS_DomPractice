@@ -60,11 +60,13 @@ function makeHobbits() {
 
 	// display an `unordered list` of hobbits in the shire
 	const hobbitFam = document.createElement('ul')
+	hobbitFam.setAttribute('class', 'shireFolk')
 	
 	
 	// give each hobbit a class of `hobbit`
 	for(i = 0; i < hobbits.length; i++) {
 		const halfFolk = document.createElement('li')
+		halfFolk.setAttribute('class', 'hobbit')
 		halfFolk.innerText = hobbits[i]
 		hobbitFam.appendChild(halfFolk)
 		document.getElementById('The-Shire').appendChild(hobbitFam)
@@ -163,6 +165,12 @@ function leaveTheShire() {
 	console.log('6: leaveTheShire')
 
 	// assemble the `hobbits` and move them to `rivendell`
+	const hobbAdv = document.getElementsByClassName('shireFolk')
+	const byeShire = document.getElementById('Rivendell')
+	console.log('this is what:', hobbAdv)
+	console.log('this is what', byeShire)
+	byeShire.appendChild(hobbAdv[0])
+
 }
 
 // COMMIT YOUR WORK
