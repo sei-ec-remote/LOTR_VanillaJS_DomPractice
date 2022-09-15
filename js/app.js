@@ -138,13 +138,14 @@ console.log(list)
 
 function makeBuddies() {
 	console.log('5: makeBuddies')
-const sideBuddy = document.createElement("aside")
+	const sideBuddy = document.createElement("aside")
 //const buddyListBox = document.createElement("ul")
 sideBuddy.appendChild(buddyListBox)
 // create an `aside` tag
 const buddyList = buddies.map((names)=>{
 	list = document.createElement("li")
 	list.innerText = names
+	list.setAttribute("id", names)
 	console.log("this is buddy: "+ names)
 	buddyListBox.appendChild(list)
 	console.log(list)
@@ -182,8 +183,19 @@ function leaveTheShire() {
 function beautifulStranger() {
 	console.log('7: beautifulStranger')
 
-	// change the `'Strider'` text to `'Aragorn'`
+	buddies[3]= "Aragon"
+	console.log ("A new stranger joins the group" + buddies)
+	const aragorn = document.getElementById("Strider")
+	aragorn.textContent = "Aragon"
+	aragorn.setAttribute("id","Aragorn")
+
+	console.log(buddyListBox)
+	
+	
 }
+
+	
+
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 7 complete - Strider is changed to Aragorn"
