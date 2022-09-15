@@ -284,11 +284,11 @@ function weWantsIt() {
 	mordor.appendChild(gollum)
 
 	// Remove `the ring` from `Frodo` and give it to `Gollum`
-	theRing = document.getElementById('the-ring')
+	const theRing = document.getElementById('the-ring')
 	gollum.appendChild(theRing)
 
 	// Move Gollum into Mount Doom
-	mountDoom = document.getElementById('mount-doom')
+	const mountDoom = document.getElementById('mount-doom')
 	mountDoom.appendChild(gollum)
 }
 
@@ -302,7 +302,15 @@ function weWantsIt() {
 function thereAndBackAgain() {
 	console.log('13: thereAndBackAgain')
 	// remove `Gollum` and `the Ring` from the document
+	const mountDoom = document.getElementById('mount-doom')
+	mountDoom.removeChild(mountDoom.firstElementChild)
+
 	// Move all the `hobbits` back to `the shire`
+	const heroicHalflings = document.getElementsByClassName('hobbit')
+	const home = document.getElementById('The-Shire')
+	Array.from(heroicHalflings).forEach(hero => {
+		home.appendChild(hero)
+	})
 }
 
 // COMMIT YOUR WORK
