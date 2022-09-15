@@ -166,6 +166,8 @@ function beautifulStranger() {
 	console.log('7: beautifulStranger')
 
 	// change the `'Strider'` text to `'Aragorn'`
+	let text = document.getElementById('Strider')
+	name.innerText = 'Aragorn'
 }
 
 // COMMIT YOUR WORK
