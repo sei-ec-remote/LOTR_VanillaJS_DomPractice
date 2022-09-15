@@ -198,6 +198,9 @@ function leaveTheShire() {
 
 	document.getElementById(lands[1]).appendChild(ul)
 
+
+	keepItSecretKeepItSafe()
+
 	// assemble the `hobbits` and move them to `rivendell`
 }
 
@@ -328,6 +331,9 @@ function itsDangerousToGoAlone() {
 
 	const mountDoom = document.createElement('div')
 	mountDoom.setAttribute('id', 'mount-doom')
+	document.getElementById(lands[2]).appendChild(mountDoom)
+
+	keepItSecretKeepItSafe()
 }
 
 // COMMIT YOUR WORK
@@ -340,8 +346,32 @@ function itsDangerousToGoAlone() {
 function weWantsIt() {
 	console.log('12: weWantsIt')
 	// Create a div with an id of `'gollum'` and add it to Mordor
+
+	let gollum = document.createElement('div')
+	gollum.setAttribute('id', 'gollum')
+
+	document.getElementById(lands[2]).appendChild(gollum)
+
 	// Remove `the ring` from `Frodo` and give it to `Gollum`
+
+	document.getElementById('the-ring').remove()
+
+	const theRing = document.createElement('div')
+	theRing.setAttribute('id', 'the-ring')
+
+	theRing.setAttribute('class', 'magic-imbued-jewelry')
+
+	document.getElementById('gollum').appendChild(theRing)
+
 	// Move Gollum into Mount Doom
+
+	document.getElementById('gollum').remove()
+
+	let gollumWithRing = document.createElement('div')
+	gollum.setAttribute('id', 'gollum')
+
+
+	document.getElementById('mount-doom').appendChild(gollum)
 }
 
 // COMMIT YOUR WORK
