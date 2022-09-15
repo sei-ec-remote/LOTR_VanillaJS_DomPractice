@@ -200,14 +200,46 @@ function forgeTheFellowShip() {
 	// create a new div called `'the-fellowship'` within `rivendell`
 	const fellowshipForms = document.createElement('div')
 	fellowshipForms.setAttribute('name', 'the-fellowship')
+	document.getElementById('Rivendell').appendChild(fellowshipForms)
 
 	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
-	
-	
+	const hobbitsJoin = document.getElementsByClassName('hobbit')
+	const buddiesJoin = document.getElementsByClassName('bestBuds')
+	fellowshipForms.appendChild(hobbitsJoin[0])
+	alert("Frodo has joined The Fellowship")
+	fellowshipForms.appendChild(buddiesJoin[0])
+		alert("Gandalf, the Gray, has joined The Fellowship")
+
+	fellowshipForms.appendChild(buddiesJoin[3])
+		alert("Aragorn has joined The Fellowship")
+
+	fellowshipForms.appendChild(buddiesJoin[1])
+		alert("Legolas has joined The Fellowship")
+
+	fellowshipForms.appendChild(buddiesJoin[2])
+		alert("Gimli has joined The Fellowship")
+
+	fellowshipForms.appendChild(buddiesJoin[4])
+		alert("Boromir has joined The Fellowship")
+
+	fellowshipForms.appendChild(buddiesJoin[1])
+		alert("Sam has joined The Fellowship")
+
+	fellowshipForms.appendChild(buddiesJoin[2])
+		alert("Merry has joined The Fellowship")
+
+	fellowshipForms.appendChild(buddiesJoin[3])
+	alert("Pippin has joined The Fellowship")
+
+	console.log('this is the fellowship', fellowshipForms)
+
+
 	// after each character is added make an alert that they // have joined your party
-	alert()
+	// for (i = 0; i > 0; i++)
+
 
 	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
+//the appearance of my elements did change! How can I make certain list items not overlap?? Future-me with figure this out.
 }
 
 // COMMIT YOUR WORK
