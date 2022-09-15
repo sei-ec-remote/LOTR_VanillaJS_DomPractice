@@ -25,6 +25,8 @@ const baddies = ['Sauron', 'Saruman', 'The Uruk-hai', 'Orcs']
 
 const lands = ['The-Shire', 'Rivendell', 'Mordor']
 
+const fellowshipMembers = ['Gandalf the Grey', 'Legolas', 'Gimli', 'Strider', 'Boromir', 'Frodo Baggins', 'Samwise "Sam" Gamgee', 'Meriadoc "Merry" Brandybuck', 'Peregrin "Pippin" Took']
+
 // ============
 // Chapter 1
 // ============
@@ -224,8 +226,35 @@ function forgeTheFellowShip() {
 	console.log('8: forgeTheFellowShip')
 	// create a new div called `'the-fellowship'` within `rivendell`
 	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
-	// after each character is added make an alert that they // have joined your party
+	// after each character is added make an alert that they 
+	// have joined your party
 
+	const rivendell = document.querySelector('#Rivendell')
+	const theFellowship = document.createElement('div')
+	theFellowship.setAttribute('id', 'the-fellowship')
+	rivendell.appendChild(theFellowship)
+
+
+	const ul = document.createElement("ul")
+
+	for(let i = 0; i < hobbits.length; i++) {
+		let li = document.createElement("li")
+		li.setAttribute("class", "hobbits")
+		li.setAttribute('id', 'hobbit' + [i])
+		ul.appendChild(li)
+		li.innerText = hobbits[i]
+	}
+
+
+	for(let i = 0; i < hobbits.length; i++) {
+		document.getElementById('hobbit' + [i]).appendChild(theFellowship)
+		alert(`${hobbits[i]} have join your party.`)
+	}
+	
+	for(let i = 0; i < buddies.length; i++) {
+		document.getElementById('buddies' + [i]).appendChild(theFellowship)
+		alert(`${buddies[i]} have join your party.`)
+	}
 	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
 }
 
@@ -240,6 +269,9 @@ function theBalrog() {
 	console.log('9: theBalrog')
 	// change the `'Gandalf'` text to `'Gandalf the White'`
 	// apply the following style to the element, make the // background 'white', add a grey border
+
+	document.getElementById('buddies0').innerHTML = 'Gandalf the White'
+
 }
 
 // COMMIT YOUR WORK
