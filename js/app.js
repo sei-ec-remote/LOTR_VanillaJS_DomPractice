@@ -141,10 +141,11 @@ function makeBuddies() {
 	const buddyTeam = document.createElement('aside')
 	const teamBud = document.createElement('ul')
 	buddyTeam.appendChild(teamBud)
-
+	
 	for(i = 0; i < buddies.length; i++) {
 		const budLi = document.createElement('li')
 		budLi.innerText = buddies[i]
+		budLi.setAttribute('class', 'bestBuds')
 		teamBud.appendChild(budLi)
 		document.getElementById('Rivendell').appendChild(teamBud)
 		}
@@ -166,10 +167,8 @@ function leaveTheShire() {
 
 	// assemble the `hobbits` and move them to `rivendell`
 	const hobbAdv = document.getElementsByClassName('shireFolk')
-	const byeShire = document.getElementById('Rivendell')
-	console.log('this is what:', hobbAdv)
-	console.log('this is what', byeShire)
-	byeShire.appendChild(hobbAdv[0])
+	const helloElves = document.getElementById('Rivendell')
+	helloElves.appendChild(hobbAdv[0])
 
 }
 
@@ -184,6 +183,9 @@ function beautifulStranger() {
 	console.log('7: beautifulStranger')
 
 	// change the `'Strider'` text to `'Aragorn'`
+	let king = document.querySelectorAll('li.bestBuds')[3]
+	king.innerText='Aragorn'
+	
 }
 
 // COMMIT YOUR WORK
@@ -196,8 +198,14 @@ function beautifulStranger() {
 function forgeTheFellowShip() {
 	console.log('8: forgeTheFellowShip')
 	// create a new div called `'the-fellowship'` within `rivendell`
+	const fellowshipForms = document.createElement('div')
+	fellowshipForms.setAttribute('name', 'the-fellowship')
+
 	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
+	
+	
 	// after each character is added make an alert that they // have joined your party
+	alert()
 
 	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
 }
