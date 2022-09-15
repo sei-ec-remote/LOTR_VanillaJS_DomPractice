@@ -149,7 +149,7 @@ function makeBuddies() {
 
 	const aside = document.createElement("Aside");
 	const ul = document.createElement("ul");
-	for (let name of baddies) {
+	for (let name of buddies) {
 		let li = document.createElement("li")
 		li.innerText = name
 		ul.appendChild(li)
@@ -191,7 +191,8 @@ function leaveTheShire() {
 
 function beautifulStranger() {
 	console.log('7: beautifulStranger')
-
+	buddies[3] = 'Aragorn';
+	
 	// change the `'Strider'` text to `'Aragorn'`
 }
 
