@@ -160,7 +160,7 @@ function leaveTheShire() {
 	// console.log(typeof findShire)
 	const getHobbits = document.querySelectorAll('.hobbit')
 
-	console.log("hobbit list",typeof getHobbits)
+	// console.log("hobbit list",typeof getHobbits)
 	const findRivendell = document.querySelector('#Rivendell')
 	for (i=0; i < getHobbits.length; i++){
 		// console.log(getHobbits[i])
@@ -181,14 +181,13 @@ function beautifulStranger() {
 	const buddyList = document.querySelectorAll('.buddy')
 	// console.log("find it", buddyList.length)
 	for (i=0; i < buddyList.length; i++){
-		console.log(buddyList[i].innerText)
+		// console.log(buddyList[i].innerText)
 		if (buddyList[i].innerText==='strider'){
 			buddyList[i].innerText = 'Aragorn'
-		}
-		
+		}	
 	}
 	// change the `'Strider'` text to `'Aragorn'`
-	console.log("did he change",buddyList[3].innerText)
+	// console.log("did he change",buddyList[3].innerText)
 }
 
 // COMMIT YOUR WORK
@@ -201,9 +200,31 @@ function beautifulStranger() {
 function forgeTheFellowShip() {
 	console.log('8: forgeTheFellowShip')
 	// create a new div called `'the-fellowship'` within `rivendell`
-	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
-	// after each character is added make an alert that they // have joined your party
+	const fellowship = document.createElement('div')
+	fellowship.setAttribute('id', 'the-fellowship')
+	console.log(fellowship)
 
+	const findRivendell = document.querySelector('#Rivendell')
+	findRivendell.appendChild(fellowship)
+	// console.log(findRivendell.innerHTML)
+	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
+	const hobbitList = document.querySelectorAll('.hobbit')
+	console.log(hobbitList)
+	const buddyList = document.querySelectorAll('.buddy')
+	console.log(buddyList)
+	// after each character is added make an alert that they // have joined your party
+	for (i = 0; i < hobbitList.length; i++){
+		let currHobbit = hobbitList[i]
+		fellowship.appendChild(currHobbit)
+		alert(currHobbit.innerText+ " has joined the party")
+	}
+	console.log(fellowship)
+	for (i = 0; i < buddyList.length; i++){
+		let currBuddy = buddyList[i]
+		fellowship.appendChild(currBuddy)
+		alert(currBuddy.innerText+ " has joined the party")
+	}
+	console.log(fellowship)
 	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
 }
 
