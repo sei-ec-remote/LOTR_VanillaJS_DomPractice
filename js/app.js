@@ -22,6 +22,20 @@ function makeMiddleEarth() {
 	console.log('1: makeMiddleEarth')
 
 	// 1. create a section tag with an id of middle-earth
+			const newSections = document.createElement("section");
+			for(i = 0; i < lands.length; i++){
+				const newArticle = document.createElement("article") 
+						newArticle.id= lands[i]
+
+				const newh1 = document.createElement("h1") 
+						newh1.textContent= lands[i]
+
+				newArticle.appendChild(newh1)
+
+				newSections.appendChild(newArticle)
+			 }
+
+			 document.body.appendChild(newSections)
 
 	// 2. use a for loop to iterate over the lands array that does the following:
 
@@ -51,7 +65,7 @@ function makeHobbits() {
 	// give each hobbit a class of `hobbit`
 
 	// hint: create a 'ul' outside the loop into which to append the 'li's
-
+			newUl = createElement
 	// hint: get 'The-Shire' by using its id
 }
 
@@ -64,9 +78,12 @@ function makeHobbits() {
 
 function keepItSecretKeepItSafe() {
 	console.log('3: keepItSecretKeepItSafe')
+		const newDiv = document.createElement("id") 
+		newDiv.id= 'the-ring'
+		newDiv.class= 'magic-imbued-jewelry'
 
 	// create a div with an id of `'the-ring'`
-
+	
 	// give the div a class of `'magic-imbued-jewelry'`
 
 	// add the ring as a child of `Frodo`
