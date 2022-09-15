@@ -230,8 +230,15 @@ function hornOfGondor() {
 function itsDangerousToGoAlone() {
 	console.log('11: itsDangerousToGoAlone')
 	// take `Frodo` and `Sam` out of the fellowship and move // them to `Mordor`
+	mordor.appendChild('frodo');
+	mordor.appendChild('sam');
+	const mountDoom = document.createElement('div');
+	mountDoom.setAttribute('id', 'mount-doom');
+	mordor.appendChild(mountDoom);
+
 	// add a div with an id of `'mount-doom'` to `Mordor`
 }
+   itsDangerousToGoAlone();
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 11 complete - Sam and Frodo are in Mordor and Mount Doom has been created"
