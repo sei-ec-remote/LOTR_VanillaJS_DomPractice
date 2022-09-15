@@ -214,19 +214,20 @@ rivendell = document.getElementById("Rivendell")
 rivendell.appendChild(theFellowship)
 theFellowship.setAttribute("class", "the-fellowship")
 console.log(theFellowship)
-const createFellowship = document.createElement("ul")
+//const createFellowship = document.createElement("ul")
 
 const joinFellowship = (names)=>{
 	//const fellowshipMember = document.createElement("li")
 	//fellowshipMember.innerText = names
 	//createFellowship.appendChild(fellowshipMember)
+	//theFellowship.append(names)
 	alert (names + " has  joined the party")
 }
 hobbits.forEach(joinFellowship)
 buddies.forEach(joinFellowship)
-console.log(createFellowship)
+
 rivendell.appendChild(createFellowship)
-console.log(rivendell)
+console.log(theFellowship)
 }
 	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
 
@@ -306,6 +307,16 @@ function itsDangerousToGoAlone() {
 
 function weWantsIt() {
 	console.log('12: weWantsIt')
+	let mordor = document.getElementById("Mordor")
+	let gollum = document.createElement("div")
+	const mountDoom= document.getElementById("mount-doom")
+	gollum.setAttribute("id","gollum")
+	mordor.appendChild(gollum)
+
+	let theRing = document.querySelector("#the-ring")
+	gollum.append(theRing)
+	mountDoom.append(gollum)
+	
 	// Create a div with an id of `'gollum'` and add it to Mordor
 	// Remove `the ring` from `Frodo` and give it to `Gollum`
 	// Move Gollum into Mount Doom
