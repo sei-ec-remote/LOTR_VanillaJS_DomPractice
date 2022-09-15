@@ -201,45 +201,39 @@ function forgeTheFellowShip() {
 	const fellowshipForms = document.createElement('div')
 	fellowshipForms.setAttribute('name', 'the-fellowship')
 	document.getElementById('Rivendell').appendChild(fellowshipForms)
+	const fellowsLi = document.createElement('ul')
+	fellowshipForms.appendChild(fellowsLi)
 
 	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
 	const hobbitsJoin = document.getElementsByClassName('hobbit')
 	const buddiesJoin = document.getElementsByClassName('bestBuds')
-	fellowshipForms.appendChild(hobbitsJoin[0])
-	alert("Frodo has joined The Fellowship")
-	fellowshipForms.appendChild(buddiesJoin[0])
-		alert("Gandalf, the Gray, has joined The Fellowship")
-
-	fellowshipForms.appendChild(buddiesJoin[3])
-		alert("Aragorn has joined The Fellowship")
-
-	fellowshipForms.appendChild(buddiesJoin[1])
-		alert("Legolas has joined The Fellowship")
-
-	fellowshipForms.appendChild(buddiesJoin[2])
-		alert("Gimli has joined The Fellowship")
-
-	fellowshipForms.appendChild(buddiesJoin[4])
-		alert("Boromir has joined The Fellowship")
-
-	fellowshipForms.appendChild(buddiesJoin[1])
-		alert("Sam has joined The Fellowship")
-
-	fellowshipForms.appendChild(buddiesJoin[2])
-		alert("Merry has joined The Fellowship")
-
-	fellowshipForms.appendChild(buddiesJoin[3])
-	alert("Pippin has joined The Fellowship")
-
-	console.log('this is the fellowship', fellowshipForms)
-
-
+	fellowsLi.appendChild(buddiesJoin[0])
+	fellowsLi.appendChild(buddiesJoin[1])
+	fellowsLi.appendChild(buddiesJoin[2])
+	fellowsLi.appendChild(buddiesJoin[3])
+	fellowsLi.appendChild(buddiesJoin[4])
+	fellowsLi.appendChild(hobbitsJoin[0])
+	fellowsLi.appendChild(hobbitsJoin[1])
+	fellowsLi.appendChild(hobbitsJoin[2])
+	fellowsLi.appendChild(hobbitsJoin[3])
+	// alert("Frodo has joined The Fellowship")
+	// alert("Gandalf, the Gray, has joined The Fellowship")
+	// alert("Aragorn has joined The Fellowship")
+	// alert("Legolas has joined The Fellowship")
+	// alert("Gimli has joined The Fellowship")
+	// alert("Boromir has joined The Fellowship")
+	// alert("Sam has joined The Fellowship")
+	// alert("Merry has joined The Fellowship")
+	// alert("Pippin has joined The Fellowship")
 	// after each character is added make an alert that they // have joined your party
+	
 	// for (i = 0; i > 0; i++)
 
+// console.log('the team', fellowshipForms)
 
 	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
-//the appearance of my elements did change! How can I make certain list items not overlap?? Future-me with figure this out.
+
+	//the appearance of my elements did change! How can I make certain list items not overlap?? Future-me with figure this out.
 }
 
 // COMMIT YOUR WORK
@@ -252,7 +246,17 @@ function forgeTheFellowShip() {
 function theBalrog() {
 	console.log('9: theBalrog')
 	// change the `'Gandalf'` text to `'Gandalf the White'`
-	// apply the following style to the element, make the // background 'white', add a grey border
+	let whiteWiz = document.querySelectorAll('li.bestBuds')[0]
+	whiteWiz.innerText='Gandalf the White'
+	// apply the following style to the element, make the 
+	// background 'white', add a grey border
+	whiteWiz.style.background = ('#FFFFFF')
+	whiteWiz.style.display = ('inline-flex')
+	whiteWiz.style.border = ('#808080', '2px')
+	whiteWiz.style.padding = ('3px')
+	// whiteWiz.style.border-radius = ('25px')
+
+
 }
 
 // COMMIT YOUR WORK
