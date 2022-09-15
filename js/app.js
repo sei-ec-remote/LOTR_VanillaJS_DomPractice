@@ -300,11 +300,12 @@ function itsDangerousToGoAlone() {
 
 	
 	const getHobbits = document.querySelectorAll('.hobbit')
-
+	// console.log("hobbit list",typeof getHobbits)
 	console.log(getHobbits[0])
 	let frodo = getHobbits[0]
 	let sam = getHobbits[1]
 	// console.log(frodo)
+	
 	findMordor.appendChild(frodo)
 	findMordor.appendChild(sam)
 	
@@ -319,6 +320,25 @@ function itsDangerousToGoAlone() {
 
 function weWantsIt() {
 	console.log('12: weWantsIt')
+	const gollumDiv = document.createElement('div')
+	gollumDiv.setAttribute('id', 'gollum')
+	const findMordor = document.querySelector('#Mordor')
+	console.log(findMordor)
+	console.log(gollumDiv)
+	findMordor.appendChild(gollumDiv)
+	console.log(findMordor)
+
+	const findFrodo = document.querySelectorAll('.hobbit')
+	let frodo = findFrodo[2]
+	const ring = document.querySelector('.magic-imbued-jewelry')
+	frodo.removeChild(ring)
+	console.log(ring)
+	gollumDiv.appendChild(ring)
+	const findDoom = document.querySelector('#mount-doom')
+	findDoom.appendChild(gollumDiv)
+
+	console.log(findDoom)
+	
 	// Create a div with an id of `'gollum'` and add it to Mordor
 	// Remove `the ring` from `Frodo` and give it to `Gollum`
 	// Move Gollum into Mount Doom
