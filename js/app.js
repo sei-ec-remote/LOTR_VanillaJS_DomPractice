@@ -23,7 +23,7 @@ function makeMiddleEarth() {
 
 	// 1. create a section tag with an id of middle-earth
 	const middleEarth = document.createElement('section')
-	middleEarth.setAttribute('id', 'middle-earth')
+	middleEarth.id = 'middle-earth'
 	// 2. use a for loop to iterate over the lands array that does the following:
 	for(i = 0; i < lands.length; i++){
 
@@ -56,12 +56,14 @@ function makeHobbits() {
 
 	// display an `unordered list` of hobbits in the shire
 	let ul = document.createElement('ul')
-	lands[0].document.appendChild(ul)
+	ul.id = 'hobbits'
+	document.getElementById('The-Shire').appendChild(ul)
 	// give each hobbit a class of `hobbit`
 	for(let i = 0; i < 3; i++){
-		let list = document.createElement('li')
-		list.setAttribute('class', 'hobbit')
-		document.ul.appendChild(list)
+		li.className = 'hobbit'
+		li.id = hobbits[hobbit]
+		li.innerText = `${hobbits[hobbit]}`
+		ul.appendChild(li)
 	}
 	// hint: create a 'ul' outside the loop into which to append the 'li's
 
@@ -100,10 +102,12 @@ function makeBaddies() {
 	// display an unordered list of baddies in Mordor
 	const ulEvils = document.createElement('ul')
 	// give each of the baddies a class of "baddy"
-	for(let i = 0; i < baddies.length; i++) {
-		document.createElement('li')
-		list.classList = 'baddie'
-	}lands[2].appendChild(list)
+	for(let evils in baddies) {
+		let li = document.createElement('li')
+		list.className = 'baddie'
+		li.innerText = `${baddies[baddie]}`
+		ul.appendChild(li)
+	}
 	// remember to append them to Mordor
 }
 
@@ -118,10 +122,20 @@ function makeBuddies() {
 	console.log('5: makeBuddies')
 
 	// create an `aside` tag
-
+	const aside = document.createElement('tag')
 	// put an `unordered list` of the `'buddies'` in the aside
-
+	const ul = document.createElement('ul')
+	ul.id = 'buddies'
+	for(let pal in buddies) {
+		let li = document.createElement('li')
+			li.className = 'pal'
+			li.id = `${buddies[pal]}`
+			li.innerText = `${buddies[pal]}`
+			ul.appendChild(li)
+			aside.appendChild(ul)
+	}
 	// insert your aside as a child element of `rivendell`
+	document.getElementById('Rivendell').appendChild(aside)
 }
 
 // COMMIT YOUR WORK
