@@ -20,6 +20,7 @@ const lands = ['The-Shire', 'Rivendell', 'Mordor']
 const hobbitList = document.createElement('ul')
 const mordorBaddies = document.createElement("ul")
 const buddyListBox = document.createElement("ul")
+const theFellowship = document.createElement('div')
 
 
 
@@ -209,9 +210,26 @@ function forgeTheFellowShip() {
 	// create a new div called `'the-fellowship'` within `rivendell`
 	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
 	// after each character is added make an alert that they // have joined your party
+rivendell = document.getElementById("Rivendell")
+rivendell.appendChild(theFellowship)
+theFellowship.setAttribute("class", "the-fellowship")
+console.log(theFellowship)
+const createFellowship = document.createElement("ul")
 
-	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
+const joinFellowship = (names)=>{
+	//const fellowshipMember = document.createElement("li")
+	//fellowshipMember.innerText = names
+	//createFellowship.appendChild(fellowshipMember)
+	alert (names + "has  joined the party")
 }
+hobbits.forEach(joinFellowship)
+buddies.forEach(joinFellowship)
+console.log(createFellowship)
+rivendell.appendChild(createFellowship)
+console.log(rivendell)
+}
+	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
+
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 8 complete - The Fellowship is created"
