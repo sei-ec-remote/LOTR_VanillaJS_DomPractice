@@ -384,7 +384,30 @@ function weWantsIt() {
 function thereAndBackAgain() {
 	console.log('13: thereAndBackAgain')
 	// remove `Gollum` and `the Ring` from the document
+
+	document.getElementById('gollum').remove()
+
 	// Move all the `hobbits` back to `the shire`
+
+	document.getElementById('hobbit0').remove()
+	document.getElementById('hobbit1').remove()
+	document.getElementById('hobbit2').remove()
+	document.getElementById('hobbit3').remove()
+
+	window.alert('The Hobbits are returning home.')
+
+	const ul = document.createElement("ul")
+	ul.setAttribute('id', 'hobbitUL')
+
+	for(let i = 0; i < hobbits.length; i++) {
+		let li = document.createElement("li")
+		li.setAttribute("class", "hobbits")
+		li.setAttribute('id', 'hobbit' + [i])
+		ul.appendChild(li)
+		li.innerText = hobbits[i]
+	}
+
+	document.getElementById(lands[0]).appendChild(ul)
 }
 
 // COMMIT YOUR WORK
