@@ -63,7 +63,6 @@ function makeHobbits() {
 
 	// display an `unordered list` of hobbits in the shire
 	const ul = document.createElement("ul")
-	//const shire = document.setAttribute("id", lands[0])
 
 	for(let i = 0; i < hobbits.length; i++) {
 		let li = document.createElement("li")
@@ -112,7 +111,17 @@ function makeBaddies() {
 	console.log('4: makeBaddies')
 
 	// display an unordered list of baddies in Mordor
+	const baddiesList = document.createElement("ul")
 
+	for(let i = 0; i < baddies.length; i++) {
+		let li = document.createElement("li")
+		li.setAttribute("class", "baddies")
+		li.setAttribute('id', 'baddies' + [i])
+		baddiesList.appendChild(li)
+		li.innerText = baddies[i]
+	}
+
+	document.getElementById(lands[2]).appendChild(baddiesList)
 	// give each of the baddies a class of "baddy"
 
 	// remember to append them to Mordor
