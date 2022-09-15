@@ -248,12 +248,12 @@ function forgeTheFellowShip() {
 
 	for(let i = 0; i < hobbits.length; i++) {
 		document.getElementById('hobbit' + [i]).appendChild(theFellowship)
-		alert(`${hobbits[i]} have join your party.`)
+		window.alert(`${hobbits[i]} has joined your party.`)
 	}
 	
 	for(let i = 0; i < buddies.length; i++) {
 		document.getElementById('buddies' + [i]).appendChild(theFellowship)
-		alert(`${buddies[i]} have join your party.`)
+		window.alert(`${buddies[i]} has joined your party.`)
 	}
 	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
 }
@@ -307,7 +307,27 @@ function hornOfGondor() {
 function itsDangerousToGoAlone() {
 	console.log('11: itsDangerousToGoAlone')
 	// take `Frodo` and `Sam` out of the fellowship and move // them to `Mordor`
+
+	document.getElementById('hobbit0').remove()
+	document.getElementById('hobbit1').remove()
+
+	const ul = document.createElement("ul")
+	ul.setAttribute('id', 'hobbitUL') 
+
+	for(let i = 0; i <= 1; i++) {
+		let li = document.createElement("li")
+		li.setAttribute("class", "hobbits")
+		li.setAttribute('id', 'hobbit' + [i])
+		ul.appendChild(li)
+		li.innerText = hobbits[i]
+	}
+
+	document.getElementById(lands[2]).appendChild(ul)
+
 	// add a div with an id of `'mount-doom'` to `Mordor`
+
+	const mountDoom = document.createElement('div')
+	mountDoom.setAttribute('id', 'mount-doom')
 }
 
 // COMMIT YOUR WORK
