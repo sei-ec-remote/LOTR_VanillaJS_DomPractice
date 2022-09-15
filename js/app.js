@@ -62,9 +62,18 @@ function makeHobbits() {
 	console.log('2: makeHobbits')
 
 	// display an `unordered list` of hobbits in the shire
+	const ul = document.createElement("ul")
+	//const shire = document.setAttribute("id", lands[0])
 
-	// give each hobbit a class of `hobbit`
+	for(let i = 0; i < hobbits.length; i++) {
+		let li = document.createElement("li")
+		li.setAttribute("class", "hobbit")
+		li.setAttribute('id', 'hobbit' + [i])
+		ul.appendChild(li)
+		li.innerText = hobbits[i]
+	}
 
+	document.getElementById(lands[0]).appendChild(ul)
 	// hint: create a 'ul' outside the loop into which to append the 'li's
 
 	// hint: get 'The-Shire' by using its id
@@ -81,11 +90,16 @@ function keepItSecretKeepItSafe() {
 	console.log('3: keepItSecretKeepItSafe')
 
 	// create a div with an id of `'the-ring'`
+	const theRing = document.createElement('div')
+	theRing.setAttribute('id', 'the-ring')
 
 	// give the div a class of `'magic-imbued-jewelry'`
-
+	theRing.setAttribute('class', 'magic-imbued-jewelry')
 	// add the ring as a child of `Frodo`
+	const frodo = document.getElementById('hobbit0')
+	frodo.appendChild(theRing)
 }
+	
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 3 complete - Made the ring and gave it to Frodo".
@@ -115,6 +129,7 @@ function makeBuddies() {
 	console.log('5: makeBuddies')
 
 	// create an `aside` tag
+	document.createElement('aside')
 
 	// put an `unordered list` of the `'buddies'` in the aside
 
