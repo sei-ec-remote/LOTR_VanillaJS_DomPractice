@@ -79,10 +79,12 @@ function keepItSecretKeepItSafe() {
 	console.log('3: keepItSecretKeepItSafe')
 
 	// create a div with an id of `'the-ring'`
-
+	const divTheRing = document.createElement('div')
+	div.setAttribute('id', 'the-ring')
 	// give the div a class of `'magic-imbued-jewelry'`
-
+	div.setAttribute('class', 'magic-imbued-jewelry')
 	// add the ring as a child of `Frodo`
+	hobbits[0].appendChild(divRing)
 }
 
 // COMMIT YOUR WORK
