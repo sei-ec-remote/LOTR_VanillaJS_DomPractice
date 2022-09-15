@@ -157,7 +157,7 @@ function beautifulStranger() {
 
 	// change the `'Strider'` text to `'Aragorn'`
 }
-
+	document.getElementById("Strider").innerText = "Aragorn"
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 7 complete - Strider is changed to Aragorn"
 
