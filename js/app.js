@@ -180,7 +180,7 @@ function makeBuddies() {
 function leaveTheShire() {
 	console.log('6: leaveTheShire')
 
-		document.getElementById("hobbitUL").remove();
+		document.getElementById("hobbitUL").remove()
 		if (i = 0) {
 		console.log(`Removed the hobbits from The Shire.`)
 		}
@@ -284,8 +284,17 @@ function theBalrog() {
 function hornOfGondor() {
 	console.log('10: hornOfGondor')
 	// pop up an alert that the horn of gondor has been blown
+
+	window.alert('The horn of gondor has been blown!')
+
 	// Boromir's been killed by the Uruk-hai!
+
+	window.alert('Boromir has been slain by the Uruk-hai!')
+
 	// Remove `Boromir` from the Fellowship
+
+	document.getElementById("buddies4").remove()
+
 }
 
 // COMMIT YOUR WORK
