@@ -240,8 +240,15 @@ console.log(rivendell)
 
 function theBalrog() {
 	console.log('9: theBalrog')
+	gandalfTheWhite = document.getElementById("Gandalf the Grey")
+	gandalfTheWhite.innerText = "Gandalf the White"
+	gandalfTheWhite.style.backgroundColor= "white"
+	gandalfTheWhite.style.border = "solid gray"
+
+	console.log(gandalfTheWhite)
 	// change the `'Gandalf'` text to `'Gandalf the White'`
 	// apply the following style to the element, make the // background 'white', add a grey border
+	console.log(buddyListBox)
 }
 
 // COMMIT YOUR WORK
