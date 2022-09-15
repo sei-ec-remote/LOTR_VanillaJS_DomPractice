@@ -192,7 +192,7 @@ function leaveTheShire() {
 function beautifulStranger() {
 	console.log('7: beautifulStranger')
 	buddies[3] = 'Aragorn';
-	
+	//text only changes to 'Aragorn' if clicked before clicking the buddies'
 	// change the `'Strider'` text to `'Aragorn'`
 }
 
@@ -205,6 +205,19 @@ function beautifulStranger() {
 
 function forgeTheFellowShip() {
 	console.log('8: forgeTheFellowShip')
+
+	const inRivendell = document.getElementById("Rivendell")
+	const div = document.createElement("div");
+	div.id = "the-fellowship";
+	for (let i = 0; i < hobbits.length; i++){
+		console.log(hobbits[i])
+	}
+
+
+
+	inRivendell.appendChild(div)
+
+
 	// create a new div called `'the-fellowship'` within `rivendell`
 	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
 	// after each character is added make an alert that they // have joined your party
