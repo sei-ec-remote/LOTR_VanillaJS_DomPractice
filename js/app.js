@@ -162,7 +162,7 @@ function beautifulStranger() {
 	console.log('7: beautifulStranger')
 
 	// change the `'Strider'` text to `'Aragorn'`
-	strider.textContent = 'Aragorn';
+	strider.innerText = 'Aragorn';
 }
 beautifulStranger();
 
@@ -197,8 +197,12 @@ function forgeTheFellowShip() {
 function theBalrog() {
 	console.log('9: theBalrog')
 	// change the `'Gandalf'` text to `'Gandalf the White'`
+	gandalf.innerText= 'Gandalf the White';
 	// apply the following style to the element, make the // background 'white', add a grey border
+	gandalf.style.border = 'gray';
+	gandalf.style.backgroundColor = 'white';
 }
+
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 9 complete - Updated Gandalf"
