@@ -202,16 +202,16 @@ function forgeTheFellowShip() {
 	// create a new div called `'the-fellowship'` within `rivendell`
 	const fellowship = document.createElement('div')
 	fellowship.setAttribute('id', 'the-fellowship')
-	console.log(fellowship)
+	// console.log(fellowship)
 
 	const findRivendell = document.querySelector('#Rivendell')
 	findRivendell.appendChild(fellowship)
 	// console.log(findRivendell.innerHTML)
 	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
 	const hobbitList = document.querySelectorAll('.hobbit')
-	console.log(hobbitList)
+	// console.log(hobbitList)
 	const buddyList = document.querySelectorAll('.buddy')
-	console.log(buddyList)
+	// console.log(buddyList)
 	// after each character is added make an alert that they // have joined your party
 	for (i = 0; i < hobbitList.length; i++){
 		let currHobbit = hobbitList[i]
@@ -224,7 +224,7 @@ function forgeTheFellowShip() {
 		fellowship.appendChild(currBuddy)
 		alert(currBuddy.innerText+ " has joined the party")
 	}
-	console.log(fellowship)
+	// console.log(fellowship)
 	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
 }
 
@@ -237,6 +237,16 @@ function forgeTheFellowShip() {
 
 function theBalrog() {
 	console.log('9: theBalrog')
+	const buddyList = document.querySelectorAll('.buddy')
+	console.log("find it", buddyList.length)
+	for (i=0; i < buddyList.length; i++){
+		console.log(buddyList[i].innerText)
+		if (buddyList[i].innerText==='gandalf the grey'){
+			buddyList[i].innerText = 'Gandalf the White'
+			buddyList[i].style.backgroundColor = 'white'
+			buddyList[i].style.border = 'grey solid 3px'
+		}	
+	}
 	// change the `'Gandalf'` text to `'Gandalf the White'`
 	// apply the following style to the element, make the // background 'white', add a grey border
 }
