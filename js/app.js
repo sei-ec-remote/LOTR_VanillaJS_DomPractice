@@ -355,6 +355,15 @@ function thereAndBackAgain() {
 	console.log('13: thereAndBackAgain')
 	// remove `Gollum` and `the Ring` from the document
 	// Move all the `hobbits` back to `the shire`
+	const doom = document.querySelector('#mount-doom')
+	const gollum= document.querySelector('#gollum')
+	doom.removeChild(gollum)
+	const hobbits = document.querySelectorAll('.hobbit')
+	const shire = document.querySelector('#The-Shire')
+	for (littleguys in hobbits){
+		shire.appendChild(hobbits[littleguys])
+	}
+	
 }
 
 // COMMIT YOUR WORK
