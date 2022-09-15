@@ -22,20 +22,25 @@ function makeMiddleEarth() {
 	console.log('1: makeMiddleEarth')
 
 	// 1. create a section tag with an id of middle-earth
-
+	const middleEarth = document.createElement('section')
+	middleEarth.setAttribute('id', 'middle-earth')
 	// 2. use a for loop to iterate over the lands array that does the following:
-
+	for (i=0; i<lands.length; i++) {
 	//   2a. creates an article tag (there should be one for each land when the loop is done)
-
+	const land = document.createElement('article') 	
 	//   2b. gives each land article an `id` tag of the corresponding land name
-
+	land.setAttribute('id', lands[i])
 	//   2c. includes an h1 with the name of the land inside each land article
-
+	const landName = document.createElement('h1')
+	landName.innerText = lands[i]
+	landName.appendChild(landName)
 	//   2d. appends each land to the middle-earth section
-
-	// 3. append the section to the body of the DOM.
+	middleEarth.appendChild(lands) 
 }
-
+	// 3. append the section to the body of the DOM.
+const body = document.querySelector('body')
+body.appendChild(middleEarth)
+makeMiddleEarth()
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 1 complete - Made Middle Earth".
 
@@ -47,9 +52,9 @@ function makeHobbits() {
 	console.log('2: makeHobbits')
 
 	// display an `unordered list` of hobbits in the shire
-
+const unorderedList = document.createElement('ul')
 	// give each hobbit a class of `hobbit`
-
+document.querySelector('#The-Shire').appendChild(unorderedList)
 	// hint: create a 'ul' outside the loop into which to append the 'li's
 
 	// hint: get 'The-Shire' by using its id
