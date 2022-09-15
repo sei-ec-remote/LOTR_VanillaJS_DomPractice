@@ -226,7 +226,7 @@ const joinFellowship = (names)=>{
 hobbits.forEach(joinFellowship)
 buddies.forEach(joinFellowship)
 
-rivendell.appendChild(createFellowship)
+//rivendell.appendChild(createFellowship)
 console.log(theFellowship)
 }
 	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
@@ -266,7 +266,7 @@ function hornOfGondor() {
 	// Remove `Boromir` from the Fellowship
 	window.alert( "The horn of gondor has been blown! Boromir's been killed by the Uruk-hai!")
 	const boromir = document.getElementById("Boromir")
-	boromir.innerText = ""
+	boromir.remove()
 
 }
 
@@ -287,7 +287,9 @@ function itsDangerousToGoAlone() {
 	const twoFriendsTravel = () => {
 		
 		const frodo = document.getElementById(`Frodo Baggins`)
+		frodo.setAttribute('class','hobbit')
 		const sam = document.getElementById('Samwise "Sam" Gamgee')
+		sam.setAttribute('class','hobbit')
 		console.log(frodo + "  " + sam + "head to mordor")
 		mordor.appendChild(frodo)
 		mordor.appendChild(sam)
@@ -331,6 +333,25 @@ function weWantsIt() {
 
 function thereAndBackAgain() {
 	console.log('13: thereAndBackAgain')
+	const gollum = document.getElementById("gollum")
+	let theRing = document.querySelector("#the-ring")
+	const theShire = document.getElementById("The-Shire")
+	gollum.remove()
+	theRing.remove()
+	sam = document.getElementById('Samwise "Sam" Gamgee')
+	hobbitList.appendChild(sam)
+	console.log(hobbitList)
+	frodo = document.getElementById('Frodo Baggins')
+	hobbitList.appendChild(frodo)
+	theShire.appendChild(hobbitList)
+	//theHobbits.forEach((names) => {
+		//list = document.createElement(li)
+		//list.innerText = names
+		//hobbitList.appendChild(list)
+	//})
+	
+		
+	console.log("And they lived ")
 	// remove `Gollum` and `the Ring` from the document
 	// Move all the `hobbits` back to `the shire`
 }
