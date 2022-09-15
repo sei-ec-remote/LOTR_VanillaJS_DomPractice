@@ -179,15 +179,28 @@ function leaveTheShire() {
 // ============
 
 function beautifulStranger() {
-	console.log('7: beautifulStranger')
-
+	
 	// change the `'Strider'` text to `'Aragorn'`
-let strider = document.querySelectorAll('li.buddieList')[3]
-strider.innerText = 'Aragorn'
-console.log(strider)
+	// trying this 
+	let buddyList = document.querySelectorAll('.buddieList')
+	for (i=0; i < buddyList.length; i++){
+		console.log(buddyList[i].innerText)
+		if (buddyList[i].innerText==='strider'){
+			buddyList[i].innerText = 'Aragorn'
+		}
+	}
+	// did not work 
+// let strider = document.querySelectorAll('li.buddieList')[3]
+// strider.innerText = 'Aragorn'
+// console.log(strider)
+// keep getting error that it cannot set properties of null(setting innerText) tried this one also
+// let name = document.getElementById('Strider')
+// name.innerText = 'Aragorn' 
 
 }
-
+// also did not work 
+// document.getElementById('buddies3').innerHTML = 'Aragorn'
+	
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 7 complete - Strider is changed to Aragorn"
@@ -199,6 +212,15 @@ console.log(strider)
 function forgeTheFellowShip() {
 	console.log('8: forgeTheFellowShip')
 	// create a new div called `'the-fellowship'` within `rivendell`
+	const theFellowship = document.createElement('div')
+	theFellowship.id = 'the-fellowship'
+	 let rivendell = document.getElementById('#Rivendell')
+	 rivendell.appendChild(newDiv)
+	 let newHobbitts = document.getElementById('hobbits')
+	 let newBuddies = document.getElementById('buddies')
+	 newDiv.appendChild(newHobbitts)
+	 newDiv.appendChild(newBuddies)
+	 alert("have joined the party")
 	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
 	// after each character is added make an alert that they // have joined your party
 
@@ -215,6 +237,9 @@ function forgeTheFellowShip() {
 function theBalrog() {
 	console.log('9: theBalrog')
 	// change the `'Gandalf'` text to `'Gandalf the White'`
+	let gandalfTheGrey = document.querySelectorAll('li.buddieList')[0]
+	gandalfTheGrey.innerText = 'gandalf The White'
+	console.log(gandalfTheGrey)
 	// apply the following style to the element, make the // background 'white', add a grey border
 }
 
