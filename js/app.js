@@ -220,7 +220,7 @@ const joinFellowship = (names)=>{
 	//const fellowshipMember = document.createElement("li")
 	//fellowshipMember.innerText = names
 	//createFellowship.appendChild(fellowshipMember)
-	alert (names + "has  joined the party")
+	alert (names + " has  joined the party")
 }
 hobbits.forEach(joinFellowship)
 buddies.forEach(joinFellowship)
@@ -248,7 +248,7 @@ function theBalrog() {
 	console.log(gandalfTheWhite)
 	// change the `'Gandalf'` text to `'Gandalf the White'`
 	// apply the following style to the element, make the // background 'white', add a grey border
-	console.log(buddyListBox)
+	
 }
 
 // COMMIT YOUR WORK
@@ -263,6 +263,10 @@ function hornOfGondor() {
 	// pop up an alert that the horn of gondor has been blown
 	// Boromir's been killed by the Uruk-hai!
 	// Remove `Boromir` from the Fellowship
+	window.alert( "The horn of gondor has been blown! Boromir's been killed by the Uruk-hai!")
+	const boromir = document.getElementById("Boromir")
+	boromir.innerText = ""
+
 }
 
 // COMMIT YOUR WORK
