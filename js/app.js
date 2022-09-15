@@ -140,6 +140,7 @@ function makeBuddies() {
 		buddy.innerText = buddies[i]
 		buddyBunch.appendChild(buddy)
 		buddyBench.appendChild(buddyBunch)
+		buddy.setAttribute('class', 'buddy')
 	}
 	// insert your aside as a child element of `rivendell`
 	document.getElementById('Rivendell').appendChild(buddyBench)
@@ -157,7 +158,6 @@ function leaveTheShire() {
 	console.log('6: leaveTheShire')
 
 	// assemble the `hobbits` and move them to `rivendell'
-
 	
 	const theShire = document.getElementById('The-Shire')
 	const rivendell= document.getElementById('Rivendell')
@@ -179,7 +179,13 @@ function beautifulStranger() {
 	console.log('7: beautifulStranger')
 
 	// change the `'Strider'` text to `'Aragorn'`
-}
+	const longShanks = document.getElementsByClassName('buddy')
+	for (i = 0; i < (longShanks.length); i++) {
+		 longShanks[3].innerText = ("Aragorn");
+			
+		}
+		
+	} 
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 7 complete - Strider is changed to Aragorn"
