@@ -189,7 +189,12 @@ function theBalrog() {
 	// change the `'Gandalf'` text to `'Gandalf the White'`
 	// apply the following style to the element, make the // background 'white', add a grey border
 }
-
+let fellowshipItems = document.querySelector('#the-fellowship').querySelectorAll('li')
+	for (let fellow of fellowshipItems) {
+		if (fellow.textContent === 'Gandalf the Grey') {
+			fellow.textContent = 'Gandalf the White'
+			fellow.style.background = 'white'
+			fellow.style.border = 'thick solid grey'
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 9 complete - Updated Gandalf"
 
@@ -200,8 +205,12 @@ function theBalrog() {
 function hornOfGondor() {
 	console.log('10: hornOfGondor')
 	// pop up an alert that the horn of gondor has been blown
+	alert('The horn of Gondor has been blow')
 	// Boromir's been killed by the Uruk-hai!
+	const fellowshipItems = forgeTheFellowShipList.childNodes
+	let boromir = fellowshipItems[4]
 	// Remove `Boromir` from the Fellowship
+	forgeTheFellowShipList.removeChild(boromir)
 }
 
 // COMMIT YOUR WORK
