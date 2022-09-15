@@ -229,8 +229,16 @@ function forgeTheFellowShip() {
 function theBalrog() {
 	console.log('9: theBalrog')
 	// change the `'Gandalf'` text to `'Gandalf the White'`
+	const rebirth = document.getElementsByClassName('buddy')
+	for (i = 0; i < (rebirth.length); i++) {
+		rebirth[0].innerText = ("Gandalf the White")
+		rebirth[0].style.backgroundColor = 'white'
+		rebirth[0].style.border = 'thin solid grey'
+		}
+		
+	} 
 	// apply the following style to the element, make the // background 'white', add a grey border
-}
+
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 9 complete - Updated Gandalf"
