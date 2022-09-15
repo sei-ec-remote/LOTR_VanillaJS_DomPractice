@@ -61,13 +61,40 @@ function makeHobbits() {
 	console.log('2: makeHobbits')
 
 	// display an `unordered list` of hobbits in the shire
-
+				// document.body.createElement
+				// .appendChild('lis')
 	// give each hobbit a class of `hobbit`
+	
+
+function arrToUl(root, arr) {
+  var ul = document.createElement('ul');
+  var li;
+  
+  root.appendChild(ul); // append the created ul to the root
+
+  arr.forEach(function(item) {
+    if (Array.isArray(item)) { // if it's an array
+      arrToUl(li, item); // call arrToUl with the li as the root
+      return;
+    }
+    
+    li = document.createElement('li'); // create a new list item
+    li.appendChild(document.createTextNode(item)); // append the text to the li
+    ul.appendChild(li); // append the list item to the ul
+  });
+
+
+
 
 	// hint: create a 'ul' outside the loop into which to append the 'li's
-			newUl = createElement
+			// newUl = createElement
 	// hint: get 'The-Shire' by using its id
+	// newArticle.id= lands[0]
 }
+var div = document.getElementById('myList');
+
+arrToUl(div, hobbits);
+
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 2 complete - Made the Hobbits".
@@ -78,16 +105,16 @@ function makeHobbits() {
 
 function keepItSecretKeepItSafe() {
 	console.log('3: keepItSecretKeepItSafe')
-		const newDiv = document.createElement("id") 
-		newDiv.id= 'the-ring'
-		newDiv.class= 'magic-imbued-jewelry'
-
+	const newDiv = document.createElement("div") 
+	newDiv.id= "the-ring"
+	newDiv.class= "magic-imbued-jewelry"
 	// create a div with an id of `'the-ring'`
 	
 	// give the div a class of `'magic-imbued-jewelry'`
 
 	// add the ring as a child of `Frodo`
 }
+	document.body.appendChild(hobbit[0])
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 3 complete - Made the ring and gave it to Frodo".
