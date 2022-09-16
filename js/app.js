@@ -221,8 +221,11 @@ function theBalrog() {
 function hornOfGondor() {
 	console.log('10: hornOfGondor')
 	// pop up an alert that the horn of gondor has been blown
+
 	// Boromir's been killed by the Uruk-hai!
+	let boromir = document.getElementById('Boromir')
 	// Remove `Boromir` from the Fellowship
+		boromir.remove()
 }
 
 // COMMIT YOUR WORK
@@ -262,7 +265,11 @@ function weWantsIt() {
 function thereAndBackAgain() {
 	console.log('13: thereAndBackAgain')
 	// remove `Gollum` and `the Ring` from the document
+	gollum = document.getElementById('gollum')
+	gollum.remove()
 	// Move all the `hobbits` back to `the shire`
+	let hobbs = document.getElementById('hobbits')
+	let backShire = document
 }
 
 // COMMIT YOUR WORK
