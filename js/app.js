@@ -289,7 +289,12 @@ function thereAndBackAgain() {
 	gollum.remove()
 	// Move all the `hobbits` back to `the shire`
 	let hobbs = document.getElementById('hobbits')
-	let backShire = document
+	let backShire = document.getElementById('The-Shire')
+	let frodo = document.getElementById('Frodo-Baggins')
+	let sam = document.getElementById('Samwise-"Sam"-Gamgee')
+		backShire.appendChild(hobbs)
+		backShire.appendChild(frodo)
+		backShire.appendChild(sam)
 }
 
 // COMMIT YOUR WORK
