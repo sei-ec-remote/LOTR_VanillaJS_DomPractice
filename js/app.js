@@ -141,6 +141,7 @@ function makeBuddies() {
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 5 complete - Made the Buddies".
 
+
 // ============
 // Chapter 6
 // ============
@@ -238,7 +239,15 @@ function hornOfGondor() {
 function itsDangerousToGoAlone() {
 	console.log('11: itsDangerousToGoAlone')
 	// take `Frodo` and `Sam` out of the fellowship and move // them to `Mordor`
+	let frodo = document.getElementById('Frodo-Baggins')
+	let sam = document.getElementById('Samwise-"Sam"-Gamgee')
+	let mordor = document.getElementById('Mordor')
+	mordor.appendChild(frodo)
+	mordor.appendChild(sam)
 	// add a div with an id of `'mount-doom'` to `Mordor`
+	const div = document.createElement('div')
+	div.id = 'mount-doom'
+	mordor.appendChild(div)
 }
 
 // COMMIT YOUR WORK
