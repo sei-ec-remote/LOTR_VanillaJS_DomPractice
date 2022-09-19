@@ -58,6 +58,7 @@ function makeHobbits() {
 	console.log('2: makeHobbits')
 		
 	let hobbitNames = document.createElement('ul')
+		hobbitNames.setAttribute('id', 'hobbitNames')
 	for(let i = 0; i < hobbits.length; i++ ){
 		
 		
@@ -169,6 +170,10 @@ document.getElementById("Rivendell").appendChild(buddiesContainer)
 // ============
 
 function leaveTheShire() {
+	
+document.getElementById('Rivendell').appendChild(document.getElementById('hobbitNames'))
+	
+
 	console.log('6: leaveTheShire')
 
 	// assemble the `hobbits` and move them to `rivendell`
@@ -183,6 +188,7 @@ function leaveTheShire() {
 
 function beautifulStranger() {
 	console.log('7: beautifulStranger')
+	const changeStrider = document.getElementsByTagName("li")[3].textContent = "Aragorn";
 
 	// change the `'Strider'` text to `'Aragorn'`
 }
@@ -196,6 +202,9 @@ function beautifulStranger() {
 
 function forgeTheFellowShip() {
 	console.log('8: forgeTheFellowShip')
+	const theFellowship = document.createElement('div')
+	theFellowship.createAttribte('id', 'the-fellowship')
+	document.getElementById('Rivendell').appendChild(theFellowship)
 	// create a new div called `'the-fellowship'` within `rivendell`
 	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
 	// after each character is added make an alert that they // have joined your party
