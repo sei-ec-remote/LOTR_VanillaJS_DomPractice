@@ -181,18 +181,37 @@ function leaveTheShire() {
 function beautifulStranger() {
 	
 	// change the `'Strider'` text to `'Aragorn'`
+// const Strider = document.querySelectorAll(buddiesNames[3])
+// 	Strider.innerText= 'Aragorn'
+// 	Strider.appendChild(buddiesNames)
+	// tried name istead of id
+	// let name = document.getElementsByName('Strider')
+	// name.innerText = 'Aragorn' 
+	// console.log (name)
+
+// did not work 
+	// document.getElementById(buddies[3]).innerHTML = 'Aragorn';
+// did not work 
+// let strider = document.getElementById(buddiesNames[3])
+// 	strider.innerText = 'Aragorn'
+// 	strider.appendChild(buddiesNames)
+// 	console.log(strider)
+
 	// trying this 
-	let buddyList = document.querySelectorAll('.buddieList')
-	for (i=0; i < buddyList.length; i++){
-		console.log(buddyList[i].innerText)
-		if (buddyList[i].innerText==='strider'){
-			buddyList[i].innerText = 'Aragorn'
-		}
-	}
+	// let buddyList = document.querySelectorAll('.buddieList')
+	// for (i=0; i < buddyList.length; i++){
+	// 	console.log(buddyList[i].innerText)
+	// 	if (buddyList[i].innerText==='strider'){
+	// 		buddyList[i].innerText === 'Aragorn'
+	// 	}		
+	// }
+	// return buddyList;
+
 	// did not work 
 // let strider = document.querySelectorAll('li.buddieList')[3]
 // strider.innerText = 'Aragorn'
 // console.log(strider)
+
 // keep getting error that it cannot set properties of null(setting innerText) tried this one also
 // let name = document.getElementById('Strider')
 // name.innerText = 'Aragorn' 
