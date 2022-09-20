@@ -179,7 +179,8 @@ function leaveTheShire() {
 // ============
 
 function beautifulStranger() {
-	
+	const nameChange =document.getElementsByTagName('li')[3].textContent = 'Aragorn'
+	console.log (nameChange)
 	// change the `'Strider'` text to `'Aragorn'`
 // const Strider = document.querySelectorAll(buddiesNames[3])
 // 	Strider.innerText= 'Aragorn'
@@ -256,9 +257,9 @@ function forgeTheFellowShip() {
 function theBalrog() {
 	console.log('9: theBalrog')
 	// change the `'Gandalf'` text to `'Gandalf the White'`
-	let gandalfTheGrey = document.querySelectorAll('li.buddieList')[0]
-	gandalfTheGrey.innerText = 'gandalf The White'
+	let gandalfTheGrey = document.querySelectorAll('li.buddie')[0]
 	console.log(gandalfTheGrey)
+	gandalfTheGrey.textContent = 'gandalf The White'
 	// apply the following style to the element, make the // background 'white', add a grey border
 }
 
