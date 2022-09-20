@@ -234,13 +234,24 @@ function forgeTheFellowShip() {
 	// create a new div called `'the-fellowship'` within `rivendell`
 	const theFellowship = document.createElement('div')
 	theFellowship.id = 'the-fellowship'
-	 let rivendell = document.getElementById('#Rivendell')
-	 rivendell.appendChild(newDiv)
-	 let newHobbitts = document.getElementById('hobbits')
-	 let newBuddies = document.getElementById('buddies')
-	 newDiv.appendChild(newHobbitts)
-	 newDiv.appendChild(newBuddies)
-	 alert("have joined the party")
+	 let rivendell = document.getElementById('Rivendell')
+	 rivendell.appendChild(theFellowship)
+	//  console.log(theFellowship)
+	 let newHobbits = document.querySelectorAll('li.hobbit')
+	 console.log(newHobbits)
+	 let newBuddies = document.querySelectorAll('li.buddie')
+	 for (let i =0; i < newHobbits.length; i++) { 
+		theFellowship.appendChild(newHobbits[i])
+		// alert(newHobbits[i].textContent + ' have joined the party')
+	 }
+	 for (let i =0; i < newBuddies.length; i++) { 
+		theFellowship.appendChild(newBuddies[i])
+		// alert(newBuddies[i].textContent + ' have joined the party')
+	 }
+
+	//  theFellowship.appendChild(newHobbits)
+	//  theFellowship.appendChild(newBuddies)
+	 
 	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
 	// after each character is added make an alert that they // have joined your party
 
@@ -260,6 +271,7 @@ function theBalrog() {
 	let gandalfTheGrey = document.querySelectorAll('li.buddie')[0]
 	console.log(gandalfTheGrey)
 	gandalfTheGrey.textContent = 'gandalf The White'
+	gandalfTheGrey.setAttribute('style', 'background-color: white; border: 2px solid grey;')
 	// apply the following style to the element, make the // background 'white', add a grey border
 }
 
@@ -272,6 +284,13 @@ function theBalrog() {
 
 function hornOfGondor() {
 	console.log('10: hornOfGondor')
+	alert('The horn of gondor has been blown')
+	alert('Borimir has been killed by the Uruk-hai!')
+	document.querySelectorAll('li.buddie')[4].remove()
+	
+	
+// let borimir = document.querySelectorAll('l1.buddie')[4]
+// remove(borimir)
 	// pop up an alert that the horn of gondor has been blown
 	// Boromir's been killed by the Uruk-hai!
 	// Remove `Boromir` from the Fellowship
@@ -288,6 +307,10 @@ function itsDangerousToGoAlone() {
 	console.log('11: itsDangerousToGoAlone')
 	// take `Frodo` and `Sam` out of the fellowship and move // them to `Mordor`
 	// add a div with an id of `'mount-doom'` to `Mordor`
+	// document.querySelector('li.buddie')[1,2].appendChild('Mordor')
+	
+	document.getElementById('Mordor').appendChild(document.getElementById('Frodo Baggins'))
+	document.getElementById('Mordor').appendChild(document.getElementById('`Samwise "Sam" Gamgee`'))
 }
 
 // COMMIT YOUR WORK
