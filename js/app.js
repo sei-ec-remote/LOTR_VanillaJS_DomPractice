@@ -312,10 +312,15 @@ function itsDangerousToGoAlone() {
 	// document.querySelector('li.buddie')[0].appendChild(document.querySelectorAll('Mordor'))
 	document.getElementById('Mordor').appendChild(document.querySelectorAll('li.hobbit')[0])
 	document.getElementById('Mordor').appendChild(document.querySelectorAll('li.hobbit')[0])
-	const mountDoom = document.createElement('div')
 	
-	 let mordor = document.getElementById('Mordor')
-	 mordor.appendChild(mountDoom)
+	const mountDoom = document.createElement('div')
+		mountDoom.id = 'mount-doom'
+	// console.log('mountDoom')
+	// const mordor = document.getElementById('Mordor')
+	 const mordor = document.querySelectorAll('lands')[2]
+		mordor.appendChild(mountDoom)
+		// console.log('test')
+
 }
 
 // COMMIT YOUR WORK
@@ -328,8 +333,19 @@ function itsDangerousToGoAlone() {
 function weWantsIt() {
 	console.log('12: weWantsIt')
 	// Create a div with an id of `'gollum'` and add it to Mordor
+	const gollum = document.createElement('div')
+	gollum.id = 'gollum'
+	 const mordor = document.getElementById('Mordor')
+	 mordor.appendChild(gollum)
+	//  console.log('gollum')
+
+	// document.getElementById('liHobbit').appendChild(theRing)
 	// Remove `the ring` from `Frodo` and give it to `Gollum`
+	const theRing = document.getElementById('the-ring')
+	gollum.appendChild(theRing)
+	//  console.log('gollum')
 	// Move Gollum into Mount Doom
+	document.getElementById('mountDoom').appendChild('gollum')
 }
 
 // COMMIT YOUR WORK
