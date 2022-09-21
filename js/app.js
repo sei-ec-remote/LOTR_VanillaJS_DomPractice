@@ -284,8 +284,8 @@ function theBalrog() {
 
 function hornOfGondor() {
 	console.log('10: hornOfGondor')
-	alert('The horn of gondor has been blown')
-	alert('Borimir has been killed by the Uruk-hai!')
+	// alert('The horn of gondor has been blown')
+	// alert('Borimir has been killed by the Uruk-hai!')
 	document.querySelectorAll('li.buddie')[4].remove()
 	
 	
@@ -307,10 +307,15 @@ function itsDangerousToGoAlone() {
 	console.log('11: itsDangerousToGoAlone')
 	// take `Frodo` and `Sam` out of the fellowship and move // them to `Mordor`
 	// add a div with an id of `'mount-doom'` to `Mordor`
-	// document.querySelector('li.buddie')[1,2].appendChild('Mordor')
+	// document.querySelectorAll('li.buddie')[0].appendChild('li.Mordor')[2]
 	
-	document.getElementById('Mordor').appendChild(document.getElementById('Frodo Baggins'))
-	document.getElementById('Mordor').appendChild(document.getElementById('`Samwise "Sam" Gamgee`'))
+	// document.querySelector('li.buddie')[0].appendChild(document.querySelectorAll('Mordor'))
+	document.getElementById('Mordor').appendChild(document.querySelectorAll('li.hobbit')[0])
+	document.getElementById('Mordor').appendChild(document.querySelectorAll('li.hobbit')[0])
+	const mountDoom = document.createElement('div')
+	
+	 let mordor = document.getElementById('Mordor')
+	 mordor.appendChild(mountDoom)
 }
 
 // COMMIT YOUR WORK
