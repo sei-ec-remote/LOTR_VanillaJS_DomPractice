@@ -190,7 +190,39 @@ function beautifulStranger() {
 function forgeTheFellowShip() {
 	console.log('8: forgeTheFellowShip')
 	// create a new div called `'the-fellowship'` within `rivendell`
+	const theFellowship = document.createElement('div')
+	theFellowship.setAttribute('id', 'theFellowship')
+	// now attaching new div to Rivendell
+	const theRivendell = document.querySelector('#Rivendell')
+	theRivendell.appendChild(theFellowship)
+	// creating ul and setting ID
+	const fellowshipList = document.createElement('ul')
+	fellowshipList.setAttribute('id', 'fellowshipList')
+	// appending fellowshipList to the Fellowship div
+	theFellowship.appendChild(fellowshipList)
+
 	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
+	const hobbitsList = document.querySelectorAll('.hobbits')
+	const buddiesList = document.querySelectorAll('.buddy')
+	// test - console.log(hobbitsList[0])
+	fellowshipList.appendChild(hobbitsList[0])
+	alert('Frodo Baggins has been added to your party')
+	fellowshipList.appendChild(hobbitsList[1])
+	alert('Samwise Gamgee has been added to your party')
+	fellowshipList.appendChild(hobbitsList[2])
+	alert('Merry Brandybuck has been added to your party')
+	fellowshipList.appendChild(hobbitsList[3])
+	alert('Pippin Took has been added to your party')
+	fellowshipList.appendChild(buddiesList[0])
+	alert('Gandalf has been added to your party')
+	fellowshipList.appendChild(buddiesList[1])
+	alert('Legolas has been added to your party')
+	fellowshipList.appendChild(buddiesList[2])
+	alert('Gimli has been added to your party')
+	fellowshipList.appendChild(buddiesList[3])
+	alert('Aragorn has been added to your party')
+	fellowshipList.appendChild(buddiesList[4])
+	alert('Boromir has been added to your party')
 	// after each character is added make an alert that they // have joined your party
 
 	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
