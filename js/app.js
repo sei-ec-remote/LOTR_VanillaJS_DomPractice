@@ -274,7 +274,16 @@ function hornOfGondor() {
 function itsDangerousToGoAlone() {
 	console.log('11: itsDangerousToGoAlone')
 	// take `Frodo` and `Sam` out of the fellowship and move // them to `Mordor`
+	const hobbitSelector = document.querySelectorAll('.hobbits')
+	const frodo = hobbitSelector[0]
+	const samwise = hobbitSelector[1]
+	const mordor = document.querySelector('#Mordor')
+	mordor.appendChild(frodo)
+	mordor.appendChild(samwise)
 	// add a div with an id of `'mount-doom'` to `Mordor`
+	const mountDoom = document.createElement('div')
+	mountDoom.setAttribute('id', 'mount-doom')
+	mordor.appendChild(mountDoom)
 }
 
 // COMMIT YOUR WORK
@@ -306,6 +315,14 @@ function thereAndBackAgain() {
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 13 complete -Gollum and the ring are gone, the baddies are done, and the hobbits are back in the shire".
+
+
+
+
+
+
+
+
 
 // =====================================
 // Don't change anything below this line
