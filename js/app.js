@@ -104,6 +104,7 @@ function keepItSecretKeepItSafe() {
 function makeBaddies() {
 	console.log('4: makeBaddies')
 	const baddiesList = document.createElement('ul')
+	baddiesList.setAttribute('id', 'baddies-list')
 	// display an unordered list of baddies in Mordor
 	for (let i = 0; i < baddies.length; i++) {
 	const baddiesListNames = document.createElement('li')
@@ -323,7 +324,24 @@ function weWantsIt() {
 function thereAndBackAgain() {
 	console.log('13: thereAndBackAgain')
 	// remove `Gollum` and `the Ring` from the document
+	const gollum = document.querySelector('#gollum')
+	gollum.remove()
+	const baddiesSelector = document.querySelectorAll('.baddy')
+	const sauron = baddiesSelector[0]
+	const sarumon = baddiesSelector[1]
+	const theUrukHai = baddiesSelector[2]
+	const orcs = baddiesSelector[3]
+	sauron.remove()
+	sarumon.remove()
+	theUrukHai.remove()
+	orcs.remove()
 	// Move all the `hobbits` back to `the shire`
+	const hobbitList = document.querySelectorAll('.hobbits')
+	const theShire = document.querySelector('#The-Shire')
+	theShire.appendChild(hobbitList[0])
+	theShire.appendChild(hobbitList[1])
+	theShire.appendChild(hobbitList[2])
+	theShire.appendChild(hobbitList[3])
 }
 
 // COMMIT YOUR WORK
