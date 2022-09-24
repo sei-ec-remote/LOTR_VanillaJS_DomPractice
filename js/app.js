@@ -246,6 +246,12 @@ for(let i = 0; i < buddiesList.length; i++){
 
 function theBalrog() {
 	console.log('9: theBalrog')
+	// buddies[0].innerHTML = 'Gandalf the White'
+	// buddies[0].style.textDecoration = "border:grey"
+	
+	let gandalf = document.querySelectorAll("li.buddy")[0]
+	gandalf.textContent = "Gandalf The White";
+	gandalf.setAttribute("style", "background-color: white; border: 1px solid grey");
 	// change the `'Gandalf'` text to `'Gandalf the White'`
 	// apply the following style to the element, make the // background 'white', add a grey border
 }
