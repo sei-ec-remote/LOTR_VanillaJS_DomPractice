@@ -144,16 +144,24 @@ function makeBaddies() {
 
 function makeBuddies() {
 	console.log('5: makeBuddies')
-let buddiesContainer = document.createElement('aside')
-const buddiesList = document.createElement('ul')
-for(let i = 0; i < buddies.length; i++ ){
-	let buddyName = document.createElement('li')
-	buddyName.innerText = buddies[i]
-	buddiesList.appendChild(buddyName)
+ buddiesContainer = document.createElement('aside')
 
+		
+let buddyNames = document.createElement('ul')
+	buddyNames.setAttribute('id', 'buddyNames')
+for(let i = 0; i < buddies.length; i++ ){
+	
+	
+	let buddy = document.createElement('li')
+	buddy.setAttribute('class', 'buddy')
+	buddy.innerHTML = buddies[i]
+	buddyNames.appendChild(buddy)
+	
+	
 }
-buddiesContainer.appendChild(buddiesList)
 document.getElementById("Rivendell").appendChild(buddiesContainer)
+buddiesContainer.appendChild(buddyNames)
+
 
 	// create an `aside` tag
 
@@ -188,7 +196,7 @@ document.getElementById('Rivendell').appendChild(document.getElementById('hobbit
 
 function beautifulStranger() {
 	console.log('7: beautifulStranger')
-	const changeStrider = document.getElementsByTagName("li")[3].textContent = "Aragorn";
+	document.getElementsByTagName("li")[3].textContent = "Aragorn";
 
 	// change the `'Strider'` text to `'Aragorn'`
 }
@@ -202,9 +210,26 @@ function beautifulStranger() {
 
 function forgeTheFellowShip() {
 	console.log('8: forgeTheFellowShip')
-	const theFellowship = document.createElement('div')
-	theFellowship.createAttribte('id', 'the-fellowship')
-	document.getElementById('Rivendell').appendChild(theFellowship)
+	const theFellowShip = document.createElement('div');
+
+	theFellowShip.setAttribute('id', 'the-fellowship')
+
+	document.getElementById('Rivendell').appendChild(theFellowShip)
+     
+const hobbitsList = document.querySelectorAll('li.hobbit')
+const buddiesList = document.querySelectorAll('li.buddy')
+const fellows = document.createElement('ul')
+fellows.setAttribute('id', 'fellows')
+theFellowShip.appendChild(fellows)
+const fellowList = document.getElementById('fellows')
+for(let i = 0; i < hobbitsList.length; i++){
+	fellowList.appendChild(hobbitsList[i])
+	alert((hobbitsList[i].textContent + 'has joined the party'))
+}
+for(let i = 0; i < buddiesList.length; i++){
+	fellowList.appendChild(buddiesList[i])
+	alert((buddiesList[i].textContent + 'has joined the party'))
+}
 	// create a new div called `'the-fellowship'` within `rivendell`
 	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
 	// after each character is added make an alert that they // have joined your party
@@ -234,6 +259,7 @@ function theBalrog() {
 
 function hornOfGondor() {
 	console.log('10: hornOfGondor')
+	alert("The Horn of Gondor Has Been Blown!")
 	// pop up an alert that the horn of gondor has been blown
 	// Boromir's been killed by the Uruk-hai!
 	// Remove `Boromir` from the Fellowship
