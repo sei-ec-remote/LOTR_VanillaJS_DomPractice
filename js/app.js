@@ -224,11 +224,11 @@ theFellowShip.appendChild(fellows)
 const fellowList = document.getElementById('fellows')
 for(let i = 0; i < hobbitsList.length; i++){
 	fellowList.appendChild(hobbitsList[i])
-	alert((hobbitsList[i].textContent + 'has joined the party'))
+	// alert((hobbitsList[i].textContent + 'has joined the party'))
 }
 for(let i = 0; i < buddiesList.length; i++){
 	fellowList.appendChild(buddiesList[i])
-	alert((buddiesList[i].textContent + 'has joined the party'))
+	// alert((buddiesList[i].textContent + 'has joined the party'))
 }
 	// create a new div called `'the-fellowship'` within `rivendell`
 	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
@@ -302,9 +302,19 @@ function itsDangerousToGoAlone() {
 
 function weWantsIt() {
 	console.log('12: weWantsIt')
+	const mordor =document.getElementById('Mordor')
+	const gollum = document.createElement('div')
+	gollum.setAttribute('id', 'gollum')
+	mordor.appendChild(gollum)
+
+	
+	let theRing = document.getElementById('the-ring')
+
+	gollum.appendChild(theRing)
 	// Create a div with an id of `'gollum'` and add it to Mordor
 	// Remove `the ring` from `Frodo` and give it to `Gollum`
 	// Move Gollum into Mount Doom
+	document.getElementById("mount-doom").appendChild(gollum)
 }
 
 // COMMIT YOUR WORK
