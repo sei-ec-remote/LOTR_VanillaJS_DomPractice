@@ -224,11 +224,11 @@ theFellowShip.appendChild(fellows)
 const fellowList = document.getElementById('fellows')
 for(let i = 0; i < hobbitsList.length; i++){
 	fellowList.appendChild(hobbitsList[i])
-	// alert((hobbitsList[i].textContent + 'has joined the party'))
+	alert((hobbitsList[i].textContent + 'has joined the party'))
 }
 for(let i = 0; i < buddiesList.length; i++){
 	fellowList.appendChild(buddiesList[i])
-	// alert((buddiesList[i].textContent + 'has joined the party'))
+	alert((buddiesList[i].textContent + 'has joined the party'))
 }
 	// create a new div called `'the-fellowship'` within `rivendell`
 	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
@@ -326,7 +326,15 @@ function weWantsIt() {
 
 function thereAndBackAgain() {
 	console.log('13: thereAndBackAgain')
+	let gollum = document.getElementById('gollum')
+	gollum.remove()
+
+	let hobbitNames = document.getElementById('hobbitNames')
+	let hobbitsList = document.querySelectorAll('li.hobbit')
+	for(let i = 0; i < hobbitsList.length; i++){
+		hobbitNames.appendChild(hobbitsList[i])}
 	// remove `Gollum` and `the Ring` from the document
+	document.getElementById('The-Shire').appendChild(hobbitNames)
 	// Move all the `hobbits` back to `the shire`
 }
 
