@@ -60,6 +60,7 @@ function makeMiddleEarth() {
     }
 	// 3. append the section to the body of the DOM.
     document.body.appendChild(section)
+
 }
 
 // COMMIT YOUR WORK
@@ -72,13 +73,24 @@ function makeMiddleEarth() {
 function makeHobbits() {
 	console.log('2: makeHobbits')
 
-	// display an `unordered list` of hobbits in the shire
+	// get 'The-Shire' by using its id
+    const theShire = document.getElementById('The-Shire')
 
-	// give each hobbit a class of `hobbit`
-
-	// hint: create a 'ul' outside the loop into which to append the 'li's
-
-	// hint: get 'The-Shire' by using its id
+ 	// display an `unordered list` of hobbits in the shire; hint: create a 'ul' outside the loop into which to append the 'li's
+    const ulHobbits = document.createElement('ul')
+    ulHobbits.id = 'hobbits'
+    for (let i = 0; i < hobbits.length; i++) {
+        // create an li for each hobbit
+        const liHobbit = document.createElement('li')
+        // give each hobbit a class
+        liHobbit.className = 'hobbit'
+        // give each hobbit some text
+        liHobbit.textContent = hobbits[i]
+        // append each hobbit to the ul
+        ulHobbits.appendChild(liHobbit)
+    }
+    // append unordered list to the shire
+    theShire.appendChild(ulHobbits)
 }
 
 // COMMIT YOUR WORK
