@@ -36,11 +36,11 @@ function makeMiddleEarth() {
         landName.textContent = lands[i]
         landArticle.appendChild(landName)
 	//   2d. appends each land to the middle-earth section
-        section.appendChild(landArtilcle)
+        section.appendChild(landArticle)
 	// 3. append the section to the body of the DOM.
 
     }
-    document.appendChild(section)  
+    document.body.appendChild(section)  
 }
 
 // COMMIT YOUR WORK
@@ -52,14 +52,26 @@ function makeMiddleEarth() {
 
 function makeHobbits() {
 	console.log('2: makeHobbits')
-
+    // hint: get 'The-Shire' by using its id
+    const theShire = document.getElementById('The-Shire')
+    console.log('this is the shire', theShire)
 	// display an `unordered list` of hobbits in the shire
+    // hint: create a 'ul' outside the loop into which to append the 'li's
+    const ulHobbits = document.createElement('ul')
+    ulHobbits.id = 'hobbits'
 
 	// give each hobbit a class of `hobbit`
-
-	// hint: create a 'ul' outside the loop into which to append the 'li's
-
-	// hint: get 'The-Shire' by using its id
+    for (let i = 0; i < hobbits.length; i++) {
+        // create an li for each hobbit
+        const liHobbit = document.createElement('li')
+        // give each hobbit a class
+        liHobbit.className = 'hobbit'
+        // give each hobbit some text
+        liHobbit.textContent = hobbits[i]
+        // 
+        ulHobbits.appendChild(liHobbit)
+    }
+    theShire.appendChild(ulHobbits)
 }
 
 // COMMIT YOUR WORK
@@ -73,10 +85,19 @@ function keepItSecretKeepItSafe() {
 	console.log('3: keepItSecretKeepItSafe')
 
 	// create a div with an id of `'the-ring'`
+    const oneRingDiv = document.createElement('div')
+    oneRingDiv.id = 'the-ring'
 
 	// give the div a class of `'magic-imbued-jewelry'`
-
+    oneRingDiv.className = 'magic-imbued-jewelry'
 	// add the ring as a child of `Frodo`
+    // we want to target Frodo specifically, so we'll start with a ul, but it's id
+    const ulHobbits = document.querySelector('#hobbits')
+    const hobbitsArray = ulHobbits.children
+    // then we'll need to look at how we can target the individual li's from there
+    const frodoLi = hobbitsArray[0]
+    // add the ring as a child of 'Frodo
+    frodoLi.appendChild(oneRingDiv)
 }
 
 // COMMIT YOUR WORK
