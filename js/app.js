@@ -53,11 +53,17 @@ function makeHobbits() {
 	console.log('2: makeHobbits')
 	const theShire = document.querySelector('#The-Shire')
 	// display an `unordered list` of hobbits in the shire
-
+	const ulHobbits = document.createElement('ul')
+	ulHobbits.id = 'hobbits'
 	// give each hobbit a class of `hobbit`
-
+	for(let i = 0; i < hobbits.length; i++) {
+		const liHobbit = document.createElement('li')
+		liHobbit.className = 'hobbit'
+		liHobbit.textContent = hobbits[i]
+		ulHobbits.appendChild(liHobbit)
+	}
 	// hint: create a 'ul' outside the loop into which to append the 'li's
-
+	theShire.appendChild(ulHobbits)
 	// hint: get 'The-Shire' by using its id
 }
 
