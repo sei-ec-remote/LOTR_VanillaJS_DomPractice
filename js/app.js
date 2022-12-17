@@ -160,8 +160,11 @@ rivendell.appendChild(aside)
 
 function leaveTheShire() {
 	console.log('6: leaveTheShire')
-
 	// assemble the `hobbits` and move them to `rivendell`
+	
+const aside = document.getElementById("aside")
+const ulHobbits = document.getElementById("hobbits")
+	aside.appendChild(ulHobbits)
 }
 
 // COMMIT YOUR WORK
