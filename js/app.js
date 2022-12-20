@@ -161,7 +161,6 @@ rivendell.appendChild(aside)
 function leaveTheShire() {
 	console.log('6: leaveTheShire')
 	// assemble the `hobbits` and move them to `rivendell`
-	
 const aside = document.getElementById("aside")
 const ulHobbits = document.getElementById("hobbits")
 	aside.appendChild(ulHobbits)
@@ -176,8 +175,20 @@ const ulHobbits = document.getElementById("hobbits")
 
 function beautifulStranger() {
 	console.log('7: beautifulStranger')
-
 	// change the `'Strider'` text to `'Aragorn'`
+	buddies[3] = "Aragorn"
+	// console.log(buddies)
+	const aside = document.getElementById("aside")
+	const ulBuddies = document.getElementById("buddies")
+	aside.removeChild(ulBuddies)
+	const newUlBuddies = document.createElement('ul')
+	newUlBuddies.id = ("buddies")
+	for(let i = 0 ; i < buddies.length ; i++){
+		const liBuddy = document.createElement('li')
+		liBuddy.className = "buddy"
+		liBuddy.textContent = buddies[i]
+		newUlBuddies.appendChild(liBuddy)}
+	aside.appendChild(newUlBuddies)
 }
 
 // COMMIT YOUR WORK
