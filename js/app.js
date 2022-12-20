@@ -212,31 +212,29 @@ function forgeTheFellowShip() {
 	console.log('8: forgeTheFellowShip')
 	// create a new div called `'the-fellowship'` within `rivendell`
     const theFellowshipDiv = document.createElement('div')
-    theFellowshipDiv.id = 'the-fellowship'
 	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
     const ulFellowship = document.createElement('ul')
+    ulFellowship.id = 'the-fellowship'
     theFellowshipDiv.appendChild(ulFellowship)
 
+    // define array for hobbits
     const rivendell = document.getElementById('Rivendell')
     const ulHobbits = document.getElementById('hobbits')
     const hobbArr = ulHobbits.children
     rivendell.appendChild(theFellowshipDiv)
-
+    // after each character is added make an alert that they // have joined your party
     for (let i = 0; i < hobbits.length; i++) {
         alert(hobbArr[0].innerText + ' has joined the fellowship!')
         ulFellowship.appendChild(hobbArr[0])
     }
-    
+    // define array for buddies
     const ulBuddies = document.getElementById('buddies')
     const buddArr = ulBuddies.children
-
+    // after each character is added make an alert that they // have joined your party
     for (let i = 0; i < buddies.length; i++) {
         alert(buddArr[0].innerText + ' has joined the fellowship!')
         ulFellowship.appendChild(buddArr[0])
     }
-    
-
-	// after each character is added make an alert that they // have joined your party
 
 	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
 }
@@ -251,7 +249,19 @@ function forgeTheFellowShip() {
 function theBalrog() {
 	console.log('9: theBalrog')
 	// change the `'Gandalf'` text to `'Gandalf the White'`
+    const ulFellowship = document.getElementById('the-fellowship')
+    const lisFellowship = ulFellowship.children
+
+    // find the innerText to change.
+    for (i = 0; i < lisFellowship.length; i++) {
+        if(lisFellowship[i].innerText === 'Gandalf the Grey') {
+            lisFellowship[i].innerText = 'Gandalf the White'
+        }
+    }
 	// apply the following style to the element, make the // background 'white', add a grey border
+    const gandalf = document.getElementById('Gandalf the Grey')
+    gandalf.style.backgroundColor = 'white'
+    gandalf.style.border = '1px solid grey'
 }
 
 // COMMIT YOUR WORK
@@ -278,6 +288,7 @@ function hornOfGondor() {
 function itsDangerousToGoAlone() {
 	console.log('11: itsDangerousToGoAlone')
 	// take `Frodo` and `Sam` out of the fellowship and move // them to `Mordor`
+    
 	// add a div with an id of `'mount-doom'` to `Mordor`
 }
 
