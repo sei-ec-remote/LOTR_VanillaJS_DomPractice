@@ -236,11 +236,11 @@ function forgeTheFellowShip() {
     const buddies = document.querySelectorAll('.buddy')
     hobbits.forEach(hobbit => {
         div.appendChild(hobbit)
-        alert(`${hobbit.innerText} has joined The Fellowship`)
+        console.log(`${hobbit.innerText} has joined The Fellowship`)
     })
     buddies.forEach(buddy => {
         div.appendChild(buddy)
-        alert(`${buddy.innerText} has joined The Fellowship`)
+        console.log(`${buddy.innerText} has joined The Fellowship`)
     })
 }
 
@@ -335,7 +335,17 @@ function weWantsIt() {
 function thereAndBackAgain() {
 	console.log('13: thereAndBackAgain')
 	// remove `Gollum` and `the Ring` from the document
-	// Move all the `hobbits` back to `the shire`
+    const gollum = document.querySelector('#gollum')
+    const ring = document.querySelector('#the-ring')
+    const mountDoom = document.querySelector('#mount-doom')
+    gollum.removeChild(ring)
+    mountDoom.removeChild(gollum)
+    // Move all the `hobbits` back to `the shire`
+    const shire = document.querySelector('#The-Shire')
+    const hobbits = document.querySelectorAll('.hobbit')
+    hobbits.forEach(hobbit => {
+        shire.appendChild(hobbit)
+    })
 }
 
 // COMMIT YOUR WORK
