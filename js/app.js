@@ -282,7 +282,7 @@ function theBalrog() {
 function hornOfGondor() {
 	console.log('10: hornOfGondor')
 	// pop up an alert that the horn of gondor has been blown
-    alert('The horn of Gondor has been blown!')
+    // alert('The horn of Gondor has been blown!')
 	// Boromir's been killed by the Uruk-hai!
 	// Remove `Boromir` from the Fellowship
     const ulFellowship = document.querySelector('#fellowshipUl')
@@ -305,7 +305,7 @@ function itsDangerousToGoAlone() {
 	// add a div with an id of `'mount-doom'` to `Mordor`
     const Mordor = document.getElementById('Mordor')
     const mtDoomDiv = document.createElement('div')
-    mtDoomDiv.id = 'Mount-doom'
+    mtDoomDiv.id = 'mount-doom'
     Mordor.appendChild(mtDoomDiv)
 
     const ulHobbitsMtDoom = document.createElement('ul')
@@ -320,12 +320,6 @@ function itsDangerousToGoAlone() {
     ulHobbitsMtDoom.appendChild(fellowshipArray[0])
 
     console.log(ulHobbitsMtDoom)
-
-
-
-
-
-
 }
 
 // COMMIT YOUR WORK
@@ -340,6 +334,21 @@ function weWantsIt() {
 	// Create a div with an id of `'gollum'` and add it to Mordor
 	// Remove `the ring` from `Frodo` and give it to `Gollum`
 	// Move Gollum into Mount Doom
+
+    const Mordor2 = document.getElementById('Mordor')
+    const gollumDiv = document.createElement('div')
+    gollumDiv.id = 'gollum'
+    Mordor2.appendChild(gollumDiv)
+
+    const theRing = document.getElementById('the-ring')
+    gollumDiv.appendChild(theRing)
+
+    const mtDoom = document.getElementById('mount-doom')
+
+    mtDoom.appendChild(gollumDiv)
+
+
+    
 }
 
 // COMMIT YOUR WORK
