@@ -131,7 +131,6 @@ function makeBuddies() {
 		liBuddy.className = 'buddy'
 		liBuddy.textContent = buddies[i]
 		ulBuddies.appendChild(liBuddy)
-		console.log(liBuddy)
 	}
 	buddiesAside.appendChild(ulBuddies)
 	// create an `aside` tag
@@ -150,7 +149,11 @@ function makeBuddies() {
 
 function leaveTheShire() {
 	console.log('6: leaveTheShire')
-
+	const ulHobbits = document.getElementById('hobbits')
+	const theShire = document.getElementById('The-Shire')
+	const rivendell = document.getElementById('Rivendell')
+	theShire.removeChild(ulHobbits)
+	rivendell.appendChild(ulHobbits)
 	// assemble the `hobbits` and move them to `rivendell`
 }
 
