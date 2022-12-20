@@ -293,8 +293,17 @@ function hornOfGondor() {
 function itsDangerousToGoAlone() {
 	console.log('11: itsDangerousToGoAlone')
 	// take `Frodo` and `Sam` out of the fellowship and move // them to `Mordor`
-    
+    const ulFellowship = document.getElementById('the-fellowship')
+    const lisFellowship = ulFellowship.children
 	// add a div with an id of `'mount-doom'` to `Mordor`
+    const divMountDoom = document.createElement('div')
+    divMountDoom.id = 'mount-doom'
+    const ulMountDoom = document.createElement('ul')
+    const divMordor = document.getElementById('Mordor')
+    divMordor.append(divMountDoom)
+    divMountDoom.append(ulMountDoom)
+    ulMountDoom.append(lisFellowship[0])
+    ulMountDoom.append(lisFellowship[0])
 }
 
 // COMMIT YOUR WORK
@@ -307,8 +316,16 @@ function itsDangerousToGoAlone() {
 function weWantsIt() {
 	console.log('12: weWantsIt')
 	// Create a div with an id of `'gollum'` and add it to Mordor
+    const divGollum = document.createElement('div')
+    divGollum.id = 'gollum'
+    const divMordor = document.getElementById('Mordor')
+    const divMountDoom = document.getElementById('mount-doom')
+    divMordor.append(divGollum)
 	// Remove `the ring` from `Frodo` and give it to `Gollum`
+    const divRing = document.getElementById('the-ring')
+    divGollum.appendChild(divRing)
 	// Move Gollum into Mount Doom
+    divMountDoom.append(divGollum)
 }
 
 // COMMIT YOUR WORK
