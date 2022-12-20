@@ -170,7 +170,13 @@ function makeBuddies() {
 function leaveTheShire() {
 	console.log('6: leaveTheShire')
 
+    const rivendell = document.getElementById('Rivendell')
 	// assemble the `hobbits` and move them to `rivendell`
+    const hobbits = document.getElementById('hobbits')
+    console.log(hobbits)
+    console.log(rivendell)
+    rivendell.appendChild(hobbits)
+
 }
 
 // COMMIT YOUR WORK
