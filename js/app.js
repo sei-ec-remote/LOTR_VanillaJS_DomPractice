@@ -224,7 +224,7 @@ function forgeTheFellowShip() {
     rivendell.appendChild(theFellowshipDiv)
     // after each character is added make an alert that they // have joined your party
     for (let i = 0; i < hobbits.length; i++) {
-        alert(hobbArr[0].innerText + ' has joined the fellowship!')
+        // alert(hobbArr[0].innerText + ' has joined the fellowship!')
         ulFellowship.appendChild(hobbArr[0])
     }
     // define array for buddies
@@ -232,7 +232,7 @@ function forgeTheFellowShip() {
     const buddArr = ulBuddies.children
     // after each character is added make an alert that they // have joined your party
     for (let i = 0; i < buddies.length; i++) {
-        alert(buddArr[0].innerText + ' has joined the fellowship!')
+        // alert(buddArr[0].innerText + ' has joined the fellowship!')
         ulFellowship.appendChild(buddArr[0])
     }
 
@@ -274,8 +274,13 @@ function theBalrog() {
 function hornOfGondor() {
 	console.log('10: hornOfGondor')
 	// pop up an alert that the horn of gondor has been blown
+    alert("the horn of gondor has been blown!")
 	// Boromir's been killed by the Uruk-hai!
 	// Remove `Boromir` from the Fellowship
+    const ulFellowship = document.getElementById('the-fellowship')
+    const lisFellowship = ulFellowship.children
+    lisFellowship[8].remove()
+    
 }
 
 // COMMIT YOUR WORK
