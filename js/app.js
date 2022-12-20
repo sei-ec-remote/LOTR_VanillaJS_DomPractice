@@ -210,7 +210,7 @@ function beautifulStranger() {
 function forgeTheFellowShip() {
 	console.log('8: forgeTheFellowShip')
 	// create a new div called `'the-fellowship'` within `rivendell`
-    const rivendell = document.getElementById("Rivendell")
+    const rivendell = document.getElementById('Rivendell')
     const fellowshipDiv = document.createElement('div')
     fellowshipDiv.id = 'the-fellowship'
     rivendell.appendChild(fellowshipDiv)
@@ -218,12 +218,16 @@ function forgeTheFellowShip() {
 	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
     const hobbits = document.getElementById('hobbits')
     const hobbitsArray = hobbits.children
+    const ulFellowship = document.createElement('ul')
+    ulFellowship.className = 'fellowship'
+    ulFellowship.id = 'fellowshipUl'
+    fellowshipDiv.appendChild(ulFellowship)
 
     for (let i = 0; i < 4; i++) {
     // after each character is added make an alert that they // have joined your party
         
-        alert(hobbitsArray[0].innerText + " has joined the Fellowship!")
-        fellowshipDiv.appendChild(hobbitsArray[0])
+        // alert(hobbitsArray[0].innerText + " has joined the Fellowship!")
+        ulFellowship.appendChild(hobbitsArray[0])
 }
 
     const buddies = document.getElementById('buddies')
@@ -232,8 +236,8 @@ function forgeTheFellowShip() {
     for (let i = 0; i < 5; i++) {
     // after each character is added make an alert that they // have joined your party
         
-        alert(buddiesArray[0].innerText + " has joined the Fellowship!")
-        fellowshipDiv.appendChild(buddiesArray[0])
+        // alert(buddiesArray[0].innerText + " has joined the Fellowship!")
+        ulFellowship.appendChild(buddiesArray[0])
 }
 
     console.log(fellowshipDiv)
@@ -254,6 +258,18 @@ function theBalrog() {
 	console.log('9: theBalrog')
 	// change the `'Gandalf'` text to `'Gandalf the White'`
 	// apply the following style to the element, make the // background 'white', add a grey border
+    const ulFellowship = document.querySelector('#fellowshipUl')
+    const fellowshipArray = ulFellowship.children
+    const gandalf = fellowshipArray[4]
+    gandalf.innerText = 'Gandalf the White'
+    gandalf.id = 'GandalftheWhite'
+
+    const gandalfBack = document.getElementById('GandalftheWhite')
+    gandalfBack.style.backgroundColor = 'white'
+
+
+    console.log(ulFellowship)
+
 }
 
 // COMMIT YOUR WORK
@@ -311,6 +327,8 @@ function thereAndBackAgain() {
 }
 
 // COMMIT YOUR WORK
+
+// UNCOMMENT THE ALERTS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 // The commit message should read: "Chapter 13 complete -Gollum and the ring are gone, the baddies are done, and the hobbits are back in the shire".
 
 // =====================================
