@@ -194,11 +194,11 @@ function forgeTheFellowShip() {
 	const buddiesArray = ulBuddies.children
 	const hobbitsArray = ulHobbits.children
 	for (let i = 0; i < 4; i++){
-		alert(hobbitsArray[0].innerText + ' has joined your party')
+		// alert(hobbitsArray[0].innerText + ' has joined your party')
 		ulFellowship.appendChild(hobbitsArray[0])
 	}
 	for (let i = 0; i < 5; i++){
-		alert(buddiesArray[0].innerText + ' has joined your party')
+		// alert(buddiesArray[0].innerText + ' has joined your party')
 		ulFellowship.appendChild(buddiesArray[0])
 	}
 	rivendell.appendChild(ulFellowship)
@@ -235,6 +235,10 @@ function hornOfGondor() {
 	// pop up an alert that the horn of gondor has been blown
 	// Boromir's been killed by the Uruk-hai!
 	// Remove `Boromir` from the Fellowship
+	alert('the horn of gondor has been blown')
+	const ulFellowship = document.getElementById('the-fellowship')
+	const fellowshipChildren = ulFellowship.children
+	fellowshipChildren[8].remove()
 }
 
 // COMMIT YOUR WORK
