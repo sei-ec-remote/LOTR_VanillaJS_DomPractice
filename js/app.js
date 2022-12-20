@@ -109,7 +109,6 @@ function makeBaddies() {
 		ulBaddies.appendChild(liBaddy)
 	}
 	// display an unordered list of baddies in Mordor
-	
 	// give each of the baddies a class of "baddy"
 	Mordor.appendChild(ulBaddies)
 	// remember to append them to Mordor
@@ -124,9 +123,19 @@ function makeBaddies() {
 
 function makeBuddies() {
 	console.log('5: makeBuddies')
-
+	const buddiesAside = document.createElement('aside')
+	const ulBuddies = document.createElement('ul')
+	ulBuddies.id = 'buddies'
+	for (let i = 0; i < buddies.length; i++){
+		const liBuddy = document.createElement('li')
+		liBuddy.className = 'buddy'
+		liBuddy.textContent = buddies[i]
+		ulBuddies.appendChild(liBuddy)
+		console.log(liBuddy)
+	}
+	buddiesAside.appendChild(ulBuddies)
 	// create an `aside` tag
-
+	Rivendell.appendChild(buddiesAside)
 	// put an `unordered list` of the `'buddies'` in the aside
 
 	// insert your aside as a child element of `rivendell`
