@@ -224,7 +224,7 @@ function forgeTheFellowShip() {
     rivendell.appendChild(theFellowshipDiv)
     // after each character is added make an alert that they // have joined your party
     for (let i = 0; i < hobbits.length; i++) {
-        // alert(hobbArr[0].innerText + ' has joined the fellowship!')
+        alert(hobbArr[0].innerText + ' has joined the fellowship!')
         ulFellowship.appendChild(hobbArr[0])
     }
     // define array for buddies
@@ -232,7 +232,7 @@ function forgeTheFellowShip() {
     const buddArr = ulBuddies.children
     // after each character is added make an alert that they // have joined your party
     for (let i = 0; i < buddies.length; i++) {
-        // alert(buddArr[0].innerText + ' has joined the fellowship!')
+        alert(buddArr[0].innerText + ' has joined the fellowship!')
         ulFellowship.appendChild(buddArr[0])
     }
 
@@ -326,6 +326,7 @@ function weWantsIt() {
     divGollum.appendChild(divRing)
 	// Move Gollum into Mount Doom
     divMountDoom.append(divGollum)
+
 }
 
 // COMMIT YOUR WORK
@@ -338,7 +339,16 @@ function weWantsIt() {
 function thereAndBackAgain() {
 	console.log('13: thereAndBackAgain')
 	// remove `Gollum` and `the Ring` from the document
+    const divGollum = document.getElementById('gollum')
+    const divMountDoom = document.getElementById('mount-doom')
+    divMountDoom.removeChild(divGollum)
 	// Move all the `hobbits` back to `the shire`
+    const divShire = document.getElementById('The-Shire')
+    const liHobbits = document.querySelectorAll('.hobbit')
+    for (i = 0; i < 4; i++) {
+       divShire.appendChild(liHobbits[i])
+    }
+    
 }
 
 // COMMIT YOUR WORK
