@@ -194,10 +194,8 @@ function leaveTheShire() {
 	console.log('6: leaveTheShire')
 
 	// assemble the `hobbits` and move them to `rivendell`
-    const theShire = document.getElementById('The-Shire')
     const ulHobbits = document.getElementById('hobbits')
     const rivendell = document.getElementById('Rivendell')
-    theShire.removeChild(ulHobbits)
     rivendell.appendChild(ulHobbits)
 }
 
@@ -317,6 +315,14 @@ function weWantsIt() {
 	// Create a div with an id of `'gollum'` and add it to Mordor
 	// Remove `the ring` from `Frodo` and give it to `Gollum`
 	// Move Gollum into Mount Doom
+    const div = document.createElement('div')
+    div.id = 'gollum'
+    const mordor = document.querySelector('#Mordor')
+    mordor.appendChild(div)
+    const ring = document.querySelector('#the-ring')
+    div.appendChild(ring)
+    const mountDoom = document.querySelector('#mount-doom')
+    mountDoom.appendChild(div)
 }
 
 // COMMIT YOUR WORK
