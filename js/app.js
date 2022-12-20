@@ -61,6 +61,7 @@ function makeHobbits() {
 		// give each hobbit a class of `hobbit`
 		liHobbit.className = 'hobbit'
 		liHobbit.textContent = hobbits[i]
+		liHobbit.id = hobbits[i]
 		ulHobbits.appendChild(liHobbit)
 	}
 	theShire.appendChild(ulHobbits)
@@ -235,7 +236,7 @@ function hornOfGondor() {
 	// pop up an alert that the horn of gondor has been blown
 	// Boromir's been killed by the Uruk-hai!
 	// Remove `Boromir` from the Fellowship
-	alert('the horn of gondor has been blown')
+	// alert('the horn of gondor has been blown')
 	const ulFellowship = document.getElementById('the-fellowship')
 	const fellowshipChildren = ulFellowship.children
 	fellowshipChildren[8].remove()
@@ -252,6 +253,17 @@ function itsDangerousToGoAlone() {
 	console.log('11: itsDangerousToGoAlone')
 	// take `Frodo` and `Sam` out of the fellowship and move // them to `Mordor`
 	// add a div with an id of `'mount-doom'` to `Mordor`
+	const mountDoom = document.createElement('div')
+	mountDoom.id = 'mount-doom'
+	mountDoom.textContent = 'Mount Doom'
+	const ulMountDoom = document.createElement('ul')
+	ulMountDoom.id = 'Mount-Doom'
+	mountDoom.appendChild(ulMountDoom)
+	Mordor.appendChild(mountDoom)
+	const frodo = document.getElementById('Frodo Baggins')
+	ulMountDoom.appendChild(frodo)
+	const samwise = document.getElementById('Samwise "Sam" Gamgee')
+	ulMountDoom.appendChild(samwise)
 }
 
 // COMMIT YOUR WORK
