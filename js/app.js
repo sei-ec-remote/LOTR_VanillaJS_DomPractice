@@ -124,6 +124,7 @@ function makeBaddies() {
 
 function makeBuddies() {
 	console.log('5: makeBuddies')
+	const rivendell = document.getElementById('Rivendell')
 	const buddiesAside = document.createElement('aside')
 	const ulBuddies = document.createElement('ul')
 	ulBuddies.id = 'buddies'
@@ -136,7 +137,7 @@ function makeBuddies() {
 	}
 	buddiesAside.appendChild(ulBuddies)
 	// create an `aside` tag
-	Rivendell.appendChild(buddiesAside)
+	rivendell.appendChild(buddiesAside)
 	// put an `unordered list` of the `'buddies'` in the aside
 
 	// insert your aside as a child element of `rivendell`
@@ -298,6 +299,17 @@ function thereAndBackAgain() {
 	console.log('13: thereAndBackAgain')
 	// remove `Gollum` and `the Ring` from the document
 	// Move all the `hobbits` back to `the shire`
+	gollum.remove()
+	const theShire = document.getElementById('The-Shire')
+	const frodo = document.getElementById('Frodo Baggins')
+	const samwise = document.getElementById('Samwise "Sam" Gamgee')
+	const merry = document.getElementById('Meriadoc "Merry" Brandybuck')
+	const pippin = document.getElementById('Peregrin "Pippin" Took')
+	theShire.appendChild(frodo)
+	theShire.appendChild(samwise)
+	theShire.appendChild(merry)
+	theShire.appendChild(pippin)
+	
 }
 
 // COMMIT YOUR WORK
