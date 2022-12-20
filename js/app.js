@@ -238,11 +238,11 @@ function forgeTheFellowShip() {
     const buddies = document.querySelectorAll('.buddy')
     hobbits.forEach(hobbit => {
         div.appendChild(hobbit)
-        console.log(`${hobbit.innerText} has joined The Fellowship`)
+        alert(`${hobbit.innerText} has joined The Fellowship`)
     })
     buddies.forEach(buddy => {
         div.appendChild(buddy)
-        console.log(`${buddy.innerText} has joined The Fellowship`)
+        alert(`${buddy.innerText} has joined The Fellowship`)
     })
 }
 
@@ -275,6 +275,10 @@ function hornOfGondor() {
 	// pop up an alert that the horn of gondor has been blown
 	// Boromir's been killed by the Uruk-hai!
 	// Remove `Boromir` from the Fellowship
+    alert(`The horn of gondor has been blown. Boromir's been killed by the Uruk-hai!`)
+    const fellowship = document.getElementById('the-fellowship')
+    const boromir = document.getElementById('Boromir')
+    fellowship.removeChild(boromir)
 }
 
 // COMMIT YOUR WORK
