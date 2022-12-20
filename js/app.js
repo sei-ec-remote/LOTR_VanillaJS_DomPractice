@@ -122,12 +122,26 @@ function keepItSecretKeepItSafe() {
 function makeBaddies() {
 	console.log('4: makeBaddies')
 
+	const mordor = document.getElementById('Mordor')
+	//console.log('this is the mordor', mordor)
 	// display an unordered list of baddies in Mordor
-
+	const ulBaddies = document.createElement('ul')
+	ulBaddies.id = 'baddies'
 	// give each of the baddies a class of "baddy"
-
+	for (let i = 0; i < baddies.length; i++) {
+		// create an li for each baddy
+		const liBaddies = document.createElement('li')
+		// give each baddy a class
+		liBaddies.className = 'baddy'
+		// give each baddy some text
+		liBaddies.textContent = baddies[i]
+		// append each baddy to the ul
+		ulBaddies.appendChild(liBaddies)
+	}
 	// remember to append them to Mordor
+	mordor.appendChild(ulBaddies)
 }
+
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 4 complete - Made the Baddies"..
