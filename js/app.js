@@ -68,7 +68,7 @@ function makeHobbits() {
 	// const theShire = document.querySelector('#The-Shire')
 	// hint: get 'The-Shire' by using its id
 	const theShire = document.getElementById('The-Shire')
-	console.log('this is the shire', theShire)
+	//console.log('this is the shire', theShire)
 	// display an `unordered list` of hobbits in the shire
 	// hint: create a 'ul' outside the loop into which to append the 'li's
 	const ulHobbits = document.createElement('ul')
@@ -184,8 +184,11 @@ function makeBuddies() {
 
 function leaveTheShire() {
 	console.log('6: leaveTheShire')
-
 	// assemble the `hobbits` and move them to `rivendell`
+	const assembleHobbits = document.getElementById('hobbits')
+	console.log(assembleHobbits)
+	const rivendell = document.getElementById('Rivendell')
+	rivendell.appendChild(assembleHobbits)
 }
 
 // COMMIT YOUR WORK
