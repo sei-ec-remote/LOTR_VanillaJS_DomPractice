@@ -144,11 +144,14 @@ function makeBuddies() {
     const asideBuddies = document.createElement('aside')
 	// put an `unordered list` of the `'buddies'` in the aside
     const ulBuddies = document.createElement('ul')
+    ulBuddies.id = 'buddies'
     asideBuddies.appendChild(ulBuddies)
     // put each buddy in the ul
     for (let i = 0; i < buddies.length; i++) {
         // create an li for each baddy
         const liBuddy = document.createElement('li')
+        liBuddy.id = 'buddy'
+        liBuddy.id = buddies[i]
         // give each baddy some text
         liBuddy.textContent = buddies[i]
         // append the ul with each baddy
@@ -187,8 +190,15 @@ function leaveTheShire() {
 
 function beautifulStranger() {
 	console.log('7: beautifulStranger')
-
-	// change the `'Strider'` text to `'Aragorn'`
+    // change the `'Strider'` text to `'Aragorn'`
+    const liStrider = document.getElementById('Strider')
+    // Modify text content
+    liStrider.textContent = 'Aragorn'
+    // Remove ID of strider
+    liStrider.removeAttribute('#Strider')
+    // Add aragorn as an ID
+    liStrider.id = 'Aragorn'
+    
 }
 
 // COMMIT YOUR WORK
