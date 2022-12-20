@@ -282,8 +282,14 @@ function theBalrog() {
 function hornOfGondor() {
 	console.log('10: hornOfGondor')
 	// pop up an alert that the horn of gondor has been blown
+    alert('The horn of Gondor has been blown!')
 	// Boromir's been killed by the Uruk-hai!
 	// Remove `Boromir` from the Fellowship
+    const ulFellowship = document.querySelector('#fellowshipUl')
+    const fellowshipArray = ulFellowship.children
+    fellowshipArray[8].remove()
+
+    console.log(ulFellowship.children)
 }
 
 // COMMIT YOUR WORK
@@ -297,6 +303,29 @@ function itsDangerousToGoAlone() {
 	console.log('11: itsDangerousToGoAlone')
 	// take `Frodo` and `Sam` out of the fellowship and move // them to `Mordor`
 	// add a div with an id of `'mount-doom'` to `Mordor`
+    const Mordor = document.getElementById('Mordor')
+    const mtDoomDiv = document.createElement('div')
+    mtDoomDiv.id = 'Mount-doom'
+    Mordor.appendChild(mtDoomDiv)
+
+    const ulHobbitsMtDoom = document.createElement('ul')
+    ulHobbitsMtDoom.id = 'ulhobbitsMtDoom'
+    mtDoomDiv.appendChild(ulHobbitsMtDoom)
+
+
+    const ulFellowship = document.querySelector('#fellowshipUl')
+    const fellowshipArray = ulFellowship.children
+
+    ulHobbitsMtDoom.appendChild(fellowshipArray[0])
+    ulHobbitsMtDoom.appendChild(fellowshipArray[0])
+
+    console.log(ulHobbitsMtDoom)
+
+
+
+
+
+
 }
 
 // COMMIT YOUR WORK
