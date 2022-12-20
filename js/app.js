@@ -172,6 +172,7 @@ function makeBuddies() {
     for (let i = 0; i < buddies.length; i++) {
         const liBuddy = document.createElement('li')
         liBuddy.className = 'buddy'
+        liBuddy.id = buddies[i]
         liBuddy.textContent = buddies[i]
         ulBuddies.appendChild(liBuddy)
     }
@@ -211,6 +212,9 @@ function beautifulStranger() {
 	console.log('7: beautifulStranger')
 
 	// change the `'Strider'` text to `'Aragorn'`
+    const strider = document.getElementById('Strider')
+    strider.id = 'Aragorn'
+    strider.innerText = 'Aragorn'
 }
 
 // COMMIT YOUR WORK
