@@ -290,8 +290,19 @@ function forgeTheFellowShip() {
 
 function theBalrog() {
 	console.log('9: theBalrog')
+
+	const Rivendell = document.getElementById("Rivendell")
+
+	const gandalf = Rivendell.children[1].children[0].children[0]
+
 	// change the `'Gandalf'` text to `'Gandalf the White'`
+	gandalf.textContent = 'Gandalf the White'
+
 	// apply the following style to the element, make the // background 'white', add a grey border
+	gandalf.style.background = 'white'
+	gandalf.style.border = '1px solid grey'
+	gandalf.style.padding = '10px' // to make it look nice
+
 }
 
 // COMMIT YOUR WORK
