@@ -163,10 +163,6 @@ function makeBuddies() {
 
 function leaveTheShire() {
 	console.log('6: leaveTheShire')
-
-	
-	// const theShire = document.getElementById('The-Shire')
-	// theShire.removeChild(hobbits)
 	
 	// assemble the `hobbits` and move them to `rivendell`
 	const ulHobbits = document.getElementById('hobbits')
