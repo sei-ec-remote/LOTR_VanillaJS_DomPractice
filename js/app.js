@@ -186,6 +186,11 @@ function beautifulStranger() {
 	console.log('7: beautifulStranger')
 
 	// change the `'Strider'` text to `'Aragorn'`
+	const buddy = document.getElementById('buddies')
+	const buddyArray = buddy.children
+	const aragorn = buddyArray[3]
+	aragorn.textContent = 'Aragorn'
+
 }
 
 // COMMIT YOUR WORK
