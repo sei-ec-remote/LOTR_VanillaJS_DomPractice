@@ -78,13 +78,13 @@ function makeHobbits() {
 	// give each hobbit a class of `hobbit`
 	for (let i = 0; i < hobbits.length; i++) {
 		// create a li for each hobbit
-		const liHobbit = document.createElement('li')
+		const liHobbits = document.createElement('li')
 		// give each hobbit a class
-		liHobbit.className = 'hobbit'
+		liHobbits.className = 'hobbit'
 		// give each hobbit some text
-		liHobbit.textContent = hobbits[i]
+		liHobbits.textContent = hobbits[i]
 		// append each hobbit to the ul
-		ulHobbits.appendChild(liHobbit)
+		ulHobbits.appendChild(liHobbits)
 	}
 	theShire.appendChild(ulHobbits)
 }
@@ -123,7 +123,7 @@ function keepItSecretKeepItSafe() {
 
 function makeBaddies() {
 	console.log('4: makeBaddies')
-	const Mordor = document.getElementById('Mordor')
+	const mordor = document.getElementById('Mordor')
 	// display an unordered list of baddies in Mordor
 	const ulBaddies = document.createElement('ul')
 	ulBaddies.id = 'baddies'
@@ -139,7 +139,7 @@ function makeBaddies() {
 		ulBaddies.appendChild(liBaddies)
 	}
 	// remember to append them to Mordor
-	Mordor.appendChild(ulBaddies)
+	mordor.appendChild(ulBaddies)
 }
 
 // COMMIT YOUR WORK
@@ -179,8 +179,10 @@ function makeBuddies() {
 
 function leaveTheShire() {
 	console.log('6: leaveTheShire')
-
+	const hobbits = document.getElementById('hobbits')
+	const rivendell = document.getElementById('Rivendell')
 	// assemble the `hobbits` and move them to `rivendell`
+	rivendell.appendChild(hobbits)
 }
 
 // COMMIT YOUR WORK
