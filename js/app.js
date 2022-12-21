@@ -149,7 +149,7 @@ function makeBuddies() {
 	// create an `aside` tag
 	const aside = document.createElement('aside')
 	const ulBuddies = document.createElement('ul')
-
+	ulBuddies.id = 'buddies'
 	// put an `unordered list` of the `'buddies'` in the aside
 	for (i = 0; i < buddies.length; i++) {
 		const liBuddy = document.createElement('li')
@@ -188,8 +188,10 @@ function beautifulStranger() {
 	console.log('7: beautifulStranger')
 
 	// change the `'Strider'` text to `'Aragorn'`
+	const ulBuddies = document.getElementById('buddies').children
+	const strider = ulBuddies.item(3)
+	strider.textContent = 'Aragorn'
 }
-
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 7 complete - Strider is changed to Aragorn"
 
