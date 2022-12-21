@@ -127,10 +127,12 @@ function makeBuddies() {
 	const rivendell = document.querySelector('#Rivendell')
 	// put an `unordered list` of the `'buddies'` in the aside
 	const asideBuddies = document.createElement('aside')
+	asideBuddies.id = 'buddies'
 	const olBuddies = document.createElement('ol')
 	for(let i = 0; i < buddies.length; i++) {
 		const liBuddies = document.createElement('li')
 		liBuddies.className = 'buddy'
+		liBuddies.id = buddies[i]
 		liBuddies.textContent = buddies[i]
 		olBuddies.appendChild(liBuddies)
 	}
@@ -166,6 +168,8 @@ function beautifulStranger() {
 	console.log('7: beautifulStranger')
 
 	// change the `'Strider'` text to `'Aragorn'`
+	const strider = document.querySelector('#Strider')
+	strider.innerHTML = 'Aragorn'
 }
 
 // COMMIT YOUR WORK
