@@ -218,13 +218,13 @@ function forgeTheFellowShip() {
 	for(let i = 0 ; i < hobbits.length ; i++ ){
 	// console.log(lihobbits[i])
 	fellowshipUL.appendChild(lihobbits[i])
-	alert(`${hobbits[i]} has joined the FellowShip!`)
+	// alert(`${hobbits[i]} has joined the FellowShip!`)
 	}
 	let libuddies = document.querySelectorAll(".buddy")
 	for(let i = 0 ; i < buddies.length ; i++ ){
 	// console.log(lihobbits[i])
 	fellowshipUL.appendChild(libuddies[i])
-	alert(`${buddies[i]} has joined the FellowShip!`)
+	// alert(`${buddies[i]} has joined the FellowShip!`)
 	}
 	console.log(libuddies)
 	// after each character is added make an alert that they // have joined your party
@@ -269,13 +269,16 @@ function theBalrog() {
 // Chapter 10
 // ============
 
+
+
 function hornOfGondor() {
 	console.log('10: hornOfGondor')
 	// pop up an alert that the horn of gondor has been blown
-	alert("The horn of Gondor has been blown!")
+	// alert("The horn of Gondor has been blown!")
 	// Boromir's been killed by the Uruk-hai!
 	// Remove `Boromir` from the Fellowship
-	const fellowshipUL = document.getElementById("ul-fellowship")
+	
+const fellowshipUL = document.getElementById("ul-fellowship")
 	const fellows = fellowshipUL.children
 	const boromir = fellows[8]
 	boromir.id = "boromir"
@@ -290,9 +293,34 @@ function hornOfGondor() {
 // Chapter 11
 // ============
 
+
+
 function itsDangerousToGoAlone() {
 	console.log('11: itsDangerousToGoAlone')
 	// take `Frodo` and `Sam` out of the fellowship and move // them to `Mordor`
+	
+const mordor = document.getElementById("Mordor")
+const fellowshipUL = document.getElementById("ul-fellowship")
+	const hobbits  = document.getElementsByClassName("hobbit")
+	// console.log(hobbits)
+	const mountDoom = document.createElement('div')
+	mordor.appendChild(mountDoom)
+	mountDoom.id = "mount-doom"
+	mountDoom.appendChild(hobbits[0])
+	mountDoom.appendChild(hobbits[0])
+
+	// mordor.appendChild(frodoAndSam)
+	// const fellows = fellowshipUL.children
+	// const frodoid = fellows[0]
+	// const samid = fellows[1]
+	// frodoid.id = "frodo"
+	// samid.id = "sam"
+	// const frodo =document.getElementById("frodo")
+	// const sam = document.getElementById("sam")
+	// console.log(frodo)
+	// frodoAndSam.appendChild(fellowshipUL.frodo)
+	// frodoAndSam.appendChild(fellowshipUL.sam)
+	// mordor.appendChild(fellowshipUL.children[1])
 	// add a div with an id of `'mount-doom'` to `Mordor`
 }
 
