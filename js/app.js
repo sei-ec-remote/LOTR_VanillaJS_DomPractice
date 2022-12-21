@@ -124,6 +124,7 @@ function makeBaddies() {
 
 	const mordor = document.getElementById('Mordor')
 	//console.log('this is the mordor', mordor)
+	
 	// display an unordered list of baddies in Mordor
 	const ulBaddies = document.createElement('ul')
 	ulBaddies.id = 'baddies'
@@ -131,10 +132,13 @@ function makeBaddies() {
 	for (let i = 0; i < baddies.length; i++) {
 		// create an li for each baddy
 		const liBaddies = document.createElement('li')
+		
 		// give each baddy a class
 		liBaddies.className = 'baddy'
+		
 		// give each baddy some text
 		liBaddies.textContent = baddies[i]
+		
 		// append each baddy to the ul
 		ulBaddies.appendChild(liBaddies)
 	}
@@ -200,8 +204,17 @@ function leaveTheShire() {
 
 function beautifulStranger() {
 	console.log('7: beautifulStranger')
-
+	
 	// change the `'Strider'` text to `'Aragorn'`
+	
+	const getBuddies = document.querySelectorAll('.buddy')
+	// // console log getBuddies to verify the correct array
+	console.log(getBuddies)
+	// // console log to access 'Strider' from buddies array
+	// console.log("This should be Strider:", getBuddies[3].textContent)
+	// // Changing text from 'Strider' to 'Aragon' for getBuddies[3]
+	getBuddies[3].innerHTML = 'Aragorn'
+	// console.log("This should be 'Aragorn':", getBuddies[3].textContent)
 }
 
 // COMMIT YOUR WORK
