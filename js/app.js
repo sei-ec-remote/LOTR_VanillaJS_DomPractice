@@ -110,12 +110,20 @@ function keepItSecretKeepItSafe() {
 
 function makeBaddies() {
 	console.log('4: makeBaddies')
-
+	const mordor = document.getElementById('Mordor')
+	console.log('this is mordor', mordor)
 	// display an unordered list of baddies in Mordor
-
+	const ulBaddies = document.createElement('ul')
+	ulBaddies.id = 'baddies'
 	// give each of the baddies a class of "baddy"
-
-	// remember to append them to Mordor
+	for (let i = 0; i < hobbits.length; i++) {
+		const liBaddie = document.createElement('li')
+		liBaddie.classname = 'baddie'
+		liBaddie.textContent = baddies[i]
+		ulBaddies.appendChild(liBaddie)
+		// remember to append them to Mordor
+		mordor.appendChild(ulBaddies)
+	}
 }
 
 // COMMIT YOUR WORK
@@ -157,7 +165,6 @@ function leaveTheShire() {
 
 function beautifulStranger() {
 	console.log('7: beautifulStranger')
-
 	// change the `'Strider'` text to `'Aragorn'`
 }
 
