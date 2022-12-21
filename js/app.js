@@ -59,6 +59,7 @@ function makeHobbits() {
 	for(let i = 0; i < hobbits.length; i++) {
 		const liHobbit = document.createElement('li')
 		liHobbit.className = 'hobbit'
+		liHobbit.id = hobbits[i]
 		liHobbit.textContent = hobbits[i]
 		ulHobbits.appendChild(liHobbit)
 	}
@@ -106,6 +107,7 @@ function makeBaddies() {
 	for(let i = 0; i < baddies.length; i++) {
 		const liBaddies = document.createElement('li')
 		liBaddies.className = 'baddy'
+		liBaddies.id = baddies[i]
 		liBaddies.textContent = baddies[i]
 		ulBaddies.appendChild(liBaddies)
 	// remember to append them to Mordor
@@ -247,7 +249,18 @@ function hornOfGondor() {
 function itsDangerousToGoAlone() {
 	console.log('11: itsDangerousToGoAlone')
 	// take `Frodo` and `Sam` out of the fellowship and move // them to `Mordor`
+	const theFellowship = document.getElementById('the-fellowship')
+	const frodo = document.getElementById('Frodo Baggins')
+	const sam = document.getElementById('Samwise "Sam" Gamgee')
+	theFellowship.removeChild(frodo)
+	theFellowship.removeChild(sam)
 	// add a div with an id of `'mount-doom'` to `Mordor`
+	const mountDoom = document.createElement('div')
+	mountDoom.id = 'mount-doom'
+	const mordor = document.getElementById('Mordor')
+	mordor.appendChild(mountDoom)
+	mordor.appendChild(frodo)
+	mordor.appendChild(sam)
 }
 
 // COMMIT YOUR WORK
@@ -260,7 +273,10 @@ function itsDangerousToGoAlone() {
 function weWantsIt() {
 	console.log('12: weWantsIt')
 	// Create a div with an id of `'gollum'` and add it to Mordor
+	const gollum = document.createElement('div')
+	gollum.id = 'gollum'
 	// Remove `the ring` from `Frodo` and give it to `Gollum`
+	
 	// Move Gollum into Mount Doom
 }
 
