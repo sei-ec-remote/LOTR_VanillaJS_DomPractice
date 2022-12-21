@@ -238,13 +238,13 @@ function forgeTheFellowShip() {
 	for (let i = 0; i < buddies.length; i++) {
 		//console.log(grabBuddy[i])
 		divFellowship.appendChild(grabBuddy[i])
-		alert(`${grabBuddy[i].textContent} have joined the party!!!!`)
+		//alert(`${grabBuddy[i].textContent} have joined the party!!!!`)
 	}
 	const grabHobbit = document.querySelectorAll('.hobbit')
 	for (let i = 0; i < hobbits.length; i++) {
 		//console.log(grabHobbit[i])
 		divFellowship.appendChild(grabHobbit[i])
-		alert(`${grabHobbit[i].textContent} have joined the party!!!!`)
+		//alert(`${grabHobbit[i].textContent} have joined the party!!!!`)
 	}
 	rivendell.appendChild(divFellowship)
 	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
@@ -260,7 +260,11 @@ function forgeTheFellowShip() {
 function theBalrog() {
 	console.log('9: theBalrog')
 	// change the `'Gandalf'` text to `'Gandalf the White'`
+	const gandalf = document.querySelectorAll('.buddy')
+	gandalf[0].innerHTML = 'Gandalf the White'
 	// apply the following style to the element, make the // background 'white', add a grey border
+	gandalf[0].style.background = 'white'
+	gandalf[0].style.borderColor  = 'grey'
 }
 
 // COMMIT YOUR WORK
