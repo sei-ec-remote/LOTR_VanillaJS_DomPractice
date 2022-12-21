@@ -218,13 +218,13 @@ function forgeTheFellowShip() {
 	for(let i = 0 ; i < hobbits.length ; i++ ){
 	// console.log(lihobbits[i])
 	fellowshipUL.appendChild(lihobbits[i])
-	// alert(`${hobbits[i]} has joined the FellowShip!`)
+	alert(`${hobbits[i]} has joined the FellowShip!`)
 	}
 	let libuddies = document.querySelectorAll(".buddy")
 	for(let i = 0 ; i < buddies.length ; i++ ){
 	// console.log(lihobbits[i])
 	fellowshipUL.appendChild(libuddies[i])
-	// alert(`${buddies[i]} has joined the FellowShip!`)
+	alert(`${buddies[i]} has joined the FellowShip!`)
 	}
 	console.log(libuddies)
 	// after each character is added make an alert that they // have joined your party
@@ -274,7 +274,7 @@ function theBalrog() {
 function hornOfGondor() {
 	console.log('10: hornOfGondor')
 	// pop up an alert that the horn of gondor has been blown
-	// alert("The horn of Gondor has been blown!")
+	alert("The horn of Gondor has been blown!")
 	// Boromir's been killed by the Uruk-hai!
 	// Remove `Boromir` from the Fellowship
 	
@@ -346,7 +346,15 @@ function weWantsIt() {
 function thereAndBackAgain() {
 	console.log('13: thereAndBackAgain')
 	// remove `Gollum` and `the Ring` from the document
+	const gollum = document.getElementById("gollum")
+	gollum.remove()
 	// Move all the `hobbits` back to `the shire`
+	const hobbits = document.getElementsByClassName("hobbit")
+	const theShire = document.getElementById("The-Shire")
+	for (let i=0; i<hobbits.length ; i++){
+		theShire.appendChild(hobbits[i])
+	}
+	// console.log(hobbits)
 }
 
 // COMMIT YOUR WORK
