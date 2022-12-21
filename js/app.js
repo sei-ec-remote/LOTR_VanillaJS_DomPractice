@@ -238,13 +238,13 @@ function forgeTheFellowShip() {
 	for (let i = 0; i < buddies.length; i++) {
 		//console.log(grabBuddy[i])
 		divFellowship.appendChild(grabBuddy[i])
-		//alert(`${grabBuddy[i].textContent} have joined the party!!!!`)
+		alert(`${grabBuddy[i].textContent} have joined the party!!!!`)
 	}
 	const grabHobbit = document.querySelectorAll('.hobbit')
 	for (let i = 0; i < hobbits.length; i++) {
 		//console.log(grabHobbit[i])
 		divFellowship.appendChild(grabHobbit[i])
-		//alert(`${grabHobbit[i].textContent} have joined the party!!!!`)
+		alert(`${grabHobbit[i].textContent} have joined the party!!!!`)
 	}
 	rivendell.appendChild(divFellowship)
 	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
@@ -348,7 +348,21 @@ function weWantsIt() {
 function thereAndBackAgain() {
 	console.log('13: thereAndBackAgain')
 	// remove `Gollum` and `the Ring` from the document
+	const gollum = document.querySelector("#gollum")
+	gollum.remove()
+	
 	// Move all the `hobbits` back to `the shire`
+	const theShire = document.querySelector('#The-Shire')
+	const grabHobbits = document.querySelectorAll('.hobbit')
+	const ulHobbits = document.querySelector("#hobbits")
+
+	for (let i = 0; i < grabHobbits.length; i++) {
+		// place grabHobbits into ulHobbits
+		ulHobbits.appendChild(grabHobbits[i])
+	}
+
+	// Move all of the 'hobbits' back to 'the shire'
+	theShire.appendChild(ulHobbits)
 }
 
 // COMMIT YOUR WORK
