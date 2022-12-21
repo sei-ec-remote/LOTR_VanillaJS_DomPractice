@@ -315,8 +315,16 @@ function theBalrog() {
 function hornOfGondor() {
 	console.log('10: hornOfGondor')
 	// pop up an alert that the horn of gondor has been blown
+
+	alert('📣 HORN OF GONDOR HAS BEEN BLOWN 📣')
 	// Boromir's been killed by the Uruk-hai!
+
+	const Rivendell = document.getElementById("Rivendell")
+
+	const boromir = Rivendell.children[1].children[0].children[4]
 	// Remove `Boromir` from the Fellowship
+
+	boromir.remove()
 }
 
 // COMMIT YOUR WORK
