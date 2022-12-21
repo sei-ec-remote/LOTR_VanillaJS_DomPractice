@@ -137,7 +137,6 @@ function makeBuddies() {
 	aside.id = 'asideId'
 	console.log('this is aside', aside)
 	// create an `aside` tag
-	const rivendell = document.getElementById('asideId')
 
 	const ulBuddies = document.createElement('ul')
 	ulBuddies.id = 'buddies'
@@ -166,8 +165,20 @@ function makeBuddies() {
 
 function leaveTheShire() {
 	console.log('6: leaveTheShire')
-
+	const moveHobbits = document.getElementById('hobbits')
+	console.log('goodbye hobbits!', moveHobbits)
+	const removeFromShire = document.getElementById('The-Shire')
+	const moveToRivendell = document.getElementById('aside')
 	// assemble the `hobbits` and move them to `rivendell`
+
+	for (let i = 0; i < hobbits.length; i++) {
+		const liHobbit = document.createElement('li')
+		liHobbit.className = 'hobbit'
+		liHobbit.textContent = hobbits[i]
+		console.log(liHobbit)
+		document.getElementById('buddies').appendChild(liHobbit)
+	}
+	removeFromShire.removeChild(moveHobbits)
 }
 
 // COMMIT YOUR WORK
