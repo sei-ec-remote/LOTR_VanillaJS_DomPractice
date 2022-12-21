@@ -55,10 +55,12 @@ function makeHobbits() {
 	console.log(theShire)
 	// display an `unordered list` of hobbits in the shire
 	const ulHobbit = document.createElement('ul')
+	ulHobbit.id = 'hobbit-list'
 	for (let i=0; i<hobbits.length; i++) {
 		const liHobbit = document.createElement('li')
 		liHobbit.className = 'hobbit'
 		liHobbit.textContent = hobbits[i]
+		liHobbit.id = hobbits[i]
 		ulHobbit.appendChild(liHobbit)
 	}
 	theShire.appendChild(ulHobbit)
@@ -104,10 +106,12 @@ function makeBaddies() {
 	const mordor = document.querySelector('#Mordor')
 	// display an unordered list of baddies in Mordor
 	const ulBaddies = document.createElement('ul')
+	ulBaddies.id = 'baddy-list'
 	for (let i=0; i<baddies.length; i++) {
 		const liBaddies = document.createElement('li')
 		liBaddies.className = 'baddy'
 		liBaddies.textContent = baddies[i]
+		liBaddies.id = baddies[i]
 		ulBaddies.appendChild(liBaddies)
 	}
 	mordor.appendChild(ulBaddies)
@@ -129,10 +133,12 @@ function makeBuddies() {
 	// create an `aside` tag
 	const aside = document.createElement('aside')
 	const ulBuddies = document.createElement('ul')
+	ulBuddies.id = 'buddy-list'
 	for (let i=0; i<buddies.length; i++){
 		const liBuddies=document.createElement('li')
 		liBuddies.className = 'buddy'
 		liBuddies.textContent = buddies[i]
+		liBuddies.id = buddies[i]
 		ulBuddies.appendChild(liBuddies)
 	}
 	aside.appendChild(ulBuddies)
@@ -172,6 +178,9 @@ function beautifulStranger() {
 	console.log('7: beautifulStranger')
 
 	// change the `'Strider'` text to `'Aragorn'`
+	const aragorn = document.getElementById('Strider')
+	aragorn.innerText = 'Aragorn'
+	aragorn.id = 'Aragorn'
 }
 
 // COMMIT YOUR WORK
