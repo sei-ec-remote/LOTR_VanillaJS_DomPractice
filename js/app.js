@@ -17,10 +17,6 @@ const lands = ['The-Shire', 'Rivendell', 'Mordor']
 // ============
 // Chapter 1
 // ============
-
-function makeMiddleEarth() {
-	console.log('1: makeMiddleEarth')
-
 	function makeMiddleEarth() {
 		console.log('1: makeMiddleEarth')
 	
@@ -44,7 +40,7 @@ function makeMiddleEarth() {
 		// 3. append the section to the body of the DOM.
 		document.body.appendChild(section)
 	}
-}
+
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 1 complete - Made Middle Earth".
@@ -55,11 +51,19 @@ function makeMiddleEarth() {
 
 function makeHobbits() {
 	console.log('2: makeHobbits')
-
+	const theShire = document.querySelector('#The-Shire')
+	console.log(theShire)
 	// display an `unordered list` of hobbits in the shire
-	
+	const hobbitList = document.createElement('ul')
+	for (let i=0; i<hobbits.length; i++) {
+		const hobbitItem = document.createElement('li')
+		hobbitItem.class = hobbits[i]
+		hobbitItem.textContent = hobbits[i]
+		hobbitList.appendChild(hobbitItem)
+	}
+	theShire.appendChild(hobbitList)
 	// give each hobbit a class of `hobbit`
-
+	
 	// hint: create a 'ul' outside the loop into which to append the 'li's
 
 	// hint: get 'The-Shire' by using its id
