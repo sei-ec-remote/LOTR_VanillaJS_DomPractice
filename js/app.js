@@ -309,18 +309,6 @@ const fellowshipUL = document.getElementById("ul-fellowship")
 	mountDoom.appendChild(hobbits[0])
 	mountDoom.appendChild(hobbits[0])
 
-	// mordor.appendChild(frodoAndSam)
-	// const fellows = fellowshipUL.children
-	// const frodoid = fellows[0]
-	// const samid = fellows[1]
-	// frodoid.id = "frodo"
-	// samid.id = "sam"
-	// const frodo =document.getElementById("frodo")
-	// const sam = document.getElementById("sam")
-	// console.log(frodo)
-	// frodoAndSam.appendChild(fellowshipUL.frodo)
-	// frodoAndSam.appendChild(fellowshipUL.sam)
-	// mordor.appendChild(fellowshipUL.children[1])
 	// add a div with an id of `'mount-doom'` to `Mordor`
 }
 
@@ -334,8 +322,18 @@ const fellowshipUL = document.getElementById("ul-fellowship")
 function weWantsIt() {
 	console.log('12: weWantsIt')
 	// Create a div with an id of `'gollum'` and add it to Mordor
+	const mordor = document.getElementById("Mordor")
+	const gollum = document.createElement('div')
+	gollum.id = "gollum"
+	mordor.appendChild(gollum)
+	// const hobbits  = document.getElementsByClassName("hobbit")
+	// console.log(hobbits)
 	// Remove `the ring` from `Frodo` and give it to `Gollum`
+	const theRing = document.getElementById("the-ring")
+	gollum.appendChild(theRing)
 	// Move Gollum into Mount Doom
+	const mountDoom = document.getElementById("mount-doom")
+	mountDoom.appendChild(gollum)
 }
 
 // COMMIT YOUR WORK
