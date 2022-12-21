@@ -111,7 +111,7 @@ ul {
   width: 0.4em;
   height: 0.4em;
   display: inline-block;
-  margin: auto;
+  margin: 0 .4rem;
 }
 
 #mount-doom {
