@@ -252,8 +252,13 @@ function theBalrog() {
 function hornOfGondor() {
 	console.log('10: hornOfGondor')
 	// pop up an alert that the horn of gondor has been blown
+	alert(`Alas! The Horn of Gondor is sounded! TO GONDOR!!!`)
 	// Boromir's been killed by the Uruk-hai!
+	alert(`The fellowship have been ambushed by Orcs! Boromir took 16 arrows to the left eyeball! Despite that inconvenience, he finally met his demise after eating Sam's week-old potato stew!!!!`)
 	// Remove `Boromir` from the Fellowship
+	const fellowship = document.getElementById('the-fellowship').children
+	const boromir = fellowship.item(8)
+	boromir.remove()
 }
 
 // COMMIT YOUR WORK
