@@ -154,6 +154,7 @@ function makeBuddies() {
 	const rivendell = document.getElementById('Rivendell')
 	// create an `aside` tag
 	const aside = document.createElement('aside')
+	aside.id = 'aside-buddies'
 	// put an `unordered list` of the `'buddies'` in the aside
 	const ulBuddies = document.createElement('ul')
 	ulBuddies.id = 'buddies'
@@ -194,7 +195,10 @@ function leaveTheShire() {
 
 function beautifulStranger() {
 	console.log('7: beautifulStranger')
-
+	const ulBuddies = document.getElementById('buddies')
+	const buddiesArray = ulBuddies.children
+	const strider = buddiesArray[3]
+	strider.textContent = 'Aragorn'
 	// change the `'Strider'` text to `'Aragorn'`
 }
 
