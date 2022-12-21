@@ -399,10 +399,32 @@ function weWantsIt() {
 // Chapter 13
 // ============
 
+// const hobbits = [
+// 	`Frodo Baggins`,
+// 	`Samwise "Sam" Gamgee`,
+// 	`Meriadoc "Merry" Brandybuck`,
+// 	`Peregrin "Pippin" Took`,
+// ]
+
+
 function thereAndBackAgain() {
-	console.log('13: thereAndBackAgain')
 	// remove `Gollum` and `the Ring` from the document
+	console.log('13: thereAndBackAgain')
+
+	const gollum = document.getElementById("gollum")
+
+	const theRing = document.getElementById("the-ring")
+
+	gollum.remove()
+	theRing.remove()
+
 	// Move all the `hobbits` back to `the shire`
+
+	const hobbitsList = document.querySelectorAll('.hobbit')
+
+	const shire = document.getElementById('The-Shire')
+
+	hobbitsList.forEach(hobbit => shire.append(hobbit))
 }
 
 // COMMIT YOUR WORK
