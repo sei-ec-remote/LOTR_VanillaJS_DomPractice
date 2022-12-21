@@ -157,8 +157,6 @@ function makeBaddies() {
 	const mordor = document.getElementById("Mordor")
 
 	mordor.appendChild(baddiesList)
-
-
 }
 
 // COMMIT YOUR WORK
