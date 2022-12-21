@@ -237,6 +237,13 @@ function beautifulStranger() {
 	console.log('7: beautifulStranger')
 
 	// change the `'Strider'` text to `'Aragorn'`
+
+	const rivendell = document.getElementById("Rivendell")
+
+	const buddies = rivendell.querySelectorAll('li')
+
+	buddies[3].textContent = 'Aragorn'
+
 }
 
 // COMMIT YOUR WORK
