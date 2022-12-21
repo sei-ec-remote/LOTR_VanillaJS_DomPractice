@@ -54,14 +54,14 @@ function makeHobbits() {
 	const theShire = document.querySelector('#The-Shire')
 	console.log(theShire)
 	// display an `unordered list` of hobbits in the shire
-	const hobbitList = document.createElement('ul')
+	const ulHobbit = document.createElement('ul')
 	for (let i=0; i<hobbits.length; i++) {
-		const hobbitItem = document.createElement('li')
-		hobbitItem.class = hobbits[i]
-		hobbitItem.textContent = hobbits[i]
-		hobbitList.appendChild(hobbitItem)
+		const liHobbit = document.createElement('li')
+		liHobbit.className = 'hobbit'
+		liHobbit.textContent = hobbits[i]
+		ulHobbit.appendChild(liHobbit)
 	}
-	theShire.appendChild(hobbitList)
+	theShire.appendChild(ulHobbit)
 	// give each hobbit a class of `hobbit`
 	
 	// hint: create a 'ul' outside the loop into which to append the 'li's
@@ -80,10 +80,16 @@ function keepItSecretKeepItSafe() {
 	console.log('3: keepItSecretKeepItSafe')
 
 	// create a div with an id of `'the-ring'`
-
+	const theRing = document.createElement('div')
+	theRing.id = 'the-ring'
 	// give the div a class of `'magic-imbued-jewelry'`
-
+	theRing.className= 'magic-imbued-jewelry'
 	// add the ring as a child of `Frodo`
+	const hobbitList = document.querySelectorAll("li.hobbit")
+	//console.log(hobbitList)
+	const frodo=hobbitList[0]
+	frodo.appendChild(theRing)
+	
 }
 
 // COMMIT YOUR WORK
