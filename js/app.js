@@ -24,6 +24,7 @@ function makeMiddleEarth() {
 	// 1. create a section tag with an id of middle-earth
 
 	const section = document.createElement('section');
+
 	section.id = 'middle-earth'
 
 	// 2. use a for loop to iterate over the lands array that does the following:
@@ -62,16 +63,25 @@ function makeMiddleEarth() {
 // ============
 
 function makeHobbits() {
+
 	console.log('2: makeHobbits')
+
 	// const theShire = document.querySelector('#The-Shire')
 	// hint: get 'The-Shire' by using its id
+
 	const theShire = document.getElementById('The-Shire')
+
 	console.log('this is the shire', theShire)
+
 	// display an `unordered list` of hobbits in the shire
 	// hint: create a 'ul' outside the loop into which to append the 'li's
+
 	const ulHobbits = document.createElement('ul')
+
 	ulHobbits.id = 'hobbits'
+
 	// give each hobbit a class of `hobbit`
+
 	for (let i = 0; i < hobbits.length; i++) {
 		// create an li for each hobbit
 		const liHobbit = document.createElement('li')
@@ -203,9 +213,17 @@ function makeBuddies() {
 // ============
 
 function leaveTheShire() {
+
 	console.log('6: leaveTheShire')
 
 	// assemble the `hobbits` and move them to `rivendell`
+
+	const hobbits = document.getElementById("hobbits")
+
+	let rivendell = document.getElementById("Rivendell")
+
+	rivendell.appendChild(hobbits)
+
 }
 
 // COMMIT YOUR WORK
