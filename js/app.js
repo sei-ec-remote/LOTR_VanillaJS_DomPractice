@@ -129,6 +129,9 @@ mordor.appendChild(ulBaddies)
 // Chapter 5
 // ============
 
+const ulBuddies = document.createElement('ul')
+ulBuddies.id = "buddies"
+
 function makeBuddies() {
 	console.log('5: makeBuddies')
 
@@ -136,8 +139,6 @@ function makeBuddies() {
 	const aside = document.createElement('section')
 	aside.id = 'aside'
 	// put an `unordered list` of the `'buddies'` in the aside
-	const ulBuddies = document.createElement('ul')
-	ulBuddies.id = "buddies"
 	for(let i = 0 ; i < buddies.length ; i++){
 		const liBuddy = document.createElement('li')
 		liBuddy.className = "buddy"
@@ -178,17 +179,21 @@ function beautifulStranger() {
 	// change the `'Strider'` text to `'Aragorn'`
 	buddies[3] = "Aragorn"
 	// console.log(buddies)
-	const aside = document.getElementById("aside")
-	const ulBuddies = document.getElementById("buddies")
-	aside.removeChild(ulBuddies)
-	const newUlBuddies = document.createElement('ul')
-	newUlBuddies.id = "buddies"
-	for(let i = 0 ; i < buddies.length ; i++){
-		const liBuddy = document.createElement('li')
-		liBuddy.className = "buddy"
-		liBuddy.textContent = buddies[i]
-		newUlBuddies.appendChild(liBuddy)}
-	aside.appendChild(newUlBuddies)
+	const ulBuddies = document.querySelector('#buddies')
+    const buddiesArray = ulBuddies.children
+    const aragorn = buddiesArray[3]
+    aragorn.innerHTML = 'Aragorn'
+	// const aside = document.getElementById("aside")
+	// const ulBuddies = document.getElementById("buddies")
+	// aside.removeChild(ulBuddies)
+	// const newUlBuddies = document.createElement('ul')
+	// newUlBuddies.id = "buddies"
+	// for(let i = 0 ; i < buddies.length ; i++){
+	// 	const liBuddy = document.createElement('li')
+	// 	liBuddy.className = "buddy"
+	// 	liBuddy.textContent = buddies[i]
+	// 	newUlBuddies.appendChild(liBuddy)}
+	// aside.appendChild(newUlBuddies)
 }
 
 // COMMIT YOUR WORK
@@ -203,8 +208,9 @@ function forgeTheFellowShip() {
 	const rivendell = document.getElementById("Rivendell")
 	// create a new div called `'the-fellowship'` within `rivendell`
 	const theFellowShip = document.createElement('div')
-	theFellowShip.id = "the-fellowhip"
+	theFellowShip.id = "the-fellowship"
 	const fellowshipUL = document.createElement('ul')
+	fellowshipUL.id = "ul-fellowship"
 	rivendell.appendChild(theFellowShip)
 	theFellowShip.appendChild(fellowshipUL)
 	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
@@ -220,7 +226,7 @@ function forgeTheFellowShip() {
 	fellowshipUL.appendChild(libuddies[i])
 	alert(`${buddies[i]} has joined the FellowShip!`)
 	}
-	
+	console.log(libuddies)
 	// after each character is added make an alert that they // have joined your party
 
 	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
@@ -236,7 +242,24 @@ function forgeTheFellowShip() {
 function theBalrog() {
 	console.log('9: theBalrog')
 	// change the `'Gandalf'` text to `'Gandalf the White'`
+	const fellowshipUL = document.getElementById("ul-fellowship")
+	// const fellowship = document.getElementById("the-fellowship") 
+	buddies[1] = 'Gandalf the White'
+	// const liBuddy = document.querySelectorAll(".buddy")
+	// fellowship.removeChild(fellowshipUL)
+	// for(let i = 0 ; i < buddies.length ; i++){
+    const fellowArr = fellowshipUL.children
+    const gandalf = fellowArr[4]
+    gandalf.innerHTML = 'Gandalf the White'
+	gandalf.id = "white"
+	// 	const liBuddy = document.createElement('li')
+	// 	liBuddy.textContent = buddies[i]
+	// 	fellowshipUL.appendChild(liBuddy)
+	// }
 	// apply the following style to the element, make the // background 'white', add a grey border
+	const whiteGandalf = document.getElementById("white")
+	whiteGandalf.style.background = "white"
+	whiteGandalf.style.border = "2px solid grey"
 }
 
 // COMMIT YOUR WORK
