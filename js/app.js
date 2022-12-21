@@ -77,7 +77,7 @@ function makeHobbits() {
 	ulHobbits.id = 'hobbits'
 	// give each hobbit a class of `hobbit`
 	for (let i = 0; i < hobbits.length; i++) {
-		// create and li for each hobbit
+		// create a li for each hobbit
 		const liHobbit = document.createElement('li')
 		// give each hobbit a class
 		liHobbit.className = 'hobbit'
@@ -129,7 +129,7 @@ function makeBaddies() {
 	ulBaddies.id = 'baddies'
 	// give each of the baddies a class of "baddy"
 	for (let i = 0; i < baddies.length; i++) {
-		// create and li for each baddie
+		// create a li for each baddie
 		const liBaddies = document.createElement('li')
 		// give each baddie a class
 		liBaddies.className = 'baddie'
@@ -151,12 +151,23 @@ function makeBaddies() {
 
 function makeBuddies() {
 	console.log('5: makeBuddies')
-
+	const rivendell = document.getElementById('Rivendell')
 	// create an `aside` tag
-
+	const aside = document.createElement('aside')
 	// put an `unordered list` of the `'buddies'` in the aside
-
+	const ulBuddies = document.createElement('ul')
+	ulBuddies.id = 'buddies'
+	// give each of the buddies a class of "buddy"
+	for (let i = 0; i < buddies.length; i++) {
+		// refer to previous code in baddies and hobbits
+		const liBuddies = document.createElement('li')
+		liBuddies.className = 'buddy'
+		liBuddies.textContent = buddies[i]
+		ulBuddies.appendChild(liBuddies)
+	}
 	// insert your aside as a child element of `rivendell`
+	rivendell.appendChild(aside)
+	aside.appendChild(ulBuddies)
 }
 
 // COMMIT YOUR WORK
