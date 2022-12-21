@@ -273,11 +273,18 @@ function itsDangerousToGoAlone() {
 function weWantsIt() {
 	console.log('12: weWantsIt')
 	// Create a div with an id of `'gollum'` and add it to Mordor
+	const mordor = document.getElementById('Mordor')
 	const gollum = document.createElement('div')
 	gollum.id = 'gollum'
+	mordor.appendChild(gollum)
 	// Remove `the ring` from `Frodo` and give it to `Gollum`
-	
+	const ring = document.getElementById('the-ring')
+	const frodo = document.getElementById('Froddo Baggins')
+	// frodo.removeChild(ring)
+	gollum.appendChild(ring)
 	// Move Gollum into Mount Doom
+	const mountDoom = document.getElementById('mount-doom')
+	mountDoom.appendChild(gollum)
 }
 
 // COMMIT YOUR WORK
@@ -290,7 +297,16 @@ function weWantsIt() {
 function thereAndBackAgain() {
 	console.log('13: thereAndBackAgain')
 	// remove `Gollum` and `the Ring` from the document
+	const mountDoom = document.getElementById('mount-doom')
+	const ring = document.getElementById('the-ring')
+	const gollum = document.getElementById('gollum')
+	mountDoom.removeChild(gollum)
 	// Move all the `hobbits` back to `the shire`
+	const theShire = document.querySelector('#The-Shire')
+	const hobbits = document.querySelectorAll('.hobbit')
+	hobbits.forEach((hobbit)=>{
+		theShire.appendChild(hobbit)
+	})
 }
 
 // COMMIT YOUR WORK
