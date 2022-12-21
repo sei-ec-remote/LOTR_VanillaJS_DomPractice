@@ -70,7 +70,6 @@ function makeHobbits() {
 	// const theShire = document.querySelector('#The-Shire')
 	// hint: get 'The-Shire' by using its id
 	const theShire = document.getElementById('The-Shire')
-	console.log('this is the shire', theShire)
 	// display an `unordered list` of hobbits in the shire
 	// hint: create a 'ul' outside the loop into which to append the 'li's
 	const ulHobbits = document.createElement('ul')
@@ -211,10 +210,25 @@ function beautifulStranger() {
 
 function forgeTheFellowShip() {
 	console.log('8: forgeTheFellowShip')
+	const rivendell = document.getElementById('Rivendell')
 	// create a new div called `'the-fellowship'` within `rivendell`
+	const div = document.createElement('div')
+	div.id = 'the-fellowship'
+	rivendell.appendChild(div)
 	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
+	const hobbit = document.querySelectorAll('.hobbit')
+	const buddy = document.querySelectorAll('.buddy')
+	for (let i = 0; i < buddies.length; i++) {
+		div.append(buddy[i])
+		// alert(`buddy: joined the fellowship!`)
+	}
+	for (let i = 0; i < hobbits.length; i++) {
+		div.append(hobbit[i])
+		// alert(`hobbit: joined the fellowship!`)
+	}
 	// after each character is added make an alert that they // have joined your party
-
+	
+	
 	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
 }
 
