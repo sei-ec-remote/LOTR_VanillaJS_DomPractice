@@ -182,7 +182,7 @@ function beautifulStranger() {
 	const ulBuddies = document.getElementById("buddies")
 	aside.removeChild(ulBuddies)
 	const newUlBuddies = document.createElement('ul')
-	newUlBuddies.id = ("buddies")
+	newUlBuddies.id = "buddies"
 	for(let i = 0 ; i < buddies.length ; i++){
 		const liBuddy = document.createElement('li')
 		liBuddy.className = "buddy"
@@ -200,8 +200,27 @@ function beautifulStranger() {
 
 function forgeTheFellowShip() {
 	console.log('8: forgeTheFellowShip')
+	const rivendell = document.getElementById("Rivendell")
 	// create a new div called `'the-fellowship'` within `rivendell`
+	const theFellowShip = document.createElement('div')
+	theFellowShip.id = "the-fellowhip"
+	const fellowshipUL = document.createElement('ul')
+	rivendell.appendChild(theFellowShip)
+	theFellowShip.appendChild(fellowshipUL)
 	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
+	let lihobbits = document.querySelectorAll(".hobbit")
+	for(let i = 0 ; i < hobbits.length ; i++ ){
+	// console.log(lihobbits[i])
+	fellowshipUL.appendChild(lihobbits[i])
+	alert(`${hobbits[i]} has joined the FellowShip!`)
+	}
+	let libuddies = document.querySelectorAll(".buddy")
+	for(let i = 0 ; i < buddies.length ; i++ ){
+	// console.log(lihobbits[i])
+	fellowshipUL.appendChild(libuddies[i])
+	alert(`${buddies[i]} has joined the FellowShip!`)
+	}
+	
 	// after each character is added make an alert that they // have joined your party
 
 	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
