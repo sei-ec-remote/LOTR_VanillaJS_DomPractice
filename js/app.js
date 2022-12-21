@@ -226,7 +226,7 @@ function forgeTheFellowShip() {
     for (let i = 0; i < 4; i++) {
     // after each character is added make an alert that they // have joined your party
         
-        // alert(hobbitsArray[0].innerText + " has joined the Fellowship!")
+        alert(hobbitsArray[0].innerText + " has joined the Fellowship!")
         ulFellowship.appendChild(hobbitsArray[0])
 }
 
@@ -236,7 +236,7 @@ function forgeTheFellowShip() {
     for (let i = 0; i < 5; i++) {
     // after each character is added make an alert that they // have joined your party
         
-        // alert(buddiesArray[0].innerText + " has joined the Fellowship!")
+        alert(buddiesArray[0].innerText + " has joined the Fellowship!")
         ulFellowship.appendChild(buddiesArray[0])
 }
 
@@ -282,7 +282,7 @@ function theBalrog() {
 function hornOfGondor() {
 	console.log('10: hornOfGondor')
 	// pop up an alert that the horn of gondor has been blown
-    // alert('The horn of Gondor has been blown!')
+    alert('The horn of Gondor has been blown!')
 	// Boromir's been killed by the Uruk-hai!
 	// Remove `Boromir` from the Fellowship
     const ulFellowship = document.querySelector('#fellowshipUl')
@@ -308,18 +308,18 @@ function itsDangerousToGoAlone() {
     mtDoomDiv.id = 'mount-doom'
     Mordor.appendChild(mtDoomDiv)
 
-    const ulHobbitsMtDoom = document.createElement('ul')
-    ulHobbitsMtDoom.id = 'ulhobbitsMtDoom'
-    mtDoomDiv.appendChild(ulHobbitsMtDoom)
+    const ulMtDoom = document.createElement('ul')
+    ulMtDoom.id = 'ulMtDoom'
+    mtDoomDiv.appendChild(ulMtDoom)
 
 
     const ulFellowship = document.querySelector('#fellowshipUl')
     const fellowshipArray = ulFellowship.children
 
-    ulHobbitsMtDoom.appendChild(fellowshipArray[0])
-    ulHobbitsMtDoom.appendChild(fellowshipArray[0])
+    ulMtDoom.appendChild(fellowshipArray[0])
+    ulMtDoom.appendChild(fellowshipArray[0])
 
-    console.log(ulHobbitsMtDoom)
+    console.log(ulMtDoom)
 }
 
 // COMMIT YOUR WORK
@@ -334,11 +334,11 @@ function weWantsIt() {
 	// Create a div with an id of `'gollum'` and add it to Mordor
 	// Remove `the ring` from `Frodo` and give it to `Gollum`
 	// Move Gollum into Mount Doom
-
+    
     const Mordor2 = document.getElementById('Mordor')
     const gollumDiv = document.createElement('div')
     gollumDiv.id = 'gollum'
-    Mordor2.appendChild(gollumDiv)
+    
 
     const theRing = document.getElementById('the-ring')
     gollumDiv.appendChild(theRing)
@@ -348,6 +348,8 @@ function weWantsIt() {
     mtDoom.appendChild(gollumDiv)
 
 
+
+    
     
 }
 
@@ -364,6 +366,19 @@ function thereAndBackAgain() {
 	// Move all the `hobbits` back to `the shire`
     const gollumDies = document.getElementById('gollum')
     
+    // mtDoom.remove(gollumDies)    
+    gollumDies.remove()
+
+    const theShire = document.getElementById('The-Shire')
+    const hobbitsHome1 = document.getElementById('ulMtDoom')
+    const hobbitsHome1Array = hobbitsHome1.children
+    theShire.appendChild(hobbitsHome1Array[0])
+    theShire.appendChild(hobbitsHome1Array[0])
+
+    const hobbitsHome2 = document.querySelector('#fellowshipUl')
+    const hobbitsHome2Array = hobbitsHome2.children
+    theShire.appendChild(hobbitsHome2Array[0])
+    theShire.appendChild(hobbitsHome2Array[0])
 
 }
 
