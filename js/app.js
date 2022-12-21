@@ -152,8 +152,13 @@ function makeBuddies() {
 
 function leaveTheShire() {
 	console.log('6: leaveTheShire')
-
+	const theShire = document.querySelector('#The-Shire')
+	const theHobbits = theShire.querySelector('ul')
+	// const rivendell = document.querySelector('#Rivendell')
+	const aside = document.querySelector('aside')
 	// assemble the `hobbits` and move them to `rivendell`
+	theShire.removeChild(theHobbits)
+	aside.appendChild(theHobbits)
 }
 
 // COMMIT YOUR WORK
