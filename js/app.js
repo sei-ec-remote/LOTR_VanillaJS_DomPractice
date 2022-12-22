@@ -190,7 +190,7 @@ function leaveTheShire() {
 
 function beautifulStranger() {
 	console.log('7: beautifulStranger')
-
+	document.getElementsByClassName('buddy')[3].innerHTML= "Aragorn"
 	// change the `'Strider'` text to `'Aragorn'`
 }
 
@@ -203,6 +203,7 @@ function beautifulStranger() {
 
 function forgeTheFellowShip() {
 	console.log('8: forgeTheFellowShip')
+	
 	// create a new div called `'the-fellowship'` within `rivendell`
 	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
 	// after each character is added make an alert that they // have joined your party
