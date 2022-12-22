@@ -243,7 +243,6 @@ function theBalrog() {
 	console.log('9: theBalrog')
 	// change the `'Gandalf'` text to `'Gandalf the White'`
 	const liBuddies = document.querySelectorAll('.buddy')
-	console.log(liBuddies)
 	const gandalf = liBuddies[0]
 	gandalf.textContent = 'Gandalf the White'
 	// apply the following style to the element, make the // background 'white', add a grey border
@@ -280,7 +279,17 @@ function hornOfGondor() {
 function itsDangerousToGoAlone() {
 	console.log('11: itsDangerousToGoAlone')
 	// take `Frodo` and `Sam` out of the fellowship and move // them to `Mordor`
+	const liHobbits= document.querySelectorAll('.hobbit')
+	console.log(liHobbits)
+	const frodo = liHobbits[0]
+	const sam = liHobbits[1]
+	const mordor = document.getElementById('Mordor')
+	mordor.appendChild(frodo)
+	mordor.appendChild(sam)
 	// add a div with an id of `'mount-doom'` to `Mordor`
+	const div = document.createElement('div')
+	div.id = 'mount-doom'
+	mordor.appendChild(div)
 }
 
 // COMMIT YOUR WORK
