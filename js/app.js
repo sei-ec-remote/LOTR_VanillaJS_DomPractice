@@ -51,7 +51,7 @@ function makeMiddleEarth() {
 		//   2d. appends each land to the middle-earth section
 		section.appendChild(landArticle)
 	}
-
+	
 	// 3. append the section to the body of the DOM.
 	document.body.appendChild(section)
 }
@@ -122,9 +122,23 @@ function keepItSecretKeepItSafe() {
 function makeBaddies() {
 	console.log('4: makeBaddies')
 
+	const mordor = document.getElementById('Mordor')
 	// display an unordered list of baddies in Mordor
+		const ulBaddies = document.createElement('ul') 
+	 mordor.appendChild(ulBaddies)
+	 //console.log(ulBaddies)
+		// give each of the baddies a class of "baddy"
+	  for(let i = 0; i < baddies.length; i++) {
+		const liBaddies = document.createElement('li')
+		liBaddies.className = 'baddy'
+		liBaddies.textContent = baddies[i] 
+		ulBaddies.appendChild(liBaddies)
+	  }
+	  //console.log(mordor)
+	 
+	  
+	
 
-	// give each of the baddies a class of "baddy"
 
 	// remember to append them to Mordor
 }
@@ -140,9 +154,11 @@ function makeBuddies() {
 	console.log('5: makeBuddies')
 
 	// create an `aside` tag
+	const aside = document.createElement('aside')
+	console.log(aside)
 
 	// put an `unordered list` of the `'buddies'` in the aside
-
+	ulBuddies = 
 	// insert your aside as a child element of `rivendell`
 }
 
