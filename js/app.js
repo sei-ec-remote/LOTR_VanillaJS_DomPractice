@@ -329,6 +329,7 @@ function thereAndBackAgain() {
 	}
 	const theShire = document.getElementById('The-Shire')
 	theShire.appendChild(hobbitUl)
+
 	// Move all the `hobbits` back to `the shire`
 }
 
