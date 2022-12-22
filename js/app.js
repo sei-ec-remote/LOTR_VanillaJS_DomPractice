@@ -304,7 +304,7 @@ function weWantsIt() {
 	// Create a div with an id of `'gollum'` and add it to Mordor
 
 	// Remove `the ring` from `Frodo` and give it to `Gollum`
-	
+
 	// Move Gollum into Mount Doom
 }
 
