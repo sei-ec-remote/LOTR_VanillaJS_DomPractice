@@ -304,7 +304,8 @@ function weWantsIt() {
 	// Create a div with an id of `'gollum'` and add it to Mordor
 
 	// Remove `the ring` from `Frodo` and give it to `Gollum`
-
+	const mountDoom = document.getElementById(mount-doom)
+	mountDoom.appendChild(gollum)
 	// Move Gollum into Mount Doom
 }
 
