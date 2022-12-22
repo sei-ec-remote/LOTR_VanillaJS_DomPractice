@@ -304,7 +304,7 @@ function weWantsIt() {
 	// Create a div with an id of `'gollum'` and add it to Mordor
 
 	// Remove `the ring` from `Frodo` and give it to `Gollum`
-	const mountDoom = document.getElementById(mount-doom)
+	const mountDoom = document.getElementById('mount-doom')
 	mountDoom.appendChild(gollum)
 	// Move Gollum into Mount Doom
 }
@@ -318,7 +318,17 @@ function weWantsIt() {
 
 function thereAndBackAgain() {
 	console.log('13: thereAndBackAgain')
+	const removeGollum = document.getElementById('gollum')
+	removeGollum.parentNode.removeChild(removeGollum)
 	// remove `Gollum` and `the Ring` from the document
+	const hobbitUl = document.createElement('ul')
+	hobbitUl.id = hobbitUl
+	const removeHobbits = document.querySelectorAll('.hobbit')
+	for(i = 0; i < removeHobbits.length; i++) {
+		hobbitUl.appendChild(removeHobbits[i])
+	}
+	const theShire = document.getElementById('The-Shire')
+	theShire.appendChild(hobbitUl)
 	// Move all the `hobbits` back to `the shire`
 }
 
