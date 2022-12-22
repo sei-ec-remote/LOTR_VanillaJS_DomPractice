@@ -324,7 +324,19 @@ function weWantsIt() {
 function thereAndBackAgain() {
 	console.log('13: thereAndBackAgain')
 	// remove `Gollum` and `the Ring` from the document
+	// const mordor = document.getElementById('Mordor') // to target all of mordor and remove it
+	const theOneRing = document.getElementById('the-ring')
+	const gollum = document.getElementById('gollum')
+	theOneRing.remove()
+	gollum.remove()
 	// Move all the `hobbits` back to `the shire`
+	const theShire = document.getElementById('The-Shire')
+	const hobbits = document.querySelectorAll('.hobbit')
+	hobbits.forEach(hobbits => {
+		theShire.appendChild(hobbits)
+	});
+	
+	// mordor.remove() // wanted to remove all of Mordor since technially all the baddies died or fled but wasn't sure if I  
 }
 
 // COMMIT YOUR WORK
