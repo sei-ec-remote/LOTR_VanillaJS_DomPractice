@@ -227,7 +227,7 @@ function forgeTheFellowShip() {
 		// alert(`hobbit: joined the fellowship!`)
 	}
 	// after each character is added make an alert that they // have joined your party
-	
+	console.log(`Testing`)
 	
 	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
 }
@@ -242,7 +242,13 @@ function forgeTheFellowShip() {
 function theBalrog() {
 	console.log('9: theBalrog')
 	// change the `'Gandalf'` text to `'Gandalf the White'`
+	const liBuddies = document.querySelectorAll('.buddy')
+	console.log(liBuddies)
+	const gandalf = liBuddies[0]
+	gandalf.textContent = 'Gandalf the White'
 	// apply the following style to the element, make the // background 'white', add a grey border
+	gandalf.style.background = 'white'
+	gandalf.style.border = '2px solid grey'
 }
 
 // COMMIT YOUR WORK
