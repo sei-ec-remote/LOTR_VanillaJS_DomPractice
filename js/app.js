@@ -281,6 +281,7 @@ function itsDangerousToGoAlone() {
 	intoMordor.appendChild(moveSam)
 	// take `Frodo` and `Sam` out of the fellowship and move // them to `Mordor`
 	// add a div with an id of `'mount-doom'` to `Mordor`
+	
 	const mountDoom = document.createElement('div')
 	mountDoom.id = 'mount-doom'
 	mordor.appendChild(mountDoom)
