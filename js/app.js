@@ -155,6 +155,7 @@ function makeBuddies() {
 
 	// create an `aside` tag
 	const aside = document.createElement('aside')
+	aside.id = ('aside')
 	//console.log(aside)
 
 	// put an `unordered list` of the `'buddies'` in the aside
@@ -183,6 +184,15 @@ function leaveTheShire() {
 	console.log('6: leaveTheShire')
 
 	// assemble the `hobbits` and move them to `rivendell`
+	// const asideAgain = document.getElementById('aside')
+	// console.log(asideAgain)
+	// asideAgain.appendChild()
+	const hobbitsAgain = document.getElementById('hobbits')
+	//console.log(hobbitsAgain)
+	Rivendell.appendChild(hobbitsAgain)
+
+
+
 }
 
 // COMMIT YOUR WORK
