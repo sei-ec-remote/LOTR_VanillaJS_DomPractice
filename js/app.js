@@ -112,7 +112,7 @@ function makeBaddies() {
 	const mordor = document.getElementById('Mordor')
 	// display an unordered list of baddies in Mordor
 	const ulBaddy = document.createElement('ul')
-	ulBaddy.id = 'hobbits'
+	ulBaddy.id = 'baddies'
 	// give each of the baddies a class of "baddy"
 	for(let i =0; i < baddies.length; i++) {
 		const liBaddy = document.createElement('li')
@@ -168,7 +168,6 @@ function leaveTheShire() {
 	const moveHobbits = document.getElementById('hobbits')
 	console.log('goodbye hobbits!', moveHobbits)
 	const removeFromShire = document.getElementById('The-Shire')
-	const moveToRivendell = document.getElementById('aside')
 	// assemble the `hobbits` and move them to `rivendell`
 
 	for (let i = 0; i < hobbits.length; i++) {
@@ -208,7 +207,6 @@ function forgeTheFellowShip() {
 	theFellowship.id = 'the-fellowship'
 	rivendell.appendChild(theFellowship)
 	// create a new div called `'the-fellowship'` within `rivendell`
-	const forgeFellowShip = document.getElementById('asideID')
 	let fellowBuddies = document.querySelectorAll('.buddy') 
 	let fellowHobbits = document.querySelectorAll('.hobbit') 
 
@@ -253,8 +251,12 @@ function theBalrog() {
 
 function hornOfGondor() {
 	console.log('10: hornOfGondor')
+	alert('THE HORN OF GONDOR HAS BEEN BLOWN!')
 	// pop up an alert that the horn of gondor has been blown
+	alert('Boromirs been killed by the Uruk-hai!')
 	// Boromir's been killed by the Uruk-hai!
+	const killBormir = document.getElementsByClassName('buddy')[4]
+	killBormir.parentNode.removeChild(killBormir)
 	// Remove `Boromir` from the Fellowship
 }
 
@@ -267,8 +269,22 @@ function hornOfGondor() {
 
 function itsDangerousToGoAlone() {
 	console.log('11: itsDangerousToGoAlone')
+	const moveFrodo = document.getElementsByClassName('hobbit')[0]
+	const moveSam = document.getElementsByClassName('hobbit')[1]
+	const mordor = document.getElementById('Mordor')
+	const intoMordor = document.getElementById('baddies')
+
+	moveFrodo.parentNode.removeChild(moveFrodo)
+	moveSam.parentNode.removeChild(moveSam)
+	
+	intoMordor.appendChild(moveFrodo)
+	intoMordor.appendChild(moveSam)
+
 	// take `Frodo` and `Sam` out of the fellowship and move // them to `Mordor`
 	// add a div with an id of `'mount-doom'` to `Mordor`
+	const mountDoom = document.createElement('div')
+	mountDoom.id = 'mount-doom'
+	mordor.appendChild(mountDoom)
 }
 
 // COMMIT YOUR WORK
@@ -280,8 +296,15 @@ function itsDangerousToGoAlone() {
 
 function weWantsIt() {
 	console.log('12: weWantsIt')
+	const gollum = document.createElement('div')
+	gollum.id = 'gollum'
+
+	const mordor = document.getElementById('Mordor')
+	mordor.appendChild(gollum)
 	// Create a div with an id of `'gollum'` and add it to Mordor
+
 	// Remove `the ring` from `Frodo` and give it to `Gollum`
+	
 	// Move Gollum into Mount Doom
 }
 
