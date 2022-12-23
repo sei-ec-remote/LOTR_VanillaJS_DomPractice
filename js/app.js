@@ -160,6 +160,7 @@ function makeBuddies() {
 
 	// put an `unordered list` of the `'buddies'` in the aside
 	const ulBuddies = document.createElement('ul')
+	ulBuddies.id = 'buddies'
 	//console.log(ulBuddies)
 	aside.appendChild(ulBuddies)
 	//console.log(aside)
@@ -206,6 +207,15 @@ function beautifulStranger() {
 	console.log('7: beautifulStranger')
 
 	// change the `'Strider'` text to `'Aragorn'`
+	const ulBuddies = document.getElementById('buddies').children
+	ulBuddies[3].textContent = 'Aragorn'
+
+	//.children essentially makes an array containing the li's from the ul
+	// without .children only the ul itself will be brought up!
+
+
+
+
 }
 
 // COMMIT YOUR WORK
@@ -218,9 +228,31 @@ function beautifulStranger() {
 function forgeTheFellowShip() {
 	console.log('8: forgeTheFellowShip')
 	// create a new div called `'the-fellowship'` within `rivendell`
+	const rivendell = document.getElementById('Rivendell')
+	const fellowshipDiv = document.createElement('div')
+	fellowshipDiv.id = 'fellowship'
+	
+
+
 	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
+	const ulBuddies = document.getElementById('buddies').children
+	const ulHobbits = document.getElementById('hobbits').children
+	
+	for(i = 0; i < 4; i++) {
+		fellowshipDiv.appendChild(ulHobbits[0])
+		alert(`${hobbits[i]} has joined the Fellowship`)
+	}
+	
+	for(i = 0; i < 5; i++) {
+		fellowshipDiv.appendChild(ulBuddies[0])
+		alert(`${buddies[i]} has joined the Fellowship`)
+	}
+	
+
 	// after each character is added make an alert that they // have joined your party
 
+
+	rivendell.appendChild(fellowshipDiv)
 	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
 }
 
