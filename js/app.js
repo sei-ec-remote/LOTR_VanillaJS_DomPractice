@@ -235,6 +235,7 @@ function forgeTheFellowShip() {
 
 
 	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
+	// after each character is added make an alert that they // have joined your party
 	const ulBuddies = document.getElementById('buddies').children
 	const ulHobbits = document.getElementById('hobbits').children
 	
@@ -248,11 +249,8 @@ function forgeTheFellowShip() {
 		alert(`${buddies[i]} has joined the Fellowship`)
 	}
 	
-
-	// after each character is added make an alert that they // have joined your party
-
-
 	rivendell.appendChild(fellowshipDiv)
+
 	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
 }
 
@@ -325,8 +323,18 @@ function itsDangerousToGoAlone() {
 function weWantsIt() {
 	console.log('12: weWantsIt')
 	// Create a div with an id of `'gollum'` and add it to Mordor
+	const gollumDiv = document.createElement('div')
+	gollumDiv.id = 'gollum'
+	
 	// Remove `the ring` from `Frodo` and give it to `Gollum`
+	const mordor = document.getElementById('Mordor')
+	mordor.appendChild(gollumDiv)
+	const theRing = document.getElementById('the-ring')
+	gollumDiv.appendChild(theRing)
 	// Move Gollum into Mount Doom
+		const mountDoom = document.getElementById('mount-doom')
+		mountDoom.appendChild(gollumDiv)
+
 }
 
 // COMMIT YOUR WORK
