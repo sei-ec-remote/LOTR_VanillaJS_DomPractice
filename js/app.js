@@ -100,34 +100,34 @@ function keepItSecretKeepItSafe() {
 	frodoLi.appendChild(oneRingDiv)
 }
 
-//COMMIT YOUR WORK
-//The commit message should read: "Chapter 3 complete - Made the ring and gave it to Frodo".
+// COMMIT YOUR WORK
+// The commit message should read: "Chapter 3 complete - Made the ring and gave it to Frodo".
 
 // ============
 // Chapter 4
 // ============
 
-// function makeBaddies() {
-// 	console.log('4: makeBaddies')
+function makeBaddies() {
+	console.log('4: makeBaddies')
 
-// 	// display an unordered list of baddies in Mordor
-// 	const mordor = document.getElementById('morder')
-// 	console.log('this is the morder', mordor)
-// 	// give each of the baddies a class of "baddy"
-// 	const ulbaddy = document.createElement('ul')
-// 	ulbaddy.id = 'badddy'
-// 	for (let i = 0; i < ulbaddy.length; i++) {
-// 		// create an li for each hobbit
-// 		const libaddy = document.createElement('li')
-// 		// give each baddy a class
-// 		libaddy.className = 'baddy'
-// 		// give each hobbit some text
-// 		libaddy.textContent = libaddy[i]
-// 		// append each baddy to the ul
-// 		libaddy.appendChild(libaddy)
-// 	}
-// 	mordor.appendChild(ulbaddy)
-// }
+	// display an unordered list of baddies in Mordor
+	const mordor = document.getElementById('morder')
+	console.log('this is the morder', mordor)
+	// give each of the baddies a class of "baddy"
+	const ulBaddies = document.createElement('ul')
+	ulBaddies.id = 'baddies'
+	for (let i = 0; i < baddies.length; i++) {
+		// create an li for each hobbit
+		const libaddies = document.createElement('li')
+		// give each baddy a class
+		libaddies.className = 'baddy'
+		// give each hobbit some text
+		libaddy.textContent = libaddy[i]
+		// append each baddy to the ul
+		libaddy.appendChild(libaddy)
+	}
+	mordor.appendChild(ulbaddy)
+}
 
 
 	// remember to append them to Mordor
