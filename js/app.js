@@ -56,13 +56,24 @@ function makeHobbits() {
 	console.log('2: makeHobbits')
 
 	// display an `unordered list` of hobbits in the shire
-
+	const theShire = document.getElementById('The-Shire')
+	console.log('this is the shire', theShire)
 	// give each hobbit a class of `hobbit`
-
-	// hint: create a 'ul' outside the loop into which to append the 'li's
-
-	// hint: get 'The-Shire' by using its id
+	const ulHobbits = document.createElement('ul')
+	ulHobbits.id = 'hobbits'
+	for (let i = 0; i < hobbits.length; i++) {
+		// create an li for each hobbit
+		const liHobbit = document.createElement('li')
+		// give each hobbit a class
+		liHobbit.className = 'hobbit'
+		// give each hobbit some text
+		liHobbit.textContent = hobbits[i]
+		// append each hobbit to the ul
+		ulHobbits.appendChild(liHobbit)
+	}
+	theShire.appendChild(ulHobbits)
 }
+
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 2 complete - Made the Hobbits".
@@ -71,32 +82,56 @@ function makeHobbits() {
 // Chapter 3
 // ============
 
-function keepItSecretKeepItSafe() {
-	console.log('3: keepItSecretKeepItSafe')
+// function keepItSecretKeepItSafe() {
+// 	console.log('3: keepItSecretKeepItSafe')
 
-	// create a div with an id of `'the-ring'`
-
-	// give the div a class of `'magic-imbued-jewelry'`
-
-	// add the ring as a child of `Frodo`
-}
+// 	// create a div with an id of `'the-ring'`
+// 	const oneRingDiv = document.createElement('div')
+// 	oneRingDiv.id = 'the-ring'
+// 	// give the div a class of `'magic-imbued-jewelry'`
+// 	oneRingDiv.className = 'magic-imbued-jewelry'
+// 	// we want to target Frodo specifically
+// 	// so we'll start with the ul, by it's id
+// 	const ulHobbits = document.querySelector('#hobbits')
+// 	const hobbitsArray = ulHobbits.children
+// 	// then we'll need to look at how we can target the individual li's from there
+// 	const frodoLi = hobbitsArray[0]
+// 	// add the ring as a child of `Frodo`
+// 	frodoLi.appendChild(oneRingDiv)
+// }
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 3 complete - Made the ring and gave it to Frodo".
 
-// ============
-// Chapter 4
-// ============
+// // ============
+// // Chapter 4
+// // ============
 
-function makeBaddies() {
-	console.log('4: makeBaddies')
+// function makeBaddies() {
+// 	console.log('4: makeBaddies')
 
-	// display an unordered list of baddies in Mordor
+// 	// display an unordered list of baddies in Mordor
+// 	const mordor = document.getElementById('morder')
+// 	console.log('this is the morder', mordor)
+// 	// give each of the baddies a class of "baddy"
+// 	const ulbaddy = document.createElement('ul')
+// 	ulbaddy.id = 'badddy'
+// 	for (let i = 0; i < ulbaddy.length; i++) {
+// 		// create an li for each hobbit
+// 		const libaddy = document.createElement('li')
+// 		// give each baddy a class
+// 		libaddy.className = 'baddy'
+// 		// give each hobbit some text
+// 		libaddy.textContent = libaddy[i]
+// 		// append each baddy to the ul
+// 		libaddy.appendChild(libaddy)
+// 	}
+// 	mordor.appendChild(ulbaddy)
+// }
 
-	// give each of the baddies a class of "baddy"
 
 	// remember to append them to Mordor
-}
+
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 4 complete - Made the Baddies"..
