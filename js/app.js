@@ -111,22 +111,22 @@ function makeBaddies() {
 	console.log('4: makeBaddies')
 
 	// display an unordered list of baddies in Mordor
-	const mordor = document.getElementById('morder')
-	console.log('this is the morder', mordor)
+	const mordor = document.getElementById('Mordor')
+	// console.log('this is the morder', Mordor)
 	// give each of the baddies a class of "baddy"
 	const ulBaddies = document.createElement('ul')
 	ulBaddies.id = 'baddies'
 	for (let i = 0; i < baddies.length; i++) {
-		// create an li for each hobbit
+		// create an li for each baddy
 		const libaddies = document.createElement('li')
 		// give each baddy a class
 		libaddies.className = 'baddy'
-		// give each hobbit some text
-		libaddy.textContent = libaddy[i]
+		// give each baddy some text
+		libaddies.textContent = baddies[i]
 		// append each baddy to the ul
-		libaddy.appendChild(libaddy)
+		ulBaddies.appendChild(libaddies)
 	}
-	mordor.appendChild(ulbaddy)
+	mordor.appendChild(ulBaddies)
 }
 
 
