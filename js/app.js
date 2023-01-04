@@ -82,30 +82,30 @@ function makeHobbits() {
 // Chapter 3
 // ============
 
-// function keepItSecretKeepItSafe() {
-// 	console.log('3: keepItSecretKeepItSafe')
+function keepItSecretKeepItSafe() {
+	console.log('3: keepItSecretKeepItSafe')
 
-// 	// create a div with an id of `'the-ring'`
-// 	const oneRingDiv = document.createElement('div')
-// 	oneRingDiv.id = 'the-ring'
-// 	// give the div a class of `'magic-imbued-jewelry'`
-// 	oneRingDiv.className = 'magic-imbued-jewelry'
-// 	// we want to target Frodo specifically
-// 	// so we'll start with the ul, by it's id
-// 	const ulHobbits = document.querySelector('#hobbits')
-// 	const hobbitsArray = ulHobbits.children
-// 	// then we'll need to look at how we can target the individual li's from there
-// 	const frodoLi = hobbitsArray[0]
-// 	// add the ring as a child of `Frodo`
-// 	frodoLi.appendChild(oneRingDiv)
-// }
+	// create a div with an id of `'the-ring'`
+	const oneRingDiv = document.createElement('div')
+	oneRingDiv.id = 'the-ring'
+	// give the div a class of `'magic-imbued-jewelry'`
+	oneRingDiv.className = 'magic-imbued-jewelry'
+	// we want to target Frodo specifically
+	// so we'll start with the ul, by it's id
+	const ulHobbits = document.querySelector('#hobbits')
+	const hobbitsArray = ulHobbits.children
+	// then we'll need to look at how we can target the individual li's from there
+	const frodoLi = hobbitsArray[0]
+	// add the ring as a child of `Frodo`
+	frodoLi.appendChild(oneRingDiv)
+}
 
-// COMMIT YOUR WORK
-// The commit message should read: "Chapter 3 complete - Made the ring and gave it to Frodo".
+//COMMIT YOUR WORK
+//The commit message should read: "Chapter 3 complete - Made the ring and gave it to Frodo".
 
-// // ============
-// // Chapter 4
-// // ============
+// ============
+// Chapter 4
+// ============
 
 // function makeBaddies() {
 // 	console.log('4: makeBaddies')
