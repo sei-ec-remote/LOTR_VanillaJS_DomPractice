@@ -172,40 +172,76 @@ function makeBuddies() {
 // Chapter 6
 // ============
 
-function leaveTheShire() {
-	console.log('6: leaveTheShire')
+// function leaveTheShire() {
+// 	console.log('6: leaveTheShire')
 
-	// assemble the `hobbits` and move them to `rivendell`
-}
+// 	makeHobbits ()
+// 	// 
+// 	// const theShire = document.getElementById( 'The-Shire')
+// 	const ulHobbits = document.getElementById('hobbits')
+// 	const hobbits = []
+// 	// hobbits = Array.from(ulHobbits.children)
+// 	// for (i=0; i < hobbits.length; i++){
+// 	// theShire.removeChild(hobbits [i])
+// 	// }
+// 	// assemble the `hobbits` and move them to `rivendell`
 
-// COMMIT YOUR WORK
-// The commit message should read: "Chapter 6 complete - Left the Shire"
+// 	const rivendell = document. getElementById ('Rivendell')
+// 	rivendell.appendChild(ulHobbits)
+// }
+// // theShire.removeChild(ulHobbits)
 
-// ============
-// Chapter 7
-// ============
 
-function beautifulStranger() {
-	console.log('7: beautifulStranger')
+// // COMMIT YOUR WORK
+// // The commit message should read: "Chapter 6 complete - Left the Shire"
 
-	// change the `'Strider'` text to `'Aragorn'`
-}
+// // ============
+// // Chapter 7
+// // ============
 
-// COMMIT YOUR WORK
-// The commit message should read: "Chapter 7 complete - Strider is changed to Aragorn"
+// function beautifulStranger() {
+// 	console.log('7: beautifulStranger')
 
-// ============
-// Chapter 8
-// ============
+// 	// change the `'Strider'` text to `'Aragorn'`
+// 	const buddy = document.getElementById('buddies')
+// 	const buddyArray = buddy.children
+// 	const aragorn = buddyArray[3]
+//    aragorn.textContent = 'Aragorn'
+// }
 
-function forgeTheFellowShip() {
-	console.log('8: forgeTheFellowShip')
-	// create a new div called `'the-fellowship'` within `rivendell`
-	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
-	// after each character is added make an alert that they // have joined your party
+// // COMMIT YOUR WORK
+// // The commit message should read: "Chapter 7 complete - Strider is changed to Aragorn"
 
-	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
-}
+// // ============
+// // Chapter 8
+// // ============
+
+// function forgeTheFellowShip() {
+// 	console.log('8: forgeTheFellowShip')
+// 	// create a new div called `'the-fellowship'` within `rivendell`
+// 	const fellowship = document.createElement('div')
+// 	fellowship.id = 'the-fellowship'
+// 	const rivendell = document.getElementById('Rivendell')
+// 	rivendell.appendChild(fellowship)
+// 	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
+// 	const  buddies = document.getElementById('buddies')
+// 	constbuddyA = array.from(buddies.children)
+// 	console.log(buddyA)
+// 	const hobbits = document.getElementById('hobbits')
+// 	consthobbitA = Array.from(hobbits.children)
+// 	console.log(hobbits)
+// 	// after each character is added make an alert that they // have joined your party
+//    for (let i= 0; i < hobbitA.longth; i++{
+// 	hobitA(i).textContent = fellowship.appendChild(hobbitA[i]
+// 	alert(`${hobbitA[i]}.textContent have joined the party')
+//    }
+//    for (let i=0; buddyA.length; i++){
+// 	buddyA.textContent = buddies[i])
+// 	fellowship.appendChildbuddyA[i])
+// 	alert(`${buddyA[i]}.textContent have joined the party`))
+//    }
+// 	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
+// }
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 8 complete - The Fellowship is created"
