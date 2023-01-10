@@ -190,11 +190,32 @@ function beautifulStranger() {
 // ============
 
 function forgeTheFellowShip() {
-	console.log('8: forgeTheFellowShip')
+	console.log('8: forgeTheFellowShip');
 	// create a new div called `'the-fellowship'` within `rivendell`
+    const rivendell = document.getElementById('Rivendell');
+    const fellowshipDiv = document.createElement('div');
+    fellowshipDiv.id = 'the-fellowship';
+    rivendell.appendChild(fellowshipDiv);
 	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
-	// after each character is added make an alert that they // have joined your party
-
+    const hobbits = document.getElementById('hobbits');
+    const hobbitsArray = hobbits.children;
+    const ulFellowship = document.createElement('ul');
+    ulFellowship.className = 'fellowship';
+    ulFellowship.id = 'fellowshipUl';
+    fellowshipDiv.appendChild(ulFellowship);
+    for (let i = 0; i < 4; i++) {
+    // after each character is added make an alert that they // have joined your party   
+        alert(hobbitsArray[0].innerText + " has joined the Fellowship!");
+        ulFellowship.appendChild(hobbitsArray[0]);
+	}
+    const buddies = document.getElementById('buddies');
+    const buddiesArray = buddies.children;
+    for (let i = 0; i < 5; i++) {
+    // after each character is added make an alert that they // have joined your party       
+    	alert(buddiesArray[0].innerText + " has joined the Fellowship!");
+        ulFellowship.appendChild(buddiesArray[0]);
+	}
+    console.log(fellowshipDiv);
 	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
 }
 
