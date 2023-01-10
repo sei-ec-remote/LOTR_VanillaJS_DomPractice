@@ -104,22 +104,24 @@ function keepItSecretKeepItSafe() {
 // ============
 // Chapter 4
 // ============
+
 function makeBaddies() {
-	console.log('4: makeBaddies');
-    const mordor = document.getElementById("Mordor");
-	// display an unordered list of baddies in Mordor
-    const ulBaddies = document.createElement('ul');
-    ulBaddies.id = 'baddies';
-	// give each of the baddies a class of "baddy"
-    for (let i = 0; i < baddies.length; i++) {
-        const liBaddies = document.createElement('li');
-        liBaddies.classname = 'baddy';
-        liBaddies.textContent = baddies[i];
-        ulBaddies.appendChild(liBaddies);
-	// remember to append them to Mordor
-        mordor.appendChild(ulBaddies);
+	console.log('4: makeBaddies')
+	const Mordor = document.getElementById('Mordor')
+	const ulBaddies = document.createElement('ul')
+	ulBaddies.id = 'baddies'
+	for (let i = 0; i < baddies.length; i++){
+		const liBaddy = document.createElement('li')
+		liBaddy.className = 'baddy'
+		liBaddy.textContent = baddies[i]
+		ulBaddies.appendChild(liBaddy)
 	}
+	// display an unordered list of baddies in Mordor
+	// give each of the baddies a class of "baddy"
+	Mordor.appendChild(ulBaddies)
+	// remember to append them to Mordor
 }
+
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 4 complete - Made the Baddies"..
 
@@ -129,12 +131,21 @@ function makeBaddies() {
 
 function makeBuddies() {
 	console.log('5: makeBuddies')
-
+    const rivendell = document.getElementById("Rivendell");
 	// create an `aside` tag
-
+    const aside = document.createElement('aside');
 	// put an `unordered list` of the `'buddies'` in the aside
-
+    const ulBuddies = document.createElement('ul');
+    ulBuddies.id = 'buddies';
+    for (let i = 0; i < buddies.length; i++) {
+        const liBuddies = document.createElement('li');
+        liBuddies.classname = 'buddy';
+        liBuddies.textContent = buddies[i];
+        ulBuddies.appendChild(liBuddies);
+        aside.appendChild(ulBuddies);
 	// insert your aside as a child element of `rivendell`
+    rivendell.appendChild(aside);
+	}
 }
 
 // COMMIT YOUR WORK
