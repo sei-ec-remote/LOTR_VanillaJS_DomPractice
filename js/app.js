@@ -316,19 +316,21 @@ function weWantsIt() {
 // ============
 
 function thereAndBackAgain() {
-	console.log('13: thereAndBackAgain');
+	console.log('13: thereAndBackAgain')
 	// remove `Gollum` and `the Ring` from the document
 	// Move all the `hobbits` back to `the shire`
-	gollum.remove();
-	const theShire = document.getElementById('The-Shire');
-	const frodo = document.getElementById('Frodo Baggins');
-	const samwise = document.getElementById('Samwise "Sam" Gamgee');
-	const merry = document.getElementById('Meriadoc "Merry" Brandybuck');
-	const pippin = document.getElementById('Peregrin "Pippin" Took');
-	theShire.appendChild(frodo);
-	theShire.appendChild(samwise);
-	theShire.appendChild(merry);
-	theShire.appendChild(pippin);
+    const gollumDies = document.getElementById('gollum')
+    // mtDoom.remove(gollumDies)    
+    gollumDies.remove()
+    const theShire = document.getElementById('The-Shire')
+    const hobbitsHome1 = document.getElementById('ulMtDoom')
+    const hobbitsHome1Array = hobbitsHome1.children
+    theShire.appendChild(hobbitsHome1Array[0])
+    theShire.appendChild(hobbitsHome1Array[0])
+    const hobbitsHome2 = document.querySelector('#fellowshipUl')
+    const hobbitsHome2Array = hobbitsHome2.children
+    theShire.appendChild(hobbitsHome2Array[0])
+    theShire.appendChild(hobbitsHome2Array[0])
 }
 
 
