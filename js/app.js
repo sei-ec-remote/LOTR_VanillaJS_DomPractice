@@ -173,8 +173,12 @@ function leaveTheShire() {
 // ============
 
 function beautifulStranger() {
-	console.log('7: beautifulStranger')
-
+	console.log('7: beautifulStranger');
+    // console.log(aragorn)
+    const ulBuddies = document.querySelector('#buddies');
+    const buddiesArray = ulBuddies.children;
+    const aragorn = buddiesArray[3];
+    aragorn.innerHTML = 'Aragorn';
 	// change the `'Strider'` text to `'Aragorn'`
 }
 
